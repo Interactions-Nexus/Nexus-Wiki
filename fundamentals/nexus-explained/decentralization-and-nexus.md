@@ -1,8 +1,8 @@
 ---
-title: decentralization-and-nexus
-description: 
+title: Nexus And Decentralization
+description: How Nexus plans to decentralize everything
 published: true
-date: 2022-10-05T08:29:40.165Z
+date: 2022-10-06T13:00:44.611Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:12.921Z
