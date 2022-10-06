@@ -2,7 +2,7 @@
 title: Brick & Mortar Store
 description: Real world use-case for brick & mortar stores
 published: true
-date: 2022-10-06T14:20:35.503Z
+date: 2022-10-06T14:24:11.852Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:23.185Z
@@ -14,9 +14,12 @@ Nexus has been designed for the real world, everyday use by the average joe and 
 
 Nexus can be used for payments, invoices, logistics and tracking, online marketplace.  To make it easy we need to understand how these things can be implemented.
 
-{% hint style="info" %}
-Depending on the location and regulations crypto payments might not be feasible. Lot of things need to be fined tuned to local regulations. The POS system also will need further tuning depends on usage and regulations .
-{% endhint %}
+
+> Depending on the location and local regulations, crypto payments might not be feasible. The system may need to be fined tuned to local regulations.
+> {.is-warning}
+
+
+
 
 ## How can it be Implemented
 
@@ -28,7 +31,7 @@ The store needs to integrate the Nexus API into a totally new Point of Sale (POS
 
 ## Overheads For the store
 
-The store owner will have to run nodes to maintain the hybrid network. The no of nodes will depend on the redundancy the database needs. Compared to existing systems the overheads are very low. If the store owner needs 3x redundancy, he needs to run 3 nodes which will be hosted on VPS or owned hardware or a mix of both.&#x20;
+The store owner will have to run nodes to maintain the hybrid network. The no of nodes will depend on the redundancy the database needs. Compared to existing systems the overheads are very low. If the store owner needs 3x redundancy, he needs to run 3 nodes which will be hosted on VPS or owned hardware or a mix of both.
 
 A new POS or integration into system maybe additional cost,  but if we can make a open source code which can be used by any store that can save that particular overheads.
 
@@ -36,7 +39,7 @@ A new POS or integration into system maybe additional cost,  but if we can make 
 
 Brick & motor stores can use one or all the options listed below:
 
-### Payments:&#x20;
+### Payments:
 
 The Nexus Interface will have a Point of Sale payments module. This will make it very easy for customers to pay using the mobile wallet. This will be similar to Apple pay or Google pay where the user scans a QR code to send the payment. The store can even integrate Nexus API into their existing system. With the Query DSL it is very easy to keep track of all the payments and generate reports.
 
