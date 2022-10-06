@@ -1,8 +1,8 @@
 ---
-title: README
-description: Protocol to Power the Decentralized Internet
+title: Nexus Protocol (Future)
+description: Protocol to power the decentralized Internet
 published: true
-date: 2022-10-05T08:37:24.316Z
+date: 2022-10-06T13:13:21.473Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:33:52.344Z
