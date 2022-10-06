@@ -2,7 +2,7 @@
 title: Use-cases
 description: Use-Cases That Can Be Built on Nexus
 published: true
-date: 2022-10-06T14:27:29.979Z
+date: 2022-10-06T14:28:47.289Z
 tags: use-cases
 editor: markdown
 dateCreated: 2022-10-05T08:28:16.205Z
@@ -18,7 +18,7 @@ Nexus can encompass a lot of use-cases today using API's and with the upcoming T
 
 &nbsp;
 
-### Use-cases Using Nexus
+## What use-cases can be built?
 
 - [ASSETS](/use-cases/assets-nfts)
 - [ASSET TOKENIZATION](/use-cases/asset-tokenization)
