@@ -2,7 +2,7 @@
 title: brick-and-mortar-store
 description: Real world use-case for Brick & mortar Stores
 published: true
-date: 2022-10-05T08:33:30.044Z
+date: 2022-10-06T14:17:43.466Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:23.185Z
