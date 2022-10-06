@@ -1,8 +1,8 @@
 ---
-title: software-stack
+title: Software-Stack
 description: 7 Layer Software Stack
 published: true
-date: 2022-10-05T13:55:17.290Z
+date: 2022-10-06T13:09:54.210Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:27:02.992Z
