@@ -1,3 +1,13 @@
+---
+title: create-names
+description: 
+published: true
+date: 2022-10-05T08:31:19.575Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:21.369Z
+---
+
 # Create Names
 
 This guide will help users to create a **Names** using the Nexus Interface. Before we start to create a **Names** also known as **Local Names**, users need to be familiar with the concepts and usage.

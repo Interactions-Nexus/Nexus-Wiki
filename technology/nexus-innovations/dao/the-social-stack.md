@@ -1,5 +1,11 @@
 ---
+title: the-social-stack
 description: Social Stack which underpins the DAO
+published: true
+date: 2022-10-05T08:37:19.376Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:33:45.263Z
 ---
 
 # The Social Stack

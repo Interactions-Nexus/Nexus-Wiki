@@ -1,5 +1,11 @@
 ---
+title: create-an-account
 description: How to create an account
+published: true
+date: 2022-10-05T08:38:38.065Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:36:08.023Z
 ---
 
 # Create an Account

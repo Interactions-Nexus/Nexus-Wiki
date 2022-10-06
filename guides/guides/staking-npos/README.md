@@ -1,5 +1,11 @@
 ---
+title: README
 description: nPoS - Staking Based on TRUST and Reputation
+published: true
+date: 2022-10-05T08:36:15.849Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:32:14.426Z
 ---
 
 # Staking (nPoS)

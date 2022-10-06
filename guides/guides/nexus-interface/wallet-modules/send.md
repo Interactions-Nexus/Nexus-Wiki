@@ -1,5 +1,11 @@
 ---
+title: send
 description: Send NXS and Tokens
+published: true
+date: 2022-10-05T08:39:01.888Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:37:17.458Z
 ---
 
 # Send

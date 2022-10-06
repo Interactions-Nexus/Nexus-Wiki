@@ -1,5 +1,11 @@
 ---
+title: legacy-and-tritium
 description: What is Legacy and Tritium?
+published: true
+date: 2022-10-05T08:29:55.006Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:25:23.199Z
 ---
 
 # Legacy and Tritium

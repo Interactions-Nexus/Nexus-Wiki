@@ -1,5 +1,11 @@
 ---
+title: signature-chains
 description: User Accounts on Nexus
+published: true
+date: 2022-10-05T08:32:14.495Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:59.583Z
 ---
 
 # Signature Chains

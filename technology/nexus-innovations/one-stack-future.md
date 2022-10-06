@@ -1,5 +1,11 @@
 ---
+title: one-stack-future
 description: ONE stack
+published: true
+date: 2022-10-05T08:32:09.540Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:56.136Z
 ---
 
 # ONE Stack (Future)

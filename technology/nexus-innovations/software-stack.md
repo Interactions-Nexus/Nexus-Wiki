@@ -1,12 +1,18 @@
 ---
+title: software-stack
 description: 7 Layer Software Stack
+published: true
+date: 2022-10-05T13:55:17.290Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:27:02.992Z
 ---
 
 # Software Stack
 
 The Nexus architecture is designed as a seven-layered software stack that includes a 64-bit register-based process virtual machine. Each layer is designated to carry out a specialized process independently of one another, providing additional functionality to the existing Internet stack, the OSI model. This makes Nexus a modular blockchain.
 
-![7 Layer Software Stack](<../../.gitbook/assets/stack (1)>)
+![7 Layer Software Stack](/7_layer_stack.png)
 
 Let's delve into the workings of each of these layers individually:
 
@@ -68,7 +74,7 @@ The Ledger is responsible for ensuring all data is formed under consensus and is
 
 ### **Signature Chains:**
 
-A [Signature Chain](broken-reference) is a decentralized blockchain account that allows you to login from any computer with a username, password, and pin, without the need for wallet.dat files or constantly rescanning the database. They are comparable to a personal blockchain that allows decentralized access through the login system, removing the need to store private keys. Sigchains deterministically create a mathematical 'lock' that only your login credentials can unlock.
+A [Signature Chain](/technology/nexus-innovations/signature-chains) is a decentralized blockchain account that allows you to login from any computer with a username, password, and pin, without the need for wallet.dat files or constantly rescanning the database. They are comparable to a personal blockchain that allows decentralized access through the login system, removing the need to store private keys. Sigchains deterministically create a mathematical 'lock' that only your login credentials can unlock.
 
 Fundamentally, a Signature Chain decouples the private key from the account, therefore one is not bound by possession or security of this single private key. The private key becomes obsolete when the next transaction is generated, producing higher levels of security compared to the continual reuse of a private key, as is the case with other blockchain technologies. Other benefits come from the efficiency gained by reducing the requirement of storing a large amount of signatures on disk, and the ability to use a variety of key types such as FALCON for increased Quantum Resistance.
 

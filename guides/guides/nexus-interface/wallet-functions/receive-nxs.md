@@ -1,5 +1,11 @@
 ---
+title: receive-nxs
 description: How to Receive NXS
+published: true
+date: 2022-10-05T08:38:40.397Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:36:14.866Z
 ---
 
 # Receive NXS

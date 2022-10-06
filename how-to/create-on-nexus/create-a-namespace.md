@@ -1,3 +1,13 @@
+---
+title: create-a-namespace
+description: 
+published: true
+date: 2022-10-05T08:30:59.601Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:07.644Z
+---
+
 # Create a Namespace
 
 This guide will help users to create a **Namespace** using the Nexus Interface. Before we start to create a **Namespace**, users need to be familiar with the concept and usage.

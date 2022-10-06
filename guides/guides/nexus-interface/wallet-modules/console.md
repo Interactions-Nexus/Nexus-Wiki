@@ -1,5 +1,11 @@
 ---
+title: console
 description: Console
+published: true
+date: 2022-10-05T08:38:57.112Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:37:03.128Z
 ---
 
 # Console

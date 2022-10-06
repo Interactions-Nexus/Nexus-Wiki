@@ -1,3 +1,13 @@
+---
+title: whitepaper
+description: 
+published: true
+date: 2022-10-05T08:37:29.055Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:33:59.582Z
+---
+
 # Whitepaper
 
 Find the link to the Nexus Protocol whitepaper, link below: &#x20;

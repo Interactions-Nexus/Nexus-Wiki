@@ -1,3 +1,13 @@
+---
+title: create-a-global-name
+description: 
+published: true
+date: 2022-10-05T08:30:54.697Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:04.236Z
+---
+
 # Create a Global Name
 
 This guide will help users to create a **Global Name** using the Nexus Interface. Before we start to create a **Global Name**, users need to be familiar with the concept and usage.

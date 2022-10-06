@@ -1,3 +1,13 @@
+---
+title: invoice-module-guide
+description: 
+published: true
+date: 2022-10-05T08:30:40.158Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:25:53.926Z
+---
+
 # Invoice Module Guide
 
 ## **What is the Invoice Module?**

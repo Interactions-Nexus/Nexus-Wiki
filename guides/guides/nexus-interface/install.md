@@ -1,3 +1,13 @@
+---
+title: install
+description: 
+published: true
+date: 2022-10-05T08:35:51.473Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:31:39.038Z
+---
+
 # Install
 
 Follow the instructions to install on the operating system of choice:

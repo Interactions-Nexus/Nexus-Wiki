@@ -1,5 +1,11 @@
 ---
+title: README
 description: Designed for the quantum future.
+published: true
+date: 2022-10-05T08:37:33.959Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:34:06.827Z
 ---
 
 # Quantum Resistance

@@ -1,5 +1,11 @@
 ---
+title: dao
 description: Decentralised Autonomous Organisation - The future of Governance
+published: true
+date: 2022-10-05T08:29:35.047Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:25:09.496Z
 ---
 
 # DAO

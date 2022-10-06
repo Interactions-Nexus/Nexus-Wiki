@@ -1,5 +1,11 @@
 ---
+title: licence
 description: Nexus is distributed under the MIT/X11 Licence
+published: true
+date: 2022-10-05T08:36:01.270Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:31:53.295Z
 ---
 
 # Licence

@@ -1,5 +1,11 @@
 ---
+title: start-staking
 description: How to start staking your NXS
+published: true
+date: 2022-10-05T08:36:59.189Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:33:17.053Z
 ---
 
 # Start Staking

@@ -1,5 +1,11 @@
 ---
+title: lisp
 description: Locator Identifier Separation Protocol
+published: true
+date: 2022-10-05T08:31:59.531Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:48.979Z
 ---
 
 # LISP

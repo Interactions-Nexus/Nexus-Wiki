@@ -1,5 +1,11 @@
 ---
+title: faq
 description: Frequently Asked Questions
+published: true
+date: 2022-10-05T08:27:38.100Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:23:49.959Z
 ---
 
 # FAQ

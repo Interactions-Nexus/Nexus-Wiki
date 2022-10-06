@@ -1,3 +1,13 @@
+---
+title: tokenizing-assets
+description: 
+published: true
+date: 2022-10-05T08:30:45.166Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:25:57.390Z
+---
+
 # Tokenizing Assets
 
 ### Tokenizing Assets

@@ -1,5 +1,11 @@
 ---
+title: trust-npos
 description: Proof-of-stake based on TRUST (Reputation)
+published: true
+date: 2022-10-05T08:32:29.312Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:27:09.967Z
 ---
 
 # TRUST

@@ -1,5 +1,11 @@
 ---
+title: README
 description: Decentralized Autonomous Organisation
+published: true
+date: 2022-10-05T08:37:14.465Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:33:38.162Z
 ---
 
 # DAO

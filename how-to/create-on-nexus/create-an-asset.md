@@ -1,5 +1,11 @@
 ---
+title: create-an-asset
 description: Create Asset using the Interface
+published: true
+date: 2022-10-05T08:31:09.661Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:14.466Z
 ---
 
 # Create an Asset

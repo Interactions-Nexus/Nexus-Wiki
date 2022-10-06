@@ -1,5 +1,11 @@
 ---
+title: staking-requirements
 description: Hardware requirements for staking
+published: true
+date: 2022-10-05T08:36:49.652Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:33:03.016Z
 ---
 
 # Staking Requirements

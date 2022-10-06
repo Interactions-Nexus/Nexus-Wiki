@@ -1,5 +1,11 @@
 ---
+title: set-recovery-phrase
 description: Set Recovery Phrase
+published: true
+date: 2022-10-05T08:38:45.288Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:36:28.809Z
 ---
 
 # Set Recovery Phrase

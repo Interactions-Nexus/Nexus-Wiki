@@ -1,5 +1,11 @@
 ---
+title: create-a-user-account
 description: How to create a user account
+published: true
+date: 2022-10-05T08:38:35.737Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:36:01.166Z
 ---
 
 # Create a User Account

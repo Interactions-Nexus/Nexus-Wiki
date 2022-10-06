@@ -1,5 +1,11 @@
 ---
+title: tao-naming-system
 description: All information on the TAO Naming System
+published: true
+date: 2022-10-05T08:32:24.407Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:27:06.515Z
 ---
 
 # Naming System TAO

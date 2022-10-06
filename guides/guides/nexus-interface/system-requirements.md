@@ -1,3 +1,13 @@
+---
+title: system-requirements
+description: 
+published: true
+date: 2022-10-05T08:36:06.056Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:32:00.382Z
+---
+
 # System Requirements
 
 Nexus provides installers for Mac, Windows and Linux. Installation is as simple as downloading and installing any desktop application. The minimum system requirements are as follows:

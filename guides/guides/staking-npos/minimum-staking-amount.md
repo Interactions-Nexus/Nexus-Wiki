@@ -1,5 +1,11 @@
 ---
+title: minimum-staking-amount
 description: The Miminum
+published: true
+date: 2022-10-05T08:36:35.131Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:32:42.289Z
 ---
 
 # Minimum Staking Amount

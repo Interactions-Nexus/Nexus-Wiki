@@ -1,3 +1,13 @@
+---
+title: lx-os-future
+description: 
+published: true
+date: 2022-10-05T08:32:04.555Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:52.554Z
+---
+
 # LX-OS (Future)
 
 Nexus is building the next generation decentralised internet which will be connected by a decentralized infrastructure. To power the satellites which are critical to the decentralised infrastructure setup there is a need for a secure Operating System (OS) and none of the OS existing today are suitable to power the decentralised internet of the future.

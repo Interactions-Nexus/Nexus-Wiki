@@ -1,5 +1,11 @@
 ---
+title: staking-settings
 description: How to enable or disable staking
+published: true
+date: 2022-10-05T08:36:54.429Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:33:10.187Z
 ---
 
 # Staking Settings

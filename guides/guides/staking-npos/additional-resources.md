@@ -1,5 +1,11 @@
 ---
+title: additional-resources
 description: Staking Resources
+published: true
+date: 2022-10-05T08:36:25.439Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:32:28.199Z
 ---
 
 # Additional Resources

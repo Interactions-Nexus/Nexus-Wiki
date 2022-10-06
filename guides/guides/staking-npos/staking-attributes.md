@@ -1,5 +1,11 @@
 ---
+title: staking-attributes
 description: Understanding Staking Attributes
+published: true
+date: 2022-10-05T08:36:40.032Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:32:49.228Z
 ---
 
 # Staking Attributes

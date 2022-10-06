@@ -1,5 +1,11 @@
 ---
+title: create-a-token
 description: Create a Token Using Nexus Interface
+published: true
+date: 2022-10-05T08:31:04.556Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:11.061Z
 ---
 
 # Create a Token

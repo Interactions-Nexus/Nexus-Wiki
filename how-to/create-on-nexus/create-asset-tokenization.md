@@ -1,3 +1,13 @@
+---
+title: create-asset-tokenization
+description: 
+published: true
+date: 2022-10-05T08:31:14.662Z
+tags: 
+editor: markdown
+dateCreated: 2022-10-05T08:26:17.959Z
+---
+
 # Create Asset Tokenization
 
 ### What is Asset Tokenization
