@@ -2,7 +2,7 @@
 title: Innovations
 description: Innovations which make Nexus Unique and a Value Proposition
 published: true
-date: 2022-10-06T09:48:40.371Z
+date: 2022-10-06T13:06:43.166Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:45.609Z
