@@ -2,7 +2,7 @@
 title: Brick & Mortar Store
 description: Real world use-case for brick & mortar stores
 published: true
-date: 2022-10-06T14:24:11.852Z
+date: 2022-10-06T14:24:35.947Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:23.185Z
@@ -17,8 +17,6 @@ Nexus can be used for payments, invoices, logistics and tracking, online marketp
 
 > Depending on the location and local regulations, crypto payments might not be feasible. The system may need to be fined tuned to local regulations.
 > {.is-warning}
-
-
 
 
 ## How can it be Implemented
