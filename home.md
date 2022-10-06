@@ -2,7 +2,7 @@
 title: Nexus Documentation
 description: 
 published: true
-date: 2022-10-05T14:44:39.096Z
+date: 2022-10-06T15:03:30.020Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:44:34.582Z
@@ -24,7 +24,7 @@ Our technology is designed to simplify lives, empower communities, and streamlin
 
 &nbsp;
 
-## Join Us:
+## Join Us
 Join our official Telegram community channel to better understand Nexus and keep up to date on its developments, link below:
 
 [NexusOfficial](https://t.me/NexusOfficial)
