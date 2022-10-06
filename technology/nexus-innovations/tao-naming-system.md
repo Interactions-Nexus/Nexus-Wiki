@@ -1,14 +1,14 @@
 ---
-title: tao-naming-system
-description: All information on the TAO Naming System
+title: TAO Namespaces
+description: TAO Naming System
 published: true
-date: 2022-10-05T08:32:24.407Z
+date: 2022-10-06T13:29:12.858Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:27:06.515Z
 ---
 
-# Naming System TAO
+# TAO - Namespaces
 
 ## Names and Namespaces
 
