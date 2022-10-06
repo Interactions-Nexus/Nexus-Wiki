@@ -1,8 +1,8 @@
 ---
-title: legacy-and-tritium
+title: Legacy And Tritium
 description: What is Legacy and Tritium?
 published: true
-date: 2022-10-05T08:29:55.006Z
+date: 2022-10-06T12:41:46.878Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:23.199Z
