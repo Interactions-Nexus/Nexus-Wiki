@@ -1,8 +1,8 @@
 ---
-title: 3dc-simplified
-description: Nexus scaling 3DC simplified
+title: 3DC Simplified
+description: Nexus scaling solution 
 published: true
-date: 2022-10-05T08:37:04.219Z
+date: 2022-10-06T13:15:39.929Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:33:23.884Z
