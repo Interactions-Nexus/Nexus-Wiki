@@ -1,9 +1,9 @@
 ---
-title: user
+title: User Module
 description: User Module
 published: true
-date: 2022-10-05T08:39:09.193Z
-tags: 
+date: 2022-10-06T14:41:42.594Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:38.528Z
 ---
