@@ -1,8 +1,8 @@
 ---
-title: supply-chain-track-and-trace
+title: Supply Chain - Track & Trace
 description: End to End supply chain track and Trace
 published: true
-date: 2022-10-05T08:33:44.548Z
+date: 2022-10-06T14:08:09.173Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:44.217Z
