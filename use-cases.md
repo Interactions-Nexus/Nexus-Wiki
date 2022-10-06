@@ -2,13 +2,13 @@
 title: Use-cases
 description: Use-Cases That Can Be Built on Nexus
 published: true
-date: 2022-10-06T14:25:55.515Z
+date: 2022-10-06T14:27:29.979Z
 tags: use-cases
 editor: markdown
 dateCreated: 2022-10-05T08:28:16.205Z
 ---
 
-# Use-Cases on Nexus
+# Use-cases on Nexus
 
 Nexus can encompass a lot of use-cases today using API's and with the upcoming Tritium++ we will bring in the more powerful developer tools with Advanced Contracts and security to interact with dapps.
 
