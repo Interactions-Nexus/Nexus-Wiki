@@ -1,8 +1,8 @@
 ---
-title: gaming
-description: Nexus Use-cases in the Gaming Industry
+title: Gaming
+description: Gaming usecase
 published: true
-date: 2022-10-05T08:33:39.604Z
+date: 2022-10-06T14:13:26.754Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:37.238Z
