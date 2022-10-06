@@ -1,8 +1,8 @@
 ---
-title: asset-tokenization
-description: Everything there is to know about Asset Tokenization
+title: Asset Tokenization
+description: Asset Tokenization 
 published: true
-date: 2022-10-05T08:38:30.995Z
+date: 2022-10-06T14:01:59.415Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:35:47.258Z
