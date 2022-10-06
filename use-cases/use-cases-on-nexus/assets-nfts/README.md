@@ -1,8 +1,8 @@
 ---
-title: README
-description: Asset = Non-Fungible Token
+title: Assets
+description: Asset usecases
 published: true
-date: 2022-10-05T14:31:48.336Z
+date: 2022-10-06T13:56:18.749Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:35:40.247Z
