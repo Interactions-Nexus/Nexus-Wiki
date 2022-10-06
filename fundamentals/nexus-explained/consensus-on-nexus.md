@@ -1,8 +1,8 @@
 ---
-title: consensus-on-nexus
+title: Consensus on Nexus
 description: Consensus on Nexus
 published: true
-date: 2022-10-05T08:29:30.041Z
+date: 2022-10-06T13:03:26.424Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:06.073Z
