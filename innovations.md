@@ -2,7 +2,7 @@
 title: Innovations
 description: Innovations which make Nexus Unique and a Value Proposition
 published: true
-date: 2022-10-06T13:06:43.166Z
+date: 2022-10-06T13:07:20.560Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:45.609Z
@@ -16,7 +16,7 @@ dateCreated: 2022-10-05T08:26:45.609Z
 -  [TAO-NAMING SYSTEM](/technology/nexus-innovations/tao-naming-system)
 -  [TRUST-nPoS](/technology/nexus-innovations/trust-npos)
 -  [QUANTUM RESISTANCE](/technology/nexus-innovations/quantum-resistance/README)
----
+{.links-list}
 
 
 
