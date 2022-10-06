@@ -1,8 +1,8 @@
 ---
-title: README
+title: 3 Dimentaional Chain (Future)
 description: 3DC scaling solution for Nexus
 published: true
-date: 2022-10-05T08:37:09.430Z
+date: 2022-10-06T13:19:52.770Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:33:30.894Z
