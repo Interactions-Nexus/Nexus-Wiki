@@ -1,8 +1,8 @@
 ---
-title: one-stack-future
-description: ONE stack
+title: ONE Stack (Future)
+description: One Nexus Execution
 published: true
-date: 2022-10-05T08:32:09.540Z
+date: 2022-10-06T13:39:35.647Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:56.136Z
