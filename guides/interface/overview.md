@@ -2,7 +2,7 @@
 title: Overview
 description: Overview Module
 published: true
-date: 2022-10-07T06:01:28.186Z
+date: 2022-10-07T06:02:08.395Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:10.398Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-05T08:37:10.398Z
 
 # Overview
 
-The "`Overview` module is the homepage of the wallet. The purpose of the globe is to show the location of nodes the wallet is connected to.
+The `Overview` module is the homepage of the wallet. The purpose of the globe is to show the location of nodes the wallet is connected to.
 
 &nbsp;
 
