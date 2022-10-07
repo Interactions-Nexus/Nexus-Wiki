@@ -2,7 +2,7 @@
 title: Article I
 description: DAO Constitution - Aricle I
 published: true
-date: 2022-10-06T11:57:39.025Z
+date: 2022-10-07T05:42:58.717Z
 tags: constitution
 editor: markdown
 dateCreated: 2022-10-06T11:51:50.170Z
@@ -33,7 +33,7 @@ dateCreated: 2022-10-06T11:51:50.170Z
 
 **Section 7**: If further capacity is needed in an arm, the group size can grow exponentially with the following group size layers:
 
-       8 => 13 => 21 => 34 => 55 => 89 => 144
+   8 => 13 => 21 => 34 => 55 => 89 => 144
 
 Each layer would require election cycles of representation to move to the next layer, outlined in _**Section 6**_.
 
