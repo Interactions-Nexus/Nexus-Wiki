@@ -1,9 +1,9 @@
 ---
-title: create-a-global-name
-description: 
+title: Create Global Name
+description: How to create a global name
 published: true
-date: 2022-10-05T08:30:54.697Z
-tags: 
+date: 2022-10-07T07:34:40.297Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:04.236Z
 ---
