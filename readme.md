@@ -2,7 +2,7 @@
 title: readme
 description: 
 published: true
-date: 2022-10-07T10:05:42.435Z
+date: 2022-10-07T10:08:46.751Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T09:27:04.537Z
@@ -19,10 +19,10 @@ dateCreated: 2022-10-07T09:27:04.537Z
 
 <img src="https://static.requarks.io/logo/wikijs-full.svg" alt="Wiki.js" width="200" />
   
-##### A modern, lightweight and multilingual wiki built on wiki.js
+##### Nexus multilingual wiki built on wiki.js
   
 </div>
 
 - **[Official Website](https://nexus.io)**
-- **[Documentation](https://wiki.nexus.io/)**
 - **[Nexus Explorer](https://explorer.nexus.io/)**
+- **[This Wiki](https://wiki.nexus.io/)**
