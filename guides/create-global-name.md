@@ -2,7 +2,7 @@
 title: Create Global Name
 description: How to create a global name
 published: true
-date: 2022-10-07T07:47:10.565Z
+date: 2022-10-07T07:48:04.187Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:04.236Z
@@ -36,7 +36,7 @@ Tokens can be traded without a global name, but they will be addressed by the re
 &nbsp;
 ## Global Name Parameters
 
-The parameters requred to create a global name
+The parameters required to create a global name.
 
 ### Name Field
 
