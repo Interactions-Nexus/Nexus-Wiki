@@ -2,8 +2,8 @@
 title: Create Asset
 description: Create Asset using the Interface
 published: true
-date: 2022-10-07T07:31:15.262Z
-tags: 
+date: 2022-10-07T07:31:36.249Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:14.466Z
 ---
