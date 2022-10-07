@@ -1,9 +1,9 @@
 ---
-title: transactions
+title: Transactions
 description: Transactions Module
 published: true
-date: 2022-10-05T08:39:06.684Z
-tags: 
+date: 2022-10-07T05:45:05.014Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:31.552Z
 ---
