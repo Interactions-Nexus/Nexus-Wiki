@@ -2,7 +2,7 @@
 title: 10 Reasons to Build on Nexus
 description: 
 published: true
-date: 2022-10-07T21:39:58.907Z
+date: 2022-10-07T21:45:53.491Z
 tags: use-cases
 editor: markdown
 dateCreated: 2022-10-07T05:06:15.649Z
@@ -15,9 +15,7 @@ There is an increasing number of smart contract platforms rolling out in the cry
 
 The Nexus [roadmap](https://www.nexus.io/roadmap) is extensive, with massive upgrades and new features still to come, many of which are just around the corner. However, let’s now focus on the top 10 reasons to build on Nexus based on its current capabilities. All these features can be used by developers on the public network or their own private chain.
 
-<iframe width="420" height="315"
-src="https://www.youtube.com/watch?t=5s&v=HSXP5mbjn1s">
-</iframe>
+{%embed url="https://www.youtube.com/watch?t=5s&v=HSXP5mbjn1s"%}
 
 - [10 Reasons to Build on Nexus - Youtube](https://www.youtube.com/watch?t=5s&v=HSXP5mbjn1s)
 {.links-list}
