@@ -2,7 +2,7 @@
 title: Transactions
 description: Transactions Module
 published: true
-date: 2022-10-07T05:55:00.855Z
+date: 2022-10-07T05:55:36.705Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:31.552Z
@@ -22,12 +22,12 @@ Transactions can be filtered by any of the following criteria:
 * **Name:** Specify “NXS” or the name of a token which was previously involved in transactions on this SigChain.
 * **Time Span:** Using one of the time periods in the image below, specify the time period of transactions to filter.
 
-<img class="small" src="https://nexus.io/ResourceHub/images/guide/transactions2.png" alt="Italian Trulli">
+<img class="small" src="https://nexus.io/ResourceHub/images/guide/transactions2.png" alt="wallet-timespan">
 
 
 * **Operation:** Using one of the operation names in the image below, specify the operation of transactions to filter.
 
-<img class="small" src="https://nexus.io/ResourceHub/images/guide/transactions3.png" alt="Italian Trulli">
+<img class="small" src="https://nexus.io/ResourceHub/images/guide/transactions3.png" alt="wallet-operations">
 
 * **Write:** Used to write raw data to a register.
 * **Append:** Additional data applied to an append-only register.
