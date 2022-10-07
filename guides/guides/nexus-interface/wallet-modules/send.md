@@ -1,9 +1,9 @@
 ---
-title: send
+title: Send
 description: Send NXS and Tokens
 published: true
-date: 2022-10-05T08:39:01.888Z
-tags: 
+date: 2022-10-07T06:04:51.946Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:17.458Z
 ---
