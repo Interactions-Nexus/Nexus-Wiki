@@ -2,7 +2,7 @@
 title: Create Global Name
 description: How to create a global name
 published: true
-date: 2022-10-07T07:41:06.137Z
+date: 2022-10-07T07:47:10.565Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:04.236Z
@@ -27,7 +27,16 @@ The best use-case of a  Global name will be as token tickers. With the P2P marke
 
 Tokens can be traded without a global name, but they will be addressed by the register address which is not recommended, as it will not be easily distinguished by users.&#x20;
 
+
+## Tritium++
+
+> In Tritium++ when user creates a token a `global name` is created by default, if the `name` parameter is provided.
+{.is-info}
+
+&nbsp;
 ## Global Name Parameters
+
+The parameters requred to create a global name
 
 ### Name Field
 
