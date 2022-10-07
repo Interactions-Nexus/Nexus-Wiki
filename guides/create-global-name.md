@@ -2,7 +2,7 @@
 title: Create Global Name
 description: How to create a global name
 published: true
-date: 2022-10-07T07:34:40.297Z
+date: 2022-10-07T07:35:26.164Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:04.236Z
@@ -16,9 +16,11 @@ This guide will help users to create a **Global Name** using the Nexus Interface
 
 Global Names require no username or namespace prefix, and are therefore globally unique. These will be likely reserved for use cases where a succinct, unique, name is necessary, for example a token ticker symbol. To avoid needless name-squatting, global names attract a high fee (`2000 NXS`).
 
-{% hint style="info" %}
-Creating a Global name will incur a fee of 2000 NXS. The fees will be deducted from the default account.
-{% endhint %}
+
+> Creating a Global name will incur a fee of 2000 NXS. The fees will be deducted from the default account.
+{.is-warning}
+
+
 
 ## Uses of Global Name
 
