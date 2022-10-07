@@ -2,7 +2,7 @@
 title: 10 Reasons to Build on Nexus
 description: 
 published: true
-date: 2022-10-07T05:06:15.649Z
+date: 2022-10-07T21:37:24.965Z
 tags: use-cases
 editor: markdown
 dateCreated: 2022-10-07T05:06:15.649Z
@@ -11,9 +11,12 @@ dateCreated: 2022-10-07T05:06:15.649Z
 
 # 🔟 10 Reasons to Build on Nexus?
 
-There is an increasing number of smart contract platforms rolling out in the crypto space, with many becoming household names. However, a dark horse in the race to be the most efficient and secure blockchain is ‘[Nexus](https://www.nexus.io/)’. Given its low market cap, most people have never heard of this seven year old blockchain, yet it delivers far more than many of the leading smart contract platforms today.&#x20;
+There is an increasing number of smart contract platforms rolling out in the crypto space, with many becoming household names. However, a dark horse in the race to be the most efficient and secure blockchain is ‘[Nexus](https://www.nexus.io/)’. Given its low market cap, most people have never heard of this seven year old blockchain, yet it delivers far more than many of the leading smart contract platforms today.
 
-The Nexus [roadmap](https://www.nexus.io/roadmap) is extensive, with massive upgrades and new features still to come, many of which are just around the corner. However, let’s now focus on the top 10 reasons to build on Nexus based on its current capabilities. All these features can be used by developers on the public network or their own private chain.&#x20;
+The Nexus [roadmap](https://www.nexus.io/roadmap) is extensive, with massive upgrades and new features still to come, many of which are just around the corner. However, let’s now focus on the top 10 reasons to build on Nexus based on its current capabilities. All these features can be used by developers on the public network or their own private chain.
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?t=5s&v=HSXP5mbjn1s"> </iframe>
 
 - [10 Reasons to Build on Nexus - Youtube](https://www.youtube.com/watch?t=5s&v=HSXP5mbjn1s)
 {.links-list}
@@ -26,7 +29,7 @@ Nexus was designed from its inception with composability in mind. The team and t
 
 ## **2: Fueling the No-Code Movement**
 
-[Bubble](https://bubble.io/?utm\_source=prwire\&utm\_medium=pr\&utm\_campaign=fc2021\&utm\_content=micaward) is a leader in the no-code movement, which offers a powerful point-and-click web editor and cloud hosting platform that allows users to build fully customizable web applications and workflows. Nexus’ [bubble plugin](https://www.nexus.io/bubble) contains several API calls that interact directly with the Nexus' blockchain. It is a powerful tool for anyone eager to build tokenized peer-to-peer NFT (Non fungible token) marketplaces, visual art galleries, music and video streaming platforms, social networks, and many other services, creations, and ideas for the Web3 era.&#x20;
+[Bubble](https://bubble.io/?utm\_source=prwire\&utm\_medium=pr\&utm\_campaign=fc2021\&utm\_content=micaward) is a leader in the no-code movement, which offers a powerful point-and-click web editor and cloud hosting platform that allows users to build fully customizable web applications and workflows. Nexus’ [bubble plugin](https://www.nexus.io/bubble) contains several API calls that interact directly with the Nexus' blockchain. It is a powerful tool for anyone eager to build tokenized peer-to-peer NFT (Non fungible token) marketplaces, visual art galleries, music and video streaming platforms, social networks, and many other services, creations, and ideas for the Web3 era.
 
 &nbsp;
 
@@ -44,8 +47,7 @@ Nexus has a multi-tiered [naming system](https://www.nexus.io/namespaces) that o
 
 ## **5: Mobile-friendly Automated Key Management**
 
-Nexus has built a groundbreaking transactional architecture called ‘[Signature Chains](https://www.nexus.io/ResourceHub/signature-chains)’ that replaces the legacy UTxO, and so-called account based models, to simplify application development, wallet usability, and therefore boost user adoption. A Signature Chain is a personal vault containing the historical record of every single transaction and digital asset ownership of a single user on the blockchain, and is accessed with user-generated credentials (username, password, and PIN) by a decentralized login system. Signature Chains make Nexus the perfect mobile-friendly Web3 development stack by eliminating manual dependency on key management plugins such as MetaMask, enabling developers to build tokenized Dapps with simplified UI/UX that are as easy to use as Facebook, Snapchat, and TikTok.&#x20;
-
+Nexus has built a groundbreaking transactional architecture called ‘[Signature Chains](https://www.nexus.io/ResourceHub/signature-chains)’ that replaces the legacy UTxO, and so-called account based models, to simplify application development, wallet usability, and therefore boost user adoption. A Signature Chain is a personal vault containing the historical record of every single transaction and digital asset ownership of a single user on the blockchain, and is accessed with user-generated credentials (username, password, and PIN) by a decentralized login system. Signature Chains make Nexus the perfect mobile-friendly Web3 development stack by eliminating manual dependency on key management plugins such as MetaMask, enabling developers to build tokenized Dapps with simplified UI/UX that are as easy to use as Facebook, Snapchat, and TikTok.
 &nbsp;
 
 ## **6: Quantum-Proof Security**&#x20;
@@ -62,13 +64,12 @@ It is free to send and receive NXS, tokens and assets (NFTs). However, there is 
 
 ## **8: High Throughput**
 
-Our latest test shows that the current release can achieve 655 transactions per second on a live application, with each transaction able to contain up to 100 contracts.&#x20;
-
+Our latest test shows that the current release can achieve 655 transactions per second on a live application, with each transaction able to contain up to 100 contracts.
 &nbsp;
 
 ## **9: Custom Database**
 
-Nexus has developed its own database called the Lower Level Database (LLD). It is a fast and modular storage engine that is capable of outperforming most of the current embedded database engines that exist. Tests have shown an average of 0.33 seconds per 100,000 writes and reads to disk, making it faster than Google’s LevelDB. LLD multithreading demoing from May 2021 showed 1024 threads at 578M reads per second, and 3333 threads reaching 4.2B reads per second. It is anticipated that staying above 1M reads per second will be the standard during live application.&#x20;
+Nexus has developed its own database called the Lower Level Database (LLD). It is a fast and modular storage engine that is capable of outperforming most of the current embedded database engines that exist. Tests have shown an average of 0.33 seconds per 100,000 writes and reads to disk, making it faster than Google’s LevelDB. LLD multithreading demoing from May 2021 showed 1024 threads at 578M reads per second, and 3333 threads reaching 4.2B reads per second. It is anticipated that staying above 1M reads per second will be the standard during live application.
 
 &nbsp;
 
