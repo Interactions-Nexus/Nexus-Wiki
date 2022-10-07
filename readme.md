@@ -2,7 +2,7 @@
 title: readme
 description: 
 published: true
-date: 2022-10-07T09:30:01.766Z
+date: 2022-10-07T09:31:22.528Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T09:27:04.537Z
@@ -19,10 +19,8 @@ dateCreated: 2022-10-07T09:27:04.537Z
 [![Chat on Discord](https://img.shields.io/badge/discord-join-8D96F6.svg?style=flat&logo=discord&logoColor=white)](https://discord.gg/YZZt8t6Ur5)
 [![Reddit](https://img.shields.io/badge/reddit-%2Fr%2Fnexus_community-orange?logo=reddit&logoColor=white)](https://www.reddit.com/r/nexus_community/)
 
-##### A modern, lightweight and powerful wiki app built on NodeJS
+##### A modern, lightweight and multilingual wiki built on wiki.js
   
-##### A modern, lightweight and powerful wiki app built on NodeJS
-
 </div>
 
 - **[Official Website](https://nexus.io)**
