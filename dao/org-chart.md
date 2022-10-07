@@ -2,7 +2,7 @@
 title: Organisational Chart
 description: 
 published: true
-date: 2022-10-07T13:33:32.690Z
+date: 2022-10-07T14:10:40.335Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T13:17:49.576Z
@@ -18,7 +18,7 @@ flowchart TD
     A[US Embassy]
     A--->B[Ambassador DAO];
     A------>C(Developer DAO);
-    A----------D(Judiciary);
+    A---------->D(Judiciary);
     B--->E[Interactions]
     B--->F[Impressions]
     B--->G[Relationships]
