@@ -2,7 +2,7 @@
 title: Organisational Chart
 description: 
 published: true
-date: 2022-10-07T14:10:40.335Z
+date: 2022-10-07T16:51:22.697Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T13:17:49.576Z
@@ -29,3 +29,4 @@ flowchart TD
     C--->L[Interface]
     C--->M[Miners]
 ```
+
