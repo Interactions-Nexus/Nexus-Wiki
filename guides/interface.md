@@ -2,7 +2,7 @@
 title: Interface
 description: Introduction to the NexusInterface
 published: true
-date: 2022-10-06T10:24:34.689Z
+date: 2022-10-07T05:57:43.146Z
 tags: wallet
 editor: markdown
 dateCreated: 2022-10-05T08:31:25.193Z
@@ -18,14 +18,13 @@ The Interface is modular and consists of the _**`Core`**_ and the  **`user`**_**
 
 The Interface supports both, Tritium and the Legacy chain. This is enabled by the two modes and the user can switch between the Tritium and legacy modes.
 
-{% hint style="info" %}
-We recommend users to who have NXS in the legacy chain to migrate to Tritium.&#x20;
-{% endhint %}
 
-{% hint style="info" %}
-Next Interface update will default to a lite node compared to the full node implementation today. This will reduce the complexity for ordinary users.
-{% endhint %}
+> We recommend users to who have NXS in the legacy chain to migrate to Tritium.
+{.is-info}
+
+> Next Interface update will default to a lite node compared to the full node implementation today. This will reduce the complexity for ordinary users.
+{.is-info}
 
 If any user is facing issues with the Nexus Interface, or has any general queries, we will be happy to help, on the **`Nexus Support`** telegram channel linked below.&#x20;
 
-{% embed url="https://t.me/NexusSupport" %}
+[NexusSupport](https://t.me/NexusSupport)
