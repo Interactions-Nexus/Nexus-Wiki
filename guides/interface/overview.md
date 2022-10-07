@@ -2,7 +2,7 @@
 title: Overview
 description: Overview Module
 published: true
-date: 2022-10-07T05:59:37.804Z
+date: 2022-10-07T06:01:28.186Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:10.398Z
@@ -12,7 +12,9 @@ dateCreated: 2022-10-05T08:37:10.398Z
 
 The "`Overview` module is the homepage of the wallet. The purpose of the globe is to show the location of nodes the wallet is connected to.
 
-### Below is an explanation of the attributes on the left hand side of the Overview module:
+&nbsp;
+
+## Below is an explanation of the attributes on the left hand side of the Overview module:
 
 * **Balance (NXS):** Total NXS balance across all accounts in the signature chain.
 * **Balance (USD):** The USD value of all NXS balances - calculated by multiplying _Balance (NXS) x Market Price (USD)_. The wallet comes with USD as the default currency. The base currency can be changed at the following location: _Settings -> Application -> Base Currency._
@@ -21,9 +23,9 @@ The "`Overview` module is the homepage of the wallet. The purpose of the globe i
 * **Market Cap (USD):** This is calculated by multiplying the _Market Price (USD) x Total NXS Circulating Supply._
 * **24HR Change (USD %):** The market value change in NXS over the last 24 hours.
 
+&nbsp;
 
-
-### Following is an explanation of the attributes on the right hand side of the Overview module:
+## Following is an explanation of the attributes on the right hand side of the Overview module:
 
 * **Connections:** This refers to the amount of random “nodes” which are connected. By default your node is limited to make up to 16 outgoing connections and 84 incoming (100 total). If you are behind a router at home then incoming connections will only be able to be made if you enable UPnP in the wallet (and your router supports it) or if you manually set up port forwarding on port 9888. You can change the configuration to have more than 16 outgoing (with maxoutgoing=xx) but it's not necessary, 16 is adequate.
 * **Block Count:** The block count is the “height” of the blockchain. This number reflects the local node block count that can be verified against a Nexus Explorer’s current block height (meaning the wallet is up-to-date). If the block value on the wallet does not match that of a Nexus Explorer, then it is not in sync with the public blockchain. Use the ‘Download the Recent Database’ option (File -> Download Recent Database) to bootstrap the most recent version. Another method to validate synchronization is to look at the left icon in the top right-hand corner of the wallet. If it says “Synchronizing,” that means it is not up to date. On the other hand, if it says “Synchronized,” that means it is up to date.
