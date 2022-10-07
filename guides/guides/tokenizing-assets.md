@@ -1,9 +1,9 @@
 ---
-title: tokenizing-assets
+title: Tokenizing Assets
 description: 
 published: true
-date: 2022-10-05T08:30:45.166Z
-tags: 
+date: 2022-10-07T07:27:56.028Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:25:57.390Z
 ---
