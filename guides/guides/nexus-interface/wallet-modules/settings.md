@@ -1,9 +1,9 @@
 ---
-title: settings
-description: 
+title: Settings
+description: Settings Module
 published: true
-date: 2022-10-05T08:39:04.364Z
-tags: 
+date: 2022-10-07T06:03:21.570Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:24.458Z
 ---
