@@ -2,7 +2,7 @@
 title: Transactions
 description: Transactions Module
 published: true
-date: 2022-10-07T05:45:05.014Z
+date: 2022-10-07T05:50:43.061Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:31.552Z
@@ -22,7 +22,7 @@ Transactions can be filtered by any of the following criteria:
 * **Name:** Specify “NXS” or the name of a token which was previously involved in transactions on this SigChain.
 * **Time Span:** Using one of the time periods in the image below, specify the time period of transactions to filter.
 
-![](https://nexus.io/ResourceHub/images/guide/transactions2.png)
+![class="small"](https://nexus.io/ResourceHub/images/guide/transactions2.png)
 
 
 
