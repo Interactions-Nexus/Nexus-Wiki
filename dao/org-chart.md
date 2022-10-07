@@ -2,7 +2,7 @@
 title: Organisational Chart
 description: 
 published: true
-date: 2022-10-07T13:31:28.998Z
+date: 2022-10-07T13:33:25.328Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T13:17:49.576Z
@@ -10,6 +10,8 @@ dateCreated: 2022-10-07T13:17:49.576Z
 
 # DAO Organization Chart
 The DAO is made up of the US Embassy which is a non-profit organiation and under it there are three branches Ambassdors, Developers and Judicairy. 
+
+&nbsp;
 
 ```mermaid
 flowchart TD
@@ -26,10 +28,4 @@ flowchart TD
     C--->K[Logical]
     C--->L[Interface]
     C--->M[Miners]
-        
-    
-    
-    
-    
-    
 ```
