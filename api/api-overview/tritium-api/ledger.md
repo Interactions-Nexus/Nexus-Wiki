@@ -1,9 +1,9 @@
 ---
-title: ledger
-description: LEDGER API
+title: LEDGER
+description:  Ledger API
 published: true
-date: 2022-10-05T08:34:20.101Z
-tags: 
+date: 2022-10-08T11:59:14.747Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:31.516Z
 ---
