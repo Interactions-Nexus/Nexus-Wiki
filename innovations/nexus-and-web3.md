@@ -2,7 +2,7 @@
 title: Nexus and Web 3.0
 description: Nexus designed to be the foundation of the decentralized Web 3.0
 published: false
-date: 2022-10-08T13:47:44.811Z
+date: 2022-10-08T13:49:42.284Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:31:11.199Z
@@ -28,15 +28,15 @@ Nexus was born as a cryptocurrency in 2014, watching the innovations and develop
 
 To secure a decentralised internet, requires a highly scalable blockchain which had to be designed first, with ease of use for the average user to transact easily and abstracted from complexities. The Nexus team developed the TAO framework which was designed as a 7-layer software stack,  interoperable with the OSI (Open System Interconnect) stack. We are now running Tritium,  the foundational layer of the framework and when the TAO is completed it will be a 3-Dimensional blockchain which can scale as per the usage.
 
-Starting out as an independent internet network was never an option, the whole world is already wired into the existing internet. The only viable option is to start from the existing internet using the existing infrastructure and then branch out with interoperability to the new decentralized infrastructure.&#x20;
+Starting out as an independent internet network was never an option, the whole world is already wired into the existing internet. The only viable option is to start from the existing internet using the existing infrastructure and then branch out with interoperability to the new decentralized infrastructure.
 
-To better understand safenet, we can divide into software and hardware. We will delve deeper into each one of them.&#x20;
+To better understand safenet, we can divide into software and hardware. We will delve deeper into each one of them.
 
 
 
 ## Software:
 
-Safenet will require it's own protocols, stacks, routing, CDN, Certificate Authorities (CA), Domain Naming Services (DNS), storage and Operating system (OS).&#x20;
+Safenet will require it's own protocols, stacks, routing, CDN, Certificate Authorities (CA), Domain Naming Services (DNS), storage and Operating system (OS).
 
 Nexus has been designing all the required software implementations. Nexus Protocol (NP) will interoperate and ultimately replace Internet Protocol (IP), ONE stack will replace the OSI stack and compliments the Nexus 7-layered software stack. LISP which is a locator, identifier separation protocol and LX-OS will be the operating system, intertwined with the Nexus blockchain for added security to power the decentralised internet infrastructure. A lot of architectural work has been completed at the backend, even then there is a long road ahead.
 
@@ -52,7 +52,7 @@ Domain Name Services (DNS)  and Certification authorities (CA) will be replaced 
 
 The internet infrastructure is what make the internet possible, it's the most critical and expensive component. Fibre cables across the oceans connect continents and hardware routers keep the internet humming. Nexus will build its own internet infrastructure, which will be powered with Low Earth Orbit (LEO) based "Cube satellites which will connect to each other and will relay data to ground stations and also to consumers directly. Phased array antennae will make it easier for consumers to connect to the satellites.
 
-The whole decentralised infrastructure will be crow-funded and launched by people who will own the network and also be compensated for their investments. Nexus will provide all the softwares, hardware designs and open source&#x20;
+The whole decentralised infrastructure will be crow-funded and launched by people who will own the network and also be compensated for their investments. Nexus will provide all the softwares, hardware designs and open source.
 
 
 
