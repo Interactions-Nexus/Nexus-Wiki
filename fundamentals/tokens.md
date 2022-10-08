@@ -2,7 +2,7 @@
 title: Tokens
 description: All about Tokens
 published: false
-date: 2022-10-08T13:27:06.639Z
+date: 2022-10-08T13:29:40.847Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:59.357Z
@@ -79,4 +79,4 @@ Initially all of the token supply is held in the balance of the token. Distribut
 
 At the time of writing, no the maximum supply cannot be changed once the token has been created. However, this ability is planned for a future release. How do I use a token to represent partial ownership of a digital or real-world asset?
 
-One of the most significant use cases for tokens is the ability to tokenize an asset. Tokenized Assets provide the ability for shared revenue to be automatically distributed in the form of NXS payments to the partial owners of the Asset, based on the percentage of tokens held. This is useful for use cases such as the automatic payment of dividends for Security Token Offerings (STO’s), and for the distribution of royalties from revenue earned from an Asset such as a music album.
+One of the most significant use cases for tokens is the ability to tokenize an asset. Tokenized Assets provide the ability for shared revenue to be automatically distributed in the form of NXS payments to the partial owners of the Asset, based on the percentage of tokens held. This is useful for use cases such as the automatic payment of dividends for tokenized assets, and for the distribution of royalties from revenue earned from an asset such as a music album.
