@@ -1,9 +1,9 @@
 ---
-title: crypto
-description: CRYPTO API
+title: CRYPTO
+description: Crypto API
 published: true
-date: 2022-10-05T08:34:01.765Z
-tags: 
+date: 2022-10-08T13:03:15.213Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:06.404Z
 ---
