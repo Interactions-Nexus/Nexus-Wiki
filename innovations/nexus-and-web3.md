@@ -2,7 +2,7 @@
 title: Nexus and Web 3.0
 description: Nexus designed to be the foundation of the decentralized Web 3.0
 published: false
-date: 2022-10-08T13:43:30.097Z
+date: 2022-10-08T13:46:21.203Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:31:11.199Z
@@ -17,7 +17,7 @@ Nexus will be the vanguard to architect and build the real web 3.0; completely d
 Web3 is a buzzword tossed around by all the blockchain protocols, claim it as a revolution. Decipher them and we find these chains are in their own silo's. The internet is the main infrastructure which enables our entire digital world. The internet is not decentralized, plagued with issue like net neutrality, privacy,  and is more like a gated community, where each government has different rules and regulations like the great firewall in China. There are a lot of trusted parties in the internet experience like ISP's, domain providers, certificate authorities and even then the internet is in shambles, even thought normal people do not face issues.\
 
 
-The essence of web3 is decentralization, token based economy and enabling ownership of the underlying asset. **`Is it possible to create a web3 ecosystem on top of the centralized internet, controlled by the very corporations who own Web2 and regulated by the authoritarian and sovereign government's?`**
+The essence of web3 is decentralization, token based economics enabling ownership of the underlying asset and decentralised governance. **Is it possible to create a web3 ecosystem on top of the centralized internet, controlled by the very corporations who own Web2 and regulated by the authoritarian and sovereign governments?**
 
 Essentially every protocol blockchain is creating their own island or siloed network, and interoperability is similar to bridges across these islands. All these will be at the mercy of the centralised internet providers.&#x20;
 
