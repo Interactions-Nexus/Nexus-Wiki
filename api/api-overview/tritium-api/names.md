@@ -1,9 +1,9 @@
 ---
-title: names
-description: NAMES API
+title: NAMES
+description: Names API
 published: true
-date: 2022-10-05T08:34:26.121Z
-tags: 
+date: 2022-10-08T12:59:47.993Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:39.708Z
 ---
