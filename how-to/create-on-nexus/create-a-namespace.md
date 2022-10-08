@@ -1,9 +1,9 @@
 ---
-title: create-a-namespace
-description: 
+title: Create Namespace
+description: How to create a namespace
 published: true
-date: 2022-10-05T08:30:59.601Z
-tags: 
+date: 2022-10-08T11:10:27.800Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:07.644Z
 ---
@@ -16,19 +16,20 @@ This guide will help users to create a **Namespace** using the Nexus Interface. 
 
 Namespaces allow users to provide user-friendly names for their object registers without needing to disclose their username. This is useful for privacy, but also to allow names to be related to a business or some other meaningful context.&#x20;
 
-To avoid name-squatting registering a namespace attracts a high fee (`1000 NXS`). However once registered, creating Names within that namespace costs only `1 NXS`
+To avoid name-squatting registering a namespace attracts a fee 1000 NXS. However once registered, creating `Names` within a namespace costs only 1 NXS.
 
-{% hint style="info" %}
-`Creating a Namespace will incur a fee of 1000 NXS`
-{% endhint %}
 
-## `Uses of Namespace`
+> **NOTE:** Creating a Namespace will incur a fee of 1000 NXS
+{.is-info}
 
-`Namespaces can be used for a few things:`
 
-* `It can be used as a company name, a layer above the user account. All the transactions can be done by sending the transactions to namespace::account.`
-* `It can provide privacy by hiding the username for the Sigchain`
-* `In the future it can be used as Domain Name for websites hosted on Nexus Cloud`
+## Uses of Namespace
+
+Namespaces can be used for a few things:
+
+* It can be used as a company name, a layer above the user account. All the transactions can be sent to namespace::account.
+* It can provide privacy by hiding the username for the Sigchain
+* In the future it can be used as Domain Name for websites hosted on Nexus Cloud
 
 ## Namespace Parameters
 
@@ -36,9 +37,11 @@ To avoid name-squatting registering a namespace attracts a high fee (`1000 NXS`)
 
 This is the name, the user wants to be registered as namespace.&#x20;
 
-{% hint style="info" %}
-**NOTE** : Namespaces can only contain lowercase letters, numbers, and periods **** (**.**).
-{% endhint %}
+
+> **NOTE** : Namespaces can only contain lowercase letters, numbers, and period (**.**).
+{.is-info}
+
+
 
 ## Create a Namespace
 
@@ -50,9 +53,11 @@ To create a Namespace using the Interface follow the steps:
 * In the Namespace page click on "_Create a new namespace_". This opens the _Create a new namespace_ page.&#x20;
 * In this page the user has to provide the "Name parameter which will be the namespace .&#x20;
 * Once the name is provided, click on the "CREATE NAMESPACE" button on the bottom of the page.
+* Once the namespace is registered on the blockchain, it will be listed under the "Namespace" page.
 
-{% hint style="info" %}
-The fee of 1000 NXS will be deducted from the "default" account. Make sure the account  has NXS to cover the transaction.
-{% endhint %}
 
-* Once the namespace is registered on the blockchain, it will be listed in the "Namespace" page
+
+> The fee of 1000 NXS will be deducted from the "default" account. Make sure the account has required NXS to cover the transaction.
+{.is-info}
+
+
