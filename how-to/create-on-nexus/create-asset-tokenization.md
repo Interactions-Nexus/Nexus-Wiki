@@ -2,7 +2,7 @@
 title: Create Tokenized Asset
 description: Create a tokenized asset on Nexus
 published: true
-date: 2022-10-08T11:54:27.731Z
+date: 2022-10-08T11:54:51.044Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:17.959Z
