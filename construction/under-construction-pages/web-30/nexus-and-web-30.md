@@ -1,8 +1,8 @@
 ---
-title: nexus-and-web-30
-description: 
-published: true
-date: 2022-10-05T08:35:32.239Z
+title: Nexus and Web 3.0
+description: Nexus designed to be the foundation of the decentralized Web 3.0
+published: false
+date: 2022-10-08T13:43:30.097Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:31:11.199Z
