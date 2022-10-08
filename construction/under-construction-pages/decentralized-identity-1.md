@@ -2,7 +2,7 @@
 title: decentralized-identity-1
 description: 
 published: true
-date: 2022-10-05T08:28:39.661Z
+date: 2022-10-08T09:16:47.984Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:32.137Z
