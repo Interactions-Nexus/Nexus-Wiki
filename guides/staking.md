@@ -2,7 +2,7 @@
 title: Staking
 description: nPoS - Staking Based on TRUST (Reputation)
 published: true
-date: 2022-10-08T16:09:28.481Z
+date: 2022-10-08T16:11:14.255Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:14.426Z
@@ -41,6 +41,7 @@ Nexus staked holdings will also be valuable for voting in the upcoming DAO, wher
 - [Start Staking](/en/guides/staking/start-staking)
 - [Add NXS to Stake](/en/guides/staking/add-nxs-to-stake)
 - [How to Unstake](/en/guides/staking/how-to-unstake)
+- [Additional Resources](/en/guides/staking/additional-resources)
 {.links-list}
 
 
