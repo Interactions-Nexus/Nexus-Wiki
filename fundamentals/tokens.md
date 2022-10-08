@@ -1,8 +1,8 @@
 ---
-title: Tokens
+title: Tokens on Nexus
 description: All about Tokens
 published: false
-date: 2022-10-08T13:36:13.129Z
+date: 2022-10-08T13:38:19.627Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:59.357Z
