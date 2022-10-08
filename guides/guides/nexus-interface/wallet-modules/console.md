@@ -1,9 +1,9 @@
 ---
-title: console
-description: Console
+title: Console
+description: Wallet Console
 published: true
-date: 2022-10-05T08:38:57.112Z
-tags: 
+date: 2022-10-08T09:20:22.082Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:37:03.128Z
 ---
