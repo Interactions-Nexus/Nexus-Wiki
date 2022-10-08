@@ -2,13 +2,15 @@
 title: Invoice Module Guide
 description: Invoice Module
 published: true
-date: 2022-10-08T15:39:33.378Z
+date: 2022-10-08T15:41:57.804Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:25:53.926Z
 ---
 
 # Invoice Module Guide
+
+The invoice module is an additional module which the user has to install in the wallet interface.
 
 ## **What is the Invoice Module?**
 
