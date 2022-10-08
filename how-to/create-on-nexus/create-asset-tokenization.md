@@ -2,7 +2,7 @@
 title: Create Tokenized Asset
 description: Create a tokenized asset on Nexus
 published: true
-date: 2022-10-08T11:37:17.705Z
+date: 2022-10-08T11:51:48.338Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:17.959Z
@@ -20,7 +20,7 @@ This guide will help users to  create a _**Tokenized Asset**_ using the Nexus In
 
 Before we start to create an asset tokenization, users need to be familiar with some of the concepts and parameters used.
 
-To tokenize an asset the user needs to create an asset and also create a token as per the guides linked below.
+To tokenize an asset, user needs to create the asset and token as per the guides linked below.
 
 
 - [Create Asset](/en/guides/create-asset)
@@ -28,7 +28,7 @@ To tokenize an asset the user needs to create an asset and also create a token a
 {.links-list}
 
 
-> Make sure that the Asset and Token to be tokenized are named accordingly so they are can be easily identified.
+> Name the Asset and Token accordingly so they can be identified easily.
 {.is-info}
 
 
