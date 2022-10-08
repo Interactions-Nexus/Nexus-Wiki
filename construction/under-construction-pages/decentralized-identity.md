@@ -1,8 +1,8 @@
 ---
-title: decentralized-identity
+title: Decentralized Identity
 description: Decentralized Identity on Nexus
-published: true
-date: 2022-10-05T08:28:44.819Z
+published: false
+date: 2022-10-08T13:51:33.966Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:35.512Z
