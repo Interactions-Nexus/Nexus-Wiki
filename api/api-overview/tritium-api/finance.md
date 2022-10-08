@@ -1,9 +1,9 @@
 ---
-title: finance
-description: FINANCE API
+title: FINANCE
+description: Finance API
 published: true
-date: 2022-10-05T08:34:08.419Z
-tags: 
+date: 2022-10-08T12:55:00.233Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:15.211Z
 ---
