@@ -2,7 +2,7 @@
 title: Staking Disclaimer
 description: Staking - A serious commitment
 published: true
-date: 2022-10-08T09:35:22.949Z
+date: 2022-10-08T09:35:53.519Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:56.051Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-05T08:32:56.051Z
 
 # 🛑 Staking Disclaimer
 
-
+&nbsp;
 ## **Before You Consider Staking on Nexus**
 
 * Staking on Nexus requires commitment to adequately secure the network and receive the highest possible incentive percentage. Your wallet must remain online 365/24/7.
