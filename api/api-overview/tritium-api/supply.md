@@ -1,9 +1,9 @@
 ---
-title: supply
-description: SUPPLY API
+title: SUPPLY
+description: Supply API
 published: true
-date: 2022-10-05T08:34:37.347Z
-tags: 
+date: 2022-10-08T12:57:31.448Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:55.390Z
 ---
