@@ -2,7 +2,7 @@
 title: Guides
 description: 
 published: true
-date: 2022-10-08T11:02:40.634Z
+date: 2022-10-08T16:13:23.381Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:25:50.611Z
@@ -12,7 +12,6 @@ dateCreated: 2022-10-05T08:25:50.611Z
 
 - [Nexus Wallet - Interface](/en/guides/interface) 
 - [Staking](/en/guides/staking)
-- Mobile Wallet
 - [Create Token](/en/guides/create-token)
 - [Create Asset](/en/guides/create-asset)
 - [Tokenizing Assets](/en/guides/tokenizing-assets)
