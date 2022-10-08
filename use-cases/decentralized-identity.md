@@ -1,8 +1,8 @@
 ---
-title: decentralized-identity-1
+title: Decentralized Identity
 description: 
 published: true
-date: 2022-10-08T09:16:47.984Z
+date: 2022-10-08T09:18:39.034Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:32.137Z
@@ -10,11 +10,11 @@ dateCreated: 2022-10-05T08:24:32.137Z
 
 # Decentralized Identity
 
-### What is a decentralized identity? <a href="#h-what-is-a-decentralized-identity" id="h-what-is-a-decentralized-identity"></a>
+## What is a decentralized identity? <a href="#h-what-is-a-decentralized-identity" id="h-what-is-a-decentralized-identity"></a>
 
 Decentralized identity, often used interchangeably with “self-sovereign identity” (SSI), is gaining ground as an alternative to today’s centralized and federated infrastructures. In short, it allows individuals to manage their own identities. In a decentralized framework, the user receives credentials from a number of issuers (e.g., government, education, employer) and stores them in a _digital wallet_. The user presents those credentials to the relevant issuing authority, who then verifies their identity through a blockchain-based ledger that does not store the user’s data. That’s what decentralized identity is, so why do we need it?
 
-For many, today’s personal identity model (how businesses create identities based on the information they gather from their users) doesn’t always work in their favour. Organizations need to collect sensitive and personal data from their users to authenticate their identities—but as long as companies continue to experience data breaches or mishandle information, this is not a model that represents their users’ best interests.&#x20;
+For many, today’s personal identity model (how businesses create identities based on the information they gather from their users) doesn’t always work in their favour. Organizations need to collect sensitive and personal data from their users to authenticate their identities—but as long as companies continue to experience data breaches or mishandle information, this is not a model that represents their users’ best interests.
 
 Most of us have a fragmented identity experience online, authenticating separately with a sprawl of service providers; but some are openly disenfranchised. Around 1 billion people worldwide are unable to claim physical or digital ownership of their identity, leaving them unable to actively participate in public services and society's most basic technical advances.
 
@@ -22,7 +22,7 @@ While still in its nascent stages, the decentralized approach to identity promis
 
 
 
-### What we’re talking about when we talk about decentralized identity
+## What we’re talking about when we talk about decentralized identity
 
 As an emerging field within identity and access management (IAM), decentralized identity has its own set of particular terms that help define the roles and interactions within this model.
 
