@@ -1,18 +1,18 @@
 ---
-title: create-asset-tokenization
-description: 
+title: Create Tokenized Asset
+description: Create a tokenized asset on Nexus
 published: true
-date: 2022-10-05T08:31:14.662Z
-tags: 
+date: 2022-10-08T11:26:58.796Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:17.959Z
 ---
 
-# Create Asset Tokenization
+# Create Tokenized Asset
 
 ### What is Asset Tokenization
 
-**Asset Tokenization** also referred as  "_Asset Backed Tokens"_ or "T_okenized Assets"_ is a new concept that uses digital tokens to fractionalize ownership of assets such as property, jewellery or fine art and uses contracts on blockchain to manage these ownership rights
+`Asset Tokenization` also referred as  `Asset Backed Tokens` or `Tokenized Assets` is a new concept that uses digital tokens to fractionalize ownership of assets such as property, jewellery or fine art and uses contracts on blockchain to manage these ownership rights
 
 
 
@@ -22,13 +22,13 @@ Before we start to create an asset tokenization, users need to be familiar with 
 
 To tokenize an asset the user needs to create an asset and also create a token as per the guides linked below.
 
-{% content-ref url="create-an-asset.md" %}
-[create-an-asset.md](create-an-asset.md)
-{% endcontent-ref %}
 
-{% content-ref url="create-a-token.md" %}
-[create-a-token.md](create-a-token.md)
-{% endcontent-ref %}
+- [create-asset](/en/guides/create-asset)
+- [create-token](/en/guides/create-token)
+{.links-list}
+
+
+
 
 {% hint style="info" %}
 Make sure that the Asset and Token are named appropriately so they represent the same asset.&#x20;
