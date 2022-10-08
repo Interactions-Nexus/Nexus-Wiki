@@ -1,9 +1,9 @@
 ---
-title: staking-disclaimer
-description: Staking is a serious commitment
+title: Staking Disclaimer
+description: Staking - A serious commitment
 published: true
-date: 2022-10-05T08:36:44.695Z
-tags: 
+date: 2022-10-08T09:29:06.666Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:56.051Z
 ---
