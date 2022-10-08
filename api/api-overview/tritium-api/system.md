@@ -1,9 +1,9 @@
 ---
-title: system
-description: SYSTEM API
+title: SYSTEM
+description: System API
 published: true
-date: 2022-10-05T08:34:42.997Z
-tags: 
+date: 2022-10-08T12:49:15.506Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:03.315Z
 ---
