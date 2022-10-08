@@ -2,7 +2,7 @@
 title: Staking
 description: nPoS - Staking Based on TRUST (Reputation)
 published: true
-date: 2022-10-08T16:00:50.637Z
+date: 2022-10-08T16:04:27.455Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:14.426Z
@@ -36,13 +36,15 @@ Staking on Nexus is similar to running a full node
 
 Before we proceed further, Please go through the disclaimer first.
 
-- [staking-disclaimer](/en/guides/staking/staking-disclaimer)
-- [staking-requirements](/en/guides/staking/staking-requirements)
-- [staking-settings](/en/guides/staking/staking-settings)
-- [minimum-staking-amount](/en/guides/staking/minimum-staking-amount)
-- [start-staking](/en/guides/staking/start-staking)
-- [add-nxs-to-stake](/en/guides/staking/add-nxs-to-stake)
-- [how-to-unstake](/en/guides/staking/how-to-unstake)
+## Chapters
+
+- [Staking Disclaimer](/en/guides/staking/staking-disclaimer)
+- [Staking Requirements](/en/guides/staking/staking-requirements)
+- [Staking Settings](/en/guides/staking/staking-settings)
+- [Minimum Staking Amount](/en/guides/staking/minimum-staking-amount)
+- [Start Staking](/en/guides/staking/start-staking)
+- [Add NXS to Stake](/en/guides/staking/add-nxs-to-stake)
+- [How to Unstake](/en/guides/staking/how-to-unstake)
 {.links-list}
 
 
