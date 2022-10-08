@@ -1,0 +1,55 @@
+<!--
+title: Create Tokenized Asset
+description: Create a tokenized asset on Nexus
+published: true
+date: 2022-10-08T11:52:01.989Z
+tags: guides
+editor: ckeditor
+dateCreated: 2022-10-05T08:26:17.959Z
+-->
+
+<h1 class="toc-header" id="create-tokenized-asset"> Create Tokenized Asset</h1>
+<h3 class="toc-header" id="what-is-asset-tokenization"> What is Asset Tokenization</h3>
+<p><code>Asset Tokenization</code> also referred as  <code>Asset Backed Tokens</code> or <code>Tokenized Assets</code> is a new concept that uses digital tokens to fractionalize ownership of assets such as property, jewellery or fine art and uses contracts on blockchain to manage these ownership rights</p>
+<p>This guide will help users to  create a <em><strong>Tokenized Asset</strong></em> using the Nexus Interface.</p>
+<p>Before we start to create an asset tokenization, users need to be familiar with some of the concepts and parameters used.</p>
+<p>To tokenize an asset, user needs to create the asset and token as per the guides linked below.</p>
+<ul class="links-list">
+<li><a class="is-internal-link is-valid-page" href="/en/guides/create-asset">Create Asset</a></li>
+<li><a class="is-internal-link is-valid-page" href="/en/guides/create-token">Create Token</a></li>
+</ul>
+<blockquote class="is-info">
+<p>Name the Asset and Token accordingly so they can be identified easily.</p>
+</blockquote>
+<h2 class="toc-header" id="create-asset-tokenization"> Create Asset Tokenization</h2>
+<p>To create a tokenised asset using the Interface follow the steps below:</p>
+<ul>
+<li>
+<p>Open the Nexus Interface, make sure the wallet is fully synched. Log into the user account (Sigchain).</p>
+</li>
+<li>
+<p>In the Overview page, at the bottom click on the "<em>User"</em> module. This opens the <em>User</em> page.</p>
+</li>
+<li>
+<p>In the User page, on the left side click on the "<em>Assets</em>" tab.</p>
+</li>
+<li>
+<p>Under the Assets page, all the assets owned by the user account / Sigchain will be listed.</p>
+</li>
+<li>
+<p>Click on the Asset which is to be tokenized, this opens the "Asset Details" page.</p>
+</li>
+<li>
+<p>At the bottom right of this page click on "Tokenize". This will open the "Tokenize" page.</p>
+</li>
+<li>
+<p>In this window you can choose the Token to tokenize the asset with, the available tokens list can be accessed using the drop down arrow. </p>
+</li>
+<li>
+<p>Once the appropriate token is selected, click on the "Tokenize" button on the bottom of the page.</p>
+</li>
+</ul>
+<h2 class="toc-header" id="asset-payout"> Asset Payout</h2>
+<p>The main utility of tokenized assets is to enable fractional ownership and to share the revenue with the token holders. To send the payout to the token holders the user sends NXS equivalent in value to the revenue generated, to the asset address and it will be automatically be distributed as per the percentage token holdings of each holder.</p>
+<p>{% hint style="warning" %}<br>
+The payout is distributed taking the maxsupply as 100% of the tokens. If any tokens are still in the token generation address, the percentage of payout corresponding to the balance tokens will be returned to the sender.</p>
