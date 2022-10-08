@@ -2,7 +2,7 @@
 title: Interface
 description: Introduction to the NexusInterface
 published: true
-date: 2022-10-07T05:58:23.058Z
+date: 2022-10-08T16:28:46.771Z
 tags: wallet
 editor: markdown
 dateCreated: 2022-10-05T08:31:25.193Z
@@ -28,3 +28,15 @@ The Interface supports both, Tritium and the Legacy chain. This is enabled by th
 If any user is facing issues with the Nexus Interface, or has any general queries, we will be happy to help, on the **`Nexus Support`** telegram channel linked below.&#x20;
 
 [NexusSupport](https://t.me/NexusSupport)
+
+## Chapters
+
+- [Overview](/en/guides/interface/overview)
+- [User Module](/en/guides/interface/user-module)
+- [Send](/en/guides/interface/send)
+- [Transactions](/en/guides/interface/transactions)
+- [Address Book](/en/guides/interface/address-book)
+- [Console](/en/guides/interface/console)
+- [Settings](/en/guides/interface/settings)
+- [Create User Account](/en/guides/interface/create-user-account)
+- [Create an Account](/en/guides/interface/create-an-account)
