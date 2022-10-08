@@ -1,9 +1,9 @@
 ---
-title: tokens
-description: TOKENS API
+title: TOKENS
+description: Tokens API
 published: true
-date: 2022-10-05T08:34:49.674Z
-tags: 
+date: 2022-10-08T12:53:44.920Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:11.019Z
 ---
