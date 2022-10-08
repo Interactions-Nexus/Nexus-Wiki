@@ -2,7 +2,7 @@
 title: Invoice Module Guide
 description: Invoice Module
 published: true
-date: 2022-10-08T15:41:57.804Z
+date: 2022-10-08T15:42:51.667Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:25:53.926Z
@@ -14,7 +14,7 @@ The invoice module is an additional module which the user has to install in the 
 
 ## **What is the Invoice Module?**
 
-The Invoice DApp module is an initial and essential step in the evolution of decentralized finance (DeFi), supply chains and similar blockchain use cases being built on Nexus. We envision the Nexus invoice system to not only streamline payments and reduce the costs of administration within an organization, but across businesses and between industries.
+The Invoice module is an initial and essential step in the evolution of decentralized finance (DeFi), supply chains and similar blockchain use cases being built on Nexus. We envision the Nexus invoice system to not only streamline payments and reduce the costs of administration within an organization, but across businesses and between industries.
 
 This module is a downloadable add-on for the Nexus wallet. All invoices are recorded on the blockchain and only transferred to the debtor once settled, providing a transparent record for auditing or legal purposes. A time expiration for the invoice contract can also be specified if required.
 
@@ -26,9 +26,9 @@ Download the Nexus Invoice Module tar.gz from the Github link below.&#x20;
 
 {% embed url="https://github.com/Nexusoft/Nexus-Interface-Invoice-Module/releases" %}
 
-The Module section of the Nexus wallet is accessible via the top _Settings_ menu or gears icon on the bottom. Choose the _Modules_ section within the _Settings_ screen. The following screenshot shows the _Modules_ section without any modules installed.
+The Module section of the Nexus wallet is accessible via the top Settings menu or gears icon on the bottom. Choose the Modules section within the Settings screen. The following screenshot shows the Modules section without any modules installed.
 
-As the instructions on the screen indicate, installing a module is as simple as dragging a module's archive file (e.g., _tar.gz_ archive file) into the field on the screen. Instead of the archive file, you can also download the zip file, extract it, and drag it into the same field on the screen.
+As the instructions on the screen indicate, installing a module is as simple as dragging a module's archive file (e.g., tar.gz archive file) into the field on the screen. Instead of the archive file, you can also download the zip file, extract it, and drag it into the same field on the screen.
 
 Upon dragging the invoicing module’s archive file onto the screen depicted above, the following prompt is displayed. If everything is as expected (e.g., the module hash matches that listed on the github repository), click the _Install Module_ button to begin installation.
 
