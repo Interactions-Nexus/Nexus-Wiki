@@ -1,9 +1,9 @@
 ---
-title: staking-attributes
+title: Staking Attributes
 description: Understanding Staking Attributes
 published: true
-date: 2022-10-05T08:36:40.032Z
-tags: 
+date: 2022-10-08T09:37:04.174Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:49.228Z
 ---
