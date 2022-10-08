@@ -2,7 +2,7 @@
 title: Staking
 description: nPoS - Staking Based on TRUST (Reputation)
 published: true
-date: 2022-10-08T16:04:27.455Z
+date: 2022-10-08T16:04:59.609Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:14.426Z
@@ -36,7 +36,7 @@ Staking on Nexus is similar to running a full node
 
 Before we proceed further, Please go through the disclaimer first.
 
-## Chapters
+## Staking Guide Chapters
 
 - [Staking Disclaimer](/en/guides/staking/staking-disclaimer)
 - [Staking Requirements](/en/guides/staking/staking-requirements)
