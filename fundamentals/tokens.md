@@ -2,7 +2,7 @@
 title: Tokens
 description: All about Tokens
 published: false
-date: 2022-10-08T13:32:54.265Z
+date: 2022-10-08T13:36:13.129Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:59.357Z
@@ -18,11 +18,11 @@ In the broader sense, tokens can be thought of as virtual currencies that exist 
 
 They can be used for a variety of uses such as:
 
-1. Representing ownership in an [asset](broken-reference) such as a company, preperty or land title, rights to a piece of art, or patents.
-2. Utilities
-3. Loyalty programs
-4. Gaming tokens
-5. DAO voting rights
+- Representing ownership os an asset, such as a company, property, rights to a piece of art, or music.
+- Utilities
+- Loyalty programs
+- Gaming tokens
+- DAO voting rights
 
 **How does a Token created on the Nexus blockchain differ to tokens created on Ethereum, Waves, NEO, NEM, Stellar, etc?**
 
