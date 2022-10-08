@@ -2,7 +2,7 @@
 title: Tokens
 description: All about Tokens
 published: false
-date: 2022-10-08T13:29:40.847Z
+date: 2022-10-08T13:30:40.867Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:59.357Z
@@ -28,7 +28,7 @@ They can be used for a variety of uses such as:
 
 The primary difference is simplicity. To create a token on Ethereum, or most other token platforms, users must write a smart contract - code written in a specific programming language - to define the token and how it will be used/distributed. This requires the user to have programming skills and the task can often be quite complicated. Nexus has taken a different approach by simplifying the process, allowing users to create a token in one short console command / API request. The wallet interface goes a step further providing a simple interface to guide users through the process.
 
-**How do I create a token?**
+## How to create a token?
 
 Tokens can easily be created through the Nexus Wallet or the console/CLI. The user defines a new token so that it can be distributed, traded, or used to tokenize an asset.
 
@@ -63,6 +63,7 @@ Once created, the token has three important properties:
 * currentsupply - the number of circulating tokens that have been distributed to token accounts
 * balance - the number of tokens that have not yet been distributed (maxsupply - currentsupply)
 
+## Fees
 The fee is based on the number of token divisible units you define (the combination of supply and decimals). There is a minimum fee of 1 NXS and the calculation is linear thereafter, so that each additional significant digit costs an additional 100 NXS. E.g.
 
 100 units = 1 NXS
