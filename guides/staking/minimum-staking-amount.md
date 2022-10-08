@@ -2,7 +2,7 @@
 title: Minimum Staking Amount
 description: Minimum NXS required for staking a full node
 published: true
-date: 2022-10-08T09:53:00.493Z
+date: 2022-10-08T09:55:44.009Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:42.289Z
@@ -27,7 +27,7 @@ The minimum threshold varies every few minutes as staking difficulty changes. Th
 
 Ex: If a user is staking 50,000 NXS, after a year he reaches 3% stake rate and he unstakes 50% ie 25,000 NXS the stake rate will drop to 1.5% immediately as the stake adjustment is confirmed.
 
-> Trust earned by staking beyond a year of continuous staking is recorded as `trust`, even though the trust score is limited to 100.
+> Trust earned by staking beyond a year of continuous staking is recorded as *trust* onchain, even though the 'trust score' is limited to 100.
 {.is-info}
 
 
