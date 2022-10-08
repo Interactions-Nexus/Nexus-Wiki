@@ -1,8 +1,8 @@
 ---
-title: README
-description: 
+title: WEB 3.0
+description: Decentralised Web
 published: true
-date: 2022-10-05T08:35:27.187Z
+date: 2022-10-08T13:18:55.273Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:31:03.919Z
