@@ -1,9 +1,9 @@
 ---
-title: additional-resources
+title: Additional Resources
 description: Staking Resources
 published: true
-date: 2022-10-05T08:36:25.439Z
-tags: 
+date: 2022-10-08T11:56:12.520Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:28.199Z
 ---
