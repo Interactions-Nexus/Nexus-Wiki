@@ -1,14 +1,18 @@
 ---
 title: WEB 3.0
 description: Decentralised Web
-published: true
-date: 2022-10-08T13:18:55.273Z
+published: false
+date: 2022-10-08T13:20:07.359Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:31:03.919Z
 ---
 
 # Web 3.0
+
+> This Page is unpublished, needs to te completed and then published
+{.is-info}
+
 
 ## What is web 3.0?
 
