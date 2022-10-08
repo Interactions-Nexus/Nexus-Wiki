@@ -2,7 +2,7 @@
 title: Staking
 description: nPoS - Staking Based on TRUST (Reputation)
 published: true
-date: 2022-10-08T16:04:59.609Z
+date: 2022-10-08T16:06:33.477Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:14.426Z
@@ -28,13 +28,9 @@ Nexus provides desktop wallets for windows, mac and Linux. The mobile wallet (li
 
 Nexus staked holdings will also be valuable for voting in the upcoming DAO, where trust will be an crucial factor. Voting will supply weight/age values to trust and amount of staked NXS, providing considerable resistance against manipulation and bad actor influences.. Note: In the previous election conducted for Nexus embassy allocation, the amount of nxs for each vote was capped at 10K nxs + trust weight. This is currently not hard coded, but will be implemented in the upcoming DAO release. The threshold variables can be changed as per the requirement and also can be voted on by the community.
 
-{% hint style="info" %}
-Staking on Nexus is similar to running a full node
-{% endhint %}
+> Staking on Nexus is similar to running a full node.
+{.is-info}
 
-## Disclaimer
-
-Before we proceed further, Please go through the disclaimer first.
 
 ## Staking Guide Chapters
 
