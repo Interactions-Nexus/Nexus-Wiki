@@ -1,9 +1,9 @@
 ---
-title: nexus-alerts
-description: Nexus Alert Bot
+title: Nexus Alerts
+description: Nexus Alert Telegram Bot - Decipher the information
 published: true
-date: 2022-10-05T08:27:48.273Z
-tags: 
+date: 2022-10-08T09:13:53.584Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:23:56.831Z
 ---
