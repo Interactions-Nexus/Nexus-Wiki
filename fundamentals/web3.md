@@ -2,25 +2,20 @@
 title: WEB 3.0
 description: Decentralised Web
 published: false
-date: 2022-10-08T13:20:07.359Z
+date: 2022-10-08T13:23:42.101Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:31:03.919Z
 ---
 
-# Web 3.0
+# What is Web 3.0
 
-> This Page is unpublished, needs to te completed and then published
-{.is-info}
+**Web 3.0**, also known as Web3 is the next iteration of the world wide web, which incorporates concepts including decentralization, token-based economics and DAO based governance.
 
-
-## What is web 3.0?
-
-Web 3.0, also known as Web3 is the next iteration of the world wide web. which incorporates concepts including decentralization and token-based economics.&#x20;
+## BACKGROUND
 
 To better understand web3, we need to understand the evolution of world wide web.
 
-## BACKGROUND
 
 ### **What is Web 1.0?** <a href="#what-is-web-1-0" id="what-is-web-1-0"></a>
 
