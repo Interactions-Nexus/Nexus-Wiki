@@ -2,7 +2,7 @@
 title: Tokens
 description: All about Tokens
 published: false
-date: 2022-10-08T13:30:40.867Z
+date: 2022-10-08T13:32:54.265Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:59.357Z
@@ -45,7 +45,9 @@ To create a new Token, go to the User module in the Wallet, and please follow th
 
 To achieve the same using the console use the following command:
 
-`tokens/create/token name=My Token supply=100 decimals=2`
+```
+finance/create/token name=My_Token supply=100 decimals=2 pin=1234
+```
 
 The tradeoff for simplicity is flexibility. A token created from a traditional smart contract allows developers to define any rules they wish for the distribution and use of a token, which are encoded in the token definition contract. This flexibility is certainly useful, but is overly complex for people without programming skills.
 
