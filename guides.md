@@ -2,7 +2,7 @@
 title: Guides
 description: 
 published: true
-date: 2022-10-08T16:18:31.792Z
+date: 2022-10-08T16:21:51.256Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:25:50.611Z
@@ -15,7 +15,7 @@ dateCreated: 2022-10-05T08:25:50.611Z
 - [Staking](/en/guides/staking)
 - [Create Token](/en/guides/create-token)
 - [Create Asset](/en/guides/create-asset)
-- [Tokenizing Assets](/en/guides/tokenizing-assets)
+- [Tokenizing Assets](/en/guides/create-tokenized-asset)
 - [Create Global Name](/en/guides/create-global-name)
 - [Nexus Alerts](/en/guides/nexus-alerts)
 {.links-list}
