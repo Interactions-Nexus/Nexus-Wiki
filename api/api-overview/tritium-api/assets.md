@@ -1,9 +1,9 @@
 ---
-title: assets
-description: ASSETS API
+title: ASSETS
+description:  Assets API
 published: true
-date: 2022-10-05T08:33:55.357Z
-tags: 
+date: 2022-10-08T12:30:34.630Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:28:58.174Z
 ---
