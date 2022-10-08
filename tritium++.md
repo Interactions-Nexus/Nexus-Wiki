@@ -1,9 +1,9 @@
 ---
-title: Tritium++
-description: 
+title: How to API - Tritium++
+description: Tritium++
 published: true
-date: 2022-10-06T10:29:46.766Z
-tags: 
+date: 2022-10-08T13:11:53.126Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:27:24.897Z
 ---
