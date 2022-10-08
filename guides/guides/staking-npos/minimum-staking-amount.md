@@ -1,18 +1,20 @@
 ---
-title: minimum-staking-amount
-description: The Miminum
+title: Minimum Staking Amount
+description: Minimum NXS required for staking a full node
 published: true
-date: 2022-10-05T08:36:35.131Z
-tags: 
+date: 2022-10-08T09:50:46.552Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:42.289Z
 ---
 
 # Minimum Staking Amount
 
-{% hint style="info" %}
-Approximately 20-25K NXS (April 2022).
-{% endhint %}
+
+> Approximately 20-25K NXS (April 2022).
+{.is-info}
+
+
 
 The minimum threshold varies every few minutes as staking difficulty changes. The only way to know for sure is to start staking. If no blocks are found within a reasonable time, add more NXS to trust balance and adjust the staking amount. This is the equivalent of adding more Graphics Processing Units (GPUs) to a PoW mining rig. The minimum amount is an estimation, a ballpark approximation depending on community participation and ecosystem adoption. Additional clarification is provided below:
 
