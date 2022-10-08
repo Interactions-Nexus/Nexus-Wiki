@@ -1,8 +1,8 @@
 ---
-title: sorting
+title: Sorting
 description: 
 published: true
-date: 2022-10-05T08:33:20.391Z
+date: 2022-10-08T13:06:49.157Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:09.212Z
