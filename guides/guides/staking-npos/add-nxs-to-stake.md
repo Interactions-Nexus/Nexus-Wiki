@@ -1,9 +1,9 @@
 ---
-title: add-nxs-to-stake
+title: Add NXS To Stake
 description: How to add NXS for staking
 published: true
-date: 2022-10-05T08:36:20.626Z
-tags: 
+date: 2022-10-08T09:27:32.639Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:21.376Z
 ---
