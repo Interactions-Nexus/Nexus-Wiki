@@ -2,7 +2,7 @@
 title: Nexus and Web 3.0
 description: Nexus designed to be the foundation of the decentralized Web 3.0
 published: false
-date: 2022-10-08T13:46:21.203Z
+date: 2022-10-08T13:47:44.811Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:31:11.199Z
@@ -12,18 +12,17 @@ dateCreated: 2022-10-05T08:31:11.199Z
 
 Nexus will be the vanguard to architect and build the real web 3.0; completely decentralised, powered by token based economics, will enable people to own and govern the network. This can be attributed to our vision, ethos based on a decentralized foundation and Peer-to-Peer (P2P) as the default way of transactions.
 
-### Crypto and Web 3.0?
+## Crypto and Web 3.0?
 
-Web3 is a buzzword tossed around by all the blockchain protocols, claim it as a revolution. Decipher them and we find these chains are in their own silo's. The internet is the main infrastructure which enables our entire digital world. The internet is not decentralized, plagued with issue like net neutrality, privacy,  and is more like a gated community, where each government has different rules and regulations like the great firewall in China. There are a lot of trusted parties in the internet experience like ISP's, domain providers, certificate authorities and even then the internet is in shambles, even thought normal people do not face issues.\
-
+Web3 is a buzzword tossed around by all the blockchain protocols, claim it as a revolution. Decipher them and we find these chains are in their own silo's. The internet is the main infrastructure which enables our entire digital world. The internet is not decentralized, plagued with issue like net neutrality, privacy,  and is more like a gated community, where each government has different rules and regulations like the great firewall in China. There are a lot of trusted parties in the internet experience like ISP's, domain providers, certificate authorities and even then the internet is in shambles, even thought normal people do not face issues.
 
 The essence of web3 is decentralization, token based economics enabling ownership of the underlying asset and decentralised governance. **Is it possible to create a web3 ecosystem on top of the centralized internet, controlled by the very corporations who own Web2 and regulated by the authoritarian and sovereign governments?**
 
-Essentially every protocol blockchain is creating their own island or siloed network, and interoperability is similar to bridges across these islands. All these will be at the mercy of the centralised internet providers.&#x20;
+Essentially every protocol blockchain is creating their own island or siloed network, and interoperability is similar to bridges across these islands. All these will be at the mercy of the centralised internet providers.
 
 
 
-### Why Nexus Will Redefine Web3?
+## Why Nexus Will Redefine Web3?
 
 Nexus was born as a cryptocurrency in 2014, watching the innovations and developments in crypto,  it was evident that unless the internet was decentralised, any blockchain built on top will not be entirely decentralized. We also realised that creating a new internet was an inconceivable task and only innovation can make this possible.
 
@@ -35,7 +34,7 @@ To better understand safenet, we can divide into software and hardware. We will 
 
 
 
-### Software:
+## Software:
 
 Safenet will require it's own protocols, stacks, routing, CDN, Certificate Authorities (CA), Domain Naming Services (DNS), storage and Operating system (OS).&#x20;
 
@@ -49,9 +48,7 @@ Domain Name Services (DNS)  and Certification authorities (CA) will be replaced 
 
 
 
-&#x20;
-
-### Hardware:
+## Hardware:
 
 The internet infrastructure is what make the internet possible, it's the most critical and expensive component. Fibre cables across the oceans connect continents and hardware routers keep the internet humming. Nexus will build its own internet infrastructure, which will be powered with Low Earth Orbit (LEO) based "Cube satellites which will connect to each other and will relay data to ground stations and also to consumers directly. Phased array antennae will make it easier for consumers to connect to the satellites.
 
