@@ -1,9 +1,9 @@
 ---
-title: objects
-description: OBJECTS API
+title: OBJECTS
+description: Objects API
 published: true
-date: 2022-10-05T08:34:31.509Z
-tags: 
+date: 2022-10-08T13:04:19.722Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:47.887Z
 ---
