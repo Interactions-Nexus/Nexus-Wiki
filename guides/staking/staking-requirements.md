@@ -2,7 +2,7 @@
 title: Staking Requirements
 description: Hardware requirements for staking
 published: true
-date: 2022-10-08T09:46:13.584Z
+date: 2022-10-08T09:46:39.534Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:33:03.016Z
@@ -53,5 +53,3 @@ Any computer which meets the minimum requirements, If staking is the only servic
 Raspberry Pi (RPI) 4 with 2/4GB, NUC or equivalent will run the headless core and users can control it via the interface from another computer. (RPI can run only the CLI daemon so command line interaction is necessary. Nexus has great step-by-step guides to aid those who are unfamiliar.)
 
 ![Nexus wallet daemon staking on a Raspberry Pi 4 takes just 243 MB of RAM and is extremely resource conservative overall.](https://nexus.io/ResourceHub/images/guide/stake-guide1.png#)The core is  very light on resources even on a Raspberry Pi 
-
-### ****
