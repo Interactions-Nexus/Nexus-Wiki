@@ -1,8 +1,8 @@
 ---
-title: register
+title: Queries
 description: Query DSL (Domain specific Language)
 published: true
-date: 2022-10-05T08:32:59.537Z
+date: 2022-10-08T13:07:52.496Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:27:39.413Z
