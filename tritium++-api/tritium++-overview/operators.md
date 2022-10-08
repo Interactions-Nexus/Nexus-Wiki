@@ -1,8 +1,8 @@
 ---
-title: operators
+title: Operators
 description: 
 published: true
-date: 2022-10-05T11:41:38.068Z
+date: 2022-10-08T13:08:34.637Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:01.969Z
