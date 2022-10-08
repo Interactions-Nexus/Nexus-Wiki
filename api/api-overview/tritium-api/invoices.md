@@ -1,9 +1,9 @@
 ---
-title: invoices
-description: INVOICES API
+title: INVOICES
+description: Invoices API
 published: true
-date: 2022-10-05T08:34:14.112Z
-tags: 
+date: 2022-10-08T13:02:19.995Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:23.854Z
 ---
