@@ -1,9 +1,9 @@
 ---
-title: users
-description: USERS API
+title: USERS
+description: Users API
 published: true
-date: 2022-10-05T08:34:57.063Z
-tags: 
+date: 2022-10-08T12:52:38.021Z
+tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:19.866Z
 ---
