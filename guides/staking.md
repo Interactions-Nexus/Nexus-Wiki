@@ -2,7 +2,7 @@
 title: Staking
 description: nPoS - Staking Based on TRUST (Reputation)
 published: true
-date: 2022-10-08T16:06:33.477Z
+date: 2022-10-08T16:08:59.395Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:32:14.426Z
@@ -10,9 +10,9 @@ dateCreated: 2022-10-05T08:32:14.426Z
 
 # Staking (nPoS)
 
-## **Introduction to Staking**
+This guide is intended to demystify trust-based staking and provide clarification on Nexus specific centralization safeguards. The significance of this consensus power shift to staking cannot be overemphasized, especially considering the vulnerable state of governance with emerging decentralized ecosystems.
 
-This guide is intended to demystify trust-based staking and provide clarification on Nexus’ specific centralization safeguards. The significance of this consensus power shift to staking cannot be overemphasized, especially considering the vulnerable state of governance with emerging decentralized ecosystems.
+## Introduction to nPoS
 
 Nexus trust based Proof of Stake (PoS) is a greener form of mining supplying similar consensus properties that Proof of Work (PoW) channels provide with minimal management overhead. The probability of finding a block is largely determined by the amount of coins staked. It is hardware agnostic, instead basing its hashing algorithm off balance and weight. This means there is no set amount of time to earn a reward. It happens when you stake a block, with the chances of doing that increased by staked amount/Stake weight and decreased by current network PoS channel difficulty.
 
