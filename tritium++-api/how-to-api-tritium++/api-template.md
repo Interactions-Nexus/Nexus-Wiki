@@ -1,8 +1,8 @@
 ---
-title: api-template
+title: Tritium++ API Template
 description: Tritium++ API Template
 published: true
-date: 2022-10-05T11:39:50.412Z
+date: 2022-10-08T15:24:04.049Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:27:32.154Z
