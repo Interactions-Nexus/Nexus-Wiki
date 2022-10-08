@@ -1,9 +1,9 @@
 ---
-title: create-a-user-account
+title: Create User Account
 description: How to create a user account
 published: true
-date: 2022-10-05T08:38:35.737Z
-tags: 
+date: 2022-10-08T09:21:51.424Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:36:01.166Z
 ---
