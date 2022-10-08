@@ -1,9 +1,9 @@
 ---
-title: set-recovery-phrase
+title: Set Recovery Phrase
 description: Set Recovery Phrase
 published: true
-date: 2022-10-05T08:38:45.288Z
-tags: 
+date: 2022-10-08T15:18:25.941Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:36:28.809Z
 ---
