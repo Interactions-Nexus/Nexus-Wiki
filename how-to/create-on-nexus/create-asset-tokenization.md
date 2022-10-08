@@ -2,7 +2,7 @@
 title: Create Tokenized Asset
 description: Create a tokenized asset on Nexus
 published: true
-date: 2022-10-08T11:35:09.980Z
+date: 2022-10-08T11:37:17.705Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:17.959Z
@@ -41,8 +41,6 @@ To create a tokenised asset using the Interface follow the steps below:
 * In the User page, on the left side click on the "_Assets_" tab.
 * Under the Assets page, all the assets owned by the user account / Sigchain will be listed.
 * Click on the Asset which is to be tokenized, this opens the "Asset Details" page.
-
-
 
 
 
