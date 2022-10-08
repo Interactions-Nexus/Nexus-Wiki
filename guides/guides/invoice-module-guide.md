@@ -1,9 +1,9 @@
 ---
-title: invoice-module-guide
-description: 
+title: Invoice Module Guide
+description: Invoice Module
 published: true
-date: 2022-10-05T08:30:40.158Z
-tags: 
+date: 2022-10-08T15:39:33.378Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:25:53.926Z
 ---
