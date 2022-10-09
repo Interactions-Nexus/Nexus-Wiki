@@ -1,8 +1,8 @@
 ---
-title: safenet
+title: Safenet
 description: Nexus vision of Web 3.0
-published: true
-date: 2022-10-05T08:35:36.884Z
+published: false
+date: 2022-10-09T20:15:25.712Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:31:18.367Z
