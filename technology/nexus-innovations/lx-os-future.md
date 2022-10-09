@@ -1,8 +1,8 @@
 ---
-title: lx-os-future
+title: LX-OS (Future)
 description: 
 published: true
-date: 2022-10-05T08:32:04.555Z
+date: 2022-10-09T20:14:01.978Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:52.554Z
