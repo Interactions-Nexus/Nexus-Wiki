@@ -1,9 +1,9 @@
 ---
-title: buy-nxs
-description: 
-published: true
-date: 2022-10-05T08:28:34.918Z
-tags: 
+title: Buy NXS
+description: How to buy NXS
+published: false
+date: 2022-10-09T19:28:49.778Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:24:28.429Z
 ---
