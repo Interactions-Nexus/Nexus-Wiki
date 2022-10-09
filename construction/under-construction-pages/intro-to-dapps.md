@@ -1,8 +1,8 @@
 ---
-title: intro-to-dapps
-description: Decentralized Applications the future of web 3.0
-published: true
-date: 2022-10-05T08:28:54.581Z
+title: Introduction to Dapps
+description: Decentralized applications to power web 3.0
+published: false
+date: 2022-10-09T20:09:18.264Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:42.311Z
