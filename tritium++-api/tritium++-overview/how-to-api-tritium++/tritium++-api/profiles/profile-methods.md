@@ -1,9 +1,9 @@
 ---
-title: profile-methods
-description: PROFILE API METHODS
-published: true
-date: 2022-10-05T08:39:14.829Z
-tags: 
+title: Profile Methods
+description: Profile API Methods
+published: false
+date: 2022-10-09T18:42:28.558Z
+tags: methods
 editor: markdown
 dateCreated: 2022-10-05T08:37:53.300Z
 ---
