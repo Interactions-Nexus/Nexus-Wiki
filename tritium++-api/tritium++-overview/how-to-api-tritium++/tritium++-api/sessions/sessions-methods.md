@@ -1,9 +1,9 @@
 ---
-title: sessions-methods
-description: SESSION API METHODS
-published: true
-date: 2022-10-05T08:39:20.421Z
-tags: 
+title: Sessions Methods
+description: Sessions API methods
+published: false
+date: 2022-10-09T18:41:00.815Z
+tags: methods
 editor: markdown
 dateCreated: 2022-10-05T08:38:09.547Z
 ---
@@ -16,13 +16,13 @@ The page gives in-depth details on each of the Sessions API calls individually w
 
 The following methods are currently supported by this API
 
-__[_`create/local`_](sessions-methods.md#create-local)\
+[`create/local`](sessions-methods.md#create-local)\
 [`unlock/local`](sessions-methods.md#unlock-local)\
 [`lock/local`](sessions-methods.md#lock-user)\
 [`save/local`](sessions-methods.md#save-local)\
-[_`load/local`_](sessions-methods.md#load-local)\
-[_`terminate/local`_](sessions-methods.md#terminate-local)\
-[_`status/local`_](sessions-methods.md#status-local)_``_
+[`load/local`](sessions-methods.md#load-local)\
+[`terminate/local`](sessions-methods.md#terminate-local)\
+[`status/local`](sessions-methods.md#status-local)
 
 ## `create/local`
 
