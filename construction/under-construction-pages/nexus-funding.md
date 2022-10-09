@@ -1,8 +1,8 @@
 ---
-title: nexus-funding
+title: Nexus Funding
 description: How Nexus is funded
-published: true
-date: 2022-10-05T08:29:09.920Z
+published: false
+date: 2022-10-09T20:10:57.414Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:52.703Z
