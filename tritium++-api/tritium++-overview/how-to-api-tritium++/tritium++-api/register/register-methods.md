@@ -1,9 +1,9 @@
 ---
-title: register-methods
-description: 
-published: true
-date: 2022-10-05T08:39:17.660Z
-tags: 
+title: Register Methods
+description: Register API Methods
+published: false
+date: 2022-10-09T18:44:04.605Z
+tags: methods
 editor: markdown
 dateCreated: 2022-10-05T08:38:01.750Z
 ---
