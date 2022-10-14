@@ -2,7 +2,7 @@
 title: 10 Reasons to Build on Nexus
 description: 
 published: true
-date: 2022-10-14T19:34:16.415Z
+date: 2022-10-14T19:36:43.080Z
 tags: use-cases
 editor: markdown
 dateCreated: 2022-10-07T05:06:15.649Z
@@ -21,9 +21,9 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/watch?t=5s&v=HSXP5mbjn1s"frameborder="0" 
-allowfullscreen></iframe>
+<div> class="wise-iframe-wrapper"><iframe width="730" height="548" src="https://www.youtube.com/watch?t=5s&v=HSXP5mbjn1s" allowfullscreen></iframe>
+
+</div>
 
 - [10 Reasons to Build on Nexus - Youtube](https://www.youtube.com/watch?t=5s&v=HSXP5mbjn1s)
 {.links-list}
