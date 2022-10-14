@@ -2,7 +2,7 @@
 title: Testnet
 description: A place where you will find all the information needed to run testnets
 published: true
-date: 2022-10-05T11:46:16.936Z
+date: 2022-10-14T18:49:46.157Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:27:13.455Z
@@ -18,8 +18,6 @@ We will also be providing testnet coins to developers to test their applications
 > Please contact the Interactions, developer support team for testnet coins or any help related to the testnet on telegram [https://t.me/NexusDevelopers](https://t.me/NexusDevelopers)
 {.is-info}
 
-
-
 We recommend application developers to join the testnet with their own nodes which will give them full control on the node, and access to a full fledged managed testnet
 
 The developers can even run their own separate testnet, but it will require a lot of resources .
@@ -28,4 +26,8 @@ The developers can even run their own separate testnet, but it will require a lo
 > This testnet uses the merging branch and you may come across some bugs.
 {.is-warning}
 
+## Chapters
+
+- [Run a Testnet Node](/en/testnet/run-a-testnet-node)
+{.links-list}
 
