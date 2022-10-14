@@ -1,9 +1,9 @@
 ---
-title: run-a-testnet-node
-description: Testnet Node Setup
+title: Run a Testnet Node
+description: Run a node on testnet to test API's or dapps
 published: true
-date: 2022-10-05T08:32:39.357Z
-tags: 
+date: 2022-10-14T18:46:16.024Z
+tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:16.810Z
 ---
