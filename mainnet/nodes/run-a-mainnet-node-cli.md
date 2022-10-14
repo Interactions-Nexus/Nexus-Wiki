@@ -1,9 +1,9 @@
 ---
-title: run-a-mainnet-node-cli
-description: How to run a CLI node on mainnet - stable release
+title: Run a Mainnet Node
+description: How to run a CLI node on mainnet - Stable & Testing
 published: true
-date: 2022-10-05T13:29:56.791Z
-tags: 
+date: 2022-10-14T18:42:45.207Z
+tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:31.584Z
 ---
