@@ -2,8 +2,8 @@
 title: Connect Node to Interface
 description: How to access a remote CLI core using interface
 published: true
-date: 2022-10-14T18:54:56.898Z
-tags: node
+date: 2022-10-14T18:58:21.620Z
+tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:28.146Z
 ---
