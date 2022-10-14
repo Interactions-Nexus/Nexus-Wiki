@@ -1,9 +1,9 @@
 ---
-title: update-mainnet-node
+title: Update Mainnet Node
 description: How to update the mainnet node
 published: true
-date: 2022-10-05T08:31:39.644Z
-tags: 
+date: 2022-10-14T19:02:28.764Z
+tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:35.186Z
 ---
