@@ -2,7 +2,7 @@
 title: Tritium
 description: Tritium
 published: true
-date: 2022-10-16T17:07:24.372Z
+date: 2022-10-16T17:07:35.106Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:51.288Z
@@ -12,7 +12,7 @@ dateCreated: 2022-10-05T08:28:51.288Z
 Find all the links to the Tritium++ API documents.
 
 - [How to API](/en/tritium/how-to-api-tritium)
-- [Api Overview](/en/tritium/tritium-api-overview)
+- [API Overview](/en/tritium/tritium-api-overview)
 {.links-list}
 
 ## API CALLS
