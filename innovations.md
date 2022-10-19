@@ -2,14 +2,14 @@
 title: Innovations
 description: Innovations which make Nexus Unique and a Value Proposition
 published: true
-date: 2022-10-19T21:01:58.973Z
+date: 2022-10-19T21:04:43.977Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:45.609Z
 ---
 
 # Nexus Innovations
-
+Find the links which explain the various innovations on Nexus:
 
 - [7 LAYER SOFTWARE STACK *Micro services architecture*](/innovations/software-stack)
 - [SIGNATURE CHAINS *User Accounts*](/innovations/signature-chains)
