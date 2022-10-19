@@ -2,7 +2,7 @@
 title: Amendment
 description: 
 published: true
-date: 2022-10-19T16:15:18.889Z
+date: 2022-10-19T16:16:20.343Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T13:47:20.497Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-19T13:47:20.497Z
 
 # DAO Amendment
 
-Please follow the outlined procedure below to suggest amendments to the DAO architecture. This should help clean up the suggestions and focus them towards solutions, that require some forethought and peer review before being ratified.
+Please follow the outlined procedure below to suggest amendments to the DAO architecture or constitution. This should help clean up the suggestions and focus them towards solutions, that require some forethought and peer review before being ratified.
 
 Send your completed proposals to the Jury members, so suggestions can be included in the constitution as it is ratified.
 
