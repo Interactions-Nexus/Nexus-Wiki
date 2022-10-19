@@ -2,7 +2,7 @@
 title: Advanced Contracts
 description: 
 published: true
-date: 2022-10-19T17:34:43.058Z
+date: 2022-10-19T17:35:04.799Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T17:31:27.936Z
@@ -31,11 +31,11 @@ Nexus will have different types of contracts, for the higher level API's, templa
 
 To put in a simple way, contracts are a request to perform a specific type of instruction on data which results in change in the data. In the Nexus software stack the `Operations layer` contains the instructions or actions that give registers context, and define more complex contract logic and `Register layer` is the data layer. A contract is an object containing: a register pre-state (the register that is being operated on that was passed upwards from the Register Layer), a primitive operation (only one primitive operation per contract), and a set of conditions (any amount of conditional operations).
 
-### **Primitive Operations**
+### Primitive Operations
 
 The current iteration of the Operations Layer contains 16 primitive operations, and 54 conditional operations and types. The primitive operations can be best described as the actions taking place on the register such as: WRITE, DEBIT, TRANSFER, APPEND, etc. These actions themselves cause the register to change its state in some way or form, including its movement from one signature chain to another.
 
-### **Conditional Contracts**
+### Conditional Contracts
 
 Conditional Contracts are an agreement between participating parties, outlining a set of requirements that must be met for a transaction to complete. They are the building blocks that allow users to engage with one another, such as contract expiration, or the exchanging of items. More advanced forms of non-custodial escrow or arbitration are also possible. Conditional statements have no limit to their complexity, being capable of handling groups of groups of conditions that together evaluate to either true or false. In the case the conditions return true, this allows the recipient of the transaction to claim their funds or object (depending on if this was a TRANSFER or DEBIT). In the case that the recipient is unable to satisfy the conditions, after a period of time set by the sender, the transaction will be redeemable.
 
