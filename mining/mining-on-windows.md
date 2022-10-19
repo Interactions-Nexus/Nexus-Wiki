@@ -2,7 +2,7 @@
 title: Mining on Windows
 description: 
 published: true
-date: 2022-10-19T11:25:48.402Z
+date: 2022-10-19T11:43:20.779Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-19T11:25:48.402Z
@@ -26,14 +26,14 @@ The miner cannot run prime and hash at the same time on a single computer
 
 To configure the miner, check the link below:&#x20;
 
-- [miner-configuration.md](mining-on-nexus/miner-configuration.md)
+- [Miner Configuration *How to configure the miner*](/en/mining/miner-config)
 {.links-list}
 
 ## Nexus Desktop Wallet:
 
-{% hint style="info" %}
-This is only for solo miners. Pool miners can skip this step&#x20;
-{% endhint %}
+
+> This is only for solo miners. Pool miners can skip this step.
+{.is-info}
 
 ### Nexus Interface:
 
@@ -41,20 +41,25 @@ Download and install the Nexus Interface or setup the CLI core.&#x20;
 
 Start the wallet, create the user, login and unlock the wallet for mining and notifications.
 
+&nbsp;
+
 #### Mining Settings on Interface:
 
 1. Go to settings > Core > Enable mining by clicking on the toggle button next to it.&#x20;
-2. A new field below will pop out below:  Mining IP Whitelist. enter the  `<ipaddress:port>` of the miner. If mining on the same computer then enter `127.0.0.1:9325`,  if the miner is running on another computer or FPGA then enter the particular "`ipaddress:9325`. If there are more than one miner then use ‘; ’to separate the IP addresses. Wildcards ‘_**\*’** are supported for IP addresses only ex: 192.168.10.\*:9325._
+2. A new field below will pop out below:  Mining IP Whitelist. enter the  `<ipaddress:port>` of the miner. If mining on the same computer then enter `127.0.0.1:9325`,  if the miner is running on another computer or FPGA then enter the particular "`ipaddress:9325`. If there are more than one miner then use ‘; ’to separate the IP addresses. Wildcards `*` are supported for IP addresses only ex: 192.168.10.*:9325.
 
-### Nexus Core
+&nbsp;
+
+## Nexus Core
 
 If using the Nexus core then add a line `llpallowip=<ipaddress:port>` in the nexus.config for each miner. Use 127.0.0.1:9325 for mining on the same computer or the ipaddress:9325 for a separate miner.
 
 Restart the core for the changes to take effect
 
-{% hint style="info" %}
-**Good to Know:** For solo mining to work, the user has to be logged in and unlocked for mining and notifications.
-{% endhint %}
+
+> **Good to Know:** For solo mining to work, the user has to be logged in and unlocked for mining and notifications.
+{.is-info}
+
 
 ## Run the Miner
 
@@ -64,9 +69,7 @@ Go to the folder where the NexusMiner executable and miner.conf are located, dou
 
 To check if everything is working, go to the mining pool page link below, on the header right side, paste the Nexus address entered in the miner.conf file in the search box and click on search. This will open a page like below, where you can see the details of your miner.&#x20;
 
-{% embed url="https://primepool.nexus.io/overview" %}
-**Prime Pool Miner Website**
-{% endembed %}
+- [**Prime Pool Miner Website**](https://primepool.nexus.io/)
 
 ![Mining Details for Each Miner](../.gitbook/assets/Miner7.png)
 
