@@ -2,7 +2,7 @@
 title: Guides
 description: 
 published: true
-date: 2022-10-19T22:16:55.762Z
+date: 2022-10-19T22:20:32.192Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:25:50.611Z
@@ -17,6 +17,6 @@ Listed below are the various guides:
 - [Create Token *How to create a token*](/en/guides/create-token)
 - [Create Asset *How to create an asset*](/en/guides/create-asset)
 - [Create Tokenized asset *How to create a tokenized asset*](/en/guides/create-tokenized-asset)
-- [Create Global Name *How to create a Gobal *](/en/guides/create-global-name)
-- [Nexus Alerts](/en/guides/nexus-alerts)
+- [Create Global Name *How to create a Global Name*](/en/guides/create-global-name)
+- [Nexus Alerts *A guide for understanding the Nexus Alert Bot*](/en/guides/nexus-alerts)
 {.links-list}
