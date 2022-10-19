@@ -2,7 +2,7 @@
 title: Mining
 description: 
 published: true
-date: 2022-10-08T18:16:47.023Z
+date: 2022-10-19T11:18:09.900Z
 tags: mining
 editor: markdown
 dateCreated: 2022-10-06T10:10:39.620Z
@@ -94,3 +94,8 @@ FPGA miners for Nexus are only available from [Blackminer](https://www.hashaltco
 To get a better understanding of the mining efficiencies of different hardware, use the mining calculator linked below:
 
 [Mining Calculator Link](https://primepool.nexus.io/mining\_calc/)
+
+## Chapters
+
+- [Hash-Rate Table *This is the Nexus mining hash rate table*](/en/mining/hash-rate-table)
+{.links-list}
