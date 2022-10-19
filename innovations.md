@@ -2,7 +2,7 @@
 title: Innovations
 description: Innovations which make Nexus Unique and a Value Proposition
 published: true
-date: 2022-10-19T21:04:43.977Z
+date: 2022-10-19T21:05:21.224Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:45.609Z
@@ -16,7 +16,7 @@ Find the links which explain the various innovations on Nexus:
 - [TAO NAMESPACES *Names as a native object*](/innovations/tao-namespaces)
 - [TRUST - nPoS *Nexus Proof-of-Stake with reputation*](/innovations/trust-npos)
 - [QUANTUM RESISTANCE *Ready for the Future*](/innovations/quantum-resistance)
-- [DECENTRALIZED AUTONOMOUS ORGANIZATION (DAO) *New-age community governance*](/innovations/dao)
+- [DECENTRALIZED AUTONOMOUS ORGANIZATION (DAO) *New age community governance*](/innovations/dao)
 - [3-DIMENSIONAL CHAIN *Scalability Solution*](/innovations/3-dimensional-chain)
 - [NEXUS PROTOCOL *Protocol for the new decentrlaized internet*](/innovations/nexus-protocol)
 - [ONE - STACK *The stack for the decentralized internet*](/innovations/one-stack)
