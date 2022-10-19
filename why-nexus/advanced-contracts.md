@@ -2,7 +2,7 @@
 title: Advanced Contracts
 description: 
 published: true
-date: 2022-10-19T17:35:04.799Z
+date: 2022-10-19T17:36:09.738Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T17:31:27.936Z
@@ -48,7 +48,7 @@ Conditional Contracts are an agreement between participating parties, outlining 
 
 The API layer extrapolates from the contracts (registers and operation layers). The developers can easily use the API, rather than having to code a `smart-contract`. Even though API layer is not a contract layer it uses the same contract layers which can be directly accessed by domain specific languages (DSL), to create custom contracts. This highlights the brilliant architecture of the software stack as same contracts can be made available to no-code, web developers or to integrate into existing applications, at the same time abstracting them from the complexity of code or blockchain.
 
-## Contracts on Nexus
+# Contracts on Nexus
 
 Nexus has designed a multi pronged approach to tackle development on Nexus. This gives everyone an opportunity to build and integrate truly decentralized solutions. The details of the various contracts on Nexus are given below
 
@@ -96,14 +96,14 @@ What that means is we will be able to deploy new contract standards without need
 
 When a user sends funds using the Nexus Interface, they get an extra drop-down that allows to select from a list of standard template contracts to send under. This is a major step towards real world use of smart contracts.
 
-## Conditional Contracts DSL (Coming Soon)
+## Conditional Contracts DSL (Future)
 
 Conditional Contracts DSL, a new standard to be written in a higher-level language and compiled into bytecode. Designed for users who will be developing new API’s or contract standards. It enables conditional contracts to be written directly into the API with the use of English, which is a crucial step in realising the full potential of Tritium’s contract functionality. This approach also allows people to be able to read or interpret contracts. This will reveal a lot of new functionality to developers.
 
 We thus far have maintained the standard contracts as embedded constants in the codebase. The ability for developers to code new contracts, provides the opportunity for a dynamic standardization using Nexus to manage this state, similar to dynamic object modelling.
 
 
-## Augmented Contracts ( Roadmap: 2023-2024)
+## Augmented Contracts ( Roadmap: 2023-2025)
 
 For advanced developers who need full creative control, we have developed Augmented Contacts which can be used with any domain specific language of choice. Today we have Conditional Contracts, Primitive Operators, and Registers.
 
