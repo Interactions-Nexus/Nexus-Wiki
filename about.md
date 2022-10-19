@@ -2,7 +2,7 @@
 title: readme
 description: 
 published: true
-date: 2022-10-16T16:47:21.988Z
+date: 2022-10-19T17:05:10.702Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T09:27:04.537Z
@@ -17,7 +17,7 @@ dateCreated: 2022-10-07T09:27:04.537Z
 
 &nbsp;
   
-## Nexus multilingual wiki built on [Wiki.js](en/https://js.wiki/)
+## Nexus multilingual wiki built using [Wiki.js](https://js.wiki/)
 
 <img src="https://static.requarks.io/logo/wikijs-full.svg" alt="Wiki.js" width="200" />
   
@@ -25,19 +25,19 @@ dateCreated: 2022-10-07T09:27:04.537Z
   
 </div>
 
-- **[Official Website](https://nexus.io)**
-- **[Nexus Explorer](https://explorer.nexus.io/)**
-- **[This Wiki](https://wiki.nexus.io/)**
+- [Website *Nexus Website*](https://nexus.io)
+- [Explorer *Nexus Blockchain Explorer*](https://explorer.nexus.io/)
+{.links-list}
 
 &nbsp;
 &nbsp; 
 
->  **About:** This wiki is maintained by the Interactions arm of the Nexus Ambassador DAO.
+>  **NOTE:** This wiki is maintained by Interactions arm.
 {.is-info}
 
 <div align="center">
 
-###### The Nexus wiki database is backed up at the link given below:
+**The Nexus wiki database is backed up at the link given below:**
 [Nexus-Wiki-Backup](/en/https://github.com/Interactions-Nexus/Nexus-Wiki)
   
 </div>
