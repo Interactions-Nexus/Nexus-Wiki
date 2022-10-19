@@ -2,7 +2,7 @@
 title: Advanced Contracts
 description: 
 published: true
-date: 2022-10-19T17:36:09.738Z
+date: 2022-10-19T17:37:20.568Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T17:31:27.936Z
@@ -113,4 +113,5 @@ Augmented Contracts are the second type of contracts that will be available in t
 
 The goal of Augmented Contracts is to provide relative capabilities of complex languages like C++, so we will support polymorphism, operator overloading, functions, methods, public, private, protected, unique, etc. augmented contracts builds on the existing VM- and register-based architecture. More programmable languages and things like maps, vectors, functions, etc. will come with augmented contracts.
 
-More specific information will be updated when available.
+> More information will be provided when available.
+{.is-info}
