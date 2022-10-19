@@ -2,7 +2,7 @@
 title: Advanced Contracts
 description: 
 published: true
-date: 2022-10-19T17:33:09.031Z
+date: 2022-10-19T17:34:43.058Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T17:31:27.936Z
@@ -27,7 +27,7 @@ The NVM is designed intentionally not to be turing complete, this decision also 
 
 Nexus will have different types of contracts, for the higher level API's, templates will be provided, which a user can choose from a dropdown list. For advanced users augmented contracts will empower them to use contracts with their choice of domain specific language. Augmented contracts will be available at a later date. For more details refer the [roadmap](https://nexus.io/roadmap)
 
-## OPERATIONS & REGISTER LAYERS
+## Operations & Register Layers
 
 To put in a simple way, contracts are a request to perform a specific type of instruction on data which results in change in the data. In the Nexus software stack the `Operations layer` contains the instructions or actions that give registers context, and define more complex contract logic and `Register layer` is the data layer. A contract is an object containing: a register pre-state (the register that is being operated on that was passed upwards from the Register Layer), a primitive operation (only one primitive operation per contract), and a set of conditions (any amount of conditional operations).
 
