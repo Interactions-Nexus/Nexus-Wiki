@@ -2,7 +2,7 @@
 title: Guides
 description: 
 published: true
-date: 2022-10-08T16:23:47.337Z
+date: 2022-10-19T21:09:14.324Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:25:50.611Z
@@ -11,12 +11,12 @@ dateCreated: 2022-10-05T08:25:50.611Z
 # Guides
 Listed below are the various guides:
 
-- [Nexus Wallet - Interface](/en/guides/interface)
+- [Nexus Wallet - Interface - The Nexus wallet guide](/en/guides/interface)
 - [Mobile Wallet](/en/guides/mobile-wallet)
-- [Staking](/en/guides/staking)
-- [Create Token](/en/guides/create-token)
-- [Create Asset](/en/guides/create-asset)
-- [Create Tokenized Asset](/en/guides/create-tokenized-asset)
-- [Create Global Name](/en/guides/create-global-name)
+- [Staking *All about Staking on Nexus*](/en/guides/staking)
+- [Create Token *How to create a token*](/en/guides/create-token)
+- [Create Asset *How to create an asset*](/en/guides/create-asset)
+- [Create Tokenized asset *How to create a tokenized asset*](/en/guides/create-tokenized-asset)
+- [Create Global Name *How to create a Gobal *](/en/guides/create-global-name)
 - [Nexus Alerts](/en/guides/nexus-alerts)
 {.links-list}
