@@ -2,7 +2,7 @@
 title: Ekonomia
 description: Ekonomia Nexusa
 published: true
-date: 2022-10-19T23:07:12.377Z
+date: 2022-10-19T23:08:13.054Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T22:37:26.342Z
@@ -11,7 +11,7 @@ dateCreated: 2022-10-19T22:37:26.342Z
 # Ekonomia
 
 * **Aktualna podaż: 74,399,556 (30 Wrzesień, 2022)**
-* **Docelowa podaż @ 2024: 78 mil**
+* **Docelowa podaż @ 2024: 78 mln**
 * **Aktualna inflacja: 0.4822% (30 Wrzesień, 2022)**&#x20;
 
 ## Bicie Nexusa:
