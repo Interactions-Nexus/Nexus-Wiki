@@ -2,15 +2,15 @@
 title: Introduction To Nexus
 description: The Nexus Network Currency-  NXS
 published: true
-date: 2022-10-06T12:16:48.826Z
+date: 2022-10-19T20:32:15.105Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:19.760Z
 ---
 
-# Intro to Nexus
+# Introduction to Nexus
 
-## WHAT IS A CRYPTOCURRENCY? <a href="#what-is-a-cryptocurrency" id="what-is-a-cryptocurrency"></a>
+## WHAT IS A CRYPTOCURRENCY? 
 
 A cryptocurrency is a medium of exchange secured by a blockchain-based ledger.
 
@@ -18,9 +18,9 @@ A medium of exchange is anything widely accepted as payment for goods and servic
 
 The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin's release in 2009, people have made thousands of cryptocurrencies across many different blockchains.
 
-## WHAT IS NEXUS? <a href="#what-is-ether" id="what-is-ether"></a>
+## WHAT IS NEXUS? 
 
-**Nexus (NXS)** is the native cryptocurrency of Nexus cosmos. Nexus has free simple transactions due to its design. The purpose of NXS is to allow for appropriate gamification of the network, which  ensures that the active participants are compensated for the stake amount and time spent securing the network. Fees in NXS for various operations also prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming / DDOS) and name squatting.&#x20;
+**Nexus (NXS)** is the native cryptocurrency of Nexus network. Nexus has free simple transactions due to its design. The purpose of NXS is to allow for appropriate gamification of the network, which ensures that the active participants are compensated for the stake and time spent securing the network. Fees for various operations also prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming / DDOS) and name squatting.
 
 NXS is created by the protocol as compensation for miners and stakers for providing computational resources and securing the network. Thus the gamification ensures the network participants verify and execute transaction requests and provide computational resources to the network and upgrade them when needed.
 
