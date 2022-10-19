@@ -1,5 +1,11 @@
 ---
-description: Guide to setup mining on windows
+title: Mining on Windows
+description: 
+published: true
+date: 2022-10-19T11:25:48.402Z
+tags: guides
+editor: markdown
+dateCreated: 2022-10-19T11:25:48.402Z
 ---
 
 # Mining on Windows
@@ -20,9 +26,8 @@ The miner cannot run prime and hash at the same time on a single computer
 
 To configure the miner, check the link below:&#x20;
 
-{% content-ref url="mining-on-nexus/miner-configuration.md" %}
-[miner-configuration.md](mining-on-nexus/miner-configuration.md)
-{% endcontent-ref %}
+- [miner-configuration.md](mining-on-nexus/miner-configuration.md)
+{.links-list}
 
 ## Nexus Desktop Wallet:
 
