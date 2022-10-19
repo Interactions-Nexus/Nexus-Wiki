@@ -2,7 +2,7 @@
 title: Advanced Contracts
 description: 
 published: true
-date: 2022-10-19T17:32:03.596Z
+date: 2022-10-19T17:33:09.031Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T17:31:27.936Z
@@ -64,7 +64,7 @@ Query basically gives SQL functionality over a blockchain dataset. The operators
 register/list/names where='object.name=l*' 
 ```
 
-Above will show every name that starts with the letter `'l'`. It can then run operators on that, by filtering out fields:
+Above will show every name that starts with the letter `l`. It can then run operators on that, by filtering out fields:
 
 ```
 register/list/names/name/array where='object.name=l*'
@@ -107,7 +107,7 @@ We thus far have maintained the standard contracts as embedded constants in the 
 
 For advanced developers who need full creative control, we have developed Augmented Contacts which can be used with any domain specific language of choice. Today we have Conditional Contracts, Primitive Operators, and Registers.
 
-Conditional VM will be a subset of Augmented, such as in my function I have an _`if`_ statement, this is executed as a condition. But augmented will allow writing complex code. For instance I have an account, I do an operator overload function for `DEBIT`, that can add additional requirements for a debit from that account such as max amount per time interval, etc. I could add another public method that could be invoked by another user to draw an amount on my account if they fulfill a certain condition, so forth. It will be the full implementation of our interpreter where we will have the functionality of most languages like Java and C++.
+Conditional VM will be a subset of Augmented, such as in my function I have an `if` statement, this is executed as a condition. But augmented will allow writing complex code. For instance I have an account, I do an operator overload function for `DEBIT`, that can add additional requirements for a debit from that account such as max amount per time interval, etc. I could add another public method that could be invoked by another user to draw an amount on my account if they fulfill a certain condition, so forth. It will be the full implementation of our interpreter where we will have the functionality of most languages like Java and C++.
 
 Augmented Contracts are the second type of contracts that will be available in the Tritium Protocol. These types of contracts extend the Conditional VM (Virtual Machine that processes Conditional Statements) to provide additional benefits including, but not limited to, methods, functions, operation overloading, and encapsulation. Augmented contracts add a layer of complexity and processing, so will carry a higher fee to execute. This will require more on-chain processing, but overall makes our Contract Engine much more powerful.
 
