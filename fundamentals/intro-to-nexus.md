@@ -2,7 +2,7 @@
 title: Introduction To Nexus
 description: The Nexus Network Currency-  NXS
 published: true
-date: 2022-10-19T20:32:15.105Z
+date: 2022-10-19T20:35:41.880Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:19.760Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-05T08:25:19.760Z
 
 # Introduction to Nexus
 
-## WHAT IS A CRYPTOCURRENCY? 
+## What is a cryptocurrency? 
 
 A cryptocurrency is a medium of exchange secured by a blockchain-based ledger.
 
@@ -18,7 +18,7 @@ A medium of exchange is anything widely accepted as payment for goods and servic
 
 The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin's release in 2009, people have made thousands of cryptocurrencies across many different blockchains.
 
-## WHAT IS NEXUS? 
+## What is Nexus? 
 
 **Nexus (NXS)** is the native cryptocurrency of Nexus network. Nexus has free simple transactions due to its design. The purpose of NXS is to allow for appropriate gamification of the network, which ensures that the active participants are compensated for the stake and time spent securing the network. Fees for various operations also prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming / DDOS) and name squatting.
 
@@ -28,24 +28,25 @@ Any participant who broadcasts a contract execution request must also offer some
 
 Developers can build decentralised applications (dapps) using the REST API, Augmented contracts . NXS allows users to use the network for a lot of things like creating tokens, assets, tokenising assets, namespaces, supply chain solutions.
 
-## MINTING NXS <a href="#minting-ether" id="minting-ether"></a>
+## Minting NXS
 
 Minting is the process in which new NXS gets created on the ledger. The underlying protocol can only create the new NXS. The protocol was designed with a max of 78 million NXS for 10 years, and after that there will be tail end emission of a max 3.67%
 
-{% hint style="info" %}
-**Nexus was mined into existence similar to Bitcoin and there was no premine or ICO**.
-{% endhint %}
+
+> Nexus was mined into existence similar to Bitcoin and there was no premine or ICO.
+{.is-info}
 
 NXS is minted when a miner or staker creates a block on the Nexus blockchain. As an incentive to miners or stakers, the protocol grants a reward in each block created by them, incrementing the balance of an address set by the block's miner. The block reward reduces gradually over time as per the emission logarithmic scale programmed in the protocol.
 
-### DENOMINATIONS OF NEXUS  <a href="#denominations" id="denominations"></a>
+## DENOMINATIONS OF NEXUS  
 
 Since many transactions on Nexus are small, Nexus has 1 million units or 6 decimal places. The smallest denomination of Nexus is named as [**`viz`**](https://en.wikipedia.org/wiki/Viz.).
 
 * 1 Viz = 0.000001 NXS
 * 1 NXS = 1,000,000 Viz
 
-## **Nexus (NXS) Utility:**
+
+## Nexus (NXS) Utility:
 
 The native NXS coin has two main utilities in terms of value proposition – network fees and peer-to-peer value transfer (currency):
 
