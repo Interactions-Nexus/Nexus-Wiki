@@ -2,7 +2,7 @@
 title: Advanced Contracts
 description: 
 published: true
-date: 2022-10-19T17:37:20.568Z
+date: 2022-10-19T17:38:03.135Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T17:31:27.936Z
@@ -17,7 +17,7 @@ The Nexus software stack exists solely for the purpose of keeping the continuous
 
 Even though all smart-contract platforms are state machines, the obsession to be scalable for real world usage, culminated in the distinct architecture of NVM. To easily distinguish the better architecture, it was imperative to name contracts on Nexus as Advanced contracts. Below we will unravel the architecture.
 
-### NVM Architecture
+## NVM Architecture
 
 The NVM is designed as a "`64 bit"`, "`register based"`; this design was chosen as it matches the CPU's 64 bit and mimics the CPU cache registers.
 
