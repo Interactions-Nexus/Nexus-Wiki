@@ -1,8 +1,8 @@
 ---
-title: create-an-account
+title: Create a NXS Account
 description: How to create an account
 published: true
-date: 2022-10-08T11:13:49.466Z
+date: 2022-10-19T22:25:57.875Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:36:08.023Z
