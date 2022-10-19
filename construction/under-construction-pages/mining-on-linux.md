@@ -1,9 +1,9 @@
 ---
-title: mining-on-linux
+title: Mining on Linux
 description: Mining on Linux computer.
 published: true
-date: 2022-10-05T08:29:04.855Z
-tags: 
+date: 2022-10-19T11:20:17.742Z
+tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:24:49.272Z
 ---
