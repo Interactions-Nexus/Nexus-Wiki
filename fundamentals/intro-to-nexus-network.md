@@ -2,27 +2,26 @@
 title: Introduction To Nexus Network
 description: Nexus Network
 published: true
-date: 2022-10-06T12:14:18.546Z
+date: 2022-10-19T20:29:24.444Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:16.375Z
 ---
 
-# Intro to Nexus Network
+# Introduction to Nexus Network
 
-## WHAT IS NEXUS NETWORK?
+It is a network of computers which run the core (a software implementation of Nexus blockchain protocols) and communicates via the internet to form a single _`canonical`_ supercomputer called the Nexus Virtual Machine (NVM). The NVM is a _`state machine`_ and all the participants agree and keep a copy of the state. Any user can request for a transaction on the network and when such a  request is broadcast, other participants on the network verify, validate and carry out `execute` the request. This execution causes a state change in the NVM, which is then committed and propagated throughout the entire network.
 
-It is a network of computers which run the core (a software implementation of Nexus blockchain protocols) and communicates via the internet to form a single _**`canonical`**_ supercomputer called the Nexus Virtual Machine (NVM). The NVM is a _**`state machine`**_ and all the participants agree and keep a copy of the state. Any user can request for a transaction on the network and when such a  request is broadcast, other participants on the network verify, validate and carry out _(**`execute)`**_ the request. This execution causes a state change in the NVM, which is then committed and propagated throughout the entire network.
-
-Requests for contract execution is called transaction requests; the record of all transactions and the NVM's present state gets stored on the blockchain (`ledger`), which in turn is stored and agreed upon by all nodes.
+Requests for contract execution is called transaction requests; the record of all transactions and the NVM's present state gets stored on the blockchain `ledger`, which in turn is stored and agreed upon by all nodes.
 
 Cryptographic mechanisms ensure that once transactions are verified as valid and added to the blockchain, they can't be tampered with later. The same mechanisms also ensure that all transactions are signed and executed with appropriate "permissions" (no one should be able to log into John's account, except for John, who has the signature chain credentials).
 
-### WHAT IS NEXUS? <a href="#what-is-ether" id="what-is-ether"></a>
+
+## What is Nexus? 
 
 **Nexus (NXS)** is the native cryptocurrency of the Nexus cosmos. Nexus has been designed for free simple transactions. The purpose of NXS is to allow for proper gamification of the network. To ensure that the active participants are compensated for the work done and prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming) and name squatting. NXS is the ticker symbol of Nexus.
 
-### WHAT ARE ADVANCED  CONTRACTS? <a href="#what-are-smart-contracts" id="what-are-smart-contracts"></a>
+## What are Advanced Contracts? 
 
 The 7-layered software stack architecture plays the crucial role; with its operations and register layer which command and controls the NVM.&#x20;
 
