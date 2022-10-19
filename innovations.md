@@ -2,7 +2,7 @@
 title: Innovations
 description: Innovations which make Nexus Unique and a Value Proposition
 published: true
-date: 2022-10-19T21:01:07.079Z
+date: 2022-10-19T21:01:58.973Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:45.609Z
@@ -18,8 +18,8 @@ dateCreated: 2022-10-05T08:26:45.609Z
 - [QUANTUM RESISTANCE *Ready for the Future*](/innovations/quantum-resistance)
 - [DECENTRALIZED AUTONOMOUS ORGANIZATION (DAO) *New-age community governance*](/innovations/dao)
 - [3-DIMENSIONAL CHAIN *Scalability Solution*](/innovations/3-dimensional-chain)
-- [NEXUS PROTOCOL *Protocol for the new Decentrlaized Internet*](/innovations/nexus-protocol)
-- [ONE - STACK *The stack for the Decentralized Internet*](/innovations/one-stack)
+- [NEXUS PROTOCOL *Protocol for the new decentrlaized internet*](/innovations/nexus-protocol)
+- [ONE - STACK *The stack for the decentralized internet*](/innovations/one-stack)
 {.links-list}
 
 
