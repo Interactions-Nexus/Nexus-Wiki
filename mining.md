@@ -2,7 +2,7 @@
 title: Mining
 description: 
 published: true
-date: 2022-10-19T11:18:09.900Z
+date: 2022-10-19T11:35:15.086Z
 tags: mining
 editor: markdown
 dateCreated: 2022-10-06T10:10:39.620Z
@@ -96,6 +96,8 @@ To get a better understanding of the mining efficiencies of different hardware, 
 [Mining Calculator Link](https://primepool.nexus.io/mining\_calc/)
 
 ## Chapters
-
+- [Mining on Windows *How to mine on windows*](/en/mining/mining-on-windows)
+- [Mining on Linux *How to mine on linux*](/en/mining/mining-on-linux)
+- [Miner Configuration *How to configure the miner*](/en/mining/miner-config)
 - [Hash-Rate Table *This is the Nexus mining hash rate table*](/en/mining/hash-rate-table)
 {.links-list}
