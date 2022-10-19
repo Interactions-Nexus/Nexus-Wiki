@@ -2,7 +2,7 @@
 title: Advanced Contracts
 description: 
 published: true
-date: 2022-10-19T17:31:27.936Z
+date: 2022-10-19T17:32:03.596Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T17:31:27.936Z
@@ -103,7 +103,7 @@ Conditional Contracts DSL, a new standard to be written in a higher-level langua
 We thus far have maintained the standard contracts as embedded constants in the codebase. The ability for developers to code new contracts, provides the opportunity for a dynamic standardization using Nexus to manage this state, similar to dynamic object modelling.
 
 
-## Augmented Contracts ( Roadmap: 2022-2023)
+## Augmented Contracts ( Roadmap: 2023-2024)
 
 For advanced developers who need full creative control, we have developed Augmented Contacts which can be used with any domain specific language of choice. Today we have Conditional Contracts, Primitive Operators, and Registers.
 
