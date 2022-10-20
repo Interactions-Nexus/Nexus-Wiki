@@ -2,14 +2,14 @@
 title: Fundamentals
 description: 
 published: true
-date: 2022-10-20T17:08:36.526Z
+date: 2022-10-20T17:12:09.616Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:02.763Z
 ---
 
 # Nexus Fundamentals
-Here are the link which explains a fe wthings
+Nexus is a disparate architecture in the entire crypto space and to understand  the fundamental concepts use the links below:
 - [Introduction to Nexus Network *Understanding the Nexus network*](/en/fundamentals/intro-to-nexus-network)
 - [Introduction to Nexus *The coin that powers the Nexus network*](/en/fundamentals/intro-to-nexus)
 - [Nexus Virtual Machine *Understanding the State Machine*](/en/fundamentals/nexus-virtual-machine)
