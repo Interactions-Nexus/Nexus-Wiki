@@ -2,7 +2,7 @@
 title: Podstawy
 description: 
 published: true
-date: 2022-10-21T21:34:44.417Z
+date: 2022-10-21T21:35:07.054Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-06T15:41:33.806Z
