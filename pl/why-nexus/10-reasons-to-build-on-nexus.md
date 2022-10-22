@@ -2,7 +2,7 @@
 title: 10 powodów, dla których warto budować na Nexusie
 description: 
 published: true
-date: 2022-10-22T19:08:33.627Z
+date: 2022-10-22T19:17:03.975Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T18:54:48.160Z
@@ -62,7 +62,7 @@ Nexus to nie biznes; jesteśmy entuzjastyczną społecznością niezależnych my
 
 &nbsp;
 
-## ** Łańcuch bloków nowej generacji**
+## **Łańcuch bloków nowej generacji**
 
 Te 10 powodów, dla których warto budować na Nexusie, to tylko przedsmak tego, co ta wyjątkowa platforma blockchain i inteligentnych kontraktów ma do zaoferowania. Nasz interfejs API rynku P2P i Query DSL są obecnie w fazie testów, a nadchodzące aktualizacje obejmą Pooled staking, Conditional Contracts DSL (Domain Specific Language), rozszerzone (inteligentne) kontrakty, tryb hybrydowy, system plików rozproszonych i początek architektury DAO. A więc czeka nas o wiele więcej!
 
