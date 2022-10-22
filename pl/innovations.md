@@ -1,8 +1,8 @@
 ---
 title: Innowacje
-description: 
+description: Innowacje, dzięki którym Nexus jest wyjątkowy i jest wartościową propozycją
 published: true
-date: 2022-10-19T22:00:36.185Z
+date: 2022-10-22T21:25:41.902Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-06T15:49:22.955Z
