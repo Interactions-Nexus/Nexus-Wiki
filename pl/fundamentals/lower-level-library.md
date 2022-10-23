@@ -2,7 +2,7 @@
 title: Biblioteka niższego poziomu
 description: LLL
 published: true
-date: 2022-10-23T20:59:27.003Z
+date: 2022-10-23T21:00:57.388Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-21T22:10:53.117Z
@@ -24,7 +24,7 @@ LLL zawiera trzy główne komponenty: kryptografię (LLC), bazę danych (LLD) i 
 
 #### Obecnie wdrożone:
 
-* SK Hashing (Motek i Keccak)
+* SK Haszowanie (Skein i Keccak)
 * Haszowanie hasła Argon2
 * Standard AES (symetryczny)
 * FALCON (odporne kwantowo sygnatury kratowe)
