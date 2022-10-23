@@ -2,7 +2,7 @@
 title: Interfejs
 description: Wprowadzenie do interfejsu Nexus
 published: true
-date: 2022-10-23T14:25:31.050Z
+date: 2022-10-23T15:01:46.632Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:44:11.875Z
