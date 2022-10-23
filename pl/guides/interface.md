@@ -2,7 +2,7 @@
 title: Interfejs
 description: Wprowadzenie do interfejsu Nexus
 published: true
-date: 2022-10-23T15:13:59.179Z
+date: 2022-10-23T15:16:00.654Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:44:11.875Z
@@ -30,7 +30,7 @@ Jeśli jakikolwiek użytkownik napotka problemy z interfejsem Nexusa lub ma jaki
 
 ## Rozdziały
 
-- [Przegląd](/pl/przewodniki/interfejs/przegląd)
+- [Interfejs](/pl/przewodniki/interfejs/przegląd)
 - [Moduł użytkownika](/pl/przewodniki/interfejs/moduł-użytkownika)
 - [Wyślij](/pl/przewodniki/interfejs/wyślij)
 - [Transakcje](/pl/przewodniki/interfejs/transakcje)
