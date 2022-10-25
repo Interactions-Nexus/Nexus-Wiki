@@ -2,7 +2,7 @@
 title: Tritium
 description: Tritium
 published: true
-date: 2022-10-24T22:34:22.982Z
+date: 2022-10-25T22:37:04.128Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T22:19:56.573Z
@@ -23,6 +23,6 @@ Znajdź wszystkie łącza do dokumentów Tritium API.
 - [KSIĘGA GŁÓWNA](/pl/tritium/ledger)
 - [AKTYWA](/pl/tritium/assets)
 - [NAZWY](/pl/tritium/names)
-- [ZAPAS](/pl/tritium/supply)
+- [PODAŻ](/pl/tritium/supply)
 - [OBIEKTY](/pl/tritium/objects)
 {.links-list}
