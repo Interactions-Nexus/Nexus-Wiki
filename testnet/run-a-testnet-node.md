@@ -2,7 +2,7 @@
 title: Run a Testnet Node
 description: Run a node on testnet to test API's or dapps
 published: true
-date: 2022-10-14T18:46:16.024Z
+date: 2022-10-25T14:04:00.958Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:16.810Z
@@ -35,9 +35,9 @@ Do not use Ubuntu 22.04 as it has the new version of openssl which breaks compat
 
 The testnet mining nodes are listed below.
 
-* http://testnet1.nexus-interactions.io
-* http://testnet2.nexus-interactions.io
-* http://testnet3.nexus-interactions.io
+- http://testnet1.interactions-nexus.io
+- http://testnet2.interactions-nexus.io
+- http://testnet3.interactions-nexus.io
 
 ## 3. Testnet Ports:
 
