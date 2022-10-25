@@ -2,7 +2,7 @@
 title: Interfejs
 description: Wprowadzenie do interfejsu Nexus
 published: true
-date: 2022-10-23T15:30:27.717Z
+date: 2022-10-25T22:47:17.637Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:44:11.875Z
@@ -24,19 +24,19 @@ Interfejs obsługuje zarówno łańcuch Tritium, jak i Legacy. Jest to możliwe 
 > Następna aktualizacja interfejsu będzie domyślnie uruchamiana w węźle lite w porównaniu z dzisiejszą implementacją pełnego węzła. Zmniejszy to złożoność dla zwykłych użytkowników.
 {.is-info}
 
-Jeśli jakikolwiek użytkownik napotka problemy z interfejsem Nexusa lub ma jakieś ogólne pytania, z przyjemnością pomożemy na kanale telegramu **„Wsparcie Nexusa”**, do którego link znajduje się poniżej.&#x20;
+Jeśli jakikolwiek użytkownik napotka problemy z interfejsem Nexusa lub ma jakieś ogólne pytania, z przyjemnością pomożemy na kanale telegramu **`Nexus Support`**, do którego link znajduje się poniżej.&#x20;
 
 [NexusSupport](https://t.me/NexusSupport)
 
 ## Rozdziały
 
-- [Interfejs](/pl/przewodniki/interfejs/przegląd)
-- [Moduł użytkownika](/pl/przewodniki/interfejs/moduł-użytkownika)
-- [Wysyłanie](/pl/przewodniki/interfejs/wyślij)
-- [Transakcje](/pl/przewodniki/interfejs/transakcje)
-- [Książka adresowa](/pl/przewodniki/interfejs/książka adresowa)
-- [Konsola](/pl/przewodniki/interfejs/konsola)
-- [Ustawienia](/pl/przewodniki/interfejs/ustawienia)
-- [Utwórz konto użytkownika *Jak utworzyć konto użytkownika (SigChain)*](/en/guides/interface/create-user-account)
-- [Utwórz konto NXS *Jak utworzyć konto NXS*](/en/guides/interface/create-an-account)
-{.lista-linków}
+- [Przegląd](/pl/guides/interface/overview)
+- [Moduł użytkownika](/pl/guides/interface/user-module)
+- [Wysyłanie](/pl/guides/interface/send)
+- [Transakcje](/pl/guides/interface/transactions)
+- [Książka adresowa](/pl/guides/interface/address-book)
+- [Konsola](/pl/guides/interface/console)
+- [Ustawienia](/pl/guides/interface/settings)
+- [Utwórz konto użytkownika *Jak utworzyć konto użytkownika (SigChain)*](/pl/guides/interface/create-user-account)
+- [Utwórz konto NXS *Jak utworzyć konto NXS*](/pl/guides/interface/create-an-account)
+{.links-list}
