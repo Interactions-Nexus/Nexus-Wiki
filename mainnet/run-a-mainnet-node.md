@@ -2,7 +2,7 @@
 title: Run a Mainnet Node
 description: How to run a CLI node on mainnet - Stable & Testing
 published: true
-date: 2022-10-25T18:17:56.918Z
+date: 2022-10-25T18:23:14.355Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:31.584Z
@@ -222,13 +222,19 @@ llpallowip=*.*.*.*:9324
 ```
 
 If running as a seed node or need more peer connections to your node add this to the config:
+
+> Increasing peer connections will increase node bandwidth requirements.
+{.is-warning}
+
+
+
 ```
 #Configure peer connections to the core
-#Maxconnections limit to a single node is 100
+#Maximum connections limit to a single node is 100
 maxconnections=100
-#Maxoutgoings connections to peers is 16 (default - not required)
+#Maximum outgoing connections to peers is 16 (default - not required)
 maxoutgoing=16
-#Maxincoming to a single node is 84 (need to enable upnp on router)
+#Maximum incoming to a single node is 84 (need to enable upnp on router)
 maxincoming=84
 ```
 Press Ctrl s and Ctrl x to save and exit the editor.
