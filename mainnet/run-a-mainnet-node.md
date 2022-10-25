@@ -2,7 +2,7 @@
 title: Run a Mainnet Node
 description: How to run a CLI node on mainnet - Stable & Testing
 published: true
-date: 2022-10-14T18:42:45.207Z
+date: 2022-10-25T18:17:56.918Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:31.584Z
@@ -12,7 +12,7 @@ dateCreated: 2022-10-05T08:26:31.584Z
 
 > This guide is tailored for Debian / Ubuntu / Raspberry Pi OS distributions.
 
-## **1\. Before Starting this guide:**
+## 1. Before Starting this guide:
 
 -   A computer with a minimum of 1 CPU, 2 GB RAM and 64GB hard disk space, Raspberry Pi 4 with 2 GB RAM with 64 GB SD card.
 -   For VPS 1GB RAM is sufficient for normal usage, for dapp backend configuration contact [here](https://explorer.nexus.io/).
@@ -38,7 +38,7 @@ dateCreated: 2022-10-05T08:26:31.584Z
 
 &nbsp;
 
-## **2\. Prepare The Node:**
+## 2. Prepare The Node:
 
 [Install ubuntu server 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) or distro of choice, install open-ssh server during the install and once the installation is complete restart the node. SSH in node and follow the below commands. Copy the commands and paste it in the terminal using keys CTRL+SHIFT+v
 
@@ -106,7 +106,7 @@ The computer is ready to install the Nexus core.
 
 &nbsp;
 
-## **3\. Compiling Nexus Core:**
+## 3. Compiling Nexus Core:
 
 Installs the dependencies required for compiling nexus core CLI, It will take some time to complete depending on your internet speed
 
@@ -148,7 +148,7 @@ Will show “Finished building nexus” on a successful compile.
 
 &nbsp;
 
-## **4\. Configure The wallet (nexus.conf):**
+## 4. Configure The wallet (nexus.conf):
 
 Create Nexus core data directory (it’s a hidden directory, Nexus daemon creates it automatically on first start. We are creating it manually to create the configuration file. If the directory is already available, skip this step.)
 
@@ -195,7 +195,7 @@ rpcremote=1
 apiauth=1
 #To enable remote API access. Local API access will be revoked
 apiremote=1
-# Whitelist IP address for API & RPC
+#Whitelist IP address for API & RPC
 llpallowip=<ipaddress>:8080  
 llpallowip=<ipaddress>:9336
 ```
@@ -203,17 +203,39 @@ llpallowip=<ipaddress>:9336
 If testing the merging branch / 5.1 :
 
 ```
-# To index block data, required to access block data.
+#To index block data, required to access block data.
 indexheight=1
-# To index account addresses, required to access the account address.
+#To index account addresses, required to access the account address.
 indexaddress=1
 ```
 
+If running as a seed node, add the below lines to the config file:
+
+> Seed nodes need to have a static IP and internet bandwidth.
+{.is-info}
+
+
+```
+#Unified time synchronization
+unified=1
+llpallowip=*.*.*.*:9324
+```
+
+If running as a seed node or need more peer connections to your node add this to the config:
+```
+#Configure peer connections to the core
+#Maxconnections limit to a single node is 100
+maxconnections=100
+#Maxoutgoings connections to peers is 16 (default - not required)
+maxoutgoing=16
+#Maxincoming to a single node is 84 (need to enable upnp on router)
+maxincoming=84
+```
 Press Ctrl s and Ctrl x to save and exit the editor.
 
 &nbsp;
 
-## **5\. Bootstrapping Tritium Database:**
+## 5. Bootstrapping Tritium Database:
 
 This step will download the nexus database and then extract it to the data folder, alternatively you can skip this step if you choose to synchronise the data from peers which will be slow depending on your internet connection.
 
@@ -235,7 +257,7 @@ tar -xf tritium.tar.gz -C ~/.Nexus
 
 &nbsp;
 
-## **6\. API's To Control Node:**
+## 6. API's To Control Node:
 
 To interact with the nexus core daemon, use API commands via the terminal. Change the location to ~/LLL-TAO folder for the API’s to work. To run the node, stake and transact we will only be using the system, users and finance API’s. If you have any doubts refer to the API documentation [here](../../api/api-overview/tritium-api/).
 
@@ -244,7 +266,8 @@ To interact with the nexus core daemon, use API commands via the terminal. Chang
 ### **Before we start:**
 
 -   Be careful as the login credentials in the terminal and can be seen by anyone around.
--   Every transaction will need the PIN
+-   Bash terminal saves history of all previously used commands .
+-   Every transaction will need the PIN, unless unlocked for transactions.
 -   Every transaction on the Nexus blockchain is a debit to the sending account and credit to the receiving account, two transactions. (This will be useful to understand some API commands)
 
 Change into the LLL-TAO directory to start nexus core (Change to the LLL-TAO folder to run the following commands)
