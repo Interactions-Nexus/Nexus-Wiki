@@ -2,7 +2,7 @@
 title: Commandline Arguments
 description: 
 published: true
-date: 2022-10-19T16:22:49.820Z
+date: 2022-10-26T13:52:39.647Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T16:22:49.820Z
@@ -14,84 +14,127 @@ This will list out all the command line parameters or core configuration paramet
 
  | Parameter | Description |
  |--- |--- |
+ | -addnode |
  | -api |
- | -apiuser | The API authentication username |
- | -apipassword | The API authentication password |            
- | -apiauth | Enable/disable API authentication |
- | -apiport | Change API port |     
- | -apisslport | Change API SSL port |
- | -argon2 | 
+ | -apiuser | The API authentication username | username |
+ | -apipassword | The API authentication password | password |     
+ | -apiauth | Enable/disable API authentication | 0/1 |
+ | -apiport | Change API port | port number |    
+ | -apisslport | Assign a port for API SSL | port number|
+ | -argon2 | Use the argon2 algorithm 
  | -argon2_memory |
+ | -autotx | Enable transaction batching for dapp backend nodes |
+ | -avatar |
+ 
+ | -beta |
  | -blocknotify |
+ | -blockrefresh |
+ 
+ | -connect |
  | -conf |
+ | -contractcache|
+
+ 
  | -datadir | Core data directory location |
  | -dbcache |
  | -ddos |
  | -dnsupdate
  | -dns |
+ 
+
+ 
+ | -flushwallet |        | true /false |
+ 
+ | -gdb |
  | -generate | Block generation password for private networks | 
- | -sync |
- | -sslcertificate | ssl - certificate location |
- | -sslcertificatekey | ssl - keyfile location |
- | -sslcabundle | ssl - cabundle location |
+
+ 
  | -httpresponse |
- | -contractcache|
- | -registercache |
+ | -hybrid | Hybrid network password |
+
+ | -inactivetimeout |
+ | -indexheight | Enable block height indexing| 0/1 |
+ | -indexaddress | Enable address indexing | 0/1 | 
+ 
  | -ledgercache |
  | -legacycache |
- | -rpcuser | The RPC authentication username |
- | -rpcpassword | The RPC authentication password |
- | -system/stop | Core shutdown authentication password |
- | -testnet | testnet flag |
  | -latency | The duration to create blocks in private networks |
- | -gdb |
- | -sessionlocks | 
- | -inactivetimeout |
- | -terminateauth |
- | -indexheight | Enable block height indexing|
- | -indexaddress | Enable address indexing |
- | -walletcheck |
- | -walletclean |
- | -upnp | Enable upnp |
+ | -llpsleep |
+
+
+
+
  | -nodns | Disable DNS |
  | -keypool |
- | -beta |
- | -trustboost |
+
+
  | -regtest |
- | -hybrid | Hybrid network password |
- | -blockrefresh |
- | -llpsleep |
+
+
+
  | -runtime |
  | -meters |
  | -safemode | Additional protection against nexthash corruption |
- | -autotx | Enable transaction batching for dapp backend nodes |
- | -verbose | Control verbose output |
- | -limitfreerelay |
+
+ 
+ 
  | -pid |
  | -printstate |
  | -prunefailed |
- | -stake | Enable staking on node |
+ | -printselectcoin |
+
  | -legacy |
- | -notificationsthread |
- | -avatar |
- | -printselectcoin
+ | -limitfreerelay |
  | -listen |
- | -serverport |
  | -logfiles |
- | -logsizeMB
- | -serverport |
- | -serversslport |
- | -port |
+ | -logsizeMB |
+ 
+ 
+ | -mining | Enable mining |
+ | -miningport | Change mining port |
+ | -meters |
+ | -maturityrequired
+ | -maxconnections | Set maximum peer connections to the node |
+ | -maxincoming | Set maximum incoming peer connections  |
+ | -maxoutgoing | Set maximum outgoing peer connections - (16 default)|
+ | -maxcontracts | Set maximum number of contracts per block |
+ | -maxsendbuffer |
+ | -maxsendsize |
+ | -marketfee |
+ 
+ | -notificationsthread |
+
  | -sslport | Change SSL port |
  | -p2pport | Change p2p port |
  | -p2psslport | Change p2p SSL port |
- | -maturityrequired
- | -maxincoming | Set max outgoing peer connections |
- | -maxoutgoing | Set max ingoing peer connections |
- | -maxcontracts | Set the maximum number of contracts per block |
- | -maxsendbuffer |
- | -maxsendsize |
- | -meters |
- | -mining | Enable mining |
- | -miningport | Change mining port |
- | -marketfee | 
+ 
+ 
+ | -port |
+ | -private | Enable the node to run as a private chain |
+ 
+ | -registercache |
+ | -rpcuser | The RPC authentication - username |
+ | -rpcpassword | The RPC authentication - password |
+ | -rpcremote | Enable RPC remote access | 0/1 |
+
+ | -sessionlocks | 
+ | -serverport |
+ | -serversslport |
+
+ | -sslcertificate | ssl - certificate location | location |
+ | -sslcertificatekey | ssl - keyfile location | location |
+ | -sslcabundle | ssl - cabundle location | location|
+ | -stake | Enable staking on node |
+ | -sync |
+ | -system/stop | Core shutdown authentication password | password |
+ 
+ | -terminateauth |
+ | -testnet | Enable the node to be a testnet | 
+ | -trustboost |
+ 
+ | -upnp | Enable upnp |
+ 
+ | verbose |    | 1, |
+ 
+ | -walletcheck |
+ | -walletclean |
