@@ -2,7 +2,7 @@
 title: Commandline Arguments
 description: 
 published: true
-date: 2022-10-26T20:44:37.536Z
+date: 2022-10-26T21:09:34.384Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T16:22:49.820Z
@@ -12,8 +12,8 @@ dateCreated: 2022-10-19T16:22:49.820Z
 This will list out all the command line parameters or core configuration parameters.
 
 
- | Parameter | Description |
- |--- |--- |
+ | Parameter | Description | Values |
+ | --- | --- | --- |
  | -addnode | Add to address manager and let it make connections | 
  | -api |  Handle for API if '/' symbol detected | |
  | -apiuser | The API authentication username | username |
@@ -23,7 +23,7 @@ This will list out all the command line parameters or core configuration paramet
  | -apiport | Manually assign the API port | port number |  
  | -apisssl | Enable SSL for API | 0/1 |
  | -apisslport | Assign a port for API SSL | port number|
- | -apisslrequired | Boolean for if API is using SSL | | true/false |
+ | -apisslrequired | Boolean for if API is using SSL | true/false |
  | -apithreads | | default = 8 |
  | -apicscore | | default = 5 |
  | -apirscore | | default = 5 |
@@ -49,7 +49,7 @@ This will list out all the command line parameters or core configuration paramet
  | -dnsupdate | Check if DNS needs update | default = 86400 |
  | -dns | Flag to enable DNS nodes provided | default = true |
  | -flushwallet | Legacy - Flag to flush wallet database  | |
- | -forcereindex |  | Flag to force reindex if needed | 
+ | -forcereindex | Flag to force reindex if needed | 
  | -forkblocks | Rewind the chain to the specified number of blocks | default = 0 |
  | -gdb | GDB mode waits for keyboard input to initiate clean shutdown | |
  | -generate | Block generation password for private networks | 
