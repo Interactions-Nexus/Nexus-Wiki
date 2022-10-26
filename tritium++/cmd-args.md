@@ -2,7 +2,7 @@
 title: Commandline Arguments
 description: 
 published: true
-date: 2022-10-26T14:35:46.108Z
+date: 2022-10-26T14:56:06.042Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T16:22:49.820Z
@@ -28,10 +28,11 @@ This will list out all the command line parameters or core configuration paramet
  | -apirscore |
  | -apitimespan |
  | -apitimeout |
- | -argon2 | Use the argon2 algorithm 
- | -argon2_memory |
+ | -argon2 | Hash generation algorithm | |
+ | -argon2_memory | Memory allocation for argon2 | |
  | -autotx | Enable transaction batching for dapp backend nodes |
  | -avatar |
+ | -authattempts | Session authentication failure counter | default = 3 |
  
  | -beta |
  | -blocknotify |
@@ -60,10 +61,11 @@ This will list out all the command line parameters or core configuration paramet
  | -httpresponse |
  | -hybrid | Hybrid network password |
 
- | -inactivetimeout |
+ | -inactivetimeout | Session inactivity timout | default = 3600 |
  | -indexheight | Enable block height indexing| 0/1 |
  | -indexaddress | Enable address indexing | 0/1 | 
  
+ | -latency | Latency to create blocks in private or hybrid mode | |
  | -ledgercache | Create the ledger database instance |
  | -legacycache | Create the legacy database instance |
  | -latency | The duration to create blocks in private networks |
@@ -71,13 +73,13 @@ This will list out all the command line parameters or core configuration paramet
  | -legacy |
  | -limitfreerelay |
  | -listen |
- | -logfiles |
- | -logsizeMB |
+ | -logfiles | Debug logging configuration parameter | default = 20 |
+ | -logsizeMB | Debug logging configuration parameter | default = 5 |
 
 
 
  | -nodns | Disable DNS |
- | -keypool |
+ | -keypool |  Desired legacy keypool size |
 
 
 
@@ -136,7 +138,7 @@ This will list out all the command line parameters or core configuration paramet
  | -regtest |
  | -runtime |
 
- | -sessionlocks | 
+ | -sessionlocks | Create session locks | default = 1024 |
  | -serverport |
  | -serversslport |
  | -ssl |
@@ -150,7 +152,7 @@ This will list out all the command line parameters or core configuration paramet
  | -system/stop | Core shutdown authentication password | password |
  
  | -terminateauth |
- | -testnet | Enable the node to be a testnet | 
+ | -testnet | Enable the node to be a testnet | Number (0 - 92349234) |
  | -threads | |
  | -timeout | |
  | -timespan | |
@@ -160,5 +162,6 @@ This will list out all the command line parameters or core configuration paramet
  
  | verbose |    | 1, |
  
+ | -wallet | Load the legacy wallet | |
  | -walletcheck |
  | -walletclean |
