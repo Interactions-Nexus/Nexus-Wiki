@@ -2,7 +2,7 @@
 title: Commandline Arguments
 description: 
 published: true
-date: 2022-10-26T14:56:06.042Z
+date: 2022-10-26T15:13:15.690Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T16:22:49.820Z
@@ -35,9 +35,10 @@ This will list out all the command line parameters or core configuration paramet
  | -authattempts | Session authentication failure counter | default = 3 |
  
  | -beta |
- | -blocknotify |
- | -blockrefresh |
+ | -blocknotify | Notification for new block created | |
+ | -blockrefresh | Grab block expiration timestamp | default = 60 |
  
+ | -checkpoints | To go back the specified checkpoints on startup | default = 100 |
  | -connect |
  | -conf |
  | -contractcache| Create the contract database instance |
@@ -47,11 +48,11 @@ This will list out all the command line parameters or core configuration paramet
  | -datadir | Core data directory location |
  | -dbcache |
  | -ddos |
- | -dnsupdate
+ | -dnsupdate | Check if DNS needs update | default = 86400 |
  | -dns |
  
 
- 
+ | -forkblocks | Rewind the chain to the total number of blocks | default = 0 |
  | -flushwallet |        | true /false |
  
  | -gdb |
@@ -59,7 +60,7 @@ This will list out all the command line parameters or core configuration paramet
 
  
  | -httpresponse |
- | -hybrid | Hybrid network password |
+ | -hybrid | Hybrid network Identity | password |
 
  | -inactivetimeout | Session inactivity timout | default = 3600 |
  | -indexheight | Enable block height indexing| 0/1 |
@@ -69,7 +70,7 @@ This will list out all the command line parameters or core configuration paramet
  | -ledgercache | Create the ledger database instance |
  | -legacycache | Create the legacy database instance |
  | -latency | The duration to create blocks in private networks |
- | -llpsleep |
+ | -llpsleep | cache sleep timer | default = 0 |
  | -legacy |
  | -limitfreerelay |
  | -listen |
@@ -109,7 +110,7 @@ This will list out all the command line parameters or core configuration paramet
  | -maxconnections | Set maximum peer connections to the node |
  | -maxincoming | Set maximum incoming peer connections  |
  | -maxcontracts | Set maximum number of contracts per block |
- | -maxsendbuffer |
+ | -maxsendbuffer | Write buffer overflow check |
  | -maxsendsize |
  | -marketfee |
  
