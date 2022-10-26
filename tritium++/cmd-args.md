@@ -2,7 +2,7 @@
 title: Commandline Arguments
 description: 
 published: true
-date: 2022-10-26T20:42:06.942Z
+date: 2022-10-26T20:44:37.536Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T16:22:49.820Z
@@ -51,18 +51,14 @@ This will list out all the command line parameters or core configuration paramet
  | -flushwallet | Legacy - Flag to flush wallet database  | |
  | -forcereindex |  | Flag to force reindex if needed | 
  | -forkblocks | Rewind the chain to the specified number of blocks | default = 0 |
-
- 
  | -gdb | GDB mode waits for keyboard input to initiate clean shutdown | |
  | -generate | Block generation password for private networks | 
  | -httpheader | Dump the header on every read |
  | -httpresponse | Flag to log http response | default = false |
  | -hybrid | Hybrid network Identity | password |
-
  | -inactivetimeout | Session inactivity timout | default = 3600 |
  | -indexheight | Enable block height indexing| 0/1 |
  | -indexaddress | Enable address indexing | 0/1 | 
- 
  | -latency | Latency to create blocks in private or hybrid mode | |
  | -ledgercache | Create the ledger database instance |
  | -legacycache | Create the legacy database instance |
@@ -74,12 +70,7 @@ This will list out all the command line parameters or core configuration paramet
  | -listen |
  | -logfiles | Debug logging configuration parameter | default = 20 |
  | -logsizeMB | Debug logging configuration parameter | default = 5 |
-
  | -keypool |  Desired legacy keypool size |
-
-
-
-
  | -manager | |
  | -mining | Enable mining on the node|
  | -miningthreads |
@@ -97,11 +88,9 @@ This will list out all the command line parameters or core configuration paramet
  | -maxcontracts | Set maximum number of contracts per transaction | default = 99 |
  | -maxsendbuffer | Write buffer overflow check |
  | -maxsendsize | Set the maximum bytes to flush to 2^16 or max socket buffer |
- | -marketfee | 
- 
- | -nodns | Disable DNS |
+ | -marketfee | To enable and set fee for the P2P marketplace | |
+ | -nodns | Flag to disable DNS provided | |
  | -notificationsthread | Total no of manager threads | default = 1 |
-
  | -pid | (Nexus.pid) PID file full pathname | |
  | -printstate | Flag to output the block state | |
  | -prunefailed | Kill address if no valid address is found | default = 0|
@@ -110,7 +99,7 @@ This will list out all the command line parameters or core configuration paramet
  | -p2psslport | Change p2p SSL port |
  | -port |
  | -private | Enable the node to run as a private chain | |
- | -primemod | Flag to reduce the lash proof down to 1017-bit to maximize prime ratio | default = false | 
+ | -primemod | Flag to reduce the lash proof down to 1017-bit to maximize prime ratio  | default = false | 
  | -registercache | Create the register database instance |
  | -rpcuser | The RPC authentication - username |
  | -rpcpassword | The RPC authentication - password |
@@ -131,7 +120,6 @@ This will list out all the command line parameters or core configuration paramet
  | -rescan | Legacy - Flag to handle rescanning database | |
  | -reindexheight | Flag to force reindexing height | |
  | -requirepassword | Flag to force password authntication for unlocking session |
-
  | -safemode | Recalculate nexthash to protect against nexthash corruption |
  | -sessionlocks | Create session locks | default = 1024 |
  | -serverport |
@@ -146,18 +134,14 @@ This will list out all the command line parameters or core configuration paramet
  | -sync | Flag denoting the synchronization status | |
  | -syncbatchsize | Do a sequential read to obtain the list | default = 3000 |
  | -system/stop | Core shutdown authentication password | password |
- 
  | -terminateauth | Check for authenticated sigchain | |
  | -testnet | Enable the node to be a testnet | Number (0 - 92349234) |
  | -threads | |
  | -timeout | |
  | -timespan | |
  | -trustboost | Preset trust for testing on testnet | |
- 
  | -upnp | upnp flag which will enable required port forwarding | default = true |
- 
  | verbose | Enable verbose logging  | 0, 1, 2, 3 default = 0|
- 
  | -wallet | Load the legacy wallet | |
  | -walletcheck |
  | -walletclean |
