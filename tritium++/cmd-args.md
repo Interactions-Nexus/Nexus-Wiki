@@ -2,7 +2,7 @@
 title: Commandline Arguments
 description: 
 published: true
-date: 2022-10-26T14:27:00.273Z
+date: 2022-10-26T14:35:46.108Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T16:22:49.820Z
@@ -19,7 +19,8 @@ This will list out all the command line parameters or core configuration paramet
  | -apiuser | The API authentication username | username |
  | -apipassword | The API authentication password | password |     
  | -apiauth | Enable/disable API authentication | 0/1 |
- | -apiport | Change API port | port number |  
+ | -apiconnect | Make the connection to the API server | |
+ | -apiport | Manually assign the API port | port number |  
  | -apisssl | Enable SSL for API | 0/1 |
  | -apisslport | Assign a port for API SSL | port number|
  | -apithreads | 
@@ -38,7 +39,7 @@ This will list out all the command line parameters or core configuration paramet
  
  | -connect |
  | -conf |
- | -contractcache|
+ | -contractcache| Create the contract database instance |
  | -cscore |
 
  
@@ -63,11 +64,15 @@ This will list out all the command line parameters or core configuration paramet
  | -indexheight | Enable block height indexing| 0/1 |
  | -indexaddress | Enable address indexing | 0/1 | 
  
- | -ledgercache |
- | -legacycache |
+ | -ledgercache | Create the ledger database instance |
+ | -legacycache | Create the legacy database instance |
  | -latency | The duration to create blocks in private networks |
  | -llpsleep |
-
+ | -legacy |
+ | -limitfreerelay |
+ | -listen |
+ | -logfiles |
+ | -logsizeMB |
 
 
 
@@ -75,11 +80,7 @@ This will list out all the command line parameters or core configuration paramet
  | -keypool |
 
 
- | -regtest |
 
-
-
- | -runtime |
  | -meters |
  | -safemode | Additional protection against nexthash corruption |
 
@@ -90,11 +91,7 @@ This will list out all the command line parameters or core configuration paramet
  | -prunefailed |
  | -printselectcoin |
 
- | -legacy |
- | -limitfreerelay |
- | -listen |
- | -logfiles |
- | -logsizeMB |
+
  
  | -manager | |
  | -mining | Enable mining on the node|
@@ -109,7 +106,6 @@ This will list out all the command line parameters or core configuration paramet
  | -maturityrequired
  | -maxconnections | Set maximum peer connections to the node |
  | -maxincoming | Set maximum incoming peer connections  |
- | -maxoutgoing | Set maximum outgoing peer connections - (16 default)|
  | -maxcontracts | Set maximum number of contracts per block |
  | -maxsendbuffer |
  | -maxsendsize |
@@ -122,21 +118,23 @@ This will list out all the command line parameters or core configuration paramet
  | -port |
  | -private | Enable the node to run as a private chain |
  
- | -registercache |
+ | -registercache | Create the register database instance |
  | -rpcuser | The RPC authentication - username |
  | -rpcpassword | The RPC authentication - password |
  | -rpcremote | Enable RPC remote access | 0/1 |
-
  | -rpcthreads |
  | -rpccscore |
  | -rpcrscore |
  | -rpctimespan |
  | -rpcport |
- | -rpcssl |
- | -rpcsslport |
+ | -rpcconnect | Make the connection to the RPC server | |
+ | -rpcssl | | |
+ | -rpcsslport | | |
  | -rpcsslrequired | | true/false |
  | -rpcmeters |  | true/false |
  | -rscore |
+ | -regtest |
+ | -runtime |
 
  | -sessionlocks | 
  | -serverport |
