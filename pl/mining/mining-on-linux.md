@@ -2,7 +2,7 @@
 title: Kopanie w Linux
 description: Kopanie na komputerze z systemem Linux.
 published: true
-date: 2022-10-27T23:05:53.150Z
+date: 2022-10-27T23:07:10.434Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-27T22:49:58.360Z
@@ -167,17 +167,15 @@ cp NexusMiner ~/Miner
 
 Aby skonfigurować górnika, sprawdź poniższy link:&#x20;
 
-{% content-ref url="../../mining/mining-on-nexus/miner-configuration.md" %}
 [miner-configuration.md](../../mining/mining-on-nexus/miner-configuration.md)
-{% ref. treści końcowej %}
+
 
 ## Uruchom Górnika:
 
 Aby uruchomić górnika przejdź do katalogu górnika.
 
-{% wskazówka style="informacje" %}
-W przypadku wydobycia solo uruchom portfel, zaloguj się, a następnie uruchom górnika.
-{% podpowiedzi %}
+>W przypadku wydobycia solo uruchom portfel, zaloguj się, a następnie uruchom górnika.
+{.is-info}
 
 ````
 cd NexusMiner
