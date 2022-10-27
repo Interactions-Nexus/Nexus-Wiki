@@ -2,7 +2,7 @@
 title: Górnictwo
 description: 
 published: true
-date: 2022-10-27T21:55:16.040Z
+date: 2022-10-27T22:51:00.579Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T21:21:43.179Z
@@ -99,5 +99,5 @@ Aby lepiej zrozumieć wydajność wydobycia różnych urządzeń, skorzystaj z k
 - [Kopanie w Windows *Jak kopać w systemie Windows*](/pl/mining/mining-on-windows)
 - [Kopanie na Linuksie *Jak kopać na Linuksie*](/pl/mining/mining-on-linux)
 - [Konfiguracja górnika *Jak skonfigurować górnika*](/pl/mining/miner-config)
-- [Tabela Hash-Rate *To jest tabela Hash-Rate wydobycia Nexusa*](/pl/mining/hash-rate-table)
+- [Tabela Hash-Rate *To jest tabela Hash-Rate wydobycia Nexusa*](/en/mining/hash-rate-table)
 {.links-list}
