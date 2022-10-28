@@ -2,7 +2,7 @@
 title: Aktywa
 description: Przypadki użycia zasobów
 published: true
-date: 2022-10-23T11:48:26.517Z
+date: 2022-10-28T22:54:03.226Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T11:48:26.517Z
@@ -11,7 +11,7 @@ dateCreated: 2022-10-23T11:48:26.517Z
 # 🏫 Aktywa - NFT
 &nbsp;
 
-## **Co to jest zasób (NFT)?**
+## **Co to jest Aktywo (NFT)?**
 
 Aktywa, powszechnie znane jako NFT (token non-fungable). Zasoby to tokeny, których możemy użyć do reprezentowania własności unikalnych przedmiotów. Pozwalają nam cyfrowo reprezentować takie rzeczy jak sztuka, kolekcje, nawet nieruchomości i wiele innych rzeczy. Mogą mieć tylko jednego oficjalnego właściciela (sigchain) na raz i są zabezpieczone przez blockchain Nexusa; z wyjątkiem właściciela nikt nie może modyfikować rejestru własności.
 
