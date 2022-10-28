@@ -2,19 +2,24 @@
 title: 10 powodów, dla których warto budować na Nexusie
 description: 
 published: true
-date: 2022-10-22T19:17:03.975Z
+date: 2022-10-28T22:03:59.852Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T18:54:48.160Z
 ---
 
 # 🔟 10 powodów, dla których warto budować na Nexusie
-W przestrzeni kryptograficznej pojawia się coraz więcej platform inteligentnych kontraktów, a wiele z nich staje się powszechnie znanymi. Jednak czarnym koniem w wyścigu o najwydajniejszy i najbezpieczniejszy blockchain jest ' Nexus '. Biorąc pod uwagę niską kapitalizację rynkową, większość ludzi nigdy nie słyszała o tym siedmioletnim blockchainie, ale oferuje znacznie więcej niż wiele wiodących obecnie platform inteligentnych kontraktów.
+W przestrzeni kryptograficznej pojawia się coraz więcej platform inteligentnych kontraktów, a wiele z nich staje się powszechnie znanymi. Jednak czarnym koniem w wyścigu o najwydajniejszy i najbezpieczniejszy blockchain jest [Nexus](https://www.nexus.io/). Biorąc pod uwagę niską kapitalizację rynkową, większość ludzi nigdy nie słyszała o tym siedmioletnim blockchainie, ale oferuje znacznie więcej niż wiele wiodących obecnie platform inteligentnych kontraktów.
 
-Mapa drogowa Nexusa jest obszerna, z ogromnymi ulepszeniami i nowymi funkcjami, które dopiero nadejdą, z których wiele jest tuż za rogiem. Skupmy się jednak teraz na 10 najważniejszych powodach, dla których warto budować na Nexusie w oparciu o jego obecne możliwości. Wszystkie te funkcje mogą być wykorzystywane przez programistów w sieci publicznej lub we własnym łańcuchu prywatnym.
+[Mapa drogowa](https://www.nexus.io/roadmap) Nexusa jest obszerna, z ogromnymi ulepszeniami i nowymi funkcjami, które dopiero nadejdą, z których wiele jest tuż za rogiem. Skupmy się jednak teraz na 10 najważniejszych powodach, dla których warto budować na Nexusie w oparciu o jego obecne możliwości. Wszystkie te funkcje mogą być wykorzystywane przez programistów w sieci publicznej lub we własnym łańcuchu prywatnym.
 
 ## **1: API niezależne od platformy**
-Nexus został zaprojektowany od samego początku z myślą o komponowaniu. Zespół i społeczność budują „połączony świat”, który jest możliwy do osiągnięcia tylko za pomocą nieufnego pomostu między główną infrastrukturą Web2, taką jak rynki, platformy programistyczne, narzędzia do automatyzacji, silniki gier i sieci społecznościowe, a powstającą Web3, zasilaną przez zestaw [zintegrowanego API] Nexusa (https://www.nexus.io/integrated-api) (interfejs programowania aplikacji). Zdecentralizowane aplikacje (DApps) zbudowane na Nexusie współdziałają z JSON-API, umożliwiając programistom integrowanie funkcji blockchain z ich tradycyjnymi aplikacjami, mając jednocześnie umiejętności oparte wyłącznie na tworzeniu stron internetowych. Nexus zapewnia szeroką gamę dobrze przetestowanych poleceń, które redukują czas, ryzyko i koszty związane z tworzeniem Dappa. Unikalna architektura Nexusa zapewnia bezproblemową interoperacyjność między bogatą w dane siecią Web2 a tokenizowaną siecią Web3.
+Nexus został zaprojektowany od samego początku z myślą o komponowaniu. Zespół i społeczność budują „połączony świat”, który jest możliwy do osiągnięcia tylko za pomocą nieufnego pomostu między główną infrastrukturą Web2, taką jak rynki, platformy programistyczne, narzędzia do automatyzacji, silniki gier i sieci społecznościowe, a powstającą Web3, zasilaną przez zestaw [integrated API](https://www.nexus.io/integrated-api) (interfejs programowania aplikacji). Zdecentralizowane aplikacje (DApps) zbudowane na Nexusie współdziałają z JSON-API, umożliwiając programistom integrowanie funkcji blockchain z ich tradycyjnymi aplikacjami, mając jednocześnie umiejętności oparte wyłącznie na tworzeniu stron internetowych. Nexus zapewnia szeroką gamę dobrze przetestowanych poleceń, które redukują czas, ryzyko i koszty związane z tworzeniem Dappa. Unikalna architektura Nexusa zapewnia bezproblemową interoperacyjność między bogatą w dane siecią Web2 a tokenizowaną siecią Web3.
+&nbsp;
+
+## **2: Podsycanie ruchu bez kodu**
+
+[Bubble](https://bubble.io/?utm\_source=prwire\&utm\_medium=pr\&utm\_campaign=fc2021\&utm\_content=micaward) jest liderem ruchu bez kodu, który oferuje potężny edytor stron internetowych typu „wskaż i kliknij” i platforma hostingu w chmurze, która umożliwia użytkownikom tworzenie w pełni konfigurowalnych aplikacji internetowych i przepływów pracy. Nexus [bubble plugin](https://www.nexus.io/bubble) zawiera kilka wywołań API, które wchodzą w bezpośrednią interakcję z łańcuchem bloków Nexusa. Jest to potężne narzędzie dla każdego, kto chce budować tokenizowane rynki peer-to-peer NFT (Non fungable token), galerie sztuk wizualnych, platformy strumieniowania muzyki i wideo, sieci społecznościowe i wiele innych usług, kreacji i pomysłów na erę Web3 .
 &nbsp;
 
 ## **3: Łatwe tworzenie tokenów i zasobów (NFT)**
