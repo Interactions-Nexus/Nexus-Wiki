@@ -2,7 +2,7 @@
 title: Konfiguracja górnika
 description: 
 published: true
-date: 2022-10-28T21:47:01.112Z
+date: 2022-10-28T21:49:18.564Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-27T22:28:31.131Z
@@ -41,154 +41,154 @@ W przypadku puli Nexus prime i hash adres wypłaty będzie identyfikatorem puli,
 
 ### Prime Pool
 
-````
+```
 {
-    "wersja 1,
+    "version" : 1,
     "wallet_ip" : "primepool.nexus.io",
     "port" : 50000,
     "local_ip" : "auto",
     "mining_mode" : "PRIME",
-    "basen" :
+    "pool" :
     {
-        "nazwa użytkownika" : "<INSERT_HERE NXS ADDRESS>",
-        "display_name" : "<WSTAW TUTAJ>"
+        "username" : "<INSERT_HERE NXS ADDRESS>",
+        "display_name" : "<INSERT HERE>"
     },
     "stats_printers" :
     [
         {
             "stats_printer" :
             {
-                „tryb” : „konsola”
+                "mode" : "console"
             }
         }
     ],
-    "pracownicy" :
+    "workers" : 
     [
         {
-            "pracownik" :
+            "worker" :
             {
                 "id" : "myWorker0",
-                "tryb" :
+                "mode" : 
                 {
-                    „sprzęt” : „gpu”,
-"urządzenie" : 0
+                    "hardware" : "gpu",
+					"device" : 0
                 }
             }
         }
     ]
 }
-````
+```
 
 &nbsp;
 
 ### Hash Solo
-````
+```
 {
-    "wersja 1,
-    "ip_portfela" : "127.0.0.1",
+    "version" : 1,
+    "wallet_ip" : "127.0.0.1",
     "port" : 9325,
     "local_ip" : "127.0.0.1",
     "mining_mode" : "HASH",
-    "interwał_ponawiania_ponownych_połączeń" : 5,
+    "connection_retry_interval" : 5,
     "get_height_interval" : 2,
-    "interwał_pingu" : 10,
-    "poziom_logowania" : 2,
+    "ping_interval" : 10,
+    "log_level" : 2,
     "logfile" : "miner.log",
     "stats_printers" :
     [
         {
             "stats_printer" :
             {
-                „tryb” : „konsola”
+                "mode" : "console"
             }
         },
         {
             "stats_printer" :
             {
-                "tryb" : "plik",
-                "nazwa pliku" : "stats.log"
+                "mode" : "file",
+                "filename" : "stats.log"
             }
         }
     ],
-    "interwał_statystycznych_druku" : 10,
-    "pracownicy" :
+    "print_statistics_interval" : 10,
+    "workers" : 
     [
         {
-            "pracownik" :
+            "worker" :
             {
                 "id" : "myWorker0",
-                "tryb" :
+                "mode" : 
                 {
-                    „sprzęt” : „gpu”,
-                    "urządzenie" : 0
+                    "hardware" : "gpu",
+                    "device" : 0
                 }
             }
         },
         {
-            "pracownik" :
+            "worker" :
             {
                 "id" : "myWorker1",
-                "tryb" :
+                "mode" : 
                 {
-                    „sprzęt” : „gpu”,
-                    "urządzenie" : 1
+                    "hardware" : "gpu",
+                    "device" : 1
                 }
             }
         },
         {
-            "pracownik" :
+            "worker" :
             {
                 "id" : "myWorker2",
-                "tryb" :
+                "mode" : 
                 {
-                    „sprzęt” : „gpu”,
-                    „urządzenie” : 2
+                    "hardware" : "gpu",
+                    "device" : 2
                 }
             }
-        }
+        } 
     ]
-}cii
-````
+}sh
+```
 &nbsp;
 
 ### Hash Pool
-````
+```
 {
-    "wersja 1,
+    "version" : 1,
     "wallet_ip" : "hashpool.nexus.io",
     "port" : 50000,
     "local_ip" : "auto",
     "mining_mode" : "HASH",
-    "basen" :
+    "pool" :
     {
-        "nazwa użytkownika" : "<INSERT_HERE NXS ADDRESS>",
-        "display_name" : "<WSTAW TUTAJ>"
+        "username" : "<INSERT_HERE NXS ADDRESS>",
+        "display_name" : "<INSERT HERE>"
     },
     "stats_printers" :
     [
         {
             "stats_printer" :
             {
-                „tryb” : „konsola”
+                "mode" : "console"
             }
         }
     ],
-    "pracownicy" :
+    "workers" : 
     [
         {
-            "pracownik" :
+            "worker" :
             {
                 "id" : "myWorker0",
-                "tryb" :
+                "mode" : 
                 {
-                    „sprzęt” : „fpga”,
-"serial_port" : "<WSTAW TUTAJ>"
+                    "hardware" : "fpga",
+					"serial_port" : "<INSERT HERE>"
                 }
             }
         }
     ]
 }
-````
+```
 
 Aby zapisać plik konfiguracyjny Ctrl+s i Ctrl+x
 
