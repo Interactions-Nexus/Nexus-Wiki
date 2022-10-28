@@ -2,7 +2,7 @@
 title: Voting
 description: 
 published: false
-date: 2022-10-28T14:18:12.743Z
+date: 2022-10-28T14:20:13.329Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:53:01.660Z
@@ -11,6 +11,8 @@ dateCreated: 2022-10-28T11:53:01.660Z
 # Voting
 
 The working group(s) will vote for the team facilitator(s), to represent them in the creative layer. The newly elected facilitator(s) will vote for the chair to represent the arm in the strategy layer. The voting has to be completed by the end of the current quarter and can spill over to 10 days of the next quarter.
+
+The arm groups have to conduct facilitator(s) election and then the elected facilitator(s) will vote for the chair every quarter without fail.
 
 
 
