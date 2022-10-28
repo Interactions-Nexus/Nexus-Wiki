@@ -2,11 +2,20 @@
 title: Interactions Processes
 description: Interactions internal processes
 published: true
-date: 2022-10-28T11:06:54.217Z
+date: 2022-10-28T14:23:48.744Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:06:54.217Z
 ---
 
 # Interactions Processes
-Find all the links to the various Interactions processes or rules:
+> 
+> **Note:** The DAO constitituion will supersede the arm internal process in case of any any overlap.
+{.is-warning}
+
+
+Find links to the various Interactions processes:
+
+> **Note:** The processes listed here are still a draft and will have to be ratified after discussion and community approval. 
+{.is-info}
+
