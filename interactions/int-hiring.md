@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions hiring process
 published: false
-date: 2022-10-28T11:24:26.463Z
+date: 2022-10-28T21:58:50.809Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -22,13 +22,13 @@ Any new hiring will strictly be following the below guidelines:
 
 -	Any new hiring will be based only on merit and what value they bring to the Interactions arm and will not be based on education or previous experience. Joining the Interaction arm is a serious commitment and non performance will not be entertained.
 
--	If anyone wants to volunteer in the Interactions arm will be monitored for performance on a baseline criteria which will be set by the facilitator and enodresed by the chair. Non-performance with the excuse of volunteering will not be entertained and will result in removal from the arm.
+-	If anyone wants to volunteer in the Interactions arm, they will be monitored for performance on a baseline criteria which will be set by the facilitator and endorsed by the chair. Non-performance with the excuse of volunteering will not be entertained and will result in removal from the arm.
 
-- Anyone who is joining the interactions arm cannot be anonymous from the team, this is due to work requirements. Interactions is about interacting with people, we need members to attend meetings, crypto events, meet people with similar interests and build local communities.. Also we will be doing a video interview before hiring the person as a volunteer. 
+- Anyone who is joining the interactions arm cannot be anonymous from the team; this is due to work requirements. Interactions is about interacting with people, we need members to attend meetings, crypto events, meet people with similar interests and build local communities. Also we will be doing a video interview before hiring the person as a volunteer. 
 
--	If anyone prefers to be anonymous they can work as contractors who will be paid similar to the team members based on skill sets but loose voting right and also cannot be considered for facilitator position 
+-	If anyone prefers to be anonymous they can work as contractors who will be paid similar to the team members based on skill sets but lose voting right and also cannot be considered for facilitator position. 
 
--	If anyone within the DAO is proposing anyone they have to describe what value the person brings to the Interactions arm. The person will have to provide a resume for similar work done and will provide all the details.
+-	If anyone within the DAO is proposing anyone, they have to describe what value the person brings to the Interactions arm. The person will have to provide a resume for similar work done and will provide all the details.
 
 - Every new hire, direct or anonymous contractor will go through a minimum volunteering period of three months, and for direct hires three more months as a contractor where he will be paid but will not officially be part of the Interactions arm. This period can be extended or the person can be let go as deemed fit by the facilitator. (This may be totally waived only if we need an urgent skilled hire who can be verified and get the work done. This will have to be authorized by that team's facilitator along with the arm chair).
 
@@ -43,11 +43,11 @@ Interactions will have a few different positions other that the direct hire and 
 ## Advisors:
 
 Advisor is normally a person with deeper knowledge in a specific area and usually also includes persons with cross-functional and multidisciplinary expertise. An adviser's role is that of a mentor or guide.
-Depending on our requirement, team can hire advisors, when the team lacks expertise in a particular field. This can be a paid or free position depending upon the requirements. Advisors are not part of the arm and will not have voting rights. Advisors will be part of the use-case or project task force where they will be mentoring the teams.
+Depending on our requirement, the team can hire advisors when the team lacks expertise in a particular field. This can be a paid or unpaid position depending upon the requirements. Advisors are not part of the arm and will not have voting rights. Advisors will be part of the use-case or project task force where they will be mentoring the teams.
  
 ## Contractors:
 
-A contract worker, also known as an independent contractor is an individual who enters into a contractual agreement with Interactions to provide a service in exchange for a fee. A contractor can be hired on a long term or temporary basis. Anonymous people who want to work for a branch will also be treated as a contractor. A contractor is not part of the arm and has not voting rights. 
+A contract worker, also known as an independent contractor is an individual who enters into a contractual agreement with Interactions to provide a service in exchange for a fee. A contractor can be hired on a long-term or temporary basis. Anonymous people who want to work for a branch will also be treated as a contractor. A contractor is not part of the arm and has not voting rights. 
 
 #### How to manage contractors:
 
@@ -67,7 +67,7 @@ A contract worker, also known as an independent contractor is an individual who 
 
 ## Bounties:
 
-When the team needs a specific work done they can annouce open bounties for a particular work. The clear requirements and specifications have to be laid out by the arm and the first person / team who submits the completed job, which meets all the requirements and specifications laid out will be paid. The specificss will be decided for each bounty by the respective team facilitator and endorsed by the chair.
+When the team needs a specific work done they can annouce open bounties for a particular work. The clear requirements and specifications have to be laid out by the arm and the first person / team who submits the completed job, which meets all the requirements and specifications laid out will be paid. The specifics will be decided for each bounty by the respective team facilitator and endorsed by the chair.
 
 ## Non-Performace ( Team or team memeber):
 
@@ -81,5 +81,5 @@ Exception Category:
 
 ## Unfit to work in Interactions:
 Non performance for long time.
-Permanet disability which 
-Any such conditions which inhits the member to not perform his duties 
+Permanent disability which 
+Any such conditions which inhibits the member to not perform his duties 
