@@ -2,7 +2,7 @@
 title: Tokenizacja Aktywów
 description: Tokenizacja zasobów
 published: true
-date: 2022-10-28T23:04:03.238Z
+date: 2022-10-28T23:14:00.058Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T11:58:07.805Z
@@ -67,4 +67,4 @@ Tokenizacja aktywów otwiera dla wielu nowe możliwości zarabiania na niepłynn
 
 Jeśli patrzysz na tokenizację zasobów na Nexusie i potrzebujesz pomocy, skontaktuj się z nami pod adresem:
 
-{% embed url="https://t.me/NexusDevelopers" %}
+[NexusDevelopers](https://t.me/NexusDevelopers)
