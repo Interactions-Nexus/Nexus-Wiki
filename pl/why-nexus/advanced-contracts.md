@@ -2,7 +2,7 @@
 title: Zaawansowane kontrakty
 description: 
 published: true
-date: 2022-10-28T22:39:52.361Z
+date: 2022-10-28T22:51:40.688Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T20:24:35.056Z
@@ -54,24 +54,24 @@ Nexus opracował wielopłaszczyznowe podejście do rozwoju na Nexusie. Daje to k
 
 Query DSL to jeden z języków kontraktowych, który dodaje możliwości podobne do zapytań SQL, w tym wyszukiwanie z użyciem symboli wieloznacznych i operatory logiczne, umożliwiające wyszukiwanie lub filtrowanie dowolnych zasobów cyfrowych lub tokenów w Nexusie bezpośrednio przez interfejs API. Na przykład można wyszukać tytuły własności w Arizonie. Ta funkcja stanowi podstawę zdecentralizowanej wyszukiwarki.
 
-Query DSL umożliwia wyszukiwanie dowolnego aspektu łańcucha, można również filtrować, a nawet operować na żądanym zestawie danych. Obsługiwane operatory to: `min, max, średnia, tryb, suma, dolny poziom, tablica, sdev, mediana`. Więcej operatorów będzie dostępnych w późniejszym terminie.
+Query DSL umożliwia wyszukiwanie dowolnego aspektu łańcucha, można również filtrować, a nawet operować na żądanym zestawie danych. Obsługiwane operatory to: `min, max, mean, mode, sum, floor, array, sdev, median`. Więcej operatorów będzie dostępnych w późniejszym terminie.
 
-Query zasadniczo udostępnia funkcjonalność SQL w zestawie danych blockchain. Operatorzy sprawiają, że ma on m.in. funkcjonalność Excela. To naprawdę potężne narzędzie dla programistów. Może nawet przeszukać cały łańcuch:
+Query zasadniczo udostępnia funkcjonalność SQL w zestawie danych blockchain. Operatorzy sprawiają, że ma on między innymi funkcjonalność Excela. To naprawdę potężne narzędzie dla programistów. Może nawet przeszukać cały łańcuch:
 
-````
-rejestr/lista/nazwy gdzie='nazwa.obiektu=l*'
-````
+```
+register/list/names where='object.name=l*' 
+```
 
 Powyżej pokaże się każda nazwa, która zaczyna się na literę `l`. Następnie może uruchamiać na tym operatory, odfiltrowując pola:
 
 ````
-register/list/names/name/array gdzie='nazwa.obiektu=l*'
+register/list/names/name/array where='object.name=l*'
 ````
 
-Da to ten sam zestaw danych, ale da tablicę JSON z nazwami zaczynającymi się od „l”, bez innych pól. Obsługuje również wiele filtrów:
+Da to ten sam zestaw danych, ale da tablicę JSON z nazwami zaczynającymi się od `l`, bez innych pól. Obsługuje również wiele filtrów:
 
 ````
-rejestr/lista/nazwy/nazwisko,właściciel gdzie='nazwa.obiektu=l*'
+register/list/names/name,owner where='object.name=l*'
 ````
 
 Spowoduje to odpowiedź z polami nazwy i właściciela, podobnie jak w zapytaniu SQL, w którym wybierasz nazwę Z nazw. Daje więc programiście możliwości modelowania danych oprócz funkcjonalności blockchain.
@@ -82,9 +82,9 @@ Globalne wyszukiwanie całego łańcucha zajmuje od 1 do 2 sekund. Uruchamianie 
 
 Aby uzyskać więcej informacji, sprawdź poniższy link:
 
-- [Zapytania * Zapytanie o składni typu SQL DSL*](/en/tritium++/zapytania)
-- [API rejestru *API rejestru*](/en/tritium++/register)
-{.lista-linków}
+- [Zapytania *Zapytanie składni przypominające SQL DSL*](/pl/tritium++/zapytania)
+- [API rejestru *API rejestru*](/pl/tritium++/register)
+{.links-list}
 
 ## Kontrakty warunkowe
 
@@ -107,7 +107,7 @@ Dla zaawansowanych programistów, którzy potrzebują pełnej kontroli nad kreat
 
 Warunkowa maszyna wirtualna będzie podzbiorem Augmented, tak jak w mojej funkcji mam instrukcję `if`, która jest wykonywana jako warunek. Ale rozszerzony pozwoli na pisanie skomplikowanego kodu. Na przykład mam konto, wykonuję funkcję przeciążenia operatora dla `DEBIT`, która może dodać dodatkowe wymagania dla debetu z tego konta, takie jak maksymalna kwota na przedział czasu itp. Mógłbym dodać inną publiczną metodę, która może być wywołana przez innego użytkownika do pobrania kwoty na moje konto, jeśli spełni określony warunek, i tak dalej. Będzie to pełna implementacja naszego interpretera, w której będziemy mieli funkcjonalność większości języków, takich jak Java i C++.
 
-Rozszerzone kontrakty to drugi rodzaj kontraktów, które będą dostępne w Protokole Trytowym. Tego typu umowy rozszerzają Warunkową VM (maszynę wirtualną, która przetwarza instrukcje warunkowe), zapewniając dodatkowe korzyści, w tym m.in. metody, funkcje, przeciążanie operacji i hermetyzację. Rozszerzone umowy dodają warstwę złożoności i przetwarzania, więc wiążą się z wyższą opłatą za wykonanie. Będzie to wymagało więcej przetwarzania w łańcuchu, ale ogólnie sprawi, że nasz silnik kontraktów będzie znacznie potężniejszy.
+Rozszerzone kontrakty to drugi rodzaj kontraktów, które będą dostępne w Protokole Trytowym. Tego typu umowy rozszerzają Warunkową VM (maszynę wirtualną, która przetwarza instrukcje warunkowe), zapewniając dodatkowe korzyści, w tym między innymi metody, funkcje, przeciążanie operacji i hermetyzację. Rozszerzone umowy dodają warstwę złożoności i przetwarzania, więc wiążą się z wyższą opłatą za wykonanie. Będzie to wymagało więcej przetwarzania w łańcuchu, ale ogólnie sprawi, że nasz silnik kontraktów będzie znacznie potężniejszy.
 
 Celem kontraktów rozszerzonych jest zapewnienie względnych możliwości złożonych języków, takich jak C++, więc będziemy obsługiwać polimorfizm, przeciążanie operatorów, funkcje, metody, publiczne, prywatne, chronione, unikalne itp. rozszerzone kontrakty opierają się na istniejącej maszynie wirtualnej i rejestrze architektura oparta. Bardziej programowalne języki i rzeczy takie jak mapy, wektory, funkcje itp. będą dostarczane z rozszerzonymi umowami.
 
