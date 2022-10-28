@@ -2,7 +2,7 @@
 title: Zaawansowane kontrakty
 description: 
 published: true
-date: 2022-10-28T22:37:08.499Z
+date: 2022-10-28T22:39:52.361Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T20:24:35.056Z
@@ -44,7 +44,7 @@ Kontrakty warunkowe to umowy między uczestniczącymi stronami, określające ze
 
 ## Warstwa API
 
-Warstwa API ekstrapoluje z umów (rejestrów i warstw operacyjnych). Deweloperzy mogą z łatwością korzystać z API, zamiast kodować „inteligentny kontrakt”. Mimo że warstwa interfejsu API nie jest warstwą kontraktu, używa tych samych warstw kontraktu, do których można uzyskać bezpośredni dostęp za pomocą języków specyficznych dla domeny (DSL), do tworzenia niestandardowych kontraktów. Podkreśla to genialną architekturę stosu oprogramowania, ponieważ te same umowy mogą być udostępniane programistom bez kodu, programistom internetowym lub integracji z istniejącymi aplikacjami, jednocześnie abstrahując je od złożoności kodu lub łańcucha bloków.
+Warstwa API ekstrapoluje z umów (rejestrów i warstw operacyjnych). Deweloperzy mogą z łatwością korzystać z API, zamiast kodować `inteligentny kontrakt`. Mimo że warstwa interfejsu API nie jest warstwą kontraktu, używa tych samych warstw kontraktu, do których można uzyskać bezpośredni dostęp za pomocą języków specyficznych dla domeny (DSL), do tworzenia niestandardowych kontraktów. Podkreśla to genialną architekturę stosu oprogramowania, ponieważ te same umowy mogą być udostępniane programistom bez kodu, programistom internetowym lub integracji z istniejącymi aplikacjami, jednocześnie abstrahując je od złożoności kodu lub łańcucha bloków.
 
 # Kontrakty na Nexusie
 
