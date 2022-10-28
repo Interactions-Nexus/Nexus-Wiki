@@ -2,7 +2,7 @@
 title: Konfiguracja górnika
 description: 
 published: true
-date: 2022-10-27T22:28:31.131Z
+date: 2022-10-28T21:47:01.112Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-27T22:28:31.131Z
@@ -24,7 +24,7 @@ W przypadku linux CLI użyj poniższych poleceń:
 Aby przejść do folderu Miner, w którym dostępny jest plik wykonywalny NexusMIner, jeśli jest to inny folder, zmień odpowiednio.
 
 ````
-CD Miner
+cd Miner
 ````
 
 Utwórz plik miner.conf.
