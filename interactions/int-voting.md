@@ -2,7 +2,7 @@
 title: Voting
 description: 
 published: false
-date: 2022-10-28T14:20:13.329Z
+date: 2022-10-28T22:04:37.711Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:53:01.660Z
@@ -30,11 +30,11 @@ The working group(s) will vote for the team facilitator(s), to represent them in
 
 -	Team member(s) can nominate a challenger to the current facilitator. 
 
-- Self nomination is not allowed.
+- Self-nomination is not allowed.
 
 -	The elected facilitator(s) needs to have a majority of 51%.
 
--	The whole process of selection, voting should be transparent and proof has to be provided to the chair. which will be provided to the community and embassy after chair election.
+-	The whole process of selection and voting should be transparent, and proof has to be provided to the chair. This will be provided to the community and embassy after chair election.
 
 ## Voting for Chair:
 
@@ -45,7 +45,7 @@ The newly elected facilitator(s) for the next quarter will come together to vote
 
 -	The chair election had to take place every quarter without fail. Tenure for a elected chair is one quarter.
 
--	The chair must alert their group of the election cycle, and ask them if they would like to nominate a challenger. If challenger(s) are nominated, a open poll is created including challenger(s) and current chair.
+-	The chair must alert their group of the election cycle, and ask them if they would like to nominate a challenger. If challenger(s) are nominated, an open poll is created including challenger(s) and current chair.
 
 -	To be considered as a nominee the facilitator(s) should have performed duties for a minimum of 90 days in the capacity of facilitator.
 
@@ -55,7 +55,7 @@ The newly elected facilitator(s) for the next quarter will come together to vote
 
 -	The elected chair needs to have a majority of 51%.
 
--	The whole process of selection, voting should be transparent and proof has to be provided to the community and embassy.
+-	The whole process of selection and voting should be transparent, and proof has to be provided to the community and embassy.
 
 
 ## Failure to Complete Voting:
@@ -70,4 +70,4 @@ All elections only need 51% votes in the groups or creative layer and if any tea
 
 ## Voting on Proposals
 
-Any proposal will be voted at the group level or at the creative layer and the concerned person will present a written proposal and after everyone has read a poll will be created, The propsoal will require a majority vote of 51% to be passed. If the voting is at the group level, the proof has to be submitted to other facilitator(s).
+Any proposal will be voted at the group level or at the creative layer and the concerned person will present a written proposal and after everyone has read it, a poll will be created. The propsoal will require a majority vote of 51% to be passed. If the voting is at the group level, the proof has to be submitted to other facilitator(s).
