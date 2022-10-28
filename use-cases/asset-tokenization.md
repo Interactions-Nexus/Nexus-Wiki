@@ -2,7 +2,7 @@
 title: Asset Tokenization
 description: Asset Tokenization 
 published: true
-date: 2022-10-06T14:01:59.415Z
+date: 2022-10-28T23:01:08.411Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:35:47.258Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-05T08:35:47.258Z
 
 # 🖼 Asset Tokenization
 
-**Asset Tokenization** also referred as  "_Asset Backed Tokens"_ or "T_okenized Assets"_ is a new concept that uses digital tokens to fractionalize ownership of assets such as property, jewellery or fine art and uses contracts on blockchain to manage these ownership rights.&#x20;
+**Asset Tokenization** also referred as  "_Asset Backed Tokens"_ or "_Tokenized Assets"_ is a new concept that uses digital tokens to fractionalize ownership of assets such as property, jewellery or fine art and uses contracts on blockchain to manage these ownership rights.&#x20;
 
 On Nexus Asset tokenization is the process by which an issuer creates an "_**Asset**_ which represents a digital or physical asset, a fungible token and then links them together (Tokenizing). The tokens now represents that particular "_**Asset**_. &#x20;
 
