@@ -2,13 +2,13 @@
 title: Portfel na telefon
 description: Uproszczony węzeł na smartfona który łączy się bezpośrednio z siecią 
 published: true
-date: 2022-10-23T11:44:42.191Z
+date: 2022-10-28T22:24:25.523Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T11:44:42.191Z
 ---
 
-# 📱 Portfel Mobile
+# 📱 Portfel Mobilny
 > Portfel mobilny jest w prywatnej wersji beta i zostanie uruchomiony po premierze 5.1.
 {.is-info}
 
@@ -16,9 +16,9 @@ dateCreated: 2022-10-23T11:44:42.191Z
 
 Aby jakakolwiek platforma blockchain odniosła zdalny sukces, musi sprawić, by technologia była łatwa i dostępna dla zwykłych ludzi. Nexus osiąga to dzięki prawdziwie zdecentralizowanemu portfelowi mobilnemu i łańcuchom podpisów.
 
-Mobilny portfel oddaje blockchain w ręce bardzo osób, łącząc to z darmowymi transakcjami i łatwością budowania dappów z API, których programiści mogą używać do projektowania DApps, co z kolei stworzy narzędzie dla Nexusa.
+Mobilny portfel oddaje blockchain w bardzo osobiste ręce, łącząc to z darmowymi transakcjami i łatwością budowania dappów z API, których programiści mogą używać do projektowania DApps, co z kolei stworzy narzędzie dla Nexusa.
 
-Tradycyjnie portfele mobilne używają serwerów proxy obsługiwanych przez strony trzecie lub deweloperów portfeli do komunikacji z siecią blockchain**.** Serwer proxy działa jako strona zaufana i jest jedynym dostawcą informacji dotyczących stanu blockchain. Z drugiej strony portfel Nexusa działa na tym samym rdzeniu pulpitu, działa jako węzeł lite, pobierając listę równorzędnych węzłów z węzłów nasiennych sieci i tworząc połączenia z kilkoma równorzędnymi. Pozwala to portfelowi na transmisję transakcji bezpośrednio do sieci i wykrywanie potwierdzeń, sprawdzając ich włączenie względem nagłówków bloków. Portfel mobilny Nexus zyskuje dodatkowe bezpieczeństwo dzięki możliwości weryfikacji nagłówków bloków dostarczanych przez wielu partnerów zamiast przez jeden węzeł centralny. Dla osób obeznanych z technologią jest to również znane jako [Uproszczona weryfikacja płatności] (https://wiki.bitcoinsv.io/index.php/Simplified\_Payment\_Verification).
+Tradycyjnie portfele mobilne używają serwerów proxy obsługiwanych przez strony trzecie lub deweloperów portfeli do komunikacji z siecią blockchain**.** Serwer proxy działa jako strona zaufana i jest jedynym dostawcą informacji dotyczących stanu blockchain. Z drugiej strony portfel Nexusa działa na tym samym rdzeniu pulpitu, działa jako węzeł lite, pobierając listę równorzędnych węzłów z węzłów nasiennych sieci i tworząc połączenia z kilkoma równorzędnymi. Pozwala to portfelowi na transmisję transakcji bezpośrednio do sieci i wykrywanie potwierdzeń, sprawdzając ich włączenie względem nagłówków bloków. Portfel mobilny Nexus zyskuje dodatkowe bezpieczeństwo dzięki możliwości weryfikacji nagłówków bloków dostarczanych przez wielu partnerów zamiast przez jeden węzeł centralny. Dla osób obeznanych z technologią jest to również znane jako [Uproszczona weryfikacja płatności](https://wiki.bitcoinsv.io/index.php/Simplified\_Payment\_Verification).
 &nbsp;
 ![mobile-wallet.png](/mobile-wallet.png)Tradycyjny portfel Vs Nexus Mobile
 &nbsp;
