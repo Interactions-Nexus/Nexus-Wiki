@@ -2,7 +2,7 @@
 title: Portfel na telefon
 description: Uproszczony węzeł na smartfona który łączy się bezpośrednio z siecią 
 published: true
-date: 2022-10-28T22:24:25.523Z
+date: 2022-10-28T22:27:28.664Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T11:44:42.191Z
@@ -22,7 +22,7 @@ Tradycyjnie portfele mobilne używają serwerów proxy obsługiwanych przez stro
 &nbsp;
 ![mobile-wallet.png](/mobile-wallet.png)Tradycyjny portfel Vs Nexus Mobile
 &nbsp;
-Zgodnie z zasadą Nexusa [stos oprogramowania] (https://tech.nexus.io/software-stack), nowe aplikacje mobilne będą mogły łączyć się i wchodzić w interakcje z lokalnym portfelem, zamiast polegać na oddzielnym serwerze w celu uzyskania informacji dotyczące stanu łańcucha bloków. Portfel mobilny Nexus jest również całkowicie nieobjęty ochroną, co oznacza, że ​​Twój [łańcuch podpisów](https://tech.nexus.io/signature-chains) pozostaje całkowicie prywatny. Wszystkie transakcje są przetwarzane i pakowane na lokalnym urządzeniu, a następnie transmitowane do reszty sieci, tak jak w przypadku pełnego węzła.&#x20;
+Zgodnie z zasadą [stosu oprogramowania Nexusa](https://tech.nexus.io/software-stack), nowe aplikacje mobilne będą mogły łączyć się i wchodzić w interakcje z lokalnym portfelem, zamiast polegać na oddzielnym serwerze w celu uzyskania informacji dotyczące stanu łańcucha bloków. Portfel mobilny Nexus jest również całkowicie nieobjęty ochroną, co oznacza, że ​​Twój [łańcuch podpisów](https://tech.nexus.io/signature-chains) pozostaje całkowicie prywatny. Wszystkie transakcje są przetwarzane i pakowane na lokalnym urządzeniu, a następnie transmitowane do reszty sieci, tak jak w przypadku pełnego węzła.&#x20;
 
 Z konieczności portfel mobilny Nexus będzie przechowywać i przetwarzać tylko nagłówki bloków i łańcuch podpisów użytkownika, zaczynając od skrótu pierwszego bloku Tritium zakodowanego na stałe w portfelu. Dla zaawansowanego użytkownika posiadającego własny pełny węzeł i określoną funkcjonalność API, możliwe jest umożliwienie mobilnego portfela nawiązania bezpośredniego połączenia. Umożliwia to użytkownikowi przeniesienie ciężkiej pracy obliczeniowej na węzeł pulpitu, na przykład przeszukiwanie danych historycznych lub utrzymywanie pełnej kopii łańcucha bloków.&#x20;
 
