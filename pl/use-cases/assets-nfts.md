@@ -2,7 +2,7 @@
 title: Aktywa
 description: Przypadki użycia zasobów
 published: true
-date: 2022-10-28T22:57:38.836Z
+date: 2022-10-28T22:58:35.458Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T11:48:26.517Z
@@ -30,9 +30,9 @@ NFT można przenieść na innych użytkowników, co przenosi własność Aktywó
 * Pola metadanych aktywa można wybrać jako zmienne podczas bicia, a właściciel tego aktywa może w dowolnym momencie zmienić te metadane.
 * Aktywa mogą być tokenizowane w celu uzyskania częściowej własności.
 &nbsp;
-### Gdzie możemy wykorzystać zasoby?
+### Gdzie możemy wykorzystać aktywa?
 
-Zasoby mogą być wykorzystywane do różnych przypadków użycia, zarówno cyfrowych, jak i fizycznych. Poniżej wymieniono kilka przypadków użycia:
+Aktywa mogą być wykorzystywane do różnych przypadków użycia, zarówno cyfrowych, jak i fizycznych. Poniżej wymieniono kilka przypadków użycia:
 &nbsp;
 
 ![assets-usecases.jpeg](/assets-usecases.jpeg)
