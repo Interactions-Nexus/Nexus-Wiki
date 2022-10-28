@@ -2,16 +2,16 @@
 title: Tokenizacja Aktywów
 description: Tokenizacja zasobów
 published: true
-date: 2022-10-23T11:58:07.805Z
+date: 2022-10-28T23:03:20.768Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T11:58:07.805Z
 ---
 
 # 🖼 Tokenizacja aktywów
-**Tokenizacja zasobów** określana również jako „_Tokeny zabezpieczone aktywami”_ lub „T_okenized Assets”_ to nowa koncepcja, która wykorzystuje tokeny cyfrowe do podziału własności aktywów, takich jak nieruchomości, biżuteria lub dzieła sztuki, i wykorzystuje umowy na blockchain do zarządzania nimi prawa własności.&#x20;
+**Tokenizacja aktywów** określana również jako „_Tokeny zabezpieczone aktywami”_ lub „_Aktywa Tokenizowane”_ to nowa koncepcja, która wykorzystuje tokeny cyfrowe do podziału własności aktywów, takich jak nieruchomości, biżuteria lub dzieła sztuki, i wykorzystuje umowy na blockchain do zarządzania nimi prawa własności.&#x20;
 
-Tokenizacja zasobów na Nexusie to proces, w którym emitent tworzy „_**Zasób**_, który reprezentuje zasób cyfrowy lub fizyczny, token zamienny, a następnie łączy je ze sobą (tokenizacja). Tokeny teraz reprezentują ten konkretny „_* *Zaleta**_. &#x20;
+Tokenizacja aktywów na Nexusie to proces, w którym emitent tworzy _**Aktywo**_, które reprezentuje aktywo cyfrowe lub fizyczne, token zamienny, a następnie łączy je ze sobą (tokenizacja). Tokeny teraz reprezentują ten konkretny _**Aktywo**_. &#x20;
 
 Obejrzyj poniższy film, w którym wyjaśniono tokenizację zasobów.
 
