@@ -1,8 +1,8 @@
 ---
 title: Portfel na telefon
-description: Uproszczony węzeł na smartfona który łączy się bezpośrednio z siecią 
+description: 
 published: true
-date: 2022-10-28T22:27:28.664Z
+date: 2022-10-28T22:30:41.660Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T11:44:42.191Z
