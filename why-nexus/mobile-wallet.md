@@ -1,8 +1,8 @@
 ---
-title: Mobile-Walelt
+title: Mobile-Wallet
 description: 
 published: true
-date: 2022-10-07T05:14:30.130Z
+date: 2022-10-28T22:19:28.931Z
 tags: use-cases
 editor: markdown
 dateCreated: 2022-10-07T05:14:30.130Z
