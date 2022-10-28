@@ -2,7 +2,7 @@
 title: 10 powodów, dla których warto budować na Nexusie
 description: 
 published: true
-date: 2022-10-28T22:03:59.852Z
+date: 2022-10-28T22:06:10.357Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T18:54:48.160Z
@@ -24,7 +24,7 @@ Nexus został zaprojektowany od samego początku z myślą o komponowaniu. Zesp�
 
 ## **3: Łatwe tworzenie tokenów i zasobów (NFT)**
 
-[Tokeny](https://www.nexus.io/tokenize) i [Assets (NFT)](https://www.nexus.io/assets) można łatwo utworzyć za pomocą [portfela Nexus](https:// /www.nexus.io/wallets) lub [Nexus API](https://nexus.io/integrated-api). Opłata za utworzenie tokena zależy od całkowitej podaży, natomiast opłata za utworzenie NFT kosztuje 1 NXS. W przeciwieństwie do zwykłych tokenów, NFT są unikalnymi aktywami w łańcuchu bloków i mogą być używane do reprezentowania wielu różnych rodzajów zasobów cyfrowych i fizycznych, takich jak sztuka cyfrowa, kolekcje fizyczne i muzyka. NFT można również tokenizować, co pozwala na współwłasność i automatyczną dystrybucję tantiem lub dywidend. Zobacz nasz harmonogram opłat [tutaj](https://nexus.io/ResourceHub/fees).
+[Tokeny](https://www.nexus.io/tokenize) i [Aktywa (NFTs)](https://www.nexus.io/assets) można łatwo utworzyć za pomocą [Nexus wallet](https://www.nexus.io/wallets) lub [Nexus API](https://nexus.io/integrated-api). Opłata za utworzenie tokena zależy od całkowitej podaży, natomiast opłata za utworzenie NFT kosztuje 1 NXS. W przeciwieństwie do zwykłych tokenów, NFT są unikalnymi aktywami w łańcuchu bloków i mogą być używane do reprezentowania wielu różnych rodzajów zasobów cyfrowych i fizycznych, takich jak sztuka cyfrowa, kolekcje fizyczne i muzyka. NFT można również tokenizować, co pozwala na współwłasność i automatyczną dystrybucję tantiem lub dywidend. Zobacz nasz harmonogram opłat [tutaj](https://nexus.io/ResourceHub/fees).
 &nbsp;
 
 
