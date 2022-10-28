@@ -2,7 +2,7 @@
 title: Zaawansowane kontrakty
 description: 
 published: true
-date: 2022-10-28T22:31:04.171Z
+date: 2022-10-28T22:37:08.499Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T20:24:35.056Z
@@ -11,23 +11,23 @@ dateCreated: 2022-10-22T20:24:35.056Z
 # 📃 Zaawansowane kontrakty
 Maszyna wirtualna Nexusa (NVM) to **`maszyna stanów`** i istnieje jako pojedyncza jednostka obsługiwana przez setki połączonych węzłów Nexusa.
 
-Stos oprogramowania Nexusa istnieje wyłącznie w celu utrzymania nieprzerwanego, nieprzerwanego i niezmiennego działania tej specjalnej maszyny stanów; to środowisko, w którym działają wszystkie konta Nexus i umowy zaawansowane. W dowolnym punkcie łańcucha Nexus ma jeden i tylko jeden stan **`kanoniczny`**, a NVM definiuje zasady obliczania nowego ważnego stanu od bloku do bloku.
+Stos oprogramowania Nexusa istnieje wyłącznie w celu utrzymania nieprzerwanego, nieprzerwanego i niezmiennego działania tej specjalnej maszyny stanów. To środowisko, w którym działają wszystkie konta Nexus i umowy zaawansowane. W dowolnym punkcie łańcucha Nexus ma jeden i tylko jeden stan **`kanoniczny`**, a NVM definiuje zasady obliczania nowego ważnego stanu od bloku do bloku.
 
 Mimo że wszystkie platformy inteligentnych kontraktów są maszynami stanowymi, obsesja na punkcie skalowalności do użytku w świecie rzeczywistym doprowadziła do powstania odrębnej architektury NVM. Aby łatwo odróżnić lepszą architekturę, konieczne było nazwanie kontraktów na Nexusie kontraktami zaawansowanymi. Poniżej rozwikłamy architekturę.
 
 ## Architektura NVM
 
-NVM jest zaprojektowany jako „`64-bitowy”`, „`oparty na rejestrze”`; ten projekt został wybrany, ponieważ pasuje do 64-bitowego procesora i naśladuje rejestry pamięci podręcznej procesora.
+NVM jest zaprojektowany jako „`64-bitowy”`, „`oparty na rejestrze”`. Ten projekt został wybrany, ponieważ pasuje do 64-bitowego procesora i naśladuje rejestry pamięci podręcznej procesora.
 
 Taka konstrukcja sprawia, że ​​NVM jest bardzo szybki w porównaniu do EVM, ponieważ został zaprojektowany dla współczesnych procesorów. Mówiąc w liczbach, EVM zajmuje 1,7 miliona nanosekund na instrukcję, a NVM zajmuje 33 nanosekundy na instrukcję. EVM ma ogromną wadę, ponieważ ukończenie instrukcji zajmuje 4 cykle ze względu na długość 256 bitów na 64-bitowym procesorze, a także na przestarzały projekt stosu.
 
-NVM został celowo zaprojektowany tak, aby nie był kompletny, decyzja ta wynika również z faktu, że Nexus jest silnikiem **`Verification`**. Ten projekt ma ogromną zaletę i polega na darmowych prostych transakcjach, podczas gdy EVM potrzebuje gazu do kontrolowania żądań obliczeniowych z powodu złego kodu umowy, który może spowodować zatrzymanie sieci. Dzięki projektowi NVM zaawansowane kontrakty będą miały przewidywalne opłaty, które zostaną obliczone przed wykonaniem kontraktu.
+NVM został celowo zaprojektowany tak, aby nie był kompletny, decyzja ta wynika również z faktu, że Nexus jest silnikiem **`Weryfikacji`**. Ten projekt ma ogromną zaletę i polega na darmowych prostych transakcjach, podczas gdy EVM potrzebuje gazu do kontrolowania żądań obliczeniowych z powodu złego kodu umowy, który może spowodować zatrzymanie sieci. Dzięki projektowi NVM zaawansowane kontrakty będą miały przewidywalne opłaty, które zostaną obliczone przed wykonaniem kontraktu.
 
-Nexus będzie miał różne rodzaje kontraktów, dla interfejsów API wyższego poziomu zostaną dostarczone szablony, które użytkownik może wybrać z listy rozwijanej. W przypadku zaawansowanych użytkowników umowy rozszerzone umożliwią im korzystanie z umów z wyborem języka specyficznego dla domeny. Rozszerzone kontrakty będą dostępne w późniejszym terminie. Aby uzyskać więcej informacji, zapoznaj się z [mapą drogową](https://nexus.io/roadmap)
+Nexus będzie miał różne rodzaje kontraktów, dla interfejsów API wyższego poziomu zostaną dostarczone szablony, które użytkownik może wybrać z listy rozwijanej. W przypadku zaawansowanych użytkowników umowy rozszerzone umożliwią im korzystanie z umów z wyborem języka specyficznego dla domeny. Rozszerzone kontrakty będą dostępne w późniejszym terminie. Aby uzyskać więcej informacji, zapoznaj się z [mapą drogową](https://nexus.io/roadmap).
 
 ## Operacje i warstwy rejestru
 
-W dużym uproszczeniu kontrakty to żądanie wykonania określonego typu dyspozycji na danych, które skutkuje zmianą danych. W stosie oprogramowania Nexus „Warstwa operacji” zawiera instrukcje lub akcje, które nadają kontekst rejestrom i definiują bardziej złożoną logikę kontraktową, a „Warstwa rejestru” to warstwa danych. Kontrakt to obiekt zawierający: stan wstępny rejestru (rejestr, na którym jest wykonywana operacja, który został przekazany w górę z warstwy rejestru), operację pierwotną (tylko jedna operacja pierwotna na kontrakt) oraz zestaw warunków (dowolna ilość operacji warunkowych).
+W dużym uproszczeniu kontrakty to żądanie wykonania określonego typu dyspozycji na danych, które skutkuje zmianą danych. W stosie oprogramowania Nexus `Warstwa operacji` zawiera instrukcje lub akcje, które nadają kontekst rejestrom i definiują bardziej złożoną logikę kontraktową, a `Warstwa rejestru` to warstwa danych. Kontrakt to obiekt zawierający: stan wstępny rejestru (rejestr, na którym jest wykonywana operacja, który został przekazany w górę z warstwy rejestru), operację pierwotną (tylko jedna operacja pierwotna na kontrakt) oraz zestaw warunków (dowolna ilość operacji warunkowych).
 
 ### Prymitywne operacje
 
