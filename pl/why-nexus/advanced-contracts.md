@@ -1,8 +1,8 @@
 ---
 title: Zaawansowane kontrakty
-description: Kontrakty na Nexusie
+description: 
 published: true
-date: 2022-10-22T20:24:35.056Z
+date: 2022-10-28T22:31:04.171Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T20:24:35.056Z
