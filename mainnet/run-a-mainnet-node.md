@@ -2,7 +2,7 @@
 title: Run a Mainnet Node
 description: How to run a CLI node on mainnet - Stable & Testing
 published: true
-date: 2022-10-25T18:23:14.355Z
+date: 2022-10-29T20:56:10.615Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:31.584Z
@@ -20,11 +20,11 @@ dateCreated: 2022-10-05T08:26:31.584Z
 -   [Etcher](https://www.balena.io/etcher/) – To burn the image file to SD card
 -   Putty if using SSH via windows.
 
-> To install the 5.0.5 stable core, use **Ubuntu 20.04 LTS** only and the newer versions of Ubuntu, Debian and Raspberry Pi OS (Previously Raspbian) are having issues compiling.
+> To install the 5.0.5 stable core, use **Ubuntu 20.04 LTS** only. The newer versions of Ubuntu, Debian and Raspberry Pi OS (Previously Raspbian) are having issues compiling.
 {.is-warning}
 
 
-> To install the merging / 5.1 branch recommend to install Debian 11 or Ubuntu 20.04. Ubuntu 22.04 will require openssl downgrade to version 1.1.1 to compile successfully.
+> To install the merging / 5.1 branch it is recommended to install Debian 11 or Ubuntu 20.04. Ubuntu 22.04 will require openssl downgrade to version 1.1.1 to compile successfully.
 {.is-info}
 
 
