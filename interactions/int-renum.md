@@ -2,7 +2,7 @@
 title: Renumeration
 description: 
 published: true
-date: 2022-10-29T19:15:48.273Z
+date: 2022-10-29T19:19:02.953Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:01:33.834Z
@@ -34,9 +34,6 @@ The facilitator(s) will follow the below guidelines to set the renumeration for 
 
 -	All invoices have to follow a standard invoice template, which makes sure that all the relevant information is provided. This also make it possible to sort search and create visualizations in future.
 
-## Employee Retention:
-
-Interactions arm will follow the fire fast and promote faster principle to retain the best talent. As our arm heirarchy is based on voting, promotion will mean increased renumeration only. Interactions will make sure to retain the best talent, but at the same time it will let go of people who are not performing.
 
 ## Renumeration Revision
 THe crypto market being highly volatile and Nexus still being in its development stages, the revisions can be decided at the creative layer, but they need to keep the following points in mind:
@@ -50,6 +47,10 @@ THe crypto market being highly volatile and Nexus still being in its development
 - In case of bear markets or any unforseen events which reduce the branch budgets the facilitator(s) have to revise renumeration in sync with market conditions.
 
 - The team has to have caps on certain activities where members can invoice unlimited hours like translating social media posts, or any other activity which does not create immense value.
+
+## Employee Retention:
+
+Interactions arm will follow the fire fast and promote faster principle to retain the best talent and meritocracy. As our arm heirarchy is based on voting, promotion will mean increased renumeration only. Interactions facilitator(s) will make sure to retain the best talent, but at the same time it will terminate people who are under performers.
 
 - In case of a bullish market, the team can have faster revisions to be in sync with markets and also hire new talent.
 
