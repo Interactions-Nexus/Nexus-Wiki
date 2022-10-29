@@ -2,7 +2,7 @@
 title: Tritium++
 description: 
 published: true
-date: 2022-10-28T07:30:05.997Z
+date: 2022-10-29T09:42:33.369Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T15:25:26.651Z
@@ -31,4 +31,5 @@ Find all the links to the Tritium++ API documents.
 - [NAMES *The Names API*](/en/tritium++/names)
 - [SUPPLY *The Supply API*](/en/tritium++/supply)
 - [MARKET *The Market API*](/en/tritium++/market)
+- [REGISTER *The Register API*](/en/tritium++/register)
 {.links-list}
