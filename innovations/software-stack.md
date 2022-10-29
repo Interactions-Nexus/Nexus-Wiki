@@ -2,7 +2,7 @@
 title: Software-Stack
 description: 7 Layer Software Stack
 published: true
-date: 2022-10-06T13:09:54.210Z
+date: 2022-10-29T19:15:46.991Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:27:02.992Z
@@ -80,7 +80,7 @@ Fundamentally, a Signature Chain decouples the private key from the account, the
 
 ### **Consensus:**
 
-Two Proof of Work (PoW) channels (Prime and Hashing) and one Proof of Stake (PoS) channel are used to secure the network. Consensus is balanced between all three channels as it is based on collective chain weight, providing a higher resistance to 51% attacks compared to single algorithm blockchains. As the TAO framework is developed, these three forms of consensus will become the three layers of the [3DC](broken-reference).
+Two Proof-of-Work (PoW) channels (Prime and Hashing) and one Proof-of-Stake (PoS) channel are used to secure the network. Consensus is balanced between all three channels as it is based on collective chain weight, providing a higher resistance to 51% attacks compared to single algorithm blockchains. As the TAO framework is developed, these three forms of consensus will become the three layers of the [3DC](broken-reference).
 
 ### **Reputation:**
 
