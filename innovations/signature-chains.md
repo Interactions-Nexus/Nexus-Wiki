@@ -2,7 +2,7 @@
 title: Signature-Chains
 description: User Accounts or Profiles
 published: true
-date: 2022-10-06T13:33:29.799Z
+date: 2022-10-29T19:27:43.119Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:59.583Z
@@ -22,13 +22,13 @@ Nexus designed a system to automate the management of keys via a decentralized l
 
 Signature Chains decouple the private key from the user account, therefore one is unbound by the possession or security of a single private key. The private key becomes obsolete when the next transaction is generated, producing higher levels of security compared to the continual reuse of a private key, as is the case with other blockchain technologies.
 
-Signature Chains (Sigchains) are comparable to a 'personal Blockchain', and provide the foundation for DApps that manage all types of digital property. They integrate into existing application frameworks that already rely on authorization systems through username and password combinations, and thereby provide DApp developers the ability to integrate blockchain functionalities as an elevated layer into existing applications with minimal architectural modification. They can also be integrated with various security measures such as biometrics and hardware password managers.
+Signature Chains (Sigchains) are comparable to a 'personal blockchain', and provide the foundation for DApps that manage all types of digital property. They integrate into existing application frameworks that already rely on authorization systems through username and password combinations, and thereby provide DApp developers the ability to integrate blockchain functionalities as an elevated layer into existing applications with minimal architectural modification. They can also be integrated with various security measures such as biometrics and hardware password managers.
 
-Additional benefits are the efficiency gained by reducing the requirement of storing a large amount of signatures on disk, and the ability to use a variety of key types such as FALCON for quantum Resistance.
+Additional benefits are the efficiency gained by reducing the requirement of storing a large amount of signatures on disk, and the ability to use a variety of key types such as FALCON for quantum resistance.
 
 ### Speed and Scalability
 
-Sigchains use an account based model that replaces the clunky UTxO (Unspent Transaction Output) architecture that Bitcoin introduced. Sigchains contain all user data on a unique chain, and provide higher levels of scalability, as only one signature is required to be verified per transaction.
+Sigchains use an account-based model that replaces the clunky UTxO (Unspent Transaction Output) architecture that Bitcoin introduced. Sigchains contain all user data on a unique chain, and provide higher levels of scalability, as only one signature is required to be verified per transaction.
 
 Along with Sigchains, Nexus transactions are decoupled from the block, which means that only a single hash or ‘proof’ per transaction is required in the block level data, rather than the entire transaction itself. This results in the accommodation of approximately 31,728 transactions per 2 MB block. Together, these innovations produce lightweight blocks and efficient transaction processing, without the requirement of off chain (Layer 2) scaling solutions.
 
@@ -42,7 +42,7 @@ Usually, this signature is the largest part of the transaction, therefore removi
 
 An End Point Identifier (EID) is similar to an Internet Protocol (IP) address, and is a form of identity on the network layer. Through the use of [LISP](broken-reference), the EID becomes the identifier, while the RLOC (Routing Locator) becomes the location. This decoupling enables a device to freely roam between networks as only the RLOC changes, not the EID. This is contrary to how the Internet currently functions, where both the identifier and location are bound together in a single IP address.
 
-An EID is a critical security feature, as it can be linked to a Sigchain which makes the network identifier cryptographically associated with the Ledger. EIDs, Sigchains and the use of reputation combined create an elevated layer of trust to the Internet, as one can verify with certainty that the other party is who they claim to be without the need for third party services like Certificate Authorities (CA). A reduction in fraud, hacking, fake accounts, and identity theft for both consumers and service providers is envisioned as a result of this technology.
+An EID is a critical security feature, as it can be linked to a Sigchain which makes the network identifier cryptographically associated with the Ledger. EIDs, Sigchains and the use of reputation combined create an elevated layer of trust to the Internet, as one can verify with certainty that the other party is who they claim to be without the need for third-party services like Certificate Authorities (CA). A reduction in fraud, hacking, fake accounts, and identity theft for both consumers and service providers is envisioned as a result of this technology.
 
 ### Quantum Resistance
 
