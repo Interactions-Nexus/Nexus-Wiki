@@ -2,7 +2,7 @@
 title: Incident Report
 description: 
 published: false
-date: 2022-10-29T14:38:48.722Z
+date: 2022-10-29T14:43:03.191Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:15:41.560Z
@@ -14,9 +14,9 @@ The arm will check and balance itself and the responsibility lies with every tea
 
 The incident reports will be of two types:
 
-- **Internal** - This incident report is internal to the arm and investigation will be carried out at the creative layer.
+- **Internal Incidents** - This incident report is internal to the arm and investigation will be carried out at the creative layer.
 
-- **External** - This incident report is external to the arm and investigation will be carried out by the Judiciary.
+- **External Incidents** - This incident report is external to the arm and investigation will be carried out by the Judiciary.
 
 ## Internal Incident Reports:
 
@@ -26,6 +26,9 @@ The arm internal incident reports again will be of two types:
 
 - **Critical Incidents**
 
+## Internal Incident Reports:
+
+The external incident reports are filed against other arms or persons in other arms. This is not under the purvue of the arm internal process and will be investigated by the Judiciary.
  
 
 ## Normal Incidents
