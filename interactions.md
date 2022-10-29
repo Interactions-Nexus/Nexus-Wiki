@@ -2,7 +2,7 @@
 title: Interactions Processes
 description: Interactions internal processes
 published: true
-date: 2022-10-29T12:38:23.942Z
+date: 2022-10-29T18:32:30.361Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:06:54.217Z
@@ -22,6 +22,7 @@ Find links to the various Interactions processes:
 - [Hiring *Interactions Hiring Process*](/en/interactions/int-hiring)
 - [Departure & Termination](/en/interactions/int-departure)
 - [Voting *Interactions Voting Process*](/en/interactions/int-voting)
+- [Isolation](/en/interactions/int-Isolation)
 - [Budgets](/en/interactions/int-budgets)
 - [Renumeration](/en/interactions/int-renum)
 - [Incident Report](/en/interactions/int-incident)
