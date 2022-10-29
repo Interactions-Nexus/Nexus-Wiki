@@ -1,8 +1,8 @@
 ---
 title: Certyfikaty
-description: Certyfikaty, Poświadczenia
+description: 
 published: true
-date: 2022-10-23T12:05:59.283Z
+date: 2022-10-29T21:55:15.303Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T12:05:59.283Z
