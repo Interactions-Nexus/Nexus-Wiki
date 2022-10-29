@@ -2,7 +2,7 @@
 title: Introduction To Nexus
 description: The Nexus Network Currency-  NXS
 published: true
-date: 2022-10-19T20:35:41.880Z
+date: 2022-10-29T17:35:29.688Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:19.760Z
@@ -20,17 +20,17 @@ The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin
 
 ## What is Nexus? 
 
-**Nexus (NXS)** is the native cryptocurrency of Nexus network. Nexus has free simple transactions due to its design. The purpose of NXS is to allow for appropriate gamification of the network, which ensures that the active participants are compensated for the stake and time spent securing the network. Fees for various operations also prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming / DDOS) and name squatting.
+**Nexus (NXS)** is the native cryptocurrency of Nexus network. Nexus has free, simple transactions due to its design. The purpose of NXS is to allow for appropriate gamification of the network, which ensures that the active participants are compensated for the stake and time spent securing the network. Fees for various operations also prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming / DDOS) and name squatting.
 
 NXS is created by the protocol as compensation for miners and stakers for providing computational resources and securing the network. Thus the gamification ensures the network participants verify and execute transaction requests and provide computational resources to the network and upgrade them when needed.
 
-Any participant who broadcasts a contract execution request must also offer some amount of NXS to the network as a fee. This fee will be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
+Any participant who broadcasts a contract execution request must also offer some amount of NXS to the network as a fee. This fee will be awarded to whoever eventually does the work of verifying the transaction, executing it, commiting it to the blockchain, and broadcasting it to the network.
 
-Developers can build decentralised applications (dapps) using the REST API, Augmented contracts . NXS allows users to use the network for a lot of things like creating tokens, assets, tokenising assets, namespaces, supply chain solutions.
+Developers can build decentralized applications (dapps) using the REST API, Augmented contracts. NXS allows users to use the network for a lot of things like creating tokens, assets, tokenizing assets, namespaces, and supply chain solutions.
 
 ## Minting NXS
 
-Minting is the process in which new NXS gets created on the ledger. The underlying protocol can only create the new NXS. The protocol was designed with a max of 78 million NXS for 10 years, and after that there will be tail end emission of a max 3.67%
+Minting is the process in which new NXS gets created on the ledger. The underlying protocol can only create the new NXS. The protocol was designed with a max of 78 million NXS for 10 years, and after that there will be tail-end emission of a max 3.67%
 
 
 > Nexus was mined into existence similar to Bitcoin and there was no premine or ICO.
@@ -56,7 +56,7 @@ The native NXS coin has two main utilities in terms of value proposition – net
 
 ## TRANSACTING NXS <a href="#transferring-ether" id="transferring-ether"></a>
 
-Users can send and receive NXS or tokens using the username:account, namespace::account formats or the account. Free simple transactions make it really easy.&#x20;
+Users can send and receive NXS or tokens using the username:account, namespace::account formats or the account. Free, simple transactions make it really easy.&#x20;
 
 If there is a transaction done within 10 sec of the first transaction then there is an anti-spam fee of 0.1 NXS per contract executed in the second transaction (max 1 NXS) to prevent spamming the network.
 
