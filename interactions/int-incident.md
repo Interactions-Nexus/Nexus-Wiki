@@ -2,7 +2,7 @@
 title: Incident Report
 description: 
 published: false
-date: 2022-10-29T17:52:05.855Z
+date: 2022-10-29T18:30:52.398Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:15:41.560Z
@@ -54,7 +54,7 @@ The following violations but not limited to will be filed under critical interna
 
 - Trying to take over the arm, by any means.
 
-- Creating a common group for Ambassadors and joining any such common (closed or private) groups is prohibited.
+- Creating a common group for Ambassadors and joining any such common (public or private) groups is prohibited.
 
 -	Working with any people, groups, projects or being part of channels which want to hurt Nexus in any way.
 
