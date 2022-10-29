@@ -2,15 +2,15 @@
 title: Seed Nodes
 description: How to run a seed node for mainnet
 published: true
-date: 2022-10-29T05:56:32.142Z
+date: 2022-10-29T05:59:46.762Z
 tags: nodes
 editor: ckeditor
 dateCreated: 2022-10-29T01:44:48.577Z
 -->
 
 <ol>
-  <li>Seed Node definition: A seed node is a node the first node that other nodes connect to when they first come online. The seed node helps new nodes get the list of all the other online nodes on the blockchain. &nbsp;Once the new node has the list, it will begin connecting itself into the mesh.</li>
-  <li>In order to make a see node, first follow the directions to create a mainnet node: <a href="https://wiki.nexus.io/en/mainnet/run-a-mainnet-node">Run a Mainnet Node</a></li>
+  <li><strong>Seed Node definition</strong>: A seed node is first node that other nodes connect to when they first come online. The seed node helps new nodes get the list of all the other nodes that are online. &nbsp;Once the new node has the list, it will begin connecting itself into the mesh.</li>
+  <li>In order to make a see node, first follow the directions to create a Mainnet Node: <a href="https://wiki.nexus.io/en/mainnet/run-a-mainnet-node">Run a Mainnet Node</a></li>
   <li>Once you have your node running, there are a few additional steps:<ul>
       <li>Add the following to nexus.conf:</li>
     </ul>
@@ -24,12 +24,10 @@ llpallowip=*.*.*.*:9324
 maxincoming=303
 maxconnections=333</code></pre>
 <ul>
-  <li>Open ports 9324/tcp (unified time) and 9888/tcp (main data port)<ul>
-      <li>sudo ufw allow 9324/tcp</li>
-      <li>sudo ufw allow 9888/tcp</li>
-    </ul>
-  </li>
+  <li>Open ports 9324/tcp (unified time) and 9888/tcp (main data port)</li>
 </ul>
+<pre><code class="language-plaintext">sudo ufw allow 9324/tcp
+sudo ufw allow 9888/tcp</code></pre>
 <ol>
   <li>Ensure your node has a resolvable DNS name pointing to it.</li>
   <li>Contact an admin for the seed node working group to join the working group. Admins are:<ul>
