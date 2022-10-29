@@ -2,7 +2,7 @@
 title: Jak działa API - Tritium++
 description: Tritium++
 published: true
-date: 2022-10-29T22:44:08.003Z
+date: 2022-10-29T22:48:33.075Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T21:57:59.610Z
@@ -122,7 +122,7 @@ Interfejs Assets API można znaleźć pod poniższym linkiem:
 
 &nbsp;
 
-## Tokeny API
+## Tokens API
 
 API tokenów umożliwia tworzenie tokenów i kont w celu wzajemnego wysyłania i odbierania tokenów. Jest to również warunek wstępny tworzenia tokenów, które mają być udziałami w zasobie cyfrowym lub firmie (STO).
 
@@ -130,40 +130,37 @@ Interfejs Tokens API można znaleźć w następującej ścieżce repozytorium:
 
 LLL-TAO/docs/API/TOKENS.MD
 
-{% wskazówka style="informacje" %}
-UWAGA: niektóre polecenia w tym API wymagają LOGIN. Upewnij się, że używasz interfejsu API użytkownika do logowania przed użyciem wymaganych poleceń LOGIN.
-{% podpowiedzi %}
+>UWAGA: niektóre polecenia w tym API wymagają LOGIN. Upewnij się, że używasz interfejsu API użytkownika do logowania przed użyciem wymaganych poleceń LOGIN.
+{.is-info}
 
 &nbsp;
 
-## API księgi
+## Ledger API
 
 Interfejs API księgi zapewnia dostęp do księgi głównie w celu tworzenia i pobierania bloków i transakcji, ale także w celu uzyskania informacji o stanie księgi.
 
 &nbsp;
 
-## Dostawa API
+## Supply API
 
 Supply API odpowiada za obsługę logistyki łańcucha dostaw. Jego głównym celem jest zarządzanie trasami i ruchami wzdłuż łańcucha dostaw, wraz z przeglądaniem historii zdarzeń związanych ze zmianami nadzoru.
 
-{% wskazówka style="informacje" %}
-UWAGA: niektóre polecenia w tym API wymagają LOGIN. Upewnij się, że używasz interfejsu API użytkownika do logowania przed użyciem wymaganych poleceń LOGIN.
-{% podpowiedzi %}
+>UWAGA: niektóre polecenia w tym API wymagają LOGIN. Upewnij się, że używasz interfejsu API użytkownika do logowania przed użyciem wymaganych poleceń LOGIN.
+{.is-info}
 
 &nbsp;
 
-## Systemowe API
+## System API
 
 Interfejs API systemu zapewnia publiczny dostęp do informacji o tym węźle. Obejmuje to dane, takie jak wersja oprogramowania, na którym działa węzeł, stan księgi i pamięci, adres IP węzła i połączeni równorzędni.
 
 System API można znaleźć w poniższym linku:
 
-{% content-ref url="../tritium++-overview/how-to-api-tritium++/tritium++-api/system (1).md" %}
-[system (1).md](<../tritium++-overview/jak-to-api-tritium++/tritium++-api/system (1).md>)
-{% ref. treści końcowej %}
+[System API](https://wiki.nexus.io/en/tritium++/system)
+
 
 &nbsp;
 
-## Faktury API
+## Invoices API
 
 Invoices API zapewnia użytkownikom i programistom aplikacji możliwość wystawiania i opłacania faktur na blockchainie Nexusa. Ten interfejs API jest demonstracją, w jaki sposób rejestry mogą być używane do przechowywania dowolnych danych użytkownika, a kontrakty warunkowe mogą być używane do implementacji reguł przypadków użycia. Faktury można tworzyć, a następnie wysyłać do łańcucha podpisów odbiorców w celu zapłaty. API obsługuje faktury wystawione w NXS lub dowolnym innym tokenie na blockchainie Nexus.
