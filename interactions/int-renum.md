@@ -2,7 +2,7 @@
 title: Renumeration
 description: 
 published: true
-date: 2022-10-29T19:19:02.953Z
+date: 2022-10-29T19:25:59.105Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:01:33.834Z
@@ -22,13 +22,15 @@ The facilitator(s) will follow the below guidelines to set the renumeration for 
 
 -	Having a standard pay for working groups with different skill set is not the best way, but for a same skill set a standard pay can be set. Then based on performance the renmeration can be increased.
 
+- THe renumeration will also vary depending if the member(s) is working full time or part time in the branch.
+
 -	There can be extra incentives for better performance over the standard pay. But this can also be misused and has to carefully implemented.
 
 -	Facilitator(s) have additional responsibility and they can add a percentage raise over the working team member pay.
 
 -	Chair has additional responsibility above the facilitator(s) and they can add a percentage raise over the facilitator(s) pay.
 
--	There needs to be a set date for sending and paying out the invoices.
+-	The branch needs to be a set date for sending and paying out the invoices.
 
 -	As the invoices are paid in NXS whose value is volatile, it is recommended to have an exchange rate set for each monthly invoice payout.
 
@@ -36,7 +38,7 @@ The facilitator(s) will follow the below guidelines to set the renumeration for 
 
 
 ## Renumeration Revision
-THe crypto market being highly volatile and Nexus still being in its development stages, the revisions can be decided at the creative layer, but they need to keep the following points in mind:
+The crypto market being highly volatile and Nexus still being in its development stages, the revisions will be decided at the creative layer, but they need to keep the following points in mind:
 
 - Any renumeration revision has to be voted with a majority of 51%
 
@@ -46,7 +48,8 @@ THe crypto market being highly volatile and Nexus still being in its development
 
 - In case of bear markets or any unforseen events which reduce the branch budgets the facilitator(s) have to revise renumeration in sync with market conditions.
 
-- The team has to have caps on certain activities where members can invoice unlimited hours like translating social media posts, or any other activity which does not create immense value.
+- The team has to have caps on certain activities where members can invoice unlimited hours like translating social media posts or any other activity which does not create immense value and can be misused.
+
 
 ## Employee Retention:
 
