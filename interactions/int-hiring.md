@@ -1,8 +1,8 @@
 ---
 title: Hiring
-description: Interactions hiring process
+description: Interactions Hiring Process
 published: true
-date: 2022-10-29T21:30:42.992Z
+date: 2022-10-29T21:31:32.753Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
