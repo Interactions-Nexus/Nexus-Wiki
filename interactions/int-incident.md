@@ -2,7 +2,7 @@
 title: Incident Report
 description: 
 published: false
-date: 2022-10-29T14:50:09.283Z
+date: 2022-10-29T15:12:52.716Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:15:41.560Z
@@ -37,7 +37,9 @@ The following violations but not limited to will be filed under normal internal 
 
 - Unauthorized leave of absence.
 
-## Critial Incidents
+- Failure to confirm to the arm internal processes as outlined.
+
+## Critical Incidents
 The following violations but not limited to will be filed under critical internal reports. These might even be later referred to the judicairy for investigation.
 
 -	Violating the rules laid out by the DAO constitution. This will be applicable to any additions or deletions in the future.
