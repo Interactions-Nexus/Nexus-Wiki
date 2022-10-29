@@ -2,7 +2,7 @@
 title: Interactions - Signature Chain
 description: 
 published: false
-date: 2022-10-29T20:14:19.824Z
+date: 2022-10-29T20:17:37.131Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:21:10.199Z
@@ -20,7 +20,7 @@ The responsibility to manage the sigchain lies with the Interactions chair and n
 
 The new chair is responsible to change the credentials asap for the signature chain to prevent misuse and will be held responsible for any mismanagement. 
 
-Any transfer of Sigchain credentials has to be informed to the creative layer and documented for future reference.
+Any transfer or receving of Sigchain credentials has to be informed to the creative layer and documented for future reference.
 
 - The chair will invoice the embassy for the allocated funds by 26th of each month and is responsible to invoice is filled per the template. 
 
@@ -28,6 +28,8 @@ Any transfer of Sigchain credentials has to be informed to the creative layer an
 
 
 ## Payments from the Sigchain
+
+Any payments or debits from the sigchain will follow these:
 
 - Any payments from the signature chain will be done only using invoices and no direct debits are allowed. 
 
