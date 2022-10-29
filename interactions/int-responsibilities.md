@@ -1,8 +1,8 @@
 ---
 title: Responsibilities
 description: Responsibilities of every person in the arm
-published: true
-date: 2022-10-29T21:06:15.035Z
+published: false
+date: 2022-10-29T21:08:20.253Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:14:45.158Z
