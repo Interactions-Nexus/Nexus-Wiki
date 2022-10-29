@@ -2,7 +2,7 @@
 title: Interactions - Signature Chain
 description: 
 published: false
-date: 2022-10-29T19:53:36.003Z
+date: 2022-10-29T20:01:00.120Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:21:10.199Z
@@ -30,4 +30,8 @@ Any transfer of Sigchain credentials has to be informed to the creative layer an
 
 ## Payments from the Sigchain
 
-Any payments from the signature chain will be only using invocies and not direct debits are prohibited, In the case the direct debit is unavoidable it has to be voted at the creative layer with majority of 51%
+- Any payments from the signature chain will be only using invocies and not direct debits are prohibited, 
+
+- In case a direct debit is unavoidable, it has to be voted at the creative layer with a majority of 51% and has to be documented for future reference.
+
+- The chair has to consult the creative layer for any invoices other than the branch members, contractors which is already approved and bounties. The payments have to be voted by the creative layer with 51% majority and documeted.
