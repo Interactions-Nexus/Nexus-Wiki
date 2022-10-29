@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions hiring process
 published: true
-date: 2022-10-29T21:26:56.741Z
+date: 2022-10-29T21:27:57.726Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -49,7 +49,7 @@ Depending on our requirement, the team can hire advisors when the team lacks exp
  
 ## Contractors:
 
-A contract worker, also known as an independent contractor is an individual who enters into a contractual agreement with Interactions to provide a service in exchange for a fee. A contractor can be hired on a long-term or temporary basis. Anonymous people who want to work for a branch will also be treated as a contractor. A contractor is not part of the branch and has not voting rights. 
+A contract worker, also known as an independent contractor is an individual who enters into a contractual agreement with Interactions to provide a service in exchange for a fee. A contractor can be hired on a long-term or temporary basis. Anonymous people who want to work for a branch will also be treated as a contractor. A contractor is not part of the branch and has no voting rights. 
 
 #### How to manage contractors:
 
