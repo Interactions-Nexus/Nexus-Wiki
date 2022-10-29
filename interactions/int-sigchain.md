@@ -2,7 +2,7 @@
 title: Interactions - Signature Chain
 description: 
 published: false
-date: 2022-10-29T20:05:06.447Z
+date: 2022-10-29T20:14:19.824Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:21:10.199Z
@@ -18,7 +18,7 @@ The interactions signature chain is where the funds are alloted funds are stored
 
 The responsibility to manage the sigchain lies with the Interactions chair and no one else will have access to it, in case a chair steps down or is voted out, the signature chain has to be transferred to the new chair immediately or else the sigchain has to be reset to prevent misuse.
 
-The new chair is responsible to change the credentials asap for the signture chain to prevent misuse and will be held responsible for any mismanagement. 
+The new chair is responsible to change the credentials asap for the signature chain to prevent misuse and will be held responsible for any mismanagement. 
 
 Any transfer of Sigchain credentials has to be informed to the creative layer and documented for future reference.
 
@@ -34,3 +34,11 @@ Any transfer of Sigchain credentials has to be informed to the creative layer an
 - In case a direct debit is unavoidable, it has to be voted at the creative layer with a majority of 51% and has to be documented for future reference.
 
 - The chair has to consult the creative layer for any invoice payments other than the branch members, approved contractor invoices and bounties. The payments have to be voted by the creative layer with 51% majority and documeted.
+
+## Guidlines for changing Sigchain Credentials
+
+In case of changing the sigchain credentials the following guidlines need to be followed:
+
+- Password needs to be strong, with a minimum of 40 random charecters.
+
+- Pin needs to be minimum of 6 charecters.
