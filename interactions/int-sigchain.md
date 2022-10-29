@@ -2,7 +2,7 @@
 title: Interactions - Signature Chain
 description: 
 published: false
-date: 2022-10-29T19:50:57.798Z
+date: 2022-10-29T19:53:36.003Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:21:10.199Z
@@ -29,3 +29,5 @@ Any transfer of Sigchain credentials has to be informed to the creative layer an
 
 
 ## Payments from the Sigchain
+
+Any payments from the signature chain will be only using invocies and not direct debits are prohibited, In the case the direct debit is unavoidable it has to be voted at the creative layer with majority of 51%
