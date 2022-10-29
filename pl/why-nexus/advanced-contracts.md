@@ -2,7 +2,7 @@
 title: Zaawansowane kontrakty
 description: 
 published: true
-date: 2022-10-28T22:51:40.688Z
+date: 2022-10-29T09:36:44.005Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T20:24:35.056Z
@@ -82,7 +82,7 @@ Globalne wyszukiwanie całego łańcucha zajmuje od 1 do 2 sekund. Uruchamianie 
 
 Aby uzyskać więcej informacji, sprawdź poniższy link:
 
-- [Zapytania *Zapytanie składni przypominające SQL DSL*](/pl/tritium++/zapytania)
+- [Zapytania *Zapytanie składni przypominające SQL DSL*](/pl/tritium++/queries)
 - [API rejestru *API rejestru*](/pl/tritium++/register)
 {.links-list}
 
