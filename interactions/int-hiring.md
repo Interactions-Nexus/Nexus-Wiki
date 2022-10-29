@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions hiring process
 published: false
-date: 2022-10-29T12:16:56.756Z
+date: 2022-10-29T12:18:18.222Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -55,11 +55,11 @@ A contract worker, also known as an independent contractor is an individual who 
 
 -	The team has to decide whether it makes sense to hire direct or contract hire.
 
--	The terms of the contract, type of contract and budgets have to be finalized by the facilitator and it has to be authorized by the chair.
+-	The terms of the contract, type of contract and budgets have to be finalized by the facilitator(s) and it has to be authorized by the chair.
 
--	Contractors can be hired on hourly rate or per contract.
+-	Contractors can be hired on hourly rate or per contract, but preferably pwer contract.
 
--	Every contractor will be assigned a focal point which is the team facilitator.
+-	Every contractor will be assigned a focal point which is the team facilitator(s).
 
 - For contract jobs, payments will be done in full only when the completed work is submitted.
 
