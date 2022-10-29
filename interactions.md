@@ -2,7 +2,7 @@
 title: Interactions Processes
 description: Interactions internal processes
 published: true
-date: 2022-10-29T09:53:45.455Z
+date: 2022-10-29T12:22:01.952Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:06:54.217Z
@@ -25,5 +25,7 @@ Find links to the various Interactions processes:
 - [Renumeration](/en/interactions/int-renum)
 - [Incident Report](/en/interactions/int-incident)
 - [Performance Review](/en/interactions/int-performance)
+- [int-responsibilities](/en/interactions/int-responsibilities)
+- [int-sigchain](/en/interactions/int-sigchain)
 {.links-list}
 
