@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions hiring process
 published: true
-date: 2022-10-29T21:27:57.726Z
+date: 2022-10-29T21:30:42.992Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -69,4 +69,4 @@ A contract worker, also known as an independent contractor is an individual who 
 
 ## Bounties:
 
-When the team needs a specific work done they can annouce open bounties for a particular work. The clear requirements and specifications have to be laid out by the arm and the first person / team who submits the completed job, which meets all the requirements and specifications laid out will be paid. The specifics will be decided for each bounty by the respective team facilitator and endorsed by the chair.
+When the team needs a specific work done they can annouce open bounties for a particular work. The bounty requirements and full specifications have to be laid out by the group facilitator(s) and the first person / team who submits the completed job, which meets all the requirements and specifications laid out will be paid. The specifics will be decided for each bounty by the respective team facilitator(s) and endorsed by the chair.
