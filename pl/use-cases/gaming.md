@@ -2,7 +2,7 @@
 title: Gry
 description: Zastosowanie w grach
 published: true
-date: 2022-10-23T12:08:06.030Z
+date: 2022-10-29T22:02:26.578Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T12:08:06.030Z
@@ -26,8 +26,8 @@ Blockchain umożliwia użytkownikom tworzenie przedmiotów i przechowywanie ich 
 * Miecz
 * Obraz miecza
 * Nazwa gry
-* NIE: 1 na 100
-* Owner (Mutable) - twórca gry, może zostać przeniesiony i zmieniony na nowego właściciela
+* nr: 1 na 100
+* Właściciel (zmienny) - twórca gry, może zostać przeniesiony i zmieniony na nowego właściciela
 
 Następnie twórca zasobu przesyła te dane do łańcucha bloków. Teraz, ponieważ ten zasób blockchain istnieje i wiemy, że istnieje 100 złotych tarcz, osoba, która je posiada, może je rozdać, przenosząc je na blockchain.
 
@@ -35,14 +35,14 @@ Na przykład użytkownik chce wysłać tę tarczę graczowi o nazwie Aeon4586, k
 
 ### Zalety gier Blockchain
 
-* Gracz oficjalnie i w udowodniony sposób posiada zasoby gry.
-* Informacje o zasobach są zapisywane w łańcuchu bloków, aby każdy mógł je zobaczyć.
-* Gry sprawdzają łańcuch bloków, aby zobaczyć, jakie zasoby posiada gracz.
+* Gracz oficjalnie i w udowodniony sposób posiada aktywa gry.
+* Informacje o aktywach są zapisywane w łańcuchu bloków, aby każdy mógł je zobaczyć.
+* Gry sprawdzają łańcuch bloków, aby zobaczyć, jakie aktywa posiada gracz.
 * Twórcy gier Blockchain decydują, czy włączyć ten element do swojej gry.
-* Gry Blockchain stają się wieloświatem, w którym gracze mogą używać zasobów w różnych grach, sprzedawać je na aukcjach i umieszczać na rynku poza grą.
+* Gry Blockchain stają się wieloświatem, w którym gracze mogą używać aktywów w różnych grach, sprzedawać je na aukcjach i umieszczać na rynku poza grą.
 * Gracze mogą wysyłać lub sprzedawać swoje przedmioty w trybie peer to peer.
-* Czas spędzony przez gracza w grze na posiadanie zasobów w grze nie będzie całkowitym marnotrawstwem i można na nim zarabiać.
-* Każdy może stworzyć zasób poza grą, który później może zostać dodany do gry.
+* Czas spędzony przez gracza w grze na posiadanie aktywów w grze nie będzie całkowitym marnotrawstwem i można na nim zarabiać.
+* Każdy może stworzyć aktywo poza grą, który później może zostać dodany do gry.
 
 ### Wniosek
 
@@ -53,6 +53,3 @@ Tworzenie gier opartych na technologii blockchain nie różni się zbytnio od tw
 Wreszcie, gry oparte na technologii blockchain mogą zmienić sposób, w jaki gramy. Będzie to kompletna transformacja od sposobu finansowania gier do interakcji graczy ze sobą i twórcami. Teraz nadszedł najlepszy czas, aby zacząć eksperymentować z różnymi możliwościami, zwłaszcza jeśli znasz już technologię blockchain.
 
 Zasoby gier opartych na Blockchain są zdecentralizowane i dają ludziom możliwość wygrania prawdziwych pieniędzy lub nagród. Wszystkie te funkcje sprawiają, że gry oparte na blockchain są ekscytujące, nawet dla graczy, którzy zwykle nie lubią tego typu gier.
-
-\
-\
