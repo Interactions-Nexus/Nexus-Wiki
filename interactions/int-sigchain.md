@@ -2,7 +2,7 @@
 title: Interactions - Signature Chain
 description: 
 published: false
-date: 2022-10-29T20:01:00.120Z
+date: 2022-10-29T20:05:06.447Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:21:10.199Z
@@ -24,14 +24,13 @@ Any transfer of Sigchain credentials has to be informed to the creative layer an
 
 - The chair will invoice the embassy for the allocated funds by 26th of each month and is responsible to invoice is filled per the template. 
 
-- The chair is responsible to pay team members based on invoices received, but after checking and making sure the invoice is filled as described in the template and conforms to the agreed renumeration and there is no overcharging. In case of any clarity the chair can aproach the concerned group facilitator(s).
-
+- The chair is responsible to pay team members based on invoices received, but after checking and making sure the invoice is filled as described in the template and conforms to the agreed renumeration and there is no overcharging. In case the chair needs more clarity he can aproach the concerned group facilitator(s).
 
 
 ## Payments from the Sigchain
 
-- Any payments from the signature chain will be only using invocies and not direct debits are prohibited, 
+- Any payments from the signature chain will be done only using invoices and no direct debits are allowed. 
 
 - In case a direct debit is unavoidable, it has to be voted at the creative layer with a majority of 51% and has to be documented for future reference.
 
-- The chair has to consult the creative layer for any invoices other than the branch members, contractors which is already approved and bounties. The payments have to be voted by the creative layer with 51% majority and documeted.
+- The chair has to consult the creative layer for any invoice payments other than the branch members, approved contractor invoices and bounties. The payments have to be voted by the creative layer with 51% majority and documeted.
