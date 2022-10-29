@@ -2,7 +2,7 @@
 title: Tritium++
 description: 
 published: true
-date: 2022-10-25T22:36:29.656Z
+date: 2022-10-29T09:56:07.186Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:57:10.177Z
@@ -22,13 +22,15 @@ Znajdź wszystkie łącza do dokumentów Tritium++ API.
 {.links-list}
 
 ## WYWOŁANIA API
-- [profile](/pl/tritium++/profiles)
-- [sesje](/pl/tritium++/sessions)
-- [system](/pl/tritium++/system)
-- [finanse](/pl/tritium++/finance)
-- [księga główna](/pl/tritium++/ledger)
-- [aktywa](/pl/tritium++/assets)
-- [nazwy](/pl/tritium++/names)
-- [podaż](/pl/tritium++/supply)
-- [rynek](/pl/tritium++/market)
+- [PROFILES *API profili*](/pl/tritium++/profiles)
+- [SESSIONS *API sesji*](/pl/tritium++/sessions)
+- [SYSTEM *API systemu*](/pl/tritium++/system)
+- [FINANCE *API finansów*](/pl/tritium++/finance)
+- [LEDGER *API księgi głównej*](/pl/tritium++/ledger)
+- [ASSETS *API aktywów*](/pl/tritium++/assets)
+- [NAMES *API nazw*](/pl/tritium++/names)
+- [SUPPLY *API podaży*](/pl/tritium++/supply)
+- [MARKET *API rynku*](/l/tritium++/market)
+- [REGISTER *API rejestru*](/pl/tritium++/register)
 {.links-list}
+
