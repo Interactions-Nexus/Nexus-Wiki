@@ -2,7 +2,7 @@
 title: Interactions Processes
 description: Interactions internal processes
 published: true
-date: 2022-10-29T12:30:16.058Z
+date: 2022-10-29T12:38:23.942Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:06:54.217Z
@@ -28,5 +28,6 @@ Find links to the various Interactions processes:
 - [Performance Review](/en/interactions/int-performance)
 - [Responsibilities](/en/interactions/int-responsibilities)
 - [Signature Chain](/en/interactions/int-sigchain)
+- [Amendment Proposal](/en/interactions/int-amendments)
 {.links-list}
 
