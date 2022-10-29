@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions hiring process
 published: false
-date: 2022-10-28T21:58:50.809Z
+date: 2022-10-29T08:50:14.361Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -68,18 +68,3 @@ A contract worker, also known as an independent contractor is an individual who 
 ## Bounties:
 
 When the team needs a specific work done they can annouce open bounties for a particular work. The clear requirements and specifications have to be laid out by the arm and the first person / team who submits the completed job, which meets all the requirements and specifications laid out will be paid. The specifics will be decided for each bounty by the respective team facilitator and endorsed by the chair.
-
-## Non-Performace ( Team or team memeber):
-
-Every team member in the Interactions arm will be monitored by the creative layer and chair. Non-performance for longer duration will not be tolerated unless it falls in the exception catergory
-Exception Category:
-1.	In case of long-term illness which lasts more than a week.
-2.	In case of accident which makes it difficult to work for more than a week.
-3.	Disability or condition which makes it unable to work.
-4.	Approved long leave of absence. 
-
-
-## Unfit to work in Interactions:
-Non performance for long time.
-Permanent disability which 
-Any such conditions which inhibits the member to not perform his duties 
