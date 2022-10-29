@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions hiring process
 published: false
-date: 2022-10-29T08:50:14.361Z
+date: 2022-10-29T12:16:56.756Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -14,7 +14,9 @@ Any hiring done for the Interactions arm will adhere to the guidelines in this d
 
 Any new hiring will strictly be following the below guidelines:
 
--	New hires must be +18 years of age.
+-	New hires must read, understand and agree to follow the Nexus Vision, DAO constitution and arm internal processes.
+
+- New hires must be +18 years of age.
 
 -	Any person who has been working against Nexus in any way, or is part of any team or social media which is working against Nexus, will not be considered as a volunteer or for employment within the Interactions arm.
 
