@@ -2,7 +2,7 @@
 title: Introduction To Nexus Network
 description: Nexus Network
 published: true
-date: 2022-10-19T20:29:24.444Z
+date: 2022-10-29T17:28:18.485Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:16.375Z
@@ -19,7 +19,7 @@ Cryptographic mechanisms ensure that once transactions are verified as valid and
 
 ## What is Nexus? 
 
-**Nexus (NXS)** is the native cryptocurrency of the Nexus cosmos. Nexus has been designed for free simple transactions. The purpose of NXS is to allow for proper gamification of the network. To ensure that the active participants are compensated for the work done and prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming) and name squatting. NXS is the ticker symbol of Nexus.
+**Nexus (NXS)** is the native cryptocurrency of the Nexus cosmos. Nexus has been designed for free, simple transactions. The purpose of NXS is to allow for proper gamification of the network. To ensure that the active participants are compensated for the work done and prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming) and name squatting. NXS is the ticker symbol of Nexus.
 
 ## What are Advanced Contracts? 
 
@@ -27,8 +27,8 @@ The 7-layered software stack architecture plays the crucial role; with its opera
 
 Register layer is the data storage system that maintains an immutable record and history, including current and previous states, therefore they can be used to record the state of applications. The register layer is the data layer which mimics the CPU cache memory which is the fastest memory on a computer.&#x20;
 
-Operation layer contains instructions or actions that give registers context, and define more complex contract logic. A contract is an object containing: a register pre-state (the register that is being operated on that was passed upwards from the Register Layer), a primitive operation (only one primitive operation per contract), and a set of conditions (any amount of conditional operations).
+Operation layer contains instructions or actions that give registers context and define more complex contract logic. A contract is an object containing: a register pre-state (the register that is being operated on that was passed upwards from the Register Layer), a primitive operation (only one primitive operation per contract), and a set of conditions (any amount of conditional operations).
 
-At a more basic level, Advanced Contracts are comparable to real world contracts, written on paper and enforced by a court of law. It's highly advanced as its enforced by code, its binding and it makes the trusted third parties redundant.
+At a more basic level, Advanced Contracts are comparable to real world contracts, written on paper and enforced by a court of law. It's highly advanced as its enforced by code, it's binding, and it makes the trusted third parties redundant.
 
 Advanced contracts, empower developers to build and deploy arbitrarily complex user-facing apps and services such as: P2P marketplaces, decentralized financial instruments, games, etc.
