@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions Hiring Process
 published: true
-date: 2022-10-29T21:31:32.753Z
+date: 2022-10-29T21:36:23.670Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -30,9 +30,9 @@ Any new hiring will strictly be following the below guidelines:
 
 -	If anyone prefers to be anonymous they can work as contractors who will be paid similar to the team members based on skill sets but lose voting right and also cannot be considered for facilitator position. 
 
--	If anyone within the branch is proposing anyone, they have to describe what value the person brings to the brnach. The person will have to provide a resume for similar work done and will provide all the details.
+-	If anyone within the branch is proposing anyone, they have to describe what value the person brings to the branch. The person will have to provide a resume for similar work done and will provide all the details.
 
-- Every new hire, direct or anonymous contractor will go through a minimum volunteering period of three months, and for direct hires three more months as a contractor where he will be paid but will not officially be part of the Interactions brnach. This period can be extended or the person can be let go as deemed fit by the facilitator(s). (This may be totally waived only if we need an urgent skilled hire who can be verified and get the work done. This will have to be authorized by that team's facilitator(s) along with the brnach chair).
+- Every new hire, direct or anonymous contractor will go through a minimum volunteering period of three months, and for direct hires three more months as a contractor where he will be paid but will not officially be part of the Interactions branch. This period can be extended or the person can be let go as deemed fit by the facilitator(s). (This may be totally waived only if, the person has worked with Nexus before or we need an urgent skilled hire who can be verified and get the work done. This will have to be authorized by that team's facilitator(s) along with the branch chair).
 
 -	The facilitator will make sure the new hire will sign the contractor agreement and document it. This has to be done before being hired as a volunteer. The facilitator will make sure the person understands the functioning of the branch.
 
