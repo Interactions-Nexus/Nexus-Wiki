@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions Hiring Process
 published: true
-date: 2022-10-29T21:36:23.670Z
+date: 2022-10-29T21:37:37.363Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -14,7 +14,7 @@ Any hiring done for the Interactions branch will adhere to the guidelines in thi
 
 Any new hiring will strictly be following the below guidelines:
 
--	New hires must be aligned with the Nexus vision, read, understand and agree to follow the DAO constitution and branch internal processes.
+-	New hires must be aligned with the Nexus vision.They should read, understand and agree to follow the DAO constitution and branch internal processes.
 
 - New hires must be +18 years of age.
 
