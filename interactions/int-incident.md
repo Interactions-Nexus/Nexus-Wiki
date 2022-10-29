@@ -2,7 +2,7 @@
 title: Incident Report
 description: 
 published: false
-date: 2022-10-29T15:12:52.716Z
+date: 2022-10-29T15:15:04.853Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:15:41.560Z
@@ -39,6 +39,8 @@ The following violations but not limited to will be filed under normal internal 
 
 - Failure to confirm to the arm internal processes as outlined.
 
+- Any requested information is not provided after the NDA lapses or the project is completed.
+
 ## Critical Incidents
 The following violations but not limited to will be filed under critical internal reports. These might even be later referred to the judicairy for investigation.
 
@@ -58,14 +60,6 @@ The following violations but not limited to will be filed under critical interna
 
 -	Conflict of Interest which is not notified to the facilitator or chair in advance. 
 
-
--	Voting every quarter is conducted in a free and fair at the working and creative groups.
-
--	Members of the working group ensure that facilitators are doing their job and facilitators ensure the Chair is doing the job. (This has to be judged on a quarterly basis and not on a day to day basis) 
-
--	Invoices paid out in time and a standard pay is maintained across the hierarchy.
-
--	All information generated while working on a project, will be made public once the project is completed or becomes invalid. This will allow others to audit and see if there are any lapses.
 
 
 ## Internal Investigation:
