@@ -2,7 +2,7 @@
 title: Hiring
 description: Interactions hiring process
 published: true
-date: 2022-10-29T21:19:32.301Z
+date: 2022-10-29T21:26:56.741Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:22:24.644Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-28T11:22:24.644Z
 
 # Hiring
 
-Any hiring done for the Interactions branch will adhere to the guidelines in this document. This process outlined herein will avoid unscrupulous elements from getting into the brnach and taking over. 
+Any hiring done for the Interactions branch will adhere to the guidelines in this document. This process outlined herein will avoid unscrupulous elements from getting into the branch and taking over. 
 
 Any new hiring will strictly be following the below guidelines:
 
@@ -40,7 +40,7 @@ Any new hiring will strictly be following the below guidelines:
 
 # Type of Hiring :
 
-Interactions will have a few different positions other that the direct hire and these are detailed below:
+Interactions branch will have a few different positions other that the direct hire and these are detailed below:
 
 ## Advisors:
 
