@@ -2,7 +2,7 @@
 title: Interactions Processes
 description: Interactions internal processes
 published: true
-date: 2022-10-29T18:32:30.361Z
+date: 2022-10-29T18:38:59.971Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:06:54.217Z
@@ -19,16 +19,16 @@ Find links to the various Interactions processes:
 > **Note:** The processes listed here are still a draft and will have to be ratified after discussion and community approval. 
 {.is-info}
 
-- [Hiring *Interactions Hiring Process*](/en/interactions/int-hiring)
-- [Departure & Termination](/en/interactions/int-departure)
-- [Voting *Interactions Voting Process*](/en/interactions/int-voting)
-- [Isolation](/en/interactions/int-Isolation)
-- [Budgets](/en/interactions/int-budgets)
-- [Renumeration](/en/interactions/int-renum)
-- [Incident Report](/en/interactions/int-incident)
-- [Performance Review](/en/interactions/int-performance)
-- [Responsibilities](/en/interactions/int-responsibilities)
-- [Signature Chain](/en/interactions/int-sigchain)
-- [Amendment Proposal](/en/interactions/int-amendments)
+- [Hiring *Interactions - Hiring Process*](/en/interactions/int-hiring)
+- [Departure & Termination *Interactions - Departure & Termination Policies*](/en/interactions/int-departure)
+- [Voting *Interactions - Voting Process*](/en/interactions/int-voting)
+- [Isolation *Interactions  - Isolation Procedure*](/en/interactions/int-Isolation)
+- [Budgets *Interactions - Budgets*](/en/interactions/int-budgets)
+- [Renumeration *Interactions - Renumeration*](/en/interactions/int-renum)
+- [Incident Report *Interactions - Incident Reporting*](/en/interactions/int-incident)
+- [Performance Review *Interactions - Performance Review*](/en/interactions/int-performance)
+- [Responsibilities *Interactions - Responsibilities*](/en/interactions/int-responsibilities)
+- [Signature Chain *Interactions - Signature Chain*](/en/interactions/int-sigchain)
+- [Amendment Proposal *Iinteractions - Internal Process Amendment Process*](/en/interactions/int-amendments)
 {.links-list}
 
