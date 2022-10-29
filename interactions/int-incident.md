@@ -2,7 +2,7 @@
 title: Incident Report
 description: 
 published: false
-date: 2022-10-29T14:43:03.191Z
+date: 2022-10-29T14:50:09.283Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:15:41.560Z
@@ -26,7 +26,7 @@ The arm internal incident reports again will be of two types:
 
 - **Critical Incidents**
 
-## Internal Incident Reports:
+## External Incident Reports:
 
 The external incident reports are filed against other arms or persons in other arms. This is not under the purvue of the arm internal process and will be investigated by the Judiciary.
  
