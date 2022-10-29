@@ -2,7 +2,7 @@
 title: Responsibilities
 description: Responsibilities of every person in the arm
 published: true
-date: 2022-10-29T21:04:46.209Z
+date: 2022-10-29T21:06:15.035Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:14:45.158Z
@@ -40,7 +40,7 @@ The facilitators(s) have the following responsibilities:
 - Monitor performance of every team member and raise incident report if required.
 - Make sure to retain good talent in the group.
 - To conduct in the  investigation on critical incident reports filed at the creative layer.
-- To carry our and ratify renumeration revisions.
+- To conduct and ratify renumeration revisions.
 - Make sure that other facilitator(s) are also doing their job and if they come across any corruption in the group(s) will raise incident report.
 
 
