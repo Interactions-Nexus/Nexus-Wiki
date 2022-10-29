@@ -1,8 +1,8 @@
 ---
 title: Sklep Budowlany
-description: Przypadek użycia w świecie rzeczywistym dla sklepów stacjonarnych
+description: Przypadki użycia w świecie rzeczywistym dla sklepów stacjonarnych
 published: true
-date: 2022-10-23T12:12:01.736Z
+date: 2022-10-29T22:08:11.079Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T12:12:01.736Z
@@ -15,7 +15,7 @@ Nexus może być używany do płatności, faktur, logistyki i śledzenia, intern
 
 
 > W zależności od lokalizacji i lokalnych przepisów płatności kryptograficzne mogą nie być możliwe. System może wymagać dostosowania do lokalnych przepisów.
-> {.is-ostrzeżenie}
+> {.is-warning}
 
 
 ## Jak można to zaimplementować
@@ -28,7 +28,7 @@ Sklep musi zintegrować Nexus API z zupełnie nowym systemem Point of Sale (POS)
 
 ## Koszty ogólne dla sklepu
 
-Właściciel sklepu będzie musiał uruchomić węzły, aby utrzymać sieć hybrydową. Liczba węzłów będzie zależeć od nadmiarowości wymaganej przez bazę danych. W porównaniu z istniejącymi systemami koszty ogólne są bardzo niskie. Jeśli właściciel sklepu potrzebuje 3x redundancji, musi uruchomić 3 węzły, które będą hostowane na VPS lub posiadanym sprzęcie lub mieszankę obu.
+Właściciel sklepu będzie musiał uruchomić węzły, aby utrzymać sieć hybrydową. Liczba węzłów będzie zależeć od nadmiarowości wymaganej przez bazę danych. W porównaniu z istniejącymi systemami koszty ogólne są bardzo niskie. Jeśli właściciel sklepu potrzebuje 3x nadmiar, musi uruchomić 3 węzły, które będą hostowane na VPS lub posiadanym sprzęcie lub mieszankę obu.
 
 Nowy POS lub integracja z systemem może być dodatkowym kosztem, ale jeśli uda nam się stworzyć kod open source, który może być używany przez każdy sklep, który może zaoszczędzić na tych kosztach.
 
