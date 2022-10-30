@@ -2,7 +2,7 @@
 title: Przegląd API Tritium++
 description: Przegląd
 published: true
-date: 2022-10-30T22:13:00.131Z
+date: 2022-10-30T22:28:40.916Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:00:16.489Z
@@ -69,10 +69,46 @@ W przypadku, gdy wywołanie API zakończy się błędem, obiekt JSON zostanie zw
 | ---- | ---------------------------------------------------------------------------- |
 | 1    | Błąd składni zapytania: zduplikowane symbole wieloznaczne niedozwolone   |
 | 2    | Błąd składni zapytania: dla typu \[typename] dozwolone są tylko operatory '=' i '!=' |
-| 3    | Błąd składni zapytania: zniekształcona klauzula where w \[klauzula] |
-| 4    | Błąd składni zapytania: należy użyć = bez dodatkowych znaków. |
-| 5    | Błąd składni zapytania: należy użyć '(' i ')' do mieszania instrukcji AND/OR |
+| 3    | Błąd składni zapytania: zniekształcona klauzula where w \[clause] |
+| 4    | Błąd składni zapytania: należy użyć = bez dodatkowych znaków |
+| 5    | Błąd składni zapytania: należy użyć '(and)' do mieszania instrukcji AND/OR |
 | 6    | Błąd składni zapytania: brak operatora logicznego dla grupy |
-| 7    | Błąd składni zapytania: pusta klauzula where w \[klauzula] |
+| 7    | Błąd składni zapytania: pusta klauzula where w \[clause] |
 | 8    |
 | 9    |
+
+## Kody błędów API
+
+| Kod | Wiadomość |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -1 | Metoda niedostępna: \[message] |
+| -2 | Nie znaleziono metody: \[message] |
+| -3 | Metoda została przestarzała w wersji \[version]: \[message] |
+| -4 | Nie znaleziono API (nazwa API) |
+| -5 | Obiekt niedostępny: \[message] |
+| -6 | content-type \[content type] nie jest obsługiwany |
+| -7 | Nieobsługiwany typ \[typ] dla parametrów. |
+| -8 | Nie można wyodrębnić adresu wejściowego |
+| -9 | Sesja (session) nie istnieje |
+| -10 | Nieprawidłowy identyfikator ID sesji |
+| -11 | Użytkownik niezalogowany |
+| -12 | Błędne lub brakujące kodowanie obiektów dla \[type] |
+| -13 | Nie znaleziono obiektu |
+| -14 | Nieprawidłowy adres URL żądania |
+| -15 | Obiekt nie jest kontem ani tokenem |
+| -16 | Konto nie zostało odblokowane dla transakcji |
+| -17 | Nie udało się utworzyć transakcji |
+| -18 | Nieprawidłowy format dla standardowego \[name] |
+| -19 | Pole \[name] nie istnieje w obiekcie |
+| -20 | Pole \[name] jest tylko do odczytu i nie może być aktualizowane |
+| -21 | Rozmiar pola \[name] przekracza maksymalną długość \[size] |
+| -22 | Pole \[name] to zarezerwowana nazwa pola |
+| -23 | Standard obiektu \[name] niedostępny dla polecenia |
+| -24 | Nie znaleziono zleceń dla rynku |
+| -25 | Nieważna umowa zlecenia rynkowego: message |
+| -26 | Nieprawidłowy parametr \[from], \[type] wymaga poprawnego tokena |
+| -27 | Nieprawidłowe kodowanie base64 |
+| -28 | Brakujący parametr \[name] w poleceniu |
+| -29 | Określono nieobsługiwany format \[type] |
+| -30 | Operacje nie zostały wykonane |
+| -31 | Błąd księgi
