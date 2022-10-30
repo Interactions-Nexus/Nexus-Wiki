@@ -2,7 +2,7 @@
 title: Przegląd API Tritium++
 description: Przegląd
 published: true
-date: 2022-10-30T22:03:42.021Z
+date: 2022-10-30T22:13:00.131Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:00:16.489Z
@@ -63,3 +63,16 @@ W przypadku, gdy wywołanie API zakończy się błędem, obiekt JSON zostanie zw
 }
 ```
 
+## Kody błędów DSL
+
+| Kod | Wiadomość                                                                     |
+| ---- | ---------------------------------------------------------------------------- |
+| 1    | Błąd składni zapytania: zduplikowane symbole wieloznaczne niedozwolone   |
+| 2    | Błąd składni zapytania: dla typu \[typename] dozwolone są tylko operatory '=' i '!=' |
+| 3    | Błąd składni zapytania: zniekształcona klauzula where w \[klauzula] |
+| 4    | Błąd składni zapytania: należy użyć = bez dodatkowych znaków. |
+| 5    | Błąd składni zapytania: należy użyć '(' i ')' do mieszania instrukcji AND/OR |
+| 6    | Błąd składni zapytania: brak operatora logicznego dla grupy |
+| 7    | Błąd składni zapytania: pusta klauzula where w \[klauzula] |
+| 8    |
+| 9    |
