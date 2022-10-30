@@ -2,7 +2,7 @@
 title: Przegląd API Tritium++
 description: Przegląd
 published: true
-date: 2022-10-30T22:43:42.731Z
+date: 2022-10-30T22:58:33.259Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:00:16.489Z
@@ -143,3 +143,40 @@ W przypadku, gdy wywołanie API zakończy się błędem, obiekt JSON zostanie zw
 | -60 | \[name] poza zakresem \[max] |
 | -61 | Konto dowodowe jest przeznaczone dla innego tokena niż token aktywów |
 | -62 | Transakcja Coinbase wydobyta przez innego użytkownika |
+| -63 | Nie można pobrać domyślnego konta NXS do zasilenia |
+| -64 | Brak konta odbiorcy name\_to / address\_to |
+| -65 | Obiekt nie jest kontem |
+| -66 | Nie można używać zagregowanych nazw pól z operacjami |
+| -67 | -safemode następna niezgodność hash, transmisja zakończona |
+| -68 | Zbyt mała kwota |
+| -69 | Niewystarczające środki |
+| -70 | Nie znaleziono konta trust |
+| -71 | Nazwa pola \[name] nie istnieje |
+| -72 | Rejestr nie jest kontem trust |
+| -73 | Konto trust nie jest kontem NXS |
+| -74 | Nie znaleziono rejestrów |
+| -75 | Wartość \[key=value] przekracza rozmiar zbioru danych \[size] |
+| -76 | Nie można ustawić stawki dla konta trust do czasu transakcji Genesis |
+| -77 | Niewystarczające saldo konta trust, aby dodać do stakowania |
+| -78 | Stawka niezmieniona |
+| -79 | getblockhash wymaga uruchomienia demona z flagą -indexheight |
+| -80 | Brak wysokości |
+| -81 | \[command] nie może używać parametru \[name] w połączeniu z \[name] |
+| -82 | Numer bloku poza zakresem |
+| -83 | Nie znaleziono bloku |
+| -84 | Brak hash lub wysokości |
+| -85 | getblock według wysokości wymaga uruchomienia demona z flagą -indexheight |
+| -86 | Brak hash lub txid |
+| -87 | Nieprawidłowa lub nieznana transakcja |
+| -88 | Brak lub pusta nazwa |
+| -89 | Nieprawidłowy register\_address |
+| -90 | Namespace już istnieje |
+| -91 | Brak nazwy / register\_address |
+| -92 | Nie znaleziono nazwy |
+| -93 | Brak nazwy namespace |
+| -94 | Nieprawidłowa namespace |
+| -95 | Namespace nie istnieje: \[namespace] |
+| -96 | Nie można utworzyć nazwy w \[namespace], której nie jesteś właścicielem |
+| -97 | Obiekt o tej nazwie już istnieje w namespace |
+| -98 | Obiekt o tej nazwie już istnieje dla tego użytkownika |
+| -99 | Nie znaleziono transakcji przelewu
