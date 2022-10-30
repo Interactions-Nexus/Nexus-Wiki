@@ -2,7 +2,7 @@
 title: Przegląd API Tritium++
 description: Przegląd
 published: true
-date: 2022-10-30T22:28:40.916Z
+date: 2022-10-30T22:43:42.731Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:00:16.489Z
@@ -111,4 +111,35 @@ W przypadku, gdy wywołanie API zakończy się błędem, obiekt JSON zostanie zw
 | -28 | Brakujący parametr \[name] w poleceniu |
 | -29 | Określono nieobsługiwany format \[type] |
 | -30 | Operacje nie zostały wykonane |
-| -31 | Błąd księgi
+| -31 | Księga nie może podpisać transakcji |
+| -32 | Nie udało się zaakceptować |
+| -33 | Nieprawidłowa lub brakująca nazwa/adres |
+| -34 | Nie znaleziono aktywa |
+| -35 | Nieprawidłowy parametr \[key=type], oczekiwano \[type] |
+| -36 | Nieobsługiwany typ \[name] dla polecenia |
+| -37 | Brak nazwy/adresu tokena |
+| -38 | Brak nazwy/adresu aktywa |
+| -39 | Brak name\_from / address\_from |
+| -40 | Nie znaleziono poprzedniej transakcji |
+| -41 | Nieprawidłowy identyfikator transakcji |
+| -42 | Brak ważnych debetów do kupienia od |
+| -43 | Brak ważnych umów w tx |
+| -44 | Transakcja nie powiodła się |
+| -45 | Brak name\_to / address\_to |
+| -46 | Brakująca kwota |
+| -47 | Brak ceny |
+| -48 | Nie znaleziono tokena |
+| -49 | Nieobsługiwany typ nazwy/adresu |
+| -50 | Brak txid |
+| -51 | Brak dostępnych kont tokenowych dla odbiorcy |
+| -52 | Nie ma więcej dostępnych kont do debetu |
+| -53 | Brak name / address rachunku do zasilenia |
+| -54 | Brak name\_proof / address\_proof do zasilenia |
+| -55 | Musi mieć co najmniej dwóch odbiorców, aby obciążyć dowolny |
+| -56 | Nieprawidłowe user-type enum \[value]  |
+| -57 | Nieprawidłowy parametr \[name] |
+| -58 | Pusty parametr \[name] |
+| -59 | Konto do zasilenia nie jest kontem NXS |
+| -60 | \[name] poza zakresem \[max] |
+| -61 | Konto dowodowe jest przeznaczone dla innego tokena niż token aktywów |
+| -62 | Transakcja Coinbase wydobyta przez innego użytkownika |
