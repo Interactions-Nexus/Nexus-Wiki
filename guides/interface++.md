@@ -2,7 +2,7 @@
 title: Interface - Tritium++
 description: 
 published: false
-date: 2022-10-31T12:37:25.341Z
+date: 2022-10-31T12:41:18.337Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:30:29.035Z
@@ -10,12 +10,12 @@ dateCreated: 2022-10-05T08:30:29.035Z
 
 # Nexus Interface 3.1.0
 
-The tritium++ (5.1) is the latest update which brings some major changes, features and a fully overhauled API layer. This update also required a major change to the interface.
+The Tritium++ (5.1) is the latest update to the Nexus core, which brings some major changes, features and a fully overhauled API layer. This update also required a major  update to the interface.
 
-> This guide for the new release starts with interface version 3.1.0 and releases beyond.
+> This guide for the Tritium++ release starting with interface version 3.1.0 and beyond.
 {.is-info}
 
-## **Introduction**
+## Introduction
 
 Nexus Interface is the official implementation of the embedded **`Core`** with a **`user interface`** which helps ordinary users to access, create, tokens, assets, invoices, items and transact with other users. NXS the cryptocurrency powering the network is not compatible with any other third-party wallet or hardware wallets due to the disparate architecture that manages keys and assets on-chain, resembling a cloud service, along with increased security standards compared to other blockchains (512 bit keys compared to 256 bit keys).
 
