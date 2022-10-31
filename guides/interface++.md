@@ -2,13 +2,13 @@
 title: Interface - Tritium++
 description: 
 published: false
-date: 2022-10-31T13:42:26.617Z
+date: 2022-10-31T13:42:44.633Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:30:29.035Z
 ---
 
-# Nexus Interface 3.1.0
+# Nexus Interface - Tritium++
 
 The Tritium++ (5.1) is the latest update to the Nexus core, which brings some major changes, features and a fully overhauled API layer. This update also required a major  update to the interface.
 
