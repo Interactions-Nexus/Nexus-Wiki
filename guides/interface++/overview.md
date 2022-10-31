@@ -2,13 +2,13 @@
 title: Overview
 description: Tritium++ interface overview
 published: false
-date: 2022-10-31T13:53:26.416Z
+date: 2022-10-31T13:53:43.004Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-09T20:59:19.724Z
 ---
 
-# Overview - Tritium++
+# Overview
 The `Overview` module is the homepage of the wallet. The globe shows the proximate location of nodes the wallet is connected to. It has a few attributes listed in two rows on each side of the globe.
 
 ## Below is an explanation of the attributes on the left hand side of the Overview module:
