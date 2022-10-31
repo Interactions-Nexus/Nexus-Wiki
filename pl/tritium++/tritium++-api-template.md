@@ -2,7 +2,7 @@
 title: Szablon API Tritium++
 description: Szablon API Tritium++
 published: true
-date: 2022-10-31T22:25:58.885Z
+date: 2022-10-31T22:26:52.207Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:01:37.905Z
@@ -12,11 +12,11 @@ dateCreated: 2022-10-24T22:01:37.905Z
 
 Wiele z obecnych poleceń dostępnych w API działa na ogólnym kodzie szablonowym, który umożliwia wstawianie dowolnego typu obiektu bez potrzeby powtarzania funkcji do obsługi każdego typu obiektu. Poniższa lista ogólnych punktów końcowych zawiera domyślne parametry, które mogą być przydatne poza każdym zestawem poleceń.
 
-### `Zakres`
+### `Scope`
 
 Poniższe szablony nie przekraczają zakresu lokalnego, co oznacza, że ​​zwrócą wyniki pochodzące z wewnętrznych usług indeksowania, które wymagają logowania i autoryzacji. Zestaw danych zwrócony z tych szablonów jest przechowywany w Logicznej Bazie Danych, a zatem dostarcza tylko dane lokalne do identyfikatora profilu, co oznacza, że `historia` i `transakcje` pokażą tylko zdarzenia, które miały miejsce w profilu, który wygenerował indeksy po zalogowaniu.
 
-### `Czasowniki`
+### `Verbs`
 
 Poniższa lista czasowników to szablony w interfejsach API Nexusa. Chociaż akcja ma charakter ogólny (tj. Lista, pobierz, utwórz), implementacje tych działań będą zgodne z pewną semantyką lub obowiązkowymi parametrami niezależnie od rzeczownika (zasobu).
 
