@@ -2,7 +2,7 @@
 title: Przegląd API Tritium++
 description: Przegląd
 published: true
-date: 2022-10-31T21:59:35.989Z
+date: 2022-10-31T22:08:32.110Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:00:16.489Z
@@ -279,4 +279,115 @@ W przypadku, gdy wywołanie API zakończy się błędem, obiekt JSON zostanie zw
 | -196 | Konto już zablokowane do wydobywania |
 | -197 | Konto już zablokowane do stakowania |
 | -198 | Konto już zablokowane dla transakcji
+| -199 | Konto już zablokowane dla powiadomień |
+| -200 | Nie można utworzyć przestrzeni nazw z zarezerwowaną nazwą |
+| -201 | Nie można tworzyć nazw globalnych z zarezerwowaną nazwą |
+| -202 | Łańcuch podpisów nie dojrzał po poprzednim bloku kopania/stawek. Wymagane jest X więcej potwierdzeń. |
+| -203 | Nie znaleziono użytkownika automatycznego logowania |
+| -204 | Nie można ustawić stawki na ujemną kwotę |
+| -205 | Nie można pobrać ostatniej stawki |
+| -206 | Nie udało się usunąć wygasłego żądania zmiany stawki |
+| -207 | Nie udało się usunąć poprzedniego żądania zmiany stawki |
+| -208 | Nie udało się zapisać żądania zmiany stawki |
+| -209 | Odbiorca nie jest prawidłowym kontem |
+| -210 | Konto odbiorcy jest dla innego tokena |
+| -211 | Obiekt odbiorcy nie został tokenizowany |
+| -212 | Nieprawidłowy token |
+| -213 | Nie można tworzyć transakcji podczas synchronizacji |
+| -214 | Niewystarczające środki na uiszczenie opłaty |
+| -215 | Przekroczono maksymalną liczbę odbiorców (99) |
+| -216 | pole adresatów musi być tablicą |
+| -217 | tablica adresatów jest pusta |
+| -218 | Hasło użytkownika / kod PIN nie zostały zmienione |
+| -219 | Nie można pobrać obiektu Crypto |
+| -220 | Brakująca fraza odzyskiwania |
+| -221 | Fraza muszą mieć co najmniej 40 znaków |
+| -222 | Utworzenie użytkownika oczekuje na potwierdzenie |
+| -223 | Fraza nie są ustawione w tym łańcuchu sygnatur |
+| -224 | Brak opisu |
+| -225 | Brak numeru |
+| -226 | Brak odniesienia |
+| -227 | Brak nazwy/adresu rachunku płatniczego |
+| -228 | Brak szczegółów nadawcy |
+| -229 | Brak odbiorcy |
+| -230 | Użytkownik odbiorcy nie istnieje |
+| -231 | Brak danych odbiorcy
+| -232 | Brakujące pozycje |
+| -233 | Faktura musi zawierać co najmniej jedną pozycję |
+| -234 | Brak opisu przedmiotu |
+| -235 | Brak ilości jednostek pozycji |
+| -236 | Nieprawidłowa ilość jednostki pozycji |
+| -237 | Kwota jednostki pozycji musi być większa niż 0 |
+| -238 | Brakująca liczba sztuk jednostek |
+| -239 | Nieprawidłowa liczba sztuk jednostek |
+| -240 | Jednostki pozycji muszą być większe niż 0 |
+| -241 | Nie znaleziono faktury |
+| -242 | Dane pod tym adresem nie są fakturą |
+| -242 | Dane przekraczają maksymalny rozmiar rejestru |
+| -243 | Dane pod tym adresem nie są pozycją zaopatrzenia |
+| -244 | Nie można wysłać faktury do siebie |
+| -245 | Nie można \[action] faktury, która została już zapłacona |
+| -246 | Nie można \[action] faktury, która została już anulowana |
+| -247 | Nie można znaleźć transakcji przeniesienia faktury |
+| -248 | ------------------------- |
+| -249 | ------------------------- |
+| -250 | Faktura nie należy do Ciebie |
+| -251 | Brak nazwiska lub adresu z |
+| -252 | Konto obciążane nie dotyczy wymaganego tokena |
+| -254 | ------------------------------- |
+| -255 | Nie można przetwarzać powiadomień, dopóki peery nie są połączone |
+| -256 | Nie można przetwarzać powiadomień podczas synchronizacji |
+| -257 | Walidacja kontraktu nie powiodła się |
+| -258 | Nieznana geneza |
+| -259 | Musisz określić co najmniej jedną akcję odblokowania |
+| -260 | Nieprawidłowa nazwa klucza |
+| -261 | Klucz już istnieje |
+| -262 | Nieprawidłowy schemat |
+| -263 | Klucze prywatne nie mogą być odzyskane tylko dla kluczy w rejestrze kryptograficznym |
+| -264 | Klucz nie został jeszcze utworzony
+| -265 | Brak klucza publicznego |
+| -266 | Źle sformatowany klucz publiczny |
+| -267 | Szyfrowanie kluczem wspólnym obsługiwane tylko dla kluczy EC (Brainpool) |
+| -268 | Nie udało się wygenerować klucza współdzielonego |
+| -269 | Źle sformatowany klucz prywatny |
+| -270 | Nie udało się zaszyfrować danych |
+| -271 | Nie udało się odszyfrować danych |
+| -272 | Nieobsługiwany typ klucza |
+| -273 | Nie udało się wygenerować podpisu |
+| -274 | Brak podpisu |
+| -275 | Brakujący schemat |
+| -276 | Błąd generowania skrótu |
+| -277 | Nieprawidłowa funkcja skrótu |
+| -278 | Program już w użyciu |
+| -279 | Nie znaleziono żądania P2P |
+| -280 | Serwer P2P nie jest włączony na tym węźle |
+| -281 | Brak identyfikatora aplikacji |
+| -282 | Nie znaleziono połączenia |
+| -283 | Połączenie z tym peerem już istnieje |
+| -284 | Nie udało się połączyć z peerem |
+| -285 | Brak dostępnych wiadomości |
+| -286 | Limit czasu oczekiwania na zaakceptowanie żądania połączenia przez peera |
+| -287 | Metoda API nie jest obsługiwana w trybie wielu użytkowników |
+| -288 | Nie można odblokować do kopania w trybie wielu użytkowników |
+| -289 | Nie można odblokować do stakowania w trybie wielu użytkowników |
+| -290 | Nieprawidłowe poświadczenia. Użytkownik wylogował się z powodu zbyt wielu prób podania hasła / kodu PIN |
+| -291 | Klucza certyfikatu nie można użyć do utworzenia pary kluczy, ponieważ jest on zarezerwowany dla certyfikatu TLS. Zamiast tego użyj metody API tworzenia/certyfikowania. |
+| -292 | Klucza certyfikatu nie można używać do podpisywania danych, ponieważ jest on zarezerwowany dla certyfikatu TLS |
+| -293 | Nieprawidłowa nazwa klucza. Klucze w rejestrze kryptograficznym nie mogą być używane do szyfrowania, tylko generowanie i weryfikacja podpisu |
+| -294 | Certyfikat nie został jeszcze utworzony dla tego łańcucha podpisów. Proszę użyć crypto/create/key, aby najpierw utworzyć certyfikat |
+| -295 | Niezgodność klucza publicznego. Nie można wygenerować certyfikatu |
+| -296 | Brak certyfikatu |
+| -297 | Nie można się zalogować podczas synchronizacji
+| -300 | API może być używane tylko do wyszukiwania danych dla aktualnie zalogowanego łańcucha sygnatur podczas pracy w trybie klienta |
+| -301 | gdzie pole musi być tablicą |
+| -302 | Brak pola, w którym klauzula |
+| -303 | Brak opcji, w której klauzula |
+| -304 | Brak wartości w klauzuli gdzie |
+| -305 | Nieznany operand, w którym klauzula |
+| -306 | Brak dostępnych połączeń |
+| -307 | Nie udało się pobrać łańcucha podpisów |
+| -308 | Metoda API dostępna tylko w trybie klienta |
+| -309 | Błąd ładowania sesji |
+| -310 | Nie można wysłać do WSZYSTKICH kont |
+
 
