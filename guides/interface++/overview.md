@@ -2,7 +2,7 @@
 title: Overview
 description: Tritium++ interface overview
 published: false
-date: 2022-10-31T13:52:46.665Z
+date: 2022-10-31T13:53:26.416Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-09T20:59:19.724Z
@@ -20,8 +20,6 @@ The `Overview` module is the homepage of the wallet. The globe shows the proxima
 * **Market Cap (USD):** This is calculated by multiplying the _Market Price (USD) x Total NXS Circulating Supply._
 * **24HR Change (USD %):** The market value change in NXS over the last 24 hours.
 
-&nbsp;
-
 ## Following is an explanation of the attributes on the right hand side of the Overview module:
 
 * **Connections:** This refers to the amount of random “nodes” which are connected. By default your node is limited to make up to 16 outgoing connections and 84 incoming (100 total). If you are behind a router at home then incoming connections will only be able to be made if you enable UPnP in the wallet (and your router supports it) or if you manually set up port forwarding on port 9888. You can change the configuration to have more than 16 outgoing (with maxoutgoing=xx) but it's not necessary, 16 is adequate.
@@ -30,7 +28,6 @@ The `Overview` module is the homepage of the wallet. The globe shows the proxima
 * **Block Weight:** Upon receipt of a genesis transaction, this value will begin increasing slowly, reaching 100% in 3 days time. Every time you receive a staking transaction, the block weight resets.
 * **Trust Weight:** An indication of how much the network trusts the node. It starts at 1.11% and increases in a nonlinear manner like stake rate does. The level of trust increases the stake weight (below), thus increasing overall chances of miningblocks and receiving staking rewards. It becomes easier to maintain trust as this value increases.
 * **Stake Weight:** The higher a wallet’s stake weight, the greater chances of receiving a trust transaction. The exact value is derived from the trust weight and block weight.
-
 
 
 To read more about staking terms, please refer to the [FAQs & GLOSSARY](https://nexus.io/ResourceHub/general-FAQ
