@@ -2,7 +2,7 @@
 title: Interface - Tritium++
 description: 
 published: false
-date: 2022-10-31T13:54:43.471Z
+date: 2022-10-31T16:33:25.024Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:30:29.035Z
@@ -44,8 +44,8 @@ If any user is facing issues with the Nexus Interface, or need assistance on any
 
 ## Chapters
 
-- [Overview](/en/guides/interface++/overview)
-- [User Module](/en/guides/interface/user-module)
+- [Overview *The Wallet Home*](/en/guides/interface++/overview)
+- [User Module *The User Module - Accounts, Staking, Assets, Names*](/en/guides/interface++/user-module)
 - [Send](/en/guides/interface/send)
 - [Transactions](/en/guides/interface/transactions)
 - [Address Book](/en/guides/interface/address-book)
