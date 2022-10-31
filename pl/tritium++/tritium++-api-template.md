@@ -2,7 +2,7 @@
 title: Szablon API Tritium++
 description: Szablon API Tritium++
 published: true
-date: 2022-10-31T22:26:52.207Z
+date: 2022-10-31T22:27:43.330Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:01:37.905Z
@@ -48,7 +48,7 @@ Poniższa lista czasowników to szablony w interfejsach API Nexusa. Chociaż akc
   * Wspólne parametry:
     * `address`: adres obiektu do przeniesienia
     * `recipient`: identyfikator profilu obiektu odbierającego sigchain.
-    * `scheme` : ustawia typ klucza, który ma być użyty dla danej transakcji. Wartości mogą być `falcon` or `brainbpool`
+    * `scheme` : ustawia typ klucza, który ma być użyty dla danej transakcji. Wartości mogą być `falcon` lub `brainbpool`
 * `claim`
   * Zajmuje pojedynczy zasób lub przedmiot z danego transferu
   * Wspólne parametry:
