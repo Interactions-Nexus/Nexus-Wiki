@@ -2,7 +2,7 @@
 title: Argumenty wiersza poleceń
 description: 
 published: true
-date: 2022-10-31T23:25:25.927Z
+date: 2022-10-31T23:27:58.951Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:17:58.572Z
@@ -114,7 +114,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -rpcsslport | | |
  | -rpcsslrequired | | prawda/fałsz |
  | -rpcmeters | | prawda/fałsz |
- | -rsscore |
+ | -rscore |
  | -regtest | Flaga do obsługi bloków testowania regresji | |
  | -runtime | Flaga sprawdzająca, czy baza danych działa | domyślna = fałsz |
  | -rescan | Legacy — Flaga obsługi ponownego skanowania bazy danych | |
@@ -130,7 +130,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -sslcertificate | ssl - lokalizacja certyfikatu | lokalizacja |
  | -sslcertificatekey | ssl - lokalizacja pliku klucza | lokalizacja |
  | -sslcabundle | ssl - lokalizacja kabla | lokalizacja|
- | -stake | Włącz tyczenie w węźle |
+ | -stake | Włącz stakowanie w węźle |
  | -sync | Flaga informująca o stanie synchronizacji | |
  | -syncbatchsize | Wykonaj sekwencyjny odczyt, aby uzyskać listę | domyślnie = 3000 |
  | -system/stop | Hasło uwierzytelniania przy zamykaniu rdzenia | hasło |
@@ -142,6 +142,6 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -trustboost | Wstępnie ustawione zaufanie do testowania w sieci testowej | |
  | -upnp | flaga upnp, która włączy wymagane przekierowanie portów | domyślna = prawda |
  | -verbose | Włącz szczegółowe rejestrowanie | 0, 1, 2, 3 domyślnie = 0|
- | -wallet | Załaduj starszy portfel | |
+ | -wallet | Załaduj portfel Legacy | |
  | -walletcheck |
  | -walletclean |
