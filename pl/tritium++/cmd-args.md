@@ -2,7 +2,7 @@
 title: Argumenty wiersza poleceń
 description: 
 published: true
-date: 2022-10-31T23:32:43.669Z
+date: 2022-10-31T23:37:43.839Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:17:58.572Z
@@ -16,18 +16,18 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | --- | --- | --- |
  | -addnode | Dodaj do menedżera adresów i pozwól mu nawiązać połączenia |
  | -api | Uchwyt do API, jeśli wykryto symbol '/' | |
- | -apiuser | Nazwa użytkownika uwierzytelniania API | username |
- | -apipassword | Hasło uwierzytelniające API | password |
+ | -apiuser | Nazwa użytkownika uwierzytelniania API | nazwa użytkownika |
+ | -apipassword | Hasło uwierzytelniające API | hasło |
  | -apiauth | Włącz/wyłącz uwierzytelnianie API | 0/1 |
  | -apiconnect | Nawiąż połączenie z serwerem API | |
  | -apiport | Ręcznie przypisz port API | port number |
  | -apisssl | Włącz SSL dla API | 0/1 |
- | -apisslport | Przypisz port dla API SSL | port number|
- | -apisslrequired | Wartość logiczna, jeśli API używa SSL | true/false |
- | -apithreads | | default = 8 |
- | -apicscore | | default = 5 |
- | -apirscore | | default = 5 |
- | -apitimespan | | default = 60 |
+ | -apisslport | Przypisz port dla API SSL | numer portu|
+ | -apisslrequired | Wartość logiczna, jeśli API używa SSL | prawda/fałsz |
+ | -apithreads | | domyślna = 8 |
+ | -apicscore | | domyślna = 5 |
+ | -apirscore | | domyślna = 5 |
+ | -apitimespan | | domyślna = 60 |
  | -apitimeout |
  | -argon2 | Algorytm generowania skrótu | |
  | -argon2_memory | Przydział pamięci dla argonu2 | |
@@ -65,7 +65,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -latency | Czas tworzenia bloków w sieciach prywatnych |
  | -llpsleep | zegar uśpienia pamięci podręcznej | domyślnie = 0 |
  | -lldmeters | Flaga do śledzenia wątku miernika LLD | |
- | -legacy | Aby sprawdzić, czy adres jest starszy |
+ | -legacy | Aby sprawdzić, czy adres jest Legacy |
  | -limitfreerelay | Limit szybkości bezpłatnych transakcji w celu ograniczenia zalania | |
  | -listen |
  | -logfiles | Parametr konfiguracyjny rejestrowania debugowania | domyślna = 20 |
