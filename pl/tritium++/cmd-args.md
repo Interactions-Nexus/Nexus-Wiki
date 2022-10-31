@@ -2,7 +2,7 @@
 title: Argumenty wiersza poleceń
 description: 
 published: true
-date: 2022-10-31T23:27:58.951Z
+date: 2022-10-31T23:32:43.669Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:17:58.572Z
@@ -44,7 +44,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -contractcache| Utwórz instancję bazy danych kontraktów |
  | -cscore |
  | -datadir | Lokalizacja katalogu danych podstawowych |
- | -dbcache | Rozmiar pamięci podręcznej starszej bazy danych | domyślnie = 25 |
+ | -dbcache | Rozmiar pamięci podręcznej bazy danych Legacy | domyślnie = 25 |
  | -ddos |
  | -dnsupdate | Sprawdź, czy DNS wymaga aktualizacji | domyślnie = 86400 |
  | -dns | Dostarczono flagę, aby włączyć węzły DNS | domyślna = prawda |
@@ -61,7 +61,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -indexaddress | Włącz indeksowanie adresów | 0/1 |
  | -latency | Opóźnienie tworzenia bloków w trybie prywatnym lub hybrydowym | |
  | -ledgercache | Utwórz instancję bazy danych księgi |
- | -legacycache | Utwórz starszą instancję bazy danych |
+ | -legacycache | Utwórz instancję bazy danych Legacy |
  | -latency | Czas tworzenia bloków w sieciach prywatnych |
  | -llpsleep | zegar uśpienia pamięci podręcznej | domyślnie = 0 |
  | -lldmeters | Flaga do śledzenia wątku miernika LLD | |
@@ -70,7 +70,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -listen |
  | -logfiles | Parametr konfiguracyjny rejestrowania debugowania | domyślna = 20 |
  | -logsizeMB | Parametr konfiguracyjny rejestrowania debugowania | domyślnie = 5 |
- | -keypool | Pożądany rozmiar starszej puli kluczy |
+ | -keypool | Pożądany rozmiar puli kluczy Legacy |
  | -manager | |
  | -mining | Włącz wydobywanie w węźle|
  | -miningthreads |
