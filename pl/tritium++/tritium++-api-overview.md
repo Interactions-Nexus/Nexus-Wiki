@@ -2,7 +2,7 @@
 title: Przegląd API Tritium++
 description: Przegląd
 published: true
-date: 2022-10-30T22:58:33.259Z
+date: 2022-10-31T21:59:35.989Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:00:16.489Z
@@ -180,3 +180,103 @@ W przypadku, gdy wywołanie API zakończy się błędem, obiekt JSON zostanie zw
 | -97 | Obiekt o tej nazwie już istnieje w namespace |
 | -98 | Obiekt o tej nazwie już istnieje dla tego użytkownika |
 | -99 | Nie znaleziono transakcji przelewu
+| -100 | Brak prefiksu nazwy użytkownika przed nazwą |
+| -101 | Nieznana nazwa: (name) |
+| -102 | Nieprawidłowy adres |
+| -103 | Brak register\_address parameter |
+| -104 | Nie znaleziono obiektu |
+| -105 | Brak adresu |
+| -106 | Nieprawidłowa nazwa/adres |
+| -107 | Nie znaleziono historii |
+| -108 | Nie udało się odczytać transakcji |
+| -109 | Określona nazwa/adres nie jest typu (type) |
+| -110 | Realizacja kontraktu nie powiodła się |
+| -111 | Brakująca genesis / username |
+| -112 | Brak username / destination |
+| -113 | Użytkownik docelowy nie istnieje |
+| -114 | (type) nie znaleziono |
+| -115 | Nazwa/adres nie jest typu (type) |
+| -116 | Nie można przenieść nazw utworzonych bez przestrzeni nazw |
+| -117 | Nie znaleziono przedmiotu |
+| -118 | Operator \[type] nie jest obsługiwany dla tego zestawu poleceń |
+| -119 |  pole(a) \[name] nie istnieje dla wyniku |
+| -120 | Przekroczono maksymalną liczbę kontraktów (99), spróbuj ponownie lub użyj trybu -autotx. |
+| -121 | Typ zagregowany \[noun] niedozwolony dla \[verb] |
+| -122 | Nieprawidłowy operator \[op] dla polecenia. |
+| -123 | \[type] nieobsługiwany dla operatora \[op] |
+| -124 | Operator \[op] nie może być użyty na pustym wyniku |
+| -125 | Nie znaleziono tokena |
+| -126 | Adres nie jest przeznaczony dla konta NXS" |
+| -127 | Brak nazwy użytkownika |
+| -128 | Brak hasła |
+| -129 | Brak kodu PIN |
+| -130 | Konto już istnieje |
+| -131 | Blokada nie jest obsługiwana w trybie wielu użytkowników |
+| -132 | Konto już zablokowane
+| -133 | Nazwa użytkownika o zerowej długości |
+| -134 | Hasło o zerowej długości |
+| -135 | PIN o zerowej długości |
+| -136 | Konto nie istnieje |
+| -137 | Nie udało się uzyskać transakcji |
+| -138 | Nie znaleziono poprzedniej transakcji |
+| -139 | Nieprawidłowe poświadczenia |
+| -140 | Zalogowano się już pod inną nazwą użytkownika |
+| -141 | Już wylogowano |
+| -142 | Parametr nazwy użytkownika nie jest obsługiwany dla tej metody. Nazwy można uzyskać tylko dla zalogowanego użytkownika |
+| -143 | Brak dostępnych powiadomień |
+| -144 | Nie znaleziono transakcji |
+| -145 | Odblokowanie nie jest obsługiwane w trybie wielu użytkowników |
+| -146 | Konto już odblokowane do wydobywania |
+| -147 | Konto już odblokowane dla transakcji |
+| -148 | Konto już odblokowane |
+| -149 | Nieprawidłowy PIN |
+| -150 | Transakcja odrzucona |
+| -151 | Transakcja już w bazie danych |
+| -152 | Transakcja nie zawiera ważnych przelewów |
+| -153 | Nie znaleziono obiektu odbiorcy transferu |
+| -154 | Nieprawidłowy typ pola (field) |
+| -155 | Surowe zasoby nie mogą być aktualizowane |
+| -156 | Nie znaleziono pola w zasobie (field) |
+| -157 | Pole niezmienialne w zasobie (field) |
+| -158 | Wartość dłuższa niż maksymalna długość (field) |
+| -159 | Wartości muszą być przekazywane jako ciągi |
+| -160 | Nazwa użytkownika zawiera nieprawidłowe znaki |
+| -161 | Nazwa zawiera nieprawidłowe znaki |
+| -162 | Przestrzeń nazw może zawierać tylko małe litery, cyfry, kropki (.) |
+| -163 | Nie można pobrać domyślnego konta NXS do obciążania opłat |
+| -164 | Konto opłat nie jest kontem NXS |
+| -165 | Nieprawidłowy address/name\_to
+| -166 | Konto to konto NXS. Aby uzyskać dostęp do kont NXS, użyj interfejsu API finansów. |
+| -167 | Nieprawidłowe odniesienie |
+| -168 | Nieprawidłowy czas wygaśnięcia |
+| -169 | Nazwy nie mogą zaczynać się od dwukropka |
+| -170 | Nie można tworzyć nazw globalnych w przestrzeni nazw |
+| -171 | Nazwy globalne nie mogą zawierać dwukropka |
+| -172 | Nie można unieważnić transakcji, która nie należy do Ciebie |
+| -173 | Nie można unieważnić transakcji debetowej, ponieważ została już w pełni uznana przez wszystkich odbiorców |
+| -174 | Transakcja nie zawiera umów, które można unieważnić |
+| -175 | Nieprawidłowa ilość podaży. Podaż musi być liczbą całkowitą |
+| -176 | Nieprawidłowa ilość podaży. Maksymalna podaż tokenów to 18446744073709551615 |
+| -177 | Nieprawidłowa kwota dziesiętna. Ułamki dziesiętne muszą być wartościami całkowitymi z zakresu od 0 do 8 |
+| -178 | Nieprawidłowa podaż/miejsca dziesiętne. Maksymalna podaż/miejsca dziesiętne nie może przekroczyć 18446744073709551615 |
+| -179 | Portfel Legacy jest zablokowany. wymagane hasło portfela |
+| -180 | Nieprawidłowe hasło do portfela Legacy |
+| -181 | Nie znaleziono klucza Trust dla portfela Legacy |
+| -182 | Klucz Trust wcześniej migrowany |
+| -183 | Poprzednia transakcja dotycząca stawki niedojrzała |
+| -184 | Poprzednia transakcja dotycząca stawki nie jest transakcją odziedziczoną |
+| -185 | Poprzednia transakcja nie jest transakcją dotyczącą stawki |
+| -186 | Poprzednia stawka nie należy do obecnego portfela |
+| -187 | Nie udało się uzyskać adresów dla portfela Legacy |
+| -188 | Konto Trust ma już genezę |
+| -189 | Konto Trust ma już stake |
+| -190 | Konto Trust ma już zaufanie |
+| -191 | Nazwa użytkownika musi mieć co najmniej 2 znaki |
+| -192 | Hasło musi mieć minimum 8 znaków |
+| -193 | Pin musi mieć co najmniej 4 znaki |
+| -194 | Konto już odblokowane dla powiadomień |
+| -195 | Konto już odblokowane do stakowania |
+| -196 | Konto już zablokowane do wydobywania |
+| -197 | Konto już zablokowane do stakowania |
+| -198 | Konto już zablokowane dla transakcji
+
