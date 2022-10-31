@@ -2,7 +2,7 @@
 title: Interface
 description: Introduction to the NexusInterface
 published: true
-date: 2022-10-19T22:28:01.358Z
+date: 2022-10-31T12:19:13.871Z
 tags: wallet
 editor: markdown
 dateCreated: 2022-10-05T08:31:25.193Z
@@ -39,5 +39,5 @@ If any user is facing issues with the Nexus Interface, or has any general querie
 - [Console](/en/guides/interface/console)
 - [Settings](/en/guides/interface/settings)
 - [Create User Account *How to create a user account (SigChain)*](/en/guides/interface/create-user-account)
-- [Create a NXS Account *How to create a NXS account*](/en/guides/interface/create-an-account)
+- [Create a NXS Account *How to create a NXS account*](/en/guides/interface/create-a-nxs-account)
 {.links-list}
