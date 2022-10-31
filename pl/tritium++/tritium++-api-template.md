@@ -2,7 +2,7 @@
 title: Szablon API Tritium++
 description: Szablon API Tritium++
 published: true
-date: 2022-10-31T22:24:48.010Z
+date: 2022-10-31T22:25:58.885Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:01:37.905Z
@@ -20,7 +20,7 @@ Poniższe szablony nie przekraczają zakresu lokalnego, co oznacza, że ​​zw
 
 Poniższa lista czasowników to szablony w interfejsach API Nexusa. Chociaż akcja ma charakter ogólny (tj. Lista, pobierz, utwórz), implementacje tych działań będą zgodne z pewną semantyką lub obowiązkowymi parametrami niezależnie od rzeczownika (zasobu).
 
-* `lista`
+* `list`
   * Pobiera posortowaną listę obiektów lub danych
   * Sortowanie jest oparte na wieku transakcji/obiektu, domyślnie zawsze od najnowszego do najstarszego. Niektóre metody list obsługują dodatkowe pola sortowania.
   * Wspólne parametry:
