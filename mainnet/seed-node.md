@@ -2,7 +2,7 @@
 title: Seed Nodes
 description: How to run a seed node for mainnet
 published: true
-date: 2022-10-31T05:29:35.341Z
+date: 2022-10-31T05:31:56.922Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-29T01:44:48.577Z
@@ -10,14 +10,13 @@ dateCreated: 2022-10-29T01:44:48.577Z
 
 1.  **Seed Node definition**: A seed node is first node that other nodes connect to when they first come online. The seed node helps new nodes get the list and location of all the other nodes in the swarm.  Once the new node has the list, it will begin connecting itself into the mesh.
 
-2. Seed Node Minimum Requirements - 
+2. **Seed Node Minimum Requirements** - A typical low-cost VPS or shared hosting server will usually meet these requirements
 	
     - High availability - Your node should be always on and available
     - Publicly reachable - Your node needs to have a publicly reachable IP and firewall open on the ports listed below
     - High Bandwith - Your node needs to have a high-bandwidth always on Internect connection
     - Resolvable DNS name
     
-    A typical low-cost VPS or shared hosting server will usually meet these requirements
 
 3.  In order to make a see node, first follow the directions to create a Mainnet Node: [Run a Mainnet Node](https://wiki.nexus.io/en/mainnet/run-a-mainnet-node)
 
