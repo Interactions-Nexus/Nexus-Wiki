@@ -2,7 +2,7 @@
 title: Operators
 description: 
 published: true
-date: 2022-10-08T13:08:34.637Z
+date: 2022-10-31T22:46:28.427Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:01.969Z
