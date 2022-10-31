@@ -2,7 +2,7 @@
 title: Tritium++
 description: 
 published: true
-date: 2022-10-31T22:47:15.486Z
+date: 2022-10-31T23:40:59.882Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:57:10.177Z
@@ -14,9 +14,9 @@ Znajdź wszystkie łącza do dokumentów Tritium++ API.
 - [Jak działa API](/pl/tritium++/how-to-api-tritium++)
 - [Przegląd API](/pl/tritium++/tritium++-api-overview)
 - [Szablon API](/pl/tritium++/tritium++-api-template)
-- [Filtrowanie](/pl/tritium++/filtering)
-- [Operatory](/pl/tritium++/operators)
-- [Sortowanie](/pl/tritium++/sorting)
+- [Filtrowanie *Jak filtrować wyniki za pomocą API*](/pl/tritium++/filtering)
+- [Operatory *Operatory do używania z API*](/pl/tritium++/operators)
+- [Sortowanie *Jak posortować wynik json*](/pl/tritium++/sorting)
 - [Zapytania *Zapytanie DSL - Składnia podobna do SQL DSL*](/pl/tritium++/queries)
 - [Argumenty wiersza poleceń *Konfiguracja podstawowa lub argumenty wiersza polecenia*](/pl/tritium++/cmd-args)
 {.links-list}
