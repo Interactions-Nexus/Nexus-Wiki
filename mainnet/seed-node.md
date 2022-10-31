@@ -2,7 +2,7 @@
 title: Seed Nodes
 description: How to run a seed node for mainnet
 published: true
-date: 2022-10-31T11:20:46.277Z
+date: 2022-10-31T11:41:05.587Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-29T01:44:48.577Z
@@ -51,6 +51,6 @@ sudo ufw allow 9888/tcp
 
 3.  Ensure your node has a resolvable DNS name pointing to it.
 4.  Contact an admin for the seed node working group to join the working group. Admins are:
-    -   @aeonwise
-    -   @Radient4751
+    -   https://t.me/aeonwise
+    -   https://t.me/Radient4751
 5.  Once you are in the working group, we will add your node's DNS name to [seeds.cpp](https://github.com/Nexusoft/LLL-TAO/blob/merging/src/LLP/seeds.cpp) on GitHub.
