@@ -2,7 +2,7 @@
 title: Argumenty wiersza poleceń
 description: 
 published: true
-date: 2022-10-31T23:37:43.839Z
+date: 2022-10-31T23:38:56.719Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:17:58.572Z
@@ -20,7 +20,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -apipassword | Hasło uwierzytelniające API | hasło |
  | -apiauth | Włącz/wyłącz uwierzytelnianie API | 0/1 |
  | -apiconnect | Nawiąż połączenie z serwerem API | |
- | -apiport | Ręcznie przypisz port API | port number |
+ | -apiport | Ręcznie przypisz port API | numer portu |
  | -apisssl | Włącz SSL dla API | 0/1 |
  | -apisslport | Przypisz port dla API SSL | numer portu|
  | -apisslrequired | Wartość logiczna, jeśli API używa SSL | prawda/fałsz |
