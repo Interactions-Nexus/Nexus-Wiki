@@ -2,7 +2,7 @@
 title: Argumenty wiersza poleceń
 description: 
 published: true
-date: 2022-10-31T23:38:56.719Z
+date: 2022-11-01T23:16:22.864Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:17:58.572Z
@@ -24,21 +24,21 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -apisssl | Włącz SSL dla API | 0/1 |
  | -apisslport | Przypisz port dla API SSL | numer portu|
  | -apisslrequired | Wartość logiczna, jeśli API używa SSL | prawda/fałsz |
- | -apithreads | | domyślna = 8 |
- | -apicscore | | domyślna = 5 |
- | -apirscore | | domyślna = 5 |
- | -apitimespan | | domyślna = 60 |
+ | -apithreads | | domyślnie = 8 |
+ | -apicscore | | domyślnie = 5 |
+ | -apirscore | | domyślnie = 5 |
+ | -apitimespan | | domyślnie = 60 |
  | -apitimeout |
  | -argon2 | Algorytm generowania skrótu | |
- | -argon2_memory | Przydział pamięci dla argonu2 | |
- | -autotx | Kompiluje tx na podstawie listy kontraktów, do wdrożenia jako pojedynczy tx lub wsadowo | domyślna = fałsz |
+ | -argon2_memory | Przydział pamięci dla argon2 | |
+ | -autotx | Kompiluje tx na podstawie listy kontraktów, do wdrożenia jako pojedynczy tx lub wsadowo | domyślnie = fałsz |
  | -avatar |
  | -authattempts | Licznik niepowodzeń uwierzytelniania sesji | domyślnie = 3 |
  | -beta | Flaga wyłączająca sprawdzanie punktów kontrolnych w trybie innym niż starszy | |
  | -blocknotify | Powiadomienie o utworzeniu nowego bloku | |
- | -blockrefresh | Chwyć znacznik czasu wygaśnięcia bloku | domyślna = 60 |
- | -client | Flaga, aby włączyć tryb uproszczony | domyślna = fałsz |
- | -checkpoints | Aby cofnąć się do określonych punktów kontrolnych podczas uruchamiania | domyślna = 100 |
+ | -blockrefresh | Chwyć znacznik czasu wygaśnięcia bloku | domyślnie = 60 |
+ | -client | Flaga, aby włączyć tryb uproszczony | domyślnie = fałsz |
+ | -checkpoints | Aby cofnąć się do określonych punktów kontrolnych podczas uruchamiania | domyślnie = 100 |
  | -connect |
  | -conf |
  | -contractcache| Utwórz instancję bazy danych kontraktów |
@@ -47,14 +47,14 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -dbcache | Rozmiar pamięci podręcznej bazy danych Legacy | domyślnie = 25 |
  | -ddos |
  | -dnsupdate | Sprawdź, czy DNS wymaga aktualizacji | domyślnie = 86400 |
- | -dns | Dostarczono flagę, aby włączyć węzły DNS | domyślna = prawda |
+ | -dns | Dostarczono flagę, aby włączyć węzły DNS | domyślnie = prawda |
  | -flushwallet | Legacy - Flaga do opróżnienia bazy danych portfela | |
  | -forcereindex | Oznacz, aby w razie potrzeby wymusić ponowną indeksację |
  | -forkblocks | Przewiń łańcuch do określonej liczby bloków | domyślnie = 0 |
  | -gdb | Tryb GDB czeka na wejście z klawiatury, aby zainicjować czyste zamknięcie | |
  | -generate | Blokuj hasło generowania dla sieci prywatnych |
  | -httpheader | Zrzuć nagłówek przy każdym odczycie |
- | -httpresponse | Oznacz, aby zarejestrować odpowiedź http | domyślna = fałsz |
+ | -httpresponse | Oznacz, aby zarejestrować odpowiedź http | domyślnie = fałsz |
  | -hybrid | Tożsamość sieci hybrydowej | hasło |
  | -inactivetimeout | Limit czasu bezczynności sesji | domyślnie = 3600 |
  | -indexheight | Włącz indeksowanie wysokości bloku| 0/1 |
@@ -68,7 +68,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -legacy | Aby sprawdzić, czy adres jest Legacy |
  | -limitfreerelay | Limit szybkości bezpłatnych transakcji w celu ograniczenia zalania | |
  | -listen |
- | -logfiles | Parametr konfiguracyjny rejestrowania debugowania | domyślna = 20 |
+ | -logfiles | Parametr konfiguracyjny rejestrowania debugowania | domyślnie = 20 |
  | -logsizeMB | Parametr konfiguracyjny rejestrowania debugowania | domyślnie = 5 |
  | -keypool | Pożądany rozmiar puli kluczy Legacy |
  | -manager | |
@@ -82,7 +82,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -miningport | Zmień port wydobywczy |
  | -meters |
  | -maturityrequired | Sprawdzenie dojrzałości łańcucha podpisów w celu utworzenia nowej transakcji |
- | -maxconnections | Ustaw maksymalną liczbę połączeń równorzędnych z węzłem | domyślna = 100 |
+ | -maxconnections | Ustaw maksymalną liczbę połączeń równorzędnych z węzłem | domyślnie = 100 |
  | -maxincoming | Ustaw maksymalną liczbę przychodzących połączeń równorzędnych | domyślnie = 84 |
  | -maxoutgoing | Ustaw maksymalne wychodzące połączenia równorzędne | domyślnie = 16 |
  | -maxcontracts | Ustaw maksymalną liczbę kontraktów na transakcję | domyślnie = 99 |
@@ -99,7 +99,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -p2psslport | Zmień port SSL p2p |
  | -port |
  | -private | Włącz węzeł, aby działał jako łańcuch prywatny | |
- | -primemod | Oznaczenie zmniejszające odporność na rzęsy do 1017-bitów, aby zmaksymalizować współczynnik prim | domyślna = fałsz |
+ | -primemod | Oznaczenie zmniejszające odporność na rzęsy do 1017-bitów, aby zmaksymalizować współczynnik prim | domyślnie = fałsz |
  | -registercache | Utwórz instancję bazy danych rejestru |
  | -rpcuser | Uwierzytelnianie RPC — nazwa użytkownika |
  | -rpcpassword | Uwierzytelnianie RPC - hasło |
@@ -107,7 +107,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -rpcthreads | | domyślnie = 4 |
  | -rpccscore | | domyślnie = 5 |
  | -rpcrscore | | domyślnie = 5 |
- | -rpctimespan | | domyślna = 60 |
+ | -rpctimespan | | domyślnie = 60 |
  | -rpcport |
  | -rpcconnect | Nawiąż połączenie z serwerem RPC | |
  | -rpcssl | | prawda/fałsz |
@@ -116,7 +116,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -rpcmeters | | prawda/fałsz |
  | -rscore |
  | -regtest | Flaga do obsługi bloków testowania regresji | |
- | -runtime | Flaga sprawdzająca, czy baza danych działa | domyślna = fałsz |
+ | -runtime | Flaga sprawdzająca, czy baza danych działa | domyślnie = fałsz |
  | -rescan | Legacy — Flaga obsługi ponownego skanowania bazy danych | |
  | -reindexheight | Flaga w celu wymuszenia ponownej indeksacji wysokości | |
  | -requirepassword | Flaga, aby wymusić uwierzytelnianie hasła do sesji odblokowania |
@@ -140,7 +140,7 @@ Spowoduje to wyświetlenie listy wszystkich parametrów wiersza poleceń lub pod
  | -timeout | |
  | -timespan | |
  | -trustboost | Wstępnie ustawione zaufanie do testowania w sieci testowej | |
- | -upnp | flaga upnp, która włączy wymagane przekierowanie portów | domyślna = prawda |
+ | -upnp | flaga upnp, która włączy wymagane przekierowanie portów | domyślnie = prawda |
  | -verbose | Włącz szczegółowe rejestrowanie | 0, 1, 2, 3 domyślnie = 0|
  | -wallet | Załaduj portfel Legacy | |
  | -walletcheck |
