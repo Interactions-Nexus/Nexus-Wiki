@@ -2,7 +2,7 @@
 title: Run a Mainnet Node
 description: How to run a CLI node on mainnet - Stable & Testing
 published: true
-date: 2022-10-29T20:56:10.615Z
+date: 2022-11-01T15:00:36.005Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:31.584Z
@@ -70,6 +70,12 @@ Allow mining port 9325, only if connecting a miner
 
 ```
 sudo ufw allow 9325/tcp
+```
+
+If running as a seed node then allow UTS (unified time Synchronization) port 9324, only if connecting a miner
+
+```
+sudo ufw allow 9324/tcp
 ```
 
 Enable firewall:
@@ -226,16 +232,12 @@ If running as a seed node or need more peer connections to your node add this to
 > Increasing peer connections will increase node bandwidth requirements.
 {.is-warning}
 
-
-
 ```
 #Configure peer connections to the core
-#Maximum connections limit to a single node is 100
-maxconnections=100
-#Maximum outgoing connections to peers is 16 (default - not required)
-maxoutgoing=16
-#Maximum incoming to a single node is 84 (need to enable upnp on router)
-maxincoming=84
+#Maximum connections limit to the node
+maxconnections=300
+#Maximum incoming to a single node (maxconnections - 16)
+maxincoming=284
 ```
 Press Ctrl s and Ctrl x to save and exit the editor.
 
