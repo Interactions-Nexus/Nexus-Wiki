@@ -2,7 +2,7 @@
 title: PROFILES
 description: Profiles API
 published: true
-date: 2022-10-06T10:52:57.295Z
+date: 2022-11-01T23:50:22.543Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:35:02.340Z
@@ -127,7 +127,7 @@ This method provides the user with the ability to set or change the restore seed
 
 #### **update/recovery**
 
-`recovery` : Required by noun **recovery** The existing recovery seed for this signature chain. This is only required if an existing recovery seed is being updated via new\_recovery.
+`recovery` : Required by noun **recovery**. The existing recovery seed for this signature chain. This is only required if an existing recovery seed is being updated via new\_recovery.
 
 `new_recovery` : Required by noun **recovery**.The new recovery seed to set or change for this sig chain. The recovery seed must be a minimum of 40 characters.
 
