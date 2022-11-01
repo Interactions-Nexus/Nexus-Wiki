@@ -2,7 +2,7 @@
 title: PROFILE
 description: Profile API
 published: true
-date: 2022-11-01T23:32:05.745Z
+date: 2022-11-01T23:37:22.488Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:21:17.033Z
@@ -22,7 +22,7 @@ Minimalne wymagane składniki identyfikatora URI to:
 profiles/verb/noun
 ```
 
-## `Obsługiwane czasowniki`
+## `Obsługiwane czasowniki (verb)`
 
 [`create`](broken-reference) - Generuj nowy obiekt obsługiwanego typu.\
 [`update`](broken-reference) - Aktualizuje określone rejestry obiektów.\
@@ -31,14 +31,14 @@ profiles/verb/noun
 [`notifications`](broken-reference) - Lista wszystkich powiadomień, które zmodyfikowały określony obiekt.\
 [`transactions`](broken-reference) — Lista wszystkich transakcji, które zmodyfikowały określony obiekt.
 
-## `Obsługiwane rzeczowniki`
+## `Obsługiwane rzeczowniki (noun)`
 
 W tym zestawie poleceń interfejsu API obsługiwane są następujące rzeczowniki:
 
-\[`master`] — domyślny profil, który kontroluje wszystkie podprofile.\
+\[`master`] — Domyślny profil, który kontroluje wszystkie podprofile.\
 \[`auth`] - Rejestr obiektów kryptograficznych do uwierzytelniania logowania.\
-\[`credentials`] — poświadczenia używane do zabezpieczania profili.\
-\[`recovery`] — obiekt reprezentujący odzyskiwanie profilu.
+\[`credentials`] — Poświadczenia używane do zabezpieczania profili.\
+\[`recovery`] — Obiekt reprezentujący odzyskiwanie profilu.
 
 ## `create` <a href="#user-content-create" id="user-content-create"></a>
 
