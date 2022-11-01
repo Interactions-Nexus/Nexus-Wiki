@@ -2,7 +2,7 @@
 title: Mobile Wallet
 description: Mobile Wallet Guide
 published: true
-date: 2022-11-01T17:24:14.576Z
+date: 2022-11-01T18:19:27.432Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T16:15:32.356Z
@@ -19,4 +19,24 @@ If you are interested to read more indepth on the Nexus mobile wallet:
 > The Nexus mobile wallet is still in beta and we are waiting for 5.1 to release it.
 {.is-info}
 
+## Nexus Mobile Wallet - Lite Node for Nexus Blockchain.
+
+- Lite Node
+Nexus has spend years perfecting our blockchain technology that even your phone can now run a node and communicate with other nodes. The App contains a Lite version of a Nexus node, A node that knows your own sigchain but does not contain unnecessary data for the whole chain. This keeps network bandwidth and processing overhead down.
+
+- Sigchain on the Go
+With Nexus mobile wallet you can get access to your Nexus Sigchain right on your phone. Send and receive NXS securely with ease, Or check on your staking node at home. App has built in QR code generation so you can exchange information in a snap.
+
+- Non Staking
+A Lite node can not stake and will not mine blocks in the background. This restriction is hard coded.
+
+- Open Source
+Like everything Nexus Does, this wallet is open source. Go head and check out our GitHub and make modifications to your liking.
+
+- Nexus Security
+Nexus uses advanced cryptography algorithms that makes it Quantum Resistant and 51% Resistant. Blocks can be confirmed as little as 1 confirmation as Nodes have smart technology that can detect bad actors.
+
 Below you can find the links to the Mobile wallet guide:
+- [Install *How to install the Mobile Wallet*](/en/guides/mobile-wallet/Install)
+- [Using the Wallet *How to use the Mobile Wallet*](/en/guides/mobile-wallet/using-the-wallet)
+{.links-list}
