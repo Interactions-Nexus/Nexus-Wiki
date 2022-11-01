@@ -2,7 +2,7 @@
 title: Interface - Tritium++
 description: 
 published: false
-date: 2022-10-31T16:33:25.024Z
+date: 2022-11-01T11:07:16.207Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:30:29.035Z
@@ -23,7 +23,7 @@ The Interface is modular and consists of the `Core` and the `user interface`. Th
 
 The Interface supports both, Tritium++ and the Legacy chain. This is enabled by the two modes and the user can switch between the Tritium++ and legacy modes.
 
-The Interface can be run in two modes:
+The Interface can be run in two modes, users can switch between the two modes from settings:
    - Lite Mode (Default)
    - Full Mode
 
@@ -31,7 +31,7 @@ The Interface can be run in two modes:
 This mode enables normal users to connect to the Nexus network fast and easily. In the lite mode the interface connects directly to the Nexus network and downloads the lite blockchain (block headers & profile info) which at the time of writing is approximately 300MB in size. The user should be able to transact within 5 min of installing the wallet, depending on internet connection. The lite mode connects directly to the Nexus network peers unlike other lite wallets which connect to third party proxy servers. This mode is useful for users who occasionaly use the wallet to transact or to HODL.
 
 ## Full Mode
-In this mode the node will act like a full node which requires the full blockchain to be downloaded from peers and verified, approximately 16GB in size. Stakers, Miners, seed nodes and Dapp backend nodes have to run in full mode. Users can swit
+In this mode the node will act like a full node which requires the full blockchain to be downloaded from peers and verified. The database is approximately 16GB in size. Stakers, Miners, seed nodes and Dapp backend nodes have to run their nodes in full mode.
 
 
 > We recommend users to who have NXS in the legacy chain to migrate to Tritium.
