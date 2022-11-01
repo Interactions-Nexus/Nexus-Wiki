@@ -2,7 +2,7 @@
 title: Przewodniki
 description: 
 published: true
-date: 2022-10-23T15:38:04.500Z
+date: 2022-11-01T23:04:19.228Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T08:42:39.346Z
@@ -11,7 +11,8 @@ dateCreated: 2022-10-07T08:42:39.346Z
 # Przewodniki
 Poniżej wymienione są różne przewodniki:
 
-- [Portfel Nexus – interfejs *Przewodnik po portfelu Nexus na PC*](/pl/guides/interface)
+- [Interfejs Nexusa - Tritium *Przewodnik po portfelu Nexus na PC*](/pl/guides/interface)
+- [Interfejs Nexusa - Tritium++ *Przewodnik po portfelu Nexus na PC - Tritium++*](/pl/guides/interface++)
 - [Portfel mobilny *Przewodnik po portfelu Nexus na smartfony*](/pl/guides/mobile-wallet)
 - [Stakowanie *Wszystko o stakowaniu na Nexusie*](/pl/guides/staking)
 - [Tworzenie tokenów *Jak utworzyć token*](/pl/guides/create-token)
