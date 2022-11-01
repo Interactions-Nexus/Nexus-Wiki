@@ -2,7 +2,7 @@
 title: Mobile Wallet
 description: Nexus Mobile Wallet
 published: true
-date: 2022-11-01T20:17:07.907Z
+date: 2022-11-01T20:17:58.061Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:30.155Z
@@ -28,4 +28,4 @@ Decentralize the Decentralization being the motto, every aspect of Nexus is desi
 
 ## A Next-Gen Mobile Wallet
 
-The Nexus mobile wallet has been designed with decentralization, P2P and mass adoption as the essence. The mobile wallet will put blockchain access in everyone's hand and ease of use will make it the de-facto choice. Signature chains make it a hassle free experience for the user, in case the smartphone is lost or damaged, will not permanently lock users crypto portfolio, just download the wallet, log in on the new phone and user has full access to his Nexus assets.
+The Nexus mobile wallet has been designed with decentralization, P2P and mass adoption as its core. The mobile wallet will put blockchain access in everyone's hand and ease of use will make it the de-facto choice. Signature chains make it a hassle free experience for the user, in case the smartphone is lost or damaged, will not permanently lock users crypto portfolio, just download the wallet, log in on the new phone and user has full access to his Nexus assets.
