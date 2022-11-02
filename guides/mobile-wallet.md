@@ -2,7 +2,7 @@
 title: Mobile Wallet
 description: Mobile Wallet Guide
 published: true
-date: 2022-11-01T19:52:10.881Z
+date: 2022-11-02T10:09:19.263Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T16:15:32.356Z
@@ -39,4 +39,6 @@ Nexus uses advanced cryptography algorithms that makes it Quantum Resistant and 
 Below you can find the links to the Mobile wallet guide:
 - [Install *How to install the Mobile Wallet*](/en/guides/mobile-wallet/Install)
 - [Using the Wallet *How to use the Mobile Wallet*](/en/guides/mobile-wallet/using-the-wallet)
+- [Settings *Mobile Wallet Settings*](/en/guides/mobile-wallet/settings)
+- [Core Info *Mobile wallet Core info*](/en/guides/mobile-wallet/core-info)
 {.links-list}
