@@ -2,7 +2,7 @@
 title: PROFILES
 description: Profiles API
 published: true
-date: 2022-11-02T00:28:22.339Z
+date: 2022-11-02T21:37:45.487Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:35:02.340Z
@@ -26,23 +26,23 @@ profiles/verb/noun
 
 The following verbs are currently supported by this API command-set:
 
-[`create`](broken-reference) - Generate a new object of supported type.\
-[`update`](broken-reference) - Updates the specified object registers.\
-[`recover`](broken-reference) - Recovers a profile account.\
-[`status`](broken-reference) - Status information of a profile.\
-[`notifications`](broken-reference) - List all notifications that modified specified object.\
-[`transactions`](broken-reference) - List all transactions that modified specified object.
+[`create`](#create) - Generate a new object of supported type.
+[`update`](#update) - Updates the specified object registers.
+[`recover`](#recover) - Recovers a profile account.
+[`status`](#status) - Status information of a profile.
+[`notifications`](#notifications) - List all notifications that modified specified object.
+[`transactions`](#transactions) - List all transactions that modified specified object.
 
 ## `Supported Nouns`
 
 The following nouns are supported for this API command-set:
 
-\[`master`] - The default profile that controls all sub-profiles.\
-\[`auth`] - A crypto object register for login auth.\
-\[`credentials`] - Credentials used to secure profiles.\
-\[`recovery`] - An object which represents recovery for the profile.
+[`master`] - The default profile that controls all sub-profiles.
+[`auth`] - A crypto object register for login auth.
+[`credentials`] - Credentials used to secure profiles.
+[`recovery`] - An object which represents recovery for the profile.
 
-## `create` <a href="#user-content-create" id="user-content-create"></a>
+## create <a href="#create" id="create"></a>
 
 This will create a new profile or initializes the auth key for older signature chains to make them compatible with profiles, specified by the noun.
 
@@ -52,11 +52,11 @@ profiles/create/noun
 
 This command only supports the `master` and `auth` nouns.
 
-#### **create/master**
+#### create/master
 
 This will create a new profile specified by given noun. The profile is secured by a combination of `username`, `password`, and `PIN`.
 
-#### **create/auth**
+#### create/auth
 
 This method will initialize a `auth` crypto object register for signature chains created with the early release of Tritium. This makes these signature chain compatible with profiles on Tritium++. Existing users may have to convert their old signature chains to be compatible to login with Tritium++ profiles if they are not able to create a session.
 
@@ -78,7 +78,7 @@ This method will initialize a `auth` crypto object register for signature chains
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -87,13 +87,13 @@ This method will initialize a `auth` crypto object register for signature chains
 }
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the profile was created successfully.
 
 `txid` : The ID (hash) of the transaction that includes the created object.
 
-## `update` <a href="#user-content-update" id="user-content-update"></a>
+## update <a href="#update" id="update"></a>
 
 This method provides the user with the ability to change the password, pin, or recovery seed for a profile, specified by the noun.
 
@@ -103,11 +103,11 @@ profiles/update/noun
 
 This command only supports the `credentials` and `recovery` nouns.
 
-#### **update/credentials**
+#### update/credentials
 
 This method provides the user with the ability to change the password, pin for this signature chain. Updating the credentials will also result in each of the keys in the sig chain's Crypto object being regenerated based on the new password / pin.
 
-#### **update/recovery**
+#### update/recovery
 
 This method provides the user with the ability to set or change the restore seed for this signature chain.
 
@@ -119,13 +119,13 @@ This method provides the user with the ability to set or change the restore seed
 
 `pin` : Required if **locked**. The `PIN` to authorize the transaction.
 
-#### **update/credentials**
+#### update/credentials
 
 `new_password` : Required by noun **credentials**. The new password to set for for this signature chain. This is optional if new\_pin is provided
 
 `new_pin` : Required by noun **credentials**. The new pin to set for this signature chain. This is optional if `new_password` is provided.
 
-#### **update/recovery**
+#### update/recovery
 
 `recovery` : Required by noun **recovery** The existing recovery seed for this signature chain. This is only required if an existing recovery seed is being updated via new\_recovery.
 
@@ -135,7 +135,7 @@ This method provides the user with the ability to set or change the restore seed
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -145,11 +145,11 @@ This method provides the user with the ability to set or change the restore seed
 [Completed in 18533.182336 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the profile was updated successfully. `txid` : The ID (hash) of the transaction for the updated profile .
 
-## `recover` <a href="#user-content-recover" id="user-content-recover"></a>
+## recover <a href="#recover" id="recover"></a>
 
 This recovers the profile specified by the noun, in case of lost password and pin. The user has to be logged out to recover his profile.
 
@@ -171,7 +171,7 @@ This command only supports the `master` noun.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -181,13 +181,13 @@ This command only supports the `master` noun.
 [Completed in 15242.801822 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the profile was recovered successfully.
 
 `txid` : The ID (hash) of the transaction for the recovered object.
 
-## `status` <a href="#user-content-status" id="user-content-status"></a>
+## status <a href="#status" id="status"></a>
 
 Returns status information for the requested profile.
 
@@ -203,7 +203,7 @@ This command only supports the `master` noun.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -216,7 +216,7 @@ This command only supports the `master` noun.
 [Completed in 0.108500 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `genesis` : This is the profile username hash, also known as owner hash.
 
@@ -228,7 +228,7 @@ This command only supports the `master` noun.
 
 `transactions` : The total transaction count for this profile
 
-## `notifications` <a href="#user-content-notifications" id="user-content-notifications"></a>
+## notifications <a href="#notifications" id="notifications"></a>
 
 This will list off all of the transactions sent to a particular signature chain. It is useful for identifying transactions that you need to accept such as credits.
 
@@ -246,7 +246,7 @@ This method supports the Sorting / Filtering parameters.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -266,7 +266,7 @@ This method supports the Sorting / Filtering parameters.
 [Completed in 0.256792 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `id` : The sequential ID of this transaction.
 
@@ -296,7 +296,7 @@ This method supports the Sorting / Filtering parameters.
 
 `dividend_payment` : Flag indicating that this debit is a split dividend payment to a tokenized asset
 
-## `transactions` <a href="#user-content-transactions" id="user-content-transactions"></a>
+## transactions <a href="#transactions" id="transactions"></a>
 
 This will list off all of the transactions for the requested profile.
 
@@ -320,7 +320,7 @@ This method supports the Sorting / Filtering parameters.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -412,5 +412,5 @@ This method supports the Sorting / Filtering parameters.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
 
-`object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert, lisp, network, sign and verify).\
+`object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert, lisp, network, sign and verify).
 }
