@@ -2,7 +2,7 @@
 title: PROFILE
 description: Profile API
 published: true
-date: 2022-11-02T00:29:07.913Z
+date: 2022-11-02T00:32:46.628Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:21:17.033Z
@@ -282,17 +282,17 @@ Ta metoda obsługuje parametry sortowania/filtrowania.
 
 `to_name` : W przypadku transakcji DEBIT nazwa konta, na które jest dokonywany debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`amount` : ilość tokena transakcji.
+`amount` : Ilość tokena transakcji.
 
-`token` : adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS
+`token` : Adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS
 
-`ticker` : nazwa tokena, którego dotyczy transakcja.
+`ticker` : Nazwa tokena, którego dotyczy transakcja.
 
 `reference` : W przypadku transakcji DEBIT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
 
-`proof` : adres rejestru konta tokena potwierdzającego debet z tytułu dywidendy podzielonej.
+`proof` : Adres rejestru konta tokena potwierdzającego debet z tytułu dywidendy podzielonej.
 
-`dividend_payment` : flaga wskazująca, że ​​to obciążenie jest wypłatą dywidendy podzielonej na tokenizowany zasób
+`dividend_payment` : Flaga wskazująca, że ​​to obciążenie jest wypłatą dywidendy podzielonej na tokenizowany zasób
 
 ## `transactions` <a href="#transakcje-zawartości-użytkownika" id="transakcje-zawartości-użytkownika"></a>
 
