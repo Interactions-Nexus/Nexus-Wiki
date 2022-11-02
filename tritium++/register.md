@@ -2,7 +2,7 @@
 title: REGISTER
 description: Register API
 published: true
-date: 2022-11-02T20:23:51.951Z
+date: 2022-11-02T20:24:09.092Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:09.936Z
