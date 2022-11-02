@@ -2,7 +2,7 @@
 title: Using the Mobile Wallet
 description: 
 published: true
-date: 2022-11-02T08:02:31.412Z
+date: 2022-11-02T09:56:46.895Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-01T18:15:09.592Z
