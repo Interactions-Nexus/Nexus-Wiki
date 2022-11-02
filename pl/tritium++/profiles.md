@@ -2,7 +2,7 @@
 title: PROFILE
 description: Profile API
 published: true
-date: 2022-11-01T23:37:22.488Z
+date: 2022-11-02T00:07:39.620Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:21:17.033Z
@@ -50,11 +50,11 @@ profiles/create/noun
 
 To polecenie obsługuje tylko rzeczowniki `master` i `auth`.
 
-#### **utwórz/master**
+#### **create/master**
 
-Spowoduje to utworzenie nowego profilu określonego przez podany rzeczownik. Profil jest zabezpieczony kombinacją „nazwy użytkownika”, „hasła” i „kodu PIN”.
+Spowoduje to utworzenie nowego profilu określonego przez podany rzeczownik. Profil jest zabezpieczony kombinacją `nazwy użytkownika`, `hasła` i `kodu PIN`.
 
-#### **utwórz/uwierzytelnij**
+#### **create/auth**
 
 Ta metoda zainicjuje rejestr obiektów kryptograficznych `auth` dla łańcuchów podpisów utworzonych we wczesnej wersji Tritium. To sprawia, że ​​ten łańcuch sygnatur jest kompatybilny z profilami na Tritium++. Obecni użytkownicy mogą być zmuszeni do przekonwertowania swoich starych łańcuchów podpisów, aby były zgodne z logowaniem za pomocą profili Tritium++, jeśli nie są w stanie utworzyć sesji.
 
@@ -70,9 +70,9 @@ Ta metoda zainicjuje rejestr obiektów kryptograficznych `auth` dla łańcuchów
 
 * `nazwa użytkownika` musi mieć co najmniej 2 znaki.
 * `hasło` musi mieć co najmniej 8 znaków.
-* „PIN” musi mieć co najmniej 4 znaki.
+* `PIN` musi mieć co najmniej 4 znaki.
 * w nazwie użytkownika rozróżniana jest wielkość liter i nie można jej zmienić. Ostrożnie wybierz nazwę użytkownika i zrób jej kopię zapasową wraz z hasłem i kodem PIN.
-* Nie używaj dwukropka „:” na końcu nazwy użytkownika.
+* Nie używaj dwukropka ':' na końcu nazwy użytkownika.
 
 ### Wyniki:
 
@@ -87,7 +87,7 @@ Ta metoda zainicjuje rejestr obiektów kryptograficznych `auth` dla łańcuchów
 
 #### **Zwracane wartości:**
 
-`success` : flaga logiczna wskazująca, że profil został pomyślnie utworzony.
+`success` : Flaga logiczna wskazująca, że profil został pomyślnie utworzony.
 
 `txid` : Identyfikator (hash) transakcji, która zawiera utworzony obiekt.
 
@@ -101,11 +101,11 @@ profiles/update/noun
 
 To polecenie obsługuje tylko rzeczowniki `credentials` i `recovery`.
 
-#### **aktualizacja/poświadczenia**
+#### **update/credentials**
 
 Ta metoda zapewnia użytkownikowi możliwość zmiany hasła, pinu dla tego łańcucha podpisów. Aktualizacja poświadczeń spowoduje również zregenerowanie każdego z kluczy w obiekcie Crypto łańcucha sig na podstawie nowego hasła / kodu PIN.
 
-#### **aktualizacja/odzyskiwanie**
+#### **update/recovery**
 
 Ta metoda zapewnia użytkownikowi możliwość ustawienia lub zmiany źródła przywracania dla tego łańcucha sygnatur.
 
@@ -113,23 +113,23 @@ Ta metoda zapewnia użytkownikowi możliwość ustawienia lub zmiany źródła p
 
 `session` : Wymagane przez **argument** `-multiuser=1` w celu zidentyfikowania profilu użytkownika.
 
-`hasło` : Wymagane do **uwierzytelnienia**. Istniejące hasło dla tego łańcucha podpisów.
+`password` : Wymagane do **uwierzytelnienia**. Istniejące hasło dla tego łańcucha podpisów.
 
-`pin` : Wymagane, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
+`pin` : Wymagane, jeśli **zablokowany**. Kod PIN do autoryzacji transakcji.
 
-#### **aktualizacja/poświadczenia**
+#### **update/credentials**
 
-`new_password` : Wymagane przez rzeczownik **credentials**. Nowe hasło do ustawienia dla tego łańcucha podpisów. Jest to opcjonalne, jeśli podano nowy\_pin
+`new_password` : Wymagane przez rzeczownik **credentials**. Nowe hasło do ustawienia dla tego łańcucha podpisów. Jest to opcjonalne, jeśli podano `new_pin`.
 
-`new_pin` : Wymagane przez rzeczownik **poświadczenia**. Nowa szpilka do ustawienia dla tego sygnowanego łańcuszka. Jest to opcjonalne, jeśli podano `nowe_hasło`.
+`new_pin` : Wymagane przez rzeczownik **credentials**. Nowy pin do ustawienia dla tego łańcucha podpisów. Jest to opcjonalne, jeśli podano `new_password`.
 
-#### **aktualizacja/odzyskiwanie**
+#### **update/recovery**
 
-`recovery` : Wymagane przez rzeczownik **recovery** Istniejące ziarno odzyskiwania dla tego łańcucha sygnatur. Jest to wymagane tylko wtedy, gdy istniejące źródło odzyskiwania jest aktualizowane za pomocą new\_recovery.
+`recovery` : Wymagane przez rzeczownik **recovery**. Istniejący seed odzyskiwania dla tego łańcucha sygnatur. Jest to wymagane tylko wtedy, gdy istniejący seed odzyskiwania jest aktualizowany za pomocą `new_recovery`.
 
-`new_recovery` : Wymagane przez rzeczownik **recovery**. Nowe ziarno odzyskiwania do ustawienia lub zmiany dla tego łańcucha sig. Ziarno odzyskiwania musi mieć co najmniej 40 znaków.
+`new_recovery` : Wymagane przez rzeczownik **recovery**. Nowy seed odzyskiwania do ustawienia lub zmiany dla tego łańcucha sygnatur. Seed odzyskiwania musi mieć co najmniej 40 znaków.
 
-**UWAGA:** w frazie odzyskiwania rozróżniana jest wielkość liter. Pamiętaj, aby poprawnie wpisać frazę odzyskiwania i nie kopiować wklejania, co może dodawać spacje, jeśli nie zostanie wykonane poprawnie. Upewnij się, że wykonałeś kopię zapasową i ponownie sprawdź źródło odzyskiwania oraz utwórz wiele kopii zapasowych w trybie offline.
+**NOTA	:** We frazie odzyskiwania rozróżniana jest wielkość liter. Pamiętaj, aby poprawnie wpisać frazę odzyskiwania i nie kopiować wklejania, co może dodawać spacje, jeśli nie zostanie wykonane poprawnie. Upewnij się, że wykonałeś kopię zapasową i ponownie sprawdź seed odzyskiwania oraz utwórz wiele kopii zapasowych w trybie offline.
 
 ### Wyniki:
 
@@ -145,7 +145,7 @@ Ta metoda zapewnia użytkownikowi możliwość ustawienia lub zmiany źródła p
 
 #### **Zwracane wartości:**
 
-`success` : flaga logiczna wskazująca, że profil został pomyślnie zaktualizowany. `txid` : Identyfikator (hash) transakcji dla zaktualizowanego profilu .
+`success` : Flaga logiczna wskazująca, że profil został pomyślnie zaktualizowany. `txid` : Identyfikator (hash) transakcji dla zaktualizowanego profilu .
 
 ## `recover` <a href="#user-content-recover" id="user-content-recover"></a>
 
@@ -159,13 +159,13 @@ To polecenie obsługuje tylko rzeczownik `master`.
 
 ### Parametry:
 
-`nazwa_użytkownika` : Wymagana do **identyfikacji**. Nazwa użytkownika identyfikująca profil do odzyskania.
+`username` : Wymagane do **identyfikacji**. Nazwa użytkownika identyfikująca profil do odzyskania.
 
 `password` : Wymagane do **ustawienia** nowego hasła. Nowe hasło do skojarzenia z tym profilem.
 
 `pin` : Wymagany do **ustawienia** nowego pinu. Nowy kod PIN do powiązania z tym profilem.
 
-`odzyskiwanie` : Wymagane do **uwierzytelnienia**. Istniejący ziarno odzyskiwania dla tego profilu.
+`recovery` : Wymagane do **uwierzytelnienia**. Istniejący seed odzyskiwania dla tego profilu.
 
 ### Wyniki:
 
@@ -181,7 +181,7 @@ To polecenie obsługuje tylko rzeczownik `master`.
 
 #### **Zwracane wartości:**
 
-`success` : flaga logiczna wskazująca, że profil został pomyślnie odzyskany.
+`success` : Flaga logiczna wskazująca, że profil został pomyślnie odzyskany.
 
 `txid` : Identyfikator (hash) transakcji dla odzyskanego obiektu.
 
@@ -216,15 +216,15 @@ To polecenie obsługuje tylko rzeczownik `master`.
 
 #### **Zwracane wartości:**
 
-`geneza` : To jest skrót nazwy użytkownika profilu, znany również jako skrót właściciela.
+`genesis` : To jest hash nazwy użytkownika profilu, znany również jako hash właściciela.
 
-`confirmed` : flaga logiczna wskazująca, czy transakcja genezy dla tego profilu ma co najmniej jedno potwierdzenie.
+`confirmed` : Flaga logiczna wskazująca, czy transakcja genesis dla tego profilu ma co najmniej jedno potwierdzenie.
 
-`recovery` : flaga wskazująca, czy dla tego profilu ustawiono ziarno odzyskiwania.
+`recovery` : Flaga wskazująca, czy dla tego profilu ustawiono seed odzyskiwania.
 
 `crypto` : Flaga wskazująca, czy rejestr obiektów kryptograficznych został ustawiony dla tego profilu.
 
-`transakcje` : Łączna liczba transakcji dla tego profilu
+`transactions` : Łączna liczba transakcji dla tego profilu
 
 ## `notifications` <a href="#user-content-notifications" id="user-content-notifications"></a>
 
@@ -282,19 +282,19 @@ Ta metoda obsługuje parametry sortowania/filtrowania.
 
 `to_name` : W przypadku transakcji DEBIT nazwa konta, na które jest dokonywany debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`amount` : kwota tokena transakcji.
+`amount` : ilość tokena transakcji.
 
 `token` : adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS
 
 `ticker` : nazwa tokena, którego dotyczy transakcja.
 
-`referencja` : W przypadku transakcji DEBIT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
+`reference` : W przypadku transakcji DEBIT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
 
-`dowód` : adres rejestru konta tokena potwierdzającego debet z tytułu dywidendy podzielonej.
+`proof` : adres rejestru konta tokena potwierdzającego debet z tytułu dywidendy podzielonej.
 
 `dividend_payment` : flaga wskazująca, że ​​to obciążenie jest wypłatą dywidendy podzielonej na tokenizowany zasób
 
-## `transakcje` <a href="#transakcje-zawartości-użytkownika" id="transakcje-zawartości-użytkownika"></a>
+## `transactions` <a href="#transakcje-zawartości-użytkownika" id="transakcje-zawartości-użytkownika"></a>
 
 Spowoduje to wyświetlenie wszystkich transakcji dla żądanego profilu.
 
