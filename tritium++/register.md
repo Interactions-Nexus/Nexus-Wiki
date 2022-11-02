@@ -2,7 +2,7 @@
 title: REGISTER
 description: Register API
 published: true
-date: 2022-11-02T21:05:38.861Z
+date: 2022-11-02T21:08:47.478Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:09.936Z
@@ -114,9 +114,9 @@ Retrieves information for a specified append register.
 
 `address` : Required to **identify** the register address of the account/trust/token. This is optional if the `name` is provided.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md).
+[`Filtering`](/en/tritium++/filtering)
 
 ## list <a href="#list" id="list"></a>
 
@@ -158,11 +158,11 @@ Returns a list of all the append registers.
 
 `where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found here: `Queries`
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md).
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ## history <a href="#history" id="history"></a>
 
@@ -256,13 +256,13 @@ List out all the transactions for the specified append register.
 * `summary` : type, version, sequence, timestamp, operation, and confirmations.
 * `detail` : genesis, nexthash, prevhash, pubkey and signature.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
-## `Register API with Query DSL`
+## Register API with Query DSL
 
 A few register API calls which will showcase the power of registers, LLD, which is the database and Query-DSL. This is going to be a powerful tool for developers.
 
