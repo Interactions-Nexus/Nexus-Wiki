@@ -2,7 +2,7 @@
 title: Using the Mobile Wallet
 description: 
 published: true
-date: 2022-11-02T09:56:46.895Z
+date: 2022-11-02T09:58:02.913Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-01T18:15:09.592Z
@@ -17,7 +17,7 @@ Click on the Nexus wallet icon to launch the application. On first launch, befor
 
 ![mobile-wallet-sync.jpeg](/mobile-wallet-sync.jpeg) <p align = center>*Nexus Wallet Synchronize screen*</p>
 
-Once the wallet it fully synched the wallet will show the Login screen
+Once the wallet it fully synched, it will launch the Login screen
 
 ![mobile-wallet-login-screen.jpeg](/mobile-wallet-login-screen.jpeg)<p align = center>*Nexus Wallet Login Screen*</p>
 
