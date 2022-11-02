@@ -2,7 +2,7 @@
 title: REGISTER
 description: Register API
 published: true
-date: 2022-11-02T20:55:35.646Z
+date: 2022-11-02T21:05:38.861Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:09.936Z
@@ -27,9 +27,9 @@ register/verb/noun
 The following verbs are currently supported by this API command-set:
 
 [`get`](#get) - Get object of supported type.
-[`list]` - List all objects owned by given user.
-[`history`] - Generate the history of all last states.
-[`transactions`] - List all transactions that modified specified object.
+[`list`](#list) - List all objects owned by given user.
+[`history`](#history) - Generate the history of all last states.
+[`transactions`](#transactions) - List all transactions that modified specified object.
 
 ## `Supported Nouns`
 
@@ -41,34 +41,32 @@ The following nouns are supported for this API command-set:
 [`readonly`] - An object register of type readonly.
 [`any`] - An object selection noun allowing mixed accounts of different tokens.
 
-## `Supported API/noun`
-
-#### Finance API:
+## Supported API/noun
+###### Finance API:
 
 [`finance:account`] - An object register containing a token-id and balance.
 [`finance:trust`] - An object register containing a token-id, balance, and trust.
 [`finance:token`] - An object register containing a token-id, balance, supply, and decimals.
 
-#### `Names API:`
+###### Names API:
 
 [`names:local`] - An object register containing local names.
 [`names:global`] - An object register containing global names.
 [`names:namespaces`] - An object register containing namespaces.
-
-#### Invoices API:
+###### Invoices API:
 
 [`invoices:invoice`] - An object register containing invoices.
 [`invoices:outstanding`] - An object register containing outstanding invoices.
-[`invoices:paid`] - An object register containing outstanding invoices.
+[`invoices:paid`] - An object register containing paid invoices.
 [`invoices:cancelled`] - An object register containing cancelled invoices.
 
-#### Assets API:
+###### Assets API:
 
 [`assets:asset`] - An object register containing asset object.
 [`assets:raw`] - An object register containing raw asset object.
 [`assets:readonly`] - An object register containing readonly asset object.
 
-#### Supply API:
+###### Supply API:
 
 [`supply:item`] - An object register containing item object.
 [`supply:raw`] - An object register containing raw item object.
@@ -120,7 +118,7 @@ Retrieves information for a specified append register.
 
 [`Filtering`](../filtering.md).
 
-## `list` <a href="#list" id="list"></a>
+## list <a href="#list" id="list"></a>
 
 This method provides the user with the ability to directly access the object register data specified by the noun and does not need the user to be logged in.
 
@@ -166,7 +164,7 @@ Returns a list of all the append registers.
 
 [`Operators`](https://docs/API/OPERATORS.MD).
 
-## `history` <a href="#history" id="history"></a>
+## history <a href="#history" id="history"></a>
 
 This will get the history of the specified noun.
 
@@ -208,13 +206,13 @@ This will get the history and ownership of the specified append register.
 
 `address` : Required to **identify** the register address of the account/trust/token. This is optional if the `name` is provided.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
-## `transactions` <a href="#transactions" id="transactions"></a>
+## transactions <a href="#transactions" id="transactions"></a>
 
 This will list off all of the transactions for the specified noun.
 
