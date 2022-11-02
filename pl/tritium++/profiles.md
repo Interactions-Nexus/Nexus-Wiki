@@ -2,7 +2,7 @@
 title: PROFILE
 description: Profile API
 published: true
-date: 2022-11-02T00:24:15.677Z
+date: 2022-11-02T00:29:07.913Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:21:17.033Z
@@ -387,7 +387,7 @@ Ta metoda obsługuje parametry Sortowania/Filtrowania.
 
 `OP` : Operacja kontraktu. Może być APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
 
-`for` : Dla transakcji CREDIT, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
+`for` : Dla transakcji CREDIT - kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
 
 `txid` : Transakcja, która została uznana / zgłoszona.
 
@@ -395,13 +395,13 @@ Ta metoda obsługuje parametry Sortowania/Filtrowania.
 
 `proof`: Adres rejestru potwierdzający kredyt.
 
-`from` : Dla transakcji DEBIT, CREDIT, FEE adres rejestrowy konta, z którego dokonywany jest debet.
+`from` : Dla transakcji DEBIT, CREDIT, FEE - adres rejestrowy konta, z którego dokonywany jest debet.
 
-`from_name` : W przypadku transakcji DEBIT, CREDIT, FEE nazwa rachunku, z którego dokonywany jest debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+`from_name` : W przypadku transakcji DEBIT, CREDIT, FEE - nazwa rachunku, z którego dokonywany jest debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`to` : W przypadku transakcji DEBIT i CREDIT adres rejestru konta odbiorcy.
+`to` : W przypadku transakcji DEBIT i CREDIT - adres rejestru konta odbiorcy.
 
-`to_name` : W przypadku transakcji DEBIT i CREDIT nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+`to_name` : W przypadku transakcji DEBIT i CREDIT - nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
 `amount` : Ilość tokena transakcji.
 
@@ -409,7 +409,6 @@ Ta metoda obsługuje parametry Sortowania/Filtrowania.
 
 `token_name` : Nazwa tokena, którego dotyczy transakcja.
 
-`reference` : W przypadku transakcji DEBIT i KREDYT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
+`reference` : W przypadku transakcji DEBIT i CREDIT - jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
 
-`object` : Zwraca listę wszystkich zaszyfrowanych kluczy publicznych w rejestrze obiektów kryptograficznych dla określonego profilu. Wynik obiektu będzie zawierał dziewięć domyślnych kluczy (app1, app2, app3, auth, cert lisp, network, sign i weryfikacji).\
-}
+`object` : Zwraca listę wszystkich zaszyfrowanych kluczy publicznych w rejestrze obiektów kryptograficznych dla określonego profilu. Wynik obiektu będzie zawierał dziewięć domyślnych kluczy (app1, app2, app3, auth, cert, lisp, network, sign, verify).
