@@ -2,7 +2,7 @@
 title: SESSIONS
 description:  Sessions API
 published: true
-date: 2022-11-02T21:50:36.445Z
+date: 2022-11-02T21:57:28.447Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:17.363Z
@@ -21,6 +21,8 @@ The minimum required components of the URI are:
 ```
 sessions/verb/noun
 ```
+---
+&nbsp;
 
 ## Supported Verbs
 
@@ -34,11 +36,17 @@ The following verbs are currently supported by this API command-set:
 [`terminate`](#terminate) - Terminates a session specified by the noun.\
 [`status`](#status) - Returns status information for the session specified by the noun.
 
+---
+&nbsp;
+
 ## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
-[`local`] - The location of the session.
+`local` - The location of the session.
+
+---
+&nbsp;
 
 ## create <a href="#create" id="create"></a>
 
@@ -75,6 +83,9 @@ This command only supports the `local` noun.
 `genesis` : This is the profile username hash, also known as owner hash.
 
 `session` : When using multi-user API mode, an additional session value is returned and must be supplied in subsequent API calls, to allow the managing of multiple login sessions.
+
+---
+&nbsp;
 
 ## unlock <a href="#unlock" id="unlock"></a>
 
@@ -128,6 +139,9 @@ These commands only supports the `local` noun.
 
 `transactions` : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).
 
+---
+&nbsp;
+
 ## lock <a href="#lock" id="lock"></a>
 
 This will lock the specified session by purging the PIN stored in encrypted memory, making it unavailable for use unless it is either unlocked or the PIN is passed in to all API requests.
@@ -180,6 +194,9 @@ These commands only supports the `local` noun.
 
 `transactions` : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).
 
+---
+&nbsp;
+
 ## save <a href="#save" id="save"></a>
 
 This will save the users session to the local database, allowing the session to be resumed at a later time without the need to login or unlock. The users PIN is required as this is used (in conjunction with the genesis) to encrypt the session data before persisting it to the local database.
@@ -219,6 +236,9 @@ These commands only supports the `local` noun.
 `genesis` : This is the profile username hash, also known as owner hash.
 
 `success` : Boolean flag indicating that the session was saved successfully .
+
+---
+&nbsp;
 
 ## load <a href="#load" id="load"></a>
 
@@ -263,6 +283,9 @@ These commands only supports the `local` noun.
 
 `session` : When using multi-user API mode, an additional session value is returned to identify the session.
 
+---
+&nbsp;
+
 ## terminate <a href="#terminate" id="terminate"></a>
 
 This will terminate an active session specified by given noun.
@@ -296,9 +319,8 @@ This command only supports the `local` noun.
 
 `success` : Boolean flag indicating that the active session was terminated successfully.
 
-
 ---
-
+&nbsp;
 
 ## status <a href="#status" id="status"></a>
 
