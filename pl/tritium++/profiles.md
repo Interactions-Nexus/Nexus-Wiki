@@ -2,7 +2,7 @@
 title: PROFILE
 description: Profile API
 published: true
-date: 2022-11-02T00:07:39.620Z
+date: 2022-11-02T00:14:33.832Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:21:17.033Z
@@ -308,13 +308,13 @@ To polecenie obsługuje tylko rzeczownik `master`.
 
 `session` : Wymagane przez **argument** `-multiuser=1` do określenia sesji użytkownika, która tworzy transakcję.
 
-`verbose` : opcjonalny, **określa**, ile danych transakcji należy uwzględnić w odpowiedzi. Obsługiwane wartości to:
+`verbose` : Opcjonalny, **określa**, ile danych transakcji należy uwzględnić w odpowiedzi. Obsługiwane wartości to:
 
-* `domyślny` : hash
-* `podsumowanie` : typ, wersja, kolejność, znacznik czasu, operacja i potwierdzenia.
-* `detail` : geneza, nexthash, prevhash, pubkey i sygnatura.
+* `default` : hash
+* `summary` : type, version, sequence, timestamp, operation, confirmations.
+* `detail` : genesis, nexthash, prevhash, pubkey, signature.
 
-Ta metoda obsługuje parametry sortowania/filtrowania.
+Ta metoda obsługuje parametry Sortowania/Filtrowania.
 
 ### Wyniki:
 
@@ -359,9 +359,9 @@ Ta metoda obsługuje parametry sortowania/filtrowania.
 
 `txid` : skrót transakcji.
 
-`typ` : Opis transakcji (starsza | baza trytu | zaufanie | geneza | użytkownik).
+`type` : Opis transakcji (starsza | baza trytu | zaufanie | geneza | użytkownik).
 
-`wersja` : wersja serializacji transakcji.
+`version` : wersja serializacji transakcji.
 
 `sequence` : Numer kolejny tej transakcji w łańcuchu podpisów.
 
@@ -371,7 +371,7 @@ Ta metoda obsługuje parametry sortowania/filtrowania.
 
 `confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję przez sieć.
 
-`geneza` : To jest skrót nazwy użytkownika profilu, znany również jako skrót właściciela.
+`genesis` : To jest skrót nazwy użytkownika profilu, znany również jako skrót właściciela.
 
 `nexthash` : Hash następnej transakcji w sekwencji.
 
@@ -379,7 +379,7 @@ Ta metoda obsługuje parametry sortowania/filtrowania.
 
 `pubkey` : klucz publiczny.
 
-`podpis` : skrót podpisu.
+`signature` : skrót podpisu.
 
 `contracts` : Tablica kontraktów powiązanych z tą transakcją oraz ich szczegóły z kodami operacyjnymi.\
 {\
@@ -387,13 +387,13 @@ Ta metoda obsługuje parametry sortowania/filtrowania.
 
 `OP` : Operacja kontraktu. Może być DODATEK, ROSZCZENIE, COINBASE, UTWÓRZ, KREDYT, DEBET, OPŁATA, GENESIS, DZIEDZICTWO, PRZELEW, ZAUFANIE, STAWKA, ODSTAWIANIE, NAPISZ.
 
-„for” : dla transakcji KREDYTOWYCH, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
+`for` : dla transakcji KREDYTOWYCH, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
 
 `txid` : Transakcja, która została uznana / zgłoszona.
 
-„kontrakt” : Identyfikator kontraktu w ramach transakcji, która została uznana / zgłoszona.
+`contract` : Identyfikator kontraktu w ramach transakcji, która została uznana / zgłoszona.
 
-`dowód`: adres rejestru potwierdzający kredyt.
+`proof`: adres rejestru potwierdzający kredyt.
 
 `from` : Dla transakcji DEBIT, KREDYT, OPŁATY adres rejestrowy konta, z którego dokonywany jest debet.
 
@@ -409,7 +409,7 @@ Ta metoda obsługuje parametry sortowania/filtrowania.
 
 `token_name` : nazwa tokena, którego dotyczy transakcja.
 
-`referencja` : W przypadku transakcji DEBIT i KREDYT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
+`reference` : W przypadku transakcji DEBIT i KREDYT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
 
 `object` : Zwraca listę wszystkich zaszyfrowanych kluczy publicznych w rejestrze obiektów kryptograficznych dla określonego profilu. Wynik obiektu będzie zawierał dziewięć domyślnych kluczy (app1, app2, app3, auth, cert lisp, network, sign i weryfikacji).\
 }
