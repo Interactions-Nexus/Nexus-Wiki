@@ -2,7 +2,7 @@
 title: FINANCE 
 description: Finance API
 published: true
-date: 2022-10-06T11:28:49.270Z
+date: 2022-11-02T22:44:58.297Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:36.604Z
@@ -21,43 +21,54 @@ The minimum required components of the URI are:
 ```
 finance/verb/noun
 ```
+---
+&nbsp;
 
-## `Supported Verbs`
+## Supported Verbs
 
 The following verbs are currently supported by this API command-set:
 
-[`burn`](broken-reference) - Remove a given token from circulation.\
-[`create`](broken-reference) - Generate a new object of supported type.\
-[`credit`](broken-reference) - Claim funds issued to account from debit.\
-[`debit`](broken-reference) - Issue funds from supported type.\
-[`get`](broken-reference) - Get object of supported type.\
-[`list`](broken-reference) - List all objects owned by given user.\
-[`history`](broken-reference) - Generate the history of all last states.\
-[`transactions`](broken-reference) - List all transactions that modified specified object.
+[`create`](#create) - Generate a new object of supported type.
+[`debit`](#debit) - Issue funds from supported type.
+[`credit`](#credit) - Claim funds issued to account from debit.
+[`burn`](#burn) - Remove a given token from circulation.
+[`get`](#get) - Get object of supported type.
+[`list`](#list) - List all objects owned by given user.
+[`history`](#history) - Generate the history of all last states.
+[`transactions`](#transactions) - List all transactions that modified specified object.
 
-## `Supported Nouns`
+---
+&nbsp;
+
+## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
-\[`account`] - An object register containing a token-id and balance.\
-\[`trust`] - An object register containing a token-id, balance, and trust.\
-\[`token`] - An object register containing a token-id, balance, supply, and decimals.\
-\[`any`] - An object selection noun allowing mixed accounts of different tokens.\
-\[`all`] - An object selection noun to collect all accounts for given token type.
+[`account`] - An object register containing a token-id and balance.
+[`trust`] - An object register containing a token-id, balance, and trust.
+[`token`] - An object register containing a token-id, balance, supply, and decimals.
+[`any`] - An object selection noun allowing mixed accounts of different tokens.
+[`all`] - An object selection noun to collect all accounts for given token type.
 
-## `Direct Endpoints`
+---
+&nbsp;
+
+## Direct Endpoints
 
 The following commands are direct endpoints and thus do not support the above `verb` and `noun` structure available above.
 
-[`get/balances`](broken-reference)\
-[`get/stakeinfo`](broken-reference)\
-[`set/stake`](broken-reference)\
-[`void/transaction`](broken-reference)\
-[`migrate/accounts`](broken-reference)
+[`get/balances`](#get/balances)
+[`get/stakeinfo`](get/stakeinfo)
+[`set/stake`](#set/stake)
+[`void/transaction`](#void/transaction)
+[`migrate/accounts`](#migrate/accounts)
 
 Direct endpoints support filters and operators.
 
-## `create` <a href="#user-content-create" id="user-content-create"></a>
+---
+&nbsp;
+
+## create <a href="#create" id="create"></a>
 
 Create a new object register specified by given noun.
 
@@ -89,7 +100,7 @@ This command does not support the `any` or `all` nouns.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -99,13 +110,16 @@ This command does not support the `any` or `all` nouns.
 }
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The hash of the transaction that was generated for this tx. If using `-autotx` this field will be omitted.
 
 `address` : The register address for this account. The address (or name that hashes to this address) is needed when creating crediting or debiting the account.
 
-## `debit` <a href="#user-content-debit" id="user-content-debit"></a>
+---
+&nbsp;
+
+## debit <a href="#debit" id="debit"></a>
 
 Deduct an amount of NXS or token specified by the noun and send it to another account or legacy UTXO address. Only NXS can be sent to the legacy address.
 
@@ -141,7 +155,7 @@ This deducts an amount of tokens from a token address to send to a token account
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -151,13 +165,16 @@ This deducts an amount of tokens from a token address to send to a token account
 [Completed in 4979.735275 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the debit was successful.
 
 `txid` : The ID (hash) of the transaction that includes the debit.
 
-## `credit` <a href="#user-content-credit" id="user-content-credit"></a>
+---
+&nbsp;
+
+## credit <a href="#credit" id="credit"></a>
 
 Create a new object register specified by given noun.
 
@@ -171,6 +188,7 @@ Increment an amount received from a NXS account, token account or token address.
 
 Increment an amount of tokens received from a token account.
 
+
 ### Parameters:
 
 `pin` : Required if **locked**. The `PIN` for this profile.
@@ -179,9 +197,10 @@ Increment an amount of tokens received from a token account.
 
 `txid` : The hash in **hexadecimal** encoding of the transaction that we are crediting.
 
+
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -191,17 +210,21 @@ Increment an amount of tokens received from a token account.
 [Completed in 4979.735275 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `txid` : The ID (hash) of the transaction that includes the account creation.
 
 `address` : The register address for this account. The address (or name that hashes to this address) is needed when creating crediting or debiting the account.
 
-## `burn` <a href="#user-content-burn" id="user-content-burn"></a>
+---
+&nbsp;
+
+## `burn` <a href="#burn" id="burn"></a>
 
 This method can be used to take tokens permanently out of the current supply, a process commonly known as burning. The method will debit a token account and send the tokens back to the token address. However the transaction contains a condition that will always evaluate to false, guaranteeing that the debit can not be credited by the token issuer nor the sender. The result is that the amount burned will always appear in the "pending" balance of the token.
 
 This command only supports the `account` noun.
+
 
 ### Parameters:
 
@@ -216,6 +239,7 @@ This command only supports the `account` noun.
 `amount` : Required the **amount** of tokens to burn.
 
 `reference` : Optional field allows callers to provide a **reference**, which the recipient can then use to relate the transaction to an order number, invoice number etc. The reference is be a 64-bit unsigned integer in the range of 0 to 18446744073709551615
+
 
 ### Results:
 
@@ -238,21 +262,24 @@ This command only supports the `account` noun.
 
 `txid` : The hash of the transaction that was generated for this tx. If using -autotx this field will be omitted.
 
-## `get` <a href="#user-content-get" id="user-content-get"></a>
+---
+&nbsp;
+
+## get <a href="#get" id="get"></a>
 
 Retrieves information for a single object for a type specified by the noun
 
 This command supports the `account`, `trust` and `token` nouns.
 
-**get/account**
+get/account
 
 Retrieves information for a specified NXS or token account.
 
-**get/trust**
+get/trust
 
 Retrieves information for a specified trust account.
 
-**get/token**
+get/token
 
 Retrieves information for a specified token address.
 
@@ -264,13 +291,13 @@ Retrieves information for a specified token address.
 
 `address` : Required to **identify** the register address of the account / trust / token. This is optional if the `name` is provided.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting).
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -291,7 +318,7 @@ Retrieves information for a specified token address.
 [Completed in 0.301107 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `owner` : The genesis hash of the profile that owns this account.
 
@@ -325,7 +352,10 @@ Retrieves information for a specified token address.
 
 `address` : The register address of the account, trust or token.
 
-## `list` <a href="#user-content-list" id="user-content-list"></a>
+---
+&nbsp;
+
+## `list` <a href="#list" id="list"></a>
 
 This will list off all of the object register details specified by the noun.
 
@@ -349,15 +379,15 @@ This lists all the token addresses for the logged in user.
 
 `where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at `Queries`.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators).
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -379,7 +409,7 @@ This lists all the token addresses for the logged in user.
 [Completed in 0.473708 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `owner` : The genesis hash of the profile that owns this account.
 
@@ -413,7 +443,10 @@ This lists all the token addresses for the logged in user.
 
 `address` : The register address of the account, trust or token.
 
-## `history` <a href="#user-content-history" id="user-content-history"></a>
+---
+&nbsp;
+
+## history <a href="#history" id="history"></a>
 
 This will get the history of the specified noun.
 
@@ -439,15 +472,15 @@ This lists all the token addresses for the logged in user.
 
 `address` : Required to **identify** the register address of the account / trust / token. This is optional if the `name` is provided.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting).
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -481,7 +514,7 @@ This lists all the token addresses for the logged in user.
 [Completed in 12.427076 ms]
 ```
 
-#### **Return value :**
+#### Return value :
 
 `owner` : The username hash of the profile that owns this object.
 
@@ -519,7 +552,10 @@ This lists all the token addresses for the logged in user.
 
 `action` : The action that occurred - CREATE | MODIFY | TRANSFER | CLAIM.
 
-## `transactions` <a href="#user-content-transactions" id="user-content-transactions"></a>
+---
+&nbsp;
+
+## transactions <a href="#transactions" id="transactions"></a>
 
 This will list off all of the transactions for the specified noun.
 
@@ -551,15 +587,15 @@ List out all the transactions for the token address.
 * summary : type, version, sequence, timestamp, operation, and confirmations.
 * detail : genesis, nexthash, prevhash, pubkey and signature.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting).
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -609,7 +645,7 @@ List out all the transactions for the token address.
 [Completed in 2.187165 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The transaction hash.
 
@@ -635,8 +671,8 @@ List out all the transactions for the token address.
 
 `signature` : The signature hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes.\
-{\
+`contracts` : The array of contracts bound to this transaction and their details with opcodes.
+{
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -665,10 +701,10 @@ List out all the transactions for the token address.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
 
-`object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert lisp, network, sign and verify).\
+`object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert lisp, network, sign and verify).
 }
 
-## `get/balances` <a href="#user-content-get-balances" id="user-content-get-balances"></a>
+## get/balances <a href="#get/balances" id="get/balances"></a>
 
 This will retrieve a summary of balance information across all accounts belonging to the currently logged in profile.
 
@@ -678,11 +714,11 @@ Endpoint:
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied.
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -708,7 +744,7 @@ Endpoint:
 [Completed in 6521.434131 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `available` : The current balance across all accounts that is available to be spent.
 
@@ -728,9 +764,10 @@ Endpoint:
 
 `immature`: The sum of all coinbase transactions that have not yet reached maturity. Only included when returning NXS balances.
 
-***
+---
+&nbsp;
 
-## `get/stakeinfo` <a href="#user-content-get-stakeinfo" id="user-content-get-stakeinfo"></a>
+## get/stakeinfo <a href="#get/stakeinfo" id="get/stakeinfo"></a>
 
 This will retrieve account values and staking metrics for the trust account belonging to the currently logged in signature chain. If called when the stake minter is not running, this method only returns trust account values. Staking metrics will return 0.
 
@@ -744,7 +781,7 @@ Endpoint:
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -763,7 +800,7 @@ Endpoint:
 [Completed in 0.237830 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `address` : The register address of the trust account.
 
@@ -787,7 +824,10 @@ Endpoint:
 
 `change` : Indicates whether or not there is a pending request to change stake. The remaining fields only appear when this one is true.
 
-## `set/stake` <a href="#user-content-set-stake" id="user-content-set-stake"></a>
+---
+&nbsp;
+
+## set/stake <a href="#set/stake" id="set/stake"></a>
 
 Creates a stake change request for a profile's trust account. This request will add or remove stake to set the stake value to the requested amount. If the new value is more than the current stake amount, it adds stake from the account balance. If the new value is less, it removes stake to the account balance (with appropriate trust penalty, if applicable).
 
@@ -809,7 +849,7 @@ Endpoint:
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -817,13 +857,14 @@ Endpoint:
 }
 ```
 
-**Return values:**
+#### Return values:
 
 `txid` : The ID (hash) of the transaction that includes the stake change.
 
-***
+---
+&nbsp;
 
-## `void/transaction` <a href="#user-content-void-transaction" id="user-content-void-transaction"></a>
+## void/transaction <a href="#void/transaction" id="void/transaction"></a>
 
 Voids (reverses) a debit or transfer transaction, only if it has not been credited or claimed by the recipient. The method creates a corresponding credit or claim transaction but back to the originating account / profile. This means that any applicable fees will apply, as will conditions on the debit / transfer transaction (such as expiration conditions).
 
@@ -839,7 +880,7 @@ For debits that were made to a tokenized asset as part of a split payment transa
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -847,13 +888,14 @@ For debits that were made to a tokenized asset as part of a split payment transa
 }
 ```
 
-#### **Return values:**
+#### Return values:
 
 `hash` : The transaction hash of the credit transaction, if successfully committed to the mempool / broadcast.
 
-***
+---
+&nbsp;
 
-## `migrate/accounts` <a href="#user-content-migrate-accounts" id="user-content-migrate-accounts"></a>
+## migrate/accounts <a href="#migrate/accounts" id="migrate/accounts"></a>
 
 This method will migrate your legacy accounts to signature chain accounts, sending the balance across in the process. A new account will be created in your signature chain for each legacy account, with a corresponding matching name (unless flagged not to create names). The balance of each legacy account is sent to the newly created signature chain account in individual transactions. As such, each transaction incurs the default legacy fee of 0.01 NXS, which is deducted from the amount being migrated.
 
@@ -873,7 +915,7 @@ Endpoint:
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -892,7 +934,7 @@ Endpoint:
 ]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `account` : The legacy account name (and tritium account name, unless createname=false was explicitly set in the request).
 
