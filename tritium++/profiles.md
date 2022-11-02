@@ -2,7 +2,7 @@
 title: PROFILES
 description: Profiles API
 published: true
-date: 2022-11-02T21:38:35.874Z
+date: 2022-11-02T21:59:58.056Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:35:02.340Z
@@ -21,6 +21,8 @@ The minimum required components of the URI are:
 ```
 profiles/verb/noun
 ```
+---
+&nbsp;
 
 ## Supported Verbs
 
@@ -33,6 +35,9 @@ The following verbs are currently supported by this API command-set:
 [`notifications`](#notifications) - List all notifications that modified specified object.
 [`transactions`](#transactions) - List all transactions that modified specified object.
 
+---
+&nbsp;
+
 ## Supported Nouns
 
 The following nouns are supported for this API command-set:
@@ -41,6 +46,9 @@ The following nouns are supported for this API command-set:
 [`auth`] - A crypto object register for login auth.
 [`credentials`] - Credentials used to secure profiles.
 [`recovery`] - An object which represents recovery for the profile.
+
+---
+&nbsp;
 
 ## create <a href="#create" id="create"></a>
 
@@ -92,6 +100,9 @@ This method will initialize a `auth` crypto object register for signature chains
 `success` : Boolean flag indicating that the profile was created successfully.
 
 `txid` : The ID (hash) of the transaction that includes the created object.
+
+---
+&nbsp;
 
 ## update <a href="#update" id="update"></a>
 
@@ -149,6 +160,9 @@ This method provides the user with the ability to set or change the restore seed
 
 `success` : Boolean flag indicating that the profile was updated successfully. `txid` : The ID (hash) of the transaction for the updated profile .
 
+---
+&nbsp;
+
 ## recover <a href="#recover" id="recover"></a>
 
 This recovers the profile specified by the noun, in case of lost password and pin. The user has to be logged out to recover his profile.
@@ -186,6 +200,9 @@ This command only supports the `master` noun.
 `success` : Boolean flag indicating that the profile was recovered successfully.
 
 `txid` : The ID (hash) of the transaction for the recovered object.
+
+---
+&nbsp;
 
 ## status <a href="#status" id="status"></a>
 
@@ -227,6 +244,9 @@ This command only supports the `master` noun.
 `crypto` : Flag indicating whether the crypto object register has been set for this profile.
 
 `transactions` : The total transaction count for this profile
+
+---
+&nbsp;
 
 ## notifications <a href="#notifications" id="notifications"></a>
 
@@ -295,6 +315,9 @@ This method supports the Sorting / Filtering parameters.
 `proof` : The register address of the token account proving the the split dividend debit.
 
 `dividend_payment` : Flag indicating that this debit is a split dividend payment to a tokenized asset
+
+---
+&nbsp;
 
 ## transactions <a href="#transactions" id="transactions"></a>
 
