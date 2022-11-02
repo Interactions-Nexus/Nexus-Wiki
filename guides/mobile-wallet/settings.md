@@ -2,7 +2,7 @@
 title: Settings
 description: Mobile Wallet Settings
 published: false
-date: 2022-11-02T08:21:00.002Z
+date: 2022-11-02T08:22:33.949Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T08:21:00.002Z
@@ -10,7 +10,7 @@ dateCreated: 2022-11-02T08:21:00.002Z
 
 # Settings
 
-To access the settings page on the mobile wallet click on the gear icon on the top right corner. See the image below (marked in red).
+To access the settings page on the mobile wallet, click on the gear icon on the top right corner. See the image below (marked in red).
 
 ![mobile-wallet-settings-icon.jpg](/mobile-wallet-settings-icon.jpg)<p align=center>*Mobile Wallet Settings Icon*</p>
 
@@ -26,4 +26,4 @@ Under the options in the application
 
 ![mobile-wallet-color-scheme.jpeg](/mobile-wallet-color-scheme.jpeg)
 
-- Base Currency: This is tht currency 
+- Base Currency: This is the currency in which the balance is shown on the overview screen. 
