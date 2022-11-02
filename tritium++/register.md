@@ -2,7 +2,7 @@
 title: REGISTER
 description: Register API
 published: true
-date: 2022-11-02T20:24:09.092Z
+date: 2022-11-02T20:55:35.646Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:09.936Z
@@ -26,54 +26,55 @@ register/verb/noun
 
 The following verbs are currently supported by this API command-set:
 
-`get` - Get object of supported type.\
-`list` - List all objects owned by given user.\
-`history` - Generate the history of all last states.\
-`transactions` - List all transactions that modified specified object.
+[`get`](#get) - Get object of supported type.
+[`list]` - List all objects owned by given user.
+[`history`] - Generate the history of all last states.
+[`transactions`] - List all transactions that modified specified object.
 
 ## `Supported Nouns`
 
 The following nouns are supported for this API command-set:
 
-\[`crypto`] - An object register which holds public key hashes.\
-\[`object`] - An object register containing user-defined data structure.\
-\[`raw`] - An object register of type raw.\
-\[`readonly`] - An object register of type readonly.\
-\[`any`] - An object selection noun allowing mixed accounts of different tokens.
+[`crypto`] - An object register which holds public key hashes.
+[`object`] - An object register containing user-defined data structure.
+[`raw`] - An object register of type raw.
+[`readonly`] - An object register of type readonly.
+[`any`] - An object selection noun allowing mixed accounts of different tokens.
 
 ## `Supported API/noun`
 
-#### `Finance API:`
+#### Finance API:
 
-\[`finance:account`] - An object register containing a token-id and balance.\
-\[`finance:trust`] - An object register containing a token-id, balance, and trust.\
-\[`finance:token`] - An object register containing a token-id, balance, supply, and decimals.
+[`finance:account`] - An object register containing a token-id and balance.
+[`finance:trust`] - An object register containing a token-id, balance, and trust.
+[`finance:token`] - An object register containing a token-id, balance, supply, and decimals.
 
 #### `Names API:`
 
-\[`names:local`] - An object register containing local names.\
-\[`names:global`] - An object register containing global names.\
-\[`names:namespaces`] - An object register containing namespaces.
+[`names:local`] - An object register containing local names.
+[`names:global`] - An object register containing global names.
+[`names:namespaces`] - An object register containing namespaces.
 
-#### `Invoices API:`
+#### Invoices API:
 
-\[`invoices:outstanding`] - An object register containing outstanding invoices.\
-\[`invoices:paid`] - An object register containing outstanding invoices.\
-\[`invoices:cancelled`] - An object register containing cancelled invoices.
+[`invoices:invoice`] - An object register containing invoices.
+[`invoices:outstanding`] - An object register containing outstanding invoices.
+[`invoices:paid`] - An object register containing outstanding invoices.
+[`invoices:cancelled`] - An object register containing cancelled invoices.
 
-#### `Assets API:`
+#### Assets API:
 
-\[`assets:asset`] - An object register containing asset object.\
-\[`assets:raw`] - An object register containing raw asset object.\
-\[`assets:readonly`] - An object register containing readonly asset object.
+[`assets:asset`] - An object register containing asset object.
+[`assets:raw`] - An object register containing raw asset object.
+[`assets:readonly`] - An object register containing readonly asset object.
 
-#### `Supply API:`
+#### Supply API:
 
-\[`supply:item`] - An object register containing item object.\
-\[`supply:raw`] - An object register containing raw item object.\
-\[`supply:readonly`] - An object register containing readonly item object.
+[`supply:item`] - An object register containing item object.
+[`supply:raw`] - An object register containing raw item object.
+[`supply:readonly`] - An object register containing readonly item object.
 
-## `get` <a href="#get" id="get"></a>
+## get <a href="#get" id="get"></a>
 
 Retrieves information for a single object for a type specified by the noun or API:noun
 
