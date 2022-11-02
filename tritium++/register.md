@@ -2,7 +2,7 @@
 title: REGISTER
 description: Register API
 published: true
-date: 2022-11-02T18:34:25.303Z
+date: 2022-11-02T20:23:28.208Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:09.936Z
@@ -272,7 +272,7 @@ All these calls will require the latest build of the core and will not work with
 To calculate the sum of all NXS on the tritium chain:
 
 ```
-register/list/finance:accounts,finance:trust/total/sum sort=total order=desc limit=none where='results.token=0'
+register/list/finance:accounts,finance:trust/total/sum limit=none where='results.total>0 AND results.ticker=NXS'
 ```
 
 List all the namespaces sorted by created date in ascending order:
