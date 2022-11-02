@@ -2,7 +2,7 @@
 title: Settings
 description: Mobile Wallet Settings
 published: false
-date: 2022-11-02T08:25:46.772Z
+date: 2022-11-02T10:09:50.442Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T08:21:00.002Z
