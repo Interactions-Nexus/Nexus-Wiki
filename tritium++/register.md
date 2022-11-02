@@ -2,7 +2,7 @@
 title: REGISTER
 description: Register API
 published: true
-date: 2022-11-02T20:23:28.208Z
+date: 2022-11-02T20:23:51.951Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:09.936Z
@@ -290,7 +290,7 @@ register/list/names:global
 Create a rich list:
 
 ```
-register/list/finance:accounts,finance:trust sort=total order=desc page=0 where=(results.token=0)
+register/list/finance:accounts,finance:trust sort=total order=desc page=0 where='results.token=0'
 ```
 
 ***
