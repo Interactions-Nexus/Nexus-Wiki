@@ -2,7 +2,7 @@
 title: PROFILES
 description: Profiles API
 published: true
-date: 2022-11-01T23:50:22.543Z
+date: 2022-11-02T00:27:34.512Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:35:02.340Z
@@ -127,7 +127,7 @@ This method provides the user with the ability to set or change the restore seed
 
 #### **update/recovery**
 
-`recovery` : Required by noun **recovery**. The existing recovery seed for this signature chain. This is only required if an existing recovery seed is being updated via new\_recovery.
+`recovery` : Required by noun **recovery** The existing recovery seed for this signature chain. This is only required if an existing recovery seed is being updated via new\_recovery.
 
 `new_recovery` : Required by noun **recovery**.The new recovery seed to set or change for this sig chain. The recovery seed must be a minimum of 40 characters.
 
@@ -377,14 +377,13 @@ This method supports the Sorting / Filtering parameters.
 
 `nexthash` : The hash of the next transaction in the sequence.
 
-`prevhash` : the hash of the previous transaction in the sequence.
+`prevhash` : The hash of the previous transaction in the sequence.
 
 `pubkey` : The public key.
 
 `signature` : The signature hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes.\
-{\
+`contracts` : The array of contracts bound to this transaction and their details with opcodes.
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -413,5 +412,5 @@ This method supports the Sorting / Filtering parameters.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
 
-`object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert lisp, network, sign and verify).\
+`object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert, lisp, network, sign and verify).\
 }
