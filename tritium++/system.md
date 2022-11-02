@@ -2,7 +2,7 @@
 title: SYSTEM
 description:  System API
 published: true
-date: 2022-10-06T11:16:01.919Z
+date: 2022-11-02T22:08:59.531Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:32.769Z
@@ -12,20 +12,23 @@ dateCreated: 2022-10-05T08:35:32.769Z
 
 The System API provides public access to information about this node. This includes data such as the version of software the node is running, ledger and mempool state, node IP address, and number of connected peers.
 
-## `Direct Endpoints`
+## Direct Endpoints
 
 The following commands are direct endpoints and thus do not support the above verb and noun structure available above.
 
-[`stop`](broken-reference)\
-[`get/info`](broken-reference)\
-[`get/metrics`](broken-reference)\
-[`list/peers`](broken-reference)\
-[`list/lisp-eids`](broken-reference)\
-[`validate/address`](broken-reference)
+[`stop`](#stop)
+[`get/info`](#get/info)
+[`get/metrics`](#get/metrics)
+[`list/peers`](#list/peers)
+[`list/lisp-eids`](#list/lisp-eids)
+[`validate/address`](#vlaidate/address)
 
 Direct endpoints support filters and operators.
 
-## `stop` <a href="#user-content-stop" id="user-content-stop"></a>
+---
+&nbsp;
+
+## stop <a href="#stop" id="stop"></a>
 
 Initiate node shutdown sequence.
 
@@ -48,7 +51,10 @@ system/stop
 [Completed in 0.039270 ms]
 ```
 
-## `get/info` <a href="#user-content-get-info" id="user-content-get-info"></a>
+---
+&nbsp;
+
+## get/info <a href="#get/info" id="get/info"></a>
 
 Returns a summary of information about this node
 
@@ -64,7 +70,7 @@ system/get/info
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -89,7 +95,7 @@ system/get/info
 [Completed in 0.070190 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `version` : The daemon software version.
 
@@ -129,7 +135,10 @@ system/get/info
 
 `eids` : Array of LISP Endpoint Idendifiers (EID's) for this node. Not included unless this node is using LISP.
 
-## `get/metrics` <a href="#user-content-get-metrics" id="user-content-get-metrics"></a>
+---
+&nbsp;
+
+## get/metrics <a href="#get/metrics" id="get/metrics"></a>
 
 Returns metrics and statistics for the ledger, registers, sigchains, trust and reserves.
 
@@ -139,11 +148,11 @@ system/get/metrics
 
 ### Parameters:
 
-[`Filtering`](../filtering.md).
+[`Filtering`](/en/tritium++/filtering)
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -184,12 +193,12 @@ system/get/metrics
 [Completed in 1020.804545 ms]
 ```
 
-**Return values:**
+#### Return values:
 
-`registers` : Statistics on the register database.\
-{\
+`registers` : Statistics on the register database.
+{
 `names` : Total number of name registers, including user local, global, and namespaced.\
-{\
+{
 `global` : Number of names that have been created in the global namespace.
 
 `local` : Number of names that have been created in the local namespace.
@@ -199,8 +208,8 @@ system/get/metrics
 
 `namespaces` : Number of namespaces that have been created.
 
-`objects` : Statistics of non-standard object registers. These include accounts, tokens, crypto, assets, items and any other derived object register.\
-{\
+`objects` : Statistics of non-standard object registers. These include accounts, tokens, crypto, assets, items and any other derived object register.
+{
 `accounts` : Number of account registers. This includes both NXS and other token accounts.
 
 `assets` : Number of asset registers.
@@ -209,30 +218,30 @@ system/get/metrics
 
 `tokenized` : Number of object registers that have been tokenized (where the object owner is a token rather than a profile).
 
-`tokens` : Number of token registers.\
+`tokens` : Number of token registers.
 }
 
-`state` : Statistics of raw and readonly registers.\
-{\
+`state` : Statistics of raw and readonly registers.
+{
 `raw` : Number of raw registers.
 
-`readonly` : Number of read only registers.\
-}\
+`readonly` : Number of read only registers.
+}
 }
 
 `sig_chains` : Total number of signature chains in the ledger.
 
-`trust` : Statistics on active trust accounts.\
-{\
+`trust` : Statistics on active trust accounts.
+{
 `total` : Total number trust accounts that are active (have a non-zero stake balance).
 
 `stake` : Total amount of NXS currently being staked network-wide).
 
-`trust` : Total trust score of all trust accounts being staked.\
+`trust` : Total trust score of all trust accounts being staked.
 }
 
-`reserves` : Statistics on the amount of NXS currently in the various reserves.\
-{\
+`reserves` : Statistics on the amount of NXS currently in the various reserves.
+{
 `ambassador` : Amount of NXS in the ambassador reserves, waiting to be paid to the ambassador sig chains.
 
 `developer` : Amount of NXS in the developer reserves, waiting to be paid to the developer sig chains.
@@ -241,10 +250,13 @@ system/get/metrics
 
 `hash` : Amount of NXS in the hash channel reserves.
 
-`prime` : Amount of NXS in the prime channel reserves.\
+`prime` : Amount of NXS in the prime channel reserves.
 }
 
-## `list/peers` <a href="#user-content-list-peers" id="user-content-list-peers"></a>
+---
+&nbsp;
+
+## list/peers <a href="#list/peers" id="list/peers"></a>
 
 Returns a summary of information about the peers currently connected to this node. The return array is sorted by the peer score value.
 
@@ -254,15 +266,15 @@ system/list/peers
 
 ### Parameters:
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting).
 
-[`Filtering`](../filtering.md).
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -300,7 +312,7 @@ system/list/peers
 [Completed in 0.409770 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `address` : The IP address and port of the peer. This could be a LISP EID using the LISP overlay or an IP address using the native underlay.
 
@@ -328,7 +340,10 @@ system/list/peers
 
 `score` : The score value assigned to this peer based on latency and other connection statistics.
 
-## `list/lisp-eids` <a href="#user-content-list-lisp-eids" id="user-content-list-lisp-eids"></a>
+---
+&nbsp;
+
+## list/lisp-eids <a href="#list/lisp-eids" id="list/lisp-eids"></a>
 
 This will return the LISP Endpoint Identifiers (EID's) currently configured for this node. If the lispers.net API is not running / available then this will return an empty array.
 
@@ -338,11 +353,11 @@ system/list/lisp-eids
 
 ### Parameters:
 
-\-none-
+-none-
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -372,7 +387,7 @@ system/list/lisp-eids
 [Completed in 1004.256167 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `instance-id` : The LISP instance group that this EID belongs to.
 
@@ -386,7 +401,10 @@ system/list/lisp-eids
 
 `rloc` : The IP address associated with the device.
 
-## `validate/address` <a href="#user-content-validate-address" id="user-content-validate-address"></a>
+---
+&nbsp;
+
+## validate/address <a href="#validate/address" id="validate/address"></a>
 
 Validates a register / legacy address.
 
@@ -400,7 +418,7 @@ system/validate/address
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -411,7 +429,7 @@ system/validate/address
 }
 ```
 
-#### **Return values:**
+#### Return values:
 
 `address` : The address that was validated.
 
@@ -422,5 +440,3 @@ system/validate/address
 `object_type` : If the type is OBJECT this field contains the standard object type of the object register. Values can be ACCOUNT, CRYPTO, NAME, NAMESPACE, REGISTER, TOKEN, TRUST, or UNKNOWN.
 
 `is_mine` : If the type is LEGACY this boolean flag indicates if the private key for the address is held in the local wallet.
-
-***
