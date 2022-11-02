@@ -1,8 +1,8 @@
 ---
 title: Core Information
 description: Mobile Wallet Core Information
-published: true
-date: 2022-11-02T09:56:08.256Z
+published: false
+date: 2022-11-02T10:10:13.878Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T09:55:03.603Z
