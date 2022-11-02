@@ -2,7 +2,7 @@
 title: PROFILES
 description: Profiles API
 published: true
-date: 2022-11-02T21:37:45.487Z
+date: 2022-11-02T21:38:35.874Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:35:02.340Z
@@ -22,7 +22,7 @@ The minimum required components of the URI are:
 profiles/verb/noun
 ```
 
-## `Supported Verbs`
+## Supported Verbs
 
 The following verbs are currently supported by this API command-set:
 
@@ -33,7 +33,7 @@ The following verbs are currently supported by this API command-set:
 [`notifications`](#notifications) - List all notifications that modified specified object.
 [`transactions`](#transactions) - List all transactions that modified specified object.
 
-## `Supported Nouns`
+## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
