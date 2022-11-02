@@ -2,7 +2,7 @@
 title: FINANCE 
 description: Finance API
 published: true
-date: 2022-11-02T22:44:58.297Z
+date: 2022-11-02T23:16:13.019Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:36.604Z
@@ -710,6 +710,10 @@ This will retrieve a summary of balance information across all accounts belongin
 
 Endpoint:
 
+```
+finance/get/balances
+```
+
 ### Parameters:
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied.
@@ -772,6 +776,10 @@ Endpoint:
 This will retrieve account values and staking metrics for the trust account belonging to the currently logged in signature chain. If called when the stake minter is not running, this method only returns trust account values. Staking metrics will return 0.
 
 Endpoint:
+
+```
+finance/get/stakeinfo
+```
 
 ### Parameters:
 
@@ -837,6 +845,10 @@ To remove a stake change request, you can either set an expiration time, or set 
 
 Endpoint:
 
+```
+finance/set/stake
+```
+
 ### Parameters:
 
 `pin` : Required if **locked**. The `PIN` for this profile.
@@ -869,6 +881,12 @@ Endpoint:
 Voids (reverses) a debit or transfer transaction, only if it has not been credited or claimed by the recipient. The method creates a corresponding credit or claim transaction but back to the originating account / profile. This means that any applicable fees will apply, as will conditions on the debit / transfer transaction (such as expiration conditions).
 
 For debits that were made to a tokenized asset as part of a split payment transaction, the reversing credit will be made for the debit amount minus any partial amounts that have already been credited by the token holders.
+
+Endpoint:
+
+```
+finance/void/transaction
+```
 
 ### Parameters:
 
@@ -903,6 +921,9 @@ The method uses the arbitrary data field in the account object register to track
 
 Endpoint:
 
+```
+finance/migrate/accounts
+```
 ### Parameters:
 
 `pin` : Required if **locked**. The `PIN` for this profile.
