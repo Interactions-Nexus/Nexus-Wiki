@@ -2,7 +2,7 @@
 title: PROFILE
 description: Profile API
 published: true
-date: 2022-11-02T00:14:33.832Z
+date: 2022-11-02T00:24:15.677Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:21:17.033Z
@@ -357,11 +357,11 @@ Ta metoda obsługuje parametry Sortowania/Filtrowania.
 
 #### **Zwracane wartości:**
 
-`txid` : skrót transakcji.
+`txid` : Hash transakcji.
 
-`type` : Opis transakcji (starsza | baza trytu | zaufanie | geneza | użytkownik).
+`type` : Opis transakcji (legacy | tritium base | trust | genesis | user).
 
-`version` : wersja serializacji transakcji.
+`version` : Wersja serializacji transakcji.
 
 `sequence` : Numer kolejny tej transakcji w łańcuchu podpisów.
 
@@ -371,43 +371,43 @@ Ta metoda obsługuje parametry Sortowania/Filtrowania.
 
 `confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję przez sieć.
 
-`genesis` : To jest skrót nazwy użytkownika profilu, znany również jako skrót właściciela.
+`genesis` : To jest hash nazwy użytkownika profilu, znany również jako hash właściciela.
 
 `nexthash` : Hash następnej transakcji w sekwencji.
 
-`prevhash` : hash poprzedniej transakcji w sekwencji.
+`prevhash` : Hash poprzedniej transakcji w sekwencji.
 
-`pubkey` : klucz publiczny.
+`pubkey` : Klucz publiczny.
 
-`signature` : skrót podpisu.
+`signature` : Hash podpisu.
 
-`contracts` : Tablica kontraktów powiązanych z tą transakcją oraz ich szczegóły z kodami operacyjnymi.\
-{\
+`contracts` : Tablica kontraktów powiązanych z tą transakcją oraz ich szczegóły z kodami operacyjnymi.
+
 `id` : Identyfikator sekwencyjny tego kontraktu w ramach transakcji.
 
-`OP` : Operacja kontraktu. Może być DODATEK, ROSZCZENIE, COINBASE, UTWÓRZ, KREDYT, DEBET, OPŁATA, GENESIS, DZIEDZICTWO, PRZELEW, ZAUFANIE, STAWKA, ODSTAWIANIE, NAPISZ.
+`OP` : Operacja kontraktu. Może być APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
 
-`for` : dla transakcji KREDYTOWYCH, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
+`for` : Dla transakcji CREDIT, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
 
 `txid` : Transakcja, która została uznana / zgłoszona.
 
 `contract` : Identyfikator kontraktu w ramach transakcji, która została uznana / zgłoszona.
 
-`proof`: adres rejestru potwierdzający kredyt.
+`proof`: Adres rejestru potwierdzający kredyt.
 
-`from` : Dla transakcji DEBIT, KREDYT, OPŁATY adres rejestrowy konta, z którego dokonywany jest debet.
+`from` : Dla transakcji DEBIT, CREDIT, FEE adres rejestrowy konta, z którego dokonywany jest debet.
 
-`from_name` : W przypadku transakcji DEBIT, KREDYT, OPŁATY nazwa rachunku, z którego dokonywany jest debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+`from_name` : W przypadku transakcji DEBIT, CREDIT, FEE nazwa rachunku, z którego dokonywany jest debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`to` : W przypadku transakcji DEBIT i KREDYT adres rejestru konta odbiorcy.
+`to` : W przypadku transakcji DEBIT i CREDIT adres rejestru konta odbiorcy.
 
-`to_name` : W przypadku transakcji DEBIT i KREDYT nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+`to_name` : W przypadku transakcji DEBIT i CREDIT nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`amount` : kwota tokena transakcji.
+`amount` : Ilość tokena transakcji.
 
-`token` : adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS
+`token` : Adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS
 
-`token_name` : nazwa tokena, którego dotyczy transakcja.
+`token_name` : Nazwa tokena, którego dotyczy transakcja.
 
 `reference` : W przypadku transakcji DEBIT i KREDYT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
 
