@@ -2,7 +2,7 @@
 title: Settings
 description: Mobile Wallet Settings
 published: false
-date: 2022-11-02T08:22:33.949Z
+date: 2022-11-02T08:25:46.772Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T08:21:00.002Z
@@ -26,4 +26,5 @@ Under the options in the application
 
 ![mobile-wallet-color-scheme.jpeg](/mobile-wallet-color-scheme.jpeg)
 
-- Base Currency: This is the currency in which the balance is shown on the overview screen. 
+- Base Currency: This is the currency in which the balance is shown on the overview screen.
+- Hide Balances
