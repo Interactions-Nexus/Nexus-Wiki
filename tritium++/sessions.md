@@ -2,7 +2,7 @@
 title: SESSIONS
 description:  Sessions API
 published: true
-date: 2022-10-06T11:20:56.789Z
+date: 2022-11-02T21:50:36.445Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:17.363Z
@@ -22,25 +22,25 @@ The minimum required components of the URI are:
 sessions/verb/noun
 ```
 
-## `Supported Verbs`
+## Supported Verbs
 
 The following verbs are currently supported by this API command-set:
 
-[`create`](broken-reference) - Generate a new session type specified by the noun.\
-[`unlock`](broken-reference) - Unlock the session to carry out specified operations.\
-[`lock`](broken-reference) - Lock the session to stop a specified operations.\
-[`save`](broken-reference) - Save a specified session to the local database.\
-[`load`](broken-reference) - Load a specified session from the local database.\
-[`terminate`](broken-reference) - Terminates a session specified by the noun.\
-[`status`](broken-reference) - Returns status information for the session specified by the noun.
+[`create`](#create) - Generate a new session type specified by the noun.\
+[`unlock`](#unlock) - Unlock the session to carry out specified operations.\
+[`lock`](#lock) - Lock the session to stop a specified operations.\
+[`save`](#save) - Save a specified session to the local database.\
+[`load`](#load) - Load a specified session from the local database.\
+[`terminate`](#terminate) - Terminates a session specified by the noun.\
+[`status`](#status) - Returns status information for the session specified by the noun.
 
-## `Supported Nouns`
+## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
-\[`local`] - The location of the session.
+[`local`] - The location of the session.
 
-## `create` <a href="#user-content-create" id="user-content-create"></a>
+## create <a href="#create" id="create"></a>
 
 Create a new session specified by given noun.
 
@@ -60,7 +60,7 @@ This command only supports the `local` noun.
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -70,13 +70,13 @@ This command only supports the `local` noun.
 [Completed in 1659.509829 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `genesis` : This is the profile username hash, also known as owner hash.
 
 `session` : When using multi-user API mode, an additional session value is returned and must be supplied in subsequent API calls, to allow the managing of multiple login sessions.
 
-## `unlock` <a href="#user-content-unlock" id="user-content-unlock"></a>
+## unlock <a href="#unlock" id="unlock"></a>
 
 This will unlock the session specified by given noun and cache the PIN in encrypted memory to be used for all subsequent API calls for the specified operations.
 
@@ -102,7 +102,7 @@ These commands only supports the `local` noun.
 
 ### Returns:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -116,7 +116,7 @@ These commands only supports the `local` noun.
 [Completed in 1664.238652 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `unlocked` : This will contain child elements describing which functions the session is currently unlocked for
 
@@ -128,7 +128,7 @@ These commands only supports the `local` noun.
 
 `transactions` : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).
 
-## `lock` <a href="#user-content-lock" id="user-content-lock"></a>
+## lock <a href="#lock" id="lock"></a>
 
 This will lock the specified session by purging the PIN stored in encrypted memory, making it unavailable for use unless it is either unlocked or the PIN is passed in to all API requests.
 
@@ -150,11 +150,11 @@ These commands only supports the `local` noun.
 
 `staking` : Required for **locking** staking transactions. This boolean value locks the session for staking.
 
-\`transactions : Required for **locking** transactions. This boolean value locks the session for creating or claiming transactions.
+`transactions` : Required for **locking** transactions. This boolean value locks the session for creating or claiming transactions.
 
 ### Returns:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -168,7 +168,7 @@ These commands only supports the `local` noun.
 [Completed in 1664.238652 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `unlocked` : This will contain child elements describing which functions the session is currently unlocked for
 
@@ -180,7 +180,7 @@ These commands only supports the `local` noun.
 
 `transactions` : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).
 
-## `save` <a href="#user-content-save" id="user-content-save"></a>
+## save <a href="#save" id="save"></a>
 
 This will save the users session to the local database, allowing the session to be resumed at a later time without the need to login or unlock. The users PIN is required as this is used (in conjunction with the genesis) to encrypt the session data before persisting it to the local database.
 
@@ -204,7 +204,7 @@ These commands only supports the `local` noun.
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -214,13 +214,13 @@ These commands only supports the `local` noun.
 [Completed in 2.962459 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `genesis` : This is the profile username hash, also known as owner hash.
 
 `success` : Boolean flag indicating that the session was saved successfully .
 
-## `load` <a href="#user-content-load" id="user-content-load"></a>
+## load <a href="#load" id="load"></a>
 
 This will resume a saved session from the local database, allowing a saved session to be resumed without the need to login or unlock. The profile username or genesis and PIN is required to decrypt and resume the saved session.
 
@@ -247,7 +247,7 @@ These commands only supports the `local` noun.
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -257,13 +257,13 @@ These commands only supports the `local` noun.
 [Completed in 0.072625 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `genesis` : This is the profile username hash, also known as owner hash.
 
 `session` : When using multi-user API mode, an additional session value is returned to identify the session.
 
-## `terminate` <a href="#user-content-terminate" id="user-content-terminate"></a>
+## terminate <a href="#terminate" id="terminate"></a>
 
 This will terminate an active session specified by given noun.
 
@@ -283,7 +283,7 @@ This command only supports the `local` noun.
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -292,11 +292,15 @@ This command only supports the `local` noun.
 [Completed in 1656.089478 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the active session was terminated successfully.
 
-## `status` <a href="#user-content-status" id="user-content-status"></a>
+
+---
+
+
+## status <a href="#status" id="status"></a>
 
 Retrieve the session status specified by given noun.
 
@@ -312,7 +316,7 @@ This command only supports the `local` noun.
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -329,7 +333,7 @@ This command only supports the `local` noun.
 [Completed in 0.080333 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `genesis` : This is the profile username hash, also known as owner hash.
 
