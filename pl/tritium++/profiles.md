@@ -2,7 +2,7 @@
 title: PROFILE
 description: Profile API
 published: true
-date: 2022-11-02T00:32:46.628Z
+date: 2022-11-03T22:40:58.808Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:21:17.033Z
@@ -21,17 +21,22 @@ Minimalne wymagane składniki identyfikatora URI to:
 ```
 profiles/verb/noun
 ```
+---
+&nbsp;
 
-## `Obsługiwane czasowniki (verb)`
+## Obsługiwane czasowniki (verb)
 
-[`create`](broken-reference) - Generuj nowy obiekt obsługiwanego typu.\
-[`update`](broken-reference) - Aktualizuje określone rejestry obiektów.\
-[`recover`](broken-reference) - Odzyskuje konto profilu.\
-[`status`](broken-reference) — Informacje o stanie profilu.\
-[`notifications`](broken-reference) - Lista wszystkich powiadomień, które zmodyfikowały określony obiekt.\
-[`transactions`](broken-reference) — Lista wszystkich transakcji, które zmodyfikowały określony obiekt.
+[`create`](#create) - Generuj nowy obiekt obsługiwanego typu.\
+[`update`](#update) - Aktualizuje określone rejestry obiektów.\
+[`recover`](#recover) - Odzyskuje konto profilu.\
+[`status`](#status) — Informacje o stanie profilu.\
+[`notifications`](#notifications) - Lista wszystkich powiadomień, które zmodyfikowały określony obiekt.\
+[`transactions`](#transactions) — Lista wszystkich transakcji, które zmodyfikowały określony obiekt.
 
-## `Obsługiwane rzeczowniki (noun)`
+---
+&nbsp;
+
+## Obsługiwane rzeczowniki (noun)
 
 W tym zestawie poleceń interfejsu API obsługiwane są następujące rzeczowniki:
 
@@ -40,7 +45,10 @@ W tym zestawie poleceń interfejsu API obsługiwane są następujące rzeczownik
 \[`credentials`] — Poświadczenia używane do zabezpieczania profili.\
 \[`recovery`] — Obiekt reprezentujący odzyskiwanie profilu.
 
-## `create` <a href="#user-content-create" id="user-content-create"></a>
+---
+&nbsp;
+
+## create <a href="#user-content-create" id="user-content-create"></a>
 
 Spowoduje to utworzenie nowego profilu lub zainicjowanie klucza uwierzytelniania dla starszych łańcuchów podpisów, aby były one kompatybilne z profilami określonymi przez rzeczownik.
 
@@ -147,7 +155,10 @@ Ta metoda zapewnia użytkownikowi możliwość ustawienia lub zmiany źródła p
 
 `success` : Flaga logiczna wskazująca, że profil został pomyślnie zaktualizowany. `txid` : Identyfikator (hash) transakcji dla zaktualizowanego profilu .
 
-## `recover` <a href="#user-content-recover" id="user-content-recover"></a>
+---
+&nbsp;
+
+## recover <a href="#user-content-recover" id="user-content-recover"></a>
 
 To przywraca profil określony przez rzeczownik w przypadku utraty hasła i kodu PIN. Użytkownik musi się wylogować, aby odzyskać swój profil.
 
@@ -185,7 +196,10 @@ To polecenie obsługuje tylko rzeczownik `master`.
 
 `txid` : Identyfikator (hash) transakcji dla odzyskanego obiektu.
 
-## `status` <a href="#status-treści-użytkownika" id="status-treści-użytkownika"></a>
+---
+&nbsp;
+
+## status <a href="#status-treści-użytkownika" id="status-treści-użytkownika"></a>
 
 Zwraca informacje o stanie dla żądanego profilu.
 
@@ -226,7 +240,10 @@ To polecenie obsługuje tylko rzeczownik `master`.
 
 `transactions` : Łączna liczba transakcji dla tego profilu
 
-## `notifications` <a href="#user-content-notifications" id="user-content-notifications"></a>
+---
+&nbsp;
+
+## notifications <a href="#user-content-notifications" id="user-content-notifications"></a>
 
 Spowoduje to wyświetlenie listy wszystkich transakcji wysłanych do określonego łańcucha podpisów. Jest to przydatne do identyfikowania transakcji, które musisz zaakceptować, takich jak kredyty.
 
@@ -294,7 +311,10 @@ Ta metoda obsługuje parametry sortowania/filtrowania.
 
 `dividend_payment` : Flaga wskazująca, że ​​to obciążenie jest wypłatą dywidendy podzielonej na tokenizowany zasób
 
-## `transactions` <a href="#transakcje-zawartości-użytkownika" id="transakcje-zawartości-użytkownika"></a>
+---
+&nbsp;
+
+## transactions <a href="#transakcje-zawartości-użytkownika" id="transakcje-zawartości-użytkownika"></a>
 
 Spowoduje to wyświetlenie wszystkich transakcji dla żądanego profilu.
 
