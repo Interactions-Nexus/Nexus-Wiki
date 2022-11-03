@@ -2,7 +2,7 @@
 title: 麟社共识
 description: 麟社采用的共识与如何运作
 published: true
-date: 2022-11-03T08:04:26.871Z
+date: 2022-11-03T08:47:57.213Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-03T06:34:32.254Z
@@ -29,18 +29,15 @@ dateCreated: 2022-11-03T06:34:32.254Z
 <p style="text-align:justify;">工作量证明 (PoW)：第一个区块链比特币就是使用 PoW。“矿工”们验证与比特币区块链的交易，这些“矿工”是使用他们的计算机为节点解决密码或数学的问题。解决问题并验证和启用区块记录的矿工将获得比特币做为奖励。</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">股权证明（PoS）：</p>
-<p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">在 PoS 中，有“伪造者”而不是矿工。这些伪造者持有一定数量的加密货币，这使他们有机会根据概率成为区块验证者。成功的伪造者将获得相关的区块交易费用作为奖励。将他们自己的加密货币放在一个区块上可以抑制伪造者试图欺骗网络，因为如果他们被证明错误地将交易添加到网络中，他们将失去股份。</p>
+<p style="text-align:justify;">在 PoS 中，有“锻工”而不是矿工。这些锻工持有一定数量的加密货币，这使他们有机会根据概率成为区块验证者。成功的随机选择锻工将获得相关的区块交易费用作为奖励。将他们自己的加密货币放在一个区块上可以抑制个别锻工也试图欺骗网络，因为如果他们被证明错误地将交易添加到网络中，他们将失去股份。</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">委托权益证明（DPoS）：</p>
-<p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">此方法的功能与 PoS 类似。但是，加密货币持有者不是使用概率，而是能够投票分配给他们的股份以指定证人。这些证人保护和验证区块链；他们不需要自己的加密货币，但他们确实需要投票。这种共识协议比其他协议更加集中。 BNB**、** BitShares、Steem 和 EOS 使用 DPoS。</p>
+<p style="text-align:justify;">此方法的功能与 PoS 类似。但是，加密货币持有者不是使用概率，而是能够投票分配给他们的股份以指定区块验证人。这些验证人保护和验证区块链；他们不需要自己的加密货币，但他们确实需要投票。这种共识协议比其他协议更加中心化。 BNB**、** BitShares、Steem 和 EOS 使用 DPoS。</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">权威证明（PoA）：</p>
+<p style="text-align:justify;">PoA 可以说更加中心化，具有预先确定的块验证器。仅当验证者占多数时，才会创建区块链上的新块。该协议类似于 PoS。验证者是众所周知的，并负责确定他们的角色和 PoS 验证的资格。较新的区块链 Elysian 使用 PoA 以及一些以太坊测试网或测试区块链。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">PoA 可以说再次更加集中，具有预先确定的块验证器。仅当验证者占多数时，才会创建区块链上的新块。该协议类似于 PoS。验证者是众所周知的，并负责确定他们的角色和 PoS 验证的资格。较新的区块链 Elysian 使用 PoA 以及一些以太坊测试网或测试区块链。</p>
-<p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">Nexus共识：</p>
+<p style="text-align:justify;">Nexus 麟社共识：</p>
 <p style="text-align:justify;">除非您是加密新手，否则您可能知道工作量证明 (PoW) 和权益证明 (PoS) 之间关于哪种是保护区块链安全的更好共识机制的持续争论。在 Nexus，我们看到了两者的好处，并相信多样性是一种优势。这就是为什么 Nexus 将两者结合起来，利用多个共识渠道来保护账本的状态。通过使我们的共识结构的性质多样化，我们避免了对任何一种机制的依赖，从而提高了我们的整体安全性。</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">那么这看起来像什么？ Nexus 由三个通道组成，两个 PoW 和一个 PoS。第一个 PoW 通道使用哈希算法（类似于许多其他区块链）进行工作量证明，而主要通道采用一种算法，矿工需要搜索非常大的素数集群，提供 PoW 原理的独特变体.最后，PoS 通道采用了一种节能、简单的功能，用户的挖矿“功率”由他们的质押余额和信任分数决定。</p>
