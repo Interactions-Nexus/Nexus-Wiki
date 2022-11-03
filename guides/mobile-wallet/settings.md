@@ -2,7 +2,7 @@
 title: Settings
 description: Mobile Wallet Settings
 published: false
-date: 2022-11-03T15:26:04.062Z
+date: 2022-11-03T17:45:10.927Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T08:21:00.002Z
@@ -12,25 +12,45 @@ dateCreated: 2022-11-02T08:21:00.002Z
 
 To access the settings page on the mobile wallet, click on the gear icon on the top right corner. See the image below (marked in red).
 
-![mobile-wallet-settings-icon.jpg](/mobile-wallet-settings-icon.jpg)<p align=center>*Mobile Wallet Settings Icon*</p>
+![mobile-wallet-settings-icon.jpg](/mobile-wallet-settings-icon.jpg)<p align=center>*Mobile Wallet - Settings Icon*</p>
 
-The settings page will look like in the image below and al the settings are divided into:
+The settings page options are :
 -  Application
 -  Core (Advanced)
 
-![mobile-wallet-settings-page-1.jpeg](/mobile-wallet-settings-page-1.jpeg)<p align=center>*Mobile Wallet Settings Page*</p>
-
 ## Application
-Under the application options, the use can find the below settings:
+Under the Application options, find the below settings:
 
-- Color scheme: This is the color scheme for the wallet and the available options are Auto, Light and Dark. Select the option of choice.
+![mobile-wallet-settings-page-1.jpeg](/mobile-wallet-settings-page-1.jpeg)<p align=center>*Mobile Wallet - Application Settings*</p>
 
-![mobile-wallet-color-scheme.jpeg](/mobile-wallet-color-scheme.jpeg)
+- **Color scheme:** This is the color scheme for the wallet and the available options are Auto, Light and Dark. Select the option of choice.
 
-- Base Currency: This is the currency in which the balance is shown on the overview screen.
+![mobile-wallet-color-scheme.jpeg](/mobile-wallet-color-scheme.jpeg)<p align=center>*Mobile Wallet - Color scheme options*</p>
 
+- **Base Currency:** This is the currency in which the balance is shown on the overview screen.
 
-- Hide Balances: This will hide all the NXS and token balance on the overview screen.
+- **Hide Balances:** This will hide all the NXS and token balance on the overview screen.
 
 ![mobile-wallet-hide-balances.jpeg](/mobile-wallet-hide-balances.jpeg)<p align=center>*Mobile Wallet - Hidden Balance*</p>
-- Hide unused Trust account: This option enables the user to hide the `Trust` account from the overview screen.
+
+- **Hide unused Trust account:** This option enables the user to hide the `Trust` account from the overview screen. The mobile wallet does not support staking which is the main function of the `Trust` account and the reason it is hidden for normal users.  
+
+## Core (Advanced)
+Under Core, find the following options:
+
+![mobile-wallet-settings-page-2.jpeg](/mobile-wallet-settings-page-2.jpeg)<p align=center>*Mobile Wallet - Core Settings*</p>
+
+- **External Core:** This option allows the user to connect the mobile wallet to a remote core and access the user account.
+	 
+![mobile-wallet-external-core.jpeg](/mobile-wallet-external-core.jpeg)<p align=center>*Mobile Wallet External Core Settings*</p>
+	 
+   - IP Address: This is the IP address of the remote core.
+   - API Port: This is the API port of the remote core.
+   - API username: This is the API authentication username.
+   - API password: This is the API authentication password.
+  
+
+- **Core Log:** This is the core log file, this helps to diagnose issues in case of malfunction.
+
+- **Delete Database:** This will allow the user to delete the blockchain database in case of corruption which will not allow the wallet to function properly.
+
