@@ -2,7 +2,7 @@
 title: SESJE
 description: API sesji
 published: true
-date: 2022-11-03T23:07:26.004Z
+date: 2022-11-03T23:18:49.377Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:22:46.231Z
@@ -243,6 +243,137 @@ Te polecenia obsługują tylko rzeczownik `local`.
 ## load <a href="#load" id="load"></a>
 
 Spowoduje to wznowienie zapisanej sesji z lokalnej bazy danych, umożliwiając wznowienie zapisanej sesji bez konieczności logowania lub odblokowania. Nazwa użytkownika profilu lub geneza i PIN są wymagane do odszyfrowania i wznowienia zapisanej sesji.
+
+```
+sessions/load/noun
+```
+
+Te polecenia obsługują tylko rzeczownik `local`.
+
+**NOTATKA:**
+
+* Jeśli istnieje aktywna sesja, nie zostanie załadowana zapisana sesja.
+* Można załadować tylko wcześniej zapisaną sesję.
+* Po wznowieniu zapisanej sesji tworzy nowy identyfikator sesji.
+* Zapisane sesje można wznowić nawet po ponownym uruchomieniu rdzenia lub węzła.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **uwierzytelniamy**. Kod PIN tego profilu.
+
+`username`: Wymagany do **identyfikacji** profilu, dla którego ma zostać załadowana sesja. Jest to opcjonalne, jeśli podano `genesis`.
+
+`genesis` : Wymagany do **identyfikacji** profilu, dla którego ma zostać załadowana sesja. Jest to opcjonalne, jeśli podano `username`.
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+```
+{
+    "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+    "session": "2ef9de11b19af82984ddf93275e7ba22c11fe9659d0667f79311c46732bbb7a4"
+}
+[Completed in 0.072625 ms]
+```
+
+#### Zwracane wartości:
+
+`genesis` : To jest hash nazwy użytkownika profilu, znany również jako hash właściciela.
+
+`session` : Podczas korzystania z trybu API wielu użytkowników zwracana jest dodatkowa wartość sesji, która identyfikuje sesję.
+
+---
+&nbsp;
+
+## terminate <a href="#terminate" id="terminate"></a>
+
+Spowoduje to zakończenie aktywnej sesji określonej przez podany rzeczownik.
+
+```
+sessions/terminate/noun
+```
+
+To polecenie obsługuje tylko rzeczownik `local`.
+
+**NOTATKA:** To nie usuwa zapisanej sesji
+
+### Parametry:
+
+`pin` : Wymagany do **uwierzytelnienia**. Kod PIN tego profilu.
+
+`session` : Wymagane przez **argument** `-multiuser=1` w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika nie należy podawać sesji.
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+```
+{
+    "success": true
+}
+[Completed in 1656.089478 ms]
+```
+
+#### Zwracane wartości:
+
+`success` : Flaga logiczna wskazująca, że aktywna sesja została pomyślnie zakończona.
+
+---
+&nbsp;
+
+## status <a href="#status" id="status"></a>
+
+Pobierz stan sesji określony przez podany rzeczownik.
+
+```
+sessions/status/noun
+```
+
+To polecenie obsługuje tylko rzeczownik `local`.
+
+### Parametry:
+
+`session` : Wymagane przez **argument** `-multiuser=1` w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika nie należy podawać sesji.
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+```
+{
+    "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+    "accessed": 1653680627,
+    "location": "local",
+    "unlocked": {
+        "mining": false,
+        "notifications": true,
+        "staking": false,
+        "transactions": false
+    }
+}
+[Completed in 0.080333 ms]
+```
+
+#### Zwracane wartości:
+
+`genesis` : To jest hash nazwy użytkownika profilu, znany również jako hash właściciela.
+
+`accessed` : Uniksowy znacznik czasu, w którym ostatnio uzyskano dostęp do profilu.
+
+`location` : Lokalizacja sesji.
+
+`unlocked` : Zawiera elementy potomne opisujące funkcje, dla których sesja jest aktualnie odblokowana.
+
+`mining` : Flaga logiczna wskazująca, czy łańcuch sygnatur użytkowników jest odblokowany do kopania.
+
+`notifications` : Flaga logiczna wskazująca, czy profil użytkownika jest odblokowany do przetwarzania powiadomień.
+
+`staking` : Flaga logiczna wskazująca, czy profil jest odblokowany do stakowania.
+
+`transactions` : Flaga logiczna wskazująca, czy profil jest odblokowany do tworzenia jakichkolwiek transakcji (z wyjątkiem tych tworzonych automatycznie przez powiadomienia o wydobywaniu/przetwarzaniu, jeśli są one odblokowane).
+
+
 
 
 
