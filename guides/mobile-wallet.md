@@ -2,7 +2,7 @@
 title: Mobile Wallet
 description: Mobile Wallet Guide
 published: true
-date: 2022-11-03T14:51:08.280Z
+date: 2022-11-03T18:17:29.026Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T16:15:32.356Z
@@ -42,4 +42,5 @@ Below you can find the links to the Mobile wallet guide:
 - [Settings *Mobile Wallet Settings*](/en/guides/mobile-wallet/settings)
 - [Core Info *Mobile wallet Core info*](/en/guides/mobile-wallet/core-info)
 - [Send NXS or Tokens *How to send NXS or tokens*](/en/guides/mobile-wallet/send)
+- [Receive NXS or Tokens *How to receive NXS or tokens*](/en/guides/mobile-wallet/receive)
 {.links-list}
