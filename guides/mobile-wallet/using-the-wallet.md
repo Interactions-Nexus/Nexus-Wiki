@@ -2,7 +2,7 @@
 title: Using the Mobile Wallet
 description: 
 published: false
-date: 2022-11-02T14:43:30.885Z
+date: 2022-11-03T14:49:28.317Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-01T18:15:09.592Z
@@ -18,7 +18,7 @@ Click on the Nexus wallet icon to launch the application. On first launch, befor
 ![mobile-wallet-sync.jpeg](/mobile-wallet-sync.jpeg) <p align = center>*Nexus Wallet Synchronize screen*</p>
 
 ---
-
+&nbsp;
 
 ## Login
 Once the wallet it fully synched, it will launch the Login screen
@@ -27,12 +27,11 @@ Once the wallet it fully synched, it will launch the Login screen
 
 The user has to enter his login credentials (username, password and PIN). There are two options to `Remember username` and `Keep me logged in` which the user can choose as per his preference. Cick on the`LOG IN` button which will login and load the wallet overview page.
 
-
 ---
+&nbsp;
 
-
-## Create User
-New users will have to first create a Nexus account, select the `Register` page on the bottom bar (marked in red) which will load the register screen.
+## Register
+New users will have to first register or create a Nexus account, select the `Register` page on the bottom bar (marked in red) which will load the register screen.
 
 To create a new user account, you will need the following:
 - username: This has to be a minimum of 2 charecters.
@@ -51,9 +50,8 @@ Enter the new credentials, below there are two options `Remember username` and `
 
 ![mobile-wallet-register.jpg](/mobile-wallet-register.jpg)<p align = center>*Nexus Wallet Register Screen*</p>
 
-
 ---
-
+&nbsp;
 ## Restore
 
 If the user needs to recover his account in case of lost credentials, select the `Recover` page on the bottom bar (marked in red).
