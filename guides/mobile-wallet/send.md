@@ -2,30 +2,30 @@
 title: Send NXS or Tokens
 description: Mobile Wallet - How to send NXS or tokens 
 published: false
-date: 2022-11-04T14:03:56.750Z
+date: 2022-11-04T14:28:37.087Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T21:30:55.293Z
 ---
 
 # Send NXS or Tokens
-To send NXS or tokens to another account, click on the send button for the particular NXS or token account listed
+To send NXS or tokens to another account, on the wallet `Overview` page, click on `SEND` for the particular NXS or token account.
 
 ![mobile-wallet-overview.jpeg](/mobile-wallet-overview.jpeg)<p align=center>Mobile Wallet - Overview</p>
 
-It opens send NXS screen
+This opens send NXS screen.
 
-
-<p align=center>Mobile Wallet - Send NXS</p>
+![mobile-wallet-send.jpg](/mobile-wallet-send.jpg)<p align=center>Mobile Wallet - Send</p>
 
 ## SEND FROM
-Check the account address to send NXS is correct
+Listed here is the account from which the NXS or tokens are to be sent, check the account address to send NXS is correct.
+&nbsp;
 
 ## SEND TO
 
-- Recipient: Enter the receipients username or address there. Under the recipient box there are three icons which the user can use to  paste, select from contacts or scan QR code.
+- **Recipient:** Enter the receipients username or address. Username has to be in the format `Zin:default` (ZIN is the username and default is the account). Under the recipient input box there are three icons which the user can use to paste from clipboard, select from contacts or scan QR code.
 
-- Amount: Enter the amount of NXS to send belwo the box select the `SEND ALL` if the user has to send the full available balance.
+- **Amount:** Enter the amount of NXS or tokens to send, if the full available balance is to be sent  select the `SEND ALL` under the amount input box.
 
-In the advanced Optios the user can enter a reference no from 0- 
-- Reference Number: This is a number to identify the transaction using a number between 0-
+Under Advanced options:
+- **Reference Number:** This is a number to identify the transaction like invoice number or order number.
