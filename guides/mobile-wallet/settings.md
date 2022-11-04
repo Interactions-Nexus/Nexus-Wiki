@@ -1,8 +1,8 @@
 ---
 title: Settings
 description: Mobile Wallet Settings
-published: false
-date: 2022-11-03T17:45:10.927Z
+published: true
+date: 2022-11-04T11:43:20.190Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T08:21:00.002Z
@@ -33,7 +33,9 @@ Under the Application options, find the below settings:
 
 ![mobile-wallet-hide-balances.jpeg](/mobile-wallet-hide-balances.jpeg)<p align=center>*Mobile Wallet - Hidden Balance*</p>
 
-- **Hide unused Trust account:** This option enables the user to hide the `Trust` account from the overview screen. The mobile wallet does not support staking which is the main function of the `Trust` account and the reason it is hidden for normal users.  
+- **Hide unused Trust account:** This option enables the user to hide the `Trust` account from the overview screen. The mobile wallet does not support staking which is the main function of the `Trust` account and the reason it is hidden for normal users.
+
+![mobile-wallet-overview.jpeg](/mobile-wallet-overview.jpeg)<p align=center>*Mobile Wallet - Hidden Trust account*</p>
 
 ## Core (Advanced)
 Under Core, find the following options:
