@@ -2,7 +2,7 @@
 title: SYSTEM
 description:  System API
 published: true
-date: 2022-11-02T22:08:59.531Z
+date: 2022-11-04T22:54:14.119Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:32.769Z
@@ -196,20 +196,20 @@ system/get/metrics
 #### Return values:
 
 `registers` : Statistics on the register database.
-{
+
 `names` : Total number of name registers, including user local, global, and namespaced.\
-{
+
 `global` : Number of names that have been created in the global namespace.
 
 `local` : Number of names that have been created in the local namespace.
 
 `namespaced` : Number of names that have been created in a namespace.\
-}
+
 
 `namespaces` : Number of namespaces that have been created.
 
 `objects` : Statistics of non-standard object registers. These include accounts, tokens, crypto, assets, items and any other derived object register.
-{
+
 `accounts` : Number of account registers. This includes both NXS and other token accounts.
 
 `assets` : Number of asset registers.
@@ -219,29 +219,29 @@ system/get/metrics
 `tokenized` : Number of object registers that have been tokenized (where the object owner is a token rather than a profile).
 
 `tokens` : Number of token registers.
-}
+
 
 `state` : Statistics of raw and readonly registers.
-{
+
 `raw` : Number of raw registers.
 
 `readonly` : Number of read only registers.
-}
-}
+
+
 
 `sig_chains` : Total number of signature chains in the ledger.
 
 `trust` : Statistics on active trust accounts.
-{
+
 `total` : Total number trust accounts that are active (have a non-zero stake balance).
 
 `stake` : Total amount of NXS currently being staked network-wide).
 
 `trust` : Total trust score of all trust accounts being staked.
-}
+
 
 `reserves` : Statistics on the amount of NXS currently in the various reserves.
-{
+
 `ambassador` : Amount of NXS in the ambassador reserves, waiting to be paid to the ambassador sig chains.
 
 `developer` : Amount of NXS in the developer reserves, waiting to be paid to the developer sig chains.
@@ -251,7 +251,7 @@ system/get/metrics
 `hash` : Amount of NXS in the hash channel reserves.
 
 `prime` : Amount of NXS in the prime channel reserves.
-}
+
 
 ---
 &nbsp;
