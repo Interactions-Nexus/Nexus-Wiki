@@ -2,7 +2,7 @@
 title: Private-Testnet
 description: 
 published: true
-date: 2022-11-04T17:35:16.522Z
+date: 2022-11-04T17:36:15.320Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:20.545Z
@@ -201,7 +201,7 @@ Ctrl+s and Ctrl+x to save and exit the editor
 To add an additional node to the private network, disable ‘manager’ and ‘generate’ flags. Add the ‘addnode’ flag with ipaddress referring to the first node or the one with the ‘generate’ flag and an additional line for any other node in the network
 {% endhint %}
 
-## 4. API Commands
+## 4. API Commands Tritium
 
 To interact with the nexus core, use API commands via the terminal or remotely. If you have any doubts you can refer to the API documentation here. The documentation for 5.1.rc1 may take some time to be updated at the time of writing the guide.
 
