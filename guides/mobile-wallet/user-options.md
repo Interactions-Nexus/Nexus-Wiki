@@ -1,8 +1,8 @@
 ---
 title: User Options
 description: Mobile wallet user options
-published: false
-date: 2022-11-04T11:38:49.865Z
+published: true
+date: 2022-11-04T11:51:03.475Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-03T18:42:50.152Z
