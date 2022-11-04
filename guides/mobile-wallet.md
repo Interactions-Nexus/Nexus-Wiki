@@ -2,7 +2,7 @@
 title: Mobile Wallet
 description: Mobile Wallet Guide
 published: true
-date: 2022-11-03T18:17:29.026Z
+date: 2022-11-04T11:40:50.530Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T16:15:32.356Z
@@ -37,10 +37,11 @@ Like everything Nexus Does, this wallet is open source. Go head and check out ou
 Nexus uses advanced cryptography algorithms that makes it Quantum Resistant and 51% Resistant. Blocks can be confirmed as little as 1 confirmation as Nodes have smart technology that can detect bad actors.
 
 Below you can find the links to the Mobile wallet guide:
-- [Install *How to install the Mobile Wallet*](/en/guides/mobile-wallet/Install)
-- [Using the Wallet *How to use the Mobile Wallet*](/en/guides/mobile-wallet/using-the-wallet)
-- [Settings *Mobile Wallet Settings*](/en/guides/mobile-wallet/settings)
-- [Core Info *Mobile wallet Core info*](/en/guides/mobile-wallet/core-info)
+- [Install *How to install the mobile wallet*](/en/guides/mobile-wallet/Install)
+- [Using the Wallet *How to use the mobile wallet*](/en/guides/mobile-wallet/using-the-wallet)
+- [Settings *Mobile wallet settings*](/en/guides/mobile-wallet/settings)
+- [Core Info *Mobile wallet core information*](/en/guides/mobile-wallet/core-info)
+- [User Options *Mobile wallet user options*](/en/guides/mobile-wallet/user-options)
 - [Send NXS or Tokens *How to send NXS or tokens*](/en/guides/mobile-wallet/send)
 - [Receive NXS or Tokens *How to receive NXS or tokens*](/en/guides/mobile-wallet/receive)
 {.links-list}
