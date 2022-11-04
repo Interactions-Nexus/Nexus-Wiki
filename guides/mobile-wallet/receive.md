@@ -1,8 +1,8 @@
 ---
 title: Receive NXS or tokens
 description: How to receive NXS or tokens on mobile wallet
-published: false
-date: 2022-11-04T14:58:35.964Z
+published: true
+date: 2022-11-04T14:58:45.401Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-03T15:17:53.914Z
