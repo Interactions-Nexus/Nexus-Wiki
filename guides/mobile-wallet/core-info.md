@@ -1,8 +1,8 @@
 ---
 title: Core Information
 description: Mobile Wallet Core Information
-published: false
-date: 2022-11-03T18:15:51.061Z
+published: true
+date: 2022-11-04T11:46:20.881Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T09:55:03.603Z
@@ -44,8 +44,8 @@ The core Info page looks like below:
 ![mobile-wallet-network-info.jpeg](/mobile-wallet-network-info.jpeg)<p align = center>*Mobile wallet Core Info*</p>
 
 
-- **Active network:** This is the network the wallet is connected.
-- **Connections:** No of peer connections to the mobile wallet.
+- **Active network:** This is the network the wallet is connected to.
+- **Connections:** Total number of peer connections to the mobile wallet.
 - **Synchronizing:** Boolean flag for synchronization
 - **Sync. progress:** The synchronization percentage
 - **Block height:** The current blcock height of the wallet.
