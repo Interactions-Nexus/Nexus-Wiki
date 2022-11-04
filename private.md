@@ -2,7 +2,7 @@
 title: Private-Testnet
 description: 
 published: true
-date: 2022-10-06T10:05:08.934Z
+date: 2022-11-04T17:35:16.522Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:20.545Z
@@ -10,9 +10,7 @@ dateCreated: 2022-10-05T08:27:20.545Z
 
 # Tritium++ Private Testnet
 
-{% hint style="info" %}
 This guide is to run a single or island node for testing. It does not require mining or staking to produce blocks
-{% endhint %}
 
 ## Introduction:
 
@@ -36,7 +34,7 @@ In a private network, throughput can be increased by adding additional nodes. In
 
 ## 1. Prepare the Node
 
-[<mark style="background-color:blue;">Install ubuntu server 20.04 LTS</mark>](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) or distro of choice, install open-ssh server during the install and once the installation is complete, restart the node. SSH into the node and follow the below commands. Copy the commands and paste it in the terminal using keys CTRL+SHIFT+v
+[Install ubuntu server 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) or distro of choice, install open-ssh server during the install and once the installation is complete, restart the node. SSH into the node and follow the below commands. Copy the commands and paste it in the terminal using keys CTRL+SHIFT+v
 
 Update and upgrade the node:
 
@@ -96,11 +94,11 @@ Download the latest nexus core 5.1 source code, should only take a few seconds t
 git clone --branch merging https://github.com/Nexusoft/LLL-TAO
 ```
 
-{% hint style="info" %}
-`Tritium++ is in merging branch at the time of writing this guide`
-{% endhint %}
+> Tritium++ is in merging branch at the time of writing this guide
+{.is-info}
 
-If Tritium++ moved to merging use the following command
+
+To install Tritium / 5.0.5, use the following command
 
 ```
 git clone --depth 1 https://github.com/Nexusoft/LLL-TAO
@@ -138,7 +136,9 @@ The make command creates a new executable file named 'nexus'. To check use the l
 ls
 ```
 
-!["ls" command lists the contents of the folder. The "nexus" executable is shown](https://nexus.io/ResourceHub/images/5.1\_testnet/testnet1.png)
+`ls` command lists the contents of the folder. The "nexus" executable is shown
+
+![](https://nexus.io/ResourceHub/images/5.1\_testnet/testnet1.png)
 
 There are two ways to access the wallet; from the LLL-TAO folder, API's can be accessed from this location only via terminal and for every command you have to specify the path (./) before the executable filename (./nexus) or if the executable file is moved to the /usr/bin directory, it can be accessed universally from any location without path (nexus). For this guide will not use the path.
 
@@ -247,9 +247,10 @@ To create a user account (signature chain). Username must be a minimum of 2 char
 nexus users/create/user username=<username> password=<password> pin=<pin> 
 ```
 
-{% hint style="info" %}
-Multiuser mode creates a new session for every user logged in and the user has to use that particular sessionID with every API request for the particular user. Save the session ID.
-{% endhint %}
+
+> Multiuser mode creates a new session for every user logged in and the user has to use that particular sessionID with every API request for the particular user. Save the session ID.
+{.is-info}
+
 
 To login the user
 
