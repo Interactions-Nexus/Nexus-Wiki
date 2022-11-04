@@ -2,7 +2,7 @@
 title: SYSTEM
 description: System API
 published: true
-date: 2022-11-04T23:04:39.410Z
+date: 2022-11-04T23:08:42.641Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:24:00.047Z
@@ -431,13 +431,13 @@ system/validate/address
 
 #### Zwracane wartości:
 
-`address` : adres, który został zweryfikowany.
+`address` : Adres, który został zweryfikowany.
 
-`is_valid` : flaga logiczna wskazująca, czy adres jest prawidłowy, czy nie. W przypadku starszych adresów oznacza to, że adres jest po prostu poprawnie sformatowany. W przypadku adresów rejestrów ta flaga sprawdza, czy pod określonym adresem istnieje rejestr w łańcuchu bloków.
+`is_valid` : Flaga logiczna wskazująca, czy adres jest prawidłowy, czy nie. W przypadku adresów Legacy oznacza to, że adres jest po prostu poprawnie sformatowany. W przypadku adresów rejestrów ta flaga sprawdza, czy pod określonym adresem istnieje rejestr w łańcuchu bloków.
 
-`type` : W przypadku adresów rejestrów, typ rejestru pod adresem. Wartości mogą być DOŁĄCZONE, STARSZE, OBIEKTOWE, SUROWE, DO ODCZYTU, ZAREZERWOWANE, SYSTEMOWE lub NIEZNANE.
+`type` : W przypadku adresów rejestrów, typ rejestru pod adresem. Wartości mogą być APPEND, LEGACY, OBJECT, RAW, READONLY, RESERVED, SYSTEM, UNKNOWN.
 
-`object_type` : Jeśli typem jest OBJECT, to pole zawiera standardowy typ obiektu rejestru obiektów. Możliwe wartości to KONTO, KRYPTO, NAZWA, PRZESTRZEŃ NAZW, REJESTRACJA, TOKEN, ZAUFANIE lub NIEZNANE.
+`object_type` : Jeśli typem jest OBJECT, to pole zawiera standardowy typ obiektu rejestru obiektów. Możliwe wartości to ACCOUNT, CRYPTO, NAME, NAMESPACE, REGISTER, TOKEN, TRUST, UNKNOWN.
 
 `is_mine` : Jeśli typ to LEGACY, ta flaga logiczna wskazuje, czy klucz prywatny adresu jest przechowywany w portfelu lokalnym.
 
