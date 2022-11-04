@@ -2,7 +2,7 @@
 title: SYSTEM
 description: System API
 published: true
-date: 2022-11-04T22:45:47.663Z
+date: 2022-11-04T23:04:39.410Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:24:00.047Z
@@ -195,21 +195,21 @@ system/get/metrics
 
 #### Zwracane wartości:
 
-`rejestry` : Statystyki w bazie danych rejestrów.
-{
-`names` : Całkowita liczba rejestrów nazw, w tym użytkowników lokalnych, globalnych i przestrzeni nazw.\
-{
+`registers` : Statystyki w bazie danych rejestrów.
+
+`names` : Całkowita liczba rejestrów nazw, w tym użytkowników lokalnych, globalnych i przestrzeni nazw.
+
 `global` : Liczba nazw, które zostały utworzone w globalnej przestrzeni nazw.
 
 `local` : Liczba nazw, które zostały utworzone w lokalnej przestrzeni nazw.
 
-`namespaced` : Liczba nazw, które zostały utworzone w przestrzeni nazw.\
-}
+`namespaced` : Liczba nazw, które zostały utworzone w przestrzeni nazw.
 
-`przestrzenie nazw` : Liczba przestrzeni nazw, które zostały utworzone.
+
+`namespaces` : Liczba przestrzeni nazw, które zostały utworzone.
 
 `objects` : Statystyka niestandardowych rejestrów obiektów. Należą do nich konta, tokeny, krypto, aktywa, przedmioty i wszelkie inne pochodne rejestry obiektów.
-{
+
 `accounts`: Liczba rejestrów kont. Obejmuje to zarówno konta NXS, jak i inne konta tokenowe.
 
 `assets` : Liczba rejestrów aktywów.
@@ -219,39 +219,39 @@ system/get/metrics
 `tokenized` : Liczba rejestrów obiektów, które zostały poddane tokenizacji (gdzie właściciel obiektu jest tokenem, a nie profilem).
 
 `tokens` : Liczba rejestrów tokenów.
-}
+
 
 `state` : Statystyka rejestrów surowych i tylko do odczytu.
-{
-`surowe` : Liczba rejestrów surowych.
 
-`tylko do odczytu` : Liczba rejestrów tylko do odczytu.
-}
-}
+`raw` : Liczba rejestrów surowych.
+
+`readonly` : Liczba rejestrów tylko do odczytu.
+
+
 
 `sig_chains` : Całkowita liczba łańcuchów podpisów w księdze.
 
-`zaufanie` : Statystyki dotyczące aktywnych rachunków powierniczych.
-{
-„total” : Całkowita liczba kont powierniczych, które są aktywne (mają niezerowe saldo stawek).
+`trust` : Statystyki dotyczące aktywnych kont trust.
 
-`stake` : Całkowita ilość NXS aktualnie postawiona w całej sieci).
+`total` : Całkowita liczba kont trust, które są aktywne (mają niezerowe saldo stawek).
 
-`zaufanie`: Całkowity wynik zaufania wszystkich postawionych kont powierniczych.
-}
+`stake` : Całkowita ilość NXS aktualnie stakowana w całej sieci.
 
-„rezerwy” : Statystyki dotyczące ilości NXS aktualnie w różnych rezerwach.
-{
+`trust`: Całkowity wynik zaufania wszystkich stakowanych kont trust.
+
+
+`reserves` : Statystyki dotyczące ilości NXS aktualnie w różnych rezerwach.
+
 `ambasador` : Ilość NXS w rezerwach ambasadora, oczekująca na zapłatę w łańcuchach ambasadorów.
 
 `developer` : Ilość NXS w rezerwach deweloperów, czekająca na zapłatę w sieciach podpisów deweloperów.
 
 `fee` : Kwota NXS w rezerwie opłat.
 
-`hash` : Ilość NXS w rezerwach kanału mieszającego.
+`hash` : Ilość NXS w rezerwach kanału hash.
 
-`prim` : Ilość NXS w rezerwach kanału głównego.
-}
+`prime` : Ilość NXS w rezerwach kanału prime.
+
 
 ---
 &nbsp;
@@ -260,18 +260,186 @@ system/get/metrics
 
 Zwraca podsumowanie informacji o peerach aktualnie połączonych z tym węzłem. Zwracana tablica jest sortowana według wartości wyniku równorzędnego.
 
-````
-system/lista/rówieśnicy
-````
+```
+system/list/peers
+```
 
 ### Parametry:
 
-[`Sortowanie`](/pl/tryt++/sortowanie).
+[`Sorting`](/en/tritium++/sorting).
 
-[`Filtrowanie`](/pl/tryt++/filtrowanie)
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operatorzy`](/pl/tryt++/operatorzy)
+[`Operators`](/en/tritium++/operators)
 
 ### Wyniki:
 
 #### Zwracana wartość obiektu JSON:
+
+```
+[
+    {
+        "address": "45.180.14.231:9888",
+        "type": "5.0.5 Tritium CLI [LLD][x64]",
+        "version": 30000,
+        "session": 8412734217501590516,
+        "outgoing": true,
+        "height": 0,
+        "best": "00000000000000000000",
+        "latency": 4294967295,
+        "lastseen": 1658762086,
+        "connects": 3,
+        "drops": 0,
+        "fails": 0,
+        "score": 8850.0
+    },
+    {
+        "address": "29.19.192.168:9888",
+        "type": "5.1.0-rc2 Tritium++ CLI [LLD][x64]",
+        "version": 3010000,
+        "session": 10774729209155580028,
+        "outgoing": true,
+        "height": 0,
+        "best": "00000000000000000000",
+        "latency": 4294967295,
+        "lastseen": 1658762098,
+        "connects": 3,
+        "drops": 1,
+        "fails": 0,
+        "score": 10195.0
+    }
+]
+[Completed in 0.409770 ms]
+```
+
+#### Zwracane wartości:
+
+`address` : Adres IP i port peera. Może to być LISP EID używający nakładki LISP lub adres IP używający natywnego podkładu.
+
+`type` : Łańcuch wersji oprogramowania demona podłączonego peera.
+
+`version` : Wersja protokołu używanego do komunikacji.
+
+`session` : Identyfikator sesji dla bieżącego połączenia.
+
+`outgoing` : Flaga wskazująca, czy było to połączenie wychodzące czy przychodzące.
+
+`height` : Aktualna wysokość peera.
+
+`best` : Blok hash najlepszego łańcucha peera.
+
+`latency` : Obliczone opóźnienie sieci między tym węzłem, a równorzędnym.
+
+`lastseen` : Sygnatura czasowa UNIX ostatniej komunikacji tego węzła z peerem.
+
+`connects` : Liczba połączeń pomyślnie nawiązanych z tym peerem od momentu uruchomienia tego węzła.
+
+`drops` : Liczba połączeń zerwanych z tym peerem od momentu uruchomienia tego węzła.
+
+`fails` : Liczba nieudanych prób połączenia z tym peerem od momentu uruchomienia tego węzła.
+
+`score` : Wartość wyniku przypisana do tego peera na podstawie czasu oczekiwania i innych statystyk połączenia.
+
+---
+&nbsp;
+
+## list/lisp-eids <a href="#list/lisp-eids" id="list/lisp-eids"></a>
+
+Zwróci to LISP Endpoint Identifiers (EID) aktualnie skonfigurowane dla tego węzła. Jeśli API lispers.net nie działa / nie jest dostępne, zwróci pustą tablicę.
+
+```
+system/list/lisp-eids
+```
+
+### Parametry:
+
+-none-
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+```
+[
+    {
+        "instance-id": "200",
+        "eid": "240.139.76.244",
+        "rlocs": [
+            {
+                "interface": "wlp59s0",
+                "rloc-name": "mymachine",
+                "rloc": "102.162.64.46"
+            }
+        ]
+    },
+    {
+        "instance-id": "200",
+        "eid": "fe::139:76:244",
+        "rlocs": [
+            {
+                "interface": "wlp59s0",
+                "rloc-name": "mymachine",
+                "rloc": "102.162.64.46"
+            }
+        ]
+    }
+]
+[Completed in 1004.256167 ms]
+```
+
+#### Zwracane wartości:
+
+`instance-id` : Grupa instancji LISP, do której należy ten EID.
+
+`eid` : Identyfikator punktu końcowego. Może to być format IPv4 lub IPv6.
+
+`rlocs` : Tablica RLOC (lokatorów routingu) skojarzona z EID.
+
+`interface` : Nazwa urządzenia dla RLOC.
+
+`rloc-name` : Nazwa hosta powiązana z urządzeniem.
+
+`rloc` : Adres IP powiązany z urządzeniem.
+
+---
+&nbsp;
+
+## validate/address <a href="#validate/address" id="validate/address"></a>
+
+Weryfikuje rejestr/adres dotychczasowy.
+
+```
+system/validate/address
+```
+
+### Parametry:
+
+`address` : Wymagany do **weryfikacji** rejestru zakodowanego w standardzie Base58 lub starszego adresu do sprawdzenia.
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+```
+{
+    "address": "8BuhE1y5oard3cEWqCSYK35bC6LdPRvcPR8N7GXYNatTw6De8eK",
+    "is_valid": true,
+    "type": "OBJECT",
+    "object_type": "ACCOUNT"
+}
+```
+
+#### Zwracane wartości:
+
+`address` : adres, który został zweryfikowany.
+
+`is_valid` : flaga logiczna wskazująca, czy adres jest prawidłowy, czy nie. W przypadku starszych adresów oznacza to, że adres jest po prostu poprawnie sformatowany. W przypadku adresów rejestrów ta flaga sprawdza, czy pod określonym adresem istnieje rejestr w łańcuchu bloków.
+
+`type` : W przypadku adresów rejestrów, typ rejestru pod adresem. Wartości mogą być DOŁĄCZONE, STARSZE, OBIEKTOWE, SUROWE, DO ODCZYTU, ZAREZERWOWANE, SYSTEMOWE lub NIEZNANE.
+
+`object_type` : Jeśli typem jest OBJECT, to pole zawiera standardowy typ obiektu rejestru obiektów. Możliwe wartości to KONTO, KRYPTO, NAZWA, PRZESTRZEŃ NAZW, REJESTRACJA, TOKEN, ZAUFANIE lub NIEZNANE.
+
+`is_mine` : Jeśli typ to LEGACY, ta flaga logiczna wskazuje, czy klucz prywatny adresu jest przechowywany w portfelu lokalnym.
+
+
+
