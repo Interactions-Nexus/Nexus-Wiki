@@ -2,7 +2,7 @@
 title: Create NXS or Token account
 description: How to create a new NXS or token account
 published: true
-date: 2022-11-04T17:10:32.675Z
+date: 2022-11-04T17:11:45.847Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-04T17:10:32.675Z
@@ -16,7 +16,7 @@ This will guide the user to create a new NXS or token account. The user needs to
 
 
 ## Create NXS Account
-To create a new NXS account, on the Overview page click on the hamburger icon awhich opens the user pane, click on Accounts to open the `Accounts` page, click on the `Add` icon on the bottom to open the 'New Account' page.
+To create a new NXS account, on the Overview page click on the hamburger icon which opens the user pane, click on Accounts to open the `Accounts` page, click on the `Add` icon on the bottom to open the 'New Account' page.
 
 ![mobile-wallet-user-accouts.jpg](/mobile-wallet-user-accouts.jpg)<p align=center>Mobile Wallet - User Accounts</p>
 
