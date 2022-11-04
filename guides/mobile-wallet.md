@@ -2,7 +2,7 @@
 title: Mobile Wallet
 description: Mobile Wallet Guide
 published: true
-date: 2022-11-04T17:21:23.372Z
+date: 2022-11-04T17:26:11.348Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T16:15:32.356Z
@@ -31,7 +31,7 @@ With Nexus mobile wallet you can get access to your Nexus Sigchain right on your
 A Lite node can not stake and will not mine blocks in the background. This restriction is hard coded.
 
 - Open Source
-Like everything Nexus Does, this wallet is open source. Go head and check out our GitHub and make modifications to your liking.
+Like everything Nexus Does, this wallet is open source. Go head and check out our [GitHub](https://github.com/Nexusoft/nexus-mobile) and make modifications to your liking.
 
 - Nexus Security
 Nexus uses advanced cryptography algorithms that makes it Quantum Resistant and 51% Resistant. Blocks can be confirmed as little as 1 confirmation as Nodes have smart technology that can detect bad actors.
