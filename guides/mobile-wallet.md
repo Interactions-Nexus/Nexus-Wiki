@@ -2,7 +2,7 @@
 title: Mobile Wallet
 description: Mobile Wallet Guide
 published: true
-date: 2022-11-04T17:13:13.848Z
+date: 2022-11-04T17:21:23.372Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T16:15:32.356Z
@@ -12,7 +12,7 @@ dateCreated: 2022-10-08T16:15:32.356Z
 
 The Nexus mobile wallet is very unique in the cyptoverse, its the only mobile wallet which actually is a node running on mobile and also connects directly to the other nodes on the Nexus network which ensures full decentralization.
 
-If you are interested to read more indepth on the Nexus mobile wallet:
+If you are interested to read more indepth on the Nexus mobile wallet, click on the link below:
 - [Nexus Mobile Wallet - *Learn more about the Mobile Wallet*](/en/fundamentals/mobile-wallet)
 
 
