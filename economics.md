@@ -2,7 +2,7 @@
 title: Economics
 description: Nexus Coinomics
 published: true
-date: 2022-10-06T09:56:47.550Z
+date: 2022-11-05T14:44:51.847Z
 tags: economics
 editor: markdown
 dateCreated: 2022-10-05T08:23:46.565Z
@@ -10,13 +10,19 @@ dateCreated: 2022-10-05T08:23:46.565Z
 
 # Economics
 
-* **Current Supply: 74,399,556 (30th September, 2022)**
-* **Target Supply @ 2024: 78 mil**
-* **Current Inflation: 0.4822% (30th September, 2022)**&#x20;
+* ***Current Supply*: 74,660,487 (4th November, 2022)**
+* ***Target Supply @ 2024*: 78,000,000 NXS**
+* ***Current Inflation*: 0.487% (4th November, 2022)**
 
+```mermaid size = 200%
+pie
+    title Nexus Supply 74,660,487
+    "Staked" : 34053424
+    "Unstaked" : 40607063
+```
 ## Nexus Minting
 
-The first Nexus block was mined on September 23rd, 2014 at 16:20:00 GMT – 7. As of September 30th, 2022, the total supply of NXS is 74,399,556, which is 95.3% of the September 2024 target of 78,000,000.
+The first Nexus block was mined on September 23rd, 2014 at 16:20:00 GMT – 7. As of November 4th, 2022, the total supply of NXS is 74,660,487, which is 95.71% of the September 2024 target of 78,000,000.
 
 The issuance of NXS is independent of a central bank or government, it has zero debt or interest associated with its distribution, and its supply is regulated by mathematics. This is in direct contrast to the creation of new loans of fiat currency by ‘Fractional Reserve Banking’, which people are required to pay back to a bank.
 
