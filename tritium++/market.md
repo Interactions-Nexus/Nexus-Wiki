@@ -2,7 +2,7 @@
 title: MARKET
 description: Market API
 published: true
-date: 2022-11-05T08:17:31.432Z
+date: 2022-11-05T12:04:22.778Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:37:45.578Z
@@ -90,12 +90,9 @@ To creates a ask market order for market=token1/token2, bid for market=token2/to
 > When market=token1/token2 is reversed to market=token2/token1 the price has to be changed accordingly. The market pair is determined by the first order which creates the market.
 {.is-info}
 
+![market-quote-nxs-token.png](/market-quote-nxs-token.png)<p align=center>*Market Quote: NXS-token*</p>
 
-
-![Market price quote](<../../../../.gitbook/assets/Price Quote.png>)
-
-<figure><img src="../../../../.gitbook/assets/Screenshot 2022-09-12 at 9.57.41 PM.png" alt=""><figcaption><p>Market price quote</p></figcaption></figure>
-
+![market-quote-token1-token2.png](/market-quote-token1-token2.png)p align=center>*Market Quote: token1-token2*</p>
 ### Parameters:
 
 `pin` : Required if **locked**. The `PIN` to authorize the transaction.
@@ -134,7 +131,7 @@ To creates a ask market order for market=token1/token2, bid for market=token2/to
 ---
 &nbsp;
 
-## `list` <a href="#user-content-credit" id="user-content-credit"></a>
+## list <a href="#list" id="list"></a>
 
 Create a new object register specified by given noun.
 
@@ -243,7 +240,10 @@ This command supports all the nouns.
 
 `address` : The register address for this account. The address (or name that hashes to this address) is needed when creating crediting or debiting the account.
 
-## `execute` <a href="#user-content-credit" id="user-content-credit"></a>
+---
+&nbsp;
+
+## execute <a href="#execute" id="execute"></a>
 
 Create a new object register specified by given noun.
 
@@ -286,7 +286,10 @@ This command supports the `bid` and `ask`  nouns.
 
 `address` : The register address for this account. The address (or name that hashes to this address) is needed when creating crediting or debiting the account.
 
-## `cancel` <a href="#user-content-credit" id="user-content-credit"></a>
+---
+&nbsp;
+
+## cancel <a href="#cancel" id="cancel"></a>
 
 Create a new object register specified by given noun.
 
@@ -322,7 +325,10 @@ This command supports the `bid and` `ask` nouns.
 
 `txid` : The hash of the transaction that was generated for cancelling the order. If using `-autotx` this field will be ommitted.
 
-## `user` <a href="#user-content-credit" id="user-content-credit"></a>
+---
+&nbsp;
+
+## user <a href="#user" id="user"></a>
 
 Retrieves a users market orders based on the noun.
 
@@ -340,11 +346,11 @@ This command supports the `order` and `executed` nouns.
 
 `token` : Required to **identify** the token for which the data is requested.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](https://docs/API/FILTERING.MD).
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
