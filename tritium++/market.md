@@ -2,7 +2,7 @@
 title: MARKET
 description: Market API
 published: true
-date: 2022-11-05T12:04:22.778Z
+date: 2022-11-05T12:05:48.877Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:37:45.578Z
@@ -29,6 +29,9 @@ Each market pair represents the current exchange rate for the two tokens. Hereâ€
 > **Note:** Market pairs are usually presented with the base token first and the quote token second, The market API allows to use the reverse market=XYZ/NXS and its treated as bid/ask depending on the noun.
 {.is-info}
 
+![market-quote-nxs-token.png](/market-quote-nxs-token.png)<p align=center>*Market Quote: NXS-token*</p>
+
+![market-quote-token1-token2.png](/market-quote-token1-token2.png)<p align=center>*Market Quote: token1-token2*</p>
 
 The full supported endpoint of the market URI is as follows:
 
@@ -90,9 +93,7 @@ To creates a ask market order for market=token1/token2, bid for market=token2/to
 > When market=token1/token2 is reversed to market=token2/token1 the price has to be changed accordingly. The market pair is determined by the first order which creates the market.
 {.is-info}
 
-![market-quote-nxs-token.png](/market-quote-nxs-token.png)<p align=center>*Market Quote: NXS-token*</p>
 
-![market-quote-token1-token2.png](/market-quote-token1-token2.png)p align=center>*Market Quote: token1-token2*</p>
 ### Parameters:
 
 `pin` : Required if **locked**. The `PIN` to authorize the transaction.
