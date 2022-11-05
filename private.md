@@ -2,7 +2,7 @@
 title: Private-Testnet
 description: 
 published: true
-date: 2022-11-05T06:36:46.661Z
+date: 2022-11-05T06:40:21.713Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:20.545Z
@@ -66,7 +66,7 @@ Set timezone:
 sudo dpkg-reconfigure tzdata
 ```
 
-To change the hostname – Optional
+To change the hostname, this is Optional
 
 ```
 sudo hostnamectl set-hostname <newhostname>
@@ -88,10 +88,10 @@ Install the dependencies required for compiling nexus core, It will take some ti
 sudo apt-get install -y build-essential libssl-dev libminiupnpc-dev git
 ```
 
-Download the latest nexus core 5.1 source code, should only take a few seconds to complete (This link may change as development progresses)
+Download the latest tritium++ core (5.1) source code, should only take a few seconds to complete
 
 ```
-git clone --branch merging https://github.com/Nexusoft/LLL-TAO
+git clone -b merging https://github.com/Nexusoft/LLL-TAO
 ```
 
 > Tritium++ is in merging branch at the time of writing this guide
@@ -197,14 +197,16 @@ system/stop=<password>
 
 Ctrl+s and Ctrl+x to save and exit the editor
 
-{% hint style="info" %}
-To add an additional node to the private network, disable ‘manager’ and ‘generate’ flags. Add the ‘addnode’ flag with ipaddress referring to the first node or the one with the ‘generate’ flag and an additional line for any other node in the network
-{% endhint %}
+> 
+> To add an additional node to the private network, disable ‘manager’ and ‘generate’ flags in the additional node configuration. Add the ‘addnode’ flag with ipaddress referring to the first node or the one with the ‘generate’ flag and an additional line for any other node in the network.
+{.is-info}
+
+
 
 
 ## 4. API Commands Tritium
 
-To interact with the nexus core, use API commands via the terminal or remotely. If you have any doubts you can refer to the API documentation here. The documentation for 5.1.rc1 may take some time to be updated at the time of writing the guide.
+To interact with the nexus core, use API commands via the terminal or remotely. If you have any doubts you can refer to the [API documentation](/en/tritium). 
 
 Open port 7080 and 8336 on the firewall.
 
