@@ -2,7 +2,7 @@
 title: Private-Testnet
 description: 
 published: true
-date: 2022-11-04T17:36:15.320Z
+date: 2022-11-05T06:36:46.661Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:20.545Z
@@ -201,6 +201,7 @@ Ctrl+s and Ctrl+x to save and exit the editor
 To add an additional node to the private network, disable ‘manager’ and ‘generate’ flags. Add the ‘addnode’ flag with ipaddress referring to the first node or the one with the ‘generate’ flag and an additional line for any other node in the network
 {% endhint %}
 
+
 ## 4. API Commands Tritium
 
 To interact with the nexus core, use API commands via the terminal or remotely. If you have any doubts you can refer to the API documentation here. The documentation for 5.1.rc1 may take some time to be updated at the time of writing the guide.
@@ -215,7 +216,19 @@ sudo ufw allow 7080/tcp
 sudo ufw allow 8336/tcp
 ```
 
-If the executable is in the LLL-TAO directory to start nexus core, change into the LLL-TAO folder to run all the following commands "cd LLL-TAO To start the daemon, use the path and the executable file name ./nexus If you have moved the nexus executable file to the /user/bin then use the following command from any location nexus
+If the executable is in the LLL-TAO directory to start nexus core, change into the LLL-TAO folder to run all the following commands.
+
+```
+cd LLL-TAO
+```
+
+To start the daemon, use the path and the executable file name.
+
+```
+./nexus
+```
+
+If you have moved the nexus executable file to the /user/bin then use the following command from any location nexus and without the path(./).
 
 To stop the daemon without password protection in config:
 
@@ -238,7 +251,7 @@ To get the node info:
 To monitor your logs:
 
 ```
-// tail -f ~/.Nexus/testnet1/log/0.log
+tail -f ~/.Nexus/testnet1/log/0.log
 ```
 
 To create a user account (signature chain). Username must be a minimum of 2 characters, passwords must be 8 characters and pin 4 characters. The PIN can be a combination of letters/numbers/symbols.
@@ -270,6 +283,90 @@ To check the full node metrics.
 ./nexus system/get/metrics 
 ```
 
-The API commands can be used from the browser and output in JSON is displayed. (JSON formatter extension used to parse the JSON output)
+The API commands can be used from the browser and output in JSON is displayed. (`JSON formatter` extension is recommended to parse the JSON output for chrome and variants, firfox has in built parser)
+
+&nbsp;
+
+## 5. API Commands Tritium++ (5.1)
+
+To interact with the tritium++ core, use the tritium++ API commands via the terminal or remotely. If you have any doubts you can refer to the [Tritum++ API Documentation](/en/tritium++). The documentation for 5.1 is almost complete and there maybe some changes as per development.
+
+Open port 7080 and 8336 on the firewall.
+
+```
+sudo ufw allow 7080/tcp
+```
+
+```
+sudo ufw allow 8336/tcp
+```
+
+If the executable is in the LLL-TAO directory to start nexus core, change into the LLL-TAO folder to run the following commands: 
+
+```
+cd LLL-TAO
+```
+
+To start the daemon, use the path and the executable file name
+
+```
+./nexus 
+```
+
+If you have moved the nexus executable file to the /user/bin then use the following command from any location nexus and without the path(./).
+
+To stop the daemon without password protection in config:
+
+```
+nexus system/stop
+```
+
+To stop the daemon with password protection in config:
+
+```
+nexus system/stop password=<password>
+```
+
+To get the node info:
+
+```
+./nexus system/get/info
+```
+
+To monitor your logs:
+
+```
+tail -f ~/.Nexus/testnet1/log/0.log
+```
+
+To create a user profile (signature chain). Username must be a minimum of 2 characters, passwords must be 8 characters and pin 4 characters. The PIN can be a combination of letters/numbers/symbols.
+
+```
+nexus profiles/create/master username=<username> password=<password> pin=<pin> 
+```
+
+The user has to create a session, to access the user profile.
+
+```
+nexus sessions/create/local username=<username> password=<password> pin=<pin>
+```
+
+> When creating a profile session in multiuser mode it returns a unique sessionID for every user logged in and the user has to use that particular sessionID with every API request for every transaction for that particular user, make sure to save the sessionID.
+{.is-info}
+
+
+To unlock the account for automatically credit incoming transactions set (notifications=1). If it's not set you will have to manually credit the incoming transactions else it will be credited back to the sender's account after 7 days or the set expiry. This is the reversible transaction function working as designed.
+
+```
+nexus sessions/unlock/local pin=<pin> notifications=1 session=<sessionid> 
+```
+
+To check the full node metrics.
+
+```
+./nexus system/get/metrics 
+```
+
+The API commands can be used from the browser and output in JSON is displayed. (`JSON formatter` extension is recommended to parse the JSON output for chrome and variants, firfox has in built parser)
 
 Hope this guide was helpful !!
