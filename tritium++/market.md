@@ -2,29 +2,22 @@
 title: MARKET
 description: Market API
 published: true
-date: 2022-10-06T11:35:03.448Z
+date: 2022-11-05T08:17:31.432Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:37:45.578Z
 ---
 
 # MARKET
-
-
-> This page is still being updated.
-{.is-warning}
-
-
-
 The Market API is an on-chain, order book based P2P marketplace for trading tokens and assets. Assets can include both digital and physical goods. Users start by creating a new market with a token pair (NXS/XYZ) and other users can participate in that particular market, execute a particular order or cancel a placed order.
 
-#### How market prices Are quoted
+## How market prices Are quoted
 
 Each market pair represents the current exchange rate for the two tokens. Here’s how to interpret that information, using market=NXS/XYZ—or the Nexus-to-XYZ exchange rate—as an example:
 
-{% hint style="info" %}
-The current price is the last traded price and has nothing to do with the bid or ask price.
-{% endhint %}
+> The current price is the last traded price and has nothing to do with the bid or ask price.
+{.is-info}
+
 
 * The token on the left (NXS) is the base token.
 * The token on the right (XYZ) is the quote token.
@@ -32,9 +25,10 @@ The current price is the last traded price and has nothing to do with the bid or
 * If the NXS/XYZ exchange rate is 1.2, that means 1 NXS will buy 1.20 XYZ (or, put another way, it will cost 1.20 XYZ to buy 1 NXS).
 * When the market rate rises, that means the base token has risen in value relative to the quote token (because 1 NXS will buy more XYZ tokens) and conversely, if the market rate falls, that means the base token has fallen in value.
 
-{% hint style="info" %}
-**Note:** Market pairs are usually presented with the base token first and the quote token second, The market API allows to use the reverse market=XYZ/NXS and its treated as bid/ask depending on the noun.
-{% endhint %}
+
+> **Note:** Market pairs are usually presented with the base token first and the quote token second, The market API allows to use the reverse market=XYZ/NXS and its treated as bid/ask depending on the noun.
+{.is-info}
+
 
 The full supported endpoint of the market URI is as follows:
 
@@ -47,27 +41,35 @@ The minimum required components of the URI are:
 ```
 market/verb/noun
 ```
+---
+&nbsp;
 
-## `Supported Verbs`
+## Supported Verbs
 
 The following verbs are currently supported by this API command-set:
 
-[`create`](market.md#user-content-create) - Creates a new market place or becomes part of an existing one.\
-[`list`](market.md#user-content-credit) - List all orders for a specified marketplace.\
-[`execute`](market.md#user-content-credit-1) - To full-fill a specified market order.\
-[`cancel`](market.md#user-content-credit-2) - To cancel a specified market order\
-[`user`](market.md#user-content-credit-3) - Retrieves all market orders for a profile.
+[`create`](#create) - Creates a new market place or becomes part of an existing one.
+[`list`](#list) - List all orders for a specified marketplace.
+[`execute`](#execute) - To full-fill a specified market order.
+[`cancel`](#cancel) - To cancel a specified market order
+[`user`](#user) - Retrieves all market orders for a profile.
 
-## `Supported Nouns`
+---
+&nbsp;
+
+## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
-\[`bid`] - A market order placed to buy a token or asset\
-\[`ask`] - A market order placed to sell a token or asset\
-\[`order`] - A market order which can be a bid or ask\
-\[`executed`] - A market order which has been full-filled.\\
+[`bid`] - A market order placed to buy a token or asset
+[`ask`] - A market order placed to sell a token or asset
+[`order`] - A market order which can be a bid or ask
+[`executed`] - A market order which has been full-filled.
 
-## `create` <a href="#user-content-create" id="user-content-create"></a>
+---
+&nbsp;
+
+## create <a href="#create" id="create"></a>
 
 This method creates a new market pair or becomes part of an existing market represented by the token or asset pair token1/token2. Market pair token2/token1 is also part of the same market.
 
@@ -77,17 +79,18 @@ market/create/noun
 
 This command supports the `bid and` `ask` nouns.
 
-#### `create/bid`
+##### create/bid
 
 This creates a bid market order for market=token1/token2, ask for market=token2/token1
 
-#### `create/ask`
+##### create/ask
 
 To creates a ask market order for market=token1/token2, bid for market=token2/token1
 
-{% hint style="info" %}
-When market=token1/token2 is reversed to market=token2/token1 the price has to be changed accordingly. The market pair is determined by the first order which creates the market.
-{% endhint %}
+> When market=token1/token2 is reversed to market=token2/token1 the price has to be changed accordingly. The market pair is determined by the first order which creates the market.
+{.is-info}
+
+
 
 ![Market price quote](<../../../../.gitbook/assets/Price Quote.png>)
 
@@ -127,6 +130,9 @@ When market=token1/token2 is reversed to market=token2/token1 the price has to b
 `txid` : The hash of the transaction that was generated for this tx. If using `-autotx` this field will be ommitted.
 
 `address` : The register address for this account. The address (or name that hashes to this address) is needed when creating crediting or debiting the account.
+
+---
+&nbsp;
 
 ## `list` <a href="#user-content-credit" id="user-content-credit"></a>
 
