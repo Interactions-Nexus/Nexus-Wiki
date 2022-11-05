@@ -2,14 +2,14 @@
 title: Send NXS or Tokens
 description: Mobile Wallet - How to send NXS or tokens 
 published: true
-date: 2022-11-04T18:27:49.131Z
+date: 2022-11-05T19:14:26.472Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T21:30:55.293Z
 ---
 
 # Send NXS or Tokens
-To send NXS or tokens to another account, on the wallet `Overview` page, click on `SEND` for the particular NXS or token account.
+To send NXS or tokens to another account, on the wallet `Overview` page, tap on `SEND` for the particular NXS or token account.
 
 ![mobile-wallet-overview.jpeg](/mobile-wallet-overview.jpeg)<p align=center>Mobile Wallet - Overview</p>
 
@@ -32,4 +32,4 @@ Under Advanced options:
 
 ![mobile-wallet-send-1.jpg](/mobile-wallet-send-1.jpg)<p  align = center>Mobile Wallet - PROCEED to send</p>
 
-Once all the information is entered, click on the `PROCEED` button or icon. This will send the transaction to the network for validation an then include it in the block.
+Once all the information is entered, tap on the `PROCEED` button or icon. This will send the transaction to the network for validation and then include it in the block.
