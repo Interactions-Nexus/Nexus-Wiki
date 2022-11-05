@@ -2,7 +2,7 @@
 title: SUPPLY
 description:  Supply API
 published: true
-date: 2022-10-06T11:17:26.186Z
+date: 2022-11-05T08:11:00.697Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:24.785Z
@@ -30,29 +30,38 @@ The minimum required components of the URI are:
 supply/verb/noun
 ```
 
-## `Supported Verbs`
+---
+&nbsp;
+
+## Supported Verbs
 
 The following verbs are currently supported by this API command-set:
 
-[`create`](broken-reference) - Generate a new object of supported type.\
-[`get`](broken-reference) - Get object of supported type.\
-[`list`](broken-reference) - List all objects owned by given user.\
-[`update`](broken-reference) - Update a specified object.\
-[`transfer`](broken-reference) - Transfer a specified object register.\
-[`claim`](broken-reference) - Claim ownership of an object register.\
-[`history`](broken-reference) - Generate the history of all last states.\
-[`transactions`](broken-reference) - List all transactions that modified specified object.
+[`create`](#create) - Generate a new object of supported type.
+[`get`](#get) - Get object of supported type.
+[`list`](#list) - List all objects owned by given user.
+[`update`](#update) - Update a specified object.
+[`transfer`](#transfer) - Transfer a specified object register.
+[`claim`](#claim) - Claim ownership of an object register.
+[`history`](#history) - Generate the history of all last states.
+[`transactions`](#transactions) - List all transactions that modified specified object.
 
-## `Supported Nouns`
+---
+&nbsp;
+
+## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
-\[item] - An object register containing an item object.\
-\[raw] - An object register containing raw object.\
-\[readonly] - An object register containing read-only object.\
-\[any] - An object selection noun allowing mixed items.
+[item] - An object register containing an item object.
+[raw] - An object register containing raw object.
+[readonly] - An object register containing read-only object.
+[any] - An object selection noun allowing mixed items.
 
-## `create` <a href="#user-content-create" id="user-content-create"></a>
+---
+&nbsp;
+
+## create <a href="#create" id="create"></a>
 
 Create a new object register specified by given noun.
 
@@ -62,19 +71,19 @@ supply/create/noun
 
 This command only supports the `item`, `raw` `readonly` and `any` nouns.
 
-**create/item**
+##### create/item
 
 Creates a new item on a object register.
 
-**create/raw**
+##### create/raw
 
 Creates a new item on a raw register.
 
-**create/readonly**
+##### create/readonly
 
 Creates a new item on a readonly register.
 
-**create/any**
+##### create/any
 
 Creates a new item specified by the format parameter.
 
@@ -98,17 +107,15 @@ Creates a new item specified by the format parameter.
 * `mutable` : The boolean field to indicate whether the field is writable (true) or read-only (false).
 * `maxlength`: Only applicable to string or bytes fields where mutable=true, this is the maximum number of characters (bytes) that can be stored in the field. If no maxlength parameter is provided then we will default the field size to the length of the default value rounded up to the nearest 64 bytes.
 
-{% hint style="info" %}
-**NOTE:**
 
-There is a limit of 1KB for item data to be saved in the register, excluding the item name.
-
-There is a fee of 1 NXS for creating and an item and an additional 1 NXS for the optional name object.
-{% endhint %}
+> **NOTE:**
+> There is a limit of 1KB for item data to be saved in the register, excluding the item name.
+> There is a fee of 1 NXS for creating and an item and an additional 1 NXS for the optional name object.
+{.is-info}
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -119,7 +126,7 @@ There is a fee of 1 NXS for creating and an item and an additional 1 NXS for the
 [Completed in 4970.165011 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the item was saved successfully.
 
@@ -127,7 +134,10 @@ There is a fee of 1 NXS for creating and an item and an additional 1 NXS for the
 
 `txid` : The ID (hash) of the transaction that includes the created object.
 
-## `get` <a href="#user-content-get" id="user-content-get"></a>
+---
+&nbsp;
+
+## get <a href="#get" id="get"></a>
 
 Retrieves information for a single item for a type specified by the noun.
 
@@ -145,13 +155,13 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 
 `address` : Required to **identify** the register address of the item. This is optional if the `name` is provided.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md)**.**
+[`Filtering`](/en/tritium++/filtering)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -171,7 +181,7 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 [Completed in 34.175112 ms]
 ```
 
-#### **Return Values:**
+#### Return Values:
 
 `owner` : The username hash of the owners profile.
 
@@ -191,7 +201,10 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 
 `name` : The name identifying the item.
 
-## `list` <a href="#user-content-list" id="user-content-list"></a>
+---
+&nbsp;
+
+## list <a href="#list" id="list"></a>
 
 Retrieves a list of all the item objects owned by the profile specified by the noun.
 
@@ -201,19 +214,19 @@ supply/list/noun
 
 This command supports the `item`, `raw`, `readonly` and `any` nouns.
 
-**list/items**
+##### list/items
 
 Lists all the items for object register type.
 
-**list/readonly**
+##### list/readonly
 
 Lists all items for readonly register type.
 
-**list/raw**
+##### list/raw
 
 Lists all items for raw register type.
 
-**list/any**
+##### list/any
 
 Lists all items for supported register types.
 
@@ -223,15 +236,15 @@ Lists all items for supported register types.
 
 `where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at `Queries`.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md)**.**
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -263,7 +276,7 @@ Lists all items for supported register types.
 [Completed in 34.175112 ms]
 ```
 
-#### **Return Values:**
+#### Return Values:
 
 `owner` : The username hash of the owners profile.
 
@@ -283,7 +296,10 @@ Lists all items for supported register types.
 
 `name` : The name identifying the item.
 
-## `update` <a href="#user-content-update" id="user-content-update"></a>
+---
+&nbsp;
+
+## update <a href="#update" id="update"></a>
 
 This method provides the user with the ability to update the object data specified by the noun.
 
@@ -293,11 +309,11 @@ supply/update/noun
 
 This command only supports the `item` and `raw` nouns.
 
-**update/item**
+##### update/item
 
 This updates the data values for item with the format basic and JSON.
 
-**update/raw**
+##### update/raw
 
 This updates the data value for the raw item register.
 
@@ -319,7 +335,7 @@ This updates the data value for the raw item register.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -329,13 +345,16 @@ This updates the data value for the raw item register.
 [Completed in 18533.182336 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the session was saved successfully.
 
 `txid` : The ID (hash) of the transaction for the updated object.
 
-## `transfer` <a href="#user-content-transfer" id="user-content-transfer"></a>
+---
+&nbsp;
+
+## transfer <a href="#transfer" id="transfer"></a>
 
 This will initiate ownership transfer of the specified noun.
 
@@ -345,15 +364,15 @@ supply/transfer/noun
 
 This command supports the `item`, `raw` and `readonly` nouns.
 
-**transfer/item**
+##### transfer/item
 
 This initiates transfer for an item to a recipient.
 
-**transfer/raw**
+##### transfer/raw
 
 This initiates transfer for a raw item to a recipient.
 
-**transfer/readonly**
+##### transfer/readonly
 
 This initiates transfer for a readonly item to a recipient.
 
@@ -382,13 +401,16 @@ This initiates transfer for a readonly item to a recipient.
 }
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The ID (hash) of the transaction that includes the name transfer.
 
 `address` : The register address for this name.
 
-## `claim` <a href="#user-content-claim" id="user-content-claim"></a>
+---
+&nbsp;
+
+## claim <a href="#claim" id="claim"></a>
 
 This method will claim ownership of the item to complete the corresponding transfer transaction.
 
@@ -398,15 +420,15 @@ supply/claim/noun
 
 This command supports the `item`, `raw` and `readonly` nouns.
 
-**claim/item**
+##### claim/item
 
 Items that have been transferred need to be claimed by the recipient. This method creates the claim transaction.
 
-**claim/raw**
+##### claim/raw
 
 Raw items that have been transferred need to be claimed by the recipient. This method creates the claim transaction.
 
-**claim/readonly**
+##### claim/readonly
 
 Readonly items that have been transferred need to be claimed by the recipient. This method creates the claim transaction.
 
@@ -422,7 +444,7 @@ Readonly items that have been transferred need to be claimed by the recipient. T
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -435,15 +457,16 @@ Readonly items that have been transferred need to be claimed by the recipient. T
 }
 ```
 
-#### **Return values:**
+#### Return values:
 
 `claimed`: Array of addresses for each name that was claimed by the transaction
 
 `txid` : The ID (hash) of the transaction that includes the name transfer.
 
-***
+---
+&nbsp;
 
-## `history` <a href="#user-content-history" id="user-content-history"></a>
+## history <a href="#history" id="history"></a>
 
 This will get the history of changes to an item, including both the data and it's ownership.
 
@@ -461,15 +484,15 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 
 `address` : Required to **identify** the register address of the item. This is optional if the `name` is provided.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md)**.**
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -501,7 +524,7 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 [Completed in 2.431636 ms]
 ```
 
-#### **Return Values:**
+#### Return Values:
 
 `owner` : The username hash of the owners profile.
 
@@ -521,7 +544,10 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 
 `action` : The action that occurred - CREATE | MODIFY | TRANSFER | CLAIM.
 
-## `transactions` <a href="#user-content-transactions" id="user-content-transactions"></a>
+---
+&nbsp;
+
+## transactions <a href="#transactions" id="transactions"></a>
 
 This will list off all of the transactions for the specified noun.
 
@@ -545,15 +571,15 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 * `summary` : type, version, sequence, timestamp, operation, and confirmations.
 * `detail` : genesis, nexthash, prevhash, pubkey and signature.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md)**.**
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -601,7 +627,7 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 [Completed in 1.944840 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The transaction hash.
 
@@ -628,8 +654,8 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 `signature` : The signature hash.
 
 `contracts` : The array of contracts bound to this transaction and their details with opcodes.
-
-{ `id` : The sequential ID of this contract within the transaction.
+{
+`id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be CREATE | MODIFY | TRANSFER | CLAIM.
 
@@ -647,4 +673,5 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 
 `<fieldname>=<value>` : The key-value pair for each piece of data stored in the item.
 
-`object` : The data stored in the item. }
+`object` : The data stored in the item.
+}
