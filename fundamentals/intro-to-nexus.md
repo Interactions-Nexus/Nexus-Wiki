@@ -2,7 +2,7 @@
 title: Introduction To Nexus
 description: The Nexus Network Currency-  NXS
 published: true
-date: 2022-11-05T17:43:59.014Z
+date: 2022-11-05T17:46:27.776Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:19.760Z
@@ -64,9 +64,9 @@ The native NXS coin has two main utilities in terms of value proposition – net
 
 ## TRANSACTING NXS
 
-Users can send and receive NXS or tokens using the username:account, namespace::account formats or the account. Free, simple transactions make it really easy.&#x20;
+Users can send and receive NXS or tokens using the username:account, namespace::account formats or address. Free simple transactions make it really easy for any user.
 
-If there is a transaction done within 10 sec of the first transaction then there is an anti-spam fee of 0.01 NXS per contract executed in the second transaction (max 1 NXS) to prevent spamming the network.
+If there is a transaction done within 10 seconds of the first transaction then there is an anti-spam fee of 0.01 NXS per contract, executed in the second transaction (a max of 1 NXS - each tx has 100 contracts max) to prevent spamming the network.
 
 
 > **Good to Know:**
