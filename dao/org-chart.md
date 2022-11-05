@@ -1,8 +1,8 @@
 ---
 title: DAO
-description: Organizational Chart
+description: Organization Chart
 published: true
-date: 2022-11-05T14:05:48.240Z
+date: 2022-11-05T14:06:22.058Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T13:17:49.576Z
