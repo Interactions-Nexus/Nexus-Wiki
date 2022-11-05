@@ -2,7 +2,7 @@
 title: Settings
 description: Mobile Wallet Settings
 published: true
-date: 2022-11-04T11:43:20.190Z
+date: 2022-11-05T19:07:56.010Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T08:21:00.002Z
@@ -10,7 +10,7 @@ dateCreated: 2022-11-02T08:21:00.002Z
 
 # Settings
 
-To access the settings page on the mobile wallet, click on the gear icon on the top right corner. See the image below (marked in red).
+To access the settings page on the mobile wallet, tap on the gear icon at the top right corner. See the image below (marked in red).
 
 ![mobile-wallet-settings-icon.jpg](/mobile-wallet-settings-icon.jpg)<p align=center>*Mobile Wallet - Settings Icon*</p>
 
@@ -29,7 +29,7 @@ Under the Application options, find the below settings:
 
 - **Base Currency:** This is the currency in which the balance is shown on the overview screen.
 
-- **Hide Balances:** This will hide all the NXS and token balance on the overview screen.
+- **Hide Balances:** This will hide all the NXS and token balances on the overview screen.
 
 ![mobile-wallet-hide-balances.jpeg](/mobile-wallet-hide-balances.jpeg)<p align=center>*Mobile Wallet - Hidden Balance*</p>
 
