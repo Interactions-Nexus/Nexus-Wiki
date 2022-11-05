@@ -2,7 +2,7 @@
 title: Economics
 description: Nexus Coinomics
 published: true
-date: 2022-11-05T14:44:51.847Z
+date: 2022-11-05T14:46:49.752Z
 tags: economics
 editor: markdown
 dateCreated: 2022-10-05T08:23:46.565Z
@@ -16,7 +16,7 @@ dateCreated: 2022-10-05T08:23:46.565Z
 
 ```mermaid size = 200%
 pie
-    title Nexus Supply 74,660,487
+    title Total NXS Supply: 74,660,487
     "Staked" : 34053424
     "Unstaked" : 40607063
 ```
