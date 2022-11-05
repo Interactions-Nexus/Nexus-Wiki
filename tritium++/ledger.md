@@ -2,7 +2,7 @@
 title: LEDGER
 description: Ledger API
 published: true
-date: 2022-10-06T11:35:37.990Z
+date: 2022-11-05T07:11:27.660Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:44.875Z
@@ -12,22 +12,26 @@ dateCreated: 2022-10-05T08:34:44.875Z
 
 The Ledger API provides users with access to data held by the ledger such as blocks, transactions and network-wide staking and mining information.
 
-## `Direct Endpoints`
+## Direct Endpoints
 
 The following commands are direct endpoints and thus do not support the above verb and noun structure available above.
 
-[`get/blockhash`](broken-reference)\
-[`get/block`](broken-reference)\
-[`list/blocks`](broken-reference)\
-[`get/transaction`](broken-reference)\
-[`list/transactions`](broken-reference)\
-[`submit/transaction`](broken-reference)\
-[`get/info`](broken-reference)\
-[`get/metrics`](broken-reference)
+[`get/blockhash`](#get/blockhash)
+[`get/block`](#get/block)
+[`list/blocks`](#list/blocks)
+[`get/transaction`](#get/transaction)
+[`list/transactions`](#list/transactions)
+[`submit/transaction`](#submit/transaction)
+[`get/info`](#get/info)
+[`get/metrics`](#get/metrics)
 
 Direct endpoints support `filters` and `operators`.
 
-## `get/blockhash` <a href="#user-content-get-blockhash" id="user-content-get-blockhash"></a>
+
+---
+&nbsp;
+
+## get/blockhash <a href="#get/blockhash" id="get/blockhash"></a>
 
 Retrieves the hash of the block for the given height.
 
@@ -41,7 +45,7 @@ ledger/get/blockhash
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -50,11 +54,14 @@ ledger/get/blockhash
 [Completed in 0.083791 ms]  
 ```
 
-#### **Return values:**
+#### Return values:
 
 `hash` : The hash of the block.
 
-## `get/block` <a href="#user-content-get-block" id="user-content-get-block"></a>
+---
+&nbsp;
+
+## get/block <a href="#get/block" id="get/block"></a>
 
 Retrieves block data for the given block hash or height.
 
@@ -62,10 +69,10 @@ Retrieves block data for the given block hash or height.
 ledger/get/block
 ```
 
-{% hint style="info" %}
-**NOTE:** \
-Retrieving block data by height is only possible if the core has been configured with --indexheight flag.
-{% endhint %}
+> **NOTE:** 
+> Retrieving block data by height is only possible if the core has been configured with --indexheight flag.
+{.is-info}
+
 
 ### Parameters:
 
@@ -79,13 +86,13 @@ Retrieving block data by height is only possible if the core has been configured
 * `summary` : type, version, sequence, timestamp, and contracts.
 * `detail` : genesis, nexthash, prevhash, pubkey and signature.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -135,7 +142,7 @@ Retrieving block data by height is only possible if the core has been configured
 [Completed in 0.422600 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `hash` : The hash of the block.
 
@@ -191,8 +198,8 @@ Retrieving block data by height is only possible if the core has been configured
 
 `hash` : The transaction hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes.\
-{\
+`contracts` : The array of contracts bound to this transaction and their details with opcodes.
+{
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -220,10 +227,12 @@ Retrieving block data by height is only possible if the core has been configured
 `ticker` : The name of the token that the transaction relates to.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
-
 }
 
-## `list/blocks` <a href="#user-content-list-blocks" id="user-content-list-blocks"></a>
+---
+&nbsp;
+
+## list/blocks <a href="#list/blocks" id="list/blocks"></a>
 
 Retrieves an array of block data for a sequential range of blocks from a given hash or height.
 
@@ -231,10 +240,10 @@ Retrieves an array of block data for a sequential range of blocks from a given h
 ledger/list/blocks
 ```
 
-{% hint style="info" %}
-**NOTE:**   \
-Retrieving block data by height is only possible if the core has been configured with --indexheight flag.
-{% endhint %}
+> **NOTE:** 
+> Retrieving block data by height is only possible if the core has been configured with --indexheight flag.
+> {.is-info}
+
 
 ### Parameters:
 
@@ -247,22 +256,23 @@ Retrieving block data by height is only possible if the core has been configured
 * `summary` : type, version, sequence, timestamp, and operation.
 * `detail` : genesis, nexthash, prevhash, pubkey and signature.
 
-`where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at `Queries`.
+`where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at [`Queries`](/en/tritium++/queries).
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators).
 
-**NOTE :**
+> **NOTE :**
+>    Either the hash or the height needs to be supplied, but not both.
+>    Retrieving block data by height is only allowed if the daemon has been configured with indexheight=1.
+{.is-info}
 
-* Either the hash or the height needs to be supplied, but not both.
-* Retrieving block data by height is only allowed if the daemon has been configured with indexheight=1.
 
 ### Returns:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -309,7 +319,7 @@ Retrieving block data by height is only possible if the core has been configured
 [Completed in 8.883924 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `hash` : The hash of the block.
 
@@ -365,8 +375,8 @@ Retrieving block data by height is only possible if the core has been configured
 
 `hash` : The transaction hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes.\
-{\
+`contracts` : The array of contracts bound to this transaction and their details with opcodes.
+{
 `idcontractid` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -394,10 +404,12 @@ Retrieving block data by height is only possible if the core has been configured
 `ticker` : The name of the token that the transaction relates to.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
-
 }
 
-## `get/transaction` <a href="#user-content-get-transaction" id="user-content-get-transaction"></a>
+---
+&nbsp;
+
+## get/transaction <a href="#get/transaction" id="get/transaction"></a>
 
 Retrieves transaction data for a given transaction hash.
 
@@ -416,13 +428,13 @@ ledger/get/transaction
 * summary : hash, type, version, sequence, timestamp, and contracts.
 * detail : genesis, nexthash, prevhash, pubkey and signature.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
 ### Returns:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -453,7 +465,7 @@ ledger/get/transaction
 [Completed in 0.290130 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The transaction hash.
 
@@ -479,8 +491,8 @@ ledger/get/transaction
 
 `signature`: The signature hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes.\
-{\
+`contracts` : The array of contracts bound to this transaction and their details with opcodes.
+{
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -507,10 +519,13 @@ ledger/get/transaction
 
 `ticker` : The name of the token that the transaction relates to.
 
-`reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.\
+`reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
 }
 
-## `list/transactions` <a href="#user-content-list-transactions" id="user-content-list-transactions"></a>
+---
+&nbsp;
+
+## list/transactions <a href="#list/transactions" id="list/transactions"></a>
 
 Retrieves transaction data for a given transaction hash.
 
@@ -527,17 +542,17 @@ ledger/list/transactions
 * summary : hash, type, version, sequence, timestamp, and contracts.
 * detail : genesis, nexthash, prevhash, pubkey and signature.
 
-`where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at `Queries`.
+`where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at [`Queries`](/en/tritium++/queries).
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Returns:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -568,7 +583,7 @@ ledger/list/transactions
 [Completed in 0.290130 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The transaction hash.
 
@@ -594,8 +609,8 @@ ledger/list/transactions
 
 `signature`: The signature hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes.\
-{\
+`contracts` : The array of contracts bound to this transaction and their details with opcodes.
+{
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -622,10 +637,13 @@ ledger/list/transactions
 
 `ticker` : The name of the token that the transaction relates to.
 
-`reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.\
+`reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
 }
 
-## `submit/transaction` <a href="#user-content-submit-transaction" id="user-content-submit-transaction"></a>
+---
+&nbsp;
+
+## submit/transaction <a href="#submit/transaction" id="submit/transaction"></a>
 
 Submits a transaction to be included in the mempool and broadcast to the network.
 
@@ -639,19 +657,20 @@ ledger/submit/transaction
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
-{% code lineNumbers="true" %}
 ```
 { "hash": "47959e245f45aab773c0ce5320a5454f49ac15f63e15acb36855ac654d54d6314fe36b61dd64ec7a9a546bcc439a628e9badcdccb6e5f8072d04a0a3b67f8679" }
 ```
-{% endcode %}
 
-**Return values:**
+#### Return values:
 
 `hash` : The tranaction hash, if successfully committed to the mempool / broadcast.
 
-## `get/info` <a href="#user-content-get-info" id="user-content-get-info"></a>
+---
+&nbsp;
+
+## get/info <a href="#get/info" id="get/info"></a>
 
 Retrieves mining and NXS supply related data for the ledger.
 
@@ -661,11 +680,11 @@ ledger/get/info
 
 #### Parameters:
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
 #### Returns:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -713,10 +732,10 @@ ledger/get/info
 [Completed in 3827.013421 ms]
 ```
 
-**Return values:**
+#### Return values:
 
-`Stake` : Retreives information for the stake channel.\
-{\
+`Stake` : Retreives information for the stake channel.
+{
 `height` : The current number of blocks for the stake channel.
 
 `weight` : The total work completed for the stake channel.
@@ -725,11 +744,11 @@ ledger/get/info
 
 `fees` : It is the total NXS accumulated on the stake channel.
 
-`difficulty` : The current difficulty of the stake channel.\
+`difficulty` : The current difficulty of the stake channel.
 }
 
-`prime` : Retreives information for the prime channel.\
-{\
+`prime` : Retreives information for the prime channel.
+{
 `height` : The current number of blocks for the prime channel.
 
 `weight` : The total work completed for prime channel.
@@ -744,11 +763,11 @@ ledger/get/info
 
 `reward` : The block reward for the next prime block to be found.
 
-`hashes` : It is total network hash rate for prime channel.\
+`hashes` : It is total network hash rate for prime channel.
 }
 
-`hash` : Retreives information for the hash channel.\
-{\
+`hash` : Retreives information for the hash channel.
+{
 `height` : The current number of blocks for the hash channel.
 
 `weight` : The total work completed for hash channel.
@@ -763,12 +782,12 @@ ledger/get/info
 
 `reward` : The block reward for the next hash block to be found.
 
-`hashes` : It is total network hash rate for the hash channel.\
+`hashes` : It is total network hash rate for the hash channel.
 }
 
 `supply` : Metrics on NXS supply rates.
 
-{\
+{
 `total` : Total amount of NXS in existence.
 
 `target` : The target supply rate for this point in time.
@@ -783,7 +802,7 @@ ledger/get/info
 
 `week` : The increase in supply rate within the last week.
 
-`month` : The increase in supply rate within the last 30 days.\
+`month` : The increase in supply rate within the last 30 days.
 }
 
 `height` : The block height when the information is retrieved.
@@ -792,7 +811,10 @@ ledger/get/info
 
 `checkpoint` : It is the most recent checkpoint that blocks can’t be reorganized before, so everything before that hash is finalized.
 
-## `get/metrics` <a href="#user-content-get-metrics" id="user-content-get-metrics"></a>
+---
+&nbsp;
+
+## get/metrics <a href="#get/metrics" id="get/metrics"></a>
 
 Retrieves mining related data for the ledger.
 
@@ -802,11 +824,11 @@ ledger/get/metrics
 
 #### Parameters:
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
 #### Returns:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -862,88 +884,88 @@ ledger/get/metrics
 [Completed in 12378.496480 ms]
 ```
 
-**Return Values:**
+#### Return Values:
 
-`volumes` : This retrieves the transactions, contracts and accounts volume.\
-{\
-`transactions` : Statistics for transactions for a specified period.\
-{\
+`volumes` : This retrieves the transactions, contracts and accounts volume.
+{
+`transactions` : Statistics for transactions for a specified period.
+{
 `daily` : Total number of transactions in the last 24 hours.
 
 `weekly` : Total number of transactions in the last 7 days.
 
-`monthly` : Total number of transactions in the last month.\
+`monthly` : Total number of transactions in the last month.
 }
 
-`contracts` : Statistics for contracts for a specified period.\
-{\
+`contracts` : Statistics for contracts for a specified period.
+{
 `daily` : Total number of contracts in the last 24 hours.
 
 `weekly` : Total number of contracts in the last 7 days.
 
-`monthly` : Total number of contracts in the last month.\
+`monthly` : Total number of contracts in the last month.
 }
 
-`accounts` : Statistics for accounts (profiles) created in a specified period.\
+`accounts` : Statistics for accounts (profiles) created in a specified period.
 { `daily` : Total number of accounts created in the last 24 hours.
 
 `weekly` : Total number of accounts created in the last 7 days.
 
-`monthly` : Total number of accounts created in the last month.\
-}\
+`monthly` : Total number of accounts created in the last month.
+}
 }
 
-`exchanges` : Statistics of NXS deposits and withdrawals from exchanges.\
-{\
-`deposits` : Statistics for NXS deposited to exchanges (moved to legacy from tritium).\
-{\
+`exchanges` : Statistics of NXS deposits and withdrawals from exchanges.
+{
+`deposits` : Statistics for NXS deposited to exchanges (moved to legacy from tritium).
+{
 `daily` : Total number of NXS deposited in the last 24 hours.
 
 `weekly` : Total number of NXS deposited in the last 7 days.
 
-`monthly` : Total number of NXS deposited in the last month.\
+`monthly` : Total number of NXS deposited in the last month.
 }
 
-`withdraws` : Statistics for NXS withdraws from exchanges (moved to tritium from legacy).\
-{\
+`withdraws` : Statistics for NXS withdraws from exchanges (moved to tritium from legacy).
+{
 `daily` : Total number of NXS withdraws in the last 24 hours.
 
 `weekly` : Total number of NXS withdraws in the last 7 days.
 
-`monthly` : Total number of NXS withdraws in the last month.\
-}\
+`monthly` : Total number of NXS withdraws in the last month.
+}
 }
 
-`Network` : Statistics of NXS minted by the staking, mining channels and NXS moved to /f rom stake.\
-{\
-`mint` : This retreives the statistics for the NXS minted on staking and mining channels.\
+`Network` : Statistics of NXS minted by the staking, mining channels and NXS moved to /f rom stake.
+{
+`mint` : This retreives the statistics for the NXS minted on staking and mining channels.
 {
 
-`staking` : Statistics for NXS minted from staking for a specified period.\
-{\
+`staking` : Statistics for NXS minted from staking for a specified period.
+{
 `daily` : Total number of NXS minted from staking in the last 24 hours.
 
 `weekly` : Total number of NXS minted from staking in the last 7 days.
 
-`monthly` : Total number of NXS minted from staking in the last month.\
+`monthly` : Total number of NXS minted from staking in the last month.
 }
 
-`mining` : Statistics for NXS minted from mining for a specified period.\
-{\
+`mining` : Statistics for NXS minted from mining for a specified period.
+{
 `daily` : Total number of NXS minted from mining in the last 24 hours.
 
 `weekly` : Total number of NXS minted from mining in the last 7 days.
 
-`monthly` : Total number of NXS minted from mining in the last month.\
-}\
+`monthly` : Total number of NXS minted from mining in the last month.
+}
 }
 
-`stake` : Statistics for NXS locked or unlocked from stake (trust accounts) for a specified period.\
-{\
+`stake` : Statistics for NXS locked or unlocked from stake (trust accounts) for a specified period.
+{
 `daily` : Total number of NXS locked or unlocked from stake in the last 24 hours.
 
 `weekly` : Total number of NXS locked or unlocked from stake in the last 7 days.
 
-`monthly` : Total number of NXS locked or unlocked from stake in the last month.\
-}\
+`monthly` : Total number of NXS locked or unlocked from stake in the last month.
+}
 }
