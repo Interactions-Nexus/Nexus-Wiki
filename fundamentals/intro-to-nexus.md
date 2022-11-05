@@ -2,14 +2,14 @@
 title: Introduction To Nexus
 description: The Nexus Network Currency-  NXS
 published: true
-date: 2022-10-29T17:35:29.688Z
+date: 2022-11-05T17:43:59.014Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:19.760Z
 ---
 
 # Introduction to Nexus
-
+&nbsp;
 ## What is a cryptocurrency? 
 
 A cryptocurrency is a medium of exchange secured by a blockchain-based ledger.
@@ -18,9 +18,11 @@ A medium of exchange is anything widely accepted as payment for goods and servic
 
 The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin's release in 2009, people have made thousands of cryptocurrencies across many different blockchains.
 
+&nbsp;
+
 ## What is Nexus? 
 
-**Nexus (NXS)** is the native cryptocurrency of Nexus network. Nexus has free, simple transactions due to its design. The purpose of NXS is to allow for appropriate gamification of the network, which ensures that the active participants are compensated for the stake and time spent securing the network. Fees for various operations also prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming / DDOS) and name squatting.
+`Nexus` `(NXS)` is the native cryptocurrency of Nexus network. Nexus has free, simple transactions due to its design. The purpose of NXS is to allow for appropriate gamification of the network, which ensures that the active participants are compensated for the stake and time spent securing the network. Fees for various operations also prevent malicious participants from intentionally clogging the network by requesting infinite micro transactions (spamming / DDOS) and name squatting.
 
 NXS is created by the protocol as compensation for miners and stakers for providing computational resources and securing the network. Thus the gamification ensures the network participants verify and execute transaction requests and provide computational resources to the network and upgrade them when needed.
 
@@ -28,15 +30,18 @@ Any participant who broadcasts a contract execution request must also offer some
 
 Developers can build decentralized applications (dapps) using the REST API, Augmented contracts. NXS allows users to use the network for a lot of things like creating tokens, assets, tokenizing assets, namespaces, and supply chain solutions.
 
+&nbsp;
+
 ## Minting NXS
 
-Minting is the process in which new NXS gets created on the ledger. The underlying protocol can only create the new NXS. The protocol was designed with a max of 78 million NXS for 10 years, and after that there will be tail-end emission of a max 3.67%
-
+Minting is the process in which new NXS gets created on the ledger. The underlying protocol can only create the new NXS. The protocol was designed with a max of 78 million NXS to be minted over 10 years and after that there will be a maximum tail-end emissions of 3.67%.
 
 > Nexus was mined into existence similar to Bitcoin and there was no premine or ICO.
 {.is-info}
 
 NXS is minted when a miner or staker creates a block on the Nexus blockchain. As an incentive to miners or stakers, the protocol grants a reward in each block created by them, incrementing the balance of an address set by the block's miner. The block reward reduces gradually over time as per the emission logarithmic scale programmed in the protocol.
+
+&nbsp;
 
 ## DENOMINATIONS OF NEXUS  
 
@@ -45,6 +50,7 @@ Since many transactions on Nexus are small, Nexus has 1 million units or 6 decim
 * 1 Viz = 0.000001 NXS
 * 1 NXS = 1,000,000 Viz
 
+&nbsp;
 
 ## Nexus (NXS) Utility:
 
@@ -52,24 +58,25 @@ The native NXS coin has two main utilities in terms of value proposition – net
 
 * **Cryptocurrency** – NXS is the native currency of the Nexus ecosystem. NXS transactions are free and instantaneous. NXS can also be staked, with rewards starting at 0.5% per annum building up to a maximum of 3% over one year. One of the unique aspects of Nexus staking is a reputation called ‘Trust’ that records the time one has contributed to the network which adds another layer to the security of Nexus.
 * **Advanced Contracts Fees** – Similar to other contract platforms, NXS is required when executing operations within advanced contract. It is important to note that the cost of an advanced contract is known before its execution, as costs are based on the complexity of the operations involved. Therefore, there is no risk of failed executions or unpredictable costs due to network traffic, as frequently experienced on Ethereum.
-* **Hybrid Networks Fees** – Enterprises can operate autonomously on their own private network where transactions are free, though they have the option to pay for enhanced security services provided by the public network.&#x20;
+* **Hybrid Networks Fees** – Enterprises can operate autonomously on their own private network where transactions are free, though they have the option to pay for enhanced security services provided by the public network.
 
-## TRANSACTING NXS <a href="#transferring-ether" id="transferring-ether"></a>
+&nbsp;
+
+## TRANSACTING NXS
 
 Users can send and receive NXS or tokens using the username:account, namespace::account formats or the account. Free, simple transactions make it really easy.&#x20;
 
-If there is a transaction done within 10 sec of the first transaction then there is an anti-spam fee of 0.1 NXS per contract executed in the second transaction (max 1 NXS) to prevent spamming the network.
+If there is a transaction done within 10 sec of the first transaction then there is an anti-spam fee of 0.01 NXS per contract executed in the second transaction (max 1 NXS) to prevent spamming the network.
 
-{% hint style="info" %}
-**Good to Know:**&#x20;
 
-Every operation on Nexus is carried out as a contract. Multiple contracts (max 99) are bundled in a transaction and sent for processing.&#x20;
-{% endhint %}
+> **Good to Know:**
+> Every operation on Nexus is carried out as a contract. Multiple contracts (max 99) are bundled in a transaction and sent for processing.
+{.is-info}
 
-## QUERYING NXS <a href="#querying-ether" id="querying-ether"></a>
+&nbsp;
 
-Users can query the NXS balance of any account using the Nexus Interface on the user module, account's page where all the accounts are listed with the NXS holdings.&#x20;
+## QUERYING NXS
 
-[Explorer ](https://explorer.nexus.io/)is a popular tool to inspect address balances via a web-based application.&#x20;
+Users can query the NXS balance of any account using the Nexus Interface on the user module, account's page where all the accounts are listed with the NXS holdings.
 
-\
+[Explorer ](https://explorer.nexus.io/)is a popular tool to inspect address balances via a web-based application.
