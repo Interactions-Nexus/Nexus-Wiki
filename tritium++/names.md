@@ -2,7 +2,7 @@
 title: NAMES
 description:  Names API
 published: true
-date: 2022-10-06T11:14:46.943Z
+date: 2022-11-05T07:52:15.032Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:53.594Z
@@ -12,17 +12,20 @@ dateCreated: 2022-10-05T08:34:53.594Z
 
 Names and Namespaces are special kinds of object registers that are used as locators to other object registers in the blockchain. When an object register is first created (an asset for example) the caller can provide a name for the register. If a name is provided then a Name object register is also created with its register address based on a hash of the name. The Name object also has a address field, which is populated with the register address of the register (asset, token, account etc) that the Name "points" to. In this way, objects can be retrieved by name by first hashing the name to get the Name object's address, retrieving the Name object, and then using the address stored within it to retrieve the object register. A Name then, is best thought of as a named index to object registers.
 
-The TAO Naming System (TNS) allows Name objects to be created in one of three different contexts, - local, namespaced, and global and will be owned by a profile. Names must be unique within the profile in which it was defined.
+The `TAO Naming System` (TNS) allows Name objects to be created in one of three different contexts, - `local`, `namespaced`, and `global` and will be owned by a profile. Names must be unique within the profile in which it was defined.
 
-Local Names are those created within the context of a user profile. To use a local name you must prefix the name with the owners username separated by a single colon, e.g. bob:savings. This is equivalent to saying "look at all the Names registered in the profile bob and find one called savings and then see what object register it points to". There can only be one Name called savings in the sig chain bob, but another user alice can also create a local name called savings.
+## Local Names
+LOcal names are those created within the context of a user profile. To use a local name you must prefix the name with the owners username separated by a single colon, e.g. bob:savings. This is equivalent to saying "look at all the Names registered in the profile bob and find one called savings and then see what object register it points to". There can only be one Name called savings in the sig chain bob, but another user alice can also create a local name called savings.
 
-Namespaced Names are those created within the context of a namespace, which itself is a globally unique keyword. Namespaces allow users to provide user-friendly names for their object registers without needing to disclose their username. This is useful for privacy, but also to allow names to be related to a business or some other meaningful context. To use a namespaced name you must prefix the name with the namespace separated by a double colon, e.g. bobscoffeeshop::payments. In this example bob would have first registered the namespace bobscoffeeshop and created an account to receive payments to (which could be called anything). He then creates a Name with a name=payments, namespace=bobscoffeeshop and address=(register address of the account). From then on, anyone can use the name bobscoffeeshop::payments and it will resolve to the register address of the account. To avoid name-squatting registering a namespace name attracts a high fee (1000 NXS). However once registered, creating Names within that namespace costs only 1 NXS
+## Namespaced Names
+Namespaced Names are those created within the context of a `namespace`, which itself is a globally unique keyword. Namespaces allow users to provide user-friendly names for their object registers without needing to disclose their username. This is useful for privacy, but also to allow names to be related to a business or some other meaningful context. To use a namespaced name you must prefix the name with the namespace separated by a double colon, e.g. `bobscoffeeshop::payments`. In this example bob would have first registered the namespace `bobscoffeeshop` and created an account to receive `payments` to (which could be called anything). He then creates a Name with a name=payments, namespace=bobscoffeeshop and address=(register address of the account). From then on, anyone can use the name `bobscoffeeshop::payments` and it will resolve to the register address of the account. To avoid name-squatting registering a namespace name attracts a high fee (1000 NXS). However once registered, creating Names within that namespace costs only 1 NXS
 
-Global Names require no username or namespace prefix, and are therefore globally unique. These will be likely reserved for use cases where a succinct, unique, name is necessary, for example a token ticker symbol. To avoid needless name-squatting, global names attract a high fee (2000 NXS).
+## Global Names
+Global Names require no username or namespace prefix, and are therefore globally unique. These will be likely reserved for use cases where a succinct, unique, name is necessary, for example a token `ticker` symbol. To avoid needless name-squatting, global names attract a high fee (2000 NXS).
 
-The Names API allows callers to access and manage both Names and Namespaces. Names can be created to "point" to any register address you wish, whether the caller owns the register or not. This is useful, for example, if somebody gives you the register address of a NXS account to receive payments and you wish to add a friendly Name for it for future use.
+The Names API allows callers to access and manage both `Names` and `Namespaces`. Names can be created to "point" to any register address you wish, whether the caller owns the register or not. This is useful, for example, if somebody gives you the register address of a NXS account to receive payments and you wish to add a friendly Name for it for future use.
 
-Namespaces can be transferred to other signature chains, opening the possibility for a secondary market to buy and sell namespaces (similar to internet domain names). Global Names and Names that have been created within a namespace can also be transferred to other signature chains. Local names cannot be transferred.
+Namespaces can be transferred to other signature chains, opening the possibility for a secondary market to buy and sell namespaces (similar to internet domain names). `Global Names` and `Names` that have been created within a `namespace` can also be transferred to other signature chains. Local names cannot be transferred.
 
 The full supported endpoint of the Names URI is as follows:
 
@@ -35,31 +38,39 @@ The minimum required components of the URI are:
 ```
 /names/verb/noun
 ```
+---
+&nbsp;
 
-## `Supported Verbs`
+## Supported Verbs
 
 The following verbs are currently supported by this API command-set:
 
-[`create`](broken-reference) - Generate a new object of supported type.\
-[`get`](broken-reference) - Get object of supported type.\
-[`list`](broken-reference) - List all objects owned by given user.\
-[`update`](names.md#user-content-update)- Update an object register.\
-[`transfer`](names.md#user-content-transfer)- Transfer ownership of an object register.\
-[`claim`](broken-reference) - Claim ownership of an object register.\
-[`history`](broken-reference) - Generate the history of all last states.\
-[`transactions`](broken-reference) - List all transactions that modified specified object.
+[`create`](#create) - Generate a new object of supported type.
+[`get`](#get) - Get object of supported type.
+[`list`](#list) - List all objects owned by given user.
+[`update`](#update)- Update an object register.
+[`transfer`](#transfer)- Transfer ownership of an object register.
+[`claim`](#claim) - Claim ownership of an object register.
+[`history`](#history) - Generate the history of all last states.
+[`transactions`](#transactions) - List all transactions that modified specified object.
 
-## `Supported Nouns`
+---
+&nbsp;
+
+## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
-\[`name`] - An object register containing a name object.\
-\[`namespace`] - An object register containing a namespace object.\
-\[`global`] - An object register which is recognised globally on the network.\
-\[`local`] - An object register which is recognised only within the context of a user profile.\
-\[`any`] - An object selection noun allowing mixed names nouns.
+[`name`] - An object register containing a name object.
+[`namespace`] - An object register containing a namespace object.
+[`global`] - An object register which is recognised globally on the network.
+[`local`] - An object register which is recognised only within the context of a user profile.
+[`any`] - An object selection noun allowing mixed names nouns.
 
-## `create` <a href="#user-content-create" id="user-content-create"></a>
+---
+&nbsp;
+
+## create <a href="#create" id="create"></a>
 
 This will create a new object register specified by given noun.
 
@@ -69,15 +80,17 @@ names/create/noun
 
 This command supports the name and namespace nouns.
 
-#### **create/name**
+##### create/name
 
 This will create a new local name or namespaced or global name
 
-#### **create/namespace**
+##### create/namespace
 
 This will create a new namespace.
 
-**NOTE** : Namespaces can only contain lowercase letters, numbers, and periods (.).
+> **NOTE** : Namespaces can only contain lowercase letters, numbers, and periods (.).
+{.is-info}
+
 
 ### Parameters:
 
@@ -85,7 +98,7 @@ This will create a new namespace.
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied.
 
-#### **create/name**
+##### create/name
 
 `name` : Required a name to be **created** for the object that this name will point to. The name can contain any characters, but must not START with a colon :
 
@@ -95,13 +108,13 @@ This will create a new namespace.
 
 `address` : Optional, the 256-bit hexadecimal **register address** of the object that this Name will point to.
 
-#### **create/namespace**
+##### create/namespace
 
 `namespace` : Required name to **create** a namespace object. A hash of the name will determine the register address.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -112,7 +125,7 @@ This will create a new namespace.
 [Completed in 4981.591417 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the name or namespace was created successfully .
 
@@ -120,7 +133,10 @@ This will create a new namespace.
 
 `txid` : The ID (hash) of the transaction that includes the name or namespace creation.
 
-## `get` <a href="#user-content-get" id="user-content-get"></a>
+---
+&nbsp;
+
+## get <a href="#get" id="get"></a>
 
 Retrieves the object information specified by given noun.
 
@@ -130,19 +146,19 @@ names/get/noun
 
 This command supports the `name` `namespace` `global` and `local` nouns.
 
-#### **get/name**
+##### get/name
 
 This will retreive a specified name object.
 
-#### **get/namespace**
+##### get/namespace
 
 This will retreive a specified namespace object.
 
-#### **get/global**
+##### get/global
 
 This will retreive a specified global name object.
 
-#### **get/local**
+##### get/local
 
 This will retreive a specified local name object.
 
@@ -150,17 +166,17 @@ This will retreive a specified local name object.
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-#### **get/name, get/global, get/local**
+##### get/name, get/global, get/local
 
 `name` : Required to **identify** the Name of the name object. The name should be in the format name (for local and global names) username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided
 
 `address` : Required to **identify** the register address of the name. This is optional if the `name` is provided.
 
-#### **get/namespace**
+##### get/namespace
 
 `namespace` : Required to \***identify** the namespace. This is optional if the `address` is provided.
 
@@ -168,9 +184,9 @@ This will retreive a specified local name object.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
-#### **get/name**
+##### get/name
 
 ```
 {
@@ -187,7 +203,7 @@ This will retreive a specified local name object.
 [Completed in 0.418167 ms]
 ```
 
-#### **get/namespace**
+##### get/namespace
 
 ```
 {
@@ -202,7 +218,7 @@ This will retreive a specified local name object.
 [Completed in 0.174417 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `owner` : The username hash of the owners profile.
 
@@ -222,7 +238,10 @@ This will retreive a specified local name object.
 
 `address` : The register address of the Name.
 
-## `list` <a href="#user-content-list" id="user-content-list"></a>
+---
+&nbsp;
+
+## list <a href="#list" id="list"></a>
 
 Retrieves a list of all the object details specified by the noun.
 
@@ -232,23 +251,23 @@ names/list/noun
 
 This command supports all the nouns.
 
-#### **list/name**
+##### list/name
 
 This will retreive all the name objects.
 
-#### **list/namespace**
+##### list/namespace
 
 This will retreive all the namespace objects.
 
-#### **list/global**
+##### list/global
 
 This will retreive all the global name objects.
 
-#### **list/local**
+##### list/local
 
 This will retreive all the local name objects.
 
-#### **list/any**
+##### list/any
 
 This will retreive all the supported objects.
 
@@ -256,17 +275,17 @@ This will retreive all the supported objects.
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied.
 
-`where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at `Queries`.
+`where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at [`Queries`](/en/tritium++/queries).
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting).
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -296,7 +315,7 @@ This will retreive all the supported objects.
 [Completed in 0.781230 ms]
 ```
 
-#### **Return Values:**
+#### Return Values:
 
 The return value is a JSON array of objects for each entry in the namespaces history:
 
@@ -316,7 +335,10 @@ The return value is a JSON array of objects for each entry in the namespaces his
 
 `address` : The register address of the object.
 
-## `update` <a href="#user-content-update" id="user-content-update"></a>
+---
+&nbsp;
+
+## update <a href="#update" id="update"></a>
 
 This method allows the register address within a name object to be changed.
 
@@ -340,7 +362,7 @@ This command does not support the `name` `namespace`or `any` nouns.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -350,13 +372,16 @@ This command does not support the `name` `namespace`or `any` nouns.
 [Completed in 18533.182336 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the object was updated successfully.
 
 `txid` : The ID (hash) of the transaction for the updated object.
 
-## `transfer` <a href="#user-content-transfer" id="user-content-transfer"></a>
+---
+&nbsp;
+
+## transfer <a href="#transfer" id="transfer"></a>
 
 This will initiate transfer ownership of the specified noun.
 
@@ -364,17 +389,18 @@ This will initiate transfer ownership of the specified noun.
 names/transfer/noun
 ```
 
-{% hint style="info" %}
-**NOTE:**  Only global names or **names** created in a namespace (with a name in the format of mynamespace::myname) can be transferred.
-{% endhint %}
+
+> **NOTE:**  Only global names or **names** created in a namespace (with a name in the format of mynamespace::myname) can be transferred.
+> {.is-info}
+
 
 This method uses the `name` and `namespace` nouns.
 
-#### **transfer/name**
+##### transfer/name
 
 This will transfer ownership of global names and names created in a namespace (a name in the format of mynamespace::myname) to a specified recipient.
 
-#### **transfer/namespace**
+##### transfer/namespace
 
 This will transfer ownership of an namespace object to a specified recipient.
 
@@ -388,13 +414,13 @@ This will transfer ownership of an namespace object to a specified recipient.
 
 `expires` : Optional field allows callers to specify an **expiration** for the transfer transaction. The expires value is the number of seconds from the transaction creation time after which the transaction can no longer be claimed by the recipient. Conversely, when you apply an expiration to a transaction, you are unable to void the transaction until after the expiration time. If expires is set to 0, the transaction will never expire, making the sender unable to ever void the transaction. If omitted, a default expiration of 7 days (604800 seconds) is applied.
 
-#### **transfer/name**
+##### transfer/name
 
 `name` : Required to **identify** the Name of the name object. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the name `address` is provided
 
 `address` : Required to **identify** the register address of the item. This is optional if the `name` is provided.
 
-#### **transfer/namespace**
+##### transfer/namespace
 
 `namespace` : Required to **identify** the Name of the namespace object. This is optional if the namespace `address` is provided.
 
@@ -402,7 +428,7 @@ This will transfer ownership of an namespace object to a specified recipient.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -413,13 +439,16 @@ This will transfer ownership of an namespace object to a specified recipient.
 [Completed in 4999.664459 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The ID (hash) of the transaction that includes the name transfer.
 
 `address` : The register address for this name.
 
-## `claim` <a href="#user-content-claim" id="user-content-claim"></a>
+---
+&nbsp;
+
+## claim <a href="#claim" id="claim"></a>
 
 This method will claim ownership of the specified noun by the recipient to complete the corresponding transfer transaction.
 
@@ -429,11 +458,11 @@ names/claim/noun
 
 This method uses the `name` and `namespace` nouns.
 
-#### **claim/name**
+##### claim/name
 
 Names that have been transferred need to be claimed by the recipient. This method creates the claim transaction.
 
-#### **claim/namespace**
+##### claim/namespace
 
 Namespaces that have been transferred need to be claimed by the recipient. This method creates the claim transaction.
 
@@ -447,7 +476,7 @@ Namespaces that have been transferred need to be claimed by the recipient. This 
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -460,13 +489,16 @@ Namespaces that have been transferred need to be claimed by the recipient. This 
 }
 ```
 
-#### **Return values:**
+#### Return values:
 
 `claimed`: Array of addresses for each name that was claimed by the transaction
 
 `txid` : The ID (hash) of the transaction that includes the name transfer.
 
-## `history` <a href="#user-content-history" id="user-content-history"></a>
+---
+&nbsp;
+
+## history <a href="#history" id="history"></a>
 
 This will get the history and ownership of the specified noun.
 
@@ -480,19 +512,19 @@ This command supports all the nouns.
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
-#### **history/name**
+##### history/name
 
 `name` : Required to **identify** the name. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided.
 
 `address` : Required to **identify** the name using the register address. This is optional if the `name` is provided.
 
-#### **history/namesapce**
+##### history/namespace
 
 `namespace` : Required to **identify** the Name of the namespace object. This is optional if the namespace `address` is provided.
 
@@ -500,7 +532,7 @@ This command supports all the nouns.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -520,7 +552,7 @@ This command supports all the nouns.
 [Completed in 1.097269 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 The return value is a JSON array of objects for each entry in the names history:
 
@@ -542,7 +574,10 @@ The return value is a JSON array of objects for each entry in the names history:
 
 `action` : The action that occurred - CREATE | MODIFY | TRANSFER | CLAIM.
 
-## `transactions` <a href="#user-content-transactions" id="user-content-transactions"></a>
+---
+&nbsp;
+
+## transactions <a href="#transactions" id="transactions"></a>
 
 This will list off all of the transactions for the specified noun.
 
@@ -562,29 +597,27 @@ This command supports all the nouns.
 * `summary` : type, version, sequence, timestamp, operation, and confirmations.
 * `detail` : genesis, nexthash, prevhash, pubkey and signature.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-`Filtering`.
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
-#### **transactions/name**
+##### transactions/name
 
 `name` : Required to **identify** the name. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided.
 
 `address` : Required to **identify** the name using the register address. This is optional if the `name` is provided.
 
-#### **transactions/namesapce**
+##### transactions/namesapce
 
 `namespace` : Required to **identify** the Name of the namespace object. This is optional if the namespace `address` is provided.
 
 `address` : Required to **identify** the register address of the namespace. This is optional if the `namespace` is provided.
 
-This method supports the Sorting / Filtering parameters.
-
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -632,7 +665,7 @@ This method supports the Sorting / Filtering parameters.
 [Completed in 4.451844 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The transaction hash.
 
@@ -658,11 +691,9 @@ This method supports the Sorting / Filtering parameters.
 
 `signature` : The signature hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes.&#x20;
-
+`contracts` : The array of contracts bound to this transaction and their details with opcodes.
 {
-
-&#x20;`id` : The sequential ID of this contract within the transaction.
+`id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be CREATE | MODIFY | TRANSFER | CLAIM.
 
@@ -679,7 +710,4 @@ This method supports the Sorting / Filtering parameters.
 `recipient` : The transfer recipients profile username hash.
 
 `object` : Returns a list of all the object details (register, name or namespace).
-
 }
-
-***
