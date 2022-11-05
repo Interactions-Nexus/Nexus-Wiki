@@ -2,7 +2,7 @@
 title: readme
 description: 
 published: true
-date: 2022-10-19T17:05:10.702Z
+date: 2022-11-05T11:31:28.572Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T09:27:04.537Z
@@ -38,7 +38,8 @@ dateCreated: 2022-10-07T09:27:04.537Z
 <div align="center">
 
 **The Nexus wiki database is backed up at the link given below:**
-[Nexus-Wiki-Backup](/en/https://github.com/Interactions-Nexus/Nexus-Wiki)
+
+[Nexus-Wiki-Backup](https://github.com/Interactions-Nexus/Nexus-Wiki)
   
 </div>
 
