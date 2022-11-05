@@ -2,7 +2,7 @@
 title: Core Information
 description: Mobile Wallet Core Information
 published: true
-date: 2022-11-04T11:46:20.881Z
+date: 2022-11-05T19:09:29.420Z
 tags: guides
 editor: markdown
 dateCreated: 2022-11-02T09:55:03.603Z
@@ -12,11 +12,11 @@ dateCreated: 2022-11-02T09:55:03.603Z
 The core info gives information on the embedded core and network data.
 
 Users can access the core info page using two methods:
-- When the user is not logged in: Click on the info icon at the top left (marked in red)
+- When the user is not logged in: Tap on the info icon at the top left (marked in red)
 
 ![mobile-wallet-info-icon.jpg](/mobile-wallet-info-icon.jpg)
 
-- When the user is logged in: On the overview, click on the `hamburger` icon on the top left which opens the user information pane and then click on `Core information`.
+- When the user is logged in: On the overview, tap on the `hamburger` icon on the top left which opens the user information pane and then tap on `Core information`.
 
 ![mobile-wallet-overview.jpeg](/mobile-wallet-overview.jpeg)<p align = center>*Mobile wallet Overview*</p>
 
@@ -48,4 +48,4 @@ The core Info page looks like below:
 - **Connections:** Total number of peer connections to the mobile wallet.
 - **Synchronizing:** Boolean flag for synchronization
 - **Sync. progress:** The synchronization percentage
-- **Block height:** The current blcock height of the wallet.
+- **Block height:** The current block height of the wallet.
