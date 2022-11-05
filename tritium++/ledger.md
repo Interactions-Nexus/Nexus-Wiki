@@ -2,7 +2,7 @@
 title: LEDGER
 description: Ledger API
 published: true
-date: 2022-11-05T07:11:27.660Z
+date: 2022-11-05T07:11:50.529Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:44.875Z
@@ -26,7 +26,6 @@ The following commands are direct endpoints and thus do not support the above ve
 [`get/metrics`](#get/metrics)
 
 Direct endpoints support `filters` and `operators`.
-
 
 ---
 &nbsp;
