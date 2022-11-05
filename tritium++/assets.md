@@ -2,7 +2,7 @@
 title: ASSETS
 description: Assets API
 published: true
-date: 2022-10-06T11:34:26.235Z
+date: 2022-11-05T07:25:46.589Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:28.357Z
@@ -32,37 +32,49 @@ The minimum required components of the URI are:
 assets/verb/noun
 ```
 
-## `Supported Verbs`
+---
+&nbsp;
+
+## Supported Verbs
 
 The following verbs are currently supported by this API command-set:
 
-[`create`](broken-reference) - Generate a new object of supported type.\
-[`get`](broken-reference) - Get object of supported type.\
-[`list`](broken-reference) - List all objects owned by given user.\
-[`update`](broken-reference) - Update a specified object.\
-[`transfer`](broken-reference) - Transfer a specified object register.\
-[`claim`](broken-reference) - Claim ownership of an object register.\
-[`tokenize`](broken-reference) - To represent ownership of an asset object with a token object.\
-[`transactions`](broken-reference) - List all transactions that modified specified object.\
-[`history`](broken-reference) - Generate the history of all last states.
+[`create`](#create) - Generate a new object of supported type.
+[`get`](#get) - Get object of supported type.
+[`list`](#list) - List all objects owned by given user.
+[`update`](#update) - Update a specified object.
+[`transfer`](#transfer) - Transfer a specified object register.
+[`claim`](#claim) - Claim ownership of an object register.
+[`tokenize`](#tokenize) - To represent ownership of an asset object with a token object.
+[`transactions`](#transactions) - List all transactions that modified specified object.
+[`history`](#history) - Generate the history of all last states.
 
-## `Supported Nouns`
+---
+&nbsp;
+
+## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
-\[`asset`] - An object register containing an asset object.\
-\[`raw`] - An object register containing a raw asset object.\
-\[`readonly`] - An object register containing a read-only asset object.\
-\[`any`] - An object selection noun allowing mixed assets.\
-\[`schema`] - An object register containing a user-defined asset object.
+[`asset`] - An object register containing an asset object.
+[`raw`] - An object register containing a raw asset object.
+[`readonly`] - An object register containing a read-only asset object.
+[`any`] - An object selection noun allowing mixed assets.
+[`schema`] - An object register containing a user-defined asset object.
 
-## `Direct Endpoints`
+---
+&nbsp;
+
+## Direct Endpoints
 
 The following commands are direct endpoints and thus do not support the above `verb` and `noun` structure available above.
 
-[`list/partial`](broken-reference) - List users partial ownership details for tokenized assets.
+[`list/partial`](#list/partial) - List users partial ownership details for tokenized assets.
 
-## `create` <a href="#user-content-create" id="user-content-create"></a>
+---
+&nbsp;
+
+## create <a href="#create" id="create"></a>
 
 Create a new object register specified by given noun.
 
@@ -110,17 +122,16 @@ Creates a new asset specified by the format parameter.
 * `mutable` : The boolean field to indicate whether the field is writable (true) or read-only (false).
 * `maxlength`: Only applicable to string or bytes fields where mutable=true, this is the maximum number of characters (bytes) that can be stored in the field. If no maxlength parameter is provided then we will default the field size to the length of the default value rounded up to the nearest 64 bytes.
 
-{% hint style="info" %}
-**NOTE:**
 
-There is a limit of 1KB for asset data to be saved in the register, excluding the asset name.
+> **NOTE:**
+> There is a limit of 1KB for asset data to be saved in the register, excluding the asset name.
+> There is a fee of 1 NXS for creating and an asset and an additional 1 NXS for the optional name object.
+> {.is-info}
 
-There is a fee of 1 NXS for creating and an asset and an additional 1 NXS for the optional name object.
-{% endhint %}
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -131,7 +142,7 @@ There is a fee of 1 NXS for creating and an asset and an additional 1 NXS for th
 [Completed in 4998.584942 ms]
 ```
 
-#### **Return Values:**
+#### Return Values:
 
 `success` : Boolean flag indicating that the asset was saved successfully.
 
@@ -139,7 +150,10 @@ There is a fee of 1 NXS for creating and an asset and an additional 1 NXS for th
 
 `txid` : The hash of the transaction that was generated for this tx. If using -autotx this field will be ommitted.
 
-## `get` <a href="#user-content-get" id="user-content-get"></a>
+---
+&nbsp;
+
+## get <a href="#get" id="get"></a>
 
 Retrieves information for an asset specified by the noun.
 
@@ -169,13 +183,13 @@ Get asset for register type raw.
 
 `address` : Required to **identify** the register address of the asset. This is optional if the `name` is provided.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md)**.**
+[`Filtering`](/en/tritium++/filtering)
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -195,7 +209,7 @@ Get asset for register type raw.
 [Completed in 2.838543 ms]
 ```
 
-#### **Return Values:**
+#### Return Values:
 
 `owner` : The username hash of the owners profile.
 
@@ -215,7 +229,10 @@ Get asset for register type raw.
 
 `name` : The name identifying the asset.
 
-## `list` <a href="#user-content-list" id="user-content-list"></a>
+---
+&nbsp;
+
+## list <a href="#list" id="list"></a>
 
 Retrieves a list of all the asset objects owned by the profile specified by the noun.
 
@@ -247,15 +264,15 @@ Lists all assets for all supported register types.
 
 `where` : An array of clauses to **filter** the JSON results. More information on filtering the results from /list/xxx API methods can be found at `Queries`.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md)**.**
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -275,7 +292,7 @@ Lists all assets for all supported register types.
 [Completed in 2.838543 ms]
 ```
 
-#### **Return Values:**
+#### Return Values:
 
 `owner` : The username hash of the owners profile.
 
@@ -295,7 +312,10 @@ Lists all assets for all supported register types.
 
 `name` : The name identifying the asset.
 
-## `update` <a href="#user-content-update" id="user-content-update"></a>
+---
+&nbsp;
+
+## update <a href="#update" id="update"></a>
 
 This method provides the user with the ability to update the object data specified by the noun.
 
@@ -331,7 +351,7 @@ This updates the data values for the raw item register.
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -341,13 +361,16 @@ This updates the data values for the raw item register.
 [Completed in 18533.182336 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the asset was saved successfully.
 
 `txid` : The hash of the transaction that was generated for this tx. If using -autotx this field will be ommitted.
 
-## `transfer` <a href="#user-content-transfer" id="user-content-transfer"></a>
+---
+&nbsp;
+
+## transfer <a href="#transfer" id="transfer"></a>
 
 This will initiate ownership transfer of the specified noun.
 
@@ -385,7 +408,7 @@ This initiates transfer for a readonly asset to a recipient.
 
 ### Results:
 
-**Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -396,7 +419,7 @@ This initiates transfer for a readonly asset to a recipient.
 [Completed in 4998.999748 ms]
 ```
 
-**Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the asset transfer was successful.
 
@@ -404,7 +427,10 @@ This initiates transfer for a readonly asset to a recipient.
 
 `txid` : The ID (hash) of the transaction that includes the asset transfer.
 
-## `claim` <a href="#user-content-claim" id="user-content-claim"></a>
+---
+&nbsp;
+
+## claim <a href="#claim" id="claim"></a>
 
 This method will claim ownership of the asset to complete the corresponding transfer transaction.
 
@@ -438,7 +464,7 @@ Readonly assets that have been transferred need to be claimed by the recipient. 
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -448,13 +474,16 @@ Readonly assets that have been transferred need to be claimed by the recipient. 
 [Completed in 4978.949420 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the asset claim was successful.
 
 `txid` : The ID (hash) of the transaction that includes the claimed asset.
 
-## `tokenize` <a href="#user-content-tokenize" id="user-content-tokenize"></a>
+---
+&nbsp;
+
+## tokenize <a href="#tokenize" id="tokenize"></a>
 
 This method will tokenize an asset into fungible tokens that represent ownership.
 
@@ -476,15 +505,14 @@ This command only supports the `asset` noun.
 
 `token` : Required to **identify** the token to tokenize the asset. It can be the name (for global names) username:tokenname ( for local names) or the register address of the token.
 
-{% hint style="info" %}
-**NOTE:** Create the token before using tokenize API.
-{% endhint %}
 
-****
+> **NOTE:** Create the token before using tokenize API.
+{.is-info}
+
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 {
@@ -494,13 +522,16 @@ This command only supports the `asset` noun.
 [Completed in 4978.949420 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `success` : Boolean flag indicating that the asset tokenization was successful.
 
 `txid` : The ID (hash) of the transaction that includes the claimed asset.
 
-## `history` <a href="#user-content-history" id="user-content-history"></a>
+---
+&nbsp;
+
+## history <a href="#history" id="history"></a>
 
 This will get the history of changes to an asset, including both the data and it's ownership.
 
@@ -518,15 +549,15 @@ This command supports the `asset`, `raw`, `readonly` and `any` nouns.
 
 `address` : Required to **identify** the register address of the asset. This is optional if the `name` is provided.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md)**.**
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -550,7 +581,7 @@ This command supports the `asset`, `raw`, `readonly` and `any` nouns.
 [Completed in 0.870644 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 The return value is a JSON array of objects for each entry in the names history:
 
@@ -574,7 +605,10 @@ The return value is a JSON array of objects for each entry in the names history:
 
 `action` : The action that occurred - CREATE | MODIFY | TRANSFER | CLAIM.
 
-## `transactions` <a href="#user-content-transactions" id="user-content-transactions"></a>
+---
+&nbsp;
+
+## transactions <a href="#transactions" id="transactions"></a>
 
 This will list off all of the transactions for the specified noun.
 
@@ -598,15 +632,15 @@ This command supports all nouns.
 * `summary` : type, version, sequence, timestamp, blockhash, confirmations and contracts.
 * `detail` : All in summary + genesis, nexthash, prevhash, pubkey and signature.
 
-[`Sorting`](https://docs/API/SORTING.MD).
+[`Sorting`](/en/tritium++/sorting)
 
-[`Filtering`](../filtering.md)**.**
+[`Filtering`](/en/tritium++/filtering)
 
-[`Operators`](https://docs/API/OPERATORS.MD).
+[`Operators`](/en/tritium++/operators)
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -658,7 +692,7 @@ This command supports all nouns.
 [Completed in 3.128134 ms]
 ```
 
-#### **Return values:**
+#### Return values:
 
 `txid` : The transaction hash.
 
@@ -706,7 +740,11 @@ This command supports all nouns.
 
 `object` : The data stored in the asset. }
 
-## `list/partial` <a href="#user-content-list-partial" id="user-content-list-partial"></a>
+
+---
+&nbsp;
+
+## list/partial <a href="#list/partial" id="list/partial"></a>
 
 Retrieves a list of all the partial ownership details of tokenized assets for the user.
 
@@ -720,7 +758,7 @@ assets/list/partial
 
 ### Results:
 
-#### **Return value JSON object:**
+#### Return value JSON object:
 
 ```
 [
@@ -740,7 +778,7 @@ assets/list/partial
 [Completed in 0.542454 ms]
 ```
 
-#### **Return Values:**
+#### Return Values:
 
 `owner` : The username hash of the profile that owns this asset.
 
