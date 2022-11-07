@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T22:55:24.061Z
+date: 2022-11-07T23:00:43.618Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -232,38 +232,38 @@ ledger/get/block
 
 ## list/blocks <a href="#list/blocks" id="list/blocks"></a>
 
-Pobiera tablicę danych bloku dla sekwencyjnego zakresu bloków z danego skrótu lub wysokości.
+Pobiera tablicę danych bloku dla sekwencyjnego zakresu bloków z danego hash lub wysokości.
 
 ````
-ledger/get/transaction
+ledger/list/blocks
 ````
 
-> **UWAGA:**
+> **NOTA:**
 > Pobieranie danych bloku według wysokości jest możliwe tylko wtedy, gdy rdzeń został skonfigurowany z flagą --indexheight.
 > {.is-info}
 
 
 ### Parametry:
 
-`hash` : Wymagany do **identyfikacji** bloku, dla którego ma zostać pobrane dane bloku. Jest to opcjonalne, jeśli podano `wysokość`
+`hash` : Wymagany do **identyfikacji** bloku, dla którego ma zostać pobrane dane bloku. Jest to opcjonalne, jeśli podano `height`.
 
-`height` : Wymagany do **identyfikacji** bloku, dla którego ma zostać pobrane dane bloku. Jest to opcjonalne, jeśli podano `hash`
+`height` : Wymagany do **identyfikacji** bloku, dla którego ma zostać pobrane dane bloku. Jest to opcjonalne, jeśli podano `hash`.
 
 `verbose` : Jest to opcja opcjonalna, określa, ile **danych transakcyjnych** należy uwzględnić w odpowiedzi. Obsługiwane wartości to:
 
-* `podsumowanie` : typ, wersja, kolejność, znacznik czasu i operacja.
-* `detail` : geneza, nexthash, prevhash, pubkey i sygnatura.
+* `summary` : type, version, sequence, timestamp, and operation
+* `detail` : genesis, nexthash, prevhash, pubkey and signature
 
-`where` : tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć pod adresem [`Queries`](/en/tritium++/queries).
+`where` : Tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć pod adresem [`Queries`](/pl/tritium++/queries).
 
-[`Sortowanie`](/pl/tryt++/sortowanie)
+[`Sorting`](/pl/tritium++/sorting)
 
-[`Filtrowanie`](/pl/tryt++/filtrowanie)
+[`Filtering`](/pl/tritium++/filtering)
 
-[`Operatorzy`](/pl/tryt++/operatorzy).
+[`Operators`](/pl/tritium++/operators).
 
-> **UWAGA :**
-> Należy podać hasz lub wysokość, ale nie oba.
+> **NOTA:**
+> Należy podać hash lub height, ale nie oba.
 > Pobieranie danych bloku według wysokości jest dozwolone tylko wtedy, gdy demon został skonfigurowany z indexheight=1.
 {.is-info}
 
@@ -271,4 +271,7 @@ ledger/get/transaction
 ### Zwroty:
 
 #### Zwracana wartość obiektu JSON:
+
+
+
 
