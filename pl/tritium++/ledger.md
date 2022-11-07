@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T23:31:37.901Z
+date: 2022-11-07T23:38:04.791Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -735,59 +735,59 @@ ledger/get/info
 
 `weight` : Całkowita praca wykonana dla kanału stake.
 
-`timespan` : Jest to średni czas bloku dla kanału stawki.
+`timespan` : Jest to średni czas bloku dla kanału stake.
 
-`fees`: Jest to suma NXS zgromadzona na kanale stawki.
+`fees`: Jest to suma NXS zgromadzona na kanale stake.
 
-`difficulty`: Bieżąca trudność kanału stawki.
+`difficulty`: Bieżąca trudność kanału stake.
 
-`prime` : Pobiera informacje o kanale głównym.
+`prime` : Pobiera informacje o kanale prime.
 
-`height` : Aktualna liczba bloków dla kanału głównego.
+`height` : Aktualna liczba bloków dla kanału prime.
 
-`weight` : Łączna praca wykonana dla kanału głównego.
+`weight` : Łączna praca wykonana dla kanału prime.
 
-`timespan` : Jest to średni czas blokowania kanału głównego.
+`timespan` : Jest to średni czas blokowania kanału prime.
 
-`fees` : Jest to całkowita suma NXS zgromadzona na głównym kanale.
+`fees` : Jest to całkowita suma NXS zgromadzona na kanale prime.
 
-`difficulty` : Aktualna trudność głównego kanału.
+`difficulty` : Aktualna trudność kanału prime.
 
-`reserve` : Kwota NXS w saldzie rezerwowym dla kanału głównego.
+`reserve` : Kwota NXS w saldzie rezerwowym dla kanału prime.
 
-`reward` : Nagroda za blok za znalezienie następnego głównego bloku.
+`reward` : Nagroda za blok za znalezienie następnego bloku prime.
 
-`hashes` : Jest to całkowity współczynnik haszowania sieci dla kanału głównego.
+`hashes` : Jest to całkowity współczynnik haszowania sieci dla kanału prime.
 
-`hash` : Pobiera informacje dla kanału mieszającego.
+`hash` : Pobiera informacje dla kanału hash.
 
-`height` : Aktualna liczba bloków dla kanału mieszającego.
+`height` : Aktualna liczba bloków dla kanału hash.
 
-`weight` : Łączna praca wykonana dla kanału mieszającego.
+`weight` : Łączna praca wykonana dla kanału hash.
 
-`timespan` : Jest to średni czas blokowania kanału mieszającego.
+`timespan` : Jest to średni czas blokowania kanału hash.
 
-`fees` : Jest to całkowita suma NXS zgromadzona na kanale mieszającym.
+`fees` : Jest to całkowita suma NXS zgromadzona na kanale hash.
 
-`difficulty` : Bieżąca trudność kanału mieszającego.
+`difficulty` : Bieżąca trudność kanału hash.
 
-`reserve` : Ilość NXS w saldzie rezerwowym dla kanału mieszającego.
+`reserve` : Ilość NXS w saldzie rezerwowym dla kanału hash.
 
-`reward` : Nagroda za blok za znalezienie następnego bloku haszującego.
+`reward` : Nagroda za blok za znalezienie następnego bloku hash.
 
-`hashes` : Jest to całkowity współczynnik haszowania sieci dla kanału mieszającego.
+`hashes` : Jest to całkowity współczynnik haszowania sieci dla kanału hash.
 
 `supply` : Wskaźniki dotyczące stawek podaży NXS.
 
 `total` : Całkowita ilość istniejącego NXS.
 
-`target` : Docelowa szybkość dostaw dla tego punktu w czasie.
+`target` : Docelowa podaż dla tego punktu w czasie.
 
 `inflationrate` : Aktualny procent stopy inflacji na podstawie danych z ostatniego roku.
 
-`minute` : Wzrost szybkości podawania w ciągu ostatniej minuty.
+`minute` : Wzrost szybkości podaży w ciągu ostatniej minuty.
 
-`hour` : Wzrost szybkości dostaw w ciągu ostatniej godziny.
+`hour` : Wzrost szybkości podaży w ciągu ostatniej godziny.
 
 `day` : Wzrost wskaźnika podaży w ciągu ostatniego dnia.
 
