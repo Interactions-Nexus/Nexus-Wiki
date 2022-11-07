@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T22:48:47.897Z
+date: 2022-11-07T22:55:24.061Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -145,21 +145,21 @@ ledger/get/block
 
 `hash` : Hash bloku.
 
-`proofhash` : skrót dowodowy bloku.
+`proofhash` : Hash dowodowy bloku.
 
 `size` : Rozmiar bloku w bajtach.
 
-`height` : wysokość bloku.
+`height` : Wysokość bloku.
 
-`channel` : Kanał blokowy (0=Stawka, 1=Prime, 2=Hash).
+`channel` : Kanał blokowy (0=Stake, 1=Prime, 2=Hash).
 
 `version` : Wersja serializacji tego bloku.
 
-`merkleroot` : hash merkle root transakcji blokowych.
+`merkleroot` : Hash merkle root transakcji blokowych.
 
-`time` : ujednolicony czas utworzenia bloku.
+`time` : Ujednolicony czas utworzenia bloku.
 
-`nonce`: rozwiązanie nonce.
+`nonce`: Rozwiązanie nonce.
 
 `bits` : Kompaktowa reprezentacja trudności bloku.
 
@@ -167,15 +167,15 @@ ledger/get/block
 
 `mint` : Wartość wybita w tym bloku.
 
-`previousblockhash` : skrót poprzedniego bloku w łańcuchu.
+`previousblockhash` : Hash poprzedniego bloku w łańcuchu.
 
-`nextblockhash` : skrót następnego bloku w łańcuchu, chyba że jest to ostatni blok w łańcuchu.
+`nextblockhash` : Hash następnego bloku w łańcuchu, chyba że jest to ostatni blok w łańcuchu.
 
 `tx` : Tablica transakcji zawartych w tym bloku.
 
-`type` : Opis transakcji (starsza | baza trytu | zaufanie | geneza | użytkownik).
+`type` : Opis transakcji (legacy | tritium base | trust | genesis | user).
 
-`version` : wersja serializacji transakcji.
+`version` : Wersja serializacji transakcji.
 
 `sequence` : Numer kolejny tej transakcji w łańcuchu podpisów.
 
@@ -185,48 +185,47 @@ ledger/get/block
 
 `confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję przez sieć.
 
-`genesis` : To jest skrót nazwy użytkownika profilu, znany również jako skrót właściciela.
+`genesis` : To jest hash nazwy użytkownika profilu, znany również jako hash właściciela.
 
 `nexthash` : Hash następnej transakcji w sekwencji.
 
 `prevhash` : Hash poprzedniej transakcji w sekwencji.
 
-`pubkey` : klucz publiczny.
+`pubkey` : Klucz publiczny.
 
-`signature` : skrót podpisu.
+`signature` : Hash podpisu.
 
-`hash` : hash transakcji.
+`hash` : Hash transakcji.
 
 `contracts` : Tablica kontraktów powiązanych z tą transakcją oraz ich szczegóły z kodami operacyjnymi.
-{
+
 `idcontractid` : Identyfikator sekwencyjny tego kontraktu w ramach transakcji.
 
-`OP` : Operacja kontraktu. Może być DODATEK, ROSZCZENIE, COINBASE, UTWÓRZ, KREDYT, DEBET, OPŁATA, GENESIS, DZIEDZICTWO, PRZELEW, ZAUFANIE, STAWKA, ODSTAWIANIE, NAPISZ.
+`OP` : Operacja kontraktu. Może być APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
 
-`for` : dla transakcji KREDYTOWYCH, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
+`for` : Dla transakcji CREDIT, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
 
 `txid` : Transakcja, która została uznana / zgłoszona.
 
 `contract` : Identyfikator kontraktu w ramach transakcji, która została uznana / zgłoszona.
 
-`proof`: adres rejestru potwierdzający kredyt.
+`proof`: Adres rejestru potwierdzający kredyt.
 
-`from` : Dla transakcji DEBIT, KREDYT, OPŁATY adres rejestrowy konta, z którego dokonywany jest debet.
+`from` : Dla transakcji DEBIT, CREDIT, FEE adres rejestrowy konta, z którego dokonywany jest debet.
 
-`from_name` : W przypadku transakcji DEBIT, KREDYT, OPŁATY nazwa rachunku, z którego dokonywany jest debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+`from_name` : W przypadku transakcji DEBIT, CREDIT, FEE nazwa rachunku, z którego dokonywany jest debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`to` : W przypadku transakcji DEBIT i KREDYT adres rejestru konta odbiorcy.
+`to` : W przypadku transakcji DEBIT i CREDIT adres rejestru konta odbiorcy.
 
-`to_name` : W przypadku transakcji DEBIT i KREDYT nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+`to_name` : W przypadku transakcji DEBIT i CREDIT nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`amount` : kwota tokena transakcji.
+`amount` : Kwota tokena transakcji.
 
-`token` : adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS.
+`token` : Adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS.
 
-`ticker` : nazwa tokena, którego dotyczy transakcja.
+`ticker` : Nazwa tokena, którego dotyczy transakcja.
 
-`reference` : W przypadku transakcji DEBIT i KREDYT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
-}
+`reference` : W przypadku transakcji DEBIT i CREDIT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
 
 ---
 &nbsp;
