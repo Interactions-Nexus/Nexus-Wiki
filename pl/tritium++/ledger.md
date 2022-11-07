@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T23:08:13.476Z
+date: 2022-11-07T23:14:38.266Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -432,6 +432,98 @@ ledger/get/transaction
 ### Zwroty:
 
 #### Zwracana wartość obiektu JSON:
+
+```
+{
+    "txid": "017ff70158049886f8bad93cfe15285bae34d0e643991088e00769228161868a60230551724ac0ad5c7a98fabfdbebca88dffedf1a9e5ff095524b7565bccee1",
+    "type": "tritium base",
+    "version": 4,
+    "sequence": 11340,
+    "timestamp": 1658817487,
+    "blockhash": "69336bc69ac2b9d06d7b9f9ede253cbeadba227751125cbb220654499c59a7b5138ea06ff62670fae614e5fed26aec8d3a0f346e03f10ea6c83dcb20ba8d93d17d92fffd6604666034e7002f421e39e64cef43325dfdf2c0334e51e018a31710c8fac17214d96d309b8dddb8f9bf9b3a27d28c71016b93a0e89f588c3604420a",
+    "confirmations": 267,
+    "genesis": "a1e91c3b5d2856427508823fea815a37a11f5745d78e79091022d55e5bdb224d",
+    "nexthash": "6adfd58123aa4ea622d808bbcf5b11d80d41921358c50dea71d25cf5791df106",
+    "prevhash": "018f90d5ed4c2744e1d319c3b77e16f3a06187ee79e4a2bc982bc53dedfb2298aa0df30622df9cf080324aa103623db21648043cb1bb8f5a186764151fa9b242",
+    "pubkey": "025d8d82339653aa9256bec27119cee55a9535e07b55aedcf7ed44a1f775a6afde6db2f76df2f337dd941ec337a98ad196c6840c040130ddc033cf779680735cd4",
+    "signature": "30818402404da5e71d74b981fc7027cf30d0e7e56ea79367e6f97c76d3380bd3b56ea6aa608f6c370553c17c66fa022571412ab6cf2ebd41d9cc80295e37d6b59ed3a82fe602407a09ed3861823b1ec0ddd0d45a327b7615408b7d116032f6a806d2f286a420ac52275b1540085048491667173429c72113654255da72b12189a22eea89b8fa90",
+    "contracts": [
+        {
+            "id": 0,
+            "OP": "COINBASE",
+            "genesis": "a1e91c3b5d2856427508823fea815a37a11f5745d78e79091022d55e5bdb224d",
+            "nonce": 180,
+            "amount": 1.921131,
+            "token": "0000000000000000000000000000000000000000000000000000000000000000",
+            "ticker": "NXS"
+        }
+    ]
+}
+[Completed in 0.290130 ms]
+```
+
+#### Zwracane wartości:
+
+`txid` : Hash transakcji.
+
+`type` : Opis transakcji (legacy | tritium base | trust | genesis | user).
+
+`version` : Wersja serializacji transakcji.
+
+`sequence` : Numer kolejny tej transakcji w łańcuchu podpisów.
+
+`timestamp` : Uniksowy znacznik czasu utworzenia transakcji.
+
+`blockhash` : Hash bloku, w którym zawarta jest ta transakcja. Pusty, jeśli nie został jeszcze uwzględniony w bloku.
+
+`confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję przez sieć.
+
+`genesis` : To jest hash nazwy użytkownika profilu, znany również jako hash właściciela.
+
+`nexthash` : Hash następnej transakcji w sekwencji.
+
+`prevhash` : Hash poprzedniej transakcji w sekwencji.
+
+`pubkey` : Klucz publiczny.
+
+`signature` : Hash podpisu.
+
+`contracts` : Tablica kontraktów powiązanych z tą transakcją oraz ich szczegóły z kodami operacyjnymi.
+
+`id` : Identyfikator sekwencyjny tego kontraktu w ramach transakcji.
+
+`OP` : Operacja kontraktu. Może być APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
+
+`for` : Dla transakcji CREDIT, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
+
+`txid` : Transakcja, która została uznana / zgłoszona.
+
+`contract` : Identyfikator kontraktu w ramach transakcji, która została uznana / zgłoszona.
+
+`proof`: Adres rejestru potwierdzający kredyt.
+
+`from` : Dla transakcji DEBIT, CREDIT, FEE adres rejestrowy konta, z którego dokonywany jest debet.
+
+`from_name` : W przypadku transakcji DEBIT, CREDIT, FEE nazwa rachunku, z którego dokonywany jest debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+
+`to` : W przypadku transakcji DEBIT i CREDIT adres rejestru konta odbiorcy.
+
+`to_name` : W przypadku transakcji DEBIT i CREDIT nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+
+`amount` : Kwota tokena transakcji.
+
+`token` : Adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS.
+
+`ticker` : Nazwa tokena, którego dotyczy transakcja.
+
+`reference` : W przypadku transakcji DEBIT i CREDIT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
+
+---
+&nbsp;
+
+## list/transactions <a href="#list/transactions" id="list/transactions"></a>
+
+
 
 
 
