@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T23:45:15.525Z
+date: 2022-11-07T23:54:33.697Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -879,7 +879,7 @@ ledger/get/metrics
 
 `volumes` : Pobiera wolumen transakcji, kontraktów i kont.
 
-`transactions` : statystyki transakcji za określony okres.
+`transactions` : Statystyki transakcji za określony okres.
 
 `daily` : Całkowita liczba transakcji w ciągu ostatnich 24 godzin.
 
@@ -887,7 +887,7 @@ ledger/get/metrics
 
 `monthly` : Całkowita liczba transakcji w ostatnim miesiącu.
 
-`contracts` : statystyki dotyczące umów za określony okres.
+`contracts` : Statystyki dotyczące umów za określony okres.
 
 `daily` : Całkowita liczba umów w ciągu ostatnich 24 godzin.
 
@@ -905,7 +905,7 @@ ledger/get/metrics
 
 `exchanges` : Statystyka wpłat i wypłat NXS z giełd.
 
-`deposits` : Statystyki dla NXS zdeponowane na giełdach (przeniesione do dziedzictwa z trytu).
+`deposits` : Statystyki dla NXS zdeponowane na giełdach (przeniesione do legacy z tritium).
 
 `daily` : Całkowita liczba NXS zdeponowanych w ciągu ostatnich 24 godzin.
 
@@ -913,7 +913,7 @@ ledger/get/metrics
 
 `monthly`: Całkowita liczba NXS zdeponowanych w ciągu ostatniego miesiąca.
 
-`withdraws` : Statystyki dla NXS wycofują się z wymian (przeniesione do trytu ze starszej wersji).
+`withdraws` : Statystyki dla NXS wycofane z giełd (przeniesione do tritium z legacy).
 
 `daily`: Całkowita liczba wypłat NXS w ciągu ostatnich 24 godzin.
 
@@ -921,17 +921,17 @@ ledger/get/metrics
 
 `monthly`: Całkowita liczba wypłat NXS w ciągu ostatniego miesiąca.
 
-`network` : Statystyki NXS wybite przez tyczenie, kanały górnicze i NXS przeniesione do /z stawki.
+`network` : Statystyki NXS wybite przez stakowanie, kanały górnicze i NXS przeniesione do/z stakowania.
 
-`mint` : Pobiera statystyki dla NXS wybite na kanałach tyczenia i kopania.
+`mint` : Pobiera statystyki dla NXS wybite na kanałach stakowania i kopania.
 
-`staking` : Statystyki dla NXS wybite z obstawiania przez określony czas.
+`staking` : Statystyki dla NXS wybite ze stakowania przez określony czas.
 
-`daily` : Całkowita liczba NXS wybitych podczas obstawiania w ciągu ostatnich 24 godzin.
+`daily` : Całkowita liczba NXS wybitych podczas stakowania w ciągu ostatnich 24 godzin.
 
-`weekly` : Całkowita liczba NXS wybitych podczas obstawiania w ciągu ostatnich 7 dni.
+`weekly` : Całkowita liczba NXS wybitych podczas stakowania w ciągu ostatnich 7 dni.
 
-`monthly` : Całkowita liczba NXS wybitych podczas obstawiania w ciągu ostatniego miesiąca.
+`monthly` : Całkowita liczba NXS wybitych podczas stakowania w ciągu ostatniego miesiąca.
 
 `mining` : Statystyka NXS wydobyta z kopania przez określony czas.
 
@@ -941,13 +941,13 @@ ledger/get/metrics
 
 `monthly` : Całkowita liczba NXS wybitych z wydobycia w ciągu ostatniego miesiąca.
 
-`stake` : Statystyki dla NXS zablokowanego lub odblokowanego ze stawki (kont powierniczych) przez określony czas.
+`stake` : Statystyki dla NXS zablokowanego lub odblokowanego ze stakowania (konta trust) przez określony czas.
 
-`daily`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stawki w ciągu ostatnich 24 godzin.
+`daily`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stakowania w ciągu ostatnich 24 godzin.
 
-`weekly`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stawki w ciągu ostatnich 7 dni.
+`weekly`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stakowania w ciągu ostatnich 7 dni.
 
-`monthly`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stawki w ciągu ostatniego miesiąca.
+`monthly`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stakowania w ciągu ostatniego miesiąca.
 
 
 
