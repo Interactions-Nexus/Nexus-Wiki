@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T23:38:04.791Z
+date: 2022-11-07T23:45:15.525Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -806,19 +806,148 @@ ledger/get/info
 
 ## get/metrics <a href="#get/metrics" id="get/metrics"></a>
 
-Pobiera dane dotyczące eksploracji dla księgi.
+Pobiera dane dotyczące wydobycia dla księgi.
 
 ````
-księga/pobierz/metryki
+ledger/get/metrics
 ````
 
 #### Parametry:
 
-[`Filtrowanie`](/pl/tryt++/filtrowanie)
+[`Filtering`](/pl/tritium++/filtering)
 
 #### Zwroty:
 
 #### Zwracana wartość obiektu JSON:
+
+
+```
+{
+    "volumes": {
+        "transactions": {
+            "daily": 1858,
+            "weekly": 13729,
+            "monthly": 55761
+        },
+        "contracts": {
+            "daily": 2272,
+            "weekly": 18588,
+            "monthly": 82712
+        },
+        "accounts": {
+            "daily": 272,
+            "weekly": 1566,
+            "monthly": 4128
+        }
+    },
+    "exchanges": {
+        "deposits": {
+            "daily": 675.23,
+            "weekly": 39999.196652,
+            "monthly": 1151130.175639
+        },
+        "withdraws": {
+            "daily": 65413.954116,
+            "weekly": 839913.950865,
+            "monthly": 4010148.232528
+        }
+    },
+    "network": {
+        "mint": {
+            "staking": {
+                "daily": 2064.475289,
+                "weekly": 14508.834716,
+                "monthly": 56739.446981
+            },
+            "mining": {
+                "daily": 5235.841724,
+                "weekly": 36701.701742,
+                "monthly": 148204.639604
+            }
+        },
+        "stake": {
+            "daily": 11651.941826,
+            "weekly": 533078.575505,
+            "monthly": 1367705.4935
+        }
+    }
+}
+[Completed in 12378.496480 ms]
+```
+
+#### Zwracane wartości:
+
+`volumes` : Pobiera wolumen transakcji, kontraktów i kont.
+
+`transactions` : statystyki transakcji za określony okres.
+
+`daily` : Całkowita liczba transakcji w ciągu ostatnich 24 godzin.
+
+`weekly` : Całkowita liczba transakcji w ciągu ostatnich 7 dni.
+
+`monthly` : Całkowita liczba transakcji w ostatnim miesiącu.
+
+`contracts` : statystyki dotyczące umów za określony okres.
+
+`daily` : Całkowita liczba umów w ciągu ostatnich 24 godzin.
+
+`weekly` : Całkowita liczba umów w ciągu ostatnich 7 dni.
+
+`monthly` : Całkowita liczba umów w ostatnim miesiącu.
+
+`accounts` : Statystyki kont (profili) utworzonych w określonym okresie.
+
+`daily` : Całkowita liczba kont utworzonych w ciągu ostatnich 24 godzin.
+
+`weekly` : Całkowita liczba kont utworzonych w ciągu ostatnich 7 dni.
+
+`monthly` : Całkowita liczba kont utworzonych w ciągu ostatniego miesiąca.
+
+`exchanges` : Statystyka wpłat i wypłat NXS z giełd.
+
+`deposits` : Statystyki dla NXS zdeponowane na giełdach (przeniesione do dziedzictwa z trytu).
+
+`daily` : Całkowita liczba NXS zdeponowanych w ciągu ostatnich 24 godzin.
+
+`weekly` : Całkowita liczba NXS zdeponowanych w ciągu ostatnich 7 dni.
+
+`monthly`: Całkowita liczba NXS zdeponowanych w ciągu ostatniego miesiąca.
+
+`withdraws` : Statystyki dla NXS wycofują się z wymian (przeniesione do trytu ze starszej wersji).
+
+`daily`: Całkowita liczba wypłat NXS w ciągu ostatnich 24 godzin.
+
+`weekly`: Całkowita liczba wypłat NXS w ciągu ostatnich 7 dni.
+
+`monthly`: Całkowita liczba wypłat NXS w ciągu ostatniego miesiąca.
+
+`network` : Statystyki NXS wybite przez tyczenie, kanały górnicze i NXS przeniesione do /z stawki.
+
+`mint` : Pobiera statystyki dla NXS wybite na kanałach tyczenia i kopania.
+
+`staking` : Statystyki dla NXS wybite z obstawiania przez określony czas.
+
+`daily` : Całkowita liczba NXS wybitych podczas obstawiania w ciągu ostatnich 24 godzin.
+
+`weekly` : Całkowita liczba NXS wybitych podczas obstawiania w ciągu ostatnich 7 dni.
+
+`monthly` : Całkowita liczba NXS wybitych podczas obstawiania w ciągu ostatniego miesiąca.
+
+`mining` : Statystyka NXS wydobyta z kopania przez określony czas.
+
+`daily` : Całkowita liczba NXS wybitych z wydobycia w ciągu ostatnich 24 godzin.
+
+`weekly` : Całkowita liczba NXS wybitych z wydobycia w ciągu ostatnich 7 dni.
+
+`monthly` : Całkowita liczba NXS wybitych z wydobycia w ciągu ostatniego miesiąca.
+
+`stake` : Statystyki dla NXS zablokowanego lub odblokowanego ze stawki (kont powierniczych) przez określony czas.
+
+`daily`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stawki w ciągu ostatnich 24 godzin.
+
+`weekly`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stawki w ciągu ostatnich 7 dni.
+
+`monthly`: Całkowita liczba NXS zablokowanych lub odblokowanych ze stawki w ciągu ostatniego miesiąca.
 
 
 
