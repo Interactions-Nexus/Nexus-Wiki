@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T23:23:59.361Z
+date: 2022-11-07T23:31:37.901Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -726,6 +726,101 @@ ledger/get/info
 }
 [Completed in 3827.013421 ms]
 ```
+
+#### Zwracane wartości:
+
+`Stake` : Pobiera informacje dla kanału stake.
+
+`height` : Aktualna liczba bloków dla kanału stake.
+
+`weight` : Całkowita praca wykonana dla kanału stake.
+
+`timespan` : Jest to średni czas bloku dla kanału stawki.
+
+`fees`: Jest to suma NXS zgromadzona na kanale stawki.
+
+`difficulty`: Bieżąca trudność kanału stawki.
+
+`prime` : Pobiera informacje o kanale głównym.
+
+`height` : Aktualna liczba bloków dla kanału głównego.
+
+`weight` : Łączna praca wykonana dla kanału głównego.
+
+`timespan` : Jest to średni czas blokowania kanału głównego.
+
+`fees` : Jest to całkowita suma NXS zgromadzona na głównym kanale.
+
+`difficulty` : Aktualna trudność głównego kanału.
+
+`reserve` : Kwota NXS w saldzie rezerwowym dla kanału głównego.
+
+`reward` : Nagroda za blok za znalezienie następnego głównego bloku.
+
+`hashes` : Jest to całkowity współczynnik haszowania sieci dla kanału głównego.
+
+`hash` : Pobiera informacje dla kanału mieszającego.
+
+`height` : Aktualna liczba bloków dla kanału mieszającego.
+
+`weight` : Łączna praca wykonana dla kanału mieszającego.
+
+`timespan` : Jest to średni czas blokowania kanału mieszającego.
+
+`fees` : Jest to całkowita suma NXS zgromadzona na kanale mieszającym.
+
+`difficulty` : Bieżąca trudność kanału mieszającego.
+
+`reserve` : Ilość NXS w saldzie rezerwowym dla kanału mieszającego.
+
+`reward` : Nagroda za blok za znalezienie następnego bloku haszującego.
+
+`hashes` : Jest to całkowity współczynnik haszowania sieci dla kanału mieszającego.
+
+`supply` : Wskaźniki dotyczące stawek podaży NXS.
+
+`total` : Całkowita ilość istniejącego NXS.
+
+`target` : Docelowa szybkość dostaw dla tego punktu w czasie.
+
+`inflationrate` : Aktualny procent stopy inflacji na podstawie danych z ostatniego roku.
+
+`minute` : Wzrost szybkości podawania w ciągu ostatniej minuty.
+
+`hour` : Wzrost szybkości dostaw w ciągu ostatniej godziny.
+
+`day` : Wzrost wskaźnika podaży w ciągu ostatniego dnia.
+
+`week` : Wzrost wskaźnika podaży w ciągu ostatniego tygodnia.
+
+`month` : Wzrost wskaźnika podaży w ciągu ostatnich 30 dni.
+
+`height` : Wysokość bloku przy pobieraniu informacji.
+
+`timestamp` : Uniksowy znacznik czasu najnowszego bloku w łańcuchu bloków.
+
+`checkpoint` : Jest to najnowszy punkt kontrolny, którego bloki nie mogą być zreorganizowane wcześniej, więc wszystko zanim ten hash zostanie sfinalizowany.
+
+---
+&nbsp;
+
+## get/metrics <a href="#get/metrics" id="get/metrics"></a>
+
+Pobiera dane dotyczące eksploracji dla księgi.
+
+````
+księga/pobierz/metryki
+````
+
+#### Parametry:
+
+[`Filtrowanie`](/pl/tryt++/filtrowanie)
+
+#### Zwroty:
+
+#### Zwracana wartość obiektu JSON:
+
+
 
 
 
