@@ -2,7 +2,7 @@
 title: LEDGER
 description: Ledger API
 published: true
-date: 2022-11-05T07:11:50.529Z
+date: 2022-11-07T23:57:31.587Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:44.875Z
@@ -198,7 +198,7 @@ ledger/get/block
 `hash` : The transaction hash.
 
 `contracts` : The array of contracts bound to this transaction and their details with opcodes.
-{
+
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -226,7 +226,6 @@ ledger/get/block
 `ticker` : The name of the token that the transaction relates to.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
-}
 
 ---
 &nbsp;
@@ -375,7 +374,7 @@ ledger/list/blocks
 `hash` : The transaction hash.
 
 `contracts` : The array of contracts bound to this transaction and their details with opcodes.
-{
+
 `idcontractid` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -403,7 +402,6 @@ ledger/list/blocks
 `ticker` : The name of the token that the transaction relates to.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
-}
 
 ---
 &nbsp;
@@ -491,7 +489,7 @@ ledger/get/transaction
 `signature`: The signature hash.
 
 `contracts` : The array of contracts bound to this transaction and their details with opcodes.
-{
+
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -519,7 +517,7 @@ ledger/get/transaction
 `ticker` : The name of the token that the transaction relates to.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
-}
+
 
 ---
 &nbsp;
@@ -609,7 +607,7 @@ ledger/list/transactions
 `signature`: The signature hash.
 
 `contracts` : The array of contracts bound to this transaction and their details with opcodes.
-{
+
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -637,7 +635,6 @@ ledger/list/transactions
 `ticker` : The name of the token that the transaction relates to.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
-}
 
 ---
 &nbsp;
@@ -734,7 +731,7 @@ ledger/get/info
 #### Return values:
 
 `Stake` : Retreives information for the stake channel.
-{
+
 `height` : The current number of blocks for the stake channel.
 
 `weight` : The total work completed for the stake channel.
@@ -744,10 +741,9 @@ ledger/get/info
 `fees` : It is the total NXS accumulated on the stake channel.
 
 `difficulty` : The current difficulty of the stake channel.
-}
 
 `prime` : Retreives information for the prime channel.
-{
+
 `height` : The current number of blocks for the prime channel.
 
 `weight` : The total work completed for prime channel.
@@ -763,10 +759,9 @@ ledger/get/info
 `reward` : The block reward for the next prime block to be found.
 
 `hashes` : It is total network hash rate for prime channel.
-}
 
 `hash` : Retreives information for the hash channel.
-{
+
 `height` : The current number of blocks for the hash channel.
 
 `weight` : The total work completed for hash channel.
@@ -782,11 +777,9 @@ ledger/get/info
 `reward` : The block reward for the next hash block to be found.
 
 `hashes` : It is total network hash rate for the hash channel.
-}
 
 `supply` : Metrics on NXS supply rates.
 
-{
 `total` : Total amount of NXS in existence.
 
 `target` : The target supply rate for this point in time.
@@ -802,7 +795,6 @@ ledger/get/info
 `week` : The increase in supply rate within the last week.
 
 `month` : The increase in supply rate within the last 30 days.
-}
 
 `height` : The block height when the information is retrieved.
 
@@ -886,85 +878,75 @@ ledger/get/metrics
 #### Return Values:
 
 `volumes` : This retrieves the transactions, contracts and accounts volume.
-{
+
 `transactions` : Statistics for transactions for a specified period.
-{
+
 `daily` : Total number of transactions in the last 24 hours.
 
 `weekly` : Total number of transactions in the last 7 days.
 
 `monthly` : Total number of transactions in the last month.
-}
 
 `contracts` : Statistics for contracts for a specified period.
-{
+
 `daily` : Total number of contracts in the last 24 hours.
 
 `weekly` : Total number of contracts in the last 7 days.
 
 `monthly` : Total number of contracts in the last month.
-}
 
 `accounts` : Statistics for accounts (profiles) created in a specified period.
-{ `daily` : Total number of accounts created in the last 24 hours.
+
+`daily` : Total number of accounts created in the last 24 hours.
 
 `weekly` : Total number of accounts created in the last 7 days.
 
 `monthly` : Total number of accounts created in the last month.
-}
-}
 
 `exchanges` : Statistics of NXS deposits and withdrawals from exchanges.
-{
+
 `deposits` : Statistics for NXS deposited to exchanges (moved to legacy from tritium).
-{
+
 `daily` : Total number of NXS deposited in the last 24 hours.
 
 `weekly` : Total number of NXS deposited in the last 7 days.
 
 `monthly` : Total number of NXS deposited in the last month.
-}
 
 `withdraws` : Statistics for NXS withdraws from exchanges (moved to tritium from legacy).
-{
+
 `daily` : Total number of NXS withdraws in the last 24 hours.
 
 `weekly` : Total number of NXS withdraws in the last 7 days.
 
 `monthly` : Total number of NXS withdraws in the last month.
-}
-}
 
-`Network` : Statistics of NXS minted by the staking, mining channels and NXS moved to /f rom stake.
-{
+`Network` : Statistics of NXS minted by the staking, mining channels and NXS moved to/from stake.
+
 `mint` : This retreives the statistics for the NXS minted on staking and mining channels.
-{
 
 `staking` : Statistics for NXS minted from staking for a specified period.
-{
+
 `daily` : Total number of NXS minted from staking in the last 24 hours.
 
 `weekly` : Total number of NXS minted from staking in the last 7 days.
 
 `monthly` : Total number of NXS minted from staking in the last month.
-}
 
 `mining` : Statistics for NXS minted from mining for a specified period.
-{
+
 `daily` : Total number of NXS minted from mining in the last 24 hours.
 
 `weekly` : Total number of NXS minted from mining in the last 7 days.
 
 `monthly` : Total number of NXS minted from mining in the last month.
-}
-}
 
 `stake` : Statistics for NXS locked or unlocked from stake (trust accounts) for a specified period.
-{
+
 `daily` : Total number of NXS locked or unlocked from stake in the last 24 hours.
 
 `weekly` : Total number of NXS locked or unlocked from stake in the last 7 days.
 
 `monthly` : Total number of NXS locked or unlocked from stake in the last month.
-}
-}
+
+
