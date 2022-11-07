@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T23:00:43.618Z
+date: 2022-11-07T23:08:13.476Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -271,6 +271,168 @@ ledger/list/blocks
 ### Zwroty:
 
 #### Zwracana wartość obiektu JSON:
+
+```
+[
+    {
+        "hash": "5c985f5402f0bcb339ebef0e2edcad30427bf79803994772cd3a1458012748cd1d9d2ee8d6f1466f0c8ca867e1d8a2d9cfe6bc8cfdd885421fb56c55bfc11328f19c61bdc87193831851526a835e457fb46fcd0088879d564e88bb39524aa40489329ecc2cbc6a0453b8dd69a90b82232df6ee6d39ddec80e16149c99b1ddeab",
+        "proofhash": "3f10d762af5952f7fdda2f84a27f9afe121e54be25eb0a41ee5074219919b9a2832d535d2c7c995a91e21ee6000017b2e7cc2099537cda035c09ebcaa94112384e88cdeec9d1ba6eb662b1acdf4f41d9b964f3da5a578d757bd2653acd8ed7364e8bd807777fbaabb4cda19cad6506b84431940e6a1e43a32d92eff9d9ace635",
+        "size": 807,
+        "height": 4555101,
+        "channel": 1,
+        "version": 8,
+        "merkleroot": "0161d4629a2f385be81bda414359aaafb6baec7522f017c6fd06183c975c6c4a9baf4b89e5890327ddd79853eb415bfb054f84da719ac653520097bbc01b6e6c",
+        "timestamp": 1658817563,
+        "date": "2022-07-26 06:39:23 UTC",
+        "nonce": 15731843013639865474,
+        "bits": "04c23531",
+        "difficulty": 7.9836465,
+        "mint": 1.92113,
+        "previousblockhash": "69336bc69ac2b9d06d7b9f9ede253cbeadba227751125cbb220654499c59a7b5138ea06ff62670fae614e5fed26aec8d3a0f346e03f10ea6c83dcb20ba8d93d17d92fffd6604666034e7002f421e39e64cef43325dfdf2c0334e51e018a31710c8fac17214d96d309b8dddb8f9bf9b3a27d28c71016b93a0e89f588c3604420a",
+        "nextblockhash": "6e4b01acefa38b2f591ba7060c165daafe4cdaac8f147f7b8a02986b8f8b3c82d051601746ac53ff57167a650d75d501eab859b4a52d48444f036b9df1571648a22d777dd71896860b6faa7236bcd54d2f2de2445dcdf2e5a34f64b5c8918d3a8a8fce357024d74ca3c8b76c5a1457d4182ce18e015a782316390fc0dfb8eb34",
+        "tx": [
+            {
+                "txid": "0161d4629a2f385be81bda414359aaafb6baec7522f017c6fd06183c975c6c4a9baf4b89e5890327ddd79853eb415bfb054f84da719ac653520097bbc01b6e6c",
+                "type": "tritium base",
+                "version": 4,
+                "sequence": 176177,
+                "timestamp": 1658817543,
+                "blockhash": "5c985f5402f0bcb339ebef0e2edcad30427bf79803994772cd3a1458012748cd1d9d2ee8d6f1466f0c8ca867e1d8a2d9cfe6bc8cfdd885421fb56c55bfc11328f19c61bdc87193831851526a835e457fb46fcd0088879d564e88bb39524aa40489329ecc2cbc6a0453b8dd69a90b82232df6ee6d39ddec80e16149c99b1ddeab",
+                "confirmations": 249,
+                "contracts": [
+                    {
+                        "id": 0,
+                        "OP": "COINBASE",
+                        "genesis": "a165c6bc1b1e0dd9444f3ec01f07686991a8b4bdc1ceb4143dbb3eed16339a74",
+                        "nonce": 308,
+                        "amount": 1.92113,
+                        "token": "0000000000000000000000000000000000000000000000000000000000000000",
+                        "ticker": "NXS"
+                    }
+                ]
+            }
+        ]
+    }
+]
+[Completed in 8.883924 ms]
+```
+
+#### Zwracane wartości:
+
+`hash` : Hash bloku.
+
+`proofhash` : Hash dowodowy bloku.
+
+`size` : Rozmiar bloku w bajtach.
+
+`height` : Wysokość bloku.
+
+`channel` : Kanał blokowy (0=Stake, 1=Prime, 2=Hash).
+
+`version` : Wersja serializacji tego bloku.
+
+`merkleroot` : Hash merkle root transakcji blokowych.
+
+`time` : Ujednolicony czas utworzenia bloku.
+
+`nonce`: Rozwiązanie nonce.
+
+`bits` : Kompaktowa reprezentacja trudności bloku.
+
+`difficulty` : Trudność specyficzna dla kanału.
+
+`mint` : Wartość wybita w tym bloku.
+
+`previousblockhash` : Hash poprzedniego bloku w łańcuchu.
+
+`nextblockhash` : Hash następnego bloku w łańcuchu, chyba że jest to ostatni blok w łańcuchu.
+
+`tx` : Tablica transakcji zawartych w tym bloku.
+
+`type` : Opis transakcji (legacy | tritium base | trust | genesis | user).
+
+`version` : Wersja serializacji transakcji.
+
+`sequence` : Numer kolejny tej transakcji w łańcuchu podpisów.
+
+`timestamp` : Uniksowy znacznik czasu utworzenia transakcji.
+
+`blockhash` : Hash bloku, w którym zawarta jest ta transakcja. Pusty, jeśli nie został jeszcze uwzględniony w bloku.
+
+`confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję przez sieć.
+
+`genesis` : To jest hash nazwy użytkownika profilu, znany również jako hash właściciela.
+
+`nexthash` : Hash następnej transakcji w sekwencji.
+
+`prevhash` : Hash poprzedniej transakcji w sekwencji.
+
+`pubkey` : Klucz publiczny.
+
+`signature` : Hash podpisu.
+
+`hash` : Hash transakcji.
+
+`contracts` : Tablica kontraktów powiązanych z tą transakcją oraz ich szczegóły z kodami operacyjnymi.
+
+`idcontractid` : Identyfikator sekwencyjny tego kontraktu w ramach transakcji.
+
+`OP` : Operacja kontraktu. Może być APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
+
+`for` : Dla transakcji CREDIT, kontrakt, dla którego utworzono ten kredyt . Może być COINBASE, DEBIT lub LEGACY.
+
+`txid` : Transakcja, która została uznana / zgłoszona.
+
+`contract` : Identyfikator kontraktu w ramach transakcji, która została uznana / zgłoszona.
+
+`proof`: Adres rejestru potwierdzający kredyt.
+
+`from` : Dla transakcji DEBIT, CREDIT, FEE adres rejestrowy konta, z którego dokonywany jest debet.
+
+`from_name` : W przypadku transakcji DEBIT, CREDIT, FEE nazwa rachunku, z którego dokonywany jest debet. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+
+`to` : W przypadku transakcji DEBIT i CREDIT adres rejestru konta odbiorcy.
+
+`to_name` : W przypadku transakcji DEBIT i CREDIT nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+
+`amount` : Kwota tokena transakcji.
+
+`token` : Adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS.
+
+`ticker` : Nazwa tokena, którego dotyczy transakcja.
+
+`reference` : W przypadku transakcji DEBIT i CREDIT jest to referencja podana przez użytkownika, używana przez odbiorcę do powiązania transakcji z numerem zamówienia lub faktury.
+
+---
+&nbsp;
+
+## get/transaction <a href="#get/transaction" id="get/transaction"></a>
+
+Pobiera dane transakcji dla danego hash transakcji.
+
+````
+ledger/get/transaction
+````
+
+### Parametry:
+
+`format` : Określa **format** zwracanej wartości. Wartością parametru może być JSON (domyślna) lub surowa. Jeśli określono wartość raw, metoda zwraca zserializowaną transakcję zakodowaną szesnastkowo, która może być następnie rozgłaszana do sieci za pośrednictwem /ledger/submit/transaction.
+
+`txid` : Wymagany do **identyfikacji** txid, dla którego mają zostać pobrane dane transakcji.
+
+`verbose` : Opcjonalny, określa, ile **danych transakcji** należy uwzględnić w odpowiedzi. Jest to ignorowane, jeśli wymagany jest format surowy. Obsługiwane wartości to:
+
+* summary : hash, type, version, sequence, timestamp, and contracts
+* detail : genesis, nexthash, prevhash, pubkey and signature
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+### Zwroty:
+
+#### Zwracana wartość obiektu JSON:
+
 
 
 
