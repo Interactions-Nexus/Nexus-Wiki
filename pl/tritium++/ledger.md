@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T23:14:38.266Z
+date: 2022-11-07T23:18:09.241Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -522,6 +522,35 @@ ledger/get/transaction
 &nbsp;
 
 ## list/transactions <a href="#list/transactions" id="list/transactions"></a>
+
+Pobiera dane transakcji dla danego hash transakcji.
+
+````
+ledger/list/transactions
+````
+
+### Parametry:
+
+`session` : Wymagane przez **argument** `-multiuser=1` w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika nie należy podawać sesji.
+
+`verbose` : Opcjonalny, określa, ile **danych transakcji** należy uwzględnić w odpowiedzi. Obsługiwane wartości to:
+
+* summary : hash, type, version, sequence, timestamp, contracts
+* detail : genesis, nexthash, prevhash, pubkey, signature
+
+`where` : Tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć pod adresem [`Queries`](/pl/tritium++/queries).
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+[`Operators`](/pl/tritium++/operators)
+
+### Zwroty:
+
+#### Zwracana wartość obiektu JSON:
+
+
 
 
 
