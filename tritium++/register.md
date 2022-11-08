@@ -2,7 +2,7 @@
 title: REGISTER
 description: Register API
 published: true
-date: 2022-11-02T21:08:47.478Z
+date: 2022-11-08T14:57:20.014Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:09.936Z
@@ -22,7 +22,7 @@ The minimum required components of the URI are:
 register/verb/noun
 ```
 
-## `Supported Verbs`
+## Supported Verbs
 
 The following verbs are currently supported by this API command-set:
 
@@ -31,7 +31,10 @@ The following verbs are currently supported by this API command-set:
 [`history`](#history) - Generate the history of all last states.
 [`transactions`](#transactions) - List all transactions that modified specified object.
 
-## `Supported Nouns`
+---
+&nbsp;
+
+## Supported Nouns
 
 The following nouns are supported for this API command-set:
 
@@ -40,6 +43,9 @@ The following nouns are supported for this API command-set:
 [`raw`] - An object register of type raw.
 [`readonly`] - An object register of type readonly.
 [`any`] - An object selection noun allowing mixed accounts of different tokens.
+
+---
+&nbsp;
 
 ## Supported API/noun
 ###### Finance API:
@@ -71,6 +77,9 @@ The following nouns are supported for this API command-set:
 [`supply:item`] - An object register containing item object.
 [`supply:raw`] - An object register containing raw item object.
 [`supply:readonly`] - An object register containing readonly item object.
+
+---
+&nbsp;
 
 ## get <a href="#get" id="get"></a>
 
@@ -118,6 +127,9 @@ Retrieves information for a specified append register.
 
 [`Filtering`](/en/tritium++/filtering)
 
+---
+&nbsp;
+
 ## list <a href="#list" id="list"></a>
 
 This method provides the user with the ability to directly access the object register data specified by the noun and does not need the user to be logged in.
@@ -163,6 +175,9 @@ Returns a list of all the append registers.
 [`Filtering`](/en/tritium++/filtering)
 
 [`Operators`](/en/tritium++/operators)
+
+---
+&nbsp;
 
 ## history <a href="#history" id="history"></a>
 
@@ -211,6 +226,9 @@ This will get the history and ownership of the specified append register.
 [`Filtering`](/en/tritium++/filtering)
 
 [`Operators`](/en/tritium++/operators)
+
+---
+&nbsp;
 
 ## transactions <a href="#transactions" id="transactions"></a>
 
@@ -261,6 +279,9 @@ List out all the transactions for the specified append register.
 [`Filtering`](/en/tritium++/filtering)
 
 [`Operators`](/en/tritium++/operators)
+
+---
+&nbsp;
 
 ## Register API with Query DSL
 
