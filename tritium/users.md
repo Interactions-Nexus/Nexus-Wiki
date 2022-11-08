@@ -2,7 +2,7 @@
 title: USERS
 description: Users API
 published: true
-date: 2022-11-08T15:52:29.770Z
+date: 2022-11-08T21:02:35.900Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:19.866Z
@@ -666,9 +666,9 @@ print(response.json())
 
 `transactions` : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).
 
-***
 
-## `list/assets`
+
+## list/assets <a href="#list/assets" id="get/status"></a> 
 
 This will list off all of the assets owned by a signature chain.
 
