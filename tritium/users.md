@@ -2,7 +2,7 @@
 title: USERS
 description: Users API
 published: true
-date: 2022-10-08T12:52:38.021Z
+date: 2022-11-08T15:52:29.770Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:19.866Z
@@ -24,67 +24,49 @@ Similarly `/users/list/accounts/myusername` is a shortcut to `users/list/account
 
 The following methods are currently supported by this API
 
-[`create/user`](users.md#create-user)\
-[`login/user`](users.md#login-user)\
-[`logout/user`](users.md#logout-user)\
-[`unlock/user`](users.md#unlock-user)\
-[`lock/user`](users.md#lock-user)\
-[`update/user`](users.md#update-user)\
-[`get/status`](users.md#get-status)\
-[`list/accounts`](users.md#list-accounts)\
-[`list/assets`](users.md#list-assets)\
-[`list/invoices`](users.md#list-invoices)\
-[`list/items`](users.md#list-items)\
-[`list/names`](users.md#list-names)\
-[`list/namespaces`](users.md#list-namespaces)\
-[`list/notifications`](users.md#list-notifications)\
-[`process/notifications`](users.md#process-notifications)\
-[`list/tokens`](users.md#list-tokens)\
-[`list/transactions`](users.md#list-transactions)\
-[`save/session`](users.md#save-session)\
-[`load/session`](users.md#load-session)\
-[`has/session`](users.md#has-session)
+[`create/user`](#create/user)
+[`login/user`](#login/user)
+[`logout/user`](#logout/user)
+[`unlock/user`](#unlock/user)
+[`lock/user`](#lock/user)
+[`update/user`](#update/user)
+[`get/status`](#get/status)
+[`list/accounts`](#list/accounts)
+[`list/assets`](#list/assets)
+[`list/invoices`](#list/invoices)
+[`list/items`](#list/items)
+[`list/names`](#list/names)
+[`list/namespaces`](#list/namespaces)
+[`list/notifications`](#list/notifications)
+[`process/notifications`](#process/notifications)
+[`list/tokens`](#list/tokens)
+[`list/transactions`](#list/transactions)
+[`save/session`](#save/session)
+[`load/session`](#load/session)
+[`has/session`](#has/session)
 
-## `create/user`
+
+---
+&nbsp;
+
+## create/user <a href="#create/user" id="create/user"></a>
 
 This will create a new user account (signature chain) for use on the network. The user account is secured by a combination of username, password, and PIN.
 
-{% hint style="info" %}
-**NOTE:**&#x20;
 
-&#x20;_username_ must be a minimum of 2 characters\
-&#x20;_password_ must be a minimum of 8 characters\
-&#x20;_pin_ must be a minimum of 4 characters
-{% endhint %}
+> **NOTE:**
+> _username_ must be a minimum of 2 characters
+> _password_ must be a minimum of 8 characters
+> _pin_ must be a minimum of 4 characters
+{.is-info}
+
+
 
 #### Endpoint:
+```
+/users/create/user`
+```
 
-`/users/create/user`
-
-{% swagger method="post" path="/users/create/user" baseUrl="http://api.nexus-interactions.io:8080" summary="create/user" %}
-{% swagger-description %}
-This will create a new user account (signature chain) for use on the network. The user account is secured by a combination of username, password, and PIN.
-
-**NOTE** :&#x20;
-
-_username_ must be a minimum of 3 characters\
-_password_ must be a minimum of 8 characters\
-_pin_ must be a minimum of 4 characters
-{% endswagger-description %}
-
-{% swagger-parameter in="header" name="username" required="true" %}
-The username to be associated with this user. The signature chain genesis (used to uniquely identify user accounts) is a hash of this username, therefore the username must be unique on the blockchain
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="password" required="true" %}
-password for the user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="pin" required="true" %}
-The PIN can be a combination of letters/numbers/symbols or could be tied into an external digital fingerprint. The PIN is required for all API calls that modify a user account (such as sending or claiming transactions)
-{% endswagger-parameter %}
-
-{% swagger-response status="201: Created" description="user account created" %}
 ```json
 {
     "genesis": "c8749c4e748f3a9a3ca2b3199ed34d9501ef8a5df07d9dadcbacbef74202deb9",
@@ -98,11 +80,7 @@ The PIN can be a combination of letters/numbers/symbols or could be tied into an
     "version": 1
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
 
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 //  /users/create/user
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -120,9 +98,7 @@ fetch(`${SERVER_URL}/users/create/user`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -134,16 +110,17 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/create/user", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-#### Parameters:
+
+### Parameters:
 
 `username` : The username to be associated with this user. The signature chain genesis (used to uniquely identify user accounts) is a hash of this username, therefore the username must be unique on the blockchain.
 
-{% hint style="danger" %}
-If user forgets the username, he looses access to his nexus assets. There is no option to change the username.  Be careful when you choose a username (case sensitive) and make a point to back it up.&#x20;
-{% endhint %}
+> 
+> If user forgets the username, he looses access to his nexus assets. There is no option to change the username.  Be careful when you choose a username (case sensitive) and make a point to back it up.
+{.is-warning}
+
+
 
 `password` : The password to be associated with this user.
 
@@ -185,49 +162,19 @@ If user forgets the username, he looses access to his nexus assets. There is no 
 
 `version` : The serialization version of the transaction.
 
-***
+---
+&nbsp;
 
-### `login/user`
+## login/user <a href="#login/user" id="login/user"></a>
 
 This will start a session for your user account with this specific API instance. Username, password, and pin fields are mandatory for login.
 
 #### Endpoint:
 
-`/users/login/user`
-
-{% swagger method="post" path="/users/login/user" baseUrl="http://api.nexus-interactions.io:8080" summary="login/user" %}
-{% swagger-description %}
-This will start a session for your user account with this specific API instance. Username, password, and pin fields are mandatory for login
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="username" required="true" type="" %}
-The username for the user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="Password" required="true" %}
-The password for the user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="pin" required="true" %}
-PIN for the user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Content-Type" required="false" %}
-application/json
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="user logged in" %}
-```json
-{
-    "genesis": "27ef3f31499b6f55482088ba38b7ec7cb02bd4383645d3fd43745ef7fa3db3d1",
-    "session": "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8"
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+/users/login/user
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 
@@ -245,9 +192,7 @@ fetch(`${SERVER_URL}/users/login/user`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -259,8 +204,8 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/login/user", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 #### Parameters:
 
@@ -285,36 +230,19 @@ print(response.json())
 
 `session` : When using multi-user API mode, an additional session value is returned and must be supplied in subsequent API calls, to allow the managing of multiple login sessions.
 
-***
+---
+&nbsp;
 
-### `logout/user`
+## logout/user <a href="#logout/user" id="logout/user"></a>
 
 This will log you out of this specific API, and delete your credentials stored in encrypted memory.
 
 #### Endpoint:
 
-`/users/logout/user`
-
-{% swagger method="post" path="/users/logout/user" baseUrl="http://api.nexus-interactions.io:8080" summary="logout/user" %}
-{% swagger-description %}
-This will log you the particular user and delete user credentials stored in encrypted memory
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="session" type="" required="false" %}
-session ID
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="user logged out" %}
-```json
-{
-  success : true
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+/users/logout/user
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 
@@ -330,9 +258,8 @@ fetch(`${SERVER_URL}/users/logout/user`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -342,8 +269,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/logout/user", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Parameters:
 
@@ -355,9 +280,11 @@ print(response.json())
 
 `success` : Flag indicating if the call was successful
 
-***
 
-### `unlock/user`
+---
+
+
+## unlock/user <a href="#unlock/user" id="unlock/user"></a>
 
 This will unlock your signature chain and cache the PIN in encrypted memory to be used for all subsequent API calls. This method is only available when using single-user API mode (multiuser=0).
 
@@ -367,49 +294,10 @@ The `pin` field is mandatory for unlock. The mining/staking/transactions/notific
 
 #### Endpoint:
 
-`/users/unlock/user`
-
-{% swagger method="post" path="/users/unlock/user" baseUrl="http://api.nexus-interactions.io:8080" summary="unlock/user" %}
-{% swagger-description %}
-This will unlock your signature chain and cache the PIN in encrypted memory to be used for all subsequent API calls. This method is only available when using single-user API mode (multiuser=0).
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="pin" required="true" type="1234" %}
-The PIN for the particular user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="mining" type="true" required="false" %}
-This boolean value determines whether the logged in users account can be used for mining.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="notifications" type="true" required="false" %}
-This boolean value determines whether the logged in users account can be used for processing notifications
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="staking" type="false" required="false" %}
-This boolean value determines whether the logged in users account can be used for staking
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="transactions" type="false" required="false" %}
-This boolean value determines whether the logged in users account can be used for creating or claiming transactions
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="user account unlocked" %}
-```json
-{
-    "unlocked": {
-        "mining": true,
-        "notifications": true,
-        "staking": false,
-        "transactions": false
-    }
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+/users/unlock/user
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 
@@ -429,9 +317,7 @@ fetch(`${SERVER_URL}/users/unlock/user`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -445,8 +331,7 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/unlock/user", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
+
 
 #### Parameters:
 
@@ -485,9 +370,10 @@ print(response.json())
 
 `transactions` : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).
 
-***
+---
+&nbsp;
 
-### `lock/user`
+## lock/user <a href="#lock/user" id="lock/user"></a>
 
 This will lock your signature chain, making it unavailable for use unless it is either unlocked or the PIN is passed in to all API requests. Only available in single-user API mode (multiuser=0).
 
@@ -497,45 +383,11 @@ The mining/staking/transactions/notifications parameters are optional and, if su
 
 #### Endpoint:
 
-`/users/lock/user`
-
-{% swagger method="post" path="/users/lock/user" baseUrl="http://api.nexus-interactions.io:8080" summary="lock/user" %}
-{% swagger-description %}
-This will lock your signature chain, making it unavailable for use unless it is either unlocked or the PIN is passed in to all API requests. Only available in single-user API mode (multiuser=0)
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="mining" type="false" required="false" %}
-This boolean value locks the user account for mining
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="notifications" type="true" required="false" %}
-This boolean value locks the users account from processing notifications
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="staking" type="true" required="false" %}
-This boolean value locks the users account for staking
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="transactions" type="false" required="false" %}
-This boolean value locks the users account from claiming transactions
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="user account unlocked" %}
-```json
-{
-    "unlocked": {
-        "mining": false,
-        "notifications": true,
-        "staking": true,
-        "transactions": false
-    }
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+/users/lock/user`
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
+
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 
@@ -555,9 +407,7 @@ fetch(`${SERVER_URL}/users/lock/user`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -571,8 +421,7 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/lock/user", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
+
 
 #### Parameters:
 
@@ -609,9 +458,10 @@ print(response.json())
 
 `transactions` : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).
 
-***
+---
+&nbsp;
 
-### `update/user`
+## update/user <a href="#update/user" id="update/user"></a>
 
 This method provides the user with the ability to change the password, pin, or recovery seed for this signature chain.
 
@@ -623,58 +473,10 @@ This method requires the user to already be logged in.
 
 #### Endpoint:
 
-`/users/update/user`
-
-{% swagger method="post" path="/users/update/user" baseUrl="http://api.nexus-interactions.io:8080" summary="update/user" %}
-{% swagger-description %}
-This method provides the user with the ability to change the password, pin, or recovery seed for this signature chain.
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="session" required="false" %}
-When using multi-user API mode the session parameter must be supplied to identify which user to update
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="password" required="true" %}
-The current password for this user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="pin" required="true" %}
-The current pin for this user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="recovery" required="false" %}
-The existing recovery seed for this user account. This is only required if an existing recovery seed is being updated via
-
-`new_recovery`
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="new_password" required="true" %}
-The new password for this user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="new_pin" required="true" %}
-The new pin for this user account
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="new_recovery" required="false" %}
-new recovery seed to set on this sig chain. This is optional if new\_pin or new\_password is provided. The recovery seed must be a minimum of 40 characters.
-
-**NOTE**
-
-: the recovery seed is case sensitive
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="user credentials updated" %}
-```json
-{
-    "txid": "f9dcd28bce2563ab288fab76cf3ee5149ea938c735894ce4833b55e474e08e8a519e8005e09e2fc19623577a8839a280ca72b6430ee0bdf13b3d9f785bc7397d"
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+/users/update/user
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 // /users/update/user
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -697,9 +499,7 @@ fetch(`${SERVER_URL}/users/update/user`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -715,8 +515,7 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/update/user", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
+### Parameters
 
 `session` : When using multi-user API mode the session parameter must be supplied to identify which user to update.
 
@@ -732,9 +531,11 @@ print(response.json())
 
 `new_recovery` : The new recovery seed to set on this sig chain. This is optional if new\_pin or new\_password is provided. The recovery seed must be a minimum of 40 characters.
 
-{% hint style="danger" %}
-The recovery phrase is case sensitive
-{% endhint %}
+
+> The recovery phrase is case sensitive.
+{.is-info}
+
+
 
 #### Example 1:
 
@@ -773,55 +574,20 @@ The following example sets the initial recovery seed on the sig chain
 
 `txid` : The ID (hash) of the transaction that includes the update to the signature chain credentials.
 
-***
+---
+&nbsp;
 
-### `get/status`
+
+## get/status <a href="#get/status" id="get/status"></a>
 
 Return status information for the currently logged in user
 
 #### Endpoint:
 
-`/users/get/status`
-
-{% swagger method="post" path="/users/get/status" baseUrl="http://api.nexus-interactions.io:8080" summary="get/status" %}
-{% swagger-description %}
-Return status information for the currently logged in user
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="session" required="false" %}
-When using multi-user API mode the session parameter must be supplied to identify which user to return the status for.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="pin" required="true" %}
-PIN for the user account. This should only be supplied in multi-user mode and only if the caller requires the 
-
-`username`
-
- to be included in the response. In single user mode the username is always returned 
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="User status" %}
-```json
-{
-    "username": "bob",
-    "genesis": "a2e51edcd41a8152bfedb24e3c22ee5a65d6d7d524146b399145bced269ae000",
-    "confirmed": true,
-    "recovery": true,
-    "transactions": 272,
-    "notifications": 10,
-    "unlocked": {
-        "mining": false,
-        "notifications": false,
-        "staking": false,
-        "transactions": false
-    }
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+/users/get/status
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 // /users/get/status
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -839,9 +605,7 @@ fetch(`${SERVER_URL}/users/get/status`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -852,8 +616,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/get/status", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Parameters:
 
