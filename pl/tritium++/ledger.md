@@ -2,7 +2,7 @@
 title: KSIĘGA GŁÓWNA
 description: API księgi głównej
 published: true
-date: 2022-11-07T23:54:33.697Z
+date: 2022-11-09T22:55:34.473Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:26:47.955Z
@@ -729,7 +729,7 @@ ledger/get/info
 
 #### Zwracane wartości:
 
-`Stake` : Pobiera informacje dla kanału stake.
+`stake` : Pobiera informacje dla kanału stake.
 
 `height` : Aktualna liczba bloków dla kanału stake.
 
