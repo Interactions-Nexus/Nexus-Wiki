@@ -2,7 +2,7 @@
 title: REJESTR
 description: API rejestru
 published: true
-date: 2022-11-10T23:43:10.642Z
+date: 2022-11-10T23:52:05.119Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T09:58:35.680Z
@@ -166,3 +166,151 @@ Zwraca listę wszystkich nieprzetworzonych rejestrów.
 
 Zwraca listę wszystkich rejestrów dołączających.
 
+### Parametry:
+
+`where` : Tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć tutaj: `Zapytania`
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+[`Operators`](/pl/tritium++/operators)
+
+---
+&nbsp;
+
+## history <a href="#history" id="history"></a>
+
+Spowoduje to uzyskanie historii określonego rzeczownika.
+
+````
+register/history/noun
+````
+
+To polecenie obsługuje wszystkie rzeczowniki.
+
+````
+register/history/API:noun
+````
+
+To polecenie obsługuje wszystkie API:nouns.
+
+**history/crypto**
+
+Spowoduje to uzyskanie historii określonego rejestru obiektów kryptograficznych.
+
+**history/object**
+
+Spowoduje to uzyskanie historii i własności określonego rejestru obiektów.
+
+**history/readonly**
+
+Spowoduje to uzyskanie historii i własności określonego rejestru tylko do odczytu.
+
+**history/raw**
+
+Spowoduje to uzyskanie historii i własności określonego rejestru surowego.
+
+**history/append**
+
+Spowoduje to uzyskanie historii i własności określonego rejestru dołączania.
+
+### Parametry:
+
+`name` : Wymagane do **identyfikacji** nazwy konta/zaufania/tokena. Nazwa powinna być w formacie username:name (dla nazw lokalnych) lub namespace::name (dla nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
+
+`address` : Wymagany do **identyfikacji** adresu rejestrowego konta/zaufania/tokena. Jest to opcjonalne, jeśli podano `name`.
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+[`Operators`](/pl/tritium++/operators)
+
+---
+&nbsp;
+
+## transactions <a href="#transactions" id="transactions"></a>
+
+Spowoduje to wypisanie wszystkich transakcji dla określonego rzeczownika.
+
+````
+register/transactions/noun
+````
+
+To polecenie obsługuje wszystkie rzeczowniki.
+
+````
+register/transactions/API:noun
+````
+
+To polecenie obsługuje wszystkie API:nouns.
+
+**transactions/crypto**
+
+Wymień wszystkie transakcje dla określonego rejestru obiektów kryptograficznych.
+
+**transactions/object**
+
+Wymień wszystkie transakcje dla określonego rejestru obiektów.
+
+**transactions/readonly**
+
+Wymień wszystkie transakcje dla określonego rejestru tylko do odczytu.
+
+**transactions/raw**
+
+Wymień wszystkie transakcje dla określonego rejestru surowego.
+
+**transactions/append**
+
+Wymień wszystkie transakcje dla określonego rejestru dołączania.
+
+### Parametry:
+
+`verbose` : Opcjonalny, określa, ile danych transakcji należy uwzględnić w odpowiedzi. Obsługiwane wartości to:
+
+* `default` : hash
+* `summary` : type, version, sequence, timestamp, operation, confirmations
+* `detail` : genesis, nexthash, prevhash, pubkey, signature
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+[`Operators`](/pl/tritium++/operators)
+
+---
+&nbsp;
+
+## Zarejestruj API za pomocą Query DSL
+
+Kilka wywołań API rejestrów, które pokażą moc rejestrów, LLD, która jest bazą danych i Query-DSL. To będzie potężne narzędzie dla programistów.
+
+Wszystkie te wywołania będą wymagały najnowszej wersji jądra i nie będą działać z obecną stabilną wersją.
+
+Aby obliczyć sumę wszystkich NXS w łańcuchu trytu:
+
+````
+register/list/finance:accounts,finance:trust/total/sum limit=none where='results.total>0 AND results.ticker=NXS'
+````
+
+Wymień wszystkie przestrzenie nazw posortowane według daty utworzenia w porządku rosnącym:
+
+````
+register/list/names:namespaces sort=utworzony porządek=asc
+````
+
+Wymień wszystkie globalne nazwy w sieci:
+
+````
+rejestr/lista/nazwy:globalny
+````
+
+Utwórz bogatą listę:
+
+````
+register/list/finance:accounts,finance:trust sort=całkowite zamówienie=desc page=0 where='results.token=0'
+````
+
+***
