@@ -2,7 +2,7 @@
 title: MARKET
 description: Market API
 published: true
-date: 2022-11-10T00:15:39.578Z
+date: 2022-11-10T00:16:03.174Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:37:45.578Z
@@ -224,8 +224,6 @@ This command supports all the nouns.
 `type` : The type of order `bid` or `ask`
 
 `contracts` : The array of contracts bound to this transaction and their details with opcodes.
-
-`{`
 
 `OP` : The contract operation. Can be `APPEND`, `CLAIM`, `COINBASE`, `CREATE`, `CREDIT`, `DEBIT`, `FEE`, `GENESIS`, `LEGACY`, `TRANSFER`, `TRUST`, `STAKE`, `UNSTAKE`, `WRITE`.
 
