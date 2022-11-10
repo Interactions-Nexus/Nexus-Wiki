@@ -2,7 +2,7 @@
 title: MARKET
 description: Market API
 published: true
-date: 2022-11-05T12:05:48.877Z
+date: 2022-11-10T00:15:39.578Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:37:45.578Z
@@ -54,7 +54,7 @@ The following verbs are currently supported by this API command-set:
 [`create`](#create) - Creates a new market place or becomes part of an existing one.
 [`list`](#list) - List all orders for a specified marketplace.
 [`execute`](#execute) - To full-fill a specified market order.
-[`cancel`](#cancel) - To cancel a specified market order
+[`cancel`](#cancel) - To cancel a specified market order.
 [`user`](#user) - Retrieves all market orders for a profile.
 
 ---
@@ -64,9 +64,9 @@ The following verbs are currently supported by this API command-set:
 
 The following nouns are supported for this API command-set:
 
-[`bid`] - A market order placed to buy a token or asset
-[`ask`] - A market order placed to sell a token or asset
-[`order`] - A market order which can be a bid or ask
+[`bid`] - A market order placed to buy a token or asset.
+[`ask`] - A market order placed to sell a token or asset.
+[`order`] - A market order which can be a bid or ask.
 [`executed`] - A market order which has been full-filled.
 
 ---
@@ -80,7 +80,7 @@ This method creates a new market pair or becomes part of an existing market repr
 market/create/noun
 ```
 
-This command supports the `bid and` `ask` nouns.
+This command supports the `bid` and `ask` nouns.
 
 ##### create/bid
 
@@ -264,7 +264,7 @@ This command supports the `bid` and `ask`  nouns.
 
 `to` : This is the receiving account name or register address to credit token1.
 
-`from` : This is the sending account name or register address to debit the token2
+`from` : This is the sending account name or register address to debit the token2.
 
 ### Results:
 
@@ -298,7 +298,7 @@ Create a new object register specified by given noun.
 market/list/noun
 ```
 
-This command supports the `bid and` `ask` nouns.
+This command supports the `bid` and `ask` nouns.
 
 ### Parameters:
 
