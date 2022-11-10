@@ -2,7 +2,7 @@
 title: SYSTEM
 description: System API
 published: true
-date: 2022-10-08T12:49:15.506Z
+date: 2022-11-10T11:51:58.071Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:03.315Z
@@ -12,45 +12,41 @@ dateCreated: 2022-10-05T08:30:03.315Z
 
 The System API provides public access to information about this node. This includes data such as the version of software the node is running, ledger and mempool state, node IP address, and connected peers.
 
-### `Methods`
+---
+&nbsp;
+
+## Methods
 
 The following methods are currently supported by this API
 
-[`stop`](system.md#stop)\
-[`get/info`](system.md#get-info)\
-[`get/metrics`](system.md#get-metrics)\
-[`list/peers`](system.md#list-peers)\
-[`list/lisp-eids`](system.md#list-lisp-eids)\
-[`validate/address`](system.md#validate-address)
+[`stop`](#stop)
+[`get/info`](#get/info)
+[`get/metrics`](#get/metrics)
+[`list/peers`](#list/peers)
+[`list/lisp-eids`](#list/lisp-eids)
+[`validate/address`](#validate/address)
 
-### `stop`
+---
+&nbsp;
+
+## stop <a href="#stop" id="stop"></a>
 
 Initiate node shutdown sequence.
 
 #### Endpoint:
 
-`/system/stop`
-
-#### Parameters: `NONE`
-
-#### Return value JSON object:
-
-`Nexus server stopping`
-
-{% swagger method="get" path="/system/stop" baseUrl="http://api.nexus-interactions.io:8080" summary="stop" %}
-{% swagger-description %}
-Initiate node shutdown sequence.
-{% endswagger-description %}
-
-{% swagger-response status="200: OK" description="server stopped" %}
-```javascript
-Nexus server stopping
 ```
-{% endswagger-response %}
-{% endswagger %}
+/system/stop
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
+### Parameters: 
+
+-NONE-
+
+### Code Snippets
+
+#### Javascript
+
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 
@@ -62,33 +58,67 @@ fetch(`${SERVER_URL}/system/stop`,{
 .then(json => console.log(json)) // nexus server stopping
 .catch(error => console.log(error)) // Some Error Occured
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Python
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
 response = requests.post(f"{SERVER_URL}/system/stop")
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-### `get/info`
+#### Return value JSON object:
+
+```json
+Nexus server stopping
+```
+
+---
+&nbsp;
+
+## get/info <a href="#get/info" id="get/info"></a>
 
 Returns a summary of information about this node
 
 #### Endpoint:
 
-`/system/get/info`
+```
+system/get/info
 
-{% swagger method="get" path=":8080/system/get/info" baseUrl="http://api.nexus-interactions.io" summary="get/info" %}
-{% swagger-description %}
-Returns a summary of information about this node
-{% endswagger-description %}
+```
 
-{% swagger-response status="200: OK" description="node information" %}
+### Parameters: 
+
+-NONE-
+
+### Code Snippets
+
+#### Javascript
+
 ```javascript
+const SERVER_URL = "http://api.nexus-interactions.io:8080"
+
+fetch(`${SERVER_URL}/system/get/info`, {
+    method: "GET"
+})
+.then(resp => resp.json())
+.then(json => console.log(json))
+.catch(error => console.log(error))
+```
+
+#### Python
+
+```python
+import requests
+SERVER_URL = "http://api.nexus-interactions.io:8080"
+response = requests.get(f"{SERVER_URL}/system/get/info")
+print(response.json())
+```
+
+#### Return value JSON object:
+
+```json
 {
   "result": {
     "version": "5.1.0-rc2 Tritium++ CLI [LLD][x64]",
@@ -118,32 +148,7 @@ Returns a summary of information about this node
   }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
-
-{% tabs %}
-{% tab title="Javascript" %}
-```javascript
-const SERVER_URL = "http://api.nexus-interactions.io:8080"
-
-fetch(`${SERVER_URL}/system/get/info`, {
-    method: "GET"
-})
-.then(resp => resp.json())
-.then(json => console.log(json))
-.catch(error => console.log(error))
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-import requests
-SERVER_URL = "http://api.nexus-interactions.io:8080"
-response = requests.get(f"{SERVER_URL}/system/get/info")
-print(response.json())
-```
-{% endtab %}
-{% endtabs %}
+#### Return values:
 
 `version` : The daemon software version.
 
@@ -183,77 +188,27 @@ print(response.json())
 
 `eids` : Array of LISP Endpoint Idendifiers (EID's) for this node. Not included unless this node is using LISP.
 
-***
+---
+&nbsp;
 
-### `get/metrics`
+## get/metrics <a href="#get/metrics" id="get/metrics"></a>
 
 Returns metrics and statistics for the ledger, registers, etc
 
 #### Endpoint:
 
-`/system/get/metrics`
-
-{% swagger method="get" path="/system/get/metrics" baseUrl="http://api.nexus-interactions.io:8080" summary="get/metrics" %}
-{% swagger-description %}
-Returns metrics and statistics for the ledger, registers, etc
-{% endswagger-description %}
-
-{% swagger-response status="200: OK" description="blockchain metrics" %}
-```json
-{
-  "result": {
-    "registers": {
-      "total": 175059,
-      "account": 86428,
-      "append": 0,
-      "crypto": 29388,
-      "name": 58219,
-      "name_global": 18,
-      "name_namespaced": 29,
-      "namespace": 13,
-      "object": 69,
-      "object_tokenized": 23,
-      "raw": 0,
-      "readonly": 360,
-      "token": 91
-    },
-    "sig_chains": 29388,
-    "trust": {
-      "total": 491,
-      "stake": 25985364,
-      "trust": 7050474315
-    },
-    "supply": {
-      "total": 72219002.863206,
-      "target": 69892243.017788,
-      "inflationrate": 3.3290673541924036,
-      "minute": 4.15395,
-      "hour": 249.23414,
-      "day": 5980.03409,
-      "week": 41790.959354,
-      "month": 166204.447078
-    },
-    "reserves": {
-      "ambassador": 132.163967,
-      "developer": 188.918715,
-      "fee": 61688.638,
-      "hash": 118.467741,
-      "prime": 83.770769
-    }
-  },
-  "info": {
-    "method": "system/get/metrics",
-    "status": "active",
-    "address": "103.89.235.214:27044",
-    "latency": "3659.265501 ms"
-  }
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+system/get/metrics
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
+### Parameters: 
+
+-NONE-
+
+### Code Snippets:
+
+#### Javascript
+
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 
@@ -262,21 +217,20 @@ fetch(`${SERVER_URL}/system/get/metrics`)
 .then(json => console.log(json))
 .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Python
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
 response = requests.get(f"{SERVER_URL}/system/get/metrics")
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
+
 
 #### Return value JSON object:
 
-```
+```json
 {
     "registers": {
         "total": 54732,
@@ -321,8 +275,8 @@ print(response.json())
 
 #### Return values:
 
-`registers` : Statistics on the register database.\
-{\
+`registers` : Statistics on the register database.
+{
 `total` : Total number of registers in the register database.
 
 `account` : Number of account registers. This includes both NXS and other token accounts.
@@ -345,21 +299,21 @@ print(response.json())
 
 `readonly` : Number of read only registers.
 
-`token` : Number of token registers.\
+`token` : Number of token registers.
 }
 
 `sig_chains` : Total number of signature chains in the ledger.
 
-`trust` : Statistics on active trust accounts.\
-{\
+`trust` : Statistics on active trust accounts.
+{
 `total` : Total number trust accounts that are active (have a non-zero stake balance).
 
 `stake` : Total amount of NXS currently being staked network-wide).
 
 `trust` : Total trust score of all trust accounts being staked. }
 
-`supply` : Metrics on NXS supply rates.\
-{\
+`supply` : Metrics on NXS supply rates.
+{
 `total` : Total amount of NXS in existence.
 
 `target` : The target supply rate for this point in time.
@@ -374,11 +328,11 @@ print(response.json())
 
 `week` : The increase in supply rate within the last week.
 
-`month` : The increase in supply rate within the last 30 days.\
+`month` : The increase in supply rate within the last 30 days.
 }
 
-`reserves` : Information on the amount of NXS currently in the various reserves.\
-{\
+`reserves` : Information on the amount of NXS currently in the various reserves.
+{
 `ambassador` : Amount of NXS in the ambassador reserves, waiting to be paid to the ambassador sig chains.
 
 `developer` : Amount of NXS in the developer reserves, waiting to be paid to the developer sig chains.
@@ -387,72 +341,30 @@ print(response.json())
 
 `hash` : Amount of NXS in the hash channel reserves.
 
-`ambassador` : Amount of NXS in the prime channel reserves.\
+`ambassador` : Amount of NXS in the prime channel reserves.
 }
 
-***
+---
+&nbsp;
 
-### `list/peers`
+## list/peers <a href="#list/peers" id="list/peers"></a>
 
 Returns a summary of information about the peers currently connected to this node. The return array is sorted by the peer `score` value.
 
 #### Endpoint:
 
-`/system/list/peers`
-
-{% swagger method="get" path="/system/list/peers" baseUrl="http://api.nexus-interactions.io:8080" summary="list/peers" %}
-{% swagger-description %}
-Returns a summary of information about the peers currently connected to this node. The return array is sorted by the peer score value.
-{% endswagger-description %}
-
-{% swagger-response status="200: OK" description="peers list" %}
-```json
-{
-  "result": [
-    {
-      "address": "104.248.2.51:9888",
-      "type": "5.0.5 Tritium CLI [LLD][x64]",
-      "version": 30000,
-      "session": 7046197205965029000,
-      "outgoing": true,
-      "height": 4178263,
-      "best": "64604ef1745cec24eeef",
-      "latency": 353,
-      "lastseen": 1638986374,
-      "connects": 43,
-      "drops": 42,
-      "fails": 0,
-      "score": 10980
-    },
-    {
-      "address": "83.76.253.28:9888",
-      "type": "5.0.5 Tritium CLI [LLD][x64]",
-      "version": 30000,
-      "session": 6452724524911455000,
-      "outgoing": true,
-      "height": 4178263,
-      "best": "64604ef1745cec24eeef",
-      "latency": 260,
-      "lastseen": 1638986379,
-      "connects": 956,
-      "drops": 950,
-      "fails": 8,
-      "score": 21990
-    }
-  ],
-  "info": {
-    "method": "system/list/peers",
-    "status": "active",
-    "address": "103.89.235.214:27157",
-    "latency": "1.567808 ms"
-  }
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+system/list/peers
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
+### Parameters: 
+
+-NONE-
+
+### Code Snippets:
+
+#### Javascript
+
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 
@@ -461,23 +373,23 @@ fetch(`${SERVER_URL}/system/list/peers`)
 .then(json => console.log(json))
 .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Python
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
 response = requests.get(f"{SERVER_URL}/system/list/peers")
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-#### Parameters: `NONE`
+#### Parameters:
+
+-NONE-
 
 #### Return value JSON object:
 
-```
+```json
 {
   "result": [
     {
@@ -548,54 +460,27 @@ print(response.json())
 
 `score` : The score value assigned to this peer based on latency and other connection statistics.
 
-***
+---
+&nbsp;
 
-### `list\lisp-eids`
+## list\lisp-eids <a href="#list/lisp-eids" id="list/lisp-eids"></a>
 
 This will return the LISP Endpoint Identifiers (EID's) currently configured for this node. If the lispers.net API is not running / available then this will return an empty array.
 
 #### Endpoint:
 
-`/system/list/lisp-eids`
-
-{% swagger method="get" path="/system/list/lisp-eids" baseUrl="http://api.nexus-interactions.io:8080" summary="list/lisp-eids" %}
-{% swagger-description %}
-This will return the LISP Endpoint Identifiers (EID's) currently configured for this node. If the lispers.net API is not running / available then this will return an empty array.
-{% endswagger-description %}
-
-{% swagger-response status="200: OK" description="LISP-EID" %}
-```json
-{
- [
-    {
-        "instance-id": "200",
-        "eid": "240.139.76.244",
-        "rlocs": [
-            {
-                "interface": "wlp59s0",
-                "rloc-name": "mymachine",
-                "rloc": "102.162.64.46"
-            }
-        ]
-    },
-    {
-        "instance-id": "200",
-        "eid": "fe::139:76:244",
-        "rlocs": [
-            {
-                "interface": "wlp59s0",
-                "rloc-name": "mymachine",
-                "rloc": "102.162.64.46"
-            }
-        ]
-    }
-]
 ```
-{% endswagger-response %}
-{% endswagger %}
+system/list/lisp-eids
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
+### Parameters: 
+
+-NONE-
+
+### Code Snippets:
+
+#### Javascript
+
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 fetch(`${SERVER_URL}/system/list/lisp-eids`)
@@ -603,23 +488,19 @@ fetch(`${SERVER_URL}/system/list/lisp-eids`)
 .then(json => console.log(json))
 .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
-```javascript
+#### Python
+
+```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
 response = requests.get(f"{SERVER_URL}/system/list/lisp-eids")
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
-
-#### Parameters: `NONE`
 
 #### Return value JSON object:
 
-```
+```json
 [
     {
         "instance-id": "200",
@@ -660,39 +541,27 @@ print(response.json())
 
 `rloc` : The IP address associated with the device.
 
-***
+---
+&nbsp;
 
-### `validate/address`
+## validate/address <a href="#validate/address" id="validate/address"></a>
 
-Validates a register / legacy address .
+Validates a register / legacy address.
 
 #### Endpoint:
 
-`/system/validate/address`
-
-{% swagger method="post" path="/system/validate/address" baseUrl="http://api.nexus-interactions.io" summary="validate/address " %}
-{% swagger-description %}
-Validates a register / legacy address
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="address" required="true" %}
-The base58 encoded register or legacy address to check
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="address validated" %}
-```json
-{
-    "address": "8BuhE1y5oard3cEWqCSYK35bC6LdPRvcPR8N7GXYNatTw6De8eK",
-    "is_valid": true,
-    "type": "OBJECT",
-    "object_type": "ACCOUNT"
-} 
 ```
-{% endswagger-response %}
-{% endswagger %}
+system/validate/address`
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
+### Parameters: 
+
+`address` : The base58 encoded register or legacy address to check.
+
+### Code Snippets:
+
+#### Javascript
+
 ```javascript
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
 
@@ -706,9 +575,9 @@ fetch(`${SERVER_URL}/system/validate/address`,{
 .then(json => console.log(json))
 .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Pyhton" %}
+#### Python
+
 ```python
 //import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -718,16 +587,10 @@ data = {
 response = requests.post(f"{SERVER_URL}/system/validate/address", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
-
-#### Parameters:
-
-`address` : The base58 encoded register or legacy address to check.
 
 #### Return value JSON object:
 
-```
+```json
 {
     "address": "8BuhE1y5oard3cEWqCSYK35bC6LdPRvcPR8N7GXYNatTw6De8eK",
     "is_valid": true,
@@ -748,4 +611,4 @@ print(response.json())
 
 `is_mine` : If the `type` is `LEGACY` this boolean flag indicates if the private key for the address is held in the local wallet.
 
-***
+---
