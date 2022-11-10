@@ -2,7 +2,7 @@
 title: REGISTER
 description: Register API
 published: true
-date: 2022-11-08T15:21:28.667Z
+date: 2022-11-10T23:54:35.680Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:09.936Z
@@ -119,7 +119,7 @@ Retrieves information for a specified append register.
 
 ### Parameters:
 
-`name` : Required to **identify** the name of the account/trust/token. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided
+`name` : Required to **identify** the name of the account/trust/token. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided.
 
 `address` : Required to **identify** the register address of the account/trust/token. This is optional if the `name` is provided.
 
@@ -217,7 +217,7 @@ This will get the history and ownership of the specified append register.
 
 ### Parameters:
 
-`name` : Required to **identify** the name of the account/trust/token. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided
+`name` : Required to **identify** the name of the account/trust/token. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided.
 
 `address` : Required to **identify** the register address of the account/trust/token. This is optional if the `name` is provided.
 
@@ -271,7 +271,7 @@ List out all the transactions for the specified append register.
 `verbose` : Optional, determines how much transaction data to include in the response. Supported values are :
 
 * `default` : hash
-* `summary` : type, version, sequence, timestamp, operation, and confirmations.
+* `summary` : type, version, sequence, timestamp, operation and confirmations.
 * `detail` : genesis, nexthash, prevhash, pubkey and signature.
 
 [`Sorting`](/en/tritium++/sorting)
