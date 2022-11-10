@@ -2,7 +2,7 @@
 title: RYNEK
 description: API rynku
 published: true
-date: 2022-11-09T23:50:32.178Z
+date: 2022-11-10T00:04:00.165Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:30:41.330Z
@@ -85,11 +85,11 @@ To polecenie obsługuje rzeczowniki `bid` i `ask`.
 
 ##### create/bid
 
-Tworzy to zlecenie rynkowe bid dla market=token1/token2, zapytaj o market=token2/token1
+Tworzy to zlecenie rynkowe **bid** dla market=token1/token2, **ask** dla market=token2/token1
 
 ##### create/ask
 
-Aby utworzyć zlecenie rynkowe ask dla market=token1/token2, licytuj dla market=token2/token1
+Aby utworzyć zlecenie rynkowe **ask** dla market=token1/token2, **bid** dla market=token2/token1
 
 > Gdy rynek=token1/token2 zostanie odwrócony na rynek=token2/token1 cena musi zostać odpowiednio zmieniona. Para rynkowa jest określona przez pierwsze zlecenie, które tworzy rynek.
 {.is-info}
@@ -97,11 +97,11 @@ Aby utworzyć zlecenie rynkowe ask dla market=token1/token2, licytuj dla market=
 
 ### Parametry:
 
-`pin` : Wymagane, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
+`pin` : Wymagany, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
 
-`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `sesji`.&#x20;
+`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `session`.&#x20;
 
-`rynek` : token1/token2 - Para tokenów, dla której tworzone jest zlecenie.
+`market` : token1/token2 - Para tokenów, dla której tworzone jest zlecenie.
 
 `amount` : Kwota tokena2 do wymiany.
 
@@ -110,6 +110,247 @@ Aby utworzyć zlecenie rynkowe ask dla market=token1/token2, licytuj dla market=
 `to` : To jest nazwa konta odbiorczego lub adres rejestracyjny do tokena1.
 
 `from` : Jest to nazwa konta wysyłającego lub adres rejestru do obciążenia tokena2.
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+```
+{
+    "success": true,
+    "address": "8CupQ2dym1CZGZZ7U3F8UQ2xR2fr2PZmtEqB5Ds2EJsG1jA3JZw",
+    "txid": "012bc5f80460a9605706e643f9364722e97ffe3dd4e94bce8e41ea6ae70b3336fe6274cfe74583bf72cf77d8bbdc951ae1b25c706253590e0c6d74fa4f78f4df"
+}
+[Completed in 4991.918611 ms]
+```
+
+#### Zwracane wartości:
+
+`txid` : Hash transakcji, który został wygenerowany dla tego TX. Jeśli używasz `-autotx` to pole zostanie pominięte.
+
+`address` : Adres rejestracyjny dla tego konta. Adres (lub nazwa, które haszuje na ten adres) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
+
+---
+&nbsp;
+
+## list <a href="#list" id="list"></a>
+
+Utwórz nowy rejestr obiektów określony przez podany rzeczownik.
+
+````
+market/list/noun
+````
+
+To polecenie obsługuje wszystkie rzeczowniki.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
+
+`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `session`.&#x20;
+
+`market` : Wymagany do **identyfikacji** pary tokenów rynkowych.
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+```
+{
+    "bids": [
+        {
+            "txid": "012bc5f80460a9605706e643f9364722e97ffe3dd4e94bce8e41ea6ae70b3336fe6274cfe74583bf72cf77d8bbdc951ae1b25c706253590e0c6d74fa4f78f4df",
+            "timestamp": 1655815697,
+            "owner": "b7392196b83aca438567558462cd0c5d982569c7cefa668500c4bf3e61a03b7a",
+            "market": "XYZ/BIT",
+            "price": 1.0,
+            "type": "bid",
+            "contract": {
+                "OP": "DEBIT",
+                "from": "8CupQ2dym1CZGZZ7U3F8UQ2xR2fr2PZmtEqB5Ds2EJsG1jA3JZw",
+                "amount": 10.0,
+                "token": "8EdBM41i1MAgb7w2tjEsdd7DeKntUcsw4JWK1LswW457e2jDa8a",
+                "ticker": "BIT"
+            },
+            "order": {
+                "OP": "DEBIT",
+                "to": "8Cu9QHELK6ofHzbAwtWGnUcfkDz3zvGoSf7eDGZfh81AeMuqcYY",
+                "amount": 10.0,
+                "token": "8DXmAmkTtysSZUxM3ePA8wRmbSUofuHKSoCyDpN28aLuSrm1nDG",
+                "ticker": "XYZ"
+            }
+        }
+    ],
+    "asks": [
+        {
+            "txid": "016d62c69f05a82eefb463604325dd0331aeee787748a06619d6ca665c5a0576705c62de29f20c3eccfb8cbb25c4df169a53baa1e55493f5293fbbf864af7389",
+            "timestamp": 1655817006,
+            "owner": "b7a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0",
+            "market": "XYZ/BIT",
+            "price": 1.0,
+            "type": "ask",
+            "contract": {
+                "OP": "DEBIT",
+                "from": "8B9adrgaFX8hZvH1vQGjibHVYhsLuDTDu2Kn1FM25RZQtuUFyiE",
+                "amount": 10.0,
+                "token": "8DXmAmkTtysSZUxM3ePA8wRmbSUofuHKSoCyDpN28aLuSrm1nDG",
+                "ticker": "XYZ"
+            },
+            "order": {
+                "OP": "DEBIT",
+                "to": "8C3AiDrbDmbkeza1eBeeEJ2r5wqrnWGr9D1kewKqHfPzdY7jRkF",
+                "amount": 10.0,
+                "token": "8EdBM41i1MAgb7w2tjEsdd7DeKntUcsw4JWK1LswW457e2jDa8a",
+                "ticker": "BIT"
+            }
+        }
+    ]
+}
+```
+
+#### Zwracane wartości:
+
+`order` : Tablica dla różnych typów zamówień `bid` lub `ask`.
+
+`txid` : Hash transakcji, który został wygenerowany dla tego TX. Jeśli używasz `-autotx` to pole zostanie pominięte.
+
+`timestamp` : Uniksowy znacznik czasu utworzenia transakcji.
+
+`owner` : Hash nazwy użytkownika profilu, do którego należy to konto.
+
+`market` : Rynek, dla którego są wystawiane zlecenia.
+
+`price` : Cena za to konkretne zamówienie.
+
+`type` : Typ zamówienia `bid` lub `ask`.
+
+`contracts` : Tablica kontraktów powiązanych z tą transakcją oraz ich szczegóły z kodami operacyjnymi.
+
+`OP` : Operacja kontraktu. Może to być `APPEND`, `CLAIM`, `COINBASE`, `CREATE`, `CREDIT`, `DEBIT`, `FEE`, `GENESIS`, `LEGACY`, `TRANSFER`, `TRUST`, `STAKE`, `UNSTAKE`, `WRITE`.
+
+`from` : W przypadku transakcji `DEBIT` i `CREDIT`, adres rejestru konta nadawcy.
+
+`to` : W przypadku transakcji `DEBIT` i `CREDIT`, adres rejestru konta odbiorcy.
+
+`amount` : Kwota tokena transakcji.
+
+`token` : Adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS.
+
+`ticker` : Globalna nazwa przypisana do tokena.
+
+`address` : Adres rejestracyjny dla tego konta. Adres (lub nazwa, które haszuje na ten adres) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
+
+---
+&nbsp;
+
+## wykonaj <a href="#execute" id="execute"></a>
+
+Utwórz nowy rejestr obiektów określony przez podany rzeczownik.
+
+````
+rynek/lista/rzeczownik
+````
+
+To polecenie obsługuje rzeczowniki `bid` i `ask`.
+
+### Parametry:
+
+`pin` : Wymagane, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
+
+`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `sesji`.&#x20;
+
+`txid`: identyfikator transakcji realizowanej oferty /ask.
+
+`to` : To jest nazwa konta odbiorczego lub adres rejestracyjny do tokena1.
+
+`from` : To jest nazwa konta wysyłającego lub adres rejestru do obciążenia tokena2
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+````
+{
+    "sukces": prawda,
+    "adres": "8CupQ2dym1CZGZZ7U3F8UQ2xR2fr2PZmtEqB5Ds2EJsG1jA3JZw",
+    "txid": "012bc5f80460a9605706e643f9364722e97ffe3dd4e94bce8e41ea6ae70b3336fe6274cfe74583bf72cf77d8bbdc951ae1b25c706253590e0c6d74fa4f78f4df"
+}
+[Ukończono w 4991.918611 ms]
+````
+
+#### Zwracane wartości:
+
+`success` : flaga logiczna wskazująca, że ​​zamówienie zostało wykonane pomyślnie.
+
+`txid` : Hash transakcji, który został wygenerowany dla tego TX. Jeśli używasz `-autotx` to pole zostanie pominięte.
+
+`address` : adres rejestracyjny dla tego konta. Adres (lub imię i nazwisko, które haszuje na ten adres) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
+
+---
+&nbsp;
+
+## cancel <a href="#cancel" id="cancel"></a>
+
+Utwórz nowy rejestr obiektów określony przez podany rzeczownik.
+
+````
+rynek/lista/rzeczownik
+````
+
+To polecenie obsługuje rzeczowniki `bid i` `ask`.
+
+### Parametry:
+
+`pin` : Wymagane, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
+
+`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `sesji`.&#x20;
+
+`txid` : Hash transakcji dla zamówienia, które ma zostać anulowane.
+
+### Wyniki:
+
+#### Zwracana wartość obiektu JSON:
+
+````
+{
+    "sukces": prawda,
+    "txid": "010b0dbb226835c59b62d0761feac027cceb75ceb7d8d52abbd8072158415cf8c210af810f4d41ee6ad86dc6d754a17a0269db9025ba47becdb87a19ee71e99f"
+}
+[Ukończono w 4976,551936 ms]
+````
+
+#### Zwracane wartości:
+
+`success` : flaga logiczna wskazująca, że ​​anulowanie zamówienia powiodło się.
+
+`txid` : skrót transakcji wygenerowany w celu anulowania zamówienia. Jeśli używasz `-autotx` to pole zostanie pominięte.
+
+---
+&nbsp;
+
+## użytkownik <a href="#user" id="user"></a>
+
+Pobiera zamówienia rynkowe użytkowników na podstawie rzeczownika.
+
+````
+rynek/lista/rzeczownik
+````
+
+To polecenie obsługuje rzeczowniki `order` i `executed`.
+
+### Parametry:
+
+`pin` : Wymagane, jeśli **zablokowane**. PIN do autoryzacji transakcji.
+
+`session` : Wymagane przez **argument** `-multiuser=1` w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika nie należy podawać sesji.
+
+`token` : Wymagany do **identyfikacji** tokena, dla którego żądane są dane.
+
+[`Sortowanie`](/pl/tryt++/sortowanie)
+
+[`Filtrowanie`](/pl/tryt++/filtrowanie)
+
+[`Operatorzy`](/pl/tryt++/operatorzy)
 
 ### Wyniki:
 
@@ -130,21 +371,3 @@ Aby utworzyć zlecenie rynkowe ask dla market=token1/token2, licytuj dla market=
 
 `address` : adres rejestracyjny dla tego konta. Adres (lub imię i nazwisko, które haszuje na ten adres) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
 
----
-&nbsp;
-
-## lista <a href="#list" id="list"></a>
-
-Utwórz nowy rejestr obiektów określony przez podany rzeczownik.
-
-````
-rynek/lista/rzeczownik
-````
-
-To polecenie obsługuje wszystkie rzeczowniki.
-
-### Parametry:
-
-`pin` : Wymagane, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
-
-`sesja`: Wymagane
