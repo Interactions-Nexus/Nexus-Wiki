@@ -2,7 +2,7 @@
 title: REJESTR
 description: API rejestru
 published: true
-date: 2022-11-10T23:52:05.119Z
+date: 2022-11-10T23:54:33.237Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T09:58:35.680Z
@@ -289,7 +289,7 @@ Kilka wywołań API rejestrów, które pokażą moc rejestrów, LLD, która jest
 
 Wszystkie te wywołania będą wymagały najnowszej wersji jądra i nie będą działać z obecną stabilną wersją.
 
-Aby obliczyć sumę wszystkich NXS w łańcuchu trytu:
+Aby obliczyć sumę wszystkich NXS w łańcuchu tritium:
 
 ````
 register/list/finance:accounts,finance:trust/total/sum limit=none where='results.total>0 AND results.ticker=NXS'
@@ -298,19 +298,19 @@ register/list/finance:accounts,finance:trust/total/sum limit=none where='results
 Wymień wszystkie przestrzenie nazw posortowane według daty utworzenia w porządku rosnącym:
 
 ````
-register/list/names:namespaces sort=utworzony porządek=asc
+register/list/names:namespaces sort=created order=asc
 ````
 
 Wymień wszystkie globalne nazwy w sieci:
 
 ````
-rejestr/lista/nazwy:globalny
+register/list/names:global
 ````
 
-Utwórz bogatą listę:
+Utwórz listę bogaczy:
 
-````
-register/list/finance:accounts,finance:trust sort=całkowite zamówienie=desc page=0 where='results.token=0'
-````
+```
+register/list/finance:accounts,finance:trust sort=total order=desc page=0 where='results.token=0'
+```
 
 ***
