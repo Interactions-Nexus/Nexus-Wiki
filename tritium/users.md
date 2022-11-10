@@ -2,7 +2,7 @@
 title: USERS
 description: Users API
 published: true
-date: 2022-11-10T12:09:56.832Z
+date: 2022-11-10T22:25:15.428Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:19.866Z
@@ -506,6 +506,7 @@ fetch(`${SERVER_URL}/users/update/user`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
+#### Python:
 
 ```python
 import requests
@@ -616,6 +617,7 @@ fetch(`${SERVER_URL}/users/get/status`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
+#### Python:
 
 ```python
 import requests
@@ -628,7 +630,7 @@ response = requests.post(f"{SERVER_URL}/users/get/status", json=data)
 print(response.json())
 ```
 
-#### Parameters:
+### Parameters
 
 `session` : When using multi-user API mode the session parameter must be supplied to identify which user to return the status for.
 
@@ -636,7 +638,7 @@ print(response.json())
 
 #### Return value JSON object:
 
-```
+```json
 {
     "username": "bob",
     "genesis": "a2e51edcd41a8152bfedb24e3c22ee5a65d6d7d524146b399145bced269ae000",
@@ -719,7 +721,7 @@ fetch(`${SERVER_URL}/users/list/assets`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-
+#### Python:
 
 ```python
 import requests
@@ -736,8 +738,7 @@ response = requests.post(f"{SERVER_URL}/users/list/assets", json=data)
 print(response.json())
 ```
 
-
-#### Parameters:
+### Parameters
 
 `genesis` : The genesis hash identifying the signature chain (optional if username is supplied).
 
@@ -796,7 +797,7 @@ print(response.json())
 
 
 
-### `list/accounts`
+## list/accounts <a href="#list/accounts" id="list/accounts"></a>
 
 This will list off all of the token accounts belonging to a particular signature chain.
 
@@ -806,9 +807,9 @@ This will list off all of the token accounts belonging to a particular signature
 
 #### Endpoint:
 
-`/users/list/accounts`
-
-
+```
+users/list/accounts
+```
 
 ### Code Snippets
 
@@ -837,7 +838,7 @@ fetch(`${SERVER_URL}/users/list/accounts`, {
     .catch(error => console.log(error))
 ```
 
-#### Python
+#### Python:
 
 ```python
 import requests
@@ -855,7 +856,7 @@ response = requests.post(f"{SERVER_URL}/users/list/accounts", json=data)
 print(response.json())
 ```
 
-#### Parameters:
+### Parameters
 
 `genesis` : The genesis hash identifying the signature chain (optional if username is supplied).
 
@@ -922,9 +923,10 @@ print(response.json())
 
 `count` : Only returned if the caller requested `count` : true. This is the number of transactions made to/from the account.
 
-***
+---
+&nbsp;
 
-## list/invoices
+## list/invoices <a href="#list/invoices" id="list/invoices"></a>
 
 This will list all invoices issued or received by the signature chain.
 
@@ -934,102 +936,14 @@ This will list all invoices issued or received by the signature chain.
 
 #### Endpoint:
 
-`/users/list/invoices`
+```
+users/list/invoices
+```
 
 ### Code Snippets
 
 #### Javascript:
 
-{% swagger method="post" path="/users/list/invoices" baseUrl="http://api.nexus-interactions.io:8080" summary="list/invoices" %}
-{% swagger-description %}
-This will list all invoices issued or received by the signature chain
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="genesis" required="false" %}
-The genesis hash identifying the signature chain (optional if username is supplied)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="username" required="false" %}
-The username identifying the signature chain (optional if genesis is supplied)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="status" required="false" %}
-Optional filter by invoice status. Values can be 
-
-`OUTSTANDING`
-
- (the invoice has been issued but not paid), 
-
-`PAID`
-
- (the invoice has been paid by the recipient), or 
-
-`CANCELLED`
-
- (the invoice was cancelled by the issuer before payment)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="limit" required="false" %}
-The number of records to return for the current page. The default is 100
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="page" required="false" %}
-Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="offset" required="false" %}
-An alternative to 
-
-`page`
-
-, offset can be used to return a set of (limit) results from a particular index
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="where" required="false" %}
-An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="invoice details" %}
-```json
-   {
-        "address": "822G7ZSsHh1ncTj4AJt6FnZ6MTWG3Q9NNTZ9KvG3CWA1SP3aq97",
-        "created": 1581389015,
-        "modified": 1581389107,
-        "owner": "a2056d518d6e6d65c6c2e05af7fe2d3182a93def20e960fcfa0d35777a082440",
-        "account": "8Bx6ZmCev3DsGjoWuhfQSNmycdZT4cyKKJNc36NWTMik6Zkqh7N",
-        "recipient": "a2056d518d6e6d65c6c2e05af7fe2d3182a93def20e960fcfa0d35777a082440",
-        "number": "0004",
-        "PO": "Purch1234",
-        "contact": "accounts@mycompany.com",
-        "sender_detail": "My Company, 32 Some Street, Some Place",
-        "recipient_detail": "Some recipient details such as address or email",
-        "items": [
-            {
-                "description": "First item description",
-                "base_price": 1.0,
-                "tax": 0.1,
-                "unit_amount": "1.1",
-                "units": 3
-            },
-            {
-                "description": "Second item description",
-                "base_price": 5.0,
-                "tax": 0.5,
-                "unit_amount": "5.5",
-                "units": 1
-            }
-        ],
-        "amount": 8.8,
-        "token": "0",
-        "status": "PAID"
-    }
-]
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 // /users/list/invoices
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -1052,9 +966,8 @@ fetch(`${SERVER_URL}/users/list/invoices`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
+#### Python:
 
-{% tab title="Python" %}
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -1070,10 +983,8 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/list/invoices", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-#### Parameters:
+### Parameters
 
 `genesis` : The genesis hash identifying the signature chain (optional if username is supplied).
 
@@ -1091,7 +1002,7 @@ print(response.json())
 
 #### Return value JSON object:
 
-```
+```json
 [
     {
         "address": "822G7ZSsHh1ncTj4AJt6FnZ6MTWG3Q9NNTZ9KvG3CWA1SP3aq97",
@@ -1144,11 +1055,11 @@ print(response.json())
 
 `account` : The register address of the account the invoice should be paid to.
 
-`items` : Array of line items that make up this invoice.\
-{\
+`items` : Array of line items that make up this invoice.
+{
 `unit_amount` : The unit amount to be invoiced for this line item.
 
-`units` : The number of units to be invoiced at the unit amount.\
+`units` : The number of units to be invoiced at the unit amount.
 }
 
 `amount` : The total invoice amount. This is the sum of all line item total amounts (unit\_amount x units).
@@ -1157,9 +1068,10 @@ print(response.json())
 
 `status` : The current status of this invoice. Values can be `OUTSTANDING` (the invoice has been issued but not paid), `PAID` (the invoice has been paid by the recipient), or `CANCELLED` (the invoice was cancelled by the issuer before payment).
 
-***
+---
 
-### `list/items`
+
+## list/items <a href="#list/items" id="list/items"></a>
 
 This will list off all of the supply chain items (append registers) owned by a signature chain.
 
@@ -1169,63 +1081,14 @@ This will list off all of the supply chain items (append registers) owned by a s
 
 #### Endpoint:
 
-`/users/list/items`
+```
+users/list/items
+```
 
 ### Code Snippets
 
 #### Javascript:
 
-{% swagger method="post" path="/users/list/items" baseUrl="http://api.nexus-interactions.io:8080" summary="list/items" %}
-{% swagger-description %}
-This will list off all of the supply chain items (append registers) owned by a signature chain
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="genesis" %}
-The genesis hash identifying the signature chain (optional if username is supplied)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="username" %}
-The username identifying the signature chain (optional if genesis is supplied)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="limit" %}
-The number of records to return for the current page. The default is 100
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="page" %}
-Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="offset" %}
-An alternative to 
-
-`page`
-
-, offset can be used to return a set of (limit) results from a particular index.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="where" %}
-An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="item list" %}
-```json
-[
-    {
-        "created": 1560982537,
-        "modified": 1560982615,
-        "name": "myitem",
-        "address": "8FJxzexVDUN5YiQYK4QjvfRNrAUym8FNu4B8yvYGXgKFJL8nBse",
-        "owner": "2be51edcd41a8152bfedb24e3c22ee5a65d6d7d524146b399145bced269aeff0",
-        "data": "xxxxxx"
-    }
-]
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 // /users/list/items
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -1246,9 +1109,9 @@ fetch(`${SERVER_URL}/users/list/items`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Python:
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -1263,10 +1126,9 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/list/items", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-#### Parameters:
+
+### Parameters
 
 `genesis` : The genesis hash identifying the signature chain (optional if username is supplied).
 
@@ -1282,7 +1144,7 @@ print(response.json())
 
 #### Return value JSON object:
 
-```
+```json
 [
     {
         "created": 1560982537,
@@ -1309,9 +1171,10 @@ print(response.json())
 
 `data` : The data stored in the item.
 
-***
+---
+&nbsp;
 
-### `list/names`
+## list/names <a href="#list/names" id="list/names"></a>
 
 This will list off all of the names owned by the signature chain. For privacy reasons Names are only returned for the currently logged in user (multiuser=0) or for the logged in session (multiuser=1)
 
@@ -1321,7 +1184,9 @@ This will list off all of the names owned by the signature chain. For privacy re
 
 #### Endpoint:
 
-`/users/list/names`
+```
+users/list/names
+```
 
 ### Code Snippets
 
@@ -1348,7 +1213,7 @@ fetch(`${SERVER_URL}/users/list/names`, {
     .catch(error => console.log(error))
 ```
 
-#### Python
+#### Python:
 
 ```python
 import requests
@@ -1365,7 +1230,7 @@ response = requests.post(f"{SERVER_URL}/users/list/names", json=data)
 print(response.json())
 ```
 
-#### Parameters:
+### Parameters
 
 `session` : For multi-user API mode (configured with multiuser=1), the session is required to identify which signature chain should be used to return the Names for. For single-user API mode the session should not be supplied and the currently logged in users signature chain is used.
 
@@ -1407,7 +1272,7 @@ print(response.json())
 ---
 &nbsp;
 
-## list/namespaces
+## list/namespaces <a href="#list/namespaces" id="list/namespaces"></a>
 
 This will list off all of the namespaces owned by the signature chain.
 
@@ -1417,7 +1282,9 @@ This will list off all of the namespaces owned by the signature chain.
 
 #### Endpoint:
 
-`/users/list/namespaces`
+```
+users/list/namespaces
+```
 
 ### Code Snippets
 
@@ -1462,7 +1329,7 @@ print(response.json())
 ```
 
 
-#### Parameters:
+### Parameters
 
 `genesis` : The genesis hash identifying the signature chain (optional if username is supplied).
 
@@ -1504,9 +1371,9 @@ print(response.json())
 `address` : The register address of the namespace.
 
 ---
+&nbsp;
 
-
-## list/notifications
+## list/notifications <a href="#list/notifications" id="list/notifications"></a>
 
 This will list off all of the transactions sent to a particular genesis or username. It is useful for identifying transactions that you need to accept such as credits.
 
@@ -1516,7 +1383,9 @@ This will list off all of the transactions sent to a particular genesis or usern
 
 #### Endpoint:
 
-`/users/list/notifications`
+```
+/users/list/notifications
+```
 
 ### Code Snippets
 
@@ -1562,7 +1431,7 @@ response = requests.post(f"{SERVER_URL}/users/list/notifications", json=data)
 print(response.json())
 ```
 
-#### Parameters:
+### Parameters
 
 `genesis` : The genesis hash identifying the signature chain (optional if username is supplied).
 
@@ -1642,13 +1511,15 @@ An array of contracts deifned as:
 ---
 &nbsp;
 
-## process/notifications
+## process/notifications <a href="#process/notifications" id="process/notifications"></a>
 
 Process all outstanding notifications for a logged in signature chain. This API method can be used instead of running the
 
 #### Endpoint:
 
-`/users/process/notifications`
+```
+/users/process/notifications
+```
 
 ### Code Snippets
 
@@ -1687,7 +1558,7 @@ response = requests.post(
 print(response.json())
 ```
 
-#### Parameters:
+### Parameters
 
 `pin` : The PIN for this signature chain. This is required unless the signature chain is already unlocked for notifications.
 
@@ -1719,7 +1590,7 @@ print(response.json())
 ---
 &nbsp;
 
-## list/tokens
+## list/tokens <a href="#list/tokens" id="list/tokens"></a>
 
 This will list off all of the tokens that were created by a particular signature chain.
 
@@ -1729,7 +1600,9 @@ This will list off all of the tokens that were created by a particular signature
 
 #### Endpoint:
 
-`/users/list/tokens`
+```
+users/list/tokens
+```
 
 ### Code Snippets
 
@@ -1775,8 +1648,7 @@ print(response.json())
 
 ```
 
-
-#### Parameters:
+### Parameters
 
 `genesis` : The genesis hash identifying the signature chain (optional if username is supplied).
 
@@ -1841,9 +1713,10 @@ print(response.json())
 
 `count` : Only returned if the caller requested `count` : true. This is the number of transactions made to/from the token.
 
-***
+---
+nbsp;
 
-## list/transactions
+## list/transactions <a href="#list/transactions" id="list/transactions"></a>
 
 This will list off all of the transactions for the requested signature chain genesis or username (either can be used). You DO NOT need to be logged in to use this command. If you are using single-user API mode and are logged in, then neither username or genesis are required. It will return transactions for the currently logged in user.
 
@@ -1853,7 +1726,9 @@ This will list off all of the transactions for the requested signature chain gen
 
 #### Endpoint:
 
-`/users/list/transactions`
+```
+users/list/transactions
+```
 
 ### Code Snippets
 
@@ -1901,7 +1776,7 @@ response = requests.post(f"{SERVER_URL}/users/list/transactions", json=data)
 print(response.json())
 ```
 
-#### Parameters:
+### Parameters
 
 `genesis` : The genesis hash identifying the signature chain (optional if username is supplied).
 
@@ -2007,40 +1882,22 @@ print(response.json())
 }
 
 ---
+&nbsp;
 
-
-## save/session
+## save/session <a href="#save/session" id="save/session"></a>
 
 This will save the users session to the local database, allowing the session to be resumed at a later time without the need to login or unlock. The users PIN is required as this is used (in conjunction with the genesis) to encrypt the session data before persisting it to the local database.
 
 #### Endpoint:
 
-`/users/save/session`
+```
+users/save/session
+```
 
 ### Code Snippets
 
 #### Javascript:
 
-{% swagger method="post" path="/users/save/session" baseUrl="http://api.nexus-interactions.io:8080" summary="save/session" %}
-{% swagger-description %}
-This will save the users session to the local database, allowing the session to be resumed at a later time without the need to login or unlock. The users PIN is required as this is used (in conjunction with the genesis) to encrypt the session data before persisting it to the local database.
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="pin" required="true" %}
-PIN for the user account
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="session saved" %}
-```javascript
-{
-    success:true
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 // /users/save/session
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -2056,9 +1913,8 @@ fetch(`${SERVER_URL}/users/save/session`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
+#### Python:
 
-{% tab title="Python" %}
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -2068,10 +1924,8 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/save/session", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-#### Parameters:
+### Parameters
 
 `pin` : The PIN for this signature chain.
 
@@ -2081,9 +1935,10 @@ print(response.json())
 
 `success` : Boolean flag indicating that the session was saved successfully .
 
-***
+---
+&nbsp;
 
-## `load/session`
+## load/session <a href="#load/session" id="load/session"></a>
 
 Loads a previously saved session from the local database. In addition to restoring the logged in status of the user, the session resumes the unlocked status that was active at the time it was saved. The users PIN is required as this is used (in conjunction with the genesis) to decrypt the session data loaded from the local database.
 
@@ -2091,35 +1946,10 @@ Loads a previously saved session from the local database. In addition to restori
 
 `/users/load/session`
 
-{% swagger method="post" path="/users/load/session" baseUrl="http://api.nexus-interactions.io:8080" summary="load/session" %}
-{% swagger-description %}
-Loads a previously saved session from the local database. In addition to restoring the logged in status of the user, the session resumes the unlocked status that was active at the time it was saved. The users PIN is required as this is used (in conjunction with the genesis) to decrypt the session data loaded from the local database.
-{% endswagger-description %}
+### Code Snippets
 
-{% swagger-parameter in="body" name="genesis" %}
-The genesis hash identifying the signature chain to load the session for (optional if username is supplied)
-{% endswagger-parameter %}
+#### Javascript:
 
-{% swagger-parameter in="body" name="username" %}
-The username identifying the signature chain to load the session for (optional if genesis is supplied)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="pin" required="true" %}
-PIN for the user account
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="load session" %}
-```json
-{
-    "genesis": "a2e51edcd41a8152bfedb24e3c22ee5a65d6d7d524146b399145bced269aeff0",
-    "session": "0000000000000000000000000000000000000000000000000000000000000000"
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% tabs %}
-{% tab title="Javascript" %}
 ```javascript
 // /users/load/session
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -2137,9 +1967,9 @@ fetch(`${SERVER_URL}/users/load/session`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Python:
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -2151,10 +1981,8 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/load/session", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-#### Parameters:
+### Parameters:
 
 `genesis` : The genesis hash identifying the signature chain to load the session for (optional if username is supplied).
 
@@ -2164,7 +1992,7 @@ print(response.json())
 
 #### Return value JSON object:
 
-```
+```json
 {
     "genesis": "a2e51edcd41a8152bfedb24e3c22ee5a65d6d7d524146b399145bced269aeff0",
     "session": "0000000000000000000000000000000000000000000000000000000000000000"
@@ -2177,41 +2005,23 @@ print(response.json())
 
 `session` : The session ID for the resumed session. NOTE: in multi-user mode this will be a NEW session ID, generated at the point the session is loaded. The previous session ID is not persisted and restored. When not in multi-user mode this will always be 0
 
-***
+---
+&nbsp;
 
-## `has/session`
+## has/session <a href="#has/session" id="has/session"></a>
 
 Determines whether a previously saved session exists in the local database for the specified user.
 
 #### Endpoint:
 
-`/users/has/session`
-
-{% swagger method="post" path="/users/has/session" baseUrl="http://api.nexus-interactions.io:8080" summary="has/session" %}
-{% swagger-description %}
-Determines whether a previously saved session exists in the local database for the specified user
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="genesis" %}
-The genesis hash identifying the signature chain to check the session for (optional if username is supplied)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="username" %}
-The username identifying the signature chain to check the session for (optional if genesis is supplied)
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="has session" %}
-```json
-{
-    "genesis": "a2e51edcd41a8152bfedb24e3c22ee5a65d6d7d524146b399145bced269aeff0",
-    "has": true
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+users/has/session
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
+### Code Snippets
+
+#### Javascript:
+
 ```javascript
 // /users/has/session
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -2228,9 +2038,9 @@ fetch(`${SERVER_URL}/users/has/session`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Python:
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -2241,8 +2051,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/users/has/session", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Parameters:
 
@@ -2252,7 +2060,7 @@ print(response.json())
 
 #### Return value JSON object:
 
-```
+```json
 {
     "genesis": "a2e51edcd41a8152bfedb24e3c22ee5a65d6d7d524146b399145bced269aeff0",
     "has": true
@@ -2265,4 +2073,4 @@ print(response.json())
 
 `has` : Boolean flag indicating whether the session exists in the local database or not
 
-***
+---
