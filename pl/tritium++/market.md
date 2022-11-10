@@ -2,7 +2,7 @@
 title: RYNEK
 description: API rynku
 published: true
-date: 2022-11-10T00:04:00.165Z
+date: 2022-11-10T00:15:21.668Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:30:41.330Z
@@ -243,48 +243,48 @@ To polecenie obsługuje wszystkie rzeczowniki.
 ---
 &nbsp;
 
-## wykonaj <a href="#execute" id="execute"></a>
+## execute <a href="#execute" id="execute"></a>
 
 Utwórz nowy rejestr obiektów określony przez podany rzeczownik.
 
 ````
-rynek/lista/rzeczownik
+market/list/noun
 ````
 
 To polecenie obsługuje rzeczowniki `bid` i `ask`.
 
 ### Parametry:
 
-`pin` : Wymagane, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
+`pin` : Wymagany, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
 
-`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `sesji`.&#x20;
+`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `session`.&#x20;
 
-`txid`: identyfikator transakcji realizowanej oferty /ask.
+`txid`: Identyfikator transakcji realizowanej oferty **bid / ask**.
 
 `to` : To jest nazwa konta odbiorczego lub adres rejestracyjny do tokena1.
 
-`from` : To jest nazwa konta wysyłającego lub adres rejestru do obciążenia tokena2
+`from` : To jest nazwa konta wysyłającego lub adres rejestru do obciążenia tokena2.
 
 ### Wyniki:
 
 #### Zwracana wartość obiektu JSON:
 
-````
+```
 {
-    "sukces": prawda,
-    "adres": "8CupQ2dym1CZGZZ7U3F8UQ2xR2fr2PZmtEqB5Ds2EJsG1jA3JZw",
+    "success": true,
+    "address": "8CupQ2dym1CZGZZ7U3F8UQ2xR2fr2PZmtEqB5Ds2EJsG1jA3JZw",
     "txid": "012bc5f80460a9605706e643f9364722e97ffe3dd4e94bce8e41ea6ae70b3336fe6274cfe74583bf72cf77d8bbdc951ae1b25c706253590e0c6d74fa4f78f4df"
 }
-[Ukończono w 4991.918611 ms]
-````
+[Completed in 4991.918611 ms]
+```
 
 #### Zwracane wartości:
 
-`success` : flaga logiczna wskazująca, że ​​zamówienie zostało wykonane pomyślnie.
+`success` : Flaga logiczna wskazująca, że ​​zamówienie zostało wykonane pomyślnie.
 
 `txid` : Hash transakcji, który został wygenerowany dla tego TX. Jeśli używasz `-autotx` to pole zostanie pominięte.
 
-`address` : adres rejestracyjny dla tego konta. Adres (lub imię i nazwisko, które haszuje na ten adres) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
+`address` : Adres rejestracyjny dla tego konta. Adres (lub nazwa, która haszuje na ten adres) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
 
 ---
 &nbsp;
@@ -294,16 +294,16 @@ To polecenie obsługuje rzeczowniki `bid` i `ask`.
 Utwórz nowy rejestr obiektów określony przez podany rzeczownik.
 
 ````
-rynek/lista/rzeczownik
+market/list/noun
 ````
 
-To polecenie obsługuje rzeczowniki `bid i` `ask`.
+To polecenie obsługuje rzeczowniki `bid` i `ask`.
 
 ### Parametry:
 
-`pin` : Wymagane, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
+`pin` : Wymagany, jeśli **zablokowane**. Kod PIN do autoryzacji transakcji.
 
-`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `sesji`.&#x20;
+`session` : Wymagane przez **argument** `-multiuser=1` do identyfikacji sesji. W trybie API pojedynczego użytkownika nie należy podawać `session`.&#x20;
 
 `txid` : Hash transakcji dla zamówienia, które ma zostać anulowane.
 
@@ -311,63 +311,63 @@ To polecenie obsługuje rzeczowniki `bid i` `ask`.
 
 #### Zwracana wartość obiektu JSON:
 
-````
+```
 {
-    "sukces": prawda,
+    "success": true,
     "txid": "010b0dbb226835c59b62d0761feac027cceb75ceb7d8d52abbd8072158415cf8c210af810f4d41ee6ad86dc6d754a17a0269db9025ba47becdb87a19ee71e99f"
 }
-[Ukończono w 4976,551936 ms]
-````
+[Completed in 4976.551936 ms]
+```
 
 #### Zwracane wartości:
 
-`success` : flaga logiczna wskazująca, że ​​anulowanie zamówienia powiodło się.
+`success` : Flaga logiczna wskazująca, że ​​anulowanie zamówienia powiodło się.
 
-`txid` : skrót transakcji wygenerowany w celu anulowania zamówienia. Jeśli używasz `-autotx` to pole zostanie pominięte.
+`txid` : Skrót transakcji wygenerowany w celu anulowania zamówienia. Jeśli używasz `-autotx` to pole zostanie pominięte.
 
 ---
 &nbsp;
 
-## użytkownik <a href="#user" id="user"></a>
+## user <a href="#user" id="user"></a>
 
 Pobiera zamówienia rynkowe użytkowników na podstawie rzeczownika.
 
 ````
-rynek/lista/rzeczownik
+market/list/noun
 ````
 
 To polecenie obsługuje rzeczowniki `order` i `executed`.
 
 ### Parametry:
 
-`pin` : Wymagane, jeśli **zablokowane**. PIN do autoryzacji transakcji.
+`pin` : Wymagany, jeśli **zablokowane**. PIN do autoryzacji transakcji.
 
-`session` : Wymagane przez **argument** `-multiuser=1` w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika nie należy podawać sesji.
+`session` : Wymagane przez **argument** `-multiuser=1` w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika nie należy podawać `session`.
 
 `token` : Wymagany do **identyfikacji** tokena, dla którego żądane są dane.
 
-[`Sortowanie`](/pl/tryt++/sortowanie)
+[`Sorting`](/pl/tritium++/sorting)
 
-[`Filtrowanie`](/pl/tryt++/filtrowanie)
+[`Filtering`](/pl/tritium++/filtering)
 
-[`Operatorzy`](/pl/tryt++/operatorzy)
+[`Operators`](/pl/tritium++/operators)
 
 ### Wyniki:
 
 #### Zwracana wartość obiektu JSON:
 
-````
+```
 {
-    "sukces": prawda,
-    "adres": "8CupQ2dym1CZGZZ7U3F8UQ2xR2fr2PZmtEqB5Ds2EJsG1jA3JZw",
+    "success": true,
+    "address": "8CupQ2dym1CZGZZ7U3F8UQ2xR2fr2PZmtEqB5Ds2EJsG1jA3JZw",
     "txid": "012bc5f80460a9605706e643f9364722e97ffe3dd4e94bce8e41ea6ae70b3336fe6274cfe74583bf72cf77d8bbdc951ae1b25c706253590e0c6d74fa4f78f4df"
 }
-[Ukończono w 4991.918611 ms]
-````
+[Completed in 4991.918611 ms]
+```
 
 #### Zwracane wartości:
 
 `txid` : Hash transakcji, który został wygenerowany dla tego TX. Jeśli używasz `-autotx` to pole zostanie pominięte.
 
-`address` : adres rejestracyjny dla tego konta. Adres (lub imię i nazwisko, które haszuje na ten adres) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
+`address` : Adres rejestracyjny dla tego konta. Adres (lub nazwa, która haszuje na ten adres) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
 
