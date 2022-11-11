@@ -2,7 +2,7 @@
 title: 签名链
 description: 用户帐户 / 安全数字身份资料
 published: true
-date: 2022-11-11T07:52:26.876Z
+date: 2022-11-11T08:02:31.328Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-11T05:38:07.706Z
@@ -21,7 +21,7 @@ dateCreated: 2022-11-11T05:38:07.706Z
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;"><strong>速度和可扩展性</strong></p>
 <p style="text-align:justify;">Sigchains 签名链使用基于账户的模型来替代比特币引入的笨重的 UTxO（未花费交易输出）架构。 Sigchains 签名链在一条独特的链上包含所有用户数据，并提供更高级别的可扩展性，因为每笔交易只需要验证一个签名。</p>
-<p style="text-align:justify;">与 Sigchains 签名链一起，Nexus 麟社交易与区块解耦，这意味着区块级数据中每个交易只需要一个哈希或“证明”，而不是整个交易本身。这导致每 2 MB 块可容纳大约 31,728 个事务。这些创新共同产生了轻量级区块和高效的交易处理，而不需要离线（第 2 层）扩展解决方案。</p>
+<p style="text-align:justify;">与 Sigchains 签名链一起，Nexus 麟社交易与区块解耦，这意味着区块层数据中每个交易只需要一个哈希或“证明”，而不是整个交易本身。其良效是每 2 MB 块可容纳大约 31,728 个交易。这些创新共同产生了轻型区块和高效的交易处理，而不需要离链（第 2 层）扩展解决方案。</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">修剪</p>
 <p style="text-align:justify;">签名链之所以这样命名，是因为它是一个 nexthashes 链，一个签名和公钥的散列。由于这是一个无法更改的一致事件链，它通过只需要两个签名来验证整个 Sigchain：第一个和最后一个事务，从而提供额外的扩展优势。这意味着中间的所有签名都可以与公钥一起丢弃，从而在不牺牲安全性的情况下节省大量存储空间。这是因为 Sigchain 是一条不可变的交易链。链头交易的有效签名证明了整个链是有效的，因为它锁定了整个 Sigchain 不被修改。</p>
