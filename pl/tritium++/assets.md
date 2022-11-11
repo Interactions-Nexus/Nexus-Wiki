@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-11T23:01:34.811Z
+date: 2022-11-11T23:08:23.800Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -124,8 +124,8 @@ Tworzy nowe aktywo określone przez parametr formatu.
 
 
 > **NOTA:**
-> Istnieje limit 1 KB na dane środka trwałego, które można zapisać w rejestrze, z wyłączeniem nazwy środka trwałego.
-> Za utworzenie i zasób pobierana jest opłata w wysokości 1 NXS oraz dodatkowy 1 NXS za opcjonalną nazwę obiektu.
+> Istnieje limit 1 KB na dane aktywa, które można zapisać w rejestrze, z wyłączeniem nazwy aktywa.
+> Za utworzenie aktywa pobierana jest opłata w wysokości 1 NXS oraz dodatkowy 1 NXS za opcjonalną nazwę obiektu.
 > {.is-info}
 
 
@@ -141,4 +141,6 @@ Tworzy nowe aktywo określone przez parametr formatu.
 }
 [Completed in 4998.584942 ms]
 ```
+
+
 
