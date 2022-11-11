@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-11T23:41:38.608Z
+date: 2022-11-11T23:54:45.480Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -320,34 +320,34 @@ Wyświetla listę wszystkich aktywów dla wszystkich obsługiwanych typów rejes
 Ta metoda zapewnia użytkownikowi możliwość aktualizacji danych obiektu określonych przez rzeczownik.
 
 ```
-aktywa/aktualizacja/rzecz
+assets/update/noun
 ```
 
 To polecenie obsługuje tylko rzeczowniki `asset` i `raw`.
 
-**aktualizacja/zasób**
+**update/asset**
 
-Spowoduje to zaktualizowanie wartości danych dla zasobu w formacie podstawowym i JSON.
+Spowoduje to zaktualizowanie wartości danych dla aktywa w formacie podstawowym i JSON.
 
-**aktualizacja/surowy**
+**update/raw**
 
-Spowoduje to zaktualizowanie wartości danych dla rejestru pozycji nieprzetworzonych.
+Spowoduje to zaktualizowanie wartości danych dla rejestru pozycji surowych.
 
 ### Parametry:
 
 `pin` : Wymagany, jeśli **zablokowany**. `PIN` dla tego profilu.
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **określenia** nazwy zasobu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy aktywa. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagany do **określenia** adresu rejestru aktywa. Jest to opcjonalne, jeśli podano `name`.
 
-`format` : wymagany do **określenia** formatu zasobu do aktualizacji. Wartości mogą być „tylko do odczytu”, „surowe”, „podstawowe” i „JSON”.
+`format` : Wymagany do **określenia** formatu aktywa do aktualizacji. Wartości mogą być `readonly`, `raw`, `basic` i `JSON`.
 
-`data` : wymagane, jeśli **format** jest `readonly` lub `raw`, umożliwia dzwoniącemu aktualizację obiektu danych.
+`data` : Wymagane, jeśli **format** jest `readonly` lub `raw`, umożliwia dzwoniącemu aktualizację obiektu danych.
 
-`<nazwa pola>=<wartość>` : opcjonalny dla **formatu** `podstawowego`, wywołujący może podać pary klucz=wartość, aby zaktualizować każdy fragment danych dla zasobu.
+`<fieldname>=<value>` : Opcjonalny dla **formatu** `basic`, wywołujący może podać pary 'key=value', aby zaktualizować każdy fragment danych dla zasobu.
 
 ### Wyniki:
 
@@ -355,10 +355,10 @@ Spowoduje to zaktualizowanie wartości danych dla rejestru pozycji nieprzetworzo
 
 ```
 {
-    „sukces”: prawda,
+    "success": true,
     "txid": "01947f824e9b117d618ed49a7dd84f0e7c4bb0896e40d0a95e04e27917e6ecb6b9a5ccfba7d0d5c308b684b95e98ada4f39bbac84db75e7300a09befd1ac0999"
 }
-[Ukończono w 18533,182336 ms]
+[Completed in 18533.182336 ms]
 ```
 
 #### Zwracane wartości:
