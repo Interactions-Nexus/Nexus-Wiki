@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-11T23:08:23.800Z
+date: 2022-11-11T23:21:02.047Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -142,5 +142,70 @@ Tworzy nowe aktywo określone przez parametr formatu.
 [Completed in 4998.584942 ms]
 ```
 
+#### Zwracane wartości:
 
+`success` : Flaga logiczna wskazująca, że aktywo zostało pomyślnie zapisane.
+
+`address` : Adres rejestru dla tego konta. Adres (lub nazwa, która hashuje się z tym adresem) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
+
+`txid` : Hash transakcji, która została wygenerowana dla tego tx. W przypadku użycia opcji -autotx to pole zostanie pominięte.
+
+---
+&nbsp;
+
+## get <a href="#get" id="get"></a>
+
+Pobiera informacje o zasobie określonym przez rzeczownik.
+
+```
+assets/get/noun
+```
+
+To polecenie obsługuje rzeczowniki `readonly`, `raw` i `asset`.
+
+**get/asset**
+
+Pobierz aktywo dla obiektu typu rejestru.
+
+**get/readonly**
+
+Pobierz aktywo dla typu rejestru tylko do odczytu.
+
+**get/raw**
+
+Pobierz aktywo dla rejestru typu raw.
+
+### Parametry:
+
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : Wymagane do **określenia** nazwy aktywa. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
+
+`address` : Wymagany do **określenia** adresu rejestru aktywa. Jest to opcjonalne, jeśli podano `name`.
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "owner": "b7392196b83aca438567558462cd0c5d982569c7cefa668500c4bf3e61a03b7a",
+        "version": 1,
+        "created": 1655279431,
+        "modified": 1655279431,
+        "type": "OBJECT",
+        "Location": "Meta World ",
+        "Owner Name": "John Doe",
+        "Registration Details": "MRG/05/478564",
+        "address": "87Wai2JoS4hNAEVXZVmejLS6pK21XQWKoLAkaep5aXFdrYnJJyk",
+        "name": "local:Meta_World"
+    }
+]
+[Completed in 2.838543 ms]
+```
 
