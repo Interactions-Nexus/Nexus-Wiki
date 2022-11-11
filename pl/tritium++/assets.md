@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-11T23:32:04.525Z
+date: 2022-11-11T23:41:38.608Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -292,5 +292,121 @@ Wyświetla listę wszystkich aktywów dla wszystkich obsługiwanych typów rejes
 [Completed in 2.838543 ms]
 ```
 
+#### Zwracane wartości:
 
+`owner` : Hash nazwy użytkownika profilu właściciela.
+
+`version` : Wersja serializacji transakcji.
+
+`created` : Sygnatura czasowa systemu UNIX, kiedy aktywo zostało utworzone.
+
+`modified` : Sygnatura czasowa systemu UNIX, kiedy aktywo było ostatnio modyfikowane.
+
+`type` : Typ rejestru aktywów. Może to być OBJECT, RAW lub READONLY.
+
+`data` : Dane przechowywane w surowym lub tylko do odczytu obiekcie aktywa.
+
+`<fieldname>=<value>` : Para klucz-wartość dla każdego elementu danych przechowywanego w aktywie.
+
+`address`: Adres rejestru aktywa.
+
+`name` : Nazwa identyfikująca aktywo.
+
+---
+&nbsp;
+
+## update <a href="#update" id="update"></a>
+
+Ta metoda zapewnia użytkownikowi możliwość aktualizacji danych obiektu określonych przez rzeczownik.
+
+```
+aktywa/aktualizacja/rzecz
+```
+
+To polecenie obsługuje tylko rzeczowniki `asset` i `raw`.
+
+**aktualizacja/zasób**
+
+Spowoduje to zaktualizowanie wartości danych dla zasobu w formacie podstawowym i JSON.
+
+**aktualizacja/surowy**
+
+Spowoduje to zaktualizowanie wartości danych dla rejestru pozycji nieprzetworzonych.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **zablokowany**. `PIN` dla tego profilu.
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : wymagane do **określenia** nazwy zasobu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano „nazwa”.
+
+`format` : wymagany do **określenia** formatu zasobu do aktualizacji. Wartości mogą być „tylko do odczytu”, „surowe”, „podstawowe” i „JSON”.
+
+`data` : wymagane, jeśli **format** jest `readonly` lub `raw`, umożliwia dzwoniącemu aktualizację obiektu danych.
+
+`<nazwa pola>=<wartość>` : opcjonalny dla **formatu** `podstawowego`, wywołujący może podać pary klucz=wartość, aby zaktualizować każdy fragment danych dla zasobu.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+{
+    „sukces”: prawda,
+    "txid": "01947f824e9b117d618ed49a7dd84f0e7c4bb0896e40d0a95e04e27917e6ecb6b9a5ccfba7d0d5c308b684b95e98ada4f39bbac84db75e7300a09befd1ac0999"
+}
+[Ukończono w 18533,182336 ms]
+```
+
+#### Zwracane wartości:
+
+`success` : flaga logiczna wskazująca, że ​​zasób został pomyślnie zapisany.
+
+`txid` : Hash transakcji, która została wygenerowana dla tego tx. W przypadku użycia opcji -autotx to pole zostanie pominięte.
+
+---
+&nbsp;
+
+## przelew <a href="#transfer" id="transfer"></a>
+
+Spowoduje to zainicjowanie przeniesienia własności określonego rzeczownika.
+
+```
+aktywa/przeniesienie/rzecz
+```
+
+To polecenie obsługuje rzeczowniki `asset`, `raw` i `readonly`.
+
+**przeniesienie/zasób**
+
+Spowoduje to zainicjowanie transferu zasobu do odbiorcy.
+
+**transfer/surowy**
+
+Spowoduje to zainicjowanie transferu surowego zasobu do odbiorcy.
+
+**transfer/tylko do odczytu**
+
+Spowoduje to zainicjowanie transferu zasobu tylko do odczytu do odbiorcy.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **zablokowany**. `PIN`dla tego profilu.
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : wymagane do **określenia** nazwy zasobu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano „nazwa”.
+
+`recipient` : wymagany do **zidentyfikowania** konta odbiorcy. Może to być nazwa użytkownika profilu lub hash genesis.
+
+`expires` : Opcjonalne pole umożliwia dzwoniącym określenie **wygaśnięcia** transakcji transferu. Wartość wygaśnięcia to liczba sekund od czasu utworzenia transakcji, po której odbiorca nie może już odebrać transakcji. Z drugiej strony, gdy stosujesz wygaśnięcie transakcji, nie możesz anulować transakcji, dopóki nie upłynie czas wygaśnięcia. Jeśli opcja wygasa jest ustawiona na 0, transakcja nigdy nie wygaśnie, przez co nadawca nie będzie mógł nigdy anulować transakcji. W przypadku pominięcia zostanie zastosowany domyślny okres wygaśnięcia wynoszący 7 dni (604800 sekund).
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
 
