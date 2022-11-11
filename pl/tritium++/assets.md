@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-11T23:21:02.047Z
+date: 2022-11-11T23:28:08.439Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -208,4 +208,69 @@ Pobierz aktywo dla rejestru typu raw.
 ]
 [Completed in 2.838543 ms]
 ```
+
+#### Zwracane wartości:
+
+`owner` : Hash nazwy użytkownika profilu właściciela.
+
+`version` : Wersja serializacji transakcji.
+
+`created` : Sygnatura czasowa systemu UNIX, kiedy aktywo zostao utworzone.
+
+`modified` : Sygnatura czasowa systemu UNIX, kiedy aktywo było ostatnio modyfikowane.
+
+`type` : Typ rejestru aktywów. Może to być OBJECT, RAW lub READONLY.
+
+`data` : Dane przechowywane w surowym lub tylko do odczytu aktywie zasobów.
+
+`<fieldname>=<value>` : Para klucz-wartość dla każdego elementu danych przechowywanego w aktywie.
+
+`address`: Adres rejestru aktywa.
+
+`name` : Nazwa identyfikująca aktywo.
+
+---
+&nbsp;
+
+## list <a href="#list" id="list"></a>
+
+Pobiera listę wszystkich obiektów aktywów należących do profilu określonego przez rzeczownik.
+
+```
+assets/list/noun
+```
+
+To polecenie obsługuje rzeczowniki `asset`, `readonly`, `raw` i `any`.
+
+**lista/zasoby**
+
+Wyświetla listę wszystkich zasobów dla typu rejestru obiektów.
+
+**lista/tylko do odczytu**
+
+Wyświetla listę wszystkich zasobów dla typu rejestru tylko do odczytu.
+
+**lista/surowa**
+
+Wyświetla listę wszystkich aktywów dla surowego typu rejestru.
+
+**lista/dowolna**
+
+Wyświetla listę wszystkich zasobów dla wszystkich obsługiwanych typów rejestrów.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`where` : tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć w sekcji `Zapytania`.
+
+[`Sortowanie`](/en/tritium++/sorting)
+
+[`Filtrowanie`](/en/tritium++/filtering)
+
+[`Operatorzy`](/en/tritium++/operators)
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
 
