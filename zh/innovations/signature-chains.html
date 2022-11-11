@@ -2,7 +2,7 @@
 title: 签名链
 description: 用户帐户 / 安全数字身份资料
 published: true
-date: 2022-11-11T07:24:56.159Z
+date: 2022-11-11T07:45:16.246Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-11T05:38:07.706Z
@@ -14,14 +14,12 @@ dateCreated: 2022-11-11T05:38:07.706Z
 <p style="text-align:justify;">我们认为，如果依赖这种模式，加密货币和区块链技术的广用将始终受到限制，因为必须定期进行钱包备份、硬盘丢失或被盗以及将资金发送到无效的地址的风险。这类系统也容易受到人为错误的影响，也预示着需要专门设计用于安全存储私钥的复杂硬件。尽管这些设备是为了提供用户进一步的方便使用，但它们包含着专有的硬件和软件，仍有丢失或被盗的风险，因此不是授权系统的可靠替代品。</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;"><strong>签名链 - 解决方案</strong></p>
-<p style="text-align:justify;">Nexus 麟社设计了一个系统，通过我们称为签名链 (SIgChains) 的去中心化登录系统自动管理密钥。这允许用户只需使用 Username 用户名称、Password 登录密码和 PIN 操作密码即可登录麟社钱包。签名链仍然使用公钥加密，但不是在磁盘或云上维护密钥，而是存储在 “mathematical hyperspace” 数学超空间中，这意味着您的凭据成为用户通过签名链拥有的“虚拟空间”的“密钥” .这也消除了使用 DApp 时的密钥管理负担，这通常需要 MetaMask 等第三方插件。</p>
+<p style="text-align:justify;">Nexus 麟社设计了一个系统，通过我们称为签名链 (SIgChains) 的去中心化登录系统自动管理密钥。这允许用户只需使用 Username 用户名称、Password 登录密码和 PIN 操作密码即可登录麟社钱包。签名链仍然使用公钥加密，但不是在磁盘或云上维护密钥，而是存储在 “mathematical hyperspace” 数学超空间中，这意味着您的用户凭据可通过签名链拥有 “虚拟空间” 的 “密钥”，这也消除了使用 DApp 去中心化应用时的密钥管理负担，这通常需要 MetaMask 等第三方插件。</p>
+<p style="text-align:justify;">签名链将私钥与用户帐户分离，因此不受单个私钥的拥有或安全性的约束。当生成下一个交易时，私钥就会废弃，与其他区块链技术的持续重复使用私钥相比，它会提供更高级别的安全性。</p>
+<p style="text-align:justify;">签名链（Sigchains）类似于“个人区块链”，为管理所有类型数字资产的 DApp 去中心化应用提供基础。它们通过用户名称和密码组合，集成到已经依赖于授权系统的现有应用程序框架中，从而为 DApp 去中心化应用开发人员提供了将区块链功能作为提升层，集成到现有应用程序中的能力，而只需最少的架构修改。它们还可以与各种安全措施集成，例如生物识别和硬件密码管理器。</p>
+<p style="text-align:justify;">其他好处是通过减少在磁盘上存储大量签名的要求而获得的效率，以及使用各种密钥类型（例如 FALCON）来实现抗量子机攻击的能力。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">签名链将私钥与用户帐户分离，因此不受单个私钥的拥有或安全性的约束。当生成下一个交易时，私钥就会过时，与其他区块链技术的持续重复使用私钥相比，它会产生更高级别的安全性。</p>
-<p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">签名链（Sigchains）类似于“个人区块链”，为管理所有类型数字资产的 DApp 提供基础。它们通过用户名和密码组合集成到已经依赖于授权系统的现有应用程序框架中，从而为 DApp 开发人员提供了将区块链功能作为提升层集成到现有应用程序中的能力，而只需最少的架构修改。它们还可以与各种安全措施集成，例如生物识别和硬件密码管理器。</p>
-<p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">其他好处是通过减少在磁盘上存储大量签名的要求而获得的效率，以及使用各种密钥类型（例如 FALCON）来实现量子抵抗的能力。</p>
-<p style="text-align:justify;">速度和可扩展性</p>
+<p style="text-align:justify;"><strong>速度和可扩展性</strong></p>
 <p style="text-align:justify;">Sigchains 使用基于账户的模型来替代比特币引入的笨重的 UTxO（未使用的交易输出）架构。 Sigchains 在一条独特的链上包含所有用户数据，并提供更高级别的可扩展性，因为每笔交易只需要验证一个签名。</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">与 Sigchains 一起，Nexus 交易与区块解耦，这意味着区块级数据中每个交易只需要一个哈希或“证明”，而不是整个交易本身。这导致每 2 MB 块可容纳大约 31,728 个事务。这些创新共同产生了轻量级区块和高效的交易处理，而不需要离线（第 2 层）扩展解决方案。</p>
