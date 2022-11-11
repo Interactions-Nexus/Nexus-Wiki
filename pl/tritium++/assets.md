@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-11T23:54:45.480Z
+date: 2022-11-11T23:57:16.592Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -363,14 +363,14 @@ Spowoduje to zaktualizowanie wartości danych dla rejestru pozycji surowych.
 
 #### Zwracane wartości:
 
-`success` : flaga logiczna wskazująca, że ​​zasób został pomyślnie zapisany.
+`success` : Flaga logiczna wskazująca, że aktywo zostało pomyślnie zapisane.
 
 `txid` : Hash transakcji, która została wygenerowana dla tego tx. W przypadku użycia opcji -autotx to pole zostanie pominięte.
 
 ---
 &nbsp;
 
-## przelew <a href="#transfer" id="transfer"></a>
+## transfer <a href="#transfer" id="transfer"></a>
 
 Spowoduje to zainicjowanie przeniesienia własności określonego rzeczownika.
 
