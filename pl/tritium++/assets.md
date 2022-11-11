@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-11T23:28:08.439Z
+date: 2022-11-11T23:32:04.525Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -242,35 +242,55 @@ assets/list/noun
 
 To polecenie obsługuje rzeczowniki `asset`, `readonly`, `raw` i `any`.
 
-**lista/zasoby**
+**list/assets**
 
-Wyświetla listę wszystkich zasobów dla typu rejestru obiektów.
+Wyświetla listę wszystkich aktywów dla typu rejestru obiektów.
 
-**lista/tylko do odczytu**
+**list/readonly**
 
-Wyświetla listę wszystkich zasobów dla typu rejestru tylko do odczytu.
+Wyświetla listę wszystkich aktywów dla typu rejestru tylko do odczytu.
 
-**lista/surowa**
+**list/raw**
 
 Wyświetla listę wszystkich aktywów dla surowego typu rejestru.
 
-**lista/dowolna**
+**list/any**
 
-Wyświetla listę wszystkich zasobów dla wszystkich obsługiwanych typów rejestrów.
+Wyświetla listę wszystkich aktywów dla wszystkich obsługiwanych typów rejestrów.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`where` : tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć w sekcji `Zapytania`.
+`where` : Tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć w sekcji `Zapytania`.
 
-[`Sortowanie`](/en/tritium++/sorting)
+[`Sorting`](/pl/tritium++/sorting)
 
-[`Filtrowanie`](/en/tritium++/filtering)
+[`Filtering`](/pl/tritium++/filtering)
 
-[`Operatorzy`](/en/tritium++/operators)
+[`Operators`](/pl/tritium++/operators)
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "owner": "b7392196b83aca438567558462cd0c5d982569c7cefa668500c4bf3e61a03b7a",
+        "version": 1,
+        "created": 1655279431,
+        "modified": 1655279431,
+        "type": "OBJECT",
+        "Location": "Margoa",
+        "Owner Name": "Ageon",
+        "Registration Details": "MRG/05/478564",
+        "address": "87Wai2JoS4hNAEVXZVmejLS6pK21XQWKoLAkaep5aXFdrYnJJyk",
+        "name": "local:Asset2"
+    }
+]
+[Completed in 2.838543 ms]
+```
+
+
 
