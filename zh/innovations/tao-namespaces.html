@@ -2,7 +2,7 @@
 title: TAO namespace 麟道名称空间
 description: 名称作为原始物件
 published: true
-date: 2022-11-12T03:11:13.876Z
+date: 2022-11-12T03:17:14.308Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-11T13:59:38.828Z
@@ -12,10 +12,11 @@ dateCreated: 2022-11-11T13:59:38.828Z
 <p style="text-align:justify;"><strong>名称与名称空间</strong></p>
 <p style="text-align:justify;">名称和名称空间是特殊类型的物件寄存器，用作为区块链中其他物件寄存器的位置标识器。首次创建物件寄存器（例如资产）时，创建者可以为寄存器提供名称。如果提供了名称，则还会创建一个名称物件寄存器，其寄存器地址基于名称的哈希。 名称物件还有一个地址字段，其中填充了 名称 “指向” 的寄存器（资产、通证、帐户等）的寄存器地址。以这种方式，可以通过首先对名称进行哈希以获取名称物件的地址，检索名称物件，然后使用存储在其中的地址来检索物件寄存器，从而按名称检索物件。那么，最好将名称视为物件寄存器的名称索引。</p>
 <p style="text-align:justify;">TAO 麟道命名系统 (TNS) 允许在三种不同的背景或名称空间（本地名称、名称空间和全局名称）之一中创建名称物件。名称在定义它的名称空间内必须是唯一的。</p>
-<p style="text-align:justify;">名称：</p>
-<p style="text-align:justify;">本地名称是在签名链的上下文中创建的名称。要使用本地名称，您必须在名称前加上所有者用户名，并用一个冒号分隔，例如鲍勃：储蓄。这相当于说“查看在 sig 链 bob 中注册的所有名称，找到一个名为 Savings，然后查看它指向的对象寄存器”。 sig 链 bob 中只能有一个名字叫做 Savings，但是另一个用户 alice 也可以创建一个本地名字叫做 Savings</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">命名空间：</p>
+<p style="text-align:justify;"><strong>名称：</strong></p>
+<p style="text-align:justify;">本地名称是在签名链的背景中创建的名称。要使用本地名称，您必须在名称前加上持有者的用户名称，并用一个冒号分隔，例如 <mark class="marker-blue">bob:savings</mark> 这相当于说 “查看在 <mark class="marker-blue">bob</mark>&nbsp;签名链中注册的所有名称，找到一个名为 <mark class="marker-blue">Savings</mark>，然后查看它指向的物件寄存器”。 &nbsp;<mark class="marker-blue">bob</mark>&nbsp;签名链中只能有一个名字叫做 Savings，但是另一个用户 <mark class="marker-blue">alice</mark> 也可以创建一个本地名字叫做 <mark class="marker-blue">Savings</mark></p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;"><strong>名称空间：</strong></p>
 <p style="text-align:justify;">命名空间允许用户为其对象寄存器提供用户友好的名称，而无需透露其用户名。这对隐私很有用，但也允许名称与企业或其他一些有意义的上下文相关。为了避免域名抢注，注册命名空间需要支付高额费用（1000 NXS）。然而，一旦注册，在该命名空间内创建名称只需 1 NXS</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">命名空间：</p>
