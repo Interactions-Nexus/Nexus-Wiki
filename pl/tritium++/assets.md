@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-12T00:08:49.733Z
+date: 2022-11-12T22:44:31.433Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -431,6 +431,133 @@ Spowoduje to zainicjowanie transferu aktywa tylko do odczytu do odbiorcy.
 &nbsp;
 
 ## claim <a href="#claim" id="claim"></a>
+
+Ta metoda przejmie prawo własności do aktywa, aby zakończyć odpowiednią transakcję przeniesienia.
+
+```
+assets/claim/noun
+```
+
+To polecenie obsługuje rzeczowniki `asset`, `raw` i `readonly`.
+
+**claim/asset**
+
+Aktywa, które zostały przeniesione, muszą zostać odebrane przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
+
+**claim/raw**
+
+Surowe aktywa, które zostały przeniesione, muszą zostać odebrane przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
+
+**claim/readonly**
+
+Przeniesione aktywa tylko do odczytu muszą zostać odebrane przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **zablokowany**. `PIN` dla tego profilu.
+
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`txid` : Wymagany **identyfikator transakcji** (hash) transakcji przeniesienia aktywów, dla której żądane jest żądanie.
+
+`name`: Opcjonalne pole pozwala użytkownikowi **zmienić nazwę** przedmiotu, gdy jest on odbierany. Domyślnie nazwa jest kopiowana od poprzedniego właściciela i tworzony jest rekord Nazwa dla elementu w Twojej przestrzeni nazw użytkownika. Jeśli masz już obiekt o tej nazwie, musisz podać nową nazwę, aby zgłoszenie się powiodło.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+{
+    "success": true,
+    "txid": "01f35304d41d00b002ca02d3bd9cf6cfeb134f5c454d4b6f5a355e35ffc557cfb3756834f3cf5cbeaf98da6773adcaaeca80154d15e449d4876ddf35c0b895cf"
+}
+[Completed in 4978.949420 ms]
+```
+
+#### Zwracane wartości:
+
+`success` : Flaga logiczna wskazująca, że roszczenie do aktywa powiodło się.
+
+`txid` : Identyfikator (hash) transakcji, która obejmuje żądane aktywo.
+
+---
+&nbsp;
+
+## tokenize <a href="#tokenize" id="tokenize"></a>
+
+Ta metoda tokenizuje aktywo w zamienne tokeny, które reprezentują własność.
+
+```
+assets/tokenize/noun
+```
+
+To polecenie obsługuje tylko rzeczownik `asset`.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **zablokowany**. `PIN` dla tego profilu.
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : Wymagane do **zidentyfikowania** nazwy zasobu, który ma być tokenizowany. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : Wymagane do **określenia** adresu rejestru aktywów, które mają być tokenizowane. Jest to opcjonalne, jeśli podano „nazwa”.
+
+`token` : wymagany do **zidentyfikowania** tokenu w celu stokenizacji zasobu. Może to być nazwa (dla nazw globalnych) username:tokenname (dla nazw lokalnych) lub adres rejestru tokena.
+
+
+> **UWAGA:** Utwórz token przed użyciem interfejsu API tokenizacji.
+{.to-informacja}
+
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+{
+    „sukces”: prawda,
+    "txid": "01f35304d41d00b002ca02d3bd9cf6cfeb134f5c454d4b6f5a355e35ffc557cfb3756834f3cf5cbeaf98da6773adcaaeca80154d15e449d4876ddf35c0b895cf"
+}
+[Ukończono w 4978,949420 ms]
+```
+
+#### Zwracane wartości:
+
+`success` : flaga logiczna wskazująca, że ​​tokenizacja zasobów zakończyła się pomyślnie.
+
+`txid` : Identyfikator (hash) transakcji, która obejmuje żądany zasób.
+
+---
+&nbsp;
+
+## historia <a href="#history" id="history"></a>
+
+Spowoduje to pobranie historii zmian w zasobie, w tym zarówno danych, jak i własności.
+
+```
+majątek/historia/rzecz
+```
+
+To polecenie obsługuje rzeczowniki `asset`, `raw`, `readonly` i `any`.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : wymagane do **określenia** nazwy zasobu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano „nazwa”.
+
+[`Sortowanie`](/en/tritium++/sorting)
+
+[`Filtrowanie`](/en/tritium++/filtering)
+
+[`Operatorzy`](/en/tritium++/operators)
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
 
 
 
