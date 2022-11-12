@@ -2,7 +2,7 @@
 title: ASSETS
 description: Assets API
 published: true
-date: 2022-11-05T07:25:46.589Z
+date: 2022-11-12T23:12:38.768Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:28.357Z
@@ -718,7 +718,9 @@ This command supports all nouns.
 
 `signature` : The signature hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes. { `id` : The sequential ID of this contract within the transaction.
+`contracts` : The array of contracts bound to this transaction and their details with opcodes. 
+
+`id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be CREATE | MODIFY | TRANSFER | CLAIM.
 
@@ -738,7 +740,7 @@ This command supports all nouns.
 
 `<fieldname>=<value>` : The key-value pair for each piece of data stored in the asset.
 
-`object` : The data stored in the asset. }
+`object` : The data stored in the asset.
 
 
 ---
