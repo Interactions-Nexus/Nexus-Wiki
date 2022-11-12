@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-12T22:44:31.433Z
+date: 2022-11-12T22:51:46.812Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -497,17 +497,17 @@ To polecenie obsługuje tylko rzeczownik `asset`.
 
 `pin` : Wymagany, jeśli **zablokowany**. `PIN` dla tego profilu.
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : Wymagane do **zidentyfikowania** nazwy zasobu, który ma być tokenizowany. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **zidentyfikowania** nazwy aktywa, który ma być tokenizowany. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : Wymagane do **określenia** adresu rejestru aktywów, które mają być tokenizowane. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagane do **określenia** adresu rejestru aktywów, które mają być tokenizowane. Jest to opcjonalne, jeśli podano `name`.
 
-`token` : wymagany do **zidentyfikowania** tokenu w celu stokenizacji zasobu. Może to być nazwa (dla nazw globalnych) username:tokenname (dla nazw lokalnych) lub adres rejestru tokena.
+`token` : Wymagany do **zidentyfikowania** tokenu w celu stokenizacji aktywa. Może to być nazwa (dla nazw globalnych), username:tokenname (dla nazw lokalnych) lub adres rejestru tokena.
 
 
-> **UWAGA:** Utwórz token przed użyciem interfejsu API tokenizacji.
-{.to-informacja}
+> **NOTA:** Utwórz token przed użyciem interfejsu API tokenizacji.
+{.is-info}
 
 
 ### Wyniki:
@@ -516,48 +516,72 @@ To polecenie obsługuje tylko rzeczownik `asset`.
 
 ```
 {
-    „sukces”: prawda,
+    "success": true,
     "txid": "01f35304d41d00b002ca02d3bd9cf6cfeb134f5c454d4b6f5a355e35ffc557cfb3756834f3cf5cbeaf98da6773adcaaeca80154d15e449d4876ddf35c0b895cf"
 }
-[Ukończono w 4978,949420 ms]
+[Completed in 4978.949420 ms]
 ```
 
 #### Zwracane wartości:
 
-`success` : flaga logiczna wskazująca, że ​​tokenizacja zasobów zakończyła się pomyślnie.
+`success` : Flaga logiczna wskazująca, że tokenizacja aktywa zakończyła się pomyślnie.
 
-`txid` : Identyfikator (hash) transakcji, która obejmuje żądany zasób.
+`txid` : Identyfikator (hash) transakcji, która obejmuje żądane aktywo.
 
 ---
 &nbsp;
 
-## historia <a href="#history" id="history"></a>
+## history <a href="#history" id="history"></a>
 
-Spowoduje to pobranie historii zmian w zasobie, w tym zarówno danych, jak i własności.
+Spowoduje to pobranie historii zmian w aktywie, w tym zarówno danych, jak i własności.
 
 ```
-majątek/historia/rzecz
+assets/history/noun
 ```
 
 To polecenie obsługuje rzeczowniki `asset`, `raw`, `readonly` i `any`.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **określenia** nazwy zasobu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy aktywa. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub  namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano `name`.
 
-[`Sortowanie`](/en/tritium++/sorting)
+[`Sorting`](/pl/tritium++/sorting)
 
-[`Filtrowanie`](/en/tritium++/filtering)
+[`Filtering`](/pl/tritium++/filtering)
 
-[`Operatorzy`](/en/tritium++/operators)
+[`Operators`](/pl/tritium++/operators)
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "owner": "b7a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0",
+        "version": 1,
+        "created": 1656614448,
+        "modified": 1656614448,
+        "type": "OBJECT",
+        "Assetname": "Bugatti Veyron",
+        "Chassis_No": "BV45648784634546",
+        "Purchased Date": "22/06/2022",
+        "Engine_No": "BVE54864660",
+        "Owner": "John Doe",
+        "Registration_No": "DL01EK0001",
+        "address": "88NcYcKtMTRwtwDgfXFkZ4TbrHvkRGzsQkqVZco77Hqx1WRgCyi",
+        "name": "local:Asset0001",
+        "action": "CREATE"
+    }
+]
+[Completed in 0.870644 ms]
+```
+
+
 
 
 
