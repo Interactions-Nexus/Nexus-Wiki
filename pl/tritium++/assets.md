@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-12T23:00:47.864Z
+date: 2022-11-12T23:07:49.053Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -692,7 +692,115 @@ To polecenie obsługuje wszystkie rzeczowniki.
 [Completed in 3.128134 ms]
 ```
 
+#### Zwracane wartości:
 
+`txid`: Hash transakcji.
+
+`type` : Opis transakcji (legacy | tritium base | trust | genesis | user).
+
+`version` : Wersja serializacji transakcji.
+
+`sequence` : Numer kolejny tej transakcji w łańcuchu podpisów.
+
+`timestamp` : Uniksowy znacznik czasu utworzenia transakcji.
+
+`blockhash` : Hash bloku, w którym zawarta jest ta transakcja. Puste pole, jeśli nie zostało jeszcze uwzględnione w bloku.
+
+`confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję w sieci.
+
+`genesis`: Hash łańcucha sygnatur genesis.
+
+`nexthash` : Hash następnej transakcji w sekwencji.
+
+`prevhash`: Hash poprzedniej transakcji w sekwencji.
+
+`pubkey`: Klucz publiczny.
+
+`signature` : Hash podpisu.
+
+`contracts` : Tablica kontraktów powiązanych z tą transakcją i ich szczegóły wraz z kodami operacji.
+
+`id`: Kolejny identyfikator tej umowy w ramach transakcji.
+
+`OP` : Operacja kontraktu. Może być CREATE | MODIFY | TRANSFER | CLAIM.
+
+`address`: Adres rejestrowy obiektu aktywa.
+
+`txid` : Hash identyfikatora transakcji dla kredytu/roszczenia.
+
+`contract` : Identyfikator umowy w ramach transakcji dotyczącej kredytu/roszczenia.
+
+`type`: Typ rejestru. Może to być OBJECT, RAW lub READONLY.
+
+`standard` : Typ obiektu. Może być NONSTANDARD lub JSON.
+
+`recipient` : Hash nazwy użytkownika profilu odbiorców transferu.
+
+`tokenized` : Flaga logiczna wskazująca, czy aktywo jest tokenizowane, czy nie.
+
+`<fieldname>=<value>` : Para klucz-wartość dla każdego elementu danych przechowywanego w aktywie.
+
+`object` : Dane przechowywane w aktywie.
+
+
+---
+&nbsp;
+
+## lista/częściowa <a href="#list/partial" id="list/partial"></a>
+
+Pobiera listę wszystkich częściowych szczegółów własności tokenizowanych zasobów dla użytkownika.
+
+```
+aktywa/lista/częściowe
+```
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "właściciel": "d751c1ddbd2a50a0bee9883f4f8e029272551e8d09b336aeca876e1270e91422",
+        "wersja 1,
+        "utworzono": 1656614448,
+        "zmodyfikowany": 1656614805,
+        "typ": "OBIEKT",
+        "Nazwa zasobu": "Block Incorporated",
+        "Registration_No": "NY_CA_45648784634546",
+        „Właściciel”: „John Doe”,
+        "adres": "88NcYcKtMTRwtwDgfXFkZ4TbrHvkRGzsQkqVZco77Hqx1WRgCyi",
+        „własność”: 12,0
+    }
+]
+[Ukończono w 0,542454 ms]
+```
+
+#### Zwracane wartości:
+
+`owner` : skrót nazwy użytkownika profilu, który jest właścicielem tego zasobu.
+
+`version` : Wersja serializacji transakcji.
+
+`created` : Sygnatura czasowa systemu UNIX, kiedy zasób został utworzony.
+
+`zmodyfikowany` : Sygnatura czasowa systemu UNIX, kiedy zasób był ostatnio modyfikowany.
+
+`type` : typ rejestru aktywów. Może to być OBIEKT, RAW lub TYLKO DO ODCZYTU.
+
+`<nazwa pola>=<wartość>` : para klucz-wartość dla każdego elementu danych przechowywanego w zasobie.
+
+`dane` : dane przechowywane w nieprzetworzonym lub tylko do odczytu obiekcie zasobów.
+
+`address`: Adres rejestru zasobu.
+
+`name` : nazwa identyfikująca zasób.
+
+`własność`: Jest to procent aktywów posiadanych przez wywołującego, na podstawie liczby posiadanych tokenów.
 
 
 
