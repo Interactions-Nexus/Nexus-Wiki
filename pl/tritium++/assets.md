@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-12T23:07:49.053Z
+date: 2022-11-12T23:12:34.431Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -746,17 +746,17 @@ To polecenie obsługuje wszystkie rzeczowniki.
 ---
 &nbsp;
 
-## lista/częściowa <a href="#list/partial" id="list/partial"></a>
+## list/partial <a href="#list/partial" id="list/partial"></a>
 
-Pobiera listę wszystkich częściowych szczegółów własności tokenizowanych zasobów dla użytkownika.
+Pobiera listę wszystkich częściowych szczegółów własności tokenizowanych aktywów dla użytkownika.
 
 ```
-aktywa/lista/częściowe
+assets/list/partial
 ```
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
 ### Wyniki:
 
@@ -765,42 +765,42 @@ aktywa/lista/częściowe
 ```
 [
     {
-        "właściciel": "d751c1ddbd2a50a0bee9883f4f8e029272551e8d09b336aeca876e1270e91422",
-        "wersja 1,
-        "utworzono": 1656614448,
-        "zmodyfikowany": 1656614805,
-        "typ": "OBIEKT",
-        "Nazwa zasobu": "Block Incorporated",
+        "owner": "d751c1ddbd2a50a0bee9883f4f8e029272551e8d09b336aeca876e1270e91422",
+        "version": 1,
+        "created": 1656614448,
+        "modified": 1656614805,
+        "type": "OBJECT",
+        "Assetname": "Block Incorporated",
         "Registration_No": "NY_CA_45648784634546",
-        „Właściciel”: „John Doe”,
-        "adres": "88NcYcKtMTRwtwDgfXFkZ4TbrHvkRGzsQkqVZco77Hqx1WRgCyi",
-        „własność”: 12,0
+        "Owner": "John Doe ",
+        "address": "88NcYcKtMTRwtwDgfXFkZ4TbrHvkRGzsQkqVZco77Hqx1WRgCyi",
+        "ownership": 12.0
     }
 ]
-[Ukończono w 0,542454 ms]
+[Completed in 0.542454 ms]
 ```
 
 #### Zwracane wartości:
 
-`owner` : skrót nazwy użytkownika profilu, który jest właścicielem tego zasobu.
+`owner` : Hash nazwy użytkownika profilu, który jest właścicielem tego aktywa.
 
 `version` : Wersja serializacji transakcji.
 
-`created` : Sygnatura czasowa systemu UNIX, kiedy zasób został utworzony.
+`created` : Sygnatura czasowa systemu UNIX, kiedy aktywo zostało utworzone.
 
-`zmodyfikowany` : Sygnatura czasowa systemu UNIX, kiedy zasób był ostatnio modyfikowany.
+`modified` : Sygnatura czasowa systemu UNIX, kiedy aktywo było ostatnio modyfikowane.
 
-`type` : typ rejestru aktywów. Może to być OBIEKT, RAW lub TYLKO DO ODCZYTU.
+`type` : Typ rejestru aktywów. Może to być OBJECT, RAW lub READONLY.
 
-`<nazwa pola>=<wartość>` : para klucz-wartość dla każdego elementu danych przechowywanego w zasobie.
+`<fieldname>=<value>` : Para klucz-wartość dla każdego elementu danych przechowywanego w aktywie.
 
-`dane` : dane przechowywane w nieprzetworzonym lub tylko do odczytu obiekcie zasobów.
+`data` : Dane przechowywane w nieprzetworzonym lub tylko do odczytu obiekcie aktywa.
 
-`address`: Adres rejestru zasobu.
+`address`: Adres rejestru aktywa.
 
-`name` : nazwa identyfikująca zasób.
+`name` : Nazwa identyfikująca aktywo.
 
-`własność`: Jest to procent aktywów posiadanych przez wywołującego, na podstawie liczby posiadanych tokenów.
+`ownership`: Jest to procent aktywów posiadanych przez wywołującego, na podstawie liczby posiadanych tokenów.
 
 
 
