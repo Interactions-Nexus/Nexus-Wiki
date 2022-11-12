@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-11T23:57:16.592Z
+date: 2022-11-12T00:05:54.676Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -375,38 +375,49 @@ Spowoduje to zaktualizowanie wartości danych dla rejestru pozycji surowych.
 Spowoduje to zainicjowanie przeniesienia własności określonego rzeczownika.
 
 ```
-aktywa/przeniesienie/rzecz
+assets/transfer/noun
 ```
 
 To polecenie obsługuje rzeczowniki `asset`, `raw` i `readonly`.
 
-**przeniesienie/zasób**
+**transfer/asset**
 
-Spowoduje to zainicjowanie transferu zasobu do odbiorcy.
+Spowoduje to zainicjowanie transferu aktywa do odbiorcy.
 
-**transfer/surowy**
+**transfer/raw**
 
-Spowoduje to zainicjowanie transferu surowego zasobu do odbiorcy.
+Spowoduje to zainicjowanie transferu surowego aktywa do odbiorcy.
 
-**transfer/tylko do odczytu**
+**transfer/readonly**
 
-Spowoduje to zainicjowanie transferu zasobu tylko do odczytu do odbiorcy.
+Spowoduje to zainicjowanie transferu aktywa tylko do odczytu do odbiorcy.
 
 ### Parametry:
 
 `pin` : Wymagany, jeśli **zablokowany**. `PIN`dla tego profilu.
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **określenia** nazwy zasobu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy aktywa. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagany do **określenia** adresu rejestru aktywa. Jest to opcjonalne, jeśli podano `name`.
 
-`recipient` : wymagany do **zidentyfikowania** konta odbiorcy. Może to być nazwa użytkownika profilu lub hash genesis.
+`recipient` : Wymagany do **zidentyfikowania** konta odbiorcy. Może to być nazwa użytkownika profilu lub hash genesis.
 
 `expires` : Opcjonalne pole umożliwia dzwoniącym określenie **wygaśnięcia** transakcji transferu. Wartość wygaśnięcia to liczba sekund od czasu utworzenia transakcji, po której odbiorca nie może już odebrać transakcji. Z drugiej strony, gdy stosujesz wygaśnięcie transakcji, nie możesz anulować transakcji, dopóki nie upłynie czas wygaśnięcia. Jeśli opcja wygasa jest ustawiona na 0, transakcja nigdy nie wygaśnie, przez co nadawca nie będzie mógł nigdy anulować transakcji. W przypadku pominięcia zostanie zastosowany domyślny okres wygaśnięcia wynoszący 7 dni (604800 sekund).
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+{
+    "success": true,
+    "address": "87VmNhitFJv3WA3Yrovt9A3hts2MoXcfExyy9LiXyhK1sdThwYM",
+    "txid": "01bc48f80792fd4b97d43555d5993f0edfb0998ab14bcf159404f52e34a64abd6769f61014f006703100aa040a27aca65227133b2b5a71617efac3bc5640e361"
+}
+[Completed in 4998.999748 ms]
+```
+
+
 
