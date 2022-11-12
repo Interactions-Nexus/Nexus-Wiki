@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-12T00:05:54.676Z
+date: 2022-11-12T00:08:49.733Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -418,6 +418,19 @@ Spowoduje to zainicjowanie transferu aktywa tylko do odczytu do odbiorcy.
 }
 [Completed in 4998.999748 ms]
 ```
+
+#### Zwracane wartości:
+
+`success` : Flaga logiczna wskazująca, że transfer aktywa zakończył się pomyślnie.
+
+`address` : Adres rejestru dla tego aktywa.
+
+`txid` : Identyfikator (hash) transakcji, która obejmuje przeniesienie aktywa.
+
+---
+&nbsp;
+
+## claim <a href="#claim" id="claim"></a>
 
 
 
