@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-12T22:51:46.812Z
+date: 2022-11-12T22:56:17.888Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -580,6 +580,67 @@ To polecenie obsługuje rzeczowniki `asset`, `raw`, `readonly` i `any`.
 ]
 [Completed in 0.870644 ms]
 ```
+
+#### Zwracane wartości:
+
+Wartość zwracana to tablica obiektów JSON dla każdego wpisu w historii nazw:
+
+`owner` : Hash nazwy użytkownika profilu właściciela.
+
+`version` : Wersja serializacji transakcji.
+
+`created` : Sygnatura czasowa systemu UNIX podczas tworzenia konta.
+
+`modified` : Sygnatura czasowa systemu UNIX, kiedy nazwa została zaktualizowana.
+
+`type` : Typ rejestru. Może to być OBJECT, RAW lub READONLY.
+
+`<fieldname>=<value>` : Jeśli format jest podstawowy, wywołujący może podać dodatkowe pary dla każdej części danych do zapisania w zasobie.
+
+`data` : Dane przechowywane w nieprzetworzonym lub tylko do odczytu obiekcie aktywa.
+
+`address` : Adres rejestru obiektu nazwy.
+
+`name`: Nazwa obiektu.
+
+`action` : Akcja, która miała miejsce - CREATE | MODIFY | TRANSFER | CLAIM.
+
+---
+&nbsp;
+
+## transactions <a href="#transactions" id="transactions"></a>
+
+Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
+
+```
+assets/transactions/noun
+```
+
+To polecenie obsługuje wszystkie rzeczowniki.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : wymagane do **identyfikacji** zasobu. Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano „nazwa”.
+
+`verbose` : opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
+
+* `domyślne` : podsumowanie.
+* `podsumowanie`: typ, wersja, sekwencja, znacznik czasu, blokowanie, potwierdzenia i kontrakty.
+* `szczegóły`: wszystko w podsumowaniu + geneza, nexthash, prevhash, pubkey i podpis.
+
+[`Sortowanie`](/en/tritium++/sorting)
+
+[`Filtrowanie`](/en/tritium++/filtering)
+
+[`Operatorzy`](/en/tritium++/operators)
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
 
 
 
