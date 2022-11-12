@@ -2,7 +2,7 @@
 title: AKTYWA
 description: API aktyw
 published: true
-date: 2022-11-12T22:56:17.888Z
+date: 2022-11-12T23:00:47.864Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:27:57.050Z
@@ -620,27 +620,79 @@ To polecenie obsługuje wszystkie rzeczowniki.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **identyfikacji** zasobu. Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **identyfikacji** aktywa. Jest to opcjonalne, jeśli podano `address`.
 
-`address` : wymagany do **określenia** adresu rejestru zasobu. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagany do **określenia** adresu rejestru aktywa. Jest to opcjonalne, jeśli podano `name`.
 
-`verbose` : opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
+`verbose` : Opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
 
-* `domyślne` : podsumowanie.
-* `podsumowanie`: typ, wersja, sekwencja, znacznik czasu, blokowanie, potwierdzenia i kontrakty.
-* `szczegóły`: wszystko w podsumowaniu + geneza, nexthash, prevhash, pubkey i podpis.
+* `default` : summary
+* `summary` : type, version, sequence, timestamp, blockhash, confirmations, contracts
+* `detail` : Wszystko  z summary + genesis, nexthash, prevhash, pubkey, signature
 
-[`Sortowanie`](/en/tritium++/sorting)
+[`Sorting`](/pl/tritium++/sorting)
 
-[`Filtrowanie`](/en/tritium++/filtering)
+[`Filtering`](/pl/tritium++/filtering)
 
-[`Operatorzy`](/en/tritium++/operators)
+[`Operators`](/pl/tritium++/operators)
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "txid": "0167d11ebea68f68e2c6591a9d94c236a60c312cf70d596492002a3e4d9a95a4f4e859c498fa6ac17c56cb4db1043abacdfd44f669112641fc4add15bb3efefa",
+        "type": "tritium user",
+        "version": 4,
+        "sequence": 4,
+        "timestamp": 1656614805,
+        "blockhash": "9b2c063b2e8766ce9b55c5b75524b13c12c7006e0c67423dbfe1539ed4f62cd0c764f63fbbc6cb41ab9fc785ce6f88ae92e6a82e3151c4c956fa65eac524db3e1922bdced7bdd4cd97a4563dd21f011a310d062440300b2a7532fe21f6df55c7e3ba9046a982b99af97acddd768569d3cf5368cb91dcb0138cf5af7f1a6f391b",
+        "confirmations": 95,
+        "contracts": [
+            {
+                "id": 0,
+                "OP": "TRANSFER",
+                "address": "88NcYcKtMTRwtwDgfXFkZ4TbrHvkRGzsQkqVZco77Hqx1WRgCyi",
+                "recipient": "8Dnn5LUeffcRCqZLpboCHnzw5AkfwzkM5hjVScjSDHVKhFpVzCB",
+                "tokenized": true
+            }
+        ]
+    },
+    {
+        "txid": "01e4eff49cadbd887511c6302d5fe8e89ead4caa87bcec2dfd55e18cb201a8fc8db9726571d3bebe554a81f579b22e2794a0e86756be326f362964e95ab28f23",
+        "type": "tritium user",
+        "version": 4,
+        "sequence": 2,
+        "timestamp": 1656614448,
+        "blockhash": "e9b46f5dcf3c321f8a2dc672a6c47a5c6b763bc9d1f001722bc446b186afda3566f04cc739253696a3f232e036bc273ca68c18d84213186a1317d246ec86a165ba152838a2eca4425c19472dc8fb1b762f4413c5a633c4fef5494378b9858da34129dcd5bc556110c1e79aa42f01f8bae6f4938a6e87a63b6d30e2ee6025d507",
+        "confirmations": 97,
+        "contracts": [
+            {
+                "id": 0,
+                "OP": "CREATE",
+                "address": "88NcYcKtMTRwtwDgfXFkZ4TbrHvkRGzsQkqVZco77Hqx1WRgCyi",
+                "type": "OBJECT",
+                "standard": "NONSTANDARD",
+                "object": {
+                    "Assetname": " Bugatti Veyron",
+                    "Chassis_No": "BV45648784634546",
+                    "Purchased Date": "22/06/2022",
+                    "Engine_No": "BVE54864660",
+                    "Owner": "John Doe",
+                    "Registration_No": "DL01EK0001"
+                }
+            }
+        ]
+    }
+]
+[Completed in 3.128134 ms]
+```
+
+
 
 
 
