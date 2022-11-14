@@ -2,7 +2,7 @@
 title: Renumeration
 description: 
 published: true
-date: 2022-11-14T11:52:40.781Z
+date: 2022-11-14T12:08:32.897Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:01:33.834Z
@@ -20,7 +20,7 @@ The facilitator(s) will follow the below guidelines to set the renumeration for 
 
 -	The renumeration will be decided by the facilitator(s) at the creative layer with consensus of 51%.
 
--	Having a standard pay for working groups with different skill set is not the best way, but for a same skill set a standard pay can be set. Then based on performance the renmeration can be increased.
+-	Having a standard pay for working groups with different skill set is not the best way, but a standard pay for the same skill set is advised. Then based on performance the renmeration can be increased.
 
 - THe renumeration will also vary depending if the member(s) is working full time or part time in the branch.
 
