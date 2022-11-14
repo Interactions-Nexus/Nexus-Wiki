@@ -2,7 +2,7 @@
 title: OBJECTS
 description: Objects API
 published: true
-date: 2022-10-08T13:04:19.722Z
+date: 2022-11-14T16:35:50.286Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:47.887Z
@@ -18,90 +18,33 @@ The `JSON`, `ANSI`, and `XML` formats allow callers to provide a detailed defini
 
 The `raw` format differs from the other formats in that the object data is not stored in object register, but instead is stored in a read-only state register. The raw format is useful when developers wish to store arbitrary binary data on the Nexus blockchain, without incurring the overhead of defining an object.
 
-### `Methods`
+---
+&nbsp;
+
+## Methods
 
 The following methods are currently supported by this API
 
-[`create/schema`](objects.md#create-schema)\
-[`get/schema`](objects.md#get-schema)
+[`create/schema`](#create/schema)
+[`get/schema`](#get/schema)
 
-***
+---
+&nbsp;
 
-## `create/schema`
+## create/schema <a href="#create/schema" id="create/schema"></a>
 
 This will create a new object schema, a special type of object that can be used to define the format of other objects created on the object register. The API supports an alternative endpoint that can include the new object name in the URI. For example `/objects/create/schema/myschema` will resolve to `objects/create/schema?name=myschema`.
 
 #### Endpoint:
 
-`/objects/create/schema`
-
-{% swagger method="post" path="/objects/create/schema" baseUrl="http://api.nexus-interactions.io:8080" summary="create/schema" %}
-{% swagger-description %}
-This will create a new object schema, a special type of object that can be used to define the format of other objects created on the object register
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="pin" required="true" %}
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="session" %}
-For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the object should be created with. For single-user API mode the session should not be supplied
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="name" %}
-An optional name to identify the schema. If provided a Name object will also be created in the users local namespace, allowing the schema to be accessed/retrieved by name. If no name is provided the schema will need to be accessed/retrieved by its 256-bit register address
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="format" %}
-The format the caller is using to define the object schema. Values can be 
-
-`JSON`
-
- (the default), 
-
-`ANSI`
-
- (not currently supported), or 
-
-`XML`
-
- (not currently supported). This is an optional field and the value 
-
-`JSON`
-
- is assumed if omitted
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="json" required="true" %}
-
-
-If format is `JSON`, then this field will hold the json definition of the schema as a JSON array representing each field in the object. It uses the following format:
-
-
-
-`name` : The name of the data field.
-
-`type` : The data type to use for this field. Values can be `uint8`, `uint16`, `uint32`, `uint64`, `uint256`, `uint512`, `uint1024`, `string`, or `bytes`.
-
-`max_length` : Optional, the maximum number of characters if type=string
-
-`value` : The default value of the field.
-
-`mutable` : The boolean field to indicate whether the field is writable (true) or read-only (false).
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
-```json
-{
-    "txid": "27ef3f31499b6f55482088ba38b7ec7cb02bd4383645d3fd43745ef7fa3db3d1"
-    "address": "8FJxzexVDUN5YiQYK4QjvfRNrAUym8FNu4B8yvYGXgKFJL8nBse"
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+objects/create/schema
+```
 
-{% tabs %}
-{% tab title="Javascript" %}
+## Code Snippets
+
+#### Javascript:
+
 ```javascript
 // create/schema
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -128,9 +71,9 @@ fetch(`${SERVER_URL}/objects/create/schema`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Pyhton:
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -154,10 +97,9 @@ data = {
 response = requests.post(f"{SERVER_URL}/objects/create/schema", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-#### Parameters:
+
+### Parameters
 
 `pin` : The PIN for this signature chain.
 
@@ -226,95 +168,22 @@ The following is an example of an object defined using the `JSON` format:\
 
 `address` : The register address for this object. The address (or name that hashes to this address) is needed for downstream transactions / api methods for this object.
 
-***
+---
+&nbsp;
 
-## `get/schema`
+## get/schema <a href="#get/schema" id="get/schema"></a>
 
 Retrieves the schema / object definition of an object.
 
 #### Endpoint:
 
-`/objects/get/schema`
-
-{% swagger method="post" path="/objects/get/schema" baseUrl="http://api.nexus-interactions.io:8080" summary="get/schema" %}
-{% swagger-description %}
-Retrieves the schema / object definition of an object
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="name" %}
-The name identifying the object. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the 
-
-`session`
-
- parameter is provided (as we can deduce the username from the session)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="session" %}
-For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the object. The 
-
-`session`
-
- parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="address" %}
-The register address of the object. This is optional if the name is provided
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="format" %}
-The format that the schema should be returned in. Values can be 
-
-`JSON`
-
- (the default), 
-
-`ANSI`
-
- (not currently supported), or 
-
-`XML`
-
- (not currently supported). This is optional field and the value 
-
-`JSON`
-
- is assumed if omitted
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="schema details" %}
-```json
-{
-    "address": "8FJxzexVDUN5YiQYK4QjvfRNrAUym8FNu4B8yvYGXgKFJL8nBse"
-    "json" :
-        [
-            {
-                "name": "serial_number",
-                "type": "uint32",
-                "value": "0",
-                "mutable" : "false"
-            },
-            {
-                "name": "description",
-                "type": "string",
-                "value": "",
-                "max_length": 100,
-                "mutable" : "false"
-            },
-            {
-                "name": "shelf_location",
-                "type": "string",
-                "value": "",
-                "max_length": 100,
-                "mutable" : "true"
-            },
-        ]
-}
 ```
-{% endswagger-response %}
-{% endswagger %}
+objects/get/schema
+```
+## Code Snippets
 
-{% tabs %}
-{% tab title="Javascript" %}
+#### Javascript:
+ 
 ```javascript
 // get/schema
 const SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -333,9 +202,9 @@ fetch(`${SERVER_URL}/objects/get/schema`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Python:
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -351,10 +220,8 @@ data = {
 response = requests.post(f"{SERVER_URL}/objects/get/schema", json=data)
 print(response.json())
 ```
-{% endtab %}
-{% endtabs %}
 
-#### Parameters:
+### Parameters
 
 `name` : The name identifying the object. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
 
@@ -408,5 +275,3 @@ print(response.json())
 * `value` : The default value of the field.
 * `max_length` : Optional, the maximum number of characters if type=string
 * `mutable` : The boolean field to indicate whether the field is writable (true) or read-only (false).
-
-***
