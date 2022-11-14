@@ -2,7 +2,7 @@
 title: LEDGER
 description:  Ledger API
 published: true
-date: 2022-11-14T19:13:59.571Z
+date: 2022-11-14T19:15:20.680Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:31.516Z
@@ -25,7 +25,7 @@ The following methods are currently supported by this API
 [`get/mininginfo`](#get/mininginfo)
 
 ---
-&nbsp:
+&nbsp;
 
 ## get/blockhash <a href="#get/blockhash" id="get/blockhash"></a>
 
@@ -636,7 +636,8 @@ print(response.json())
 
 `reference` : For `DEBIT` and `CREDIT` transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
 
-
+---
+&nbsp;
 
 ## submit/transaction <a href="#submit/transaction" id="submit/transaction"></a>
 
