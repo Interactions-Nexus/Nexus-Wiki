@@ -2,7 +2,7 @@
 title: LEDGER
 description:  Ledger API
 published: true
-date: 2022-11-14T19:15:20.680Z
+date: 2022-11-14T19:16:37.750Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:31.516Z
@@ -27,7 +27,7 @@ The following methods are currently supported by this API
 ---
 &nbsp;
 
-## get/blockhash <a href="#get/blockhash" id="get/blockhash"></a>
+## `get/blockhash` <a href="#get/blockhash" id="get/blockhash"></a>
 
 Retrieves the hash of the block for the given height.
 
@@ -82,7 +82,7 @@ print(response.json())
 ---
 &nbsp;
 
-## get/block <a href="#get/block" id="get/block"></a>
+## `get/block` <a href="#get/block" id="get/block"></a>
 
 Retrieves block data for the given block hash or height.
 
