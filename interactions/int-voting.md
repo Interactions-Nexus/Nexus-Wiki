@@ -2,7 +2,7 @@
 title: Voting
 description: 
 published: false
-date: 2022-10-28T22:04:37.711Z
+date: 2022-11-14T09:31:49.729Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:53:01.660Z
@@ -18,7 +18,7 @@ The arm groups have to conduct facilitator(s) election and then the elected faci
 
 ## Voting for Facilitator:
 
-The working group(s) will vote for the team facilitator(s), to represent them in the creative layer. Every group has to complete the voting to choose their facilitator by the current quarter and the proof has to be provided to the Chair.
+The working group(s) will vote for the team facilitator(s), to represent them in the creative layer. Every group has to complete the voting to choose their facilitator by the end of current quarter and the proof has to be provided to the Chair.
 
 #### Requirements, Selection and Voting Process for Facilitator(s):
 
@@ -38,7 +38,7 @@ The working group(s) will vote for the team facilitator(s), to represent them in
 
 ## Voting for Chair:
 
-The newly elected facilitator(s) for the next quarter will come together to vote for the chair. If there is no challenger for the chair, then all will vote saying that they support the existing chair for another term.
+The newly elected facilitator(s) for the next quarter will come together to vote for the chair. If there is no challenger for the chair, then all will vote in support of existing chair for another term.
 
 
 #### Requirements, Selection and Voting Process for Chair:
@@ -60,9 +60,9 @@ The newly elected facilitator(s) for the next quarter will come together to vote
 
 ## Failure to Complete Voting:
 
-The chair has to ensure that each group completes the facilitator(s) election in time or has to vote out the facilitator(s) for the group.  
+The chair has to ensure that each group completes the facilitator(s) election in time or has to vote out the facilitator(s) for that group.  
 
-The facilitator(s) are responsible to ensure the chair election is carried out in the stipulated time and if not completed have to vote out the exisiting chair.
+The facilitator(s) are responsible to ensure the chair election is carried out in the stipulated time and if not completed have to vote out the existing chair.
 
 If the arm voting is not done by 10 days into the new quarter the chair looses his authority and the facilitator(s) have to conduct the election at the earliest.
 
@@ -70,4 +70,4 @@ All elections only need 51% votes in the groups or creative layer and if any tea
 
 ## Voting on Proposals
 
-Any proposal will be voted at the group level or at the creative layer and the concerned person will present a written proposal and after everyone has read it, a poll will be created. The propsoal will require a majority vote of 51% to be passed. If the voting is at the group level, the proof has to be submitted to other facilitator(s).
+Any proposal will be voted at the group level or at the creative layer and the concerned person will present a written proposal and after everyone has read it, a poll will be created. The proposal will require a majority vote of 51% to be passed. If the voting is at the group level, the proof has to be submitted to the chair.
