@@ -2,7 +2,7 @@
 title: NAMES
 description:  Names API
 published: true
-date: 2022-11-05T07:52:15.032Z
+date: 2022-11-14T23:30:32.957Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:53.594Z
@@ -12,13 +12,13 @@ dateCreated: 2022-10-05T08:34:53.594Z
 
 Names and Namespaces are special kinds of object registers that are used as locators to other object registers in the blockchain. When an object register is first created (an asset for example) the caller can provide a name for the register. If a name is provided then a Name object register is also created with its register address based on a hash of the name. The Name object also has a address field, which is populated with the register address of the register (asset, token, account etc) that the Name "points" to. In this way, objects can be retrieved by name by first hashing the name to get the Name object's address, retrieving the Name object, and then using the address stored within it to retrieve the object register. A Name then, is best thought of as a named index to object registers.
 
-The `TAO Naming System` (TNS) allows Name objects to be created in one of three different contexts, - `local`, `namespaced`, and `global` and will be owned by a profile. Names must be unique within the profile in which it was defined.
+The `TAO Naming System` (TNS) allows Name objects to be created in one of three different contexts - `local`, `namespaced`, `global` and will be owned by a profile. Names must be unique within the profile in which it was defined.
 
 ## Local Names
-LOcal names are those created within the context of a user profile. To use a local name you must prefix the name with the owners username separated by a single colon, e.g. bob:savings. This is equivalent to saying "look at all the Names registered in the profile bob and find one called savings and then see what object register it points to". There can only be one Name called savings in the sig chain bob, but another user alice can also create a local name called savings.
+Local names are those created within the context of a user profile. To use a local name you must prefix the name with the owners username separated by a single colon, e.g. bob:savings. This is equivalent to saying "look at all the Names registered in the profile bob and find one called savings and then see what object register it points to". There can only be one Name called savings in the sig chain bob, but another user alice can also create a local name called savings.
 
 ## Namespaced Names
-Namespaced Names are those created within the context of a `namespace`, which itself is a globally unique keyword. Namespaces allow users to provide user-friendly names for their object registers without needing to disclose their username. This is useful for privacy, but also to allow names to be related to a business or some other meaningful context. To use a namespaced name you must prefix the name with the namespace separated by a double colon, e.g. `bobscoffeeshop::payments`. In this example bob would have first registered the namespace `bobscoffeeshop` and created an account to receive `payments` to (which could be called anything). He then creates a Name with a name=payments, namespace=bobscoffeeshop and address=(register address of the account). From then on, anyone can use the name `bobscoffeeshop::payments` and it will resolve to the register address of the account. To avoid name-squatting registering a namespace name attracts a high fee (1000 NXS). However once registered, creating Names within that namespace costs only 1 NXS
+Namespaced Names are those created within the context of a `namespace`, which itself is a globally unique keyword. Namespaces allow users to provide user-friendly names for their object registers without needing to disclose their username. This is useful for privacy, but also to allow names to be related to a business or some other meaningful context. To use a namespaced name you must prefix the name with the namespace separated by a double colon, e.g. `bobscoffeeshop::payments`. In this example bob would have first registered the namespace `bobscoffeeshop` and created an account to receive `payments` to (which could be called anything). He then creates a Name with a name=payments, namespace=bobscoffeeshop and address=(register address of the account). From then on, anyone can use the name `bobscoffeeshop::payments` and it will resolve to the register address of the account. To avoid name-squatting registering a namespace name attracts a high fee (1000 NXS). However once registered, creating Names within that namespace costs only 1 NXS.
 
 ## Global Names
 Global Names require no username or namespace prefix, and are therefore globally unique. These will be likely reserved for use cases where a succinct, unique, name is necessary, for example a token `ticker` symbol. To avoid needless name-squatting, global names attract a high fee (2000 NXS).
@@ -82,7 +82,7 @@ This command supports the name and namespace nouns.
 
 ##### create/name
 
-This will create a new local name or namespaced or global name
+This will create a new local name or namespaced or global name.
 
 ##### create/namespace
 
@@ -144,7 +144,7 @@ Retrieves the object information specified by given noun.
 names/get/noun
 ```
 
-This command supports the `name` `namespace` `global` and `local` nouns.
+This command supports the `name`, `namespace`, `global` and `local` nouns.
 
 ##### get/name
 
@@ -172,7 +172,7 @@ This will retreive a specified local name object.
 
 ##### get/name, get/global, get/local
 
-`name` : Required to **identify** the Name of the name object. The name should be in the format name (for local and global names) username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided
+`name` : Required to **identify** the Name of the name object. The name should be in the format name (for local and global names), username:name (for local names) or namespace::name (for names in a namespace). This is optional if the `address` is provided
 
 `address` : Required to **identify** the register address of the name. This is optional if the `name` is provided.
 
@@ -346,7 +346,7 @@ This method allows the register address within a name object to be changed.
 names/update/noun
 ```
 
-This command does not support the `name` `namespace`or `any` nouns.
+This command does not support the `name`, `namespace`or `any` nouns.
 
 ### Parameters:
 
@@ -692,7 +692,7 @@ This command supports all the nouns.
 `signature` : The signature hash.
 
 `contracts` : The array of contracts bound to this transaction and their details with opcodes.
-{
+
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be CREATE | MODIFY | TRANSFER | CLAIM.
@@ -710,4 +710,3 @@ This command supports all the nouns.
 `recipient` : The transfer recipients profile username hash.
 
 `object` : Returns a list of all the object details (register, name or namespace).
-}
