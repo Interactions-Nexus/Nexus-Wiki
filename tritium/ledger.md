@@ -2,7 +2,7 @@
 title: LEDGER
 description:  Ledger API
 published: true
-date: 2022-11-14T19:12:42.070Z
+date: 2022-11-14T19:13:59.571Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:31.516Z
