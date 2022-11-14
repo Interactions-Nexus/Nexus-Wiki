@@ -2,7 +2,7 @@
 title: NAZWY
 description: API nazw
 published: true
-date: 2022-11-14T23:12:48.456Z
+date: 2022-11-14T23:22:20.167Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:28:47.994Z
@@ -453,24 +453,24 @@ Spowoduje to przeniesienie własności obiektu przestrzeni nazw na określonego 
 Ta metoda przejmie własność określonego rzeczownika przez odbiorcę, aby zakończyć odpowiednią transakcję transferu.
 
 ```
-nazwiska/roszczenie/rzecz
+names/claim/noun
 ```
 
-Ta metoda używa rzeczowników `nazwa` i `przestrzeń nazw`.
+Ta metoda używa rzeczowników `name` i `namespace`.
 
-##### roszczenie/nazwa
+##### claim/name
 
-Nazwiska, które zostały przeniesione, muszą zostać zgłoszone przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
+Nazwy, które zostały przeniesione, muszą zostać zgłoszone przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
 
-##### roszczenie/przestrzeń nazw
+##### claim/namespace
 
 Przestrzenie nazw, które zostały przeniesione, muszą zostać zgłoszone przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
 
 ### Parametry:
 
-`pin`: wymagany, jeśli jest zablokowany. PIN do autoryzacji transakcji.
+`pin`: Wymagany, jeśli jest zablokowany. PIN do autoryzacji transakcji.
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
 `txid`: Wymagany **identyfikator transakcji** (hash) transakcji przeniesienia nazwy, dla której żądany jest.
 
@@ -480,7 +480,7 @@ Przestrzenie nazw, które zostały przeniesione, muszą zostać zgłoszone przez
 
 ```
 {
-    "przejęte":
+    "claimed":
     [
         "25428293b6631d2ff55b3a931926fec920e407a56f7759495e36089914718d68",
         "1ff463e036cbde3595fbe2de9dff15721a89e99ef3e2e9bfa7ce48ed825e9ec2"
@@ -489,7 +489,136 @@ Przestrzenie nazw, które zostały przeniesione, muszą zostać zgłoszone przez
 }
 ```
 
-#### Rezygnacja
+#### Zwracane wartości:
+
+`claimed`: Tablica adresów dla każdej nazwy zgłoszonej przez transakcję
+
+`txid` : Identyfikator (hash) transakcji, która zawiera przeniesienie nazwy.
+
+---
+&nbsp;
+
+## history <a href="#history" id="history"></a>
+
+Spowoduje to uzyskanie historii i własności określonego rzeczownika.
+
+```
+names/history/noun
+```
+
+To polecenie obsługuje wszystkie rzeczowniki.
+
+### Parametry:
+
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+[`Operators`](/pl/tritium++/operators)
+
+##### history/name
+
+`name` : Wymagane do **identyfikacji** nazwy. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
+
+`address` : Wymagane do **zidentyfikowania** nazwy przy użyciu adresu rejestru. Jest to opcjonalne, jeśli podano `name`.
+
+##### history/namespace
+
+`namespace` : Wymagane do **zidentyfikowania** nazwy obiektu przestrzeni nazw. Jest to opcjonalne, jeśli podano przestrzeń nazw `address`.
+
+`address` : Wymagane do **zidentyfikowania** adresu rejestru przestrzeni nazw. Jest to opcjonalne, jeśli podano `namespace`.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "owner": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+        "version": 1,
+        "created": 1656571181,
+        "modified": 1656571181,
+        "type": "OBJECT",
+        "register": "8DS2qGLhuEC2reKrzxyWaXXwtVq2KmGWGQCWKBQwrCQc4XS2b8V",
+        "name": "UPS",
+        "namespace": "~GLOBAL~",
+        "address": "8H5tcBwU31FBTzokw3gDhz7e1k3mGytk26MBbKeAfjJbFHoXo7Y",
+        "action": "CREATE"
+    }
+]
+[Completed in 1.097269 ms]
+```
+
+#### Zwracane wartości:
+
+Wartość zwracana to tablica obiektów JSON dla każdego wpisu w historii nazw:
+
+`owner` : Skrót nazwy użytkownika profilu właściciela.
+
+`version` : Wersja serializacji transakcji.
+
+`created` : Sygnatura czasowa systemu UNIX, kiedy obiekt został utworzony.
+
+`zmodyfikowany` : sygnatura czasowa systemu UNIX, kiedy obiekt został zaktualizowany.
+
+`type` : Typ rejestru. Może to być OBIEKT, RAW lub TYLKO DO ODCZYTU.
+
+`nazwa` : Nazwa identyfikująca rejestr obiektów.
+
+`przestrzeń nazw` : Nazwa przestrzeni nazw lub przestrzeni nazw, w której nazwa została utworzona. W przypadku nazw globalnych zostanie ustawiona wartość ~~GLOBAL~~.
+
+`address` : Adres rejestru obiektu.
+
+`action` : Akcja, która miała miejsce - CREATE | ZMIEŃ | PRZELEW | PRAWO.
+
+---
+&nbsp;
+
+## transakcji <a href="#transactions" id="transactions"></a>
+
+Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
+
+```
+nazwy/transakcje/rzecz
+```
+
+To polecenie obsługuje wszystkie rzeczowniki.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`verbose` : opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
+
+* `domyślnie`: skrót
+* `podsumowanie`: typ, wersja, sekwencja, znacznik czasu, operacja i potwierdzenia.
+* `szczegóły`: geneza, nexthash, prevhash, klucz pubowy i podpis.
+
+[`Sortowanie`](/en/tritium++/sorting)
+
+[`Filtrowanie`](/en/tritium++/filtering)
+
+[`Operatorzy`](/en/tritium++/operators)
+
+##### transakcje/nazwa
+
+`name` : wymagane do **identyfikacji** nazwy. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : Wymagane do **zidentyfikowania** nazwy przy użyciu adresu rejestru. Jest to opcjonalne, jeśli podano „nazwa”.
+
+##### transakcje/przestrzeń nazw
+
+`namespace` : wymagane do **zidentyfikowania** nazwy obiektu przestrzeni nazw. Jest to opcjonalne, jeśli podano przestrzeń nazw `address`.
+
+`address` : Wymagane do **zidentyfikowania** adresu rejestru przestrzeni nazw. Jest to opcjonalne, jeśli podano „przestrzeń nazw”.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
 
 
 
