@@ -2,7 +2,7 @@
 title: Renumeration
 description: 
 published: true
-date: 2022-10-29T19:25:59.105Z
+date: 2022-11-14T11:52:40.781Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:01:33.834Z
@@ -10,13 +10,13 @@ dateCreated: 2022-10-28T19:01:33.834Z
 
 # Renumeration
 
-Interactions renumerations is decided by and is voted by the facilitator(s) at the crative layer and ratified depending on budget allotments and other variables like crypto market, Nexus development, adoption and the total number of people in the arm.
+Interactions renumerations will be decided by the facilitator(s) at the creative layer and ratified depending on budget allotments and other variables like crypto market, Nexus development, adoption and the total number of people in the arm.
 
 The facilitator(s) will follow the below guidelines to set the renumeration for each person in the Interactions team.
 
 -	The renumeration will be dependent on the arm budget, which will be split between the various groups in the branch.
 
-- The branch creative layer has to make sure that they have comfortable reserves in case od market downturn. A bullish market is a good time to increase reserves. 
+- The branch creative layer has to make sure that they have comfortable reserves in case of market downturn. A bullish market is a good time to increase reserves. 
 
 -	The renumeration will be decided by the facilitator(s) at the creative layer with consensus of 51%.
 
