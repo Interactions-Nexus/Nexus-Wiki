@@ -2,7 +2,7 @@
 title: NAZWY
 description: API nazw
 published: true
-date: 2022-11-14T23:22:20.167Z
+date: 2022-11-14T23:29:41.667Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:28:47.994Z
@@ -556,68 +556,114 @@ To polecenie obsługuje wszystkie rzeczowniki.
 
 Wartość zwracana to tablica obiektów JSON dla każdego wpisu w historii nazw:
 
-`owner` : Skrót nazwy użytkownika profilu właściciela.
+`owner` : Hash nazwy użytkownika profilu właściciela.
 
 `version` : Wersja serializacji transakcji.
 
 `created` : Sygnatura czasowa systemu UNIX, kiedy obiekt został utworzony.
 
-`zmodyfikowany` : sygnatura czasowa systemu UNIX, kiedy obiekt został zaktualizowany.
+`modified` : Sygnatura czasowa systemu UNIX, kiedy obiekt został zaktualizowany.
 
-`type` : Typ rejestru. Może to być OBIEKT, RAW lub TYLKO DO ODCZYTU.
+`type` : Typ rejestru. Może to być OBJECT, RAW lub READONLY.
 
-`nazwa` : Nazwa identyfikująca rejestr obiektów.
+`name` : Nazwa identyfikująca rejestr obiektów.
 
-`przestrzeń nazw` : Nazwa przestrzeni nazw lub przestrzeni nazw, w której nazwa została utworzona. W przypadku nazw globalnych zostanie ustawiona wartość ~~GLOBAL~~.
+`namespace` : Nazwa przestrzeni nazw lub przestrzeń nazw, w której nazwa została utworzona. W przypadku nazw globalnych zostanie ustawiona wartość ~~GLOBAL~~.
 
 `address` : Adres rejestru obiektu.
 
-`action` : Akcja, która miała miejsce - CREATE | ZMIEŃ | PRZELEW | PRAWO.
+`action` : Akcja, która miała miejsce - CREATE | MODIFY | TRANSFER | CLAIM.
 
 ---
 &nbsp;
 
-## transakcji <a href="#transactions" id="transactions"></a>
+## transactions <a href="#transactions" id="transactions"></a>
 
 Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
 
 ```
-nazwy/transakcje/rzecz
+names/transactions/noun
 ```
 
 To polecenie obsługuje wszystkie rzeczowniki.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`verbose` : opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
+`verbose` : Opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
 
-* `domyślnie`: skrót
-* `podsumowanie`: typ, wersja, sekwencja, znacznik czasu, operacja i potwierdzenia.
-* `szczegóły`: geneza, nexthash, prevhash, klucz pubowy i podpis.
+* `default` : hash
+* `summary` : type, version, sequence, timestamp, operation, confirmations
+* `detail` : genesis, nexthash, prevhash, pubkey, signature
 
-[`Sortowanie`](/en/tritium++/sorting)
+[`Sorting`](/pl/tritium++/sorting)
 
-[`Filtrowanie`](/en/tritium++/filtering)
+[`Filtering`](/pl/tritium++/filtering)
 
-[`Operatorzy`](/en/tritium++/operators)
+[`Operators`](/pl/tritium++/operators)
 
-##### transakcje/nazwa
+##### transactions/name
 
-`name` : wymagane do **identyfikacji** nazwy. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **identyfikacji** nazwy. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : Wymagane do **zidentyfikowania** nazwy przy użyciu adresu rejestru. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagane do **zidentyfikowania** nazwy przy użyciu adresu rejestru. Jest to opcjonalne, jeśli podano `name`.
 
-##### transakcje/przestrzeń nazw
+##### transactions/namesapce
 
-`namespace` : wymagane do **zidentyfikowania** nazwy obiektu przestrzeni nazw. Jest to opcjonalne, jeśli podano przestrzeń nazw `address`.
+`namespace` : Wymagane do **zidentyfikowania** nazwy obiektu przestrzeni nazw. Jest to opcjonalne, jeśli podano przestrzeń nazw `address`.
 
-`address` : Wymagane do **zidentyfikowania** adresu rejestru przestrzeni nazw. Jest to opcjonalne, jeśli podano „przestrzeń nazw”.
+`address` : Wymagane do **zidentyfikowania** adresu rejestru przestrzeni nazw. Jest to opcjonalne, jeśli podano `namespace`.
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "txid": "01366060ddd6d5f0f02d50c0dc2eb77099f6becbe490fa6aca384e2974a8f4ceb12b0030b77e8a0d74a0fec24b3a18bb11b18c6a163930d1c66213c4b5890907",
+        "type": "tritium user",
+        "version": 4,
+        "sequence": 46,
+        "timestamp": 1661083099,
+        "blockhash": "993b86059245ea9926e869182c1614a58f6dc76ce47000f0fa99a52c4c36852c8bf27915eb92f00fef04e01e50f66eaa562999188c4a1ee9b97a035be3d50a44ad6c5970e83d6b017795f8cf4e12a8eda4e087890e1595f73ad7b4d2c328eda8ede89b13847606b23c112c55ff3c97f85f88646c7517206bbe43fafb2c1e2d3f",
+        "confirmations": 21,
+        "contracts": [
+            {
+                "id": 0,
+                "OP": "TRANSFER",
+                "address": "8JePLsRrZLUPawYiMmGDDfgk9YnfoJZkMpVWW4jn57HKLvPTb3X",
+                "recipient": "b7a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0"
+            }
+        ]
+    },
+    {
+        "txid": "01a43a82845a36de1248867344670283585274ad98a7dd4b09da501760caaa54f983e2d92a56d6e03960aa58c1b05d7c1d2d05628c08e3fa4b1d73ee854a3737",
+        "type": "tritium user",
+        "version": 4,
+        "sequence": 45,
+        "timestamp": 1661082253,
+        "blockhash": "1f0c22e81916f0868099a7cedc217373682b6f5df7318a282de4a8c870b98c32f7b4e5d251bb2a31d22185ac188de2a574922db8a904b9bfb97a6264387ba5adfee84c3e1acdb1513ea963fbbe7068dea50d42da98f1476f2abc489dcd9c636ed41462a0dd00c2cb2376896e0abf9cc4286aec5244b5dbf2e3887ee9b4fc9ffd",
+        "confirmations": 22,
+        "contracts": [
+            {
+                "id": 0,
+                "OP": "CREATE",
+                "address": "8JePLsRrZLUPawYiMmGDDfgk9YnfoJZkMpVWW4jn57HKLvPTb3X",
+                "type": "OBJECT",
+                "standard": "NAME",
+                "object": {
+                    "register": "8EormPWuqG1XcCTVDuDY9BBFhnqm2vFywmv6NtCJftxk1WQp83K",
+                    "name": "Nexen",
+                    "namespace": "~GLOBAL~"
+                }
+            }
+        ]
+    }
+]
+[Completed in 4.451844 ms]
+```
 
 
 
