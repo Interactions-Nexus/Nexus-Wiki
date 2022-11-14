@@ -2,7 +2,7 @@
 title: NAZWY
 description: API nazw
 published: true
-date: 2022-11-14T23:29:41.667Z
+date: 2022-11-14T23:35:14.377Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:28:47.994Z
@@ -665,7 +665,51 @@ To polecenie obsługuje wszystkie rzeczowniki.
 [Completed in 4.451844 ms]
 ```
 
+#### Zwracane wartości:
 
+`txid`: Hash transakcji.
+
+`type` : Opis transakcji (legacy | tritium base | trust | genesis | user).
+
+`version` : Wersja serializacji transakcji.
+
+`sequence` : Numer kolejny tej transakcji w łańcuchu podpisów.
+
+`timestamp` : Uniksowy znacznik czasu utworzenia transakcji.
+
+`blockhash` : Hash bloku, w którym zawarta jest ta transakcja. Puste pole, jeśli nie zostało jeszcze uwzględnione w bloku.
+
+`confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję w sieci.
+
+`genesis`: To jest hash nazwy użytkownika profilu, znany również jako hash właściciela.
+
+`nexthash` : Hash następnej transakcji w sekwencji.
+
+`prevhash`: Hash poprzedniej transakcji w sekwencji.
+
+`pubkey`: Klucz publiczny.
+
+`signature` : Hash podpisu.
+
+`contracts` : Tablica kontraktów powiązanych z tą transakcją i ich szczegóły wraz z kodami operacji.
+
+`id` : Kolejny identyfikator tej umowy w ramach transakcji.
+
+`OP` : Operacja kontraktowa. Może być CREATE | MODIFY | TRANSFER | CLAIM.
+
+`address` : Adres rejestru nazwy lub obiektu przestrzeni nazw.
+
+`txid` : Hash identyfikatora transakcji dla kredytu/roszczenia.
+
+`contract` : Identyfikator umowy w ramach transakcji dotyczącej kredytu/roszczenia.
+
+`type`: Typ rejestru. Może to być OBJECT, RAW lub READONLY.
+
+`standard` : Typ obiektu. Może to być NAME lub NAMESPACE.
+
+`recipient` : Hash nazwy użytkownika profilu odbiorców transferu.
+
+`object` : Zwraca listę wszystkich szczegółów obiektu (register, name, namespace).
 
 
 
