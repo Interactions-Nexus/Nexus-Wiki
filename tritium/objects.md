@@ -2,7 +2,7 @@
 title: OBJECTS
 description: Objects API
 published: true
-date: 2022-11-14T16:35:50.286Z
+date: 2022-11-14T17:22:53.595Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:47.887Z
@@ -41,7 +41,7 @@ This will create a new object schema, a special type of object that can be used 
 objects/create/schema
 ```
 
-## Code Snippets
+### Code Snippets
 
 #### Javascript:
 
@@ -155,7 +155,7 @@ The following is an example of an object defined using the `JSON` format:\
 
 #### Return value JSON object:
 
-```
+```json
 {
     "txid": "27ef3f31499b6f55482088ba38b7ec7cb02bd4383645d3fd43745ef7fa3db3d1"
     "address": "8FJxzexVDUN5YiQYK4QjvfRNrAUym8FNu4B8yvYGXgKFJL8nBse"
@@ -180,7 +180,7 @@ Retrieves the schema / object definition of an object.
 ```
 objects/get/schema
 ```
-## Code Snippets
+### Code Snippets
 
 #### Javascript:
  
@@ -235,7 +235,7 @@ print(response.json())
 
 #### Return value JSON object:
 
-```
+```json
 {
     "address": "8FJxzexVDUN5YiQYK4QjvfRNrAUym8FNu4B8yvYGXgKFJL8nBse"
     "json" :
