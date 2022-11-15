@@ -2,7 +2,7 @@
 title: NAMES
 description: Names API
 published: true
-date: 2022-11-15T06:52:31.241Z
+date: 2022-11-15T06:57:09.889Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:39.708Z
@@ -30,7 +30,8 @@ Global Names and Names that have been created within a namespace can also be tra
 > Signature chains and user accounts are used interchangeably.
 {.is-info}
 
-
+---
+&nbsp;
 
 ## Methods
 
@@ -47,6 +48,9 @@ The following methods are currently supported by this API
 [`transfer/name`](#transfer/name)
 [`claim/name`](#claim/name)
 [`list/name/history`](#list/name-history)
+
+---
+&nbsp;
 
 ## create/namespace <a href="#create/namespace" id="create/namespace"></a>
 
@@ -659,6 +663,7 @@ names/update/name
 ```
 
 ### Parameters
+
 `pin` : The PIN for this signature chain.
 
 `session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the name. For single-user API mode the session should not be supplied.
