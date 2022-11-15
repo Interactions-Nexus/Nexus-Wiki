@@ -2,7 +2,7 @@
 title: LEDGER
 description:  Ledger API
 published: true
-date: 2022-11-15T06:36:15.527Z
+date: 2022-11-15T06:36:50.305Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:31.516Z
@@ -780,6 +780,10 @@ Retrieves mining related data for the ledger.
 ledger/get/mininginfo
 ```
 
+### Parameters
+
+-NONE-
+
 ### Code Snippets
 
 #### Javascript:
@@ -801,8 +805,6 @@ SERVER_URL = "http://api.nexus-interactions.io:8080"
 response = requests.get(f"{SERVER_URL}/ledger/get/mininginfo")
 print(response.json())
 ```
-
-### Parameters
 
 #### Return value JSON object:
 
