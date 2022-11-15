@@ -2,7 +2,7 @@
 title: TOKENS
 description: Tokens API
 published: true
-date: 2022-10-08T12:53:44.920Z
+date: 2022-11-15T05:26:11.607Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:11.019Z
@@ -12,7 +12,7 @@ dateCreated: 2022-10-05T08:30:11.019Z
 
 The Tokens API provides methods for creating fungible tokens, creating accounts to store them in, and sending and receiving tokens between users.
 
-### `Named Shortcuts`
+## Named Shortcuts
 
 For each API method we support an alternative endpoint that includes the token/account name or register address at the end of the URI. This shortcut removes the need to include the name name or address as an additional parameter.
 
@@ -22,24 +22,24 @@ Similarly `tokens/get/token/5efc8a9437d93e894defd50f8ba73a0b2b5529cc593d5e4a7ea4
 
 The logic for resolving the shortcut to either a name or address is that if the data is 64 characters of hexadecimal then it will be assumed to be a register address. Otherwise it will be considered a name.
 
-### `Methods`
+## Methods
 
 The following methods are currently supported by this API
 
-[`create/token`](tokens.md#create-token)\
-[`debit/token`](tokens.md#debit-token)\
-[`credit/token`](tokens.md#credit-token)\
-[`get/token`](tokens.md#get-token)\
-[`burn/token`](tokens.md#burn-token)\
-[`list/token/transactions`](tokens.md#list-token-transactions)\
-[`list/token/accounts`](tokens.md#list-token-accounts)\
-[`create/account`](tokens.md#create-account)\
-[`debit/account`](tokens.md#debit-account)\
-[`credit/account`](tokens.md#credit-account)\
-[`get/account`](tokens.md#get-account)\
-[`list/account/transactions`](tokens.md#list-account-transactions)
+[`create/token`](#create/token)
+[`debit/token`](#debit/token)
+[`credit/token`](#credit/token)
+[`get/token`](#get/token)
+[`burn/token`](#burn/token)
+[`list/token/transactions`](#list/token/transactions)
+[`list/token/accounts`](#list/token/accounts)
+[`create/account`](#create/account)
+[`debit/account`](#debit/account)
+[`credit/account`](#credit/account)
+[`get/account`](#get/account)
+[`list/account/transactions`](#list/account/transactions)
 
-### `create/token`
+## <a href="#create/token" id="create/token">create/token</a>
 
 Create a new token object register. The API supports an alternative endpoint that can include the new token name in the URI. For example `/tokens/create/token/mytoken` will resolve to `tokens/create/token?name=mytoken`.
 
