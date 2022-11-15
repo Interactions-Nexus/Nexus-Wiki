@@ -2,7 +2,7 @@
 title: ASSETS
 description:  Assets API
 published: true
-date: 2022-11-15T07:50:32.079Z
+date: 2022-11-15T07:57:10.445Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:28:58.174Z
@@ -18,6 +18,8 @@ The `JSON`, `ANSI`, and `XML` \~formats allow callers to provide a detailed defi
 
 The `raw` format differs from the other formats in that the asset data is not stored in object register, but instead is stored in a read-only state register. The raw format is useful when developers wish to store arbitrary binary data on the Nexus blockchain, without incurring the overhead of defining an object.
 
+&nbsp;
+
 ## Named Shortcuts
 
 For each API method we support an alternative endpoint that includes the asset name or register address at the end of the the URI. This shortcut removes the need to include the asset name or address as an additional parameter.
@@ -28,7 +30,6 @@ Similarly `assets/get/asset/8CvLySLAWEKDB9SJSUDdRgzAG6ALVcXLzPQREN9Nbf7AzuJkg5P`
 
 The logic for resolving the shortcut to either a name or address is that if the data is 64 characters of hexadecimal then it will be assumed to be a register address. Otherwise it will be considered a name.
 
----
 &nbsp;
 
 ## Methods
