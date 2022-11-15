@@ -2,7 +2,7 @@
 title: NAMES
 description: Names API
 published: true
-date: 2022-11-14T18:01:02.469Z
+date: 2022-11-15T06:52:31.241Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:39.708Z
@@ -52,15 +52,24 @@ The following methods are currently supported by this API
 
 This will create a new namespace. The API supports an alternative endpoint that can include the new namespace name in the URL. For example `/names/create/namespace/mynamespace` will resolve to `names/create/namespace?name=mynamespace`.
 
-{% hint style="info" %}
-**NOTE** : Namespaces can only contain **lowercase letters, numbers, and periods (.)**.
-{% endhint %}
+> **NOTE** : Namespaces can only contain **lowercase letters, numbers, and periods (.)**.
+{.is-info}
+
 
 #### Endpoint:
 
 ```
 names/create/namespace
 ```
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the namespace should be created with. For single-user API mode the session should not be supplied.
+
+`name` : A name to identify the namespace. A hash of the name will determine the register address.
+
 
 ### Code Snippets
 
@@ -83,9 +92,9 @@ fetch(`${SERVER_URL}/names/create/namespace`, {
     .then(json => console.log(json))
     .catch(error => console.log(error))
 ```
-{% endtab %}
 
-{% tab title="Python" %}
+#### Python:
+
 ```python
 import requests
 SERVER_URL = "http://api.nexus-interactions.io:8080"
@@ -97,14 +106,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/names/create/namespace", json=data)
 print(response.json())
 ```
-
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the namespace should be created with. For single-user API mode the session should not be supplied.
-
-`name` : A name to identify the namespace. A hash of the name will determine the register address.
 
 #### Return value JSON object:
 
@@ -133,6 +134,13 @@ Retrieves a namespace object. The API supports an alternative endpoint that can 
 ```
 names/get/namespace
 ```
+
+#### Parameters:
+
+`name` : The name identifying the namespace. This is optional if the address is provided.
+
+`address` : The register address of the namespace to be transferred. This is optional if the name is provided.
+
 
 ### Code Snippets
 
@@ -166,12 +174,6 @@ response = requests.post(f"{SERVER_URL}/names/get/namespace", json=data)
 print(response.json())
 ```
 
-#### Parameters:
-
-`name` : The name identifying the namespace. This is optional if the address is provided.
-
-`address` : The register address of the namespace to be transferred. This is optional if the name is provided.
-
 #### Return value JSON object:
 
 ```json
@@ -192,7 +194,8 @@ print(response.json())
 
 `address` : The register address of the namespace.
 
-
+---
+&nbsp;
 
 ## transfer/namespace <a href="#transfer/namespace" id="transfer/namespace"></a>
 
@@ -203,6 +206,23 @@ This will transfer ownership of an namespace . This is a generic endpoint requir
 ```
 names/transfer/namespace
 ```
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the namespace. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the namespace to be transferred. This is optional if the address is provided.
+
+`address` : The register address of the namespace to be transferred. This is optional if the name is provided.
+
+`username` : The username identifying the user account (sig-chain) to transfer the namespace to. This is optional if the destination is provided.
+
+`destination` : The genesis hash of the signature chain to transfer the the namespace to. This is optional if the username is provided.
+
+`expires` : This optional field allows callers to specify an expiration for the transfer transaction. The expires value is the `number of seconds` from the transaction creation time after which the transaction can no longer be claimed by the recipient. Conversely, when you apply an expiration to a transaction, you are unable to void the transaction until after the expiration time. If expires is set to 0, the transaction will never expire, making the sender unable to ever void the transaction. If omitted, a default expiration of 7 days (604800 seconds) is applied.
+
 
 ### Code Snippets
 
@@ -248,23 +268,6 @@ response = requests.post(f"{SERVER_URL}/names/transfer/namespace", json=data)
 print(response.json())
 ```
 
-
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the namespace. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the namespace to be transferred. This is optional if the address is provided.
-
-`address` : The register address of the namespace to be transferred. This is optional if the name is provided.
-
-`username` : The username identifying the user account (sig-chain) to transfer the namespace to. This is optional if the destination is provided.
-
-`destination` : The genesis hash of the signature chain to transfer the the namespace to. This is optional if the username is provided.
-
-`expires` : This optional field allows callers to specify an expiration for the transfer transaction. The expires value is the `number of seconds` from the transaction creation time after which the transaction can no longer be claimed by the recipient. Conversely, when you apply an expiration to a transaction, you are unable to void the transaction until after the expiration time. If expires is set to 0, the transaction will never expire, making the sender unable to ever void the transaction. If omitted, a default expiration of 7 days (604800 seconds) is applied.
-
 #### Return value JSON object:
 
 ```json
@@ -292,6 +295,14 @@ Namespaces that have been transferred need to be claimed by the recipient before
 ```
 names/claim/namespace
 ```
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the namespace. For single-user API mode the session should not be supplied.
+
+`txid` : The transaction ID (hash) of the corresponding namespace transfer transaction for which you are claiming.
 
 ### Code Snippets
 
@@ -329,14 +340,6 @@ response = requests.post(f"{SERVER_URL}/names/claim/namespace", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the namespace. For single-user API mode the session should not be supplied.
-
-`txid` : The transaction ID (hash) of the corresponding namespace transfer transaction for which you are claiming.
-
 #### Return value JSON object:
 
 ```json
@@ -368,6 +371,13 @@ This will get the history of a namespace as well as it's ownership. The API supp
 ```
 names/list/namespace/history
 ```
+
+### Parameters
+
+`name` : The name identifying the namespace. This is optional if the address is provided.
+
+`address` : The register address of the namespace. This is optional if the name is provided.
+
 
 ### Code Snippets
 
@@ -404,12 +414,6 @@ response = requests.post(
 print(response.json())
 ```
 
-
-### Parameters
-
-`name` : The name identifying the namespace. This is optional if the address is provided.
-
-`address` : The register address of the namespace. This is optional if the name is provided.
 
 #### Return value JSON object:
 
@@ -465,6 +469,32 @@ This will create a new name. The API supports an alternative endpoint that can i
 names/create/name
 ```
 
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the name should be created with. For single-user API mode the session should not be supplied.
+
+`name` : The name of the object that this name will point to. The name can contain any characters, but must not START with a colon `:`
+
+`namespace` : This optional field allows callers to specify the namespace that the name should be created in. If the namespace is provided then the caller must also be the owner of the namespace. i.e. you cannot create a name in someone elses namespace. If the namespace is left blank (the default) then the Name will be created in the users local namespace (unless specifically flagged as global).
+
+`global` : This optional, boolean field indicates that the Name should be created in the global namespace, i.e. it will be globally unique. If the caller sets this field to true, the namespace parameter is ignored.
+
+`register_address` : The 256-bit hexadecimal register address of the object that this Name will point to.
+
+#### Example
+
+The following example creates a name for "asset1" in the namespace "ourcompany", which points to an asset at the register address beginning with bf501... The caller must own the namespace "ourcompany" but the asset asset1 can be owned by someone else. Once created, the asset can be retrieved by the name "ourcompany::asset1"
+
+```json
+{
+    "name": "asset1",
+    "namespace": "ourcompany",
+    "register_address": "8CvLySLAWEKDB9SJSUDdRgzAG6ALVcXLzPQREN9Nbf7AzuJkg5P"
+}
+```
+
 ### Code Snippets
 
 #### Javascript:
@@ -510,32 +540,6 @@ print(response.json())
 ```
 
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the name should be created with. For single-user API mode the session should not be supplied.
-
-`name` : The name of the object that this name will point to. The name can contain any characters, but must not START with a colon `:`
-
-`namespace` : This optional field allows callers to specify the namespace that the name should be created in. If the namespace is provided then the caller must also be the owner of the namespace. i.e. you cannot create a name in someone elses namespace. If the namespace is left blank (the default) then the Name will be created in the users local namespace (unless specifically flagged as global).
-
-`global` : This optional, boolean field indicates that the Name should be created in the global namespace, i.e. it will be globally unique. If the caller sets this field to true, the namespace parameter is ignored.
-
-`register_address` : The 256-bit hexadecimal register address of the object that this Name will point to.
-
-#### Example
-
-The following example creates a name for "asset1" in the namespace "ourcompany", which points to an asset at the register address beginning with bf501... The caller must own the namespace "ourcompany" but the asset asset1 can be owned by someone else. Once created, the asset can be retrieved by the name "ourcompany::asset1"
-
-```json
-{
-    "name": "asset1",
-    "namespace": "ourcompany",
-    "register_address": "8CvLySLAWEKDB9SJSUDdRgzAG6ALVcXLzPQREN9Nbf7AzuJkg5P"
-}
-```
-
 #### Return value JSON object:
 
 ```json
@@ -565,6 +569,15 @@ The API supports an alternative endpoint that can include the name in the URL. F
 ```
 names/get/name
 ```
+
+### Parameters
+
+`name` : The name identifying the name object. The name should be in the format username:name (for local names) or name.namespace (for names in a global namespace). If the `name` parameter is provided then all other parameters are ignored.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which signature chain should be searched. For single-user API mode the session should not be supplied, and the logged in signature chain will be used. This parameter is ignored if `name` is provided.
+
+`register_address` : The register address to search for. If provided then the Names owned by the callers signature chain are searched to find a match. This parameter is ignored if `name` is provided.
+
 
 ### Code Snippets
 
@@ -601,14 +614,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/names/get/name", json=data)
 print(response.json())
 ```
-
-### Parameters
-
-`name` : The name identifying the name object. The name should be in the format username:name (for local names) or name.namespace (for names in a global namespace). If the `name` parameter is provided then all other parameters are ignored.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which signature chain should be searched. For single-user API mode the session should not be supplied, and the logged in signature chain will be used. This parameter is ignored if `name` is provided.
-
-`register_address` : The register address to search for. If provided then the Names owned by the callers signature chain are searched to find a match. This parameter is ignored if `name` is provided.
 
 #### Return value JSON object:
 
@@ -653,6 +658,29 @@ This method allows the register\_address within a Name object to be changed. The
 names/update/name
 ```
 
+### Parameters
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the name. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the Name object to update. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the asset was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`address` : The register address of the name to update. This is optional if the name is provided.
+
+`register_address` : The new register address that this Name should point to.
+
+#### Example:
+
+The following example updates the register\_address field for the name "asset1.ourcompany"
+
+```json
+{
+    "pin": "1234",
+    "name": "asset1.ourcompany",
+    "register_address": "8CvLySLAWEKDB9SJSUDdRgzAG6ALVcXLzPQREN9Nbf7AzuJkg5P"
+}
+```
+
 ### Code Snippets
 
 #### Javascript:
@@ -695,29 +723,6 @@ print(response.json())
 ```
 
 
-### Parameters
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the name. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the Name object to update. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the asset was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`address` : The register address of the name to update. This is optional if the name is provided.
-
-`register_address` : The new register address that this Name should point to.
-
-#### Example:
-
-The following example updates the register\_address field for the name "asset1.ourcompany"
-
-```json
-{
-    "pin": "1234",
-    "name": "asset1.ourcompany",
-    "register_address": "8CvLySLAWEKDB9SJSUDdRgzAG6ALVcXLzPQREN9Nbf7AzuJkg5P"
-}
-```
-
 #### Return value JSON object:
 
 ```json
@@ -745,6 +750,23 @@ This will transfer ownership of a name . Only global names or names created in a
 ```
 names/transfer/name
 ```
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the name. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the name to be transferred. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the address is provided.
+
+`address` : The register address of the name to be transferred. This is optional if the name is provided.
+
+`username` : The username identifying the user account (sig-chain) to transfer the name to. This is optional if the destination is provided.
+
+`destination` : The genesis hash of the signature chain to transfer the the name to. This is optional if the username is provided.
+
+`expires` : This optional field allows callers to specify an expiration for the transfer transaction. The expires value is the `number of seconds` from the transaction creation time after which the transaction can no longer be claimed by the recipient. Conversely, when you apply an expiration to a transaction, you are unable to void the transaction until after the expiration time. If expires is set to 0, the transaction will never expire, making the sender unable to ever void the transaction. If omitted, a default expiration of 7 days (604800 seconds) is applied.
+
 
 ### Code Snippets
 
@@ -792,22 +814,6 @@ print(response.json())
 ```
 
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the name. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the name to be transferred. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the address is provided.
-
-`address` : The register address of the name to be transferred. This is optional if the name is provided.
-
-`username` : The username identifying the user account (sig-chain) to transfer the name to. This is optional if the destination is provided.
-
-`destination` : The genesis hash of the signature chain to transfer the the name to. This is optional if the username is provided.
-
-`expires` : This optional field allows callers to specify an expiration for the transfer transaction. The expires value is the `number of seconds` from the transaction creation time after which the transaction can no longer be claimed by the recipient. Conversely, when you apply an expiration to a transaction, you are unable to void the transaction until after the expiration time. If expires is set to 0, the transaction will never expire, making the sender unable to ever void the transaction. If omitted, a default expiration of 7 days (604800 seconds) is applied.
-
 #### Return value JSON object:
 
 ```json
@@ -835,6 +841,16 @@ Names that have been transferred need to be claimed by the recipient before the 
 ```
 names/claim/name
 ```
+
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the name. For single-user API mode the session should not be supplied.
+
+`txid` : The transaction ID (hash) of the corresponding name transfer transaction for which you are claiming.
+
 
 ### Code Snippets
 
@@ -872,14 +888,6 @@ response = requests.post(f"{SERVER_URL}/names/claim/name", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the name. For single-user API mode the session should not be supplied.
-
-`txid` : The transaction ID (hash) of the corresponding name transfer transaction for which you are claiming.
-
 #### Return value JSON object:
 
 ```json
@@ -911,6 +919,13 @@ This will get the history of a name as well as it's ownership. The API supports 
 ```
 names/list/name/history
 ```
+
+### Parameters
+
+`name` : The name identifying the name. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the address is provided.
+
+`address` : The register address of the name. This is optional if the name is provided.
+
 
 ### Code Snippets
 
@@ -947,11 +962,6 @@ response = requests.post(f"{SERVER_URL}/list/name/history", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`name` : The name identifying the name. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the address is provided.
-
-`address` : The register address of the name. This is optional if the name is provided.
 
 #### Return value JSON object:
 
