@@ -2,7 +2,7 @@
 title: SUPPLY
 description: Supply API
 published: true
-date: 2022-11-14T17:21:46.038Z
+date: 2022-11-15T06:44:58.083Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:55.390Z
@@ -52,6 +52,20 @@ This will create a new item, assigning ownership to the user logged in to the pr
 supply/create/item
 ```
 
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the asset should be created with. For single-user API mode the session should not be supplied.
+
+`name` : An optional name to identify the item. If provided a Name object will also be created in the users local namespace, allowing the item to be accessed/retrieved by name. If no name is provided the item will need to be accessed/retrieved by its 256-bit register address.
+
+`data` : The data to store in the item
+
+> There is a limit of 1KB for Item data to be saved in the register, excluding the Item Name.
+{.is-info}
+
+
 ### Code Snippets
 
 #### Javascript:
@@ -90,19 +104,6 @@ response = requests.post(f"{SERVER_URL}/supply/create/item", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the asset should be created with. For single-user API mode the session should not be supplied.
-
-`name` : An optional name to identify the item. If provided a Name object will also be created in the users local namespace, allowing the item to be accessed/retrieved by name. If no name is provided the item will need to be accessed/retrieved by its 256-bit register address.
-
-`data` : The data to store in the item
-
-> There is a limit of 1KB for Item data to be saved in the register, excluding the Item Name.
-{.is-info}
-
 #### Return value JSON object:
 
 ```json
@@ -132,6 +133,17 @@ Additionally the API supports passing a field name in the URL after the asset na
 ```
 supply/get/item
 ```
+
+### Parameters
+
+`name` : The name identifying the item. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the item was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the item. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
+
+`address` : The register address of the item. This is optional if the name is provided.
+
+`fieldname`: This optional field can be used to filter the response to return only a single field from the item.
+
 
 ### Code Snippets
 
@@ -171,17 +183,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/supply/get/item", json=data)
 print(response.json())
 ```
-
-
-### Parameters
-
-`name` : The name identifying the item. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the item was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the item. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
-
-`address` : The register address of the item. This is optional if the name is provided.
-
-`fieldname`: This optional field can be used to filter the response to return only a single field from the item.
 
 #### Return value JSON object:
 
@@ -223,6 +224,19 @@ This is the generic endpoint for updating the data value in an item. The API sup
 supply/update/item
 ```
 
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the supply should be created with. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the supply to update. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the item was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`address` : The register address of the supply to update. This is optional if the name is provided.
+
+`data` : The new value of the data field in this item.
+
+
 ### Code Snippets
 
 #### Javascript:
@@ -263,18 +277,6 @@ response = requests.post(f"{SERVER_URL}/supply/update/item", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the supply should be created with. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the supply to update. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the item was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`address` : The register address of the supply to update. This is optional if the name is provided.
-
-`data` : The new value of the data field in this item
-
 #### Return value JSON object:
 
 ```json
@@ -302,6 +304,23 @@ This will transfer ownership of an item. This is a generic endpoint requiring th
 ```
 supply/transfer/item
 ```
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the item. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the item to be transferred. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the item was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`address` : The register address of the item to be transferred. This is optional if the name is provided.
+
+`username` : The username identifying the user account (sig-chain) to transfer the item to. This is optional if the destination is provided.
+
+`destination` : The genesis hash of the signature chain to transfer the the item to. This is optional if the username is provided.
+
+`expires` : This optional field allows callers to specify an expiration for the transfer transaction. The expires value is the `number of seconds` from the transaction creation time after which the transaction can no longer be claimed by the recipient. Conversely, when you apply an expiration to a transaction, you are unable to void the transaction until after the expiration time. If expires is set to 0, the transaction will never expire, making the sender unable to ever void the transaction. If omitted, a default expiration of 7 days (604800 seconds) is applied.
+
 
 ### Code Snippets
 
@@ -349,22 +368,6 @@ response = requests.post(f"{SERVER_URL}/supply/transfer/item", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the item. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the item to be transferred. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the item was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`address` : The register address of the item to be transferred. This is optional if the name is provided.
-
-`username` : The username identifying the user account (sig-chain) to transfer the item to. This is optional if the destination is provided.
-
-`destination` : The genesis hash of the signature chain to transfer the the item to. This is optional if the username is provided.
-
-`expires` : This optional field allows callers to specify an expiration for the transfer transaction. The expires value is the `number of seconds` from the transaction creation time after which the transaction can no longer be claimed by the recipient. Conversely, when you apply an expiration to a transaction, you are unable to void the transaction until after the expiration time. If expires is set to 0, the transaction will never expire, making the sender unable to ever void the transaction. If omitted, a default expiration of 7 days (604800 seconds) is applied.
-
 #### Return value JSON object:
 
 ```json
@@ -392,6 +395,17 @@ Items that have been transferred need to be claimed by the recipient before the 
 ```
 supply/claim/item
 ```
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the item. For single-user API mode the session should not be supplied.
+
+`txid` : The transaction ID (hash) of the corresponding item transfer transaction for which you are claiming.
+
+`name` : This optional field allows the user to rename an item when it is claimed. By default the name is copied from the previous owner and a Name record is created for the item in your user namespace. If you already have an object for this name then you will need to provide a new name in order for the claim to succeed.
+
 
 ### Code Snippets
 
@@ -433,16 +447,6 @@ print(response.json())
 ```
 
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the item. For single-user API mode the session should not be supplied.
-
-`txid` : The transaction ID (hash) of the corresponding item transfer transaction for which you are claiming.
-
-`name` : This optional field allows the user to rename an item when it is claimed. By default the name is copied from the previous owner and a Name record is created for the item in your user namespace. If you already have an object for this name then you will need to provide a new name in order for the claim to succeed.
-
 #### Return value JSON object:
 
 ```json
@@ -473,6 +477,15 @@ This will get the history of changes to an item, including both the data and it'
 ```
 supply/list/item/history
 ```
+
+### Parameters
+
+`name` : The name identifying the item. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the item was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the item. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
+
+`address` : The register address of the item. This is optional if the name is provided.
+
 
 ### Code Snippets
 
@@ -511,14 +524,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/supply/list/item/history", json=data)
 print(response.json())
 ```
-
-#### Parameters:
-
-`name` : The name identifying the item. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the item was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the item. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
-
-`address` : The register address of the item. This is optional if the name is provided.
 
 #### Return value JSON object:
 
