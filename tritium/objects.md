@@ -2,7 +2,7 @@
 title: OBJECTS
 description: Objects API
 published: true
-date: 2022-11-14T17:39:05.540Z
+date: 2022-11-15T06:39:34.373Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:47.887Z
@@ -40,64 +40,6 @@ This will create a new object schema, a special type of object that can be used 
 ```
 objects/create/schema
 ```
-
-### Code Snippets
-
-#### Javascript:
-
-```javascript
-// create/schema
-const SERVER_URL = "http://api.nexus-interactions.io:8080"
-let data = {
-    pin: "YOUR_PIN",
-    // session: "YOUR_SESSION_ID", //optional
-    name: "NAME TO IDENTIFY THE SCHEMA", // If provided a Name object will also be created in the users local namespace, allowing the schema to be accessed/retrieved by name. If no name is provided the schema will need to be accessed/retrieved by its 256-bit register address.
-    format: "JSON", // Values can be JSON (the default), ANSI (not currently supported), or XML (not currently supported). This is an optional field and the value JSON is assumed if omitted.
-    //If format is JSON, then this field will hold the json definition of the schema as a JSON array representing each field in the object. It uses the following format:
-    json: {
-        name: "NAME OF THE DATA FIELD",
-        type: "string", // Values can be uint8, uint16, uint32, uint64, uint256, uint512, uint1024, string, or bytes.
-        // max_length : 1024,//Optional, the maximum number of characters if type=string
-        value: "DEFAULT VALUE OF THE FIELD",
-        // mutable : true, //The boolean field to indicate whether the field is writable (true) or read-only (false).
-    }
-}
-fetch(`${SERVER_URL}/objects/create/schema`, {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    })
-    .then(resp => resp.json())
-    .then(json => console.log(json))
-    .catch(error => console.log(error))
-```
-
-#### Pyhton:
-
-```python
-import requests
-SERVER_URL = "http://api.nexus-interactions.io:8080"
-data = {
-    "pin": "YOUR_PIN",
-    # "session": "YOUR_SESSION_ID", #optional
-    # If provided a Name object will also be created in the users local namespace, allowing the schema to be accessed/retrieved by name. If no name is provided the schema will need to be accessed/retrieved by its 256-bit register address.
-    "name": "NAME TO IDENTIFY THE SCHEMA",
-    # Values can be JSON (the default), ANSI (not currently supported), or XML (not currently supported). This is an optional field and the value JSON is assumed if omitted.
-    "format": "JSON",
-    # If format is JSON, then this field will hold the json definition of the schema as a JSON array representing each field in the object. It uses the following format:
-    "json": {
-        "name": "NAME OF THE DATA FIELD",
-        # Values can be uint8, uint16, uint32, uint64, uint256, uint512, uint1024, string, or bytes.
-        "type": "string",
-        # "max_length" : 1024,#Optional, the maximum number of characters if type=string
-        "value": "DEFAULT VALUE OF THE FIELD",
-        # "mutable" : True, #The boolean field to indicate whether the field is writable (True) or read-only (False).
-    }
-}
-response = requests.post(f"{SERVER_URL}/objects/create/schema", json=data)
-print(response.json())
-```
-
 
 ### Parameters
 
@@ -153,6 +95,63 @@ The following is an example of an object defined using the `JSON` format:\
 }
 ```
 
+### Code Snippets
+
+#### Javascript:
+
+```javascript
+// create/schema
+const SERVER_URL = "http://api.nexus-interactions.io:8080"
+let data = {
+    pin: "YOUR_PIN",
+    // session: "YOUR_SESSION_ID", //optional
+    name: "NAME TO IDENTIFY THE SCHEMA", // If provided a Name object will also be created in the users local namespace, allowing the schema to be accessed/retrieved by name. If no name is provided the schema will need to be accessed/retrieved by its 256-bit register address.
+    format: "JSON", // Values can be JSON (the default), ANSI (not currently supported), or XML (not currently supported). This is an optional field and the value JSON is assumed if omitted.
+    //If format is JSON, then this field will hold the json definition of the schema as a JSON array representing each field in the object. It uses the following format:
+    json: {
+        name: "NAME OF THE DATA FIELD",
+        type: "string", // Values can be uint8, uint16, uint32, uint64, uint256, uint512, uint1024, string, or bytes.
+        // max_length : 1024,//Optional, the maximum number of characters if type=string
+        value: "DEFAULT VALUE OF THE FIELD",
+        // mutable : true, //The boolean field to indicate whether the field is writable (true) or read-only (false).
+    }
+}
+fetch(`${SERVER_URL}/objects/create/schema`, {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(resp => resp.json())
+    .then(json => console.log(json))
+    .catch(error => console.log(error))
+```
+
+#### Python:
+
+```python
+import requests
+SERVER_URL = "http://api.nexus-interactions.io:8080"
+data = {
+    "pin": "YOUR_PIN",
+    # "session": "YOUR_SESSION_ID", #optional
+    # If provided a Name object will also be created in the users local namespace, allowing the schema to be accessed/retrieved by name. If no name is provided the schema will need to be accessed/retrieved by its 256-bit register address.
+    "name": "NAME TO IDENTIFY THE SCHEMA",
+    # Values can be JSON (the default), ANSI (not currently supported), or XML (not currently supported). This is an optional field and the value JSON is assumed if omitted.
+    "format": "JSON",
+    # If format is JSON, then this field will hold the json definition of the schema as a JSON array representing each field in the object. It uses the following format:
+    "json": {
+        "name": "NAME OF THE DATA FIELD",
+        # Values can be uint8, uint16, uint32, uint64, uint256, uint512, uint1024, string, or bytes.
+        "type": "string",
+        # "max_length" : 1024,#Optional, the maximum number of characters if type=string
+        "value": "DEFAULT VALUE OF THE FIELD",
+        # "mutable" : True, #The boolean field to indicate whether the field is writable (True) or read-only (False).
+    }
+}
+response = requests.post(f"{SERVER_URL}/objects/create/schema", json=data)
+print(response.json())
+```
+
 #### Return value JSON object:
 
 ```json
@@ -180,6 +179,19 @@ Retrieves the schema / object definition of an object.
 ```
 objects/get/schema
 ```
+
+### Parameters
+
+`name` : The name identifying the object. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the object. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
+
+`address` : The register address of the object. This is optional if the name is provided.
+
+`format` : The format that the schema should be returned in. Values can be `JSON` (the default), `ANSI` (not currently supported), or `XML` (not currently supported). This is optional field and the value `JSON` is assumed if omitted.
+
+**NOTE**: If the object was initially created using the `raw` format then this API method will error as there is no schema associated with a raw state register.
+
 ### Code Snippets
 
 #### Javascript:
@@ -220,18 +232,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/objects/get/schema", json=data)
 print(response.json())
 ```
-
-### Parameters
-
-`name` : The name identifying the object. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the object. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
-
-`address` : The register address of the object. This is optional if the name is provided.
-
-`format` : The format that the schema should be returned in. Values can be `JSON` (the default), `ANSI` (not currently supported), or `XML` (not currently supported). This is optional field and the value `JSON` is assumed if omitted.
-
-**NOTE**: If the object was initially created using the `raw` format then this API method will error as there is no schema associated with a raw state register.
 
 #### Return value JSON object:
 
