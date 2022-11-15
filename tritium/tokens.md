@@ -2,7 +2,7 @@
 title: TOKENS
 description: Tokens API
 published: true
-date: 2022-11-15T05:26:11.607Z
+date: 2022-11-15T05:27:03.220Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:11.019Z
@@ -39,7 +39,7 @@ The following methods are currently supported by this API
 [`get/account`](#get/account)
 [`list/account/transactions`](#list/account/transactions)
 
-## <a href="#create/token" id="create/token">create/token</a>
+## create/token <a href="#create/token" id="create/token"></a>
 
 Create a new token object register. The API supports an alternative endpoint that can include the new token name in the URI. For example `/tokens/create/token/mytoken` will resolve to `tokens/create/token?name=mytoken`.
 
