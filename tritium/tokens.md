@@ -2,7 +2,7 @@
 title: TOKENS
 description: Tokens API
 published: true
-date: 2022-11-15T06:04:01.918Z
+date: 2022-11-15T06:32:01.333Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:30:11.019Z
@@ -49,6 +49,29 @@ Create a new token object register. The API supports an alternative endpoint tha
 tokens/create/token
 ```
 
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the token should be created with. For single-user API mode the session should not be supplied.
+
+`name` : An optional name to identify the token. If provided a Name object will also be created in the users local namespace, allowing the token to be accessed/retrieved by name. If no name is provided the token will need to be accessed/retrieved by its 256-bit register address.
+
+`supply` : The initial token supply amount. Must be a whole number amount.
+
+`decimals` : The maximum number of decimal places that can be applied to token amounts. For example decimals=2 will allow a token amount to be given to 2 decimal places.
+
+#### Example:
+
+```json
+{
+    "pin": "1234",
+    "name": "ABC",
+    "supply": 1000000,
+    "decimals": 4
+}
+```
+
 ### Code Snippets
 
 #### Javascript:
@@ -90,30 +113,6 @@ response = requests.post(f"{SERVER_URL}/tokens/create/token", json=data)
 print(response.json())
 ```
 
-
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the token should be created with. For single-user API mode the session should not be supplied.
-
-`name` : An optional name to identify the token. If provided a Name object will also be created in the users local namespace, allowing the token to be accessed/retrieved by name. If no name is provided the token will need to be accessed/retrieved by its 256-bit register address.
-
-`supply` : The initial token supply amount. Must be a whole number amount.
-
-`decimals` : The maximum number of decimal places that can be applied to token amounts. For example decimals=2 will allow a token amount to be given to 2 decimal places.
-
-#### Example:
-
-```json
-{
-    "pin": "1234",
-    "name": "ABC",
-    "supply": 1000000,
-    "decimals": 4
-}
-```
-
 #### Return value JSON object:
 
 ```json
@@ -144,62 +143,6 @@ The method supports the ability to send to multiple recipients in one transactio
 ```
 tokens/debit/token
 ```
-
-### Code Snippets
-
-#### Javascript:
-
-```javascript
-// debit/token
-const SERVER_URL = "http://api.nexus-interactions.io:8080"
-
-let data = {
-  pin: "YOUR_PIN",
-  //  session: "YOUR_SESSION_ID" //optional
-  name: "TOKEN_NAME", //optional if address is passed
-  // address: "TOKEN_ADDRESS", // optional if name is passed 
-  amount: 10,
-  name_to: "TO_TOKEN_NAME", //optional if address_to is passed
-  // address_to: "TO_TOKEN_ADDRESS", //optional if name_to is passed
-  // reference: "64-bit unsigned integer", optional
-  // expires: 604800, //optional (in seconds)
-  // recipients: [
-  //   { name: "NAME", amount: 10, name_to: "NAME_TO" },
-  //   { name: "NAME", amount: 10, name_to: "NAME_TO" }
-  // ] //optional
-}
-fetch(`${SERVER_URL}/tokens/debit/token`, {
-  method: 'POST',
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(data)
-})
-  .then(resp => resp.json())
-  .then(json => console.log(json))
-  .catch(error => console.log(error))
-```
-
-#### Python:
-
-```python
-import requests
-SERVER_URL = "http://api.nexus-interactions.io:8080"
-data = {
-    "pin": "YOUR_PIN",
-    #  "session": "YOUR_SESSION_ID" #optional
-    "name": "TOKEN_NAME",  # optional if address is passed
-    # "address": "TOKEN_ADDRESS", # optional if name is passed
-    "amount": 10,
-    "name_to": "TO_TOKEN_NAME",  # optional if address_to is passed
-    # "address_to": "TO_TOKEN_ADDRESS", #optional if name_to is passed
-    # "reference": "64-bit unsigned integer", optional
-    # "expires": 604800, #optional (in seconds)
-    # "recipients": [
-    #   { "name": "NAME", amount: 10, name_to: "NAME_TO"
-}
-response = requests.post(f"{SERVER_URL}/tokens/debit/token", json=data)
-print(response.json())
-```
-
 
 ### Parameters
 
@@ -265,6 +208,61 @@ The following example shows the json payload for a debit from a token called "AB
 }
 ```
 
+### Code Snippets
+
+#### Javascript:
+
+```javascript
+// debit/token
+const SERVER_URL = "http://api.nexus-interactions.io:8080"
+
+let data = {
+  pin: "YOUR_PIN",
+  //  session: "YOUR_SESSION_ID" //optional
+  name: "TOKEN_NAME", //optional if address is passed
+  // address: "TOKEN_ADDRESS", // optional if name is passed 
+  amount: 10,
+  name_to: "TO_TOKEN_NAME", //optional if address_to is passed
+  // address_to: "TO_TOKEN_ADDRESS", //optional if name_to is passed
+  // reference: "64-bit unsigned integer", optional
+  // expires: 604800, //optional (in seconds)
+  // recipients: [
+  //   { name: "NAME", amount: 10, name_to: "NAME_TO" },
+  //   { name: "NAME", amount: 10, name_to: "NAME_TO" }
+  // ] //optional
+}
+fetch(`${SERVER_URL}/tokens/debit/token`, {
+  method: 'POST',
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data)
+})
+  .then(resp => resp.json())
+  .then(json => console.log(json))
+  .catch(error => console.log(error))
+```
+
+#### Python:
+
+```python
+import requests
+SERVER_URL = "http://api.nexus-interactions.io:8080"
+data = {
+    "pin": "YOUR_PIN",
+    #  "session": "YOUR_SESSION_ID" #optional
+    "name": "TOKEN_NAME",  # optional if address is passed
+    # "address": "TOKEN_ADDRESS", # optional if name is passed
+    "amount": 10,
+    "name_to": "TO_TOKEN_NAME",  # optional if address_to is passed
+    # "address_to": "TO_TOKEN_ADDRESS", #optional if name_to is passed
+    # "reference": "64-bit unsigned integer", optional
+    # "expires": 604800, #optional (in seconds)
+    # "recipients": [
+    #   { "name": "NAME", amount: 10, name_to: "NAME_TO"
+}
+response = requests.post(f"{SERVER_URL}/tokens/debit/token", json=data)
+print(response.json())
+```
+
 #### Return value JSON object:
 
 ```json
@@ -288,6 +286,31 @@ Increment the token balance by an amount received from a token account. This met
 
 ```
 tokens/credit/token
+```
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the token account. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the token to debit. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the token was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`address` : The register address of the token to credit. This is optional if the name is provided.
+
+`txid` : The transaction ID (hash) of the corresponding debit transaction for which you are creating this credit for.
+
+#### Example:
+
+The following example shows the json payload for a credit to a token called "mytoken" (that itself was created by the sig chain logged into session "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8").
+
+```json
+{
+    "pin": "1234",
+    "session": "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8",
+    "name": "mytoken",
+    "txid": "f9dcd28bce2563ab288fab76cf3ee5149ea938c735894ce4833b55e474e08e8a519e8005e09e2fc19623577a8839a280ca72b6430ee0bdf13b3d9f785bc7397d"
+}
 ```
 
 ### Code Snippets
@@ -331,31 +354,6 @@ response = requests.post(f"{SERVER_URL}/tokens/credit/token", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the token account. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the token to debit. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the token was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`address` : The register address of the token to credit. This is optional if the name is provided.
-
-`txid` : The transaction ID (hash) of the corresponding debit transaction for which you are creating this credit for.
-
-#### Example:
-
-The following example shows the json payload for a credit to a token called "mytoken" (that itself was created by the sig chain logged into session "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8").
-
-```json
-{
-    "pin": "1234",
-    "session": "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8",
-    "name": "mytoken",
-    "txid": "f9dcd28bce2563ab288fab76cf3ee5149ea938c735894ce4833b55e474e08e8a519e8005e09e2fc19623577a8839a280ca72b6430ee0bdf13b3d9f785bc7397d"
-}
-```
-
 #### Return value JSON object:
 
 ```json
@@ -382,6 +380,19 @@ Additionally the API supports passing a field name in the URL after the token na
 ```
 tokens/get/token
 ```
+
+### Parameters
+
+`name` : The name identifying the token to retrieve information. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the token was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the token. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
+
+`address` : The register address of the token to retrieve. This is optional if the name is provided.
+
+`count` : Optional boolean field that determines whether the response includes the transaction `count` field. This defaults to false, as including the transaction count can slow the response time of the method considerably.
+
+`fieldname`: This optional field can be used to filter the response to return only a single field from the token.
+
 
 ### Code Snippets
 
@@ -423,18 +434,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/tokens/get/token", json=data)
 print(response.json())
 ```
-
-### Parameters
-
-`name` : The name identifying the token to retrieve information. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the token was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the token. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
-
-`address` : The register address of the token to retrieve. This is optional if the name is provided.
-
-`count` : Optional boolean field that determines whether the response includes the transaction `count` field. This defaults to false, as including the transaction count can slow the response time of the method considerably.
-
-`fieldname`: This optional field can be used to filter the response to return only a single field from the token.
 
 #### Return value JSON object:
 
@@ -493,6 +492,33 @@ This method can be used to take tokens permanently out of the current supply, a 
 tokens/burn/token
 ```
 
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the token owner. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the account to debit the tokens from to be burnt. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the token was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`address` : The register address of the account to debit the tokens from the be burnt. This is optional if the name is provided.
+
+`amount` : The amount of tokens to burn.
+
+`reference` : This optional field allows callers to provide a reference, which the recipient can then use to relate the transaction to an order number, invoice number etc. The reference is be a 64-bit unsigned integer in the range of 0 to 18446744073709551615
+
+#### Example:
+
+The following example shows the json payload for a burn of 100 tokens from an account called "main" (that itself was created by the sig chain logged into session "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8")
+
+```json
+{
+    "pin": "1234",
+    "session": "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8",
+    "name": "main",
+    "amount": 100
+}
+```
+
 ### Code Snippets
 
 #### Javascript:
@@ -534,33 +560,6 @@ response = requests.post(f"{SERVER_URL}/tokens/burn/token", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the token owner. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the account to debit the tokens from to be burnt. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the token was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`address` : The register address of the account to debit the tokens from the be burnt. This is optional if the name is provided.
-
-`amount` : The amount of tokens to burn.
-
-`reference` : This optional field allows callers to provide a reference, which the recipient can then use to relate the transaction to an order number, invoice number etc. The reference is be a 64-bit unsigned integer in the range of 0 to 18446744073709551615
-
-#### Example:
-
-The following example shows the json payload for a burn of 100 tokens from an account called "main" (that itself was created by the sig chain logged into session "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8")
-
-```json
-{
-    "pin": "1234",
-    "session": "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8",
-    "name": "main",
-    "amount": 100
-}
-```
-
 #### Return value JSON object:
 
 ```json
@@ -594,6 +593,32 @@ This will list off all of the transactions related to a given token. You DO NOT 
 ```
 tokens/list/token/transactions
 ```
+
+### Parameters
+
+`genesis` : The genesis hash identifying the signature chain to scan for transactions (optional if username is supplied or already logged in).
+
+`username` : The username identifying the signature chain to scan for transactions(optional if genesis is supplied or already logged in).
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the token name in order to deduce the register address of the token. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the token to list transactions for. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`address` : The register address of the token to list transactions for. This is optional if the name is provided.
+
+`verbose` : Optional, determines how much transaction data to include in the response. Supported values are :
+
+* `default` : hash, contracts
+* `summary` : type, version, sequence, timestamp, operation, and confirmations.
+* `detail` : genesis, nexthash, prevhash, pubkey and signature.
+
+`limit` : The number of records to return for the current page. The default is 100.
+
+`page` : Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied.
+
+`offset` : An alternative to `page`, offset can be used to return a set of (limit) results from a particular index.
+
+`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results.
 
 ### Code Snippets
 
@@ -646,32 +671,6 @@ response = requests.post(
     f"{SERVER_URL}/tokens/list/token/transactions", json=data)
 print(response.json())
 ```
-
-### Parameters
-
-`genesis` : The genesis hash identifying the signature chain to scan for transactions (optional if username is supplied or already logged in).
-
-`username` : The username identifying the signature chain to scan for transactions(optional if genesis is supplied or already logged in).
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the token name in order to deduce the register address of the token. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the token to list transactions for. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`address` : The register address of the token to list transactions for. This is optional if the name is provided.
-
-`verbose` : Optional, determines how much transaction data to include in the response. Supported values are :
-
-* `default` : hash, contracts
-* `summary` : type, version, sequence, timestamp, operation, and confirmations.
-* `detail` : genesis, nexthash, prevhash, pubkey and signature.
-
-`limit` : The number of records to return for the current page. The default is 100.
-
-`page` : Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied.
-
-`offset` : An alternative to `page`, offset can be used to return a set of (limit) results from a particular index.
-
-`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results
 
 #### Return value JSON object:
 
@@ -769,6 +768,23 @@ This will list all accounts (globally) that have been created for a particular t
 tokens/list/token/accounts
 ```
 
+### Parameters
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the token name in order to deduce the register address of the token. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the token to list accounts for. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`address` : The register address of the token to list transactions for. This is optional if the name is provided.
+
+`limit` : The number of records to return for the current page. The default is 100.
+
+`page` : Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied.
+
+`offset` : An alternative to `page`, offset can be used to return a set of (limit) results from a particular index.
+
+`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results
+
+
 ### Code Snippets
 
 #### Javascript:
@@ -815,21 +831,6 @@ response = requests.post(f"{SERVER_URL}/tokens/list/token/accounts", json=data)
 print(response.json())
 ```
 
-### Parameters
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the token name in order to deduce the register address of the token. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the token to list accounts for. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`address` : The register address of the token to list transactions for. This is optional if the name is provided.
-
-`limit` : The number of records to return for the current page. The default is 100.
-
-`page` : Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied.
-
-`offset` : An alternative to `page`, offset can be used to return a set of (limit) results from a particular index.
-
-`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results
 
 #### Return value JSON object:
 
@@ -877,6 +878,42 @@ Create a new token account for receiving tokens. The API supports an alternative
 tokens/create/account
 ```
 
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the token account should be created with. For single-user API mode the session should not be supplied.
+
+`name` : An optional name to identify the account. If provided a Name object will also be created in the users local namespace, allowing the account to be accessed/retrieved by name. If no name is provided the account will need to be accessed/retrieved by its 256-bit register address.
+
+`token_name` : This is the name of the token that the account can be used for. The token name should be supplied in the format `username:tokenname`. This is optional if the token address is supplied.
+
+`token` : This is the address of the token that the account can be used for. This is optional if token\_name is supplied.
+
+#### Example:
+
+This example creates a token account called "main" for a token identified by the token name. NOTE the name has been qualified with a namespace which is the username of the signature chain that created the token
+
+```json
+{
+    "pin": "1234",
+    "name": "main",
+    "token_name": "bob:ABC"
+}
+```
+
+#### Example:
+
+This example creates a token account called "savings" for a token identified by its register address.
+
+```json
+{
+    "pin": "1234",
+    "name": "savings",
+    "token": "8CvLySLAWEKDB9SJSUDdRgzAG6ALVcXLzPQREN9Nbf7AzuJkg5P"
+}
+```
+
 ### Code Snippets
 
 #### Javascript:
@@ -920,42 +957,6 @@ print(response.json())
 ```
 
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) the token account should be created with. For single-user API mode the session should not be supplied.
-
-`name` : An optional name to identify the account. If provided a Name object will also be created in the users local namespace, allowing the account to be accessed/retrieved by name. If no name is provided the account will need to be accessed/retrieved by its 256-bit register address.
-
-`token_name` : This is the name of the token that the account can be used for. The token name should be supplied in the format `username:tokenname`. This is optional if the token address is supplied.
-
-`token` : This is the address of the token that the account can be used for. This is optional if token\_name is supplied.
-
-#### Example:
-
-This example creates a token account called "main" for a token identified by the token name. NOTE the name has been qualified with a namespace which is the username of the signature chain that created the token
-
-```json
-{
-    "pin": "1234",
-    "name": "main",
-    "token_name": "bob:ABC"
-}
-```
-
-#### Example:
-
-This example creates a token account called "savings" for a token identified by its register address.
-
-```json
-{
-    "pin": "1234",
-    "name": "savings",
-    "token": "8CvLySLAWEKDB9SJSUDdRgzAG6ALVcXLzPQREN9Nbf7AzuJkg5P"
-}
-```
-
 #### Return value JSON object:
 
 ```json
@@ -986,60 +987,6 @@ The method supports the ability to send to multiple recipients in one transactio
 
 ```
 tokens/debit/account
-```
-
-### Code Snippets
-
-#### Javascript:
-
-```javascript
-// debit/account
-const SERVER_URL = "http://api.nexus-interactions.io:8080"
-let data = {
-  pin: "YOUR_PIN",
-  //  session: "YOUR_SESSION_ID" //optional
-  name: "TOKEN_NAME", //optional if address is passed
-  // address: "TOKEN_ADDRESS", // optional if name is passed 
-  amount: 10,
-  name_to: "TO_TOKEN_NAME", //optional if address_to is passed
-  // address_to: "TO_TOKEN_ADDRESS", //optional if name_to is passed
-  // reference: "64-bit unsigned integer", optional
-  // expires: 604800, //optional (in seconds)
-  // recipients: [
-  //   { name: "NAME", amount: 10, name_to: "NAME_TO" },
-  //   { name: "NAME", amount: 10, name_to: "NAME_TO" }
-  // ] //optional
-}
-fetch(`${SERVER_URL}/tokens/debit/account`, {
-  method: 'POST',
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(data)
-})
-  .then(resp => resp.json())
-  .then(json => console.log(json))
-  .catch(error => console.log(error))
-```
-
-#### Python:
-
-```python
-import requests
-SERVER_URL = "http://api.nexus-interactions.io:8080"
-data = {
-    "pin": "YOUR_PIN",
-    #  "session": "YOUR_SESSION_ID" #optional
-    "name": "TOKEN_NAME",  # optional if address is passed
-    # "address": "TOKEN_ADDRESS", # optional if name is passed
-    "amount": 10,
-    "name_to": "TO_TOKEN_NAME",  # optional if address_to is passed
-    # "address_to": "TO_TOKEN_ADDRESS", #optional if name_to is passed
-    # "reference": "64-bit unsigned integer", optional
-    # "expires": 604800, #optional (in seconds)
-    # "recipients": [
-    #   { "name": "NAME", amount: 10, name_to: "NAME_TO"
-}
-response = requests.post(f"{SERVER_URL}/tokens/debit/account", json=data)
-print(response.json())
 ```
 
 ### Parameters
@@ -1106,6 +1053,60 @@ The following example shows the json payload for a debit from an account called 
 }
 ```
 
+### Code Snippets
+
+#### Javascript:
+
+```javascript
+// debit/account
+const SERVER_URL = "http://api.nexus-interactions.io:8080"
+let data = {
+  pin: "YOUR_PIN",
+  //  session: "YOUR_SESSION_ID" //optional
+  name: "TOKEN_NAME", //optional if address is passed
+  // address: "TOKEN_ADDRESS", // optional if name is passed 
+  amount: 10,
+  name_to: "TO_TOKEN_NAME", //optional if address_to is passed
+  // address_to: "TO_TOKEN_ADDRESS", //optional if name_to is passed
+  // reference: "64-bit unsigned integer", optional
+  // expires: 604800, //optional (in seconds)
+  // recipients: [
+  //   { name: "NAME", amount: 10, name_to: "NAME_TO" },
+  //   { name: "NAME", amount: 10, name_to: "NAME_TO" }
+  // ] //optional
+}
+fetch(`${SERVER_URL}/tokens/debit/account`, {
+  method: 'POST',
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data)
+})
+  .then(resp => resp.json())
+  .then(json => console.log(json))
+  .catch(error => console.log(error))
+```
+
+#### Python:
+
+```python
+import requests
+SERVER_URL = "http://api.nexus-interactions.io:8080"
+data = {
+    "pin": "YOUR_PIN",
+    #  "session": "YOUR_SESSION_ID" #optional
+    "name": "TOKEN_NAME",  # optional if address is passed
+    # "address": "TOKEN_ADDRESS", # optional if name is passed
+    "amount": 10,
+    "name_to": "TO_TOKEN_NAME",  # optional if address_to is passed
+    # "address_to": "TO_TOKEN_ADDRESS", #optional if name_to is passed
+    # "reference": "64-bit unsigned integer", optional
+    # "expires": 604800, #optional (in seconds)
+    # "recipients": [
+    #   { "name": "NAME", amount: 10, name_to: "NAME_TO"
+}
+response = requests.post(f"{SERVER_URL}/tokens/debit/account", json=data)
+print(response.json())
+```
+
 #### Return value JSON object:
 
 ```json
@@ -1129,6 +1130,35 @@ Increment an amount received from another token account to an account owned by y
 
 ```
 tokens/credit/account
+```
+
+### Parameters
+
+`pin` : The PIN for this signature chain.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the token account. For single-user API mode the session should not be supplied.
+
+`name` : The name identifying the token account to credit. This is only required for split payments (where the receiving account is not included in the credit transaction) and is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the account was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`address` : The register address of the account to credit. This is only required for split payments (where the receiving account is not included in the credit transaction) and is optional if the name is provided.
+
+`txid` : The transaction ID (hash) of the corresponding debit transaction for which you are creating this credit for.
+
+`name_proof` : The name identifying the account that proves your ability to credit the debit transaction. This is only required for split payments, where your right to receive a payment is determined by the number of tokens you hold in the account proof account. The `name_proof` parameter can be used as alternative to `proof`
+
+`address_proof` : The register address the account that proves your ability to credit the debit transaction. This is only required for split payments, where your right to receive a payment is determined by the number of tokens you hold in the account proof account. The `address_proof` parameter can be used as alternative to `name_proof`
+
+#### Example:
+
+The following example shows the json payload for a credit to an account called "savings" (that itself was created by the sig chain logged into session "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8") identified by the name "bob:savings". In the name field, "bob" refers to the username of the account holder and "savings" is their token account.
+
+```json
+{
+    "pin": "1234",
+    "session": "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8",
+    "name": "bob:savings",
+    "txid": "f9dcd28bce2563ab288fab76cf3ee5149ea938c735894ce4833b55e474e08e8a519e8005e09e2fc19623577a8839a280ca72b6430ee0bdf13b3d9f785bc7397d"
+}
 ```
 
 ### Code Snippets
@@ -1181,35 +1211,6 @@ print(response.json())
 ```
 
 
-### Parameters
-
-`pin` : The PIN for this signature chain.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) owns the token account. For single-user API mode the session should not be supplied.
-
-`name` : The name identifying the token account to credit. This is only required for split payments (where the receiving account is not included in the credit transaction) and is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the account was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`address` : The register address of the account to credit. This is only required for split payments (where the receiving account is not included in the credit transaction) and is optional if the name is provided.
-
-`txid` : The transaction ID (hash) of the corresponding debit transaction for which you are creating this credit for.
-
-`name_proof` : The name identifying the account that proves your ability to credit the debit transaction. This is only required for split payments, where your right to receive a payment is determined by the number of tokens you hold in the account proof account. The `name_proof` parameter can be used as alternative to `proof`
-
-`address_proof` : The register address the account that proves your ability to credit the debit transaction. This is only required for split payments, where your right to receive a payment is determined by the number of tokens you hold in the account proof account. The `address_proof` parameter can be used as alternative to `name_proof`
-
-#### Example:
-
-The following example shows the json payload for a credit to an account called "savings" (that itself was created by the sig chain logged into session "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8") identified by the name "bob:savings". In the name field, "bob" refers to the username of the account holder and "savings" is their token account.
-
-```json
-{
-    "pin": "1234",
-    "session": "5e9d8aa625a1838f60f30e12058089169e32c968389f365428f7b0c878bb47f8",
-    "name": "bob:savings",
-    "txid": "f9dcd28bce2563ab288fab76cf3ee5149ea938c735894ce4833b55e474e08e8a519e8005e09e2fc19623577a8839a280ca72b6430ee0bdf13b3d9f785bc7397d"
-}
-```
-
 #### Return value JSON object:
 
 ```json
@@ -1225,7 +1226,6 @@ The following example shows the json payload for a credit to an account called "
 ---
 &nbsp;
 
-
 ## get/account
 
 Retrieves information about a token account . The API supports an alternative endpoint that can include the account name in the URI. For example `/tokens/get/account/savings` will resolve to `tokens/get/account?name=savings`.
@@ -1237,6 +1237,19 @@ Additionally the API supports passing a field name in the URL after the account 
 ```
 tokens/get/account
 ```
+
+### Parameters
+
+`name` : The name identifying the token account to retrieve. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the account was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the account. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
+
+`address` : The register address of the token account to retrieve. This is optional if the name is provided.
+
+`count` : Optional boolean field that determines whether the response includes the transaction `count` field. This defaults to false, as including the transaction count can slow the response time of the method considerably.
+
+`fieldname`: This optional field can be used to filter the response to return only a single field from the token account.
+
 
 ### Code Snippets
 
@@ -1278,19 +1291,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/tokens/get/account", json=data)
 print(response.json())
 ```
-
-
-### Parameters
-
-`name` : The name identifying the token account to retrieve. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the account was created in the callers namespace (their username), then the username can be omitted from the name if the `session` parameter is provided (as we can deduce the username from the session)
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the name in order to deduce the register address of the account. The `session` parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
-
-`address` : The register address of the token account to retrieve. This is optional if the name is provided.
-
-`count` : Optional boolean field that determines whether the response includes the transaction `count` field. This defaults to false, as including the transaction count can slow the response time of the method considerably.
-
-`fieldname`: This optional field can be used to filter the response to return only a single field from the token account.
 
 #### Return value JSON object:
 
@@ -1336,158 +1336,23 @@ print(response.json())
 ---
 &nbsp;
 
-## `list/account/transactions`
+## list/account/transactions
 
 This will list off all of the transactions related to a given account. You DO NOT need to be logged in to use this command. If you are logged in, then neither username or genesis are required as it will default to the logged in user.
 
-{% hint style="info" %}
-**NOTE** : The returned transaction data will only include contracts that related to the requested account. Any other contracts are omitted from the transaction result.
+> 
+> **NOTE** : The returned transaction data will only include contracts that related to the requested account. Any other contracts are omitted from the transaction result.
+{.is-info}
 
-**NOTE** : If you use the username parameter it will take slightly longer to calculate the username genesis with our brute-force protected hashing algorithm. For higher performance, use the genesis parameter.
-{% endhint %}
+
+> **NOTE** : If you use the username parameter it will take slightly longer to calculate the username genesis with our brute-force protected hashing algorithm. For higher performance, use the genesis parameter.
+{.is-info}
 
 #### Endpoint:
 
-`/tokens/list/account/transactions`
-
-{% swagger method="post" path="/list/account/transactions" baseUrl="http://api.nexus-interactions.io:8080" summary="list/account/transactions" %}
-{% swagger-description %}
-This will list off all of the transactions related to a given account. You DO NOT need to be logged in to use this command. If you are logged in, then neither username or genesis are required as it will default to the logged in user.
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="genesis" required="false" %}
-The genesis hash identifying the signature chain to scan for transactions (optional if username is supplied or already logged in)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" required="false" name="username" %}
-The username identifying the signature chain to scan for transactions(optional if genesis is supplied or already logged in
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" required="false" name="session" %}
-For multi-user API mode, (configured with multiuser=1) the session can be provided in conjunction with the account name in order to deduce the register address of the account. The
-
-`session`
-
-parameter is only required when a name parameter is also provided without a namespace in the name string. For single-user API mode the session should not be supplied.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" required="false" name="name" %}
-The name identifying the token account to list transactions for. This is optional if the address is provided. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). However, if the object was created in the callers namespace (their username), then the username can be omitted from the name if the
-
-`session`
-
-parameter is provided (as we can deduce the username from the session)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="address" %}
-The register address of the token account to list transactions for. This is optional if the name is provided
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="verbose" %}
-
-
-Optional, determines how much transaction data to include in the response. Supported values are :\
-
-
-`default` : hash, contracts
-
-`summary` : type, version, sequence, timestamp, operation, and confirmations.
-
-`detail` : genesis, nexthash, prevhash, pubkey and signature
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="limit" %}
-The number of records to return for the current page. The default is 100
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="page" %}
-Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="offset" %}
-An alternative to 
-
-`page`
-
-, offset can be used to return a set of (limit) results from a particular index
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="where" %}
-An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="account transaction list" %}
-```json
-[
-    {
-        "txid": "01034b39cb3635d370f97339e6f87b8751d4c0d62676da7d6ec20416966f298f47dea99603d03a74e638b0d50b31b1e721790e5b103abfe3353a709ccf5d1e7c",
-        "contracts": [
-            {
-                "OP": "CREDIT",
-                "txid": "01e73b498dbabbf4629ad674b9ae3824b96cca83199c25a67901db53b271d19acf1411b0c4f9a3d8ded80860ffe2dcf683d2d227a675d453303b31f86f868f9e",
-                "contract": 0,
-                "proof": "a2e51edcd41a8152bfedb24e3c22ee5a65d6d7d524146b399145bced269aeff0",
-                "to": "8CbkwEQ9S8owmX74joU6XmiwxJq1aoiqUoXc9fLCKzw15HscM99",
-                "to_name": "test",
-                "amount": 10,
-                "token": "8EHRNnxn5qX9gMF1Jbqvo1jkAeP7XY1PETnMtegv9rdr6QG3ZJy",
-                "token_name": "TST"
-            }
-        ]
-    }
-]
 ```
-{% endswagger-response %}
-{% endswagger %}
-
-{% tabs %}
-{% tab title="Javascript" %}
-```javascript
-let data = {
-  // genesis: "GENESIS_HASH", //optional 
-  username: "YOUR_USERNAME",//optional
-  // session: "YOUR_SESSION_ID", //optional
-  name: "TOKEN_NAME", //optional if address is passed
-  // address: "TOKEN_ADDRESS", // optional if name is passed 
-  // verbose: "detail", //optional or "summary","none"
-  // limit: 50, //optional
-  // page: 1, //optional
-  // offset: 10, //optional
-  // where: "FILTERING SQL QUERY" //optional
-}
-fetch(`${SERVER_URL}/tokens/list/account/transactions`, {
-  method: 'POST',
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(data)
-})
-  .then(resp => resp.json())
-  .then(json => console.log(json))
-  .catch(error => console.log(error))
+tokens/list/account/transactions
 ```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-import requests
-SERVER_URL = "http://api.nexus-interactions.io:8080"
-data = {
-    # "genesis": "GENESIS_HASH", #optional
-    "username": "YOUR_USERNAME",  # optional
-    # "session": "YOUR_SESSION_ID", #optional
-    "name": "TOKEN_NAME",  # optional if address is passed
-    # "address": "TOKEN_ADDRESS", # optional if name is passed
-    # "verbose": "detail", #optional or "summary","none"
-    # "limit": 50, #optional
-    # "page": 1, #optional
-    # "offset": 10, #optional
-    # "where": "FILTERING SQL QUERY" #optional
-}
-response = requests.post(
-    f"{SERVER_URL}/tokens/list/account/transactions", json=data)
-print(response.json())
-```
-{% endtab %}
-{% endtabs %}
 
 #### Parameters:
 
@@ -1513,11 +1378,61 @@ print(response.json())
 
 `offset` : An alternative to `page`, offset can be used to return a set of (limit) results from a particular index.
 
-`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results
+`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results.
+
+
+### Code Snippets
+
+#### Javascript:
+
+```javascript
+let data = {
+  // genesis: "GENESIS_HASH", //optional 
+  username: "YOUR_USERNAME",//optional
+  // session: "YOUR_SESSION_ID", //optional
+  name: "TOKEN_NAME", //optional if address is passed
+  // address: "TOKEN_ADDRESS", // optional if name is passed 
+  // verbose: "detail", //optional or "summary","none"
+  // limit: 50, //optional
+  // page: 1, //optional
+  // offset: 10, //optional
+  // where: "FILTERING SQL QUERY" //optional
+}
+fetch(`${SERVER_URL}/tokens/list/account/transactions`, {
+  method: 'POST',
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data)
+})
+  .then(resp => resp.json())
+  .then(json => console.log(json))
+  .catch(error => console.log(error))
+```
+
+#### Python
+
+```python
+import requests
+SERVER_URL = "http://api.nexus-interactions.io:8080"
+data = {
+    # "genesis": "GENESIS_HASH", #optional
+    "username": "YOUR_USERNAME",  # optional
+    # "session": "YOUR_SESSION_ID", #optional
+    "name": "TOKEN_NAME",  # optional if address is passed
+    # "address": "TOKEN_ADDRESS", # optional if name is passed
+    # "verbose": "detail", #optional or "summary","none"
+    # "limit": 50, #optional
+    # "page": 1, #optional
+    # "offset": 10, #optional
+    # "where": "FILTERING SQL QUERY" #optional
+}
+response = requests.post(
+    f"{SERVER_URL}/tokens/list/account/transactions", json=data)
+print(response.json())
+```
 
 #### Return value JSON object:
 
-```
+```json
 [
     {
         "txid": "01034b39cb3635d370f97339e6f87b8751d4c0d62676da7d6ec20416966f298f47dea99603d03a74e638b0d50b31b1e721790e5b103abfe3353a709ccf5d1e7c",
@@ -1564,8 +1479,8 @@ print(response.json())
 
 `signature` : The signature hash.
 
-`contracts` : The array of contracts bound to this transaction and their details with opcodes.\
-{\
+`contracts` : The array of contracts bound to this transaction and their details with opcodes.
+{
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be `APPEND`, `CLAIM`, `COINBASE`, `CREATE`, `CREDIT`, `DEBIT`, `FEE`, `GENESIS`, `LEGACY`, `TRANSFER`, `TRUST`, `STAKE`, `UNSTAKE`, `WRITE`.
@@ -1593,5 +1508,3 @@ print(response.json())
 `token_name` : The name of the token that the transaction relates to.
 
 `reference` : For `DEBIT` and `CREDIT` transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
-
-***
