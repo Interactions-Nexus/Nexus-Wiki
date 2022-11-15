@@ -2,7 +2,7 @@
 title: LEDGER
 description:  Ledger API
 published: true
-date: 2022-11-14T19:17:07.669Z
+date: 2022-11-15T06:36:15.527Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:29:31.516Z
@@ -37,6 +37,10 @@ Retrieves the hash of the block for the given height.
 ledger/get/blockhash
 ```
 
+### Parameters
+
+`height` : The block height to retrieve the hash for.
+
 ### Code Snippets
 
 #### Javascript:
@@ -60,10 +64,6 @@ height = 4000000  #This is the block height or block count
 response = requests.get(f"{SERVER_URL}/ledger/get/blockhash?height={height}")
 print(response.json())
 ```
-
-### Parameters
-
-`height` : The block height to retrieve the hash for.
 
 #### Return value JSON object:
 
@@ -91,6 +91,20 @@ Retrieves block data for the given block hash or height.
 ```
 ledger/get/block
 ```
+
+### Parameters
+
+`hash` : The block hash to retrieve the block data for.
+
+`height` : The block height to retrieve the block data for.
+
+`verbose` : Optional, determines how much transaction data to include in the response. Supported values are :
+
+* `none` : no transaction data
+* `default` : hash
+* `summary` : type, version, sequence, timestamp, and contracts.
+* `detail` : genesis, nexthash, prevhash, pubkey and signature.
+
 
 ### Code Snippets
 
@@ -127,20 +141,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/ledger/get/block", json=data)
 print(response.json()
 ```
-
-### Parameters
-
-`hash` : The block hash to retrieve the block data for.
-
-`height` : The block height to retrieve the block data for.
-
-`verbose` : Optional, determines how much transaction data to include in the response. Supported values are :
-
-* `none` : no transaction data
-* `default` : hash
-* `summary` : type, version, sequence, timestamp, and contracts.
-* `detail` : genesis, nexthash, prevhash, pubkey and signature.
-
 
 #### Return value JSON object:
 
@@ -280,6 +280,28 @@ Retrieves an array of block data for a sequential range of blocks from a given h
 ledger/list/blocks
 ```
 
+### Parameters
+
+`hash` : The block hash to retrieve the block data for.
+
+`height` : The block height to retrieve the block data for.
+
+`verbose` : This is optional, determines how much transaction data to include in the response. Supported values are :
+
+* `none` : no transaction data
+* `default` : hash
+* `summary` : type, version, sequence, timestamp, and operation.
+* `detail` : genesis, nexthash, prevhash, pubkey and signature.
+
+`limit` : The number of records to return for the current page. The default is 100.
+
+`page` : Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied.
+
+`offset` : An alternative to `page`, offset can be used to return a set of (limit) results from a particular index.
+
+`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results.
+
+
 ### Code Snippets
 
 #### Javascript:
@@ -323,28 +345,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/ledger/list/blocks", json=data)
 print(response.json())
 ```
-
-### Parameters
-
-`hash` : The block hash to retrieve the block data for.
-
-`height` : The block height to retrieve the block data for.
-
-`verbose` : This is optional, determines how much transaction data to include in the response. Supported values are :
-
-* `none` : no transaction data
-* `default` : hash
-* `summary` : type, version, sequence, timestamp, and operation.
-* `detail` : genesis, nexthash, prevhash, pubkey and signature.
-
-`limit` : The number of records to return for the current page. The default is 100.
-
-`page` : Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) records. The default value is 0 if not supplied.
-
-`offset` : An alternative to `page`, offset can be used to return a set of (limit) results from a particular index.
-
-`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results
-
 
 #### Return value JSON object:
 
@@ -495,6 +495,18 @@ Retrieves transaction data for a given transaction hash.
 ledger/get/transaction
 ```
 
+### Parameters
+
+`format` : Determines the format of the return value. Parameter value can be `JSON` (the default) or `raw`. If `raw` is specified then the method returns a serialized, hex-encoded transaction that can subsequently be broadcast to the network via `/ledger/submit/transaction`.
+
+`hash` : The block hash to retrieve the block data for. This is ignored if `raw` format is requested. `txid` : The block hash to retrieve the block data for. This is an alias for `hash`.
+
+`verbose` : Optional, determines how much transaction data to include in the response. This is ignored if `raw` format is requested. Supported values are :
+
+* `summary` : hash, type, version, sequence, timestamp, and contracts.
+* `detail` : genesis, nexthash, prevhash, pubkey and signature.
+
+
 ### Code Snippets
 
 #### Javascript:
@@ -532,19 +544,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/ledger/get/transaction", json=data)
 print(response.json())
 ```
-
-
-### Parameters
-
-`format` : Determines the format of the return value. Parameter value can be `JSON` (the default) or `raw`. If `raw` is specified then the method returns a serialized, hex-encoded transaction that can subsequently be broadcast to the network via `/ledger/submit/transaction`.
-
-`hash` : The block hash to retrieve the block data for. This is ignored if `raw` format is requested. `txid` : The block hash to retrieve the block data for. This is an alias for `hash`.
-
-`verbose` : Optional, determines how much transaction data to include in the response. This is ignored if `raw` format is requested. Supported values are :
-
-* `summary` : hash, type, version, sequence, timestamp, and contracts.
-* `detail` : genesis, nexthash, prevhash, pubkey and signature.
-
 
 #### Return value JSON object:
 
@@ -649,6 +648,10 @@ Submits a transaction to be included in the mempool and broadcast to the network
 ledger/submit/transaction
 ```
 
+### Parameters
+
+`data` : The serialized, hex-encoded transaction data to be submitted.
+
 ### Code Snippets
 
 #### Javascript:
@@ -681,11 +684,6 @@ response = requests.post(f"{SERVER_URL}/ledger/submit/transaction", json=data)
 print(response.json())
 ```
 
-
-### Parameters
-
-`data` : The serialized, hex-encoded transaction data to be submitted.
-
 #### Return value JSON object:
 
 ```json
@@ -712,6 +710,14 @@ For debits that were made to a tokenized asset as part of a split payment transa
 ```
 ledger/void/transaction
 ```
+
+### Parameters
+
+`pin` : The PIN for the signature chain voiding the transaction.
+
+`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) created the transaction being voided. For single-user API mode the session should not be supplied.
+
+`txid` : The transaction ID (hash) of the debit or transfer transaction that you wish to void.
 
 ### Code Snippets
 
@@ -748,15 +754,6 @@ data = {
 response = requests.post(f"{SERVER_URL}/ledger/void/transaction", json=data)
 print(response.json())
 ```
-
-
-### Parameters
-
-`pin` : The PIN for the signature chain voiding the transaction.
-
-`session` : For multi-user API mode, (configured with multiuser=1) the session is required to identify which session (sig-chain) created the transaction being voided. For single-user API mode the session should not be supplied.
-
-`txid` : The transaction ID (hash) of the debit or transfer transaction that you wish to void.
 
 #### Return value JSON object:
 
