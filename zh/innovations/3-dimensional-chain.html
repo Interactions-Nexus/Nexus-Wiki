@@ -2,7 +2,7 @@
 title: 三维链
 description: 可扩展性解决方案
 published: true
-date: 2022-11-16T09:20:36.489Z
+date: 2022-11-16T09:40:21.162Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-16T08:45:06.139Z
@@ -12,33 +12,59 @@ dateCreated: 2022-11-16T08:45:06.139Z
 <p style="text-align:justify;">三维链（3DC）旨在解决“区块链三难困境”。它将把分类账本转变为一个多层处理系统，以便安全地扩展并具有高度的去中心化。区块链三难困境是一种观点，即安全性、去中心化和可扩展性这三种品质中只有两种是可以同时实现的。</p>
 <p style="text-align:justify;">三维链将密码基元链接在一起成为三维不可逆变物件（3D 区块），并具有三个核心维度：声誉通道 (X)、不变逆性或真实性 (Y) 和时间 (Z)。该架构通过 TAO 麟道框架进行部署。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<h3 style="text-align:justify;">可扩展性</h3>
-<p style="text-align:justify;">传统区块链的架构类似于在单车道高速公路上驾驶汽车 - 随着汽车数量的增加，交通就会出现。 Nexus 麟社将 “可扩展性” 视为一项要求，而不是一项功能。因此，我们设计的协议可以随着更多节点的加入网络而扩展，即使资源需求增加也能不受阻碍地进行处理。</p>
+<h2>可扩展性</h2>
+<p style="text-align:justify;">传统区块链的架构类似于在单车道高速公路上驾驶汽车 - 随着汽车数量的增加，交通就会出现。 Nexus 麟社将 “Scalability 可扩展性” 视为一项要求，而不是一项功能。因此，我们设计的协议可以随着更多节点的加入网络而扩展，即使资源需求增加也能不受阻碍地进行处理。</p>
 <p style="text-align:justify;">使用 Sigchains 签名链、“聚合” 和 “计算性分片”，3DC 三维链创建交易处理的并行通道以生成 L1 层，即 3DC 三维链的基础层。然后使用我们称之为 “数据分片” 的方法将数据存储在许多节点之间，这样就无需同步和存储整个区块链。 LISP（位置标识符分离协议) 和 LLL (低层库) 共同为此形成了通用接口，随着更多节点加入网络，分布式数据存储增加，提供了长期扩展潜力。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">签名链</p>
-<p style="text-align:justify;">Nexus 交易不再使用 UTXO（Unspent Tx Outputs）架构，在这种架构中，您将一笔交易的输出作为另一笔交易的输入，从而导致即使是小交易也需要进行大量昂贵的签名验证。尽管 UTXO 是比特币架构的重要基石，但它已被证明已经过时并且容易受到许多不同类型的攻击和扩展限制。</p>
+<h3 style="text-align:justify;">签名链</h3>
+<p style="text-align:justify;">Nexus 麟社交易不再使用 UTXO（未花费交易输出）架构，在这种架构中，您将一笔交易的输出作为另一笔交易的输入，从而导致即使是小交易也需要进行大量昂贵的签名验证。尽管 UTXO 是比特币架构的重要基石，但它已被证明已经过时并且容易受到许多不同类型的攻击和扩展限制。</p>
+<p style="text-align:justify;">为什么要避免这一点很重要？<a href="https://www.reddit.com/r/litecoin/comments/9ncqse/what_should_we_do_about_the_50_of_litecoins_utxo/">50% of Litecoin’s UTXO is unspendable.</a> 莱特币 50% 的 UTXO 是无法花费的。</p>
+<p style="text-align:justify;">作为对传统区块链架构的一种转变，Nexus 麟社设计并实施了一种名为签名链的架构，它充当个人用户层区块链，将您的所有数据包含在一个独特的链中。这种架构提供了更高的扩展特性，因为每笔交易只需要验证一个签名。相反，单个 UTXO 交易可能包含 1000 个输入（因此需要 1000 个签名验证），就算是交易少量硬币（少于 0.00001）。此外，签名链不需要 wallet.dat 文件，因为它们可以通过登录凭证（username 用户名称、password 登录密码，和 PIN 操作密码）访问。这可以在不牺牲隐私的情况下利用网络上的声誉验证个人的真实性和身份。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">为什么要避免这一点很重要？莱特币 50% 的 UTXO 是无法花费的。</p>
+<p>聚合</p>
+<p>遗留区块链中的交易不仅在区块中被引用，它们还与区块一起传输。虽然这确实包含一些处理的积极特征，但它限制了规模，因为交易需要传输两次，一次是在创建时，一次是在块本身被广播时。为了解决这种低效率问题，Tritium 协议将交易对象与块对象分开存储，并引用块内的 txid。这是“聚合”的第一种形式，这意味着单个引用可以代表整个交易，从而减少以块为单位传输的数据。通过降低网络上成功进行 Finney 攻击的可能性，这会提高扩展级别并提高安全性。</p>
+<p>&nbsp;</p>
+<p>什么是芬尼攻击？哈尔·芬尼 (Hal Finney) 于 2011 年发现了它。</p>
+<p>&nbsp;</p>
+<p>计算分片</p>
+<p>计算分片对于特定类型节点之间的工作分工是必要的，以创建并行处理数据的“车道”，类似于高速公路的多车道。尽管计算分片功能强大，但如果实施不当，它的安全性可能会降低。原因是“分片”比整个网络更容易支配，因为它更小。解决这个问题的方法是通过使用 3DC 固有的多层分类帐（在安全性中解释）。共识层允许下面的分片比上面的更小，保护冲突免受攻击。</p>
+<p>&nbsp;</p>
+<p>数据分片</p>
+<p>数据分片是将要存储在许多节点之间的数据划分。这可以认为是有很多仓库来存放处理和运输后的包（数据）。由于每个对象都可以通过其索引哈希“验证”，因此 3DC 可以提供对远程节点的有限信任的数据分片。</p>
+<p>&nbsp;</p>
+<p>难点在于，这么多对象和分片的状态如何管理？ LISP 的使用解决了这个问题。 3DC 执行数据分片的方法创建了一个无处不在的“网络”，其中没有“IP”地址，而是“哈希”。这可以比作在您的网络浏览器中输入一个 txid，然后接收该交易。以这种方式使用 LISP，我们将使浏览器（或网络术语中的 LLP）打开一个到散列的连接，该散列指向保存特定数据的节点组。</p>
+<p>&nbsp;</p>
+<p>这样做的最终结果是，用户可以登录到他们以前从未与网络通信过的节点，使用他们的凭据生成一个“genesis-id”并打开一个到哈希的连接，利用现有的互联网路由到该节点包含此特定数据的。这样做的好处是网络本身不需要在节点之间添加多余的数据同步来了解数据的保存位置。节点使用覆盖层来路由远程节点请求，从而导致 IP 地址作为存在于 Nexus 美妙世界中的数据散列。</p>
+<p>&nbsp;</p>
+<p>数据分片是 3DC 实现长期可扩展性的一个重要方面。 Amine 将为节点提供以“分片模式”运行的机会，即使在网络承受高负载时也能降低它们的磁盘和内存使用率。 Obsidian 中的数据分片将扩展到关键的网络功能，导致节点只需要存储整个链的一部分。</p>
+<p>&nbsp;</p>
+<p>组播</p>
+<p>除了数据分片中描述的密码结构挑战之外，互联网还必须能够有效地进行路由。我们利用所谓的“IP 多播”，它使消息的单次广播能够由一个节点发起，而不是每个节点都需要在验证消息时复制该消息。这可以比作公共演讲者向听众广播消息（多播），而不是进行一对一的对话（单播），然后将消息从一个人传给另一个人。您可以想象这不仅会提高可伸缩性，还会提高消息的完整性（因为八卦通常无法反映原始对话）。无论有多少节点是系统的一部分，数据包和事务都将在恒定时间内路由。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">作为对传统区块链架构的一种转变，Nexus 设计并实施了一种名为签名链的架构，它充当个人用户级区块链，将您的所有数据包含在一个独特的链中。这种架构提供了更高的扩展特性，因为每笔交易只需要验证一个签名。相反，单个 UTXO 交易可能包含 1000 个输入（因此需要 1000 个签名验证），以便交易少量硬币（少于 0.00001）。此外，签名链不需要 wallet.dat 文件，因为它们可以通过登录凭证（用户名、密码和 PIN）访问。这可以在不牺牲隐私的情况下利用网络上的声誉验证个人的真实性和身份。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">3次元链（未来）</p>
-<p style="text-align:justify;">三维链（3DC）旨在解决“区块链三难困境”。它将把账本转变为一个多层处理系统，以便安全地扩展并具有高度的去中心化。区块链三难困境是一种观点，即安全性、去中心化和可扩展性这三种品质中只有两种是可以同时实现的。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">3DC 将密码基元链接在一起成为三维不可变对象（3D 块），并具有三个核心维度：信誉通道 (X)、不变性或真实性 (Y) 和时间 (Z)。该架构通过 TAO 框架进行部署。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">可扩展性</p>
-<p style="text-align:justify;">传统区块链的架构类似于在单车道高速公路上驾驶汽车——随着汽车数量的增加，交通就会出现。 Nexus 将“可扩展性”视为一项要求，而不是一项功能。因此，我们设计的协议可以随着更多节点加入网络而扩展，即使资源需求增加也能不受阻碍地进行处理。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">使用“签名链”、“聚合”和“计算分片”，3DC 创建交易处理的并行通道以生成 L1 层，即 3DC 的基础层。然后使用我们称之为“数据分片”的方法将数据存储在许多节点之间，这样就无需同步和存储整个区块链。 LISP（位置标识符分离协议）和“LLL”（低级库）共同为此形成了通用接口，随着更多节点加入网络，分布式数据存储增加，提供了长期扩展潜力。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">签名链</p>
-<p style="text-align:justify;">Nexus 交易不再使用 UTXO（Unspent Tx Outputs）架构，在这种架构中，您将一笔交易的输出作为另一笔交易的输入，从而导致即使是小交易也需要进行大量昂贵的签名验证。尽管 UTXO 是比特币架构的重要基石，但它已被证明已经过时并且容易受到许多不同类型的攻击和扩展限制。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">为什么要避免这一点很重要？莱特币 50% 的 UTXO 是无法花费的。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">作为对传统区块链架构的一种转变，Nexus 设计并实施了一种名为签名链的架构，它充当个人用户级区块链，将您的所有数据包含在一个独特的链中。这种架构提供了更高的扩展特性，因为每笔交易只需要验证一个签名。相反，单个 UTXO 交易可能包含 1000 个输入（因此需要 1000 个签名验证），以便交易少量硬币（少于 0.00001）。此外，签名链不需要 wallet.dat 文件，因为它们可以通过登录凭证（用户名、密码和 PIN）访问。这可以在不牺牲隐私的情况下利用网络上的声誉验证个人的真实性和身份。</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
+<p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">&nbsp;</p>
 <p style="text-align:justify;">下层图书馆 (LLL)</p>
 <p style="text-align:justify;">Lower Level Library (LLL) 是 TAO 框架的基础，能够以高可靠性、性能和可扩展性支持其他 Web 技术。 LLL 是一个高性能的“模板库”，旨在为新兴网络技术提供支持。经过数十年的发展，当今的大多数网络技术都笨拙、集中且过度设计。 LLL 简单、强大、轻量级；考虑到模块化。</p>
