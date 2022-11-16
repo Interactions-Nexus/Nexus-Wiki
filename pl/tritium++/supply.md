@@ -2,10 +2,127 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-10-25T22:38:48.736Z
+date: 2022-11-16T23:28:25.668Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
 ---
 
 # PODAŻ
+
+Interfejs Supply API udostępnia funkcje wspierające wymagania dotyczące przeniesienia własności, typowe dla procesu łańcucha dostaw. Pozycjom w łańcuchu dostaw można nadać wartość, a wartość ta może być aktualizowana w czasie. Dostarczany interfejs API obsługuje formaty `readonly`, `raw`, `basic` i `JSON`, a użytkownik musi określić format.
+
+Formaty `readonly` i `raw` są przydatne, gdy programiści chcą przechowywać dowolne dane, bez ponoszenia narzutu związanego z definiowaniem obiektu. Wartość zostanie podana z parametrem `data`. Format `readonly` nie może być aktualizowany i jest przechowywany w rejestrze tylko do odczytu. Format `raw` jest przechowywany w rejestrze surowym i umożliwia aktualizację danych.
+
+Format `basic` umożliwia wywołującym zdefiniowanie aktywa w postaci prostych par klucz=wartość. Zakłada, że wszystkie wartości są przechowywane przy użyciu typu danych string. Pary klucz=wartość można aktualizować. . Format `JSON` umożliwia wywołującym podanie szczegółowej definicji struktury danych dostarczania, z każdym polem zdefiniowanym z określonym typem danych i zmiennością. Elementy zdefiniowane za pomocą jednego ze złożonych formatów można aktualizować po ich początkowym utworzeniu.
+
+Supply API zapewnia również historię zmian wartości, a także historię własności elementu.
+
+W pełni obsługiwany punkt końcowy identyfikatora URI dostawy jest następujący:
+
+```
+supply/verb/noun/filter/operator
+```
+
+Minimalne wymagane elementy identyfikatora URI to:
+
+```
+supply/verb/noun
+```
+
+---
+&nbsp;
+
+## Obsługiwane czasowniki (verbs)
+
+Poniższe czasowniki są obecnie obsługiwane przez ten zestaw poleceń interfejsu API:
+
+[`create`](#create) - Generuje nowy obiekt obsługiwanego typu.
+[`get`](#get) - Pobierz obiekt obsługiwanego typu.
+[`list`](#list) - Lista wszystkich obiektów posiadanych przez danego użytkownika.
+[`update`](#update) - Aktualizuj określony obiekt.
+[`transfer`](#transfer) - Transfer określonego rejestru obiektów.
+[`claim`](#claim) - Roszczenie własności rejestru obiektów.
+[`history`](#history) - Wygeneruj historię wszystkich ostatnich stanów.
+[`transactions`](#transactions) - Lista wszystkich transakcji, które zmodyfikowały określony obiekt.
+
+---
+&nbsp;
+
+## Obsługiwane rzeczowniki (nouns)
+
+Ten zestaw poleceń interfejsu API obsługuje następujące rzeczowniki:
+
+[`item`] - Rejestr obiektów zawierający obiekt pozycji.
+[`raw`] - Rejestr obiektów zawierający surowy obiekt.
+[`readonly`] - Rejestr obiektów zawierający obiekt tylko do odczytu.
+[`any`] — Rzeczownik wyboru obiektu, który pozwala na mieszanie elementów.
+
+---
+&nbsp;
+
+## create <a href="#create" id="create"></a>
+
+Utwórz nowy rejestr obiektów określony przez podany rzeczownik.
+
+```
+supply/create/noun
+```
+
+To polecenie obsługuje tylko rzeczowniki `item`, `raw`, `readonly` i `any`.
+
+##### create/item
+
+Tworzy nowy element w rejestrze obiektów.
+
+##### create/raw
+
+Tworzy nowy element w surowym rejestrze.
+
+##### create/readonly
+
+Tworzy nowy element w rejestrze tylko do odczytu.
+
+##### create/any
+
+Tworzy nowy element określony przez parametr formatu.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **zablokowany**. `PIN` dla tego profilu.
+
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : Opcjonalna nazwa identyfikująca aktywo. Jeśli zostanie podany, obiekt Nazwa zostanie również utworzony w lokalnej przestrzeni nazw użytkowników, umożliwiając dostęp do aktywa/pobieranie go według nazwy. Jeśli nazwa nie zostanie podana, aktywo będzie wymagało dostępu/pobrania za pomocą jego 256-bitowego adresu rejestru.
+
+`format` : Wymagany do **określenia** formatu użytego do zdefiniowania aktywa. Wartości mogą być `readonly`, `raw`, `basic` i `JSON`.
+
+`data` : Wymagane, jeśli **format** to `readonly` lub `raw`, wtedy to pole zawiera dane zakodowane szesnastkowo, które mają być przechowywane w tym aktywie. Aktywa `readonly` nie mogą być aktualizowane w trybie tylko do odczytu. Wszystkie pozostałe pola poprzedzające są ignorowane.
+
+`<fieldname>=<value>` : Jeśli format to `basic`, wywołujący może podać dodatkowe pary = dla każdej części danych do przechowywania w aktywie. Jeśli format to `JSON`, to pole będzie zawierało definicję json aktywa jako tablicę obiektów JSON reprezentujących każde pole w obiekcie. Używa następującego formatu:
+
+* `name`: Nazwa pola danych.
+* `type` : Typ danych do użycia w tym polu. Wartości mogą być uint8, uint16, uint32, uint64, uint256, uint512, uint1024, string lub bytes.
+* `value` : Domyślna wartość pola.
+* `mutable` : Pole logiczne wskazujące, czy pole jest do zapisu (true), czy tylko do odczytu (false).
+* `maxlength`: Dotyczy tylko pól łańcuchowych lub bajtowych, gdzie mutable=true, jest to maksymalna liczba znaków (bajtów), które mogą być przechowywane w polu. Jeśli nie podano parametru maxlength, wówczas domyślnym rozmiarem pola będzie długość wartości domyślnej, zaokrąglona w górę do najbliższych 64 bajtów.
+
+
+> **NOTA:**
+> W rejestrze obowiązuje limit 1 KB danych pozycji, które mogą zostać zapisane, z wyłączeniem nazwy pozycji.
+> Opłata wynosi 1 NXS za utworzenie przedmiotu oraz dodatkowy 1 NXS za opcjonalną nazwę obiektu.
+{.is-info}
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+{
+    "success": true,
+    "address": "87PUYqzvL73Ta81VfNMWuNyVjAqy3ZzE2iiX6FawibeNY56XC1u",
+    "txid": "012d0190164584f6174c0c5b1cfa7c155a7faeb453b050ee4cc520681b47e52402d9aab5cdf327ee614752c4f40647d4bd3b32364db19da2bacb83c5f71a9144"
+}
+[Completed in 4970.165011 ms]
+```
+
