@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-16T23:34:32.374Z
+date: 2022-11-16T23:36:49.963Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -209,40 +209,72 @@ To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
 Pobiera listę wszystkich obiektów elementów należących do profilu określonego przez rzeczownik.
 
 ```
-dostawa/lista/rzecz
+supply/list/noun
 ```
 
 To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
 
-##### Lista przedmiotów
+##### list/items
 
 Wyświetla listę wszystkich pozycji dla typu rejestru obiektów.
 
-##### lista/tylko do odczytu
+##### list/readonly
 
 Wyświetla listę wszystkich pozycji dla typu rejestru tylko do odczytu.
 
-##### lista/surowy
+##### list/raw
 
 Wyświetla listę wszystkich pozycji dla surowego typu rejestru.
 
-##### lista/dowolna
+##### list/any
 
 Wyświetla listę wszystkich pozycji dla obsługiwanych typów rejestrów.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`where` : tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć w sekcji `Zapytania`.
+`where` : Tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć w sekcji `Queries`.
 
-[`Sortowanie`](/en/tritium++/sorting)
+[`Sorting`](/pl/tritium++/sorting)
 
-[`Filtrowanie`](/en/tritium++/filtering)
+[`Filtering`](/pl/tritium++/filtering)
 
-[`Operatorzy`](/en/tritium++/operators)
+[`Operators`](/pl/tritium++/operators)
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "owner": "b7a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0",
+        "version": 1,
+        "created": 1656664801,
+        "modified": 1656665317,
+        "type": "OBJECT",
+        "ABW": "DH0001222145565",
+        "Address": "Marks street, PO Box:7887",
+        "Item": "Samsung Watch",
+        "address": "87wQAJ6nTWqVhGB423mKqtAJyF4B6S5WUXMqzYQWRcH9rJZxZup",
+        "name": "local:Item0002"
+    },
+    {
+        "owner": "b7a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0",
+        "version": 1,
+        "created": 1656662631,
+        "modified": 1656663298,
+        "type": "OBJECT",
+        "ABW": "FED456315463135",
+        "Address": "Avenue street, PO Box:4587",
+        "Item": "Mobile Holder",
+        "address": "87nyrW2TiKX9gZwRi61q3JNoVQK3GGTpZxBJBwR634au1A8Arc3",
+        "name": "local:Item0001"
+    }
+]
+[Completed in 34.175112 ms]
+```
+
+
 
