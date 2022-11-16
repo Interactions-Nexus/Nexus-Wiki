@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-16T23:28:25.668Z
+date: 2022-11-16T23:34:32.374Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -125,4 +125,124 @@ Tworzy nowy element określony przez parametr formatu.
 }
 [Completed in 4970.165011 ms]
 ```
+
+#### Zwracane wartości:
+
+`success` : Flaga logiczna wskazująca, że ​​element został pomyślnie zapisany.
+
+`address` : Adres rejestru dla tego nowo utworzonego elementu. Adres (lub nazwa, która hashuje się z tym adresem) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
+
+`txid` : Identyfikator (hash) transakcji, która zawiera utworzony obiekt.
+
+---
+&nbsp;
+
+## get <a href="#get" id="get"></a>
+
+Pobiera informacje dla pojedynczego elementu dla typu określonego przez rzeczownik.
+
+```
+supply/get/noun
+```
+
+To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
+
+### Parametry:
+
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : Wymagane do **określenia** nazwy elementu. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
+
+`address` : Wymagane do **określenia** adresu rejestru elementu. Jest to opcjonalne, jeśli podano `name`.
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "owner": "b7a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0",
+        "version": 1,
+        "created": 1656664801,
+        "modified": 1656665317,
+        "type": "OBJECT",
+        "ABW": "DH0001222145565",
+        "Address": "Marks street, PO Box:7887",
+        "Item": "Samsung Watch",
+        "address": "87wQAJ6nTWqVhGB423mKqtAJyF4B6S5WUXMqzYQWRcH9rJZxZup",
+        "name": "local:Item0002"
+    }
+]
+[Completed in 34.175112 ms]
+```
+
+#### Zwracane wartości:
+
+`owner` : Hash nazwy użytkownika profilu właściciela.
+
+`version` : Wersja serializacji transakcji.
+
+`created` : Sygnatura czasowa systemu UNIX, kiedy element został utworzony.
+
+`modified` : Sygnatura czasowa systemu UNIX, kiedy element był ostatnio modyfikowany.
+
+`type` : Typ rejestru. Może to być OBJECT, RAW, READONLY.
+
+`<fieldname>=<value>` : Para klucz-wartość dla każdego fragmentu danych przechowywanych w elemencie.
+
+`data` : Dane przechowywane w obiekcie elementu nieprzetworzonego lub tylko do odczytu.
+
+`address` : Adres rejestru elementu.
+
+`name` : Nazwa identyfikująca element.
+
+---
+&nbsp;
+
+## list <a href="#list" id="list"></a>
+
+Pobiera listę wszystkich obiektów elementów należących do profilu określonego przez rzeczownik.
+
+```
+dostawa/lista/rzecz
+```
+
+To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
+
+##### Lista przedmiotów
+
+Wyświetla listę wszystkich pozycji dla typu rejestru obiektów.
+
+##### lista/tylko do odczytu
+
+Wyświetla listę wszystkich pozycji dla typu rejestru tylko do odczytu.
+
+##### lista/surowy
+
+Wyświetla listę wszystkich pozycji dla surowego typu rejestru.
+
+##### lista/dowolna
+
+Wyświetla listę wszystkich pozycji dla obsługiwanych typów rejestrów.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`where` : tablica klauzul do **filtrowania** wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć w sekcji `Zapytania`.
+
+[`Sortowanie`](/en/tritium++/sorting)
+
+[`Filtrowanie`](/en/tritium++/filtering)
+
+[`Operatorzy`](/en/tritium++/operators)
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
 
