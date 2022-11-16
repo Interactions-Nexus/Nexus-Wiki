@@ -2,7 +2,7 @@
 title: SUPPLY
 description:  Supply API
 published: true
-date: 2022-11-05T08:11:00.697Z
+date: 2022-11-16T23:13:54.425Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:24.785Z
@@ -53,10 +53,10 @@ The following verbs are currently supported by this API command-set:
 
 The following nouns are supported for this API command-set:
 
-[item] - An object register containing an item object.
-[raw] - An object register containing raw object.
-[readonly] - An object register containing read-only object.
-[any] - An object selection noun allowing mixed items.
+[`item`] - An object register containing an item object.
+[`raw`] - An object register containing raw object.
+[`readonly`] - An object register containing read-only object.
+[`any`] - An object selection noun allowing mixed items.
 
 ---
 &nbsp;
