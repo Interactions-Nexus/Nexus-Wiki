@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-16T23:36:49.963Z
+date: 2022-11-16T23:43:31.974Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -275,6 +275,77 @@ Wyświetla listę wszystkich pozycji dla obsługiwanych typów rejestrów.
 ]
 [Completed in 34.175112 ms]
 ```
+
+#### Zwracane wartości:
+
+`owner` : Hash nazwy użytkownika profilu właściciela.
+
+`version` : Wersja serializacji transakcji.
+
+`created` : Sygnatura czasowa systemu UNIX, kiedy element został utworzony.
+
+`modified` : Sygnatura czasowa systemu UNIX, kiedy element był ostatnio modyfikowany.
+
+`type` : Typ rejestru. Może to być OBJECT, RAW, READONLY.
+
+`<fieldname>=<value>` : Para klucz-wartość dla każdego fragmentu danych przechowywanych w elemencie.
+
+`data` : Dane przechowywane w obiekcie elementu nieprzetworzonego lub tylko do odczytu.
+
+`address` : Adres rejestru elementu.
+
+`name` : Nazwa identyfikująca element.
+
+---
+&nbsp;
+
+## update <a href="#update" id="update"></a>
+
+Ta metoda zapewnia użytkownikowi możliwość aktualizacji danych obiektu określonych przez rzeczownik.
+
+```
+supply/update/noun
+```
+
+To polecenie obsługuje tylko rzeczowniki `item` i `raw`.
+
+##### update/item
+
+Spowoduje to zaktualizowanie wartości danych elementu w formacie basic i JSON.
+
+##### update/raw
+
+Spowoduje to aktualizację wartości danych dla rejestru pozycji surowych.
+
+### Parametry:
+
+`pin` : Wymagane w przypadku uwierzytelnienia. `PIN` dla tego profilu.
+
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : Wymagane do **zidentyfikowania** elementu do aktualizacji według nazwy. Jest to opcjonalne, jeśli podano `address`.
+
+`address` : Wymagane do **zidentyfikowania** elementu do aktualizacji według adresu rejestru. Jest to opcjonalne, jeśli podano `name`.
+
+`format` : Wymagany do **określenia** formatu aktywa do aktualizacji. Wartości mogą być `readonly`, `raw`, `basic` i `JSON`.
+
+`data`: Wymagane, jeśli **format** to `raw`, umożliwia wywołującemu aktualizację obiektu danych.
+
+`<fieldname>=<value>` : Wymagane dla **formatu** `basic`. Wywołujący może podać pary klucz=wartość, aby zaktualizować każdy fragment danych elementu.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+{
+    "success": true,
+    "txid": "01947f824e9b117d618ed49a7dd84f0e7c4bb0896e40d0a95e04e27917e6ecb6b9a5ccfba7d0d5c308b684b95e98ada4f39bbac84db75e7300a09befd1ac0999"
+}
+[Completed in 18533.182336 ms]
+```
+
+
 
 
 
