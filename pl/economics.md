@@ -2,7 +2,7 @@
 title: Ekonomia
 description: Ekonomia Nexusa
 published: true
-date: 2022-10-19T23:08:13.054Z
+date: 2022-11-17T23:41:53.400Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T22:37:26.342Z
@@ -10,10 +10,17 @@ dateCreated: 2022-10-19T22:37:26.342Z
 
 # Ekonomia
 
-* **Aktualna podaż: 74,399,556 (30 Wrzesień, 2022)**
-* **Docelowa podaż @ 2024: 78 mln**
-* **Aktualna inflacja: 0.4822% (30 Wrzesień, 2022)**&#x20;
+- ***Aktualna podaż*: 74,660,487 (4 listopad, 2022)**
+- ***Docelowa podaż @ 2024*: 78,000,000 NXS**
+- ***Aktualna inflacja*: 0.487% (4 listopad, 2022)**
+- ***Całkowite zastakowane NXS*: 34,053,424 NXS (4 listopad, 2022)**
 
+```mermaid size = 200%
+pie
+    title Total NXS Supply: 74,660,487
+    "Staked" : 34053424
+    "Unstaked" : 40607063
+```
 ## Bicie Nexusa:
 
 Pierwszy blok Nexusa został wydobyty 23 września, 2014 o 16:20:00 GMT – 7. Na dzień 30 września 2022 r. całkowita podaż NXS wynosi 74 399 556, co stanowi 95,3% docelowej wartości 78 000 000 we wrześniu 2024 r.
