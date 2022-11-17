@@ -2,7 +2,7 @@
 title: Connect Node to Interface
 description: How to access a remote CLI core using interface
 published: true
-date: 2022-10-14T18:58:21.620Z
+date: 2022-11-17T12:16:31.335Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:28.146Z
@@ -14,9 +14,9 @@ This guide will help to access your wallet daemon using a remote wallet interfac
 
 On the computer which will run the interface go to [https://](https://crypto.nexus.io/wallet)[nexus.io/wallets](https://nexus.io/wallets) and download the wallet for your operating system.
 
-{% hint style="danger" %}
-Always verify the wallet integrity. Follow the instructions in the link below
-{% endhint %}
+
+> Always verify the wallet integrity. Follow the instructions in the link below
+{.is-info}
 
 {% embed url="https://nexus.io/ResourceHub/wallet-guide#download-verify-install" %}
 
@@ -46,9 +46,11 @@ On the interface go to ‘_File_‘ menu and click on ‘_Switch to Legacy Mode_
 
 Use a unique rpcusername and rpcpassword and the same will be used in the username and password field in the interface legacy core settings, IP address replace the default 127.0.0.1 with the node IP address. Leave the default port and click save settings.
 
-{% hint style="info" %}
-In the config file, the 'llpallowIp' IP address should refer to the interface computer
-{% endhint %}
+
+> In the config file, the 'llpallowIp' IP address should refer to the interface computer.
+{.is-info}
+
+
 
 Use Ctrl s and Ctrl x to save and exit the config file.
 
