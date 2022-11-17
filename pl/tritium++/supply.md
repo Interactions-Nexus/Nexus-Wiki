@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-17T23:17:11.523Z
+date: 2022-11-17T23:22:24.957Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -627,7 +627,53 @@ To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
 [Completed in 1.944840 ms]
 ```
 
+#### Zwracane wartości:
 
+`txid`: Hash transakcji.
+
+`type` : Opis transakcji (legacy | tritium base | trust | genesis | user).
+
+`version` : Wersja serializacji transakcji.
+
+`sequence` : Numer kolejny tej transakcji w łańcuchu podpisów.
+
+`timestamp` : Uniksowy znacznik czasu utworzenia transakcji.
+
+`blockhash` : Hash bloku, w którym zawarta jest ta transakcja. Puste pole, jeśli nie zostało jeszcze uwzględnione w bloku.
+
+`confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję w sieci.
+
+`genesis`: Hash łańcucha sygnatur genesis.
+
+`nexthash` : Hash następnej transakcji w sekwencji.
+
+`prevhash`: Hash poprzedniej transakcji w sekwencji.
+
+`pubkey`: Klucz publiczny.
+
+`signature` : Hash podpisu.
+
+`contracts` : Tablica kontraktów powiązanych z tą transakcją i ich szczegóły wraz z kodami operacji.
+
+`id` : Kolejny identyfikator tej umowy w ramach transakcji.
+
+`OP` : Operacja kontraktowa. Może być CREATE | MODIFY | TRANSFER | CLAIM.
+
+`address` : Adres rejestru obiektu pozycji.
+
+`txid` :  Hash identyfikatora transakcji dla kredytu/roszczenia.
+
+`contract` : Identyfikator umowy w ramach transakcji dotyczącej kredytu/roszczenia.
+
+`type`: Typ rejestru. Może to być OBJECT, RAW lub READONLY.
+
+`standard` : Typ obiektu. Może być NONSTANDARD lub JSON.
+
+`recipient` : Hash nazwy użytkownika profilu odbiorców transferu.
+
+`<fieldname>=<value>` : Para klucz-wartość dla każdego fragmentu danych przechowywanych w przedmiocie.
+
+`object` : Dane przechowywane w przedmiocie.
 
 
 
