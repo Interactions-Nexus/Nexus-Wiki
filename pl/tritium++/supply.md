@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-17T23:10:46.095Z
+date: 2022-11-17T23:13:33.488Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -526,28 +526,28 @@ To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
 
 #### Zwracane wartości:
 
-`owner` : Skrót nazwy użytkownika profilu właściciela.
+`owner` : Hash nazwy użytkownika profilu właściciela.
 
 `version` : Wersja serializacji transakcji.
 
-`created` : sygnatura czasowa systemu UNIX, kiedy element został utworzony.
+`created` : Sygnatura czasowa systemu UNIX, kiedy przedmiot został utworzony.
 
-`zmodyfikowany` : Sygnatura czasowa systemu UNIX, kiedy element był ostatnio modyfikowany.
+`modified` : Sygnatura czasowa systemu UNIX, kiedy przedmiot był ostatnio modyfikowany.
 
-`type` : Typ rejestru. Może to być OBIEKT, RAW lub TYLKO DO ODCZYTU.
+`type` : Typ rejestru. Może to być OBJECT, RAW lub READONLY.
 
-`<nazwa pola>=<wartość>` : para klucz-wartość dla każdego fragmentu danych przechowywanych w elemencie.
+`<fieldname>=<value>` : Para klucz-wartość dla każdego fragmentu danych przechowywanych w przedmiocie.
 
-`data` : Dane przechowywane w obiekcie elementu nieprzetworzonego lub tylko do odczytu.
+`data` : Dane przechowywane w obiekcie przedmiotu nieprzetworzonego lub tylko do odczytu.
 
-`address` : Adres rejestru elementu.
+`address` : Adres rejestru przedmiotu.
 
-`action` : Akcja, która miała miejsce - CREATE | ZMIEŃ | PRZELEW | PRAWO.
+`action` : Akcja, która miała miejsce - CREATE | MODIFY | TRANSFER | CLAIM.
 
 ---
 &nbsp;
 
-## transakcji <a href="#transactions" id="transactions"></a>
+## transactions <a href="#transactions" id="transactions"></a>
 
 Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
 
