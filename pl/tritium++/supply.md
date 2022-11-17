@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-17T22:51:21.254Z
+date: 2022-11-17T22:57:21.452Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -380,15 +380,15 @@ Spowoduje to zainicjowanie transferu elementu tylko do odczytu do odbiorcy.
 
 `pin` : Wymagane w przypadku uwierzytelnienia. Kod PIN dla tego profilu.
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **określenia** nazwy elementu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy elementu. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : Wymagane do **określenia** adresu rejestru elementu. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagane do **określenia** adresu rejestru elementu. Jest to opcjonalne, jeśli podano `name`.
 
-`recipient` : wymagany do **zidentyfikowania** profilu, do którego ma zostać przesłana pozycja. Może to być nazwa użytkownika profilu lub hash genesis.
+`recipient` : Wymagany do **zidentyfikowania** profilu, do którego ma zostać przesłana pozycja. Może to być nazwa użytkownika profilu lub hash genesis.
 
-`expires` : Opcjonalne pole umożliwia dzwoniącym określenie **wygaśnięcia** transakcji transferu. Wartość wygaśnięcia to liczba sekund od czasu utworzenia transakcji, po której odbiorca nie może już odebrać transakcji. Z drugiej strony, gdy stosujesz wygaśnięcie transakcji, nie możesz anulować transakcji, dopóki nie upłynie czas wygaśnięcia. Jeśli opcja wygasa jest ustawiona na 0, transakcja nigdy nie wygaśnie, przez co nadawca nie będzie mógł nigdy anulować transakcji. W przypadku pominięcia zostanie zastosowany domyślny okres wygaśnięcia wynoszący 7 dni (604800 sekund).
+`expires` : Opcjonalne pole umożliwia wywołującym określenie **wygaśnięcia** transakcji transferu. Wartość wygaśnięcia to liczba sekund od czasu utworzenia transakcji, po której odbiorca nie może już odebrać transakcji. Z drugiej strony, gdy stosujesz wygaśnięcie transakcji, nie możesz anulować transakcji, dopóki nie upłynie czas wygaśnięcia. Jeśli opcja wygasa jest ustawiona na 0, transakcja nigdy nie wygaśnie, przez co nadawca nie będzie mógł nigdy anulować transakcji. W przypadku pominięcia zostanie zastosowany domyślny okres wygaśnięcia wynoszący 7 dni (604800 sekund).
 
 ### Wyniki:
 
@@ -397,7 +397,7 @@ Spowoduje to zainicjowanie transferu elementu tylko do odczytu do odbiorcy.
 ```
 {
     "txid": "27ef3f31499b6f55482088ba38b7ec7cb02bd4383645d3fd43745ef7fa3db3d1"
-    "adres": "8FJxzexVDUN5YiQYK4QjvfRNrAUym8FNu4B8yvYGXgKFJL8nBse"
+    "address": "8FJxzexVDUN5YiQYK4QjvfRNrAUym8FNu4B8yvYGXgKFJL8nBse"
 }
 ```
 
@@ -410,7 +410,7 @@ Spowoduje to zainicjowanie transferu elementu tylko do odczytu do odbiorcy.
 ---
 &nbsp;
 
-## roszczenie <a href="#claim" id="claim"></a>
+## claim <a href="#claim" id="claim"></a>
 
 Ta metoda przejmie własność elementu, aby zakończyć odpowiednią transakcję transferu.
 
