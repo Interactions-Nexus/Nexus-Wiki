@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-17T23:03:05.074Z
+date: 2022-11-17T23:10:46.095Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -16,7 +16,7 @@ Formaty `readonly` i `raw` są przydatne, gdy programiści chcą przechowywać d
 
 Format `basic` umożliwia wywołującym zdefiniowanie aktywa w postaci prostych par klucz=wartość. Zakłada, że wszystkie wartości są przechowywane przy użyciu typu danych string. Pary klucz=wartość można aktualizować. . Format `JSON` umożliwia wywołującym podanie szczegółowej definicji struktury danych dostarczania, z każdym polem zdefiniowanym z określonym typem danych i zmiennością. Elementy zdefiniowane za pomocą jednego ze złożonych formatów można aktualizować po ich początkowym utworzeniu.
 
-Supply API zapewnia również historię zmian wartości, a także historię własności elementu.
+Supply API zapewnia również historię zmian wartości, a także historię własności przedmiotu.
 
 W pełni obsługiwany punkt końcowy identyfikatora URI dostawy jest następujący:
 
@@ -56,7 +56,7 @@ Ten zestaw poleceń interfejsu API obsługuje następujące rzeczowniki:
 [`item`] - Rejestr obiektów zawierający obiekt pozycji.
 [`raw`] - Rejestr obiektów zawierający surowy obiekt.
 [`readonly`] - Rejestr obiektów zawierający obiekt tylko do odczytu.
-[`any`] — Rzeczownik wyboru obiektu, który pozwala na mieszanie elementów.
+[`any`] — Rzeczownik wyboru obiektu, który pozwala na mieszanie przedmiotów.
 
 ---
 &nbsp;
@@ -73,19 +73,19 @@ To polecenie obsługuje tylko rzeczowniki `item`, `raw`, `readonly` i `any`.
 
 ##### create/item
 
-Tworzy nowy element w rejestrze obiektów.
+Tworzy nowy przedmiot w rejestrze obiektów.
 
 ##### create/raw
 
-Tworzy nowy element w surowym rejestrze.
+Tworzy nowy przedmiot w surowym rejestrze.
 
 ##### create/readonly
 
-Tworzy nowy element w rejestrze tylko do odczytu.
+Tworzy nowy przedmiot w rejestrze tylko do odczytu.
 
 ##### create/any
 
-Tworzy nowy element określony przez parametr formatu.
+Tworzy nowy przedmiot określony przez parametr formatu.
 
 ### Parametry:
 
@@ -128,9 +128,9 @@ Tworzy nowy element określony przez parametr formatu.
 
 #### Zwracane wartości:
 
-`success` : Flaga logiczna wskazująca, że ​​element został pomyślnie zapisany.
+`success` : Flaga logiczna wskazująca, że przedmiot został pomyślnie zapisany.
 
-`address` : Adres rejestru dla tego nowo utworzonego elementu. Adres (lub nazwa, która hashuje się z tym adresem) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
+`address` : Adres rejestru dla tego nowo utworzonego przedmiotu. Adres (lub nazwa, która hashuje się z tym adresem) jest potrzebny podczas tworzenia uznania lub obciążenia konta.
 
 `txid` : Identyfikator (hash) transakcji, która zawiera utworzony obiekt.
 
@@ -139,7 +139,7 @@ Tworzy nowy element określony przez parametr formatu.
 
 ## get <a href="#get" id="get"></a>
 
-Pobiera informacje dla pojedynczego elementu dla typu określonego przez rzeczownik.
+Pobiera informacje dla pojedynczego przedmiotu dla typu określonego przez rzeczownik.
 
 ```
 supply/get/noun
@@ -151,9 +151,9 @@ To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
 
 `session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : Wymagane do **określenia** nazwy elementu. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
+`name` : Wymagane do **określenia** nazwy przedmiotu. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : Wymagane do **określenia** adresu rejestru elementu. Jest to opcjonalne, jeśli podano `name`.
+`address` : Wymagane do **określenia** adresu rejestru przedmiotu. Jest to opcjonalne, jeśli podano `name`.
 
 [`Sorting`](/pl/tritium++/sorting)
 
@@ -187,26 +187,26 @@ To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
 
 `version` : Wersja serializacji transakcji.
 
-`created` : Sygnatura czasowa systemu UNIX, kiedy element został utworzony.
+`created` : Sygnatura czasowa systemu UNIX, kiedy przedmiot został utworzony.
 
-`modified` : Sygnatura czasowa systemu UNIX, kiedy element był ostatnio modyfikowany.
+`modified` : Sygnatura czasowa systemu UNIX, kiedy przedmiot był ostatnio modyfikowany.
 
 `type` : Typ rejestru. Może to być OBJECT, RAW, READONLY.
 
 `<fieldname>=<value>` : Para klucz-wartość dla każdego fragmentu danych przechowywanych w elemencie.
 
-`data` : Dane przechowywane w obiekcie elementu nieprzetworzonego lub tylko do odczytu.
+`data` : Dane przechowywane w obiekcie przedmiotu nieprzetworzonego lub tylko do odczytu.
 
-`address` : Adres rejestru elementu.
+`address` : Adres rejestru przedmiotu.
 
-`name` : Nazwa identyfikująca element.
+`name` : Nazwa identyfikująca przedmiot.
 
 ---
 &nbsp;
 
 ## list <a href="#list" id="list"></a>
 
-Pobiera listę wszystkich obiektów elementów należących do profilu określonego przez rzeczownik.
+Pobiera listę wszystkich obiektów przedmiotów należących do profilu określonego przez rzeczownik.
 
 ```
 supply/list/noun
@@ -456,6 +456,132 @@ Przedmioty tylko do odczytu, które zostały przeniesione, muszą zostać odebra
     "txid": "27ef3f31499b6f55482088ba38b7ec7cb02bd4383645d3fd43745ef7fa3db3d1"
 }
 ```
+
+#### Zwracane wartości:
+
+`claimed`: Tablica adresów dla każdej nazwy zgłoszonej przez transakcję.
+
+`txid` : Identyfikator (hash) transakcji, która zawiera przeniesienie nazwy.
+
+---
+&nbsp;
+
+## history <a href="#history" id="history"></a>
+
+Spowoduje to pobranie historii zmian elementu, w tym zarówno danych, jak i jego własności.
+
+```
+supply/history/noun
+```
+
+To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
+
+### Parametry:
+
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : Wymagane do **określenia** nazwy przedmiotu. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
+
+`address` : Wymagane do **określenia** adresu rejestru przedmiotu. Jest to opcjonalne, jeśli podano `name`.
+
+[`Sorting`](/pl/tritium++/sorting)
+
+[`Filtering`](/pl/tritium++/filtering)
+
+[`Operators`](/pl/tritium++/operators)
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "owner": "00392196b83aca438567558462cd0c5d982569c7cefa668500c4bf3e61a03b7a",
+        "version": 1,
+        "created": 1656662631,
+        "modified": 1656663027,
+        "type": "OBJECT",
+        "Item": "Amvette Mobile Holder",
+        "Model": "SP-1010",
+        "Location": "Aisle: 6, Rack: 7",
+        "address": "87nyrW2TiKX9gZwRi61q3JNoVQK3GGTpZxBJBwR634au1A8Arc3",
+        "action": "TRANSFER"
+    },
+    {
+        "owner": "b7392196b83aca438567558462cd0c5d982569c7cefa668500c4bf3e61a03b7a",
+        "version": 1,
+        "created": 1656662631,
+        "modified": 1656662631,
+        "type": "OBJECT",
+        "Item": "Amvette Mobile Holder",
+        "Model": "SP-1010",
+        "Location": "Aisle: 6, Rack: 7",
+        "address": "87nyrW2TiKX9gZwRi61q3JNoVQK3GGTpZxBJBwR634au1A8Arc3",
+        "action": "CREATE"
+    }
+]
+[Completed in 2.431636 ms]
+```
+
+#### Zwracane wartości:
+
+`owner` : Skrót nazwy użytkownika profilu właściciela.
+
+`version` : Wersja serializacji transakcji.
+
+`created` : sygnatura czasowa systemu UNIX, kiedy element został utworzony.
+
+`zmodyfikowany` : Sygnatura czasowa systemu UNIX, kiedy element był ostatnio modyfikowany.
+
+`type` : Typ rejestru. Może to być OBIEKT, RAW lub TYLKO DO ODCZYTU.
+
+`<nazwa pola>=<wartość>` : para klucz-wartość dla każdego fragmentu danych przechowywanych w elemencie.
+
+`data` : Dane przechowywane w obiekcie elementu nieprzetworzonego lub tylko do odczytu.
+
+`address` : Adres rejestru elementu.
+
+`action` : Akcja, która miała miejsce - CREATE | ZMIEŃ | PRZELEW | PRAWO.
+
+---
+&nbsp;
+
+## transakcji <a href="#transactions" id="transactions"></a>
+
+Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
+
+```
+dostawa/transakcje/rzecz
+```
+
+To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : wymagane do **określenia** nazwy elementu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : Wymagane do **określenia** adresu rejestru elementu. Jest to opcjonalne, jeśli podano „nazwa”.
+
+`verbose` : opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
+
+* `domyślnie`: skrót
+* `podsumowanie`: typ, wersja, sekwencja, znacznik czasu, operacja i potwierdzenia.
+* `szczegóły`: geneza, nexthash, prevhash, klucz pubowy i podpis.
+
+[`Sortowanie`](/en/tritium++/sorting)
+
+[`Filtrowanie`](/en/tritium++/filtering)
+
+[`Operatorzy`](/en/tritium++/operators)
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+
 
 
 
