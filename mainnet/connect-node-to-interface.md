@@ -2,7 +2,7 @@
 title: Connect Node to Interface
 description: How to access a remote CLI core using interface
 published: true
-date: 2022-11-17T12:16:31.335Z
+date: 2022-11-17T13:53:26.591Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:28.146Z
@@ -110,16 +110,20 @@ The interface will be connected to the node and the information will appear on t
 
 Now login and transact normally using the interface.
 
-{% hint style="danger" %}
-If staking on the CLI node. Do not log off from the interface, just close the interface.
-{% endhint %}
 
-To exit the SSH or putty terminal use the command. This will close only the SSH or putty terminal and the node will be running which can be confirmed with the interface.
+> If staking on the CLI node. Do not log off from the interface, just close the interface.
+{.is-warning}
+
+
+
+To exit SSH or putty use the below command. This will close only the SSH or putty terminal and the node will be running which can be confirmed with the interface.
 
 ```
 exit
 ```
 
-{% hint style="danger" %}
-When the CLI node is connected to the interface do not disable or enable "Manual core mode". This will send a shutdown signal to the core. This issue will be rectified with next release.
-{% endhint %}
+
+> When the CLI node is connected to the interface do not disable or enable "Manual core mode". This will send a shutdown signal to the core. This issue will be rectified with next release.
+{.is-warning}
+
+
