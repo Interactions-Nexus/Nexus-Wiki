@@ -1,8 +1,8 @@
 ---
-title: Sieć główna
+title: Sieć główna (mainnet)
 description: Jak uruchomić węzły CLI sieci głównej
 published: true
-date: 2022-11-17T23:51:02.430Z
+date: 2022-11-17T23:51:59.920Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-17T23:51:02.430Z
