@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-17T22:57:21.452Z
+date: 2022-11-17T23:03:05.074Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -415,20 +415,20 @@ Spowoduje to zainicjowanie transferu elementu tylko do odczytu do odbiorcy.
 Ta metoda przejmie własność elementu, aby zakończyć odpowiednią transakcję transferu.
 
 ```
-dostawa/reklamacja/rzecz
+supply/claim/noun
 ```
 
 To polecenie obsługuje rzeczowniki `item`, `raw` i `readonly`.
 
-##### roszczenie/przedmiot
+##### claim/item
 
 Przedmioty, które zostały przeniesione, muszą zostać odebrane przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
 
-##### roszczenie/surowe
+##### claim/raw
 
 Surowe przedmioty, które zostały przeniesione, muszą zostać odebrane przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
 
-##### roszczenie/tylko do odczytu
+##### claim/readonly
 
 Przedmioty tylko do odczytu, które zostały przeniesione, muszą zostać odebrane przez odbiorcę. Ta metoda tworzy transakcję roszczenia.
 
@@ -436,15 +436,28 @@ Przedmioty tylko do odczytu, które zostały przeniesione, muszą zostać odebra
 
 `pin` : Wymagany, jeśli **zablokowany**. Kod PIN dla tego profilu.
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
 `txid` : Wymagany **identyfikator transakcji** (hash) transakcji transferu przedmiotów, dla której jest żądany.
 
-`nazwa`: opcjonalne pole pozwala użytkownikowi **zmienić nazwę** przedmiotu, gdy jest on odbierany. Domyślnie nazwa jest kopiowana od poprzedniego właściciela i tworzony jest rekord Nazwa dla elementu w Twojej przestrzeni nazw użytkownika. Jeśli masz już obiekt o tej nazwie, musisz podać nową nazwę, aby zgłoszenie się powiodło.
+`name`: Opcjonalne pole pozwala użytkownikowi **zmienić nazwę** przedmiotu, gdy jest on odbierany. Domyślnie nazwa jest kopiowana od poprzedniego właściciela i tworzony jest rekord Nazwa dla przedmiotu w Twojej przestrzeni nazw użytkownika. Jeśli masz już obiekt o tej nazwie, musisz podać nową nazwę, aby zgłoszenie się powiodło.
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+{
+    "claimed":
+    [
+        "25428293b6631d2ff55b3a931926fec920e407a56f7759495e36089914718d68",
+        "1ff463e036cbde3595fbe2de9dff15721a89e99ef3e2e9bfa7ce48ed825e9ec2"
+    ],
+    "txid": "27ef3f31499b6f55482088ba38b7ec7cb02bd4383645d3fd43745ef7fa3db3d1"
+}
+```
+
+
 
 
 
