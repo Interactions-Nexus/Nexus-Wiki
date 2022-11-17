@@ -2,7 +2,7 @@
 title: PODAŻ
 description: API podaży
 published: true
-date: 2022-11-17T23:13:33.488Z
+date: 2022-11-17T23:17:11.523Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-24T22:29:40.457Z
@@ -552,34 +552,82 @@ To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
 Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
 
 ```
-dostawa/transakcje/rzecz
+supply/transactions/noun
 ```
 
 To polecenie obsługuje rzeczowniki `item`, `raw`, `readonly` i `any`.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **określenia** nazwy elementu. Nazwa powinna mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy przedmiotu. Nazwa powinna mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : Wymagane do **określenia** adresu rejestru elementu. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagane do **określenia** adresu rejestru przedmiotu. Jest to opcjonalne, jeśli podano `name`.
 
-`verbose` : opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
+`verbose` : Opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
 
-* `domyślnie`: skrót
-* `podsumowanie`: typ, wersja, sekwencja, znacznik czasu, operacja i potwierdzenia.
-* `szczegóły`: geneza, nexthash, prevhash, klucz pubowy i podpis.
+* `default` : hash
+* `summary` : type, version, sequence, timestamp, operation, confirmations
+* `detail` : genesis, nexthash, prevhash, pubkey, signature
 
-[`Sortowanie`](/en/tritium++/sorting)
+[`Sorting`](/pl/tritium++/sorting)
 
-[`Filtrowanie`](/en/tritium++/filtering)
+[`Filtering`](/pl/tritium++/filtering)
 
-[`Operatorzy`](/en/tritium++/operators)
+[`Operators`](/pl/tritium++/operators)
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "txid": "0127324285cf5c57751dd20b5d8c7d17f204101dc1625230a8199d53d0059c3e3ad1a36330d56b2442b80bed1bb65aef9b049d671d800308d807a29174db4663",
+        "type": "tritium user",
+        "version": 4,
+        "sequence": 3,
+        "timestamp": 1656663027,
+        "blockhash": "9650d3eb7465976d8059b8027a1489f4ec5d9492b6786a6dfabf530d607845f74ebbd2b24685ee30c0f996d54bfe55e00cbc11781a3d661106581c41ff40882776601107ee1b19116c3829eff79ad6f4a478d64f7b57aa507c47b1f1a2041ce415fd730128121ad350459a3d5616ec5eaeef9ce5988e66a0780b2ced8a46f496",
+        "confirmations": 93,
+        "contracts": [
+            {
+                "id": 0,
+                "OP": "TRANSFER",
+                "address": "87nyrW2TiKX9gZwRi61q3JNoVQK3GGTpZxBJBwR634au1A8Arc3",
+                "recipient": "b7a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0"
+            }
+        ]
+    },
+    {
+        "txid": "01f5ab29bd8df00da8354d67ca337beb5091406c5d9356787ee9a1197662587ce46622fb3b3173b8d9071de4240073d87a5e2fcb4f5637abd6bad9deb2fb0072",
+        "type": "tritium user",
+        "version": 4,
+        "sequence": 2,
+        "timestamp": 1656662631,
+        "blockhash": "fa0b6c7b3d58b38a5fd3d3ad5d1fd3e03d225e69cf8a3b1ef72c6a30caf9f46056b5094482c4e8b1966b313954a367e60a804451f72895dd6fd169efe4d6e6db981941e4f3203890d3e07cc1d111cf5c77136095959ee15ca552109949f88026f38f838ac30841d8491cd071493761de19248b7ff7001f4b43cd2585f5b08570",
+        "confirmations": 94,
+        "contracts": [
+            {
+                "id": 0,
+                "OP": "CREATE",
+                "address": "87nyrW2TiKX9gZwRi61q3JNoVQK3GGTpZxBJBwR634au1A8Arc3",
+                "type": "OBJECT",
+                "standard": "NONSTANDARD",
+                "object": {
+                    "Item": "Amvette Mobile Holder",
+                    "Model": "SP-1010",
+                    "Location": "Aisle: 6, Rack: 7",
+                }
+            }
+        ]
+    }
+]
+[Completed in 1.944840 ms]
+```
+
+
 
 
 
