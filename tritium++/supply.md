@@ -2,7 +2,7 @@
 title: SUPPLY
 description:  Supply API
 published: true
-date: 2022-11-16T23:13:54.425Z
+date: 2022-11-17T23:20:32.735Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:35:24.785Z
@@ -654,7 +654,7 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 `signature` : The signature hash.
 
 `contracts` : The array of contracts bound to this transaction and their details with opcodes.
-{
+
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be CREATE | MODIFY | TRANSFER | CLAIM.
@@ -674,4 +674,4 @@ This command supports the `item`, `raw`, `readonly` and `any` nouns.
 `<fieldname>=<value>` : The key-value pair for each piece of data stored in the item.
 
 `object` : The data stored in the item.
-}
+
