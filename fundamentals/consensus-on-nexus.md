@@ -2,7 +2,7 @@
 title: Consensus on Nexus
 description: Consensus on Nexus
 published: true
-date: 2022-11-19T12:47:16.394Z
+date: 2022-11-19T12:48:00.769Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:06.073Z
@@ -58,4 +58,4 @@ Proof-of-Stake was first introduced by PeerCoin and quickly gained popularity am
 
 Instead of being caught in the middle of the PoW vs PoS debate and hindered by either’s limitations, Nexus developers chose to implement both in order to benefit from the combined strengths, while simultaneously minimizing the flaws of each individual mechanism. In addition, Nexus implements reputation as a value, which is related to how much time a staker consistently contributes resources to the network. A mechanism called ‘[Trust](/en/innovations/trust-npos)’ records past work to create a weighted reputation system, significantly improving overall security of the Nexus PoS (nPoS) channel,
 
-The Nexus team is transforming these three separate consensus channels into one multi-layered processing system capable of computational data sharding. The Tritium Protocol is the first upgrade of the [Three-Dimensional Chain (3DC)](#/en/innovations/3-dimensional-chain) which is being deployed through the[ TAO framework](https://tech.nexus.io/roadmap).
+The Nexus team is transforming these three separate consensus channels into one multi-layered processing system capable of computational data sharding. The Tritium Protocol is the first upgrade of the [Three-Dimensional Chain (3DC)](/en/innovations/3-dimensional-chain) which is being deployed through the[ TAO framework](https://tech.nexus.io/roadmap).
