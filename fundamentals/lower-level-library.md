@@ -2,7 +2,7 @@
 title: Lower Level Library
 description: LLL
 published: true
-date: 2022-10-06T12:28:08.379Z
+date: 2022-11-19T13:02:25.750Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:26.699Z
@@ -14,7 +14,7 @@ The Lower Level Library (LLL) is the foundation for the TAO Framework. It is a b
 
 The LLL contains three main components: Cryptography (LLC), Database (LLD), and Protocol (LLP). There are several representations of LLD in the stack; Ledger, Register, Operations and API. The LLC is primarily applied at the Ledger layer although can be implemented elsewhere. As a component of the Network Layer, the LLP is designed to be a light, fast protocol that allows a developer to customize their packet design and message interpretation.
 
-### Lower Level Crypto
+## Lower Level Crypto
 
 #### Set of Operations for handling Crypto including:
 
@@ -31,7 +31,7 @@ The LLL contains three main components: Cryptography (LLC), Database (LLD), and 
 * FALCON (Quantum Resistant Lattice Signatures)
 * OpenSSL wrapping functions (EC\_KEY, BIGNUM)
 
-### Lower Level Database
+## Lower Level Database
 
 Set of Templates for designing high efficiency database systems. Core templates can be expanded into higher level database types.
 
@@ -46,7 +46,7 @@ Keychains Included:
 
 We welcome any contributions of new keychains to provide different indexing data structures of the sector data.
 
-### Lower Level Protocol
+## Lower Level Protocol
 
 Set of Client / Server templates for efficient data handling. Inherit and create custom packet types to write a new protocol with ease and no network programming required.
 
@@ -63,7 +63,7 @@ LLP Protocols Implemented:
 * Tritium
 * HTTP
 
-#### Utilities
+## Utilities
 
 Set of useful tools for developing any program such as:
 
