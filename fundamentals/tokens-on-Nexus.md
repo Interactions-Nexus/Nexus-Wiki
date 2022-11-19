@@ -2,7 +2,7 @@
 title: Tokens on Nexus
 description: All about Tokens
 published: true
-date: 2022-11-19T12:53:49.073Z
+date: 2022-11-19T13:00:45.674Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:59.357Z
@@ -10,15 +10,15 @@ dateCreated: 2022-10-05T08:24:59.357Z
 
 # Tokens
 
-**What is a Token?**
+## What is a Token?
 
 In the broader sense, tokens can be thought of as virtual currencies that exist on a blockchain.
 
-**What can Tokens be used for?**
+## What can Tokens be used for?
 
 They can be used for a variety of uses such as:
 
-- Representing ownership os an asset, such as a company, property, rights to a piece of art, or music.
+- Representing ownership of an asset, such as a company, property, rights to a piece of art, or music.
 - Utilities
 - Loyalty programs
 - Gaming tokens
@@ -79,9 +79,11 @@ The fee is based on the number of token divisible units you define (the combinat
 Initially all of the token supply is held in the balance of the token. Distributing your token to other users is then very similar to how you send NXS. The first step is that the receiving users must create a new account for your token type and then provide you with the account name/address. Then you can use the wallet interface to send them just like you would send NXS, choosing the token from the Send From list. Alternatively, you can use the console with the following command:
 
 ```
-tokens/debit/token name=My Token name_to=paul:tokenaccount amount=1000
+finance/debit/token from=My_Token to=paul:tokenaccount amount=1000 pin=1234
 ```
 
-At the time of writing, no the maximum supply cannot be changed once the token has been created. However, this ability is planned for a future release. How do I use a token to represent partial ownership of a digital or real-world asset?
+The maximum supply cannot be changed once the token has been created. 
+
+**How do I use a token to represent partial ownership of a digital or real-world asset?**
 
 One of the most significant use cases for tokens is the ability to tokenize an asset. Tokenized Assets provide the ability for shared revenue to be automatically distributed in the form of NXS payments to the partial owners of the Asset, based on the percentage of tokens held. This is useful for use cases such as the automatic payment of dividends for tokenized assets, and for the distribution of royalties from revenue earned from an asset such as a music album.
