@@ -2,7 +2,7 @@
 title: Tokens on Nexus
 description: All about Tokens
 published: false
-date: 2022-10-08T13:38:19.627Z
+date: 2022-11-19T12:52:08.240Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:59.357Z
@@ -78,7 +78,9 @@ The fee is based on the number of token divisible units you define (the combinat
 
 Initially all of the token supply is held in the balance of the token. Distributing your token to other users is then very similar to how you send NXS. The first step is that the receiving users must create a new account for your token type and then provide you with the account name/address. Then you can use the wallet interface to send them just like you would send NXS, choosing the token from the Send From list. Alternatively, you can use the console with the following command:
 
-`tokens/debit/token name=My Token name_to=paul:tokenaccount amount=1000`
+```
+tokens/debit/token name=My Token name_to=paul:tokenaccount amount=1000
+```
 
 At the time of writing, no the maximum supply cannot be changed once the token has been created. However, this ability is planned for a future release. How do I use a token to represent partial ownership of a digital or real-world asset?
 
