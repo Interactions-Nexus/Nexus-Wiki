@@ -2,7 +2,7 @@
 title: Private-Testnet
 description: 
 published: true
-date: 2022-11-05T06:40:21.713Z
+date: 2022-11-19T18:19:10.527Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:20.545Z
@@ -174,7 +174,7 @@ apiauth=0
 #To remotely access the node API's
 apiremote=1
 #To remotely access API's use the llpallowip flag. The <ipaddress> can use wildcards; (llpallowip=192.168.*.*:7080)
-llpallowip=<ipaddress>:7080
+llpallowip=*.*.*.*:7080
 #Run wallet as a daemon
 daemon=1
 #Run node in private mode (defaults to testnet in 5.1)
