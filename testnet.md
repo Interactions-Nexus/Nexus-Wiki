@@ -1,8 +1,8 @@
 ---
 title: Testnet
-description: A place where you will find all the information needed to run testnets
+description: A place where you will find all the information needed to run a testnet node
 published: true
-date: 2022-10-14T18:49:46.157Z
+date: 2022-11-19T15:48:50.499Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:27:13.455Z
