@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Głównej
 description: Jak uruchomić węzeł CLI w sieci głównej — Stabilny i Testowy
 published: true
-date: 2022-11-19T22:26:27.419Z
+date: 2022-11-19T22:45:47.782Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-19T22:10:31.571Z
@@ -243,7 +243,7 @@ Naciśnij Ctrl-S Ctrl-X, aby zapisać i wyjść z edytora.
 
 &nbsp;
 
-## 5. Uruchamianie bazy danych trytu:
+## 5. Uruchamianie bazy danych Tritium:
 
 Ten krok spowoduje pobranie bazy danych nexus, a następnie rozpakowanie jej do folderu danych. Alternatywnie możesz pominąć ten krok, jeśli zdecydujesz się zsynchronizować dane z rówieśników, co będzie wolne w zależności od połączenia internetowego.
 
@@ -257,17 +257,17 @@ Spowoduje to pobranie bazy danych do folderu domowego. Plik ma rozmiar około 5 
 wget -c http://bootstrap.nexus.io/tritium.tar.gz
 ```
 
-Spowoduje to wyodrębnienie bazy danych do głównego katalogu danych Nexusa
+Spowoduje to wyodrębnienie bazy danych do głównego katalogu danych Nexusa.
 
 ```
-tar -xf tryt.tar.gz -C ~/.Nexus
+tar -xf tritium.tar.gz -C ~/.Nexus
 ```
 
 &nbsp;
 
 ## 6. API do kontrolowania węzła:
 
-Aby wchodzić w interakcje z demonem nexus core, użyj poleceń API za pośrednictwem terminala. Zmień lokalizację na folder ~/LLL-TAO, aby interfejsy API działały. Aby uruchomić węzeł, stawkę i transakcję, będziemy używać tylko systemu, użytkowników i finansowych interfejsów API. W razie wątpliwości zajrzyj do dokumentacji API [tutaj](../../api/api-overview/tritium-api/).
+Aby wchodzić w interakcje z demonem nexus core, użyj poleceń API za pośrednictwem terminala. Zmień lokalizację na folder ~/LLL-TAO, aby interfejsy API działały. Aby uruchomić węzeł, stakowanie i transakcję, będziemy używać tylko API systemu, użytkowników i finansów. W razie wątpliwości zajrzyj do dokumentacji API [tutaj](../../api/api-overview/tritium-api/).
 
 &nbsp;
 
@@ -275,7 +275,7 @@ Aby wchodzić w interakcje z demonem nexus core, użyj poleceń API za pośredni
 
 - Uważaj, ponieważ dane logowania są w terminalu i mogą być widoczne dla każdego w pobliżu.
 - Terminal Bash zapisuje historię wszystkich wcześniej użytych poleceń.
-- Każda transakcja będzie wymagać kodu PIN, chyba że zostanie odblokowana dla transakcji.
+- Każda transakcja będzie wymagać kodu PIN, chyba że zostanie odblokowany dla transakcji.
 - Każda transakcja na blockchainie Nexusa jest obciążeniem konta wysyłającego i uznaniem konta odbierającego, czyli dwiema transakcjami. (Przyda się to do zrozumienia niektórych poleceń API)
 
 Przejdź do katalogu LLL-TAO, aby uruchomić rdzeń nexusa (Przejdź do folderu LLL-TAO, aby uruchomić następujące polecenia)
@@ -287,15 +287,15 @@ cd LLL-TAO
 ### Aby uruchomić demona:
 
 ```
-./ogniwo
+./nexus
 ```
 
-Nexus core będzie działał w tle jako demon. Wykryje rówieśników i zsynchronizuje łańcuch bloków. Znalezienie rówieśników zajmie kilka minut
+Nexus core będzie działał w tle jako demon. Wykryje rówieśników i zsynchronizuje łańcuch bloków. Znalezienie rówieśników zajmie kilka minut.
 
 ### Aby zatrzymać demona:
 
 ```
-./system nexus/stop
+./nexus system/stop
 ```
 
 ### Aby uzyskać informacje o węźle:
@@ -304,50 +304,70 @@ Nexus core będzie działał w tle jako demon. Wykryje rówieśników i zsynchro
 ./nexus system/get/info
 ```
 
-Dane wyjściowe API są w formacie json. Możesz potwierdzić, czy węzeł jest zsynchronizowany, zaznaczając „synchronising”: false i „synccomplete”: 100. Sprawdź wysokość bloku w eksploratorze [tutaj](http://explorer.nexus.io) lub [tutaj](https ://nxsorbitalscan.com)
+Dane wyjściowe API są w formacie json. Możesz potwierdzić, czy węzeł jest zsynchronizowany, zaznaczając „synchronising”: false i „synccomplete”: 100. Sprawdź wysokość bloku w eksploratorze [tutaj](http://explorer.nexus.io) lub [tutaj](https://nxsorbitalscan.com).
 
 Po pełnej synchronizacji łańcucha blokowego utwórz nowe konto użytkownika (łańcuch podpisów).
 
 Nazwa użytkownika musi mieć co najmniej 2 znaki, hasło musi mieć 8 znaków, a PIN 4 znaki. PIN może być kombinacją liter/cyfr/symboli.
 
 ```
-./nexus users/create/user username= hasło= pin=
+./nexus users/create/user username= password= pin=
 ```
 
-Aby zalogować się na konto (jeśli konto zostało właśnie utworzone, poczekaj kilka bloków, aby potwierdzić nowe konto)
+Aby zalogować się na konto (jeśli konto zostało właśnie utworzone, poczekaj kilka bloków, aby potwierdzić nowe konto).
 
 ```
-./nexus users/login/user username= hasło= pin=
+./nexus users/login/user username= password= pin=
 ```
 
-Aby odblokować konto do obstawiania i automatycznego uznania transakcji przychodzących (notifications=1). Jeśli nie jest ustawiona, ręcznie uznaj transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 24 godzinach. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami.
+Aby odblokować konto do stakowania i automatycznego uznania transakcji przychodzących (notifications=1). Jeśli nie jest ustawiona, ręcznie uznaj transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 24 godzinach. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami.
 
 ```
-./nexus users/unlock/user pin= obstawianie=1 powiadomienia=1
+./nexus users/unlock/user pin= staking=1 notifications=1
 ```
 
-Aby sprawdzić informacje o stawce (działa tylko po zalogowaniu i odblokowaniu do obstawiania)
+Aby sprawdzić informacje o stakowaniu (działa tylko po zalogowaniu i odblokowaniu do stakowania).
 
 ```
 ./nexus finance/get/stakeinfo
 ```
 
-Aby uzyskać szczegółowe informacje o kontach i adresach zalogowanych użytkowników. (Konta zaufane i domyślne są tworzone automatycznie z nowym kontem)
+Aby uzyskać szczegółowe informacje o kontach i adresach zalogowanych użytkowników. (Konta trust i default są tworzone automatycznie z nowym kontem).
 
 ```
-./użytkownicy nexusa/lista/konta
+./nexus users/list/accounts
 ```
 
-Spowoduje to wyświetlenie listy wszystkich kont i jego szczegółów
+Spowoduje to wyświetlenie listy wszystkich kont i jego szczegółów.
 
 ```
-./nexus finance/lista/konta
+./nexus finance/list/accounts
 ```
 
 Spowoduje to wyświetlenie wszystkich transakcji wysłanych do określonej genezy lub nazwy użytkownika. Jest to przydatne do identyfikowania transakcji, które należy zaakceptować, takich jak kredyty.
 
 ```
-./użytkownicy nexusa/lista/powiadomienia
+./nexus users/list/notifications
 ```
 
-Jeśli automatyczny kredyt (`notifications=1`) nie jest określony jako opcja z poleceniem `unlock`, zostanie to odzwierciedlone jako oczekująca transakcja i zostanie
+Jeśli automatyczny kredyt (`notifications=1`) nie jest określony jako opcja z poleceniem `unlock`, będzie to odzwierciedlać transakcję oczekującą i będzie wymienione w powiadomieniach.
+
+Aby uznać oczekującą transakcję, 'txid' to identyfikator transakcji debetowej z powiadomień.
+
+```
+./nexus finance/credit/account pin= txid=
+```
+
+Aby wysłać monety Nexus, `name` to konto, z którego ma zostać wysłane, a `name_to` to konto odbiorcy, można je zmienić na `address` i `address_to`.
+
+```
+./nexus finance/debit/account name=username:name/namespace:name amount= name_to=username:name/namespace:name pin=
+```
+
+Aby sprawdzić pełne metryki łańcucha bloków Nexusa.
+
+```
+./nexus system/get/metrics
+```
+
+Mam nadzieję, że ten przewodnik był pomocny !!
