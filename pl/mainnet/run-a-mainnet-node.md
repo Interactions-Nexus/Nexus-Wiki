@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Głównej
 description: Jak uruchomić węzeł CLI w sieci głównej — Stabilny i Testowy
 published: true
-date: 2022-11-19T22:45:47.782Z
+date: 2022-11-19T22:53:07.528Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-19T22:10:31.571Z
@@ -17,7 +17,7 @@ dateCreated: 2022-11-19T22:10:31.571Z
 - Komputer z minimum 1 CPU, 2 GB RAM i 64 GB miejsca na dysku twardym, Raspberry Pi 4 z 2 GB RAM z kartą SD 64 GB.
 - W przypadku VPS 1 GB pamięci RAM wystarcza do normalnego użytkowania, w celu konfiguracji zaplecza dapp skontaktuj się [tutaj](https://explorer.nexus.io/).
 - [`Ubuntu server 20.04 LTS`](https://ubuntu.com/download/server#downloads) lub [`Debian 11`](https://www.debian.org/download) dla AMD/IA64 lub [ `Ubuntu IOT`](https://ubuntu.com/download/raspberry-pi/thank-you?version=20.04.3&architecture=server-arm64+raspi) / [`Raspberry Pi OS 64 bit`](https://www.raspberrypi.com/software/operating-systems/) dla Raspberry Pi.
-- [Etcher](https://www.balena.io/etcher/) – Aby nagrać plik obrazu na kartę SD
+- [Etcher](https://www.balena.io/etcher/) – Aby nagrać plik obrazu na kartę SD.
 - Putty, jeśli używasz SSH przez Windows.
 
 > Aby zainstalować stabilny rdzeń 5.0.5, użyj tylko **Ubuntu 20.04 LTS**. Nowsze wersje Ubuntu, Debian i Raspberry Pi OS (wcześniej Raspbian) mają problemy z kompilacją.
@@ -40,7 +40,7 @@ dateCreated: 2022-11-19T22:10:31.571Z
 
 ## 2. Przygotuj Węzeł:
 
-[Zainstaluj serwer ubuntu 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) lub wybraną dystrybucję, zainstaluj serwer open-ssh podczas instalacji, a po zakończeniu instalacji zrestartuj węzeł . SSH w węźle i postępuj zgodnie z poniższymi poleceniami. Skopiuj polecenia i wklej je w terminalu za pomocą klawiszy CTRL+SHIFT+v
+[Zainstaluj serwer ubuntu 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) lub wybraną dystrybucję, zainstaluj serwer open-ssh podczas instalacji, a po zakończeniu instalacji zrestartuj węzeł . SSH w węźle i postępuj zgodnie z poniższymi poleceniami. Skopiuj polecenia i wklej je w terminalu za pomocą klawiszy CTRL+SHIFT+V.
 
 Zaktualizuj i uaktualnij węzeł:
 
@@ -239,7 +239,7 @@ maxconnections=300
 #Maximum incoming to a single node (maxconnections - 16)
 maxincoming=284
 ```
-Naciśnij Ctrl-S Ctrl-X, aby zapisać i wyjść z edytora.
+Naciśnij Ctrl+S Ctrl+X, aby zapisać i wyjść z edytora.
 
 &nbsp;
 
