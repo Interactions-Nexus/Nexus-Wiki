@@ -2,26 +2,26 @@
 title: TAO namespace 麟道名称空间
 description: 名称作为原始物件
 published: true
-date: 2022-11-12T03:57:56.817Z
+date: 2022-11-19T06:40:58.894Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-11T13:59:38.828Z
 -->
 
-<p style="text-align:justify;"><strong>TAO 麟道 - 名称空间</strong></p>
-<p style="text-align:justify;"><strong>名称与名称空间</strong></p>
+<h1 style="text-align:justify;"><strong>TAO 麟道 - 名称空间</strong></h1>
+<h2 style="text-align:justify;"><strong>名称与名称空间</strong></h2>
 <p style="text-align:justify;">名称和名称空间是特殊类型的物件寄存器，用作为区块链中其他物件寄存器的位置标识器。首次创建物件寄存器（例如资产）时，创建者可以为寄存器提供名称。如果提供了名称，则还会创建一个名称物件寄存器，其寄存器地址基于名称的哈希。 名称物件还有一个地址字段，其中填充了 名称 “指向” 的寄存器（资产、通证、帐户等）的寄存器地址。以这种方式，可以通过首先对名称进行哈希以获取名称物件的地址，检索名称物件，然后使用存储在其中的地址来检索物件寄存器，从而按名称检索物件。那么，最好将名称视为物件寄存器的名称索引。</p>
 <p style="text-align:justify;">TAO 麟道命名系统 (TNS) 允许在三种不同的背景或名称空间（本地名称、名称空间和全局名称）之一中创建名称物件。名称在定义它的名称空间内必须是唯一的。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;"><strong>Local Name 本地名称：</strong></p>
+<h2 style="text-align:justify;"><strong>Local Name 本地名称：</strong></h2>
 <p style="text-align:justify;">本地名称是在签名链的背景中创建的名称。要使用本地名称，您必须在名称前加上持有者的用户名称，并用一个冒号分隔，例如 <mark class="marker-blue">bob:savings</mark> 这相当于说 “查看在 <mark class="marker-blue">bob</mark>&nbsp;签名链中注册的所有名称，找到一个名为 <mark class="marker-blue">Savings</mark>，然后查看它指向的物件寄存器”。 &nbsp;<mark class="marker-blue">bob</mark>&nbsp;签名链中只能有一个名字叫做 Savings，但是另一个用户 <mark class="marker-blue">alice</mark> 也可以创建一个本地名字叫做 <mark class="marker-blue">Savings</mark></p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;"><strong>Namespace 名称空间：</strong></p>
+<h2 style="text-align:justify;"><strong>Namespace 名称空间：</strong></h2>
 <p style="text-align:justify;">名称空间允许用户为其物件寄存器提供用户方便使用的名称，而无需透露其用户名。这对隐私很有用，也可以联系这个名称到企业或其他一些意义或背景。为了避免名称抢注，注册名称空间需要支付高额费用（1000 NXS 麟社币 ）。然而，一旦注册，在该名称空间内创建名称只需 1 NXS 麟社币。</p>
-<p style="text-align:justify;"><strong>Namespaced 名称空间创建：</strong></p>
+<h3 style="text-align:justify;"><strong>Namespaced 名称空间创建：</strong></h3>
 <p style="text-align:justify;">在名称空间的背景中创建的名称称为 Namespace 名称空间，它本身是一个全局唯一的关键字。要使用名称空间的名称，您必须在名称前面加上以双冒号分隔的名称空间，例如 <mark class="marker-blue">bobcoffeeshop::payments</mark> 。在这个例子中，bob 将首先注册名称空间 <mark class="marker-blue">bobcoffeeshop</mark> 并创建一个帐户来接收付款（可以是任何名字）。然后，他创建了一个名称，其中 <mark class="marker-blue">name=payments</mark>、<mark class="marker-blue">namespace=bobscoffeeshop</mark> 和 <mark class="marker-blue">address=（帐户的注册地址）</mark>。从那时起，任何人都可以使用名称 <mark class="marker-blue">bobscoffeeshop::payments</mark> 并将其解析为帐户的注册地址。</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;"><strong>Global Names 全局名称：</strong></p>
+<h2 style="text-align:justify;"><strong>Global Names 全局名称：</strong></h2>
 <p style="text-align:justify;">全局名称不需要用户名或命名空间做前置，因此是全局唯一的。这些可能会保留用于需要简洁、唯一名称的用例，例如通证股票的代码。为了避免不必要的名称抢注，全局名称会收取高额费用（2000 NXS 麟社币）。</p>
 <p style="text-align:justify;">Names API 名称插件允许创建者访问和管理名称和名称空间。可以创建名称以 “指向” 您希望的任何寄存器地址，无论创建者是否拥有该寄存器。这很有用，例如，如果有人向您提供 NXS 麟社币帐户的注册地址以接收付款，您可以为其添加一个方便使用的名称以供将来使用。</p>
 <p style="text-align:justify;">名称空间可以转移到其他签名链，为二级市场买卖名称空间（类似于互联网域名）打开了可能性。</p>
