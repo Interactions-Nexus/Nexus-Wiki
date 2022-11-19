@@ -2,64 +2,64 @@
 title: 低层库 (LLL)
 description: 用于开发加密、数据库或协议的模板
 published: true
-date: 2022-11-16T15:54:55.677Z
+date: 2022-11-19T05:39:42.219Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-04T05:58:18.629Z
 -->
 
-<p>低层库 (LLL)</p>
+<h1><span class="text-small">低层库 (LLL)</span></h1>
 <p>低层库 (LLL) 是 TAO (麟道）框架的基础。它是一个用 C++ 编写的基本模板库，可最大限度地减少匹配硬件，且最大限度地提高裸机效率。在架构上，LLL 低层是一种可互换的结构，需要为特定功能逻辑开发的模板和模块。 LLL-TAO 或 TAO 框架是一系列 LLL 低层库模板和数据模型，可通过简单的基于 JSON 的 API 应用插件访问，允许任何类型的开发人员提高其应用程序的安全性、可扩展性和稳固性。</p>
-<p>LLL 底层库包含三个主要组件：低层加密 (LLC)、低层数据库 (LLD) 和低层协议 (LLP)。堆栈中有几种 LLD 低层数据库表示形式；分类帐本、注册、操作和 API 应用插件。 LLC 低层加密主要应用于分类帐层面，尽管可以应用在其他地方。作为网络层的一个组件，LLP 低层协议被设计为一种轻便、快速的协议，允许开发人员自定义他们的数据包设计和信息注解。</p>
+<p>LLL 低层库包含三个主要组件：低层加密 (LLC)、低层数据库 (LLD) 和低层协议 (LLP)。堆栈中有几种 LLD 低层数据库表示形式；分类帐本、注册、操作和 API 应用插件。 LLC 低层加密主要应用于分类帐层面，尽管可以应用在其他地方。作为网络层的一个组件，LLP 低层协议被设计为一种轻便、快速的协议，允许开发人员自定义他们的数据包设计和信息注解。</p>
 <p>&nbsp;</p>
-<p>Lower Level Crypto LLC 低层加密</p>
-<p>处理加密的一组操作流程，包括：</p>
-<p>数字签名（ECDSA，基于哈希）</p>
-<p>哈希函数（SHA3 / 著名的安全算法）</p>
-<p>加密（对称/非对称）</p>
-<p>后量子密码法（实验）</p>
+<h2>Lower Level Crypto LLC 低层加密</h2>
+<p><strong>处理加密的一组操作流程，包括：</strong></p>
+<p>⇢&nbsp;数字签名（ECDSA，基于哈希）</p>
+<p>⇢&nbsp;哈希函数（SHA3 / 著名的安全算法）</p>
+<p>⇢&nbsp;加密（对称/非对称）</p>
+<p>⇢&nbsp;后量子密码法（实验）</p>
 <p>&nbsp;</p>
-<p>目前已经实施的低层加密 LLC：</p>
-<p>SK 哈希（Skein 和 Keccak）</p>
-<p>Argon2 密码哈希</p>
-<p>AES 标准（对称）</p>
-<p>FALCON（抗量子点阵签名）</p>
-<p style="text-align:justify;">OpenSSL 包装函式（EC_KEY、BIGNUM）</p>
+<p><strong>目前已经实施的低层加密 LLC：</strong></p>
+<p>⇢ SK 哈希（Skein 和 Keccak）</p>
+<p>⇢&nbsp;Argon2 密码哈希</p>
+<p>⇢&nbsp;AES 标准（对称）</p>
+<p>⇢&nbsp;FALCON（抗量子点阵签名）</p>
+<p style="text-align:justify;">⇢&nbsp;OpenSSL 包装函式（EC_KEY、BIGNUM）</p>
 <p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">Lower Level Database LLD 低层数据库</p>
+<h2 style="text-align:justify;">Lower Level Database LLD 低层数据库</h2>
 <p style="text-align:justify;">用于设计高效数据库系统的模板集。核心模板可以扩展到更高级别的数据库类型。</p>
-<p style="text-align:justify;">钥匙链数据库</p>
-<p>ACID 交易</p>
-<p>扇区数据库</p>
+<p style="text-align:justify;">⇢&nbsp;钥匙链数据库</p>
+<p>⇢&nbsp;ACID 交易</p>
+<p>⇢&nbsp;扇区数据库</p>
 <p>&nbsp;</p>
-<p>钥匙链包括：</p>
-<p>二进制文件映射</p>
-<p>二进制哈希映射</p>
+<p><strong>钥匙链包括：</strong></p>
+<p>⇢&nbsp;二进制文件映射</p>
+<p>⇢&nbsp;二进制哈希映射</p>
 <p>我们欢迎任何新钥匙链的贡献，以提供扇区数据的不同索引数据结构。</p>
 <p>&nbsp;</p>
-<p>Lower Level Protocol LLP 低层协议</p>
+<h2>Lower Level Protocol LLP 低层协议</h2>
 <p>用于高效处理客户端/服务器数据的模板集。继承和创建自定义数据包类型，以轻松编写新协议，无需网络编程。</p>
-<p>数据服务器</p>
-<p>监听服务器</p>
-<p>连接类型</p>
-<p>数据包样式</p>
-<p>事件触发器</p>
-<p>DDOS 限制</p>
+<p>⇢&nbsp;数据服务器</p>
+<p>⇢&nbsp;监听服务器</p>
+<p>⇢&nbsp;连接类型</p>
+<p>⇢&nbsp;数据包裹样式</p>
+<p>⇢&nbsp;事件触发器</p>
+<p>⇢&nbsp;DDOS 限制器</p>
 <p>&nbsp;</p>
-<p>目前已经实施的 LLP 低层协议：</p>
-<p>Legacy 传统</p>
-<p>Tritium 麟氚</p>
-<p>HTTP 超文本传输协议</p>
+<p><strong>目前已经实施的 LLP 低层协议：</strong></p>
+<p>⇢&nbsp;Legacy 传统</p>
+<p>⇢&nbsp;Tritium 麟氚</p>
+<p>⇢&nbsp;HTTP 超文本传输协议</p>
 <p>&nbsp;</p>
-<p>实用程序工具</p>
+<p><strong>实用程序工具</strong></p>
 <p>用于开发任何程序的有用工具集，例如：</p>
-<p>序列化</p>
-<p>运行检测</p>
-<p>错误调试</p>
-<p>json</p>
-<p>论据</p>
-<p>容器</p>
-<p>配置</p>
-<p>排序</p>
-<p>分配器</p>
-<p style="text-align:justify;">文件系统</p>
+<p>⇢&nbsp;序列化</p>
+<p>⇢&nbsp;运行检测</p>
+<p>⇢&nbsp;错误调试</p>
+<p>⇢&nbsp;json</p>
+<p>⇢&nbsp;论据</p>
+<p>⇢&nbsp;容器</p>
+<p>⇢&nbsp;配置</p>
+<p>⇢&nbsp;排序</p>
+<p>⇢&nbsp;分配器</p>
+<p style="text-align:justify;">⇢&nbsp;文件系统</p>
