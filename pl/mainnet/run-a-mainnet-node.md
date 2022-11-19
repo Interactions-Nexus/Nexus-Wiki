@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Głównej
 description: Jak uruchomić węzeł CLI w sieci głównej — Stabilny i Testowy
 published: true
-date: 2022-11-19T22:19:14.054Z
+date: 2022-11-19T22:26:27.419Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-19T22:10:31.571Z
@@ -72,7 +72,7 @@ Zezwalaj na port górniczy 9325, tylko w przypadku podłączania górnika:
 sudo ufw allow 9325/tcp
 ```
 
-Jeśli działa jako węzeł inicjujący, zezwól na port UTS (ujednolicona synchronizacja czasu) 9324, tylko w przypadku podłączenia górnika:
+Jeśli działa jako węzeł początkowy, zezwól na port UTS (ujednolicona synchronizacja czasu) 9324, tylko w przypadku podłączenia górnika:
 
 ```
 sudo ufw allow 9324/tcp
@@ -192,4 +192,162 @@ daemon=1
 
 Aby uzyskać zdalny dostęp do portfela (z interfejsu portfela na innym komputerze), dodaj następujące wiersze w pliku konfiguracyjnym.
 
-`<ipaddress>` to adres IP maszyny łączącej się zdalnie z twoim węzłem, może to być adres IP interfejsu lub serwera dapp
+`<ipaddress>` to adres IP maszyny łączącej się zdalnie z twoim węzłem, może to być adres IP interfejsu lub serwera dapp. Możesz także użyć symbolu wieloznacznego '*' aby zezwolić wszystkim komputerom w określonej podsieci. `llpallowip=192.168.10.*:8080` zezwala wszystkim komputerom w sieci lokalnej 192.168.10
+
+```
+#To enable RPC remote access
+rpcremote=1
+#To enable API authentication 
+apiauth=1
+#To enable remote API access. Local API access will be revoked
+apiremote=1
+#Whitelist IP address for API & RPC
+llpallowip=<ipaddress>:8080  
+llpallowip=<ipaddress>:9336
+```
+
+W przypadku testowania łączącej się gałęzi / 5.1 :
+
+```
+#To index block data, required to access block data.
+indexheight=1
+#To index account addresses, required to access the account address.
+indexaddress=1
+```
+
+Jeśli działa jako węzeł początkowy, dodaj poniższe wiersze do pliku konfiguracyjnego:
+
+> Węzły początkowe (seed nodes) muszą mieć statyczny adres IP i przepustowość łącza internetowego.
+{.is-info}
+
+
+```
+#Unified time synchronization
+unified=1
+llpallowip=*.*.*.*:9324
+```
+
+Jeśli działa jako węzeł początkowy lub potrzebujesz więcej połączeń równorzędnych z węzłem, dodaj to do konfiguracji:
+
+> Zwiększenie liczby połączeń równorzędnych zwiększy wymagania dotyczące przepustowości węzła.
+{.is-warning}
+
+```
+#Configure peer connections to the core
+#Maximum connections limit to the node
+maxconnections=300
+#Maximum incoming to a single node (maxconnections - 16)
+maxincoming=284
+```
+Naciśnij Ctrl-S Ctrl-X, aby zapisać i wyjść z edytora.
+
+&nbsp;
+
+## 5. Uruchamianie bazy danych trytu:
+
+Ten krok spowoduje pobranie bazy danych nexus, a następnie rozpakowanie jej do folderu danych. Alternatywnie możesz pominąć ten krok, jeśli zdecydujesz się zsynchronizować dane z rówieśników, co będzie wolne w zależności od połączenia internetowego.
+
+```
+cd ~
+```
+
+Spowoduje to pobranie bazy danych do folderu domowego. Plik ma rozmiar około 5 GB.
+
+```
+wget -c http://bootstrap.nexus.io/tritium.tar.gz
+```
+
+Spowoduje to wyodrębnienie bazy danych do głównego katalogu danych Nexusa
+
+```
+tar -xf tryt.tar.gz -C ~/.Nexus
+```
+
+&nbsp;
+
+## 6. API do kontrolowania węzła:
+
+Aby wchodzić w interakcje z demonem nexus core, użyj poleceń API za pośrednictwem terminala. Zmień lokalizację na folder ~/LLL-TAO, aby interfejsy API działały. Aby uruchomić węzeł, stawkę i transakcję, będziemy używać tylko systemu, użytkowników i finansowych interfejsów API. W razie wątpliwości zajrzyj do dokumentacji API [tutaj](../../api/api-overview/tritium-api/).
+
+&nbsp;
+
+### **Zanim zaczniemy:**
+
+- Uważaj, ponieważ dane logowania są w terminalu i mogą być widoczne dla każdego w pobliżu.
+- Terminal Bash zapisuje historię wszystkich wcześniej użytych poleceń.
+- Każda transakcja będzie wymagać kodu PIN, chyba że zostanie odblokowana dla transakcji.
+- Każda transakcja na blockchainie Nexusa jest obciążeniem konta wysyłającego i uznaniem konta odbierającego, czyli dwiema transakcjami. (Przyda się to do zrozumienia niektórych poleceń API)
+
+Przejdź do katalogu LLL-TAO, aby uruchomić rdzeń nexusa (Przejdź do folderu LLL-TAO, aby uruchomić następujące polecenia)
+
+```
+cd LLL-TAO
+```
+
+### Aby uruchomić demona:
+
+```
+./ogniwo
+```
+
+Nexus core będzie działał w tle jako demon. Wykryje rówieśników i zsynchronizuje łańcuch bloków. Znalezienie rówieśników zajmie kilka minut
+
+### Aby zatrzymać demona:
+
+```
+./system nexus/stop
+```
+
+### Aby uzyskać informacje o węźle:
+
+```
+./nexus system/get/info
+```
+
+Dane wyjściowe API są w formacie json. Możesz potwierdzić, czy węzeł jest zsynchronizowany, zaznaczając „synchronising”: false i „synccomplete”: 100. Sprawdź wysokość bloku w eksploratorze [tutaj](http://explorer.nexus.io) lub [tutaj](https ://nxsorbitalscan.com)
+
+Po pełnej synchronizacji łańcucha blokowego utwórz nowe konto użytkownika (łańcuch podpisów).
+
+Nazwa użytkownika musi mieć co najmniej 2 znaki, hasło musi mieć 8 znaków, a PIN 4 znaki. PIN może być kombinacją liter/cyfr/symboli.
+
+```
+./nexus users/create/user username= hasło= pin=
+```
+
+Aby zalogować się na konto (jeśli konto zostało właśnie utworzone, poczekaj kilka bloków, aby potwierdzić nowe konto)
+
+```
+./nexus users/login/user username= hasło= pin=
+```
+
+Aby odblokować konto do obstawiania i automatycznego uznania transakcji przychodzących (notifications=1). Jeśli nie jest ustawiona, ręcznie uznaj transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 24 godzinach. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami.
+
+```
+./nexus users/unlock/user pin= obstawianie=1 powiadomienia=1
+```
+
+Aby sprawdzić informacje o stawce (działa tylko po zalogowaniu i odblokowaniu do obstawiania)
+
+```
+./nexus finance/get/stakeinfo
+```
+
+Aby uzyskać szczegółowe informacje o kontach i adresach zalogowanych użytkowników. (Konta zaufane i domyślne są tworzone automatycznie z nowym kontem)
+
+```
+./użytkownicy nexusa/lista/konta
+```
+
+Spowoduje to wyświetlenie listy wszystkich kont i jego szczegółów
+
+```
+./nexus finance/lista/konta
+```
+
+Spowoduje to wyświetlenie wszystkich transakcji wysłanych do określonej genezy lub nazwy użytkownika. Jest to przydatne do identyfikowania transakcji, które należy zaakceptować, takich jak kredyty.
+
+```
+./użytkownicy nexusa/lista/powiadomienia
+```
+
+Jeśli automatyczny kredyt (`notifications=1`) nie jest określony jako opcja z poleceniem `unlock`, zostanie to odzwierciedlone jako oczekująca transakcja i zostanie
