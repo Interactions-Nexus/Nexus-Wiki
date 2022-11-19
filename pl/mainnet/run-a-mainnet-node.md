@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Głównej
 description: Jak uruchomić węzeł CLI w sieci głównej — Stabilny i Testowy
 published: true
-date: 2022-11-19T22:10:31.571Z
+date: 2022-11-19T22:19:14.054Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-19T22:10:31.571Z
@@ -114,7 +114,7 @@ Komputer jest gotowy do zainstalowania rdzenia Nexusa.
 
 ## 3. Kompilowanie rdzenia Nexusa:
 
-Instaluje zależności wymagane do kompilacji nexus core CLI. Ukończenie zajmie trochę czasu w zależności od szybkości Internetu
+Instaluje zależności wymagane do kompilacji nexus core CLI. Ukończenie zajmie trochę czasu w zależności od szybkości Internetu:
 
 ```
 sudo apt-get install -y build-essential libssl-dev libdb-dev libdb++-dev libminiupnpc-dev git
@@ -135,10 +135,10 @@ cd LLL-TAO
 Wyczyść wszystkie poprzednie kompilacje:
 
 ```
-make -f makefile.cli czyste
+make -f makefile.cli clean
 ```
 
-Na koniec uruchom to polecenie, aby skompilować ze źródła. Spowoduje to rozpoczęcie kompilacji rdzenia nexusa. Prosimy o cierpliwość, ponieważ w zależności od procesora może to zająć bardzo dużo czasu. Zamień 1 w „j1” na liczbę rdzeni / wątków, aby kompilować szybciej.
+Na koniec uruchom to polecenie, aby skompilować ze źródła. Spowoduje to rozpoczęcie kompilacji rdzenia nexusa. Prosimy o cierpliwość, ponieważ w zależności od procesora może to zająć bardzo dużo czasu. Zamień `1` w `j1` na liczbę rdzeni / wątków, aby kompilować szybciej:
 
 ```
 make -f makefile.cli -j1 AMD64=1
@@ -150,7 +150,7 @@ Do kompilacji na Raspberry Pi użyj:
 make -f makefile.cli -j1 ARM64=1
 ```
 
-Po udanej kompilacji pokaże komunikat „Ukończono budowanie nexusa”.
+Po udanej kompilacji pokaże komunikat “Finished building nexus”.
 
 &nbsp;
 
@@ -162,8 +162,8 @@ Utwórz główny katalog danych Nexusa (jest to ukryty katalog, demon Nexusa two
 mkdir ~/.Nexus
 ```
  
-> Konfiguracja portfela jest przechowywana w pliku nexus.conf, znajdującym się w głównym katalogu danych
-{.to-informacja}
+> Konfiguracja portfela jest przechowywana w pliku nexus.conf, znajdującym się w głównym katalogu danych.
+{.is-info}
 
 
 Utwórz plik nexus.conf:
@@ -172,22 +172,22 @@ Utwórz plik nexus.conf:
 nano ~/.Nexus/nexus.conf
 ```
 
-Skopiuj poniższy kod do pliku. Podaj użytkownika i hasło do RPC i API oraz usuń `#` w `#stake=1`, jeśli zamierzasz stawiać.
+Skopiuj poniższy kod do pliku. Podaj użytkownika i hasło do RPC i API oraz usuń `#` w `#stake=1`, jeśli zamierzasz stakować.
 
 ```
-# To jest przykład nexus.conf. Dostosuj go do swojego wdrożenia.
-Poświadczenia #RPC, zmień w razie potrzeby
-rpcuser=<użytkownik dla RPC>
-rpcpassword=<pw dla RPC>
-Poświadczenia uwierzytelniania #API http. Zmień w razie potrzeby
-apiuser=<użytkownik API>
-apipassword=<pw dla API>
-#Aby uruchomić rdzeń nexusa jako demon
-demon=1
-#Aby włączyć eksplorację za pomocą węzła,
-#wydobycie=1
-#Aby włączyć tyczenie
-#stawka=1
+# This is an example nexus.conf. Tailor it to your deployment.
+#RPC credentials, change as needed
+rpcuser=<user for RPC>
+rpcpassword=<pw for RPC>
+#API http authentication credtnials. Change as needed
+apiuser=<user for API>
+apipassword=<pw for API>
+#To run the nexus core as a daemon
+daemon=1
+#To enable mining with the node, 
+#mining=1
+#To enable staking
+#stake=1
 ```
 
 Aby uzyskać zdalny dostęp do portfela (z interfejsu portfela na innym komputerze), dodaj następujące wiersze w pliku konfiguracyjnym.
