@@ -2,7 +2,7 @@
 title: Consensus on Nexus
 description: Consensus on Nexus
 published: true
-date: 2022-10-29T18:04:22.915Z
+date: 2022-11-19T12:47:16.394Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:06.073Z
@@ -40,17 +40,11 @@ Bitcoin’s consensus protocol, PoW, prevents this from happening because when t
 
 **Proof-of-Work (PoW):** The first blockchain, Bitcoin, uses PoW. To validate transactions to the Bitcoin blockchain “miners,” who are the nodes solving cryptographic, or mathematical problems, using their computers. Miners who solve a problem and validate and enable a block record are rewarded with bitcoin.
 
-**Proof-Of-Stake (PoS):**&#x20;
+**Proof-Of-Stake (PoS):** In PoS there are “forgers” instead of miners. These forgers stake an amount of cryptocurrency which allows them a chance, based on probability, to be a block validator. The successful forger receives the relevant block transaction fees as a reward. Staking their own cryptocurrency on a block provides a disincentive for a forger to try and trick the network as they'll lose the stake if they're proven to be incorrectly adding transactions to the network.&#x20;
 
-In PoS there are “forgers” instead of miners. These forgers stake an amount of cryptocurrency which allows them a chance, based on probability, to be a block validator. The successful forger receives the relevant block transaction fees as a reward. Staking their own cryptocurrency on a block provides a disincentive for a forger to try and trick the network as they'll lose the stake if they're proven to be incorrectly adding transactions to the network.&#x20;
+**Delegated Proof-of-Stake (DPoS):** This method functions in a similar way to PoS. But instead of using probability, cryptocurrency holders are able to cast votes apportioned to their stake in order to appoint witnesses. These witnesses secure and validate the blockchain; they do not need their own cryptocurrency, but they do need votes.  This consensus protocol is more centralized than others. DPoS is used by BNB, BitShares, Steem, and EOS.
 
-**Delegated Proof-of-Stake (DPoS):**
-
-This method functions in a similar way to PoS. But instead of using probability, cryptocurrency holders are able to cast votes apportioned to their stake in order to appoint witnesses. These witnesses secure and validate the blockchain; they do not need their own cryptocurrency, but they do need votes.  This consensus protocol is more centralized than others. DPoS is used by BNB**,** BitShares, Steem, and EOS.
-
-**Proof-of-Authority (PoA):**
-
-Arguably more centralized again, PoA has predetermined block validators. New blocks on a blockchain are only created when the validators are in majority. The protocol is similar to PoS. The validators are publicly known and accountable for determining their role and eligibility for PoS validation. A newer blockchain, Elysian, uses PoA as well as some Ethereum testnets, or test blockchains.
+**Proof-of-Authority (PoA):** Arguably more centralized again, PoA has predetermined block validators. New blocks on a blockchain are only created when the validators are in majority. The protocol is similar to PoS. The validators are publicly known and accountable for determining their role and eligibility for PoS validation. A newer blockchain, Elysian, uses PoA as well as some Ethereum testnets, or test blockchains.
 
 ## Nexus Consensus:
 
@@ -62,6 +56,6 @@ Why did Nexus choose to adopt a multifaceted consensus model? There are a number
 
 Proof-of-Stake was first introduced by PeerCoin and quickly gained popularity among emerging blockchain platforms. Though heavily criticized by PoW maximalists, PoS consensus gained instant credibility when Ethereum, the second largest cryptocurrency by both market cap and network, announced plans to convert from a PoW to a PoS consensus model. However, PoS is not without flaws either and over the years has evolved into multiple variations, most notably, delegated PoS, but each variation has its own [pros and cons](https://coincodex.com/article/7142/what-is-proof-of-stake/).
 
-Instead of being caught in the middle of the PoW vs PoS debate and hindered by either’s limitations, Nexus developers chose to implement both in order to benefit from the combined strengths, while simultaneously minimizing the flaws of each individual mechanism. In addition, Nexus implements reputation as a value, which is related to how much time a staker consistently contributes resources to the network. A mechanism called ‘[Trust](https://tech.nexus.io/trust)’ records past work to create a weighted reputation system, significantly improving overall security of the Nexus PoS (nPoS) channel,
+Instead of being caught in the middle of the PoW vs PoS debate and hindered by either’s limitations, Nexus developers chose to implement both in order to benefit from the combined strengths, while simultaneously minimizing the flaws of each individual mechanism. In addition, Nexus implements reputation as a value, which is related to how much time a staker consistently contributes resources to the network. A mechanism called ‘[Trust](/en/innovations/trust-npos)’ records past work to create a weighted reputation system, significantly improving overall security of the Nexus PoS (nPoS) channel,
 
-The Nexus team is transforming these three separate consensus channels into one multi-layered processing system capable of computational data sharding. The Tritium Protocol is the first upgrade of the [Three-Dimensional Chain (3DC)](https://tech.nexus.io/3dc) which is being deployed through the[ TAO framework](https://tech.nexus.io/roadmap).
+The Nexus team is transforming these three separate consensus channels into one multi-layered processing system capable of computational data sharding. The Tritium Protocol is the first upgrade of the [Three-Dimensional Chain (3DC)](#/en/innovations/3-dimensional-chain) which is being deployed through the[ TAO framework](https://tech.nexus.io/roadmap).
