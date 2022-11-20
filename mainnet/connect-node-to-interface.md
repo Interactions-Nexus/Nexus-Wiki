@@ -2,7 +2,7 @@
 title: Connect Node to Interface
 description: How to access a remote CLI core using interface
 published: true
-date: 2022-11-17T13:53:26.591Z
+date: 2022-11-20T23:36:55.129Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:28.146Z
@@ -15,12 +15,12 @@ This guide will help to access your wallet daemon using a remote wallet interfac
 On the computer which will run the interface go to [https://](https://crypto.nexus.io/wallet)[nexus.io/wallets](https://nexus.io/wallets) and download the wallet for your operating system.
 
 
-> Always verify the wallet integrity. Follow the instructions in the link below
+> Always verify the wallet integrity. Follow the instructions in the link below.
 {.is-info}
 
-{% embed url="https://nexus.io/ResourceHub/wallet-guide#download-verify-install" %}
+https://nexus.io/ResourceHub/wallet-guide#download-verify-install
 
-Install and run the wallet. After the wallet loads, immediately go to _‘Settings’_, click on ‘_Core_‘, scroll down to the bottom and enable manual core mode using the slider button
+Install and run the wallet. After the wallet loads, immediately go to _‘Settings’_, click on ‘_Core_‘, scroll down to the bottom and enable manual core mode using the slider button.
 
 ![](https://thedigitalfuture.net/wp-content/uploads/2020/12/RPI-Interface1.png)
 
@@ -36,7 +36,7 @@ Open the nexus config file.
 nano ~/.Nexus/nexus.conf
 ```
 
-Arrange the nexus.conf and the interface side by side
+Arrange the nexus.conf and the interface side by side.
 
 In config file enter a unique apiusername and apipassword and the same will be used in the username and password field in the interface tritium core settings, IP address replace the default 127.0.0.1 with the daemon node IP address. Leave the default port and click save settings.
 
@@ -74,19 +74,19 @@ On the node, stop the wallet daemon.
 ./nexus system/stop
 ```
 
-On the ufw firewall allow port 8080 for API
+On the ufw firewall allow port 8080 for API.
 
 ```
 sudo ufw allow 8080/tcp
 ```
 
-Allow port 9336 for RPC
+Allow port 9336 for RPC.
 
 ```
 sudo ufw allow 9336/tcp
 ```
 
-Check the ufw firewall status
+Check the ufw firewall status.
 
 ```
 sudo ufw status
@@ -96,7 +96,7 @@ ufw status – The output should look like below .
 
 ![](https://thedigitalfuture.net/wp-content/uploads/2020/12/RPI-ufw.png)
 
-Next start the daemon
+Next start the daemon.
 
 ```
 ./nexus
