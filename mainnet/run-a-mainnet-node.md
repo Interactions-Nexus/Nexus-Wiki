@@ -2,13 +2,13 @@
 title: Run a Mainnet Node
 description: How to run a CLI node on mainnet - Stable & Testing
 published: true
-date: 2022-11-19T22:49:25.148Z
+date: 2022-11-20T23:53:44.751Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:26:31.584Z
 ---
 
-# Run a Mainnet Node -CLI
+# Run a Mainnet Node - CLI
 
 > This guide is tailored for Debian / Ubuntu / Raspberry Pi OS distributions.
 
