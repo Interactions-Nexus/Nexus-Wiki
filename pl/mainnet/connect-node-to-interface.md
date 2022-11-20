@@ -2,7 +2,7 @@
 title: Połącz Węzeł z Interfejsem
 description: Jak uzyskać dostęp do zdalnego rdzenia CLI za pomocą interfejsu
 published: true
-date: 2022-11-20T23:44:53.246Z
+date: 2022-11-20T23:52:24.061Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-20T23:35:31.455Z
@@ -123,5 +123,5 @@ exit
 ```
 
 
-> Gdy węzeł CLI jest podłączony do interfejsu, nie wyłączaj ani nie włączaj „Ręcznego trybu podstawowego”. Spowoduje to wysłanie sygnału wyłączenia do rdzenia. Ten problem zostanie naprawiony w następnej wersji.
+> Gdy węzeł CLI jest podłączony do interfejsu, nie wyłączaj ani nie włączaj "Manual core mode". Spowoduje to wysłanie sygnału wyłączenia do rdzenia. Ten problem zostanie naprawiony w następnej wersji.
 {.is-warning}
