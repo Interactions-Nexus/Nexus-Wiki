@@ -2,13 +2,13 @@
 title: Uruchom Węzeł Sieci Głównej
 description: Jak uruchomić węzeł CLI w sieci głównej — Stabilny i Testowy
 published: true
-date: 2022-11-19T22:53:07.528Z
+date: 2022-11-20T23:53:27.615Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-19T22:10:31.571Z
 ---
 
-# Uruchom Węzeł Sieci Głównej -CLI
+# Uruchom Węzeł Sieci Głównej - CLI
 
 > Ten przewodnik jest dostosowany do dystrybucji systemu operacyjnego Debian / Ubuntu / Raspberry Pi.
 
