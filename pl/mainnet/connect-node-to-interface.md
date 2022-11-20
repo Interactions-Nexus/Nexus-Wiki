@@ -2,13 +2,13 @@
 title: Połącz Węzeł z Interfejsem
 description: Jak uzyskać dostęp do zdalnego rdzenia CLI za pomocą interfejsu
 published: true
-date: 2022-11-20T23:37:43.279Z
+date: 2022-11-20T23:43:48.757Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-20T23:35:31.455Z
 ---
 
-# Połącz Węzeł do Interfejsu
+# Połącz Węzeł z Interfejsem
 
 Ten przewodnik pomoże uzyskać dostęp do demona portfela za pomocą interfejsu zdalnego portfela. W tym celu będziesz potrzebować adresu IP swojego węzła, a także interfejsu komputera. W przypadku komputera zdalnego możesz przejść do ustawień, sieci i kliknąć szczegóły, które pokażą adres IP komputera.
 
