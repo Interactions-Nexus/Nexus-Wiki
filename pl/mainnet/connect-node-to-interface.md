@@ -2,7 +2,7 @@
 title: Połącz Węzeł z Interfejsem
 description: Jak uzyskać dostęp do zdalnego rdzenia CLI za pomocą interfejsu
 published: true
-date: 2022-11-20T23:43:48.757Z
+date: 2022-11-20T23:44:53.246Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-20T23:35:31.455Z
@@ -12,7 +12,7 @@ dateCreated: 2022-11-20T23:35:31.455Z
 
 Ten przewodnik pomoże uzyskać dostęp do demona portfela za pomocą interfejsu zdalnego portfela. W tym celu będziesz potrzebować adresu IP swojego węzła, a także interfejsu komputera. W przypadku komputera zdalnego możesz przejść do ustawień, sieci i kliknąć szczegóły, które pokażą adres IP komputera.
 
-Na komputerze, na którym będzie uruchomiony interfejs, przejdź do [https://](https://crypto.nexus.io/wallet)[nexus.io/wallets](https://nexus.io/wallets) i pobierz portfel dla twojego systemu operacyjnego.
+Na komputerze, na którym będzie uruchomiony interfejs, przejdź do [nexus.io/wallets](https://nexus.io/wallets) i pobierz portfel dla twojego systemu operacyjnego.
 
 
 > Zawsze sprawdzaj integralność portfela. Postępuj zgodnie z instrukcjami w linku poniżej.
