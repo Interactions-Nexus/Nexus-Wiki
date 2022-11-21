@@ -2,7 +2,7 @@
 title: Przypadki użycia
 description: Przypadki użycia, które można zbudować na Nexusie
 published: true
-date: 2022-10-20T21:41:57.848Z
+date: 2022-11-21T22:56:15.535Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T21:41:09.845Z
