@@ -2,7 +2,7 @@
 title: Dlaczego Nexus?
 description: 
 published: true
-date: 2022-10-20T21:31:59.629Z
+date: 2022-11-21T22:57:08.298Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T21:31:59.629Z
