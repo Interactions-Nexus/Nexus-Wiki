@@ -2,7 +2,7 @@
 title: Aktualizacja Węzła Sieci Głównej
 description: Jak zaktualizować węzeł sieci głównej
 published: true
-date: 2022-11-21T22:21:31.650Z
+date: 2022-11-21T22:33:17.734Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-21T22:14:45.405Z
@@ -20,7 +20,7 @@ Gdy pojawia się nowa wersja rdzenia, należy ją zaktualizować.
 >Obowiązkowe lub przyrostowe aktualizacje portfela można zrozumieć, patrząc na numer wersji nowego i starego portfela. Jeśli pierwsza cyfra nowej wersji podstawowej zostanie zwiększona, jest to obowiązkowa aktualizacja, która może być hard forkiem lub poważnymi zmianami w protokole. Jeśli druga lub trzecia cyfra zostanie zwiększona, jest to aktualizacja przyrostowa. Aktualizacje przyrostowe mogą zostać pominięte, ale zalecamy aktualizację.
 {.is-info}
 
-Aby zaktualizować węzeł, zmień go na folder LLL-TAO.
+Aby zaktualizować węzeł, zmień na folder LLL-TAO.
 
 ```
 cd LLL-TAO
@@ -44,19 +44,19 @@ Zaleca się aktualizację systemu operacyjnego węzła. To polecenie może zają
 sudo apt update; sudo apt upgrade -y
 ```
 
-Uruchom ponownie węzeł. To polecenie zrestartuje węzeł, a także zamknie połączenie SSH lub PuTTY.
+Uruchom ponownie węzeł. To polecenie zrestartuje węzeł, a także zamknie połączenie SSH lub putty.
 
 ```
 sudo reboot
 ```
 
-Daj dwie minuty na ponowne uruchomienie węzła, a następnie zaloguj się przez SSH lub PuTTY.
+Daj dwie minuty na ponowne uruchomienie węzła, a następnie zaloguj się przez SSH lub putty.
 
 ```
 ssh ubuntu@<IPaddress>
 ```
 
-Zmień nazwę istniejącego folderu „LLL-TAO” na „old-LLL”.
+Zmień nazwę istniejącego folderu 'LLL-TAO' na 'old-LLL'.
 
 ```
 mv LLL-TAO old-LLL
@@ -82,10 +82,10 @@ Przejdź do katalogu kodu źródłowego.
 cd LLL-TAO
 ```
 
-Uruchom `make`, aby skompilować ze źródła. 4 w „j4” odnosi się do nr. liczby rdzeni/wątków dostępnych w CPU (RPI-4B ma 4 rdzenie). Więcej wątków kompilacji zużywa pamięć, jeśli masz 1 GB pamięci, zalecamy użycie j1, aby uniknąć błędu „brak pamięci”.
+Uruchom `make`, aby skompilować ze źródła. 4 w 'j4' odnosi się do nr. liczby rdzeni/wątków dostępnych w CPU (RPI-4B ma 4 rdzenie). Więcej wątków kompilacji zużywa pamięć, jeśli masz 1 GB pamięci, zalecamy użycie j1, aby uniknąć błędu 'brak pamięci'.
 
 >Aby zbudować na Raspberry Pi 3 lub 4 z 1 GB RAM, włącz pamięć wymiany, postępując zgodnie z instrukcjami z linku poniżej. Kontynuuj po skonfigurowaniu wymiany.
-{.ostrzeżenie}
+{.is-warning}
 
 https://rayanfer32.medium.com/enable-swap-memory-on-ubuntu-on-raspberry-pi-a0f873a65e74
 
@@ -103,7 +103,7 @@ W przypadku Raspberry Pi użyj poniższego polecenia.
 make -f makefile.cli -j1 ARM64=1
 ```
 
-Po udanej kompilacji pokaże komunikat „Ukończono budowanie nexusa”.
+Po udanej kompilacji pokaże komunikat “Finished building nexus”.
 
 Aby uruchomić rdzeń.
 
