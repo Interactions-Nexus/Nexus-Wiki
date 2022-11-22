@@ -2,7 +2,7 @@
 title: 控制台
 description: 麟社钱包控制台
 published: true
-date: 2022-11-22T07:23:13.356Z
+date: 2022-11-22T07:25:09.065Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-22T07:13:11.928Z
@@ -12,3 +12,77 @@ dateCreated: 2022-11-22T07:13:11.928Z
 <p>麟社钱包的控制台区域是最 “技术” 的部分。 如果您对 CLI（命令行界面）感到满意，我们建议您使用它。</p>
 <p>在控制台中，可以发出各种指令来向守护程序发送指令。 这对于调试您的钱包非常有用，并将用于开发更多功能，因为开发人员可以从我们区块链上的可用数据中推断出新模块。</p>
 <p>在控制台中输入文本 ‘Help’ 帮助，然后按执行将提供所有控制台命令的完整列表，如下所示：</p>
+<ul>
+  <li><strong>addmultisigaddress &lt;["key","key"]&gt; [account]</strong> - Add a required-to-sign multisignature address to the wallet each key is a nexus address or hex-encoded public key. If [account] is specified, assign address to [account].</li>
+  <li><strong>backupwallet &lt;destination&gt;</strong> - Safely copies wallet.dat to destination, which can be a directory or a path with filename.</li>
+  <li><strong>checkwallet</strong> - Check wallet for integrity.</li>
+  <li><strong>dumpprivkey &lt;NexusAddress&gt;</strong> - Reveals the private key corresponding to &lt;NexusAddress&gt;.</li>
+  <li><strong>echo [param]...[param]</strong> - Test function that echo's back the parameters supplied in the call.</li>
+  <li><strong>encryptwallet &lt;passphrase&gt;</strong> - Encrypts the Wallet with &lt;passphrase&gt;.</li>
+  <li><strong>getaccount &lt;Nexusaddress&gt;</strong> - Returns the account associated with the given address.</li>
+  <li><strong>getaccountaddress &lt;account&gt;</strong> - Returns the current Nexus address for receiving payments to this account.</li>
+  <li><strong>getaddressesbyaccount &lt;account&gt;</strong> - Returns the list of addresses for the given account.</li>
+  <li><strong>getbalance [account] [minconf=1]</strong> - If [account] is not specified, returns the server's total available balance. If [account] is specified, returns the balance in the account.</li>
+  <li><strong>getblock &lt;hash&gt; [txinfo]</strong> - txinfo optional to print more detailed tx info. Returns details of a block with given block-hash.</li>
+  <li><strong>getblockcount</strong> - Returns the number of blocks in the longest block chain.</li>
+  <li><strong>getblockhash &lt;index&gt;</strong> - Returns hash of block in best-block-chain at &lt;index&gt;.</li>
+  <li><strong>getblocknumber</strong> - Deprecated. Use getblockcount.</li>
+  <li><strong>getconnectioncount</strong> - Returns the number of connections to other nodes.</li>
+  <li><strong>getdifficulty</strong> - Returns difficulty as a multiple of the minimum difficulty.</li>
+  <li><strong>getinfo</strong> - Returns an object containing various state info.</li>
+  <li><strong>getmininginfo</strong> - Returns an object containing mining-related information.</li>
+  <li><strong>getmoneysupply &lt;timestamp&gt;</strong> - Returns the total supply of Nexus produced by miners, holdings, developers, and ambassadors. Default timestamp is the current Unified timestamp. The timestamp is recorded as a UNIX timestamp.</li>
+  <li><strong>getnetworkhashps</strong> - Get network hashrate for the hashing channel.</li>
+  <li><strong>getnetworkpps</strong> - Get network prime searched per second.</li>
+  <li><strong>getnetworktrustkeys</strong> - List all the Trust Keys on the Network</li>
+  <li><strong>getnewaddress [account]</strong> - Returns a new Nexus address for receiving payments. If [account] is specified (recommended), it is added to the address book so payments received with the address will be credited to [account].</li>
+  <li><strong>getpeerinfo</strong> - Returns data about each connected network node.</li>
+  <li><strong>getrawtransaction &lt;txid&gt;</strong> - Returns a std::string that is serialized, hex-encoded data for &lt;txid&gt;.</li>
+  <li><strong>getreceivedbyaccount &lt;account&gt; [minconf=1]</strong> - Returns the total amount received by addresses with &lt;account&gt; in transactions with at least [minconf] confirmations.</li>
+  <li><strong>getreceivedbyaddress &lt;Nexusaddress&gt; [minconf=1]</strong> - Returns the total amount received by &lt;Nexusaddress&gt; in transactions with at least [minconf] confirmations.</li>
+  <li><strong>getsupplyrates</strong> - Returns an object containing current Nexus production rates in set time intervals. Time Frequency is in base 13 month, 28 day totalling 364 days. This is to prevent error from Gregorian Figures.</li>
+  <li><strong>gettransaction &lt;txid&gt;</strong> - Get detailed information about &lt;txid&gt;.</li>
+  <li><strong>help [command]</strong> - List commands, or get help for a command.</li>
+  <li><strong>importprivkey &lt;PrivateKey&gt; [label]</strong> - Adds a private key (as returned by dumpprivkey) to your Wallet.</li>
+  <li><strong>isorphan &lt;hash&gt;</strong> - Returns whether a block is an orphan or not.</li>
+  <li><strong>keypoolrefill</strong> - Fills the keypool, requires Wallet passphrase to be set.</li>
+  <li><strong>listaccounts</strong> - Returns object that has account names as keys, account balances as values.</li>
+  <li><strong>listaddresses [max=100]</strong> - Returns list of addresses</li>
+  <li><strong>listreceivedbyaccount [minconf=1] [includeempty=false]</strong> - [minconf] is the minimum number of confirmations before payments are included. [includeempty] whether to include accounts that haven't received any payments. This returns an array of objects containing:</li>
+  <li>&nbsp;<ul>
+      <li>"account" : the account of the receiving addresses</li>
+      <li>"amount" : total amount received by addresses with this account</li>
+      <li>"confirmations" : number of confirmations of the most recent transaction included</li>
+    </ul>
+  </li>
+  <li><strong>listreceivedbyaddress [minconf=1] [includeempty=false]</strong> - [minconf] is the minimum number of confirmations before payments are included. [includeempty] whether to include addresses that haven't received any payments. This returns an array of objects containing:</li>
+  <li>&nbsp;<ul>
+      <li>"address" : receiving address</li>
+      <li>"account" : the account of the receiving address</li>
+      <li>"amount" : total amount received by the address</li>
+      <li>"confirmations" : number of confirmations of the most recent transaction included</li>
+    </ul>
+  </li>
+  <li><strong>listsinceblock [blockhash] [target-confirmations]</strong> - Get all transactions in blocks since block [blockhash], or all transactions if omitted</li>
+  <li><strong>listtransactions [account] [count=10] [from=0]</strong> - Returns up to [count] most recent transactions skipping the first [from] transactions for account [account].</li>
+  <li><strong>listtrustkeys</strong> - List all the Trust Keys this Node owns.</li>
+  <li><strong>listunspent [minconf=1] [maxconf=9999999] ["address",...]</strong> - Returns array of unspent transaction outputswith between minconf and maxconf (inclusive) confirmations. Optionally filtered to only include txouts paid to specified addresses. The results are an array of objects, each of which has:</li>
+  <li><strong>makekeypair [prefix]</strong> - Make a public/private key pair. [prefix] is optional preferred prefix for the public key.</li>
+  <li><strong>move &lt;fromaccount&gt; &lt;toaccount&gt; &lt;amount&gt; [minconf=1] [comment]</strong> - Move from one account in your Wallet to another.</li>
+  <li><strong>repairwallet</strong> - Repair wallet if checkwallet reports any problem.</li>
+  <li><strong>rescan</strong> - Rescans the database for relevant wallet transactions.</li>
+  <li><strong>reset</strong> - Restart all node connections</li>
+  <li><strong>sendfrom &lt;fromaccount&gt; &lt;toNexusaddress&gt; &lt;amount&gt; [minconf=1] [comment] [comment-to]</strong> - &lt;amount&gt; is a real and is rounded to the nearest 0.000001 requires wallet passphrase to be set with walletpassphrase first.</li>
+  <li><strong>sendmany &lt;fromaccount&gt; {address:amount,...} [minconf=1] [comment]</strong> - amounts are double-precision floating point numbers requires wallet passphrase to be set with walletpassphrase first.</li>
+  <li><strong>sendrawtransaction &lt;hex std::string&gt; [checkinputs=0]</strong> - Submits raw transaction (serialized, hex-encoded) to local node and network. If checkinputs is non-zero, checks the validity of the inputs of the transaction before sending it.</li>
+  <li><strong>sendtoaddress &lt;Nexusaddress&gt; &lt;amount&gt; [comment] [comment-to]</strong> - &lt;amount&gt; is a real and is rounded to the nearest 0.000001 requires wallet passphrase to be set with walletpassphrase first.</li>
+  <li><strong>setaccount &lt;Nexusaddress&gt; &lt;account&gt;</strong> - Sets the account associated with the given address.</li>
+  <li><strong>signmessage &lt;Nexusaddress&gt; &lt;message&gt;</strong> - Sign a message with the private key of an address.</li>
+  <li><strong>stop</strong> - Stop Nexus server.</li>
+  <li><strong>unspentbalance ["address",...]</strong> - Returns the total amount of unspent Nexus for given address. This is a more accurate command than Get Balance.</li>
+  <li><strong>validateaddress &lt;Nexusaddress&gt;</strong>- Return information about &lt;Nexusaddress&gt;.</li>
+  <li><strong>verifymessage &lt;Nexusaddress&gt; &lt;signature&gt; &lt;message&gt;</strong>- Verify a signed message.</li>
+  <li><strong>walletlock</strong> - Removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call walletpassphrase again before being able to call any methods which require the wallet to be unlocked.</li>
+  <li><strong>walletpassphrase &lt;passphrase&gt; [timeout] [mintonly]</strong> - Stores the wallet decryption key in memory for [timeout] seconds. mintonly is optional true/false allowing only block minting. timeout is ignored if mintonly is true / 1.</li>
+  <li><strong>walletpassphrasechange &lt;oldpassphrase&gt; &lt;newpassphrase&gt;</strong>- Changes the wallet passphrase from &lt;oldpassphrase&gt; to &lt;newpassphrase&gt;.</li>
+</ul>
