@@ -2,7 +2,7 @@
 title: 控制台
 description: 麟社钱包控制台
 published: true
-date: 2022-11-22T07:25:09.065Z
+date: 2022-11-22T07:34:38.491Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-22T07:13:11.928Z
@@ -13,13 +13,13 @@ dateCreated: 2022-11-22T07:13:11.928Z
 <p>在控制台中，可以发出各种指令来向守护程序发送指令。 这对于调试您的钱包非常有用，并将用于开发更多功能，因为开发人员可以从我们区块链上的可用数据中推断出新模块。</p>
 <p>在控制台中输入文本 ‘Help’ 帮助，然后按执行将提供所有控制台命令的完整列表，如下所示：</p>
 <ul>
-  <li><strong>addmultisigaddress &lt;["key","key"]&gt; [account]</strong> - Add a required-to-sign multisignature address to the wallet each key is a nexus address or hex-encoded public key. If [account] is specified, assign address to [account].</li>
-  <li><strong>backupwallet &lt;destination&gt;</strong> - Safely copies wallet.dat to destination, which can be a directory or a path with filename.</li>
-  <li><strong>checkwallet</strong> - Check wallet for integrity.</li>
-  <li><strong>dumpprivkey &lt;NexusAddress&gt;</strong> - Reveals the private key corresponding to &lt;NexusAddress&gt;.</li>
-  <li><strong>echo [param]...[param]</strong> - Test function that echo's back the parameters supplied in the call.</li>
-  <li><strong>encryptwallet &lt;passphrase&gt;</strong> - Encrypts the Wallet with &lt;passphrase&gt;.</li>
-  <li><strong>getaccount &lt;Nexusaddress&gt;</strong> - Returns the account associated with the given address.</li>
+  <li><strong>addmultisigaddress &lt;["key","key"]&gt; [account]</strong> - 向钱包添加一个需要签名的多重签名地址，每个密钥是一个联系地址或十六进制编码的公钥。 如果指定了 [account]，则将地址分配给 [account]。</li>
+  <li><strong>backupwallet &lt;destination&gt;</strong> - 安全地将 wallet.dat 复制到目的地，目的地可以是目录或带文件名的路径。</li>
+  <li><strong>checkwallet</strong> - 检查钱包的完整性。</li>
+  <li><strong>dumpprivkey &lt;NexusAddress&gt;</strong> - 显示与 &lt;NexusAddress&gt; 对应的私钥。</li>
+  <li><strong>echo [param]...[param]</strong> - 回显调用中提供的参数的测试函数。</li>
+  <li><strong>encryptwallet &lt;passphrase&gt;</strong> - 使用 &lt;passphrase&gt; 密码词组加密钱包。</li>
+  <li><strong>getaccount &lt;Nexusaddress&gt;</strong> - 返回与给定地址关联的帐户。</li>
   <li><strong>getaccountaddress &lt;account&gt;</strong> - Returns the current Nexus address for receiving payments to this account.</li>
   <li><strong>getaddressesbyaccount &lt;account&gt;</strong> - Returns the list of addresses for the given account.</li>
   <li><strong>getbalance [account] [minconf=1]</strong> - If [account] is not specified, returns the server's total available balance. If [account] is specified, returns the balance in the account.</li>
