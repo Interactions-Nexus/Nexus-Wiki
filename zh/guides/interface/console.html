@@ -2,7 +2,7 @@
 title: 控制台
 description: 麟社钱包控制台
 published: true
-date: 2022-11-22T07:52:23.524Z
+date: 2022-11-22T07:53:11.041Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-22T07:13:11.928Z
@@ -38,7 +38,7 @@ dateCreated: 2022-11-22T07:13:11.928Z
   <li><strong>getnewaddress [account]</strong> - 返回用于接收付款的新 Nexus 麟社地址。 如果指定了 [account]（推荐），它会被添加到地址簿中，因此使用该地址收到的付款将记入 [account]。</li>
   <li><strong>getpeerinfo</strong> - 返回有关每个连接的网络节点的数据。</li>
   <li><strong>getrawtransaction &lt;txid&gt;</strong> - 返回一个 std::string，它是 &lt;txid&gt; 的序列化十六进制编码数据。</li>
-  <li><strong>getreceivedbyaccount &lt;account&gt; [minconf=1]</strong> - Returns the total amount received by addresses with &lt;account&gt; in transactions with at least [minconf] confirmations.</li>
+  <li><strong>getreceivedbyaccount &lt;account&gt; [minconf=1]</strong> - 返回具有至少 [minconf] 确认的交易中具有 &lt;account&gt; 的地址收到的总数额。</li>
   <li><strong>getreceivedbyaddress &lt;Nexusaddress&gt; [minconf=1]</strong> - Returns the total amount received by &lt;Nexusaddress&gt; in transactions with at least [minconf] confirmations.</li>
   <li><strong>getsupplyrates</strong> - Returns an object containing current Nexus production rates in set time intervals. Time Frequency is in base 13 month, 28 day totalling 364 days. This is to prevent error from Gregorian Figures.</li>
   <li><strong>gettransaction &lt;txid&gt;</strong> - Get detailed information about &lt;txid&gt;.</li>
