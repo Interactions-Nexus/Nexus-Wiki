@@ -2,7 +2,7 @@
 title: 设置
 description: 设置模块
 published: true
-date: 2022-11-23T04:24:31.346Z
+date: 2022-11-23T04:38:29.962Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-11-22T10:03:14.713Z
@@ -30,4 +30,42 @@ dateCreated: 2022-11-22T10:03:14.713Z
 <p><strong>Enable Mining</strong> <strong>启用挖矿: </strong>启用挖矿后，您的钱包将运行一个名为 “Mining LLP” 的特殊服务器，它将允许您将外部矿工连接到您的钱包，以便在 Prime 质数或 Hash 哈希通道上生产区块。</p>
 <p><strong>Enable Staking 启用质押:</strong> 启用质押后（默认设置），您的钱包将启用质押，并会在您登录时对您的信誉账户进行质押。您还必须启用 “Staking Enabled” 启用质押才能让您的钱包接收信誉收益。 这是为了防止人们无意中启动质押。</p>
 <p><strong>Verbose Level 详细级别:</strong> 日志的详细级别显示了网络上更多的幕后数据。 如果您不需要查看大量日志记录信息，我们建议您运行 verbose level 0。 如果您遇到钱包问题，更多的调试数据对于开发人员用来查找错误和推送新版本很重要。 请自行决定使用此设置。</p>
-<p>&nbsp;</p>
+<h2><strong>Style 样式</strong></h2>
+<p><strong>Render Globe 渲染地球仪: </strong>打开或关闭地球仪。</p>
+<p><strong>Overview Display 概览显示:</strong> 自定义钱包显示。 选项为：</p>
+<ul>
+  <li>Standard 标准: 钱包随地球仪一起。</li>
+  <li>Miner 矿工: 显示挖矿指标，例如 Prime 质数、Hash 哈希和 Stake 质押难度。</li>
+  <li>Hidden Balance 隐藏余额: 隐藏您的 NXS 麟社币、美元和收款余额。</li>
+  <li>None 无: 仅显示模块和闪烁的星星。</li>
+</ul>
+<p><strong>Nexus Address Format 麟社地址格式:</strong> 根据您的喜好格式化您的 NXS 麟社币地址。 请注意，复制地址时不会复制格式（例如分段样式中的 9 个空格）。 这仅用于视觉偏好。 选项是：</p>
+<ul>
+  <li>Segmented 分段样式</li>
+</ul>
+<figure class="image"><img src="https://nexus.io/ResourceHub/images/guide/settings1.png"></figure>
+<ul>
+  <li>Truncate middle 截断中间</li>
+</ul>
+<figure class="image"><img src="https://nexus.io/ResourceHub/images/guide/settings2.png"></figure>
+<ul>
+  <li>Raw 原始</li>
+</ul>
+<figure class="image"><img src="https://nexus.io/ResourceHub/images/guide/settings3.png"></figure>
+<p><strong>Theme:</strong></p>
+<p>There are two default themes Dark and Light.</p>
+<p><strong>Background:</strong> We provide two default default backgrounds Twinkling stars and Cosmic Light. You can also upload a custom wallpaper that you have saved on your device.</p>
+<p><strong>Color scheme:</strong> Change the colors to customize your own theme. Upon changing a color in one of the default themes you will see that your ‘Theme’ changes from either Dark or Light to ‘Custom theme’. If you were to then revert back from Custom theme to Dark theme for example, and then back to ‘Custom theme’, you will find that your custom theme has been saved.</p>
+<p><strong>Import Custom Theme:</strong> A variety of custom themes created by the Nexus community can be imported into the Wallet. The below link holds a repository of community made themes. The background can be imported from your local machine, or enter a URL and the Wallet will download the background for you. Acceptable formats are PNG/JPEG/BMP/TIFF/GIF.</p>
+<p><strong>Export Custom Theme:</strong> Themes are Json files that are read by the system and apply changes to the interface. When you export a theme, you will be prompted to save the json file to your computer. Below is a link to the theme guide which describes how to develop themes. If you would like to, please request that your theme is included in the official repository for it to be shared with the community.</p>
+<p><strong>Modules</strong></p>
+<p>Security is very important, and therefore modules are sandboxed to prevent any misuse.</p>
+<p>To import a module, simply drag the file into the center of this page.</p>
+<p>Module app icons will appear in the bottom menu to the right of the Console icon.</p>
+<p>Documentation on how to write modules : <a href="https://github.com/Nexusoft/NexusInterface/tree/master/docs/Modules">https://github.com/Nexusoft/NexusInterface/tree/master/docs/Modules</a></p>
+<p>We recommend using one of these links as a starting point:</p>
+<ul>
+  <li>React-Redux Example: <a href="https://github.com/Nexusoft/react_redux_module_example">https://github.com/Nexusoft/react_redux_module_example</a></li>
+  <li>React Example: <a href="https://github.com/Nexusoft/simple_react_module_example">https://github.com/Nexusoft/simple_react_module_example</a></li>
+  <li>HTML Example: <a href="https://github.com/Nexusoft/minimal_module_example">https://github.com/Nexusoft/minimal_module_example</a></li>
+</ul>
