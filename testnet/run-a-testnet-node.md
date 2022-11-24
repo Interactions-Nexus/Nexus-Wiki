@@ -2,7 +2,7 @@
 title: Run a Testnet Node
 description: Run a node on testnet to test API's or dapps
 published: true
-date: 2022-10-25T14:04:00.958Z
+date: 2022-11-24T23:07:26.496Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:16.810Z
@@ -10,13 +10,12 @@ dateCreated: 2022-10-05T08:27:16.810Z
 
 # Run a Testnet Node
 
-This guide will help to setup a node on the nexus testnet. No permission is required to join the testnet and users have complete control of the dedicated node
+This guide will help to setup a node on the nexus testnet. No permission is required to join the testnet and users have complete control of the dedicated node.
 
 The node configuration will differ as per the individual application requirement or amount of transactions generated.
 
-{% hint style="info" %}
-If you need any help on the node specifications for a particular application do contact developer support [here](https://t.me/NexusDevelopers).
-{% endhint %}
+> If you need any help on the node specifications for a particular application do contact developer support [here](https://t.me/NexusDevelopers).
+{.is-info}
 
 ## 1. Before you start:
 
@@ -27,9 +26,8 @@ If you need any help on the node specifications for a particular application do 
 * Etcher – To burn the OS image file to USB/SD card
 * Putty if you are using ssh via windows
 
-{% hint style="info" %}
-Do not use Ubuntu 22.04 as it has the new version of openssl which breaks compatibility with core.
-{% endhint %}
+> Do not use Ubuntu 22.04 as it has the new version of openssl which breaks compatibility with core.
+{.is-info}
 
 ## 2. Testnet Mining Node Links:
 
@@ -141,13 +139,12 @@ cd LLL-TAO
 
 Lastly run this command to compile from source. This begins compiling the nexus core, please be patient, as this can take a very long time depending on your CPU. Replace the 1 in ‘j1’to the number of cores / threads for compiling faster.
 
-{% hint style="info" %}
-To build on Raspberry Pi with 1 GB of ram you have to enable Swap memory.
 
+> To build on Raspberry Pi with 1 GB of ram you have to enable Swap memory.
 Proceed after setting up swap.
-{% endhint %}
+{.is-info}
 
-{% embed url="https://rayanfer32.medium.com/enable-swap-memory-on-ubuntu-on-raspberry-pi-a0f873a65e74" %}
+https://rayanfer32.medium.com/enable-swap-memory-on-ubuntu-on-raspberry-pi-a0f873a65e74
 
 ```
 make -f makefile.cli clean
