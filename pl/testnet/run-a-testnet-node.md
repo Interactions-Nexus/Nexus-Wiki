@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Testowej
 description: Uruchom węzeł w sieci testowej, aby przetestować interfejsy API lub aplikacje
 published: true
-date: 2022-11-24T23:46:37.540Z
+date: 2022-11-24T23:54:26.153Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-24T23:01:38.536Z
@@ -166,7 +166,7 @@ Po udanej kompilacji pokaże komunikat “Finished building nexus”.
 
 ## **6.** Konfiguracja węzła sieci testowej:
 
-Konfiguracja portfela nexus jest przechowywana w pliku nexus.conf w `~/.Nexus`, który jest głównym katalogiem nexusa
+Konfiguracja portfela nexus jest przechowywana w pliku nexus.conf w `~/.Nexus`, który jest głównym katalogiem nexusa.
 
 Utwórz główny katalog Nexusa (jest to ukryty katalog, jeśli masz katalog, możesz pominąć ten krok).
 
@@ -174,60 +174,60 @@ Utwórz główny katalog Nexusa (jest to ukryty katalog, jeśli masz katalog, mo
 mkdir ~/.Nexus
 ```
 
-Utwórz plik nexus.conf
+Utwórz plik nexus.conf:
 
 ```
 nano ~/.Nexus/nexus.conf
 ```
 
-Skopiuj poniższą konfigurację do pliku nexus.conf i zmień wartości oznaczone „< >”, aby pasowały do ​​Twojej konfiguracji
+Skopiuj poniższą konfigurację do pliku nexus.conf i zmień wartości oznaczone „< >”, aby pasowały do Twojej konfiguracji.
 
 ```
-#Nexus testnet config - ZMIEŃ NA ODPOWIEDNIE WARTOŚCI
-#Ustaw poświadczenia API
-apiuser=<nazwa użytkownika>
-apipassword=<hasło>
-#Aby włączyć uwierzytelnianie API na potrzeby testowania
+#Nexus testnet config- PLEASE CHANGE TO SUITABLE VALUES
+#Set API credentials
+apiuser=<username>
+apipassword=<password>
+#To enable API authentication for testing
 apiauth=1
-#Aby włączyć zdalny dostęp API
+#To enable API remote access
 apiremote=1
-#Do białej listy adresów IP dla dostępu API
-llpallowip=<adres IP>:7080
-#Aby włączyć tryb wielu użytkowników: umożliwia zalogowanie się więcej niż jednego użytkownika do węzła
-wielu użytkowników=1
-#Aby włączyć tryb debugowania
-#debugowanie=1
-#Aby włączyć tryb demona
-demon=1
-#Aby zaakceptować przychodzące polecenia JSON-RPC
-serwer=1
-#Włącz wydobycie
-#wydobycie=1
-#Włącz tyczenie
-#stawka=1
-# Flaga testnet domyślnie ustawia port API na 7080, RPC na 8336 i port górniczy na 8325
-sieć testowa=1
-#Aby połączyć się z publiczną siecią testową Nexusa.
+#To whitelist IP address for API access
+llpallowip=<ipaddress>:7080
+#To enable multiuser mode: enables more than one user to be logged into the node
+multiuser=1
+#To enable debug mode
+#debug=1
+#To enable the daemon mode
+daemon=1
+#To accept incoming JSON-RPC commands
+server=1
+#Enable mining
+#mining=1
+#Enable Staking
+#stake=1
+#The testnet flag defaults the API port to 7080, RPC to 8336 & mining port to 8325
+testnet=1
+#To connect to the Nexus public testnet. 
 connect=testnet1.nexus-interactions.io
 connect=testnet2.nexus-interactions.io
 connect=testnet3.nexus-interactions.io
-# Aby wyłączyć główne węzły DNS
-kiwa głową=1
-#przetwarzaj powiadomienia (transakcje przychodzące) automatycznie w tle
-powiadomienia procesowe=1
-#Aby dodać hasło zatrzymania w celu ochrony przed przypadkowym wyjściem z portfela
-system/stop=<hasło>
+#To disable mainet DNS nodes
+nodns=1
+#process notifications (incoming transactions) automatically in background
+processnotifications=1
+#To add a stop password to protect from accidental wallet exit
+system/stop=<password>
 ```
 
-ctrl+s & ctrl+x, aby zapisać i wyjść z edytora tekstu nano
+Ctrl+s & ctrl+x, aby zapisać i wyjść z edytora tekstu nano.
 
 Konfiguracja portfela została zakończona.
 
-## 7. API do sterowania Node
+## 7. API do sterowania Węzłem
 
-Aby rozpocząć, zatrzymać i sprawdzić informacje o węźle, musisz użyć interfejsów API z terminala
+Aby rozpocząć, zatrzymać i sprawdzić informacje o węźle, musisz użyć interfejsów API z terminala.
 
-Przejdź do katalogu LLL-TAO, aby uruchomić rdzeń nexusa (musisz znajdować się w folderze LLL-TAO, aby uruchomić wszystkie poniższe polecenia)
+Przejdź do katalogu LLL-TAO, aby uruchomić rdzeń nexusa (musisz znajdować się w folderze LLL-TAO, aby uruchomić wszystkie poniższe polecenia).
 
 ```
 cd LLL-TAO
@@ -236,19 +236,19 @@ cd LLL-TAO
 ### Aby uruchomić demona:
 
 ```
-./ogniwo
+./nexus
 ```
 
-Nexus core będzie działał w tle jako demon. Połączy się z węzłami wydobywczymi określonymi w konfiguracji i zsynchronizuje blockchain. Znalezienie peerów i zsynchronizowanie łańcucha zajmie kilka minut.
+Nexus core będzie działał w tle jako demon. Połączy się z węzłami górniczymi określonymi w konfiguracji i zsynchronizuje blockchain. Znalezienie peerów i zsynchronizowanie łańcucha zajmie kilka minut.
 
 ### Aby zatrzymać demona:
 
 ```
-./system nexus/stop
+./nexus system/stop
 ```
 
 ```
-./nexus system/stop hasło=<hasło>
+./nexus system/stop password=<password>
 ```
 
 ### Aby uzyskać informacje o węźle:
