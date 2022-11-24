@@ -2,13 +2,13 @@
 title: Węzły Początkowe
 description: Jak uruchomić węzeł początkowy dla sieci głównej
 published: true
-date: 2022-11-24T22:32:51.060Z
+date: 2022-11-24T22:35:38.068Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-21T22:39:49.181Z
 ---
 
-# Węzły Początkowe
+# Węzły Początkowe (seed nodes)
 
 Ten przewodnik pomoże Ci skonfigurować nowy węzeł inicjujący lub przekonwertować istniejący węzeł na węzeł inicjujący.
 
