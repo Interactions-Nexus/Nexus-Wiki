@@ -2,7 +2,7 @@
 title: Połącz Węzeł z Interfejsem
 description: Jak uzyskać dostęp do zdalnego rdzenia CLI za pomocą interfejsu
 published: true
-date: 2022-11-20T23:52:24.061Z
+date: 2022-11-24T22:30:50.648Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-20T23:35:31.455Z
@@ -38,14 +38,15 @@ nano ~/.Nexus/nexus.conf
 
 Ustaw nexus.conf i interfejs obok siebie.
 
-W pliku konfiguracyjnym wprowadź unikalną apiusername i apipassword, które będą używane w polu nazwy użytkownika i hasła w ustawieniach interfejsu tritium core, adres IP zastąp domyślny adres 127.0.0.1 adresem IP węzła demona. Pozostaw domyślny port i kliknij zapisz ustawienia.
+W pliku konfiguracyjnym wprowadź unikalną `apiusername` i `apipassword`, które będą używane w polu nazwy użytkownika i hasła w ustawieniach interfejsu tritium core, adres IP zastąp domyślny adres 127.0.0.1 adresem IP węzła demona. Pozostaw domyślny port i kliknij zapisz ustawienia.
+
+![rpi-interface-api-settings.png](/rpi-interface-api-settings.png)
 
 W interfejsie przejdź do menu '_File_' i kliknij '_Switch to Legacy Mode_', a teraz znajdziesz się w starszym trybie z ręcznymi ustawieniami rdzenia.
 
-![](https://thedigitalfuture.net/wp-content/uploads/2020/12/RPI-Interface2.png)
+Użyj unikalnej nazwy `rpcusername` i `rpcpassword`, a te same zostaną użyte w polu nazwy użytkownika i hasła w starszych podstawowych ustawieniach interfejsu. Adres IP zastąp domyślny adres 127.0.0.1 adresem IP węzła. Pozostaw domyślny port i kliknij zapisz ustawienia.
 
-Użyj unikalnej nazwy rpcusername i rpcpassword, a te same zostaną użyte w polu nazwy użytkownika i hasła w starszych podstawowych ustawieniach interfejsu. Adres IP zastąp domyślny adres 127.0.0.1 adresem IP węzła. Pozostaw domyślny port i kliknij zapisz ustawienia.
-
+![rpi-interface-rpc-settings.png](/rpi-interface-rpc-settings.png)
 
 > W pliku konfiguracyjnym, adres IP 'llpallowIp' powinien odnosić się do interfejsu komputera.
 {.is-info}
@@ -94,7 +95,7 @@ sudo ufw status
 
 ufw status – Dane wyjściowe powinny wyglądać jak poniżej.
 
-![](https://thedigitalfuture.net/wp-content/uploads/2020/12/RPI-ufw.png)
+![rpi-ufw.jpg](/rpi-ufw.jpg)
 
 Następnie uruchom demona.
 
@@ -104,7 +105,7 @@ Następnie uruchom demona.
 
 Odczekaj kilka sekund i
 
-![](https://thedigitalfuture.net/wp-content/uploads/2020/12/RPI-Sync.png)
+![rpi-sync.png](/rpi-sync.png)
 
 Interfejs zostanie połączony z węzłem, a informacje pojawią się na stronie przeglądu.
 
