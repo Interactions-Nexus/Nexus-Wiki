@@ -2,7 +2,7 @@
 title: Run a Testnet Node
 description: Run a node on testnet to test API's or dapps
 published: true
-date: 2022-11-24T23:07:26.496Z
+date: 2022-11-24T23:54:28.362Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:16.810Z
@@ -22,9 +22,9 @@ The node configuration will differ as per the individual application requirement
 * A computer with a minimum of 1 CPU, 1GB RAM, 20GB hard space, Raspberry Pi 4 with 2 GB RAM.
 * VPS with 1GB RAM is sufficient for normal usage.
 * [`Ubuntu server 20.04 LTS`](https://ubuntu.com/download/server#downloads) or [`Debian 11`](https://www.debian.org/download) for AMD/IA64 or [`Ubuntu IOT`](https://ubuntu.com/download/raspberry-pi/thank-you?version=20.04.3\&architecture=server-arm64+raspi) / [`Raspberry Pi OS 64 bit`](https://www.raspberrypi.com/software/operating-systems/) for Raspberry Pi. (Use any linux distribution of choice, but this guide is tailored for Debian /Ubuntu).
-* USB drive or SD card to install ubuntu
-* Etcher – To burn the OS image file to USB/SD card
-* Putty if you are using ssh via windows
+* USB drive or SD card to install ubuntu.
+* Etcher – To burn the OS image file to USB/SD card.
+* Putty if you are using ssh via windows.
 
 > Do not use Ubuntu 22.04 as it has the new version of openssl which breaks compatibility with core.
 {.is-info}
@@ -41,7 +41,7 @@ The testnet mining nodes are listed below.
 
 The testnet uses a different set of ports compared to mainnet. If using firewall make sure to allow the following ports. Legacy is disabled and the reason RPC port 8336 is not allowed.
 
-* 7080 -API port
+* 7080 - API port
 * 8325 - Mining port, only enable if mining on testnet
 * 8888 - Outgoing node connections
 
@@ -58,7 +58,7 @@ sudo apt update
 Upgrade your node:
 
 ```
- sudo apt upgrade -y
+sudo apt upgrade -y
 ```
 
 Open SSH port before you enable firewall:
@@ -67,19 +67,19 @@ Open SSH port before you enable firewall:
 sudo ufw allow ssh
 ```
 
-Allow API port 7080
+Allow API port 7080:
 
 ```
 sudo ufw allow 7080/tcp
 ```
 
-Allow outgoing connections port 8888
+Allow outgoing connections port 8888:
 
 ```
 sudo ufw allow 8888/tcp
 ```
 
-Allow mining port 8325, only if mining
+Allow mining port 8325, only if mining:
 
 ```
 sudo ufw allow 8325/tcp
@@ -103,7 +103,7 @@ Set your timezone:
 sudo dpkg-reconfigure tzdata
 ```
 
-If you need to change the hostname – Not compulsory if you already set it during the install
+If you need to change the hostname – Not compulsory if you already set it during the install:
 
 ```
 sudo hostnamectl set-hostname <newhostname>
@@ -115,23 +115,23 @@ Reboot node:
 sudo reboot
 ```
 
-we have our computer ready to install the nexus core
+We have our computer ready to install the nexus core.
 
 ## **5. Compiling Nexus Core:**
 
-Installs the dependencies required for compiling nexus core CLI, It will take some time to complete depending on your internet speed
+Installs the dependencies required for compiling nexus core CLI, It will take some time to complete depending on your internet speed:
 
 ```
 sudo apt-get install -y build-essential libssl-dev libdb-dev libdb++-dev libminiupnpc-dev git
 ```
 
-Download the latest nexus core source code, and should only take a few seconds to complete,
+Download the latest nexus core source code, and should only take a few seconds to complete:
 
 ```
 git clone --branch merging https://github.com/Nexusoft/LLL-TAO
 ```
 
-Change into the source code directory
+Change into the source code directory:
 
 ```
 cd LLL-TAO
@@ -166,21 +166,21 @@ Will show “Finished building nexus” on a successful compile.
 
 ## **6.** Testnet Node Configuration:
 
-The nexus wallet configuration is kept in a nexus.conf file in `~/.Nexus` which is the nexus core directory
+The nexus wallet configuration is kept in a nexus.conf file in `~/.Nexus` which is the nexus core directory.
 
-Create Nexus core directory (it’s a hidden directory, if you have the directory you can skip this step.)
+Create Nexus core directory (it’s a hidden directory, if you have the directory you can skip this step).
 
 ```
 mkdir ~/.Nexus
 ```
 
-Create the nexus.conf file
+Create the nexus.conf file:
 
 ```
 nano ~/.Nexus/nexus.conf
 ```
 
-Copy the below configuration in the nexus.conf file and change the values denoted by "< >" to suit your setup
+Copy the below configuration in the nexus.conf file and change the values denoted by "< >" to suit your setup.
 
 ```
 #Nexus testnet config- PLEASE CHANGE TO SUITABLE VALUES
@@ -219,15 +219,15 @@ processnotifications=1
 system/stop=<password>
 ```
 
-ctrl+s & ctrl+x to save and exit the nano text editor
+Ctrl+s & ctrl+x to save and exit the nano text editor.
 
 The wallet configuration is now complete.
 
 ## 7. API's to Control the Node
 
-To start, stop and check the node info you have to use API's from the terminal
+To start, stop and check the node info you have to use API's from the terminal.
 
-Change into the LLL-TAO directory to start nexus core (You have to be in the LLL-TAO folder to run all the following commands)
+Change into the LLL-TAO directory to start nexus core (You have to be in the LLL-TAO folder to run all the following commands).
 
 ```
 cd LLL-TAO
