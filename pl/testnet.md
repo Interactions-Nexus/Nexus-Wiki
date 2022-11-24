@@ -2,7 +2,7 @@
 title: Sieć testowa (testnet)
 description: Miejsce, w którym znajdziesz wszystkie informacje potrzebne do uruchomienia węzła testnetu
 published: true
-date: 2022-11-24T22:56:41.218Z
+date: 2022-11-24T23:01:58.227Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-24T22:56:41.217Z
@@ -28,5 +28,5 @@ Deweloperzy mogą nawet uruchomić własną, oddzielną sieć testową, ale będ
 
 ## Rozdziały
 
-- [Uruchom węzeł sieci testowej](/pl/testnet/run-a-testnet-node)
+- [Uruchom Węzeł Sieci Testowej](/pl/testnet/run-a-testnet-node)
 {.links-list}
