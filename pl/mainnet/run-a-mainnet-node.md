@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Głównej
 description: Jak uruchomić węzeł CLI w sieci głównej — Stabilny i Testowy
 published: true
-date: 2022-11-20T23:53:27.615Z
+date: 2022-11-24T22:47:26.445Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-19T22:10:31.571Z
@@ -18,7 +18,13 @@ dateCreated: 2022-11-19T22:10:31.571Z
 - W przypadku VPS 1 GB pamięci RAM wystarcza do normalnego użytkowania, w celu konfiguracji zaplecza dapp skontaktuj się [tutaj](https://explorer.nexus.io/).
 - [`Ubuntu server 20.04 LTS`](https://ubuntu.com/download/server#downloads) lub [`Debian 11`](https://www.debian.org/download) dla AMD/IA64 lub [ `Ubuntu IOT`](https://ubuntu.com/download/raspberry-pi/thank-you?version=20.04.3&architecture=server-arm64+raspi) / [`Raspberry Pi OS 64 bit`](https://www.raspberrypi.com/software/operating-systems/) dla Raspberry Pi.
 - [Etcher](https://www.balena.io/etcher/) – Aby nagrać plik obrazu na kartę SD.
-- Putty, jeśli używasz SSH przez Windows.
+- [Putty](https://www.putty.org/), jeśli używasz SSH przez Windows.
+
+![rpi-need.jpg](/rpi-need.jpg)<p align=center>*To jest to, czego potrzebujesz, aby uruchomić węzeł Nexus.*</p>
+
+![rpi-htop.png](/rpi-htop.png)<p align=center>*Rdzeń Nexusa potrzebuje mało zasobów - zużycie pamięci jest mniejsze niż 250 MB na Pi.*</p>
+
+![rpi-power.jpg](/rpi-power.jpg)<p align=center>*Zaleta uruchomienia węzła na Raspberry Pi - bardzo niski pobór mocy.*</p>
 
 > Aby zainstalować stabilny rdzeń 5.0.5, użyj tylko **Ubuntu 20.04 LTS**. Nowsze wersje Ubuntu, Debian i Raspberry Pi OS (wcześniej Raspbian) mają problemy z kompilacją.
 {.is-warning}
@@ -150,6 +156,8 @@ Do kompilacji na Raspberry Pi użyj:
 make -f makefile.cli -j1 ARM64=1
 ```
 
+![rpi-finish-compile.png](/rpi-finish-compile.png)
+
 Po udanej kompilacji pokaże komunikat “Finished building nexus”.
 
 &nbsp;
@@ -205,6 +213,8 @@ apiremote=1
 llpallowip=<ipaddress>:8080  
 llpallowip=<ipaddress>:9336
 ```
+
+![rpi-config.png](/rpi-config.png)<p align=center>*Konfiguracja Nexusa.*</p>
 
 W przypadku testowania łączącej się gałęzi / 5.1 :
 
@@ -304,11 +314,12 @@ Nexus core będzie działał w tle jako demon. Wykryje rówieśników i zsynchro
 ./nexus system/get/info
 ```
 
-Dane wyjściowe API są w formacie json. Możesz potwierdzić, czy węzeł jest zsynchronizowany, zaznaczając „synchronising”: false i „synccomplete”: 100. Sprawdź wysokość bloku w eksploratorze [tutaj](http://explorer.nexus.io) lub [tutaj](https://nxsorbitalscan.com).
+Dane wyjściowe API są w formacie json. Możesz potwierdzić, czy węzeł jest zsynchronizowany, zaznaczając „synchronising”: false i „synccomplete”: 100. Sprawdź wysokość bloku w eksploratorze [Nexplorer](http://explorer.nexus.io) lub [NXSscan](https://nxsorbitalscan.com).
 
 Po pełnej synchronizacji łańcucha blokowego utwórz nowe konto użytkownika (łańcuch podpisów).
 
-Nazwa użytkownika musi mieć co najmniej 2 znaki, hasło musi mieć 8 znaków, a PIN 4 znaki. PIN może być kombinacją liter/cyfr/symboli.
+>`username` musi mieć co najmniej 2 znaki, `password` musi mieć 8 znaków, a `PIN` 4 znaki. PIN może być kombinacją liter/cyfr/symboli.
+{.is-info}
 
 ```
 ./nexus users/create/user username= password= pin=
