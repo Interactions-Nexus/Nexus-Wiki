@@ -2,7 +2,7 @@
 title: Węzły Początkowe
 description: Jak uruchomić węzeł początkowy dla sieci głównej
 published: true
-date: 2022-11-21T22:55:02.472Z
+date: 2022-11-24T22:32:51.060Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-21T22:39:49.181Z
@@ -25,7 +25,7 @@ Typowy tani VPS lub współdzielony serwer hostingowy zazwyczaj spełnia te wyma
     
 Aby skonfigurować nowy węzeł, postępuj zgodnie ze wskazówkami dotyczącymi tworzenia węzła sieci głównej w poniższym łączu:
 
-- [Uruchom Węzeł Sieci Głównej *Jak skonfigurować węzeł CLI sieci głównej*](https://wiki.nexus.io/en/mainnet/run-a-mainnet-node)
+- [Uruchom Węzeł Sieci Głównej *Jak skonfigurować węzeł CLI sieci głównej*](https://wiki.nexus.io/pl/mainnet/run-a-mainnet-node)
 {.links-list}
 
 ## Konfiguracja węzła początkowego
