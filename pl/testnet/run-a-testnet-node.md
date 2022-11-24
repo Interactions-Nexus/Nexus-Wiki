@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Testowej
 description: Uruchom węzeł w sieci testowej, aby przetestować interfejsy API lub aplikacje
 published: true
-date: 2022-11-24T23:41:42.990Z
+date: 2022-11-24T23:46:37.540Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-24T23:01:38.536Z
@@ -119,35 +119,35 @@ Mamy nasz komputer gotowy do zainstalowania rdzenia nexusa.
 
 ## **5. Kompilowanie rdzenia Nexusa:**
 
-Instaluje zależności wymagane do kompilacji nexus core CLI. Ukończenie zajmie trochę czasu w zależności od szybkości Internetu
+Instaluje zależności wymagane do kompilacji nexus core CLI. Ukończenie zajmie trochę czasu w zależności od szybkości Internetu:
 
 ```
 sudo apt-get install -y build-essential libssl-dev libdb-dev libdb++-dev libminiupnpc-dev git
 ```
 
-Pobierz najnowszy kod źródłowy rdzenia nexusa, a jego ukończenie powinno zająć tylko kilka sekund,
+Pobierz najnowszy kod źródłowy rdzenia nexusa, a jego ukończenie powinno zająć tylko kilka sekund:
 
 ```
-git clone -- scalanie gałęzi https://github.com/Nexusoft/LLL-TAO
+git clone --branch merging https://github.com/Nexusoft/LLL-TAO
 ```
 
-Przejdź do katalogu kodu źródłowego
+Przejdź do katalogu kodu źródłowego:
 
 ```
 cd LLL-TAO
 ```
 
-Na koniec uruchom to polecenie, aby skompilować ze źródła. Spowoduje to rozpoczęcie kompilacji rdzenia nexusa. Prosimy o cierpliwość, ponieważ w zależności od procesora może to zająć bardzo dużo czasu. Zamień 1 w „j1” na liczbę rdzeni / wątków, aby kompilować szybciej.
+Na koniec uruchom to polecenie, aby skompilować ze źródła. Spowoduje to rozpoczęcie kompilacji rdzenia nexusa. Prosimy o cierpliwość, ponieważ w zależności od procesora może to zająć bardzo dużo czasu. Zamień 1 w 'j1' na liczbę rdzeni / wątków, aby kompilować szybciej.
 
 
 > Aby zbudować na Raspberry Pi z 1 GB pamięci RAM, musisz włączyć pamięć wymiany.
 Kontynuuj po skonfigurowaniu wymiany.
-{.to-informacja}
+{.is-info}
 
 https://rayanfer32.medium.com/enable-swap-memory-on-ubuntu-on-raspberry-pi-a0f873a65e74
 
 ```
-make -f makefile.cli czyste
+make -f makefile.cli clean
 ```
 
 W przypadku komputerów x86/IA64 użyj:
@@ -156,13 +156,13 @@ W przypadku komputerów x86/IA64 użyj:
 make -f makefile.cli -j1 AMD64=1 NO_WALLET=1
 ```
 
-Do użycia Raspberry Pi:
+Dla Raspberry Pi użyj:
 
 ```
 make -f makefile.cli -j4 ARM64=1 NO_WALLET=1
 ```
 
-Po udanej kompilacji pokaże komunikat „Ukończono budowanie nexusa”.
+Po udanej kompilacji pokaże komunikat “Finished building nexus”.
 
 ## **6.** Konfiguracja węzła sieci testowej:
 
