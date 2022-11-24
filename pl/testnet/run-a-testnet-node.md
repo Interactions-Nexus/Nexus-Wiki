@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Testowej
 description: Uruchom węzeł w sieci testowej, aby przetestować interfejsy API lub aplikacje
 published: true
-date: 2022-11-24T23:54:26.153Z
+date: 2022-11-24T23:56:29.880Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-24T23:01:38.536Z
@@ -47,7 +47,7 @@ Sieć testowa używa innego zestawu portów niż sieć główna. Jeśli używasz
 
 ## **4. Przygotuj węzeł:**
 
-[Zainstaluj serwer ubuntu 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) lub wybraną dystrybucję, zainstaluj serwer open-ssh podczas instalacji, a po zakończeniu instalacji uruchom ponownie węzeł. SSH w swoim węźle i postępuj zgodnie z poniższymi poleceniami. Możesz skopiować polecenia i wkleić je w terminalu za pomocą klawiszy CTRL+SHIFT+v
+[Zainstaluj serwer ubuntu 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) lub wybraną dystrybucję, zainstaluj serwer open-ssh podczas instalacji, a po zakończeniu instalacji uruchom ponownie węzeł. SSH w swoim węźle i postępuj zgodnie z poniższymi poleceniami. Możesz skopiować polecenia i wkleić je w terminalu za pomocą klawiszy CTRL+SHIFT+v.
 
 Zaktualizuj swój węzeł:
 
