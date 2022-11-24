@@ -2,7 +2,7 @@
 title: Uruchom Węzeł Sieci Testowej
 description: Uruchom węzeł w sieci testowej, aby przetestować interfejsy API lub aplikacje
 published: true
-date: 2022-11-24T23:56:29.880Z
+date: 2022-11-24T23:57:22.141Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-24T23:01:38.536Z
@@ -223,7 +223,7 @@ Ctrl+s & ctrl+x, aby zapisać i wyjść z edytora tekstu nano.
 
 Konfiguracja portfela została zakończona.
 
-## 7. API do sterowania Węzłem
+## 7. API do sterowania węzłem
 
 Aby rozpocząć, zatrzymać i sprawdzić informacje o węźle, musisz użyć interfejsów API z terminala.
 
