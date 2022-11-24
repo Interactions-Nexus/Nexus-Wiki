@@ -2,7 +2,7 @@
 title: Run a Testnet Node
 description: Run a node on testnet to test API's or dapps
 published: true
-date: 2022-11-24T23:54:28.362Z
+date: 2022-11-24T23:58:27.762Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:16.810Z
@@ -47,7 +47,7 @@ The testnet uses a different set of ports compared to mainnet. If using firewall
 
 ## **4. Prepare The Node:**
 
-[Install ubuntu server 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) or distro of your choice, install open-ssh server during the install and once the installation is complete restart the node. SSH in your node and follow the below commands. You can copy the commands and paste it in the terminal using keys CTRL+SHIFT+v
+[Install ubuntu server 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) or distro of your choice, install open-ssh server during the install and once the installation is complete restart the node. SSH in your node and follow the below commands. You can copy the commands and paste it in the terminal using keys CTRL+SHIFT+v.
 
 Update your node:
 
@@ -223,7 +223,7 @@ Ctrl+s & ctrl+x to save and exit the nano text editor.
 
 The wallet configuration is now complete.
 
-## 7. API's to Control the Node
+## 7. API's to Control the Node:
 
 To start, stop and check the node info you have to use API's from the terminal.
 
