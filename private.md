@@ -2,7 +2,7 @@
 title: Private-Testnet
 description: 
 published: true
-date: 2022-11-19T18:19:10.527Z
+date: 2022-11-25T21:45:09.658Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:20.545Z
@@ -10,11 +10,11 @@ dateCreated: 2022-10-05T08:27:20.545Z
 
 # Tritium++ Private Testnet
 
-This guide is to run a single or island node for testing. It does not require mining or staking to produce blocks
+This guide is to run a single or island node for testing. It does not require mining or staking to produce blocks.
 
 ## Introduction:
 
-This guide will help to setup a private testnet for development. The private node has no consensus, and is a private database. This node can be used to test API calls, without spending on mining or the use of coins
+This guide will help to setup a private testnet for development. The private node has no consensus, and is a private database. This node can be used to test API calls, without spending on mining or the use of coins.
 
 ## Understanding Public, Private & Hybrid
 
@@ -66,7 +66,7 @@ Set timezone:
 sudo dpkg-reconfigure tzdata
 ```
 
-To change the hostname, this is Optional
+To change the hostname, this is Optional:
 
 ```
 sudo hostnamectl set-hostname <newhostname>
@@ -78,17 +78,17 @@ Reboot node:
 sudo reboot
 ```
 
-The computer is ready to install the nexus core
+The computer is ready to install the nexus core.
 
 ## 2. Compiling Nexus core:
 
-Install the dependencies required for compiling nexus core, It will take some time to complete depending on the internet speed
+Install the dependencies required for compiling nexus core, It will take some time to complete depending on the internet speed:
 
 ```
 sudo apt-get install -y build-essential libssl-dev libminiupnpc-dev git
 ```
 
-Download the latest tritium++ core (5.1) source code, should only take a few seconds to complete
+Download the latest tritium++ core (5.1) source code, should only take a few seconds to complete:
 
 ```
 git clone -b merging https://github.com/Nexusoft/LLL-TAO
@@ -98,19 +98,19 @@ git clone -b merging https://github.com/Nexusoft/LLL-TAO
 {.is-info}
 
 
-To install Tritium / 5.0.5, use the following command
+To install Tritium / 5.0.5, use the following command:
 
 ```
 git clone --depth 1 https://github.com/Nexusoft/LLL-TAO
 ```
 
-Change into the source code directory
+Change into the source code directory:
 
 ```
 cd LLL-TAO
 ```
 
-Run the command to compile from source, please be patient, as this can take a very long time depending on your CPU. Replace the 1 in ‘j1’ to the number of cores / threads for compiling faster.
+Run the command to compile from source, please be patient, as this can take a very long time depending on your CPU. Replace the 1 in ‘j1’ to the number of cores / threads for compiling faster:
 
 ```
 make -f makefile.cli clean
@@ -130,13 +130,13 @@ make -f makefile.cli -j1 ARM64=1 NO_WALLET=1
 
 Will show “Finished building nexus” on a successful compile.
 
-The make command creates a new executable file named 'nexus'. To check use the list command
+The make command creates a new executable file named 'nexus'. To check use the list command:
 
 ```
 ls
 ```
 
-`ls` command lists the contents of the folder. The "nexus" executable is shown
+`ls` command lists the contents of the folder. The "nexus" executable is shown.
 
 ![](https://nexus.io/ResourceHub/images/5.1\_testnet/testnet1.png)
 
@@ -150,19 +150,19 @@ sudo mv ~/LLL-TAO/nexus /usr/bin
 
 ## 3. Configuring The Wallet (nexus.conf)
 
-Create Nexus core directory (it’s a hidden directory, Nexus daemon creates it automatically on first start. We are creating it manually to create the configuration file. If the directory is available, skip this step.)
+Create Nexus core directory (It’s a hidden directory. Nexus daemon creates it automatically on first start. We are creating it manually to create the configuration file. If the directory is available, skip this step.)
 
 ```
 mkdir ~/.Nexus
 ```
 
-Th wallet configuration is stored in nexus.conf. Create the nexus.conf file
+Th wallet configuration is stored in nexus.conf. Create the nexus.conf file:
 
 ```
 nano ~/.Nexus/nexus.conf 
 ```
 
-Copy the configuration below, to the nexus.conf file with ctrl+shift+v and edit or disable the parameters as needed.
+Copy the configuration below, to the nexus.conf file with ctrl+shift+v and edit or disable the parameters as needed:
 
 ```
 #Nexus private standalone node config- Only for 5.1 rc1 & above
@@ -195,7 +195,7 @@ addnode=<ipaddress>
 system/stop=<password>
 ```
 
-Ctrl+s and Ctrl+x to save and exit the editor
+Ctrl+s and Ctrl+x to save and exit the editor.
 
 > 
 > To add an additional node to the private network, disable ‘manager’ and ‘generate’ flags in the additional node configuration. Add the ‘addnode’ flag with ipaddress referring to the first node or the one with the ‘generate’ flag and an additional line for any other node in the network.
@@ -208,7 +208,7 @@ Ctrl+s and Ctrl+x to save and exit the editor
 
 To interact with the nexus core, use API commands via the terminal or remotely. If you have any doubts you can refer to the [API documentation](/en/tritium). 
 
-Open port 7080 and 8336 on the firewall.
+Open port 7080 and 8336 on the firewall:
 
 ```
 sudo ufw allow 7080/tcp
@@ -218,13 +218,13 @@ sudo ufw allow 7080/tcp
 sudo ufw allow 8336/tcp
 ```
 
-If the executable is in the LLL-TAO directory to start nexus core, change into the LLL-TAO folder to run all the following commands.
+If the executable is in the LLL-TAO directory to start nexus core, change into the LLL-TAO folder to run all the following commands:
 
 ```
 cd LLL-TAO
 ```
 
-To start the daemon, use the path and the executable file name.
+To start the daemon, use the path and the executable file name:
 
 ```
 ./nexus
@@ -256,7 +256,7 @@ To monitor your logs:
 tail -f ~/.Nexus/testnet1/log/0.log
 ```
 
-To create a user account (signature chain). Username must be a minimum of 2 characters, passwords must be 8 characters and pin 4 characters. The PIN can be a combination of letters/numbers/symbols.
+To create a user account (signature chain). Username must be a minimum of 2 characters, passwords must be 8 characters and pin 4 characters. The PIN can be a combination of letters/numbers/symbols:
 
 ```
 nexus users/create/user username=<username> password=<password> pin=<pin> 
@@ -267,19 +267,19 @@ nexus users/create/user username=<username> password=<password> pin=<pin>
 {.is-info}
 
 
-To login the user
+To login the user:
 
 ```
 nexus users/login/user username=<username> password=<password> pin=<pin>
 ```
 
-To unlock the account for automatically credit incoming transactions set (notifications=1). If it's not set you will have to manually credit the incoming transactions else it will be credited back to the sender's account after 24 hrs. This is the reversible transaction function working as designed.
+To unlock the account for automatically credit incoming transactions set (notifications=1). If it's not set you will have to manually credit the incoming transactions else it will be credited back to the sender's account after 24 hrs. This is the reversible transaction function working as designed:
 
 ```
 nexus users/unlock/user pin=<pin> notifications=1 session=<sessionid> 
 ```
 
-To check the full node metrics.
+To check the full node metrics:
 
 ```
 ./nexus system/get/metrics 
@@ -293,7 +293,7 @@ The API commands can be used from the browser and output in JSON is displayed. (
 
 To interact with the tritium++ core, use the tritium++ API commands via the terminal or remotely. If you have any doubts you can refer to the [Tritum++ API Documentation](/en/tritium++). The documentation for 5.1 is almost complete and there maybe some changes as per development.
 
-Open port 7080 and 8336 on the firewall.
+Open port 7080 and 8336 on the firewall:
 
 ```
 sudo ufw allow 7080/tcp
@@ -309,7 +309,7 @@ If the executable is in the LLL-TAO directory to start nexus core, change into t
 cd LLL-TAO
 ```
 
-To start the daemon, use the path and the executable file name
+To start the daemon, use the path and the executable file name:
 
 ```
 ./nexus 
@@ -341,13 +341,13 @@ To monitor your logs:
 tail -f ~/.Nexus/testnet1/log/0.log
 ```
 
-To create a user profile (signature chain). Username must be a minimum of 2 characters, passwords must be 8 characters and pin 4 characters. The PIN can be a combination of letters/numbers/symbols.
+To create a user profile (signature chain). Username must be a minimum of 2 characters, passwords must be 8 characters and pin 4 characters. The PIN can be a combination of letters/numbers/symbols:
 
 ```
 nexus profiles/create/master username=<username> password=<password> pin=<pin> 
 ```
 
-The user has to create a session, to access the user profile.
+The user has to create a session, to access the user profile:
 
 ```
 nexus sessions/create/local username=<username> password=<password> pin=<pin>
@@ -357,13 +357,13 @@ nexus sessions/create/local username=<username> password=<password> pin=<pin>
 {.is-info}
 
 
-To unlock the account for automatically credit incoming transactions set (notifications=1). If it's not set you will have to manually credit the incoming transactions else it will be credited back to the sender's account after 7 days or the set expiry. This is the reversible transaction function working as designed.
+To unlock the account for automatically credit incoming transactions set (notifications=1). If it's not set you will have to manually credit the incoming transactions else it will be credited back to the sender's account after 7 days or the set expiry. This is the reversible transaction function working as designed:
 
 ```
 nexus sessions/unlock/local pin=<pin> notifications=1 session=<sessionid> 
 ```
 
-To check the full node metrics.
+To check the full node metrics:
 
 ```
 ./nexus system/get/metrics 
