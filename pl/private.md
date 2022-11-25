@@ -2,7 +2,7 @@
 title: Prywatna Sieć Testowa
 description: 
 published: true
-date: 2022-11-25T21:16:50.986Z
+date: 2022-11-25T21:34:58.485Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T21:04:58.085Z
@@ -82,38 +82,38 @@ Komputer jest gotowy do zainstalowania rdzenia nexusa.
 
 ## 2. Kompilowanie rdzenia Nexusa:
 
-Zainstaluj zależności wymagane do skompilowania rdzenia nexusa. Zajmie to trochę czasu w zależności od szybkości Internetu
+Zainstaluj zależności wymagane do skompilowania rdzenia nexusa. Zajmie to trochę czasu w zależności od szybkości Internetu:
 
 ```
 sudo apt-get install -y build-essential libssl-dev libminiupnpc-dev git
 ```
 
-Pobierz najnowszy kod źródłowy Tritium++ core (5.1), jego ukończenie powinno zająć tylko kilka sekund
+Pobierz najnowszy kod źródłowy Tritium++ core (5.1), jego ukończenie powinno zająć tylko kilka sekund:
 
 ```
-git clone -b scalanie https://github.com/Nexusoft/LLL-TAO
+git clone -b merging https://github.com/Nexusoft/LLL-TAO
 ```
 
 > Tritium++ jest w fazie łączenia w momencie pisania tego przewodnika
-{.to-informacja}
+{.is-info}
 
 
-Aby zainstalować Tritium / 5.0.5, użyj następującego polecenia
+Aby zainstalować Tritium / 5.0.5, użyj następującego polecenia:
 
 ```
-git klon --głębokość 1 https://github.com/Nexusoft/LLL-TAO
+git clone --depth 1 https://github.com/Nexusoft/LLL-TAO
 ```
 
-Przejdź do katalogu kodu źródłowego
+Przejdź do katalogu kodu źródłowego:
 
 ```
 cd LLL-TAO
 ```
 
-Uruchom polecenie, aby skompilować ze źródła, bądź cierpliwy, ponieważ może to zająć bardzo dużo czasu w zależności od procesora. Zamień 1 w „j1” na liczbę rdzeni / wątków, aby kompilować szybciej.
+Uruchom polecenie, aby skompilować ze źródła, bądź cierpliwy, ponieważ może to zająć bardzo dużo czasu w zależności od procesora. Zamień 1 w 'j1' na liczbę rdzeni / wątków, aby kompilować szybciej:
 
 ```
-make -f makefile.cli czyste
+make -f makefile.cli clean
 ```
 
 W przypadku komputerów x86/IA64 użyj:
@@ -128,9 +128,9 @@ Do kompilacji na Raspberry Pi użyj:
 make -f makefile.cli -j1 ARM64=1 NO_WALLET=1
 ```
 
-Po udanej kompilacji pokaże komunikat „Ukończono budowanie nexusa”.
+Po udanej kompilacji pokaże komunikat “Finished building nexus”.
 
-Komenda make tworzy nowy plik wykonywalny o nazwie „nexus”. Aby to sprawdzić, użyj polecenia list
+Komenda make tworzy nowy plik wykonywalny o nazwie 'nexus'. Aby to sprawdzić, użyj polecenia list:
 
 ```
 ls
