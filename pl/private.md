@@ -2,7 +2,7 @@
 title: Prywatna Sieć Testowa
 description: 
 published: true
-date: 2022-11-25T21:39:58.513Z
+date: 2022-11-25T21:49:24.430Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T21:04:58.085Z
@@ -201,4 +201,171 @@ Ctrl+s i Ctrl+x, aby zapisać i wyjść z edytora.
 > Aby dodać dodatkowy węzeł do sieci prywatnej, wyłącz flagi ‘manager’ i ‘generate’ w konfiguracji dodatkowego węzła. Dodaj flagę ‘addnode’ z ipaddress odnoszącą się do pierwszego węzła lub z flagą ‘generate’ i dodatkową linię dla dowolnego innego węzła w sieci.
 {.is-info}
 
+## 4. Polecenia API Tritium
 
+Aby wchodzić w interakcje z rdzeniem nexusa, użyj poleceń API za pośrednictwem terminala lub zdalnie. Jeśli masz jakiekolwiek wątpliwości, możesz zapoznać się z [dokumentacją API](/en/tritium).
+
+Otwórz porty 7080 i 8336 w zaporze:
+
+```
+sudo ufw allow 7080/tcp
+```
+
+```
+sudo ufw allow 8336/tcp
+```
+
+Jeśli plik wykonywalny znajduje się w katalogu LLL-TAO, aby uruchomić nexus core, przejdź do folderu LLL-TAO, aby uruchomić wszystkie następujące polecenia:
+
+```
+cd LLL-TAO
+```
+
+Aby uruchomić demona, użyj ścieżki i nazwy pliku wykonywalnego:
+
+```
+./nexus
+```
+
+Jeśli przeniosłeś plik wykonywalny nexusa do /user/bin, użyj następującego polecenia z dowolnego nexusa lokalizacji i bez ścieżki (./).
+
+Aby zatrzymać demona bez ochrony hasłem w konfiguracji:
+
+```
+nexus system/stop
+```
+
+Aby zatrzymać demona z ochroną hasłem w konfiguracji:
+
+```
+nexus system/stop password=<password>
+```
+
+Aby uzyskać informacje o węźle:
+
+```
+./nexus system/get/info
+```
+
+Aby monitorować dzienniki:
+
+```
+tail -f ~/.Nexus/testnet1/log/0.log
+```
+
+Aby utworzyć konto użytkownika (łańcuch podpisów). Nazwa użytkownika musi składać się z co najmniej 2 znaków, hasło musi mieć 8 znaków, a kod PIN 4 znaki. PIN może być kombinacją liter/cyfr/symboli:
+
+```
+nexus users/create/user username=<username> password=<password> pin=<pin> 
+```
+
+
+> Tryb wielu użytkowników tworzy nową sesję dla każdego zalogowanego użytkownika, a użytkownik musi używać tego konkretnego identyfikatora sesji przy każdym żądaniu API dla konkretnego użytkownika. Zapisz identyfikator sesji.
+{.is-info}
+
+
+Aby zalogować użytkownika:
+
+```
+nexus users/login/user username=<username> password=<password> pin=<pin>
+```
+
+Aby odblokować konto, ustaw automatyczne uznawanie transakcji przychodzących (powiadomienia=1). Jeśli nie jest ustawiona, będziesz musiał ręcznie zaksięgować transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 24 godzinach. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami:
+
+```
+nexus users/unlock/user pin=<pin> notifications=1 session=<sessionid> 
+```
+
+Aby sprawdzić pełne metryki węzła:
+
+```
+./nexus system/get/metrics 
+```
+
+Polecenia API mogą być używane z poziomu przeglądarki, a dane wyjściowe są wyświetlane w formacie JSON. (Zalecane jest rozszerzenie `JSON formatter` do analizowania danych wyjściowych JSON dla chrome i wariantów, które firfox ma wbudowany parser)
+
+&nbsp;
+
+## 5. Polecenia API Tritium++ (5.1)
+
+Aby wchodzić w interakcje z rdzeniem tritium++, użyj poleceń interfejsu API tritium++ za pośrednictwem terminala lub zdalnie. Jeśli masz jakiekolwiek wątpliwości, możesz zapoznać się z [dokumentacją API Tritum++](/en/tritium++). Dokumentacja dla 5.1 jest prawie kompletna i być może pojawią się pewne zmiany w miarę rozwoju.
+
+Otwórz porty 7080 i 8336 w zaporze:
+
+```
+sudo ufw allow 7080/tcp
+```
+
+```
+sudo ufw allow 8336/tcp
+```
+
+Jeśli plik wykonywalny znajduje się w katalogu LLL-TAO, aby uruchomić nexus core, przejdź do folderu LLL-TAO, aby uruchomić następujące polecenia:
+
+```
+cd LLL-TAO
+```
+
+Aby uruchomić demona, użyj ścieżki i nazwy pliku wykonywalnego:
+
+```
+./nexus 
+```
+
+Jeśli przeniosłeś plik wykonywalny nexusa do /user/bin, użyj następującego polecenia z dowolnego nexusa lokalizacji i bez ścieżki (./).
+
+Aby zatrzymać demona bez ochrony hasłem w konfiguracji:
+
+```
+nexus system/stop
+```
+
+Aby zatrzymać demona z ochroną hasłem w konfiguracji:
+
+```
+nexus system/stop password=<password>
+```
+
+Aby uzyskać informacje o węźle:
+
+```
+./nexus system/get/info
+```
+
+Aby monitorować dzienniki:
+
+```
+tail -f ~/.Nexus/testnet1/log/0.log
+```
+
+Aby utworzyć profil użytkownika (łańcuch podpisów). Nazwa użytkownika musi składać się z co najmniej 2 znaków, hasło musi mieć 8 znaków, a kod PIN 4 znaki. PIN może być kombinacją liter/cyfr/symboli:
+
+```
+nexus profiles/create/master username=<username> password=<password> pin=<pin> 
+```
+
+Użytkownik musi utworzyć sesję, aby uzyskać dostęp do profilu użytkownika:
+
+```
+nexus sessions/create/local username=<username> password=<password> pin=<pin>
+```
+
+> Podczas tworzenia sesji profilu w trybie wielu użytkowników, zwraca unikalny identyfikator sesji dla każdego zalogowanego użytkownika, a użytkownik musi użyć tego konkretnego identyfikatora sesji przy każdym żądaniu API dla każdej transakcji dla tego konkretnego użytkownika. Pamiętaj o zapisaniu identyfikatora sesji.
+{.is-info}
+
+
+Aby odblokować konto, ustaw automatyczne uznawanie transakcji przychodzących (powiadomienia=1). Jeśli nie jest ustawiona, będziesz musiał ręcznie zaksięgować transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 7 dniach lub po upływie ustawionego terminu wygaśnięcia. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami:
+
+```
+nexus sessions/unlock/local pin=<pin> notifications=1 session=<sessionid> 
+```
+
+Aby sprawdzić pełne metryki węzła:
+
+```
+./nexus system/get/metrics 
+```
+
+Polecenia API mogą być używane z poziomu przeglądarki, a dane wyjściowe są wyświetlane w formacie JSON. (Zalecane jest rozszerzenie `JSON formatter` do analizowania danych wyjściowych JSON dla chrome i wariantów, które firfox ma wbudowany parser)
+
+Mam nadzieję, że ten przewodnik był pomocny !!
