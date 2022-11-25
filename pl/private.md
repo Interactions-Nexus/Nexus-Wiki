@@ -2,7 +2,7 @@
 title: Prywatna Sieć Testowa
 description: 
 published: true
-date: 2022-11-25T21:49:24.430Z
+date: 2022-11-25T21:53:40.240Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T21:04:58.085Z
@@ -270,7 +270,7 @@ Aby zalogować użytkownika:
 nexus users/login/user username=<username> password=<password> pin=<pin>
 ```
 
-Aby odblokować konto, ustaw automatyczne uznawanie transakcji przychodzących (powiadomienia=1). Jeśli nie jest ustawiona, będziesz musiał ręcznie zaksięgować transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 24 godzinach. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami:
+Aby odblokować konto, ustaw automatyczne uznawanie transakcji przychodzących (notifications=1). Jeśli nie jest ustawiona, będziesz musiał ręcznie zaksięgować transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 24 godzinach. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami:
 
 ```
 nexus users/unlock/user pin=<pin> notifications=1 session=<sessionid> 
@@ -282,7 +282,7 @@ Aby sprawdzić pełne metryki węzła:
 ./nexus system/get/metrics 
 ```
 
-Polecenia API mogą być używane z poziomu przeglądarki, a dane wyjściowe są wyświetlane w formacie JSON. (Zalecane jest rozszerzenie `JSON formatter` do analizowania danych wyjściowych JSON dla chrome i wariantów, które firfox ma wbudowany parser)
+Polecenia API mogą być używane z poziomu przeglądarki, a dane wyjściowe są wyświetlane w formacie JSON. (Zalecane jest rozszerzenie `JSON formatter` do analizowania danych wyjściowych JSON dla chrome i wariantów, które firfox ma wbudowany parser).
 
 &nbsp;
 
