@@ -2,7 +2,7 @@
 title: Prywatna Sieć Testowa
 description: 
 published: true
-date: 2022-11-25T21:53:40.240Z
+date: 2022-11-25T21:57:41.066Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T21:04:58.085Z
@@ -282,13 +282,13 @@ Aby sprawdzić pełne metryki węzła:
 ./nexus system/get/metrics 
 ```
 
-Polecenia API mogą być używane z poziomu przeglądarki, a dane wyjściowe są wyświetlane w formacie JSON. (Zalecane jest rozszerzenie `JSON formatter` do analizowania danych wyjściowych JSON dla chrome i wariantów, które firfox ma wbudowany parser).
+Polecenia API mogą być używane z poziomu przeglądarki, a dane wyjściowe są wyświetlane w formacie JSON (Zalecane jest rozszerzenie `JSON formatter` do analizowania danych wyjściowych JSON dla chrome i wariantów, które firfox ma wbudowany parser).
 
 &nbsp;
 
 ## 5. Polecenia API Tritium++ (5.1)
 
-Aby wchodzić w interakcje z rdzeniem tritium++, użyj poleceń interfejsu API tritium++ za pośrednictwem terminala lub zdalnie. Jeśli masz jakiekolwiek wątpliwości, możesz zapoznać się z [dokumentacją API Tritum++](/en/tritium++). Dokumentacja dla 5.1 jest prawie kompletna i być może pojawią się pewne zmiany w miarę rozwoju.
+Aby wchodzić w interakcje z rdzeniem tritium++, użyj poleceń interfejsu API tritium++ za pośrednictwem terminala lub zdalnie. Jeśli masz jakiekolwiek wątpliwości, możesz zapoznać się z [dokumentacją API Tritum++](/pl/tritium++). Dokumentacja dla 5.1 jest prawie kompletna i być może pojawią się pewne zmiany w miarę rozwoju.
 
 Otwórz porty 7080 i 8336 w zaporze:
 
@@ -354,7 +354,7 @@ nexus sessions/create/local username=<username> password=<password> pin=<pin>
 {.is-info}
 
 
-Aby odblokować konto, ustaw automatyczne uznawanie transakcji przychodzących (powiadomienia=1). Jeśli nie jest ustawiona, będziesz musiał ręcznie zaksięgować transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 7 dniach lub po upływie ustawionego terminu wygaśnięcia. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami:
+Aby odblokować konto, ustaw automatyczne uznawanie transakcji przychodzących (notifications=1). Jeśli nie jest ustawiona, będziesz musiał ręcznie zaksięgować transakcje przychodzące, w przeciwnym razie zostanie ona zwrócona na konto nadawcy po 7 dniach lub po upływie ustawionego terminu wygaśnięcia. Jest to odwracalna funkcja transakcji działająca zgodnie z założeniami:
 
 ```
 nexus sessions/unlock/local pin=<pin> notifications=1 session=<sessionid> 
@@ -366,6 +366,6 @@ Aby sprawdzić pełne metryki węzła:
 ./nexus system/get/metrics 
 ```
 
-Polecenia API mogą być używane z poziomu przeglądarki, a dane wyjściowe są wyświetlane w formacie JSON. (Zalecane jest rozszerzenie `JSON formatter` do analizowania danych wyjściowych JSON dla chrome i wariantów, które firfox ma wbudowany parser)
+Polecenia API mogą być używane z poziomu przeglądarki, a dane wyjściowe są wyświetlane w formacie JSON (Zalecane jest rozszerzenie `JSON formatter` do analizowania danych wyjściowych JSON dla chrome i wariantów, które firfox ma wbudowany parser).
 
 Mam nadzieję, że ten przewodnik był pomocny !!
