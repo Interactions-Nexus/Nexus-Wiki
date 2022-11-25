@@ -2,7 +2,7 @@
 title: Prywatna Sieć Testowa
 description: 
 published: true
-date: 2022-11-25T21:12:47.460Z
+date: 2022-11-25T21:16:50.986Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T21:04:58.085Z
@@ -26,7 +26,7 @@ W sieci prywatnej przepustowość można zwiększyć, dodając dodatkowe węzły
 
 ## Przed rozpoczęciem tego przewodnika:
 
-* Dowolny komputer z minimum 1 procesorem, 2 GB RAM i 20 GB miejsca na dysku twardym, Raspberry Pi 4 z 2 GB RAM
+* Dowolny komputer z minimum 1 CPU, 2 GB RAM i 20 GB miejsca na dysku twardym, Raspberry Pi 4 z 2 GB RAM
 * Serwer Ubuntu 20.04 LTS dla AMD/IA64 lub Ubuntu IOT dla Raspberry Pi. (Użyj dowolnej dystrybucji Linuksa, ale ten przewodnik jest dostosowany do Ubuntu)
 * Dysk USB lub karta SD do instalacji ubuntu
 * Etcher – Aby nagrać plik obrazu systemu operacyjnego na kartę USB/SD
@@ -36,49 +36,49 @@ W sieci prywatnej przepustowość można zwiększyć, dodając dodatkowe węzły
 
 [Zainstaluj serwer ubuntu 20.04 LTS](https://ubuntu.com/tutorials/install-ubuntu-server#1-overview) lub wybraną dystrybucję, zainstaluj serwer open-ssh podczas instalacji, a po zakończeniu instalacji uruchom ponownie węzeł. SSH do węzła i postępuj zgodnie z poniższymi poleceniami. Skopiuj polecenia i wklej je w terminalu za pomocą klawiszy CTRL+SHIFT+v
 
-Zaktualizuj i zaktualizuj węzeł:
+Zaktualizuj i ulepsz węzeł:
 
 ```
-Sudo trafna aktualizacja; sudo apt upgrade -y
+sudo apt update; sudo apt upgrade -y
 ```
 
 Otwórz port SSH przed włączeniem zapory:
 
 ```
-sudo ufw zezwól na ssh
+sudo ufw allow ssh
 ```
 
 Włącz Firewall:
 
 ```
-sudo ufw włącz
+sudo ufw enable
 ```
 
 Sprawdź stan zapory:
 
 ```
-Sudo ufw stan
+sudo ufw status
 ```
 
 Ustaw strefę czasową:
 
 ```
-sudo dpkg-ponownie skonfiguruj tzdata
+sudo dpkg-reconfigure tzdata
 ```
 
-Aby zmienić nazwę hosta, jest to opcjonalne
+Aby zmienić nazwę hosta, jest to opcjonalne:
 
 ```
-sudo hostnamectl set-hostname <nowa nazwa_hosta>
+sudo hostnamectl set-hostname <newhostname>
 ```
 
 Uruchom ponownie węzeł:
 
 ```
-Sudo restart
+sudo reboot
 ```
 
-Komputer jest gotowy do zainstalowania rdzenia nexusa
+Komputer jest gotowy do zainstalowania rdzenia nexusa.
 
 ## 2. Kompilowanie rdzenia Nexusa:
 
