@@ -2,7 +2,7 @@
 title: Private-Testnet
 description: 
 published: true
-date: 2022-11-25T21:53:44.204Z
+date: 2022-11-25T21:57:37.728Z
 tags: nodes
 editor: markdown
 dateCreated: 2022-10-05T08:27:20.545Z
@@ -285,7 +285,7 @@ To check the full node metrics:
 ./nexus system/get/metrics 
 ```
 
-The API commands can be used from the browser and output in JSON is displayed. (`JSON formatter` extension is recommended to parse the JSON output for chrome and variants, firfox has in built parser).
+The API commands can be used from the browser and output in JSON is displayed (`JSON formatter` extension is recommended to parse the JSON output for chrome and variants, firfox has in built parser).
 
 &nbsp;
 
@@ -369,6 +369,6 @@ To check the full node metrics:
 ./nexus system/get/metrics 
 ```
 
-The API commands can be used from the browser and output in JSON is displayed. (`JSON formatter` extension is recommended to parse the JSON output for chrome and variants, firfox has in built parser)
+The API commands can be used from the browser and output in JSON is displayed (`JSON formatter` extension is recommended to parse the JSON output for chrome and variants, firfox has in built parser).
 
 Hope this guide was helpful !!
