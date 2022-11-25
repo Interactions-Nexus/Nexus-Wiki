@@ -2,7 +2,7 @@
 title: Prywatna Sieć Testowa
 description: 
 published: true
-date: 2022-11-25T21:34:58.485Z
+date: 2022-11-25T21:39:58.513Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-25T21:04:58.085Z
@@ -150,16 +150,55 @@ sudo mv ~/LLL-TAO/nexus /usr/bin
 
 ## 3. Konfigurowanie Portfela (nexus.conf)
 
-Utwórz główny katalog Nexusa (jest to ukryty katalog, demon Nexusa tworzy go automatycznie przy pierwszym uruchomieniu. Tworzymy go ręcznie, aby utworzyć plik konfiguracyjny. Jeśli katalog jest dostępny, pomiń ten krok).
+Utwórz główny katalog Nexusa (Jest to ukryty katalog. Demon Nexusa tworzy go automatycznie przy pierwszym uruchomieniu. Tworzymy go ręcznie, aby utworzyć plik konfiguracyjny. Jeśli katalog jest dostępny, pomiń ten krok).
 
 ```
 mkdir ~/.Nexus
 ```
 
-Konfiguracja portfela jest przechowywana w pliku nexus.conf. Utwórz plik nexus.conf
+Konfiguracja portfela jest przechowywana w pliku nexus.conf. Utwórz plik nexus.conf:
 
 ```
 nano ~/.Nexus/nexus.conf
 ```
 
-Skopiuj poniższą konfigurację do pliku nexus.conf za pomocą klawiszy ctrl+shift+v i edytuj lub wyłącz parametry według potrzeb.
+Skopiuj poniższą konfigurację do pliku nexus.conf za pomocą klawiszy ctrl+shift+v i edytuj lub wyłącz parametry według potrzeb:
+
+```
+#Nexus private standalone node config- Only for 5.1 rc1 & above
+#Default API user/pass to blank for private network 
+#apiuser=<username>
+#apipassword=<password>
+#Disable authentication of API requests
+apiauth=0
+#To remotely access the node API's
+apiremote=1
+#To remotely access API's use the llpallowip flag. The <ipaddress> can use wildcards; (llpallowip=192.168.*.*:7080)
+llpallowip=*.*.*.*:7080
+#Run wallet as a daemon
+daemon=1
+#Run node in private mode (defaults to testnet in 5.1)
+private=1
+#Run as a standalone node. (Disable this on additional nodes) 
+manager=0
+#Run as a local node, disable for public node
+nodns=1
+#Enables multiple users to be logged in concurrently    
+multiuser=1
+#Latency is in ms, this is the min time between blocks
+latency=500
+#Enables creation of blocks in private mode.( Use only on one node) (Use a secure password)
+generate=<password>
+#To connect additional nodes use addnode flag, the ipaddress will be of the first node with the ‘generate’ flag)
+addnode=<ipaddress>
+#To avoid accidental node shutdown with the stop command
+system/stop=<password>
+```
+
+Ctrl+s i Ctrl+x, aby zapisać i wyjść z edytora.
+
+>
+> Aby dodać dodatkowy węzeł do sieci prywatnej, wyłącz flagi ‘manager’ i ‘generate’ w konfiguracji dodatkowego węzła. Dodaj flagę ‘addnode’ z ipaddress odnoszącą się do pierwszego węzła lub z flagą ‘generate’ i dodatkową linię dla dowolnego innego węzła w sieci.
+{.is-info}
+
+
