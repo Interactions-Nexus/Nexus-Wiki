@@ -2,7 +2,7 @@
 title: Hash Rate Table
 description: comparison of the performance of various types of equipment
 published: true
-date: 2022-11-26T11:34:22.642Z
+date: 2022-11-26T11:39:10.085Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T11:08:46.780Z
@@ -48,3 +48,8 @@ dateCreated: 2022-10-19T11:08:46.780Z
 | KCU105 | 188 | 34  | 5.53 |     |
 | Blackminer F1 | 2450 | 550 | 4.45 |     |
 | Blackminer F1+ | 3870 | 803 | 4.82 |     |
+
+&nbsp;
+
+> Show your results here [https://t.me/NexusMiners](https://t.me/NexusMiners), then we'll add them to the table. 
+{.is-info}
