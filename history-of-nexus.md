@@ -2,7 +2,7 @@
 title: history-of-nexus
 description: Brief History of Nexus
 published: true
-date: 2022-10-29T17:23:04.752Z
+date: 2022-11-27T06:15:21.730Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:03.733Z
@@ -14,7 +14,7 @@ dateCreated: 2022-10-05T08:24:03.733Z
 
 ![history_of_nexus.png](/history_of_nexus.png)
 
-_**“I’ve been working on a new electronic cash system that’s fully peer-to-peer, with no trusted third party.”  - Satoshi Nakamoto**_
+***“I’ve been working on a new electronic cash system that’s fully peer-to-peer, with no trusted third party.”  - Satoshi Nakamoto***
 
 &nbsp;
 
