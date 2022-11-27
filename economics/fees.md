@@ -2,7 +2,7 @@
 title: Fees
 description: Nexus Public Network - Fees
 published: true
-date: 2022-11-27T06:12:45.043Z
+date: 2022-11-27T06:13:33.630Z
 tags: fees
 editor: markdown
 dateCreated: 2022-10-05T08:24:00.283Z
@@ -39,7 +39,7 @@ The breakdown of fees for all operation types is as follows:
 
 ## Advanced Contract Execution Fee:
 
-When Advanced Contracts are launched (with core V7.0), except the basic contracts (which are already free)  contract execution will be charged as they require computation cycles and the fee will be calculated before execution and the user will pay the exact fee shown, unlike GAS on Ethereum. &#x20;
+When Advanced Contracts are launched (with core V7.0), except the basic contracts (which are already free)  contract execution will be charged as they require computation cycles and the fee will be calculated before execution and the user will pay the exact fee shown, unlike GAS on Ethereum.
 
 
 
