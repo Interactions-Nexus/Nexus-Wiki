@@ -2,7 +2,7 @@
 title: history-of-nexus
 description: Brief History of Nexus
 published: true
-date: 2022-11-27T06:15:21.730Z
+date: 2022-11-27T06:16:07.687Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:03.733Z
@@ -34,7 +34,7 @@ You may have heard stories about Satoshi; that he was a laid off programmer fed 
 
 ## The Beginning of Nexus
 
-_**Nexus, the beast from Satoshi Island**_&#x20;
+***Nexus, the beast from Satoshi Island.***
 
 Nexus was born from a deep desire to build a better world, where Satoshi’s vision of a true decentralized, distributed, global peer-to-peer network could give humanity a better and easier way to transfer financial and informational value. Colin Cantrell, the chief architect and founder of Nexus, sat back in 2013 and watched the evolution of the crypto industry. He saw the strength of on-chain transactions through Proof-of-Work (PoW) and the weaknesses in the Peercoin Proof-of-Stake (PoS) system. He witnessed the benefits and limitations of the original blockchain engineering and took the opportunity to rewrite the code from scratch, including the most secure and efficient protocols for scalability and mass adoption.
 
