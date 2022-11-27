@@ -2,7 +2,7 @@
 title: Blockchain Basics
 description: 
 published: false
-date: 2022-10-09T20:07:28.810Z
+date: 2022-11-27T19:20:12.411Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:24:24.931Z
@@ -10,15 +10,17 @@ dateCreated: 2022-10-05T08:24:24.931Z
 
 # Blockchain Basics
 
-### **How does a Blockchain work?**
+## How does a Blockchain work?
 
 People, known as miners, are given a monetary incentive to verify transactions. Miners use computers or specialized mining equipment to verify that the people spending cryptocurrency, indeed have the coins to spend. A record of transactions are then immutably chained together and recorded as a block, and appended to the chain. This record is stored on the computers of many different miners, creating a decentralized network.
 
 Many blockchains use a mechanism called Proof-of-Work (PoW) exclusively that requires resource inputs such as hardware and electricity. Others use Proof-of-Stake (PoS) that requires less physical resources, however requires the miner to ‘wager’ some coins. Thus, there is an incentive to verify transactions correctly. To attempt a double-spend attack (to spend a cryptocurrency coin twice), a person would need 51% of the PoW and/or PoS power, which can be very costly to achieve. Therefore, the blockchain provides a trustworthy source of information, where all transactions are witnessed and verified by a global consensus rather than by a central trusted authority.
 
-![](../../.gitbook/assets/hash)
+![block-generate.png](/block-generate.png)
 
-### **What are the steps?**
+&nbsp;
+
+## What are the steps?
 
 1. A person sends a transaction from a wallet on their computer to the network (this transaction can be any piece of data).
 2. Miners verify whether this transaction contains a valid digital signature and has no conflicts with others (double-spends). If the consensus agrees that the transaction is valid, then it is accepted into a memory pool to await confirmation.
@@ -27,9 +29,11 @@ Many blockchains use a mechanism called Proof-of-Work (PoW) exclusively that req
 5. Since the work required to change a previous block grows exponentially for every new block produced, at a certain depth (usually six blocks), it becomes computationally infeasible to rewrite, therefore the blockchain is considered immutable.
 6. The chain with the most work from the first or ‘genesis’ block is considered the valid history of events and is known as the ‘main chain’. This is how a blockchain maintains consensus.
 
-### **What is Decentralization?**
+&nbsp;
 
-![](<../../.gitbook/assets/topologies (1)>)
+## What is Decentralization?
+
+![cent-decen-dist.png](/cent-decen-dist.png)
 
 The above diagram illustrates three different topologies. Centralized and Decentralized are concepts of authority, whereas distribution is a spatial concept, meaning it relates to the physical network topology. A network can be distributed, as well as being centralized or decentralized. An ideal network topology has a decentralized consensus process, with a distributed node topology.
 
@@ -51,9 +55,10 @@ Often proponents of Bitcoin will tell you that Bitcoin is becoming more scarce (
 
 Bitcoin may serve well as a store of value or a commodity, such as gold. However, how well will it function as a currency over time? An important question for new buyers to ask is: is a deflationary model an ideal choice for a functional currency? At the moment, many countries have negative interest rates (paying people to take loans) to try to incentivise them to spend and not hoard. Some economists would argue that there is a healthy level of inflation or ‘sweet spot’ that drives innovation, as entrepreneurs are unlikely to borrow money for investments if overall prices are falling.
 
-Read about Nexus Economics here.
 
-Currentlty, a Proof-of-Work (PoW) coin exclusively, ETH accomplished a pre-mine, Initial Coin Offering (ICO), and suffered major controversy by reversing transactions relating to a Decentralized Autonomous Organization (DAO) attack. This situation also resulted in a divisive conclusion with a fork that led to the creation of Ethereum Classic without the blockchain reversal.
+Ethereum
+
+Currentlty, a Proof-of-Work (PoW) coin exclusively, ETH accomplished a `pre-mine`, `Initial Coin Offering (ICO)`, and suffered major controversy by reversing transactions relating to a Decentralized Autonomous Organization (DAO) attack. This situation also resulted in a divisive conclusion with a fork that led to the creation of `Ethereum Classic` without the blockchain reversal.
 
 Additionally, they have numerous influential financial backers with the Ethereum Alliance Board Members and several third party solutions seeking to capitalize on the scalability crux and potentially governance decisions.
 
@@ -77,17 +82,17 @@ Together, banks only hold approximately 10% of the entire money supply that exis
 
 Today’s debt-based monetary system is structured in a way that the creation of money also encourages cycles of boom and bust, increasing wealth inequality, resulting in an ever increasing amount of money and resources being transferred to a few people. In contrast, the Nexus Economic Model rewards NXS to stakers and miners, and is designed to create a more equal distribution of NXS to the community, whilst mitigating the possibility of unhealthy levels of inflation.
 
-Read about Nexus Economics here.
+## Gold as an Inflation Hedge
 
 Due to its scarcity, gold is an asset which has often been favored in times of economic crisis as a hedge against the inflation of fiat currencies. One of the reasons we as a global economy moved away from the use of physical gold as a currency, is that it was very hard to divide and difficult to move between banks to settle merchant’s balances.
 
-In 14th century Italy, people began to accept paper IOUs backed by reputable merchants. A similar system developed later in 17th century England, where goldsmiths (who held merchant’s gold in vaults for them) realized that the merchants didn’t redeem all their IOUs at any one time. Thus, the goldsmiths began to lend out paper certificates to people. However, they didn’t hold enough gold to back every paper certificate in circulation, they only held a fraction of it. This was the beginning of Fractional Reserve Banking.
+In 14th century Italy, people began to accept paper IOUs backed by reputable merchants. A similar system developed later in 17th century England, where goldsmiths (who held merchant’s gold in vaults for them) realized that the merchants didn’t redeem all their IOUs at any one time. Thus, the goldsmiths began to lend out paper certificates to people. However, they didn’t hold enough gold to back every paper certificate in circulation, they only held a fraction of it. This was the beginning of `Fractional Reserve Banking`.
 
-Some people are now buying gold and other precious metals as an inflation hedge, though unless you hold the metals yourself, you have to ‘trust’ a third party to store the gold for you. Trusting of any third parties is what decentralized cryptocurrencies or blockchain technology are designed to replace.
+Some people are now buying gold and other precious metals as an inflation hedge, though unless you hold the metals yourself, you have to `trust`a third party to store the gold for you. Trusting of any third parties is what decentralized cryptocurrencies or blockchain technology are designed to replace.
 
 Some governments have created or are creating gold-backed currencies. People who opt to use these currencies will have to trust that the governments do indeed hold sufficient gold in reserve, and are not simply continuing the tradition of Fractional Reserve Banking.
 
-Read about Nexus Economics here.
+## Classical Computers vs Quantum Computers
 
 Classical computing uses an array of transistors. These transistors form the heart of your computer (the CPU). Each transistor is capable of being either on or off, and these states are used to represent the numerical values 1 and 0. Binary digits’ (bits) number of states depends on the number of transistors available, according to the formula (2^n) + 1, with n being the number of transistors. Classical computers can only be in one of these states at any one time, so the speed of your computer is limited to how fast it can change state.
 
@@ -95,7 +100,7 @@ Quantum computers on the other hand, use what are termed quantum bits or ‘qubi
 
 With the rise in the power of classical computers and the emergence of quantum computers, public keys are becoming increasingly vulnerable. Most cryptocurrency addresses are created by hashing or obscuring the public key, however, once a user transfers funds from this address, the public key is then revealed on the blockchain. In the realm of classical computing there is little risk with this method. However, a Quantum Computer running Shor’s algorithm could break most public key cryptography in little to no time at all, resultingin funds being stolen.Though most conjectures range from five to ten years before security could begin to break, Nexus has prepared by integrating a number of cryptographic innovations that support increased levels of quantum resistance.
 
-Learn more about Nexus' Quantum Resistance here.
+Learn more about Nexus' [Quantum Resistance](/en/innovations/quantum-resistance).
 
 Today the Internet relies on both large cables that run across the ocean floor, and geosynchronous satellites. The main drawbacks resulting from the state of the current Internet infrastructure are as follows:
 
