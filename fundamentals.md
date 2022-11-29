@@ -2,7 +2,7 @@
 title: Fundamentals
 description: 
 published: true
-date: 2022-10-20T19:57:45.554Z
+date: 2022-11-29T13:58:10.002Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:02.763Z
@@ -23,5 +23,5 @@ Nexus is a disparate architecture in the entire crypto space and to understand  
 - [Introduction to Dapps *What are Decentralised Applications (Dapps)?*](/en/fundamentals/intro-to-dapps)
 - [Internet of Things (IoT) *Nexus and IoT*](/en/fundamentals/internet-of-things)
 - [Decentralized Identity *Decentralized Identity (Self-Soverign Identity)*](/en/fundamentals/decentralized-identity)
-- [Nexus and Decentralization *How Nexus prmotes ](/en/fundamentals/nexus-and-decentralization)
+- [Nexus and Decentralization *How Nexus Promotes Decentralization* ](/en/fundamentals/nexus-and-decentralization)
 {.links-list}
