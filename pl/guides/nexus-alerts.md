@@ -2,7 +2,7 @@
 title: Alerty Nexusa
 description: Nexus Alert Telegram Bot – Odszyfruj informacje
 published: true
-date: 2022-12-01T22:26:33.852Z
+date: 2022-12-01T22:30:25.529Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:53:20.736Z
@@ -66,9 +66,9 @@ Transakcje Legacy to Tritium mają miejsce, gdy użytkownik wypłaca NXS z gieł
 
 ![Transakcja Tritium to Legacy - Operacja LEGACY i To zaczyna się od 2.](<../.gitbook/assets/Tritium to Legacy1.png>)
 
-Transakcje Tritium to Legacy są przeprowadzane, gdy użytkownik wysyła NXS na konto wymiany lub na osobiste konto tradycyjne. Ta transakcja wyświetli tylko `debit` na koncie Tritium i może być łatwo rozpoznana poprzez zaznaczenie pola `Operacja`, które powinno brzmieć `LEGACY`, a także adres ``Do`' będzie zaczynał się od `2`, co jest stary adres.
+Transakcje Tritium do Legacy są przeprowadzane, gdy użytkownik wysyła NXS na konto wymiany lub na osobiste konto tradycyjne. Ta transakcja wyświetli tylko `debit` na koncie Tritium i może być łatwo rozpoznana poprzez zaznaczenie pola `Operation`, które powinno brzmieć `LEGACY`, a także adres `To` będzie zaczynał się od `2`, co oznacza adres Legacy.
 
-###
+&#x20;
 
 ### Legenda:
 
@@ -76,12 +76,12 @@ Aby różnice wizualne były oparte na kwotach, alerty zostały pogrupowane na p
 
 Legenda jest podana poniżej:
 
-* \>= 500 000 NXS: płetwal błękitny (🐳🐳🐳🐳🐳🐳)
+* \>= 500 000 NXS: Płetwal błękitny (🐳🐳🐳🐳🐳🐳)
 * \>= 250 000 NXS: Kaszalot (🐋🐋🐋🐋🐋🐋)
 * \>= 100 000 NXS: Humbak (🐋🐋🐋)
-* \>= 80 000 NXS: rekin wielorybi (🦈🦈🦈🦈🦈🦈)
-* \>= 60 000 NXS: rekin tygrysi (🦈🦈🦈🦈)
-* \>= 30 000 NXS: żarłacz biały (🦈🦈)
+* \>= 80 000 NXS: Rekin wielorybi (🦈🦈🦈🦈🦈🦈)
+* \>= 60 000 NXS: Rekin tygrysi (🦈🦈🦈🦈)
+* \>= 30 000 NXS: Żarłacz biały (🦈🦈)
 * \>= 10 000 NXS: Delfin (🐬🐬)
 * \>= 5000 NXS: Tuńczyk (🐟🐟)
 * \>= 1000 NXS: Sardynka (🐠🐠)
