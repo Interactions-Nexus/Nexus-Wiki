@@ -2,7 +2,7 @@
 title: Przewodniki
 description: 
 published: true
-date: 2022-11-01T23:08:23.515Z
+date: 2022-12-01T21:55:45.233Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-07T08:42:39.346Z
@@ -19,5 +19,5 @@ Poniżej wymienione są różne przewodniki:
 - [Tworzenie aktywów *Jak utworzyć aktywo*](/pl/guides/create-asset)
 - [Tworzenie aktywów i tokenizowanie *Jak utworzyć aktywo tokenizowane*](/pl/guides/create-tokenized-asset)
 - [Tworzenie nazw globalnych *Jak utworzyć nazwę globalną*](/pl/guides/create-global-name)
-- [Alerty Nexusa](/pl/guides/nexus-alerts)
+- [Alerty Nexusa *Przewodnik ułatwiający zrozumienie bota Nexus Alert*](/pl/guides/nexus-alerts)
 {.links-list}
