@@ -1,0 +1,35 @@
+<!--
+title: 质押要求
+description: 质押的硬件要求
+published: true
+date: 2022-12-01T13:46:36.609Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-01T13:46:36.609Z
+-->
+
+<h1>Staking Requirements</h1>
+<h2><strong>Operating System:</strong></h2>
+<p>All major Operating Systems (OS) are supported, but the community recommended OS is Ubuntu LTS or derivatives. Any Linux distribution can be used however the guides have been tailored for Ubuntu.</p>
+<h2><strong>Computer Requirements:</strong></h2>
+<p>The daemon is tested and works flawlessly on a Raspberry Pi 3B+ with 1GB Ram, but the minimum recommendations are as follows to account for growth:</p>
+<h3><strong>ARM:</strong></h3>
+<p>The Raspberry Pi 4B with 2GB RAM or equivalent SBC with 2GB with a min of 64 GB SD card (Daemon /CLI on Linux only).</p>
+<h3><strong>x64:</strong></h3>
+<p>Any processor with 4GB RAM. Make sure that you have at least 30GB free hard disk space before you install the wallet.</p>
+<blockquote>
+  <p><strong>Note:</strong> The full node will download the complete copy of the blockchain database and as of today the extracted database is about 16 GB in size and grows over time. Lite nodes will only maintain block headers and signature chain data minimizing the storage impact dramatically, 250MB approximately.</p>
+</blockquote>
+<h2><strong>Modular Wallet Design:</strong></h2>
+<p>Nexus wallet includes modular functionality consisting of the interface, module framework and core. The intuitive interface provides users and businesses an easy and seamless experience. A node can also be run as a daemon exclusively with management available via API or remote interface. This is advantageous when running a staking node on a headless system like a Raspberry Pi or NUC.</p>
+<h2><strong>Economical Implementations and IoT:</strong></h2>
+<p>The PoS fundamental principle is securing the network, and for that it provides an incentive. Node operators incur expenses with the hardware, management, bandwidth and electricity. The instructions in this section provide an optimal configuration for strict budgets and the IoT industry.</p>
+<h3><strong>General Users (GUI Wallet):</strong></h3>
+<p>Any computer which meets the minimum requirements, If staking is the only service planned an Intel NUC core i3 / Ryzen 3 or equivalent with 4GB RAM and 120GB SSD is recommended. If the staking computer will be used for other purposes, increase memory and disk space appropriately.</p>
+<blockquote>
+  <p>Intel NUC or equivalent will be a good choice if looking for standalone staking node</p>
+</blockquote>
+<h3><strong>Advanced Users (CLI Wallet):</strong></h3>
+<p>Raspberry Pi (RPI) 4 with 2/4GB, NUC or equivalent will run the headless core and users can control it via the interface from another computer. (RPI can run only the CLI daemon so command line interaction is necessary. Nexus has great step-by-step guides to aid those who are unfamiliar.)</p>
+<figure class="image"><img src="https://nexus.io/ResourceHub/images/guide/stake-guide1.png#" alt="Nexus wallet daemon staking on a Raspberry Pi 4 takes just 243 MB of RAM and is extremely resource conservative overall."></figure>
+<p>The core is very light on resources even on a Raspberry Pi</p>
