@@ -2,7 +2,7 @@
 title: Create Global Name
 description: How to create a global name
 published: true
-date: 2022-10-07T07:48:04.187Z
+date: 2022-12-01T22:46:24.631Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:04.236Z
@@ -21,20 +21,20 @@ Global Names require no username or namespace prefix, and are therefore globally
 {.is-warning}
 
 
-## Uses of Global Name
+## Uses of Global Name:
 
 The best use-case of a  Global name will be as token tickers. With the P2P marketplace, this will be a very helpful to have a global ticker for the token, which will make it easy to list and also to be easily recognised by users.
 
 Tokens can be traded without a global name, but they will be addressed by the register address which is not recommended, as it will not be easily distinguished by users.&#x20;
 
 
-## Tritium++
+## Tritium++:
 
 > In Tritium++ when user creates a token a `global name` is created by default, if the `name` parameter is provided.
 {.is-info}
 
 &nbsp;
-## Global Name Parameters
+## Global Name Parameters:
 
 The parameters required to create a global name.
 
@@ -46,13 +46,13 @@ In this field the user provides the global name to be created.
 
 In this field the user provides the register address of the token that will be linked to the global name.&#x20;
 
-## Create a Name
+## Create a Name:
 
 To create a Name using the Interface follow the steps:
 
 * Open the Nexus Interface, make sure the wallet is fully synched and log into the user account (Sigchain).
 * In the Overview page, at the bottom click on the "_User"_ module. This opens the User page.
-* In the User page, on the left side click on the "Name_s_" tab.
+* In the User page, on the left side click on the "_Names_" tab.
 * In the Names page click on "_Create a new name_". This opens the _Create a new name_ page.
 * On top of the page make sure the "GLOBAL" button is highlighted, if not click on it.&#x20;
 * In this page the user has to provide the "Name" and the "register address" to which it points .&#x20;
