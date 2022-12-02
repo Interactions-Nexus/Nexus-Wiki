@@ -2,7 +2,7 @@
 title: Utwórz Nazwę Globalną
 description: Jak stworzyć globalną nazwę
 published: true
-date: 2022-12-01T22:46:08.826Z
+date: 2022-12-02T08:06:43.070Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:52:18.285Z
@@ -14,7 +14,7 @@ Ten przewodnik pomoże użytkownikom utworzyć **Nazwę Globalną** za pomocą i
 
 ## Nazwa Globalna:
 
-Nazwy globalne nie wymagają nazwy użytkownika ani prefiksu przestrzeni nazw i dlatego są globalnie unikalne. Będą one prawdopodobnie zarezerwowane dla przypadków użycia, w których konieczna jest zwięzła, niepowtarzalna nazwa, na przykład symbol giełdowy tokena. Aby uniknąć niepotrzebnego fałszowania nazw, nazwy globalne wymagają opłaty w wysokości 2000 NXS.
+Nazwy globalne nie wymagają nazwy użytkownika ani prefiksu przestrzeni nazw i dlatego są globalnie unikalne. Będą one prawdopodobnie zarezerwowane dla przypadków użycia, w których konieczna jest zwięzła, niepowtarzalna nazwa, na przykład symbol giełdowy tokena. Aby uniknąć niepotrzebnego fałszowania nazw, nazwy globalne wymagają opłaty w wysokości `2000` NXS.
 
 
 > Utworzenie nazwy globalnej wiąże się z opłatą w wysokości 2000 NXS. Opłaty zostaną pobrane z konta domyślnego.
