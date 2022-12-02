@@ -2,7 +2,7 @@
 title: Utwórz Nazwę Globalną
 description: Jak stworzyć globalną nazwę
 published: true
-date: 2022-12-02T08:06:43.070Z
+date: 2022-12-02T08:11:17.516Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:52:18.285Z
@@ -23,7 +23,7 @@ Nazwy globalne nie wymagają nazwy użytkownika ani prefiksu przestrzeni nazw i 
 
 ## Użycie Nazwy Globalnej:
 
-Najlepszym przypadkiem użycia globalnej nazwy będą tikery tokenów. W przypadku rynku P2P bardzo pomocne będzie posiadanie globalnego tikera dla tokena, który ułatwi jego listę, a także będzie łatwo rozpoznawalny przez użytkowników.
+Najlepszym przypadkiem użycia globalnej nazwy będą tikery tokenów. W przypadku rynku P2P bardzo pomocne będzie posiadanie globalnego tikera dla tokena, który ułatwi jego listing, a także będzie łatwo rozpoznawalny przez użytkowników.
 
 Tokenami można handlować bez globalnej nazwy, ale będą one adresowane przez adres rejestru, co nie jest zalecane, ponieważ użytkownicy nie będą go łatwo rozróżniać.
 
