@@ -2,7 +2,7 @@
 title: Utwórz Nazwę Globalną
 description: Jak stworzyć globalną nazwę
 published: true
-date: 2022-12-02T08:11:17.516Z
+date: 2022-12-02T08:26:52.563Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:52:18.285Z
@@ -55,6 +55,6 @@ Aby utworzyć nazwę za pomocą interfejsu, wykonaj następujące czynności:
 * Na stronie Użytkownik po lewej stronie kliknij zakładkę „_Nazwy_”.
 * Na stronie Nazwy kliknij „_Utwórz nową nazwę_”. Spowoduje to otwarcie strony _Utwórz nową nazwę_.
 * U góry strony upewnij się, że przycisk „GLOBALNY” jest podświetlony, jeśli nie, kliknij go.
-* Na tej stronie użytkownik musi podać „Nazwę” i „adres rejestrowy”, na który wskazuje.&#x20;
+* Na tej stronie użytkownik musi podać „Nazwę” i „adres rejestru”, na który wskazuje.&#x20;
 * Po podaniu parametrów kliknij przycisk „UTWÓRZ NAZWĘ” na dole strony.
 * Dane zostaną przesłane do sieci w celu weryfikacji, a po potwierdzeniu transakcji nowo utworzona nazwa globalna pojawi się na liście.
