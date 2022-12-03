@@ -2,7 +2,7 @@
 title: Nexus Alerts
 description: Nexus Alert Telegram Bot - Decipher the information
 published: true
-date: 2022-12-03T15:46:59.814Z
+date: 2022-12-03T15:50:30.206Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:23:56.831Z
@@ -47,7 +47,7 @@ To better understand the data provided by the bot, we can segregate the transact
 
 &nbsp;
 
-### Tritium to Tritium Transactions:
+## Tritium to Tritium Transactions:
 
 ![tritium_to_tritium1.png](/tritium_to_tritium1.png)
 
@@ -57,7 +57,7 @@ It is easy to distinguish as  the `Operation` field reads as `CREDIT` and the `F
 
 &nbsp;
 
-### Legacy to Tritium Transactions:
+## Legacy to Tritium Transactions:
 
 ![legacy_to_tritium1.png](/legacy_to_tritium1.png)
 
@@ -65,7 +65,7 @@ Legacy to tritium transactions are when a user withdraws NXS from the exchange i
 
 &nbsp;
 
-### Tritium to Legacy Transactions:
+## Tritium to Legacy Transactions:
 
 ![tritium_to_legacy1.png](/tritium_to_legacy1.png)
 
