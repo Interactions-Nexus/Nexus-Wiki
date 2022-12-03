@@ -2,7 +2,7 @@
 title: Alerty Nexusa
 description: Nexus Alert Telegram Bot – Odszyfruj informacje
 published: true
-date: 2022-12-03T17:10:08.821Z
+date: 2022-12-03T17:11:29.052Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:53:20.736Z
@@ -47,7 +47,7 @@ Aby lepiej zrozumieć dane dostarczane przez bota możemy podzielić transakcje 
 
 &nbsp;
 
-### Transakcje Tritium do Tritium:&#x20;
+## Transakcje Tritium do Tritium:&#x20;
 
 ![tritium_to_tritium1.png](/tritium_to_tritium1.png)
 
@@ -57,7 +57,7 @@ Każda transakcja na tritium jest `obciążeniem` konta nadawcy i `uznaniem` kon
 
 &nbsp;
 
-### Transakcje Legacy do Tritium:
+## Transakcje Legacy do Tritium:
 
 ![legacy_to_tritium1.png](/legacy_to_tritium1.png)
 
@@ -65,7 +65,7 @@ Transakcje Legacy to Tritium mają miejsce, gdy użytkownik wypłaca NXS z gieł
 
 &nbsp;
 
-### Transakcje Tritium do Legacy:
+## Transakcje Tritium do Legacy:
 
 ![tritium_to_legacy1.png](/tritium_to_legacy1.png)
 
@@ -73,7 +73,7 @@ Transakcje Tritium do Legacy są przeprowadzane, gdy użytkownik wysyła NXS na 
 
 &nbsp;
 
-### Legenda:
+## Legenda:
 
 Aby różnice wizualne były oparte na kwotach, alerty zostały pogrupowane na podstawie kwot transakcji i nazwane na podstawie ryb według rozmiaru.
 
