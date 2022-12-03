@@ -2,56 +2,56 @@
 title: 创建通证
 description: 使用 Nexus 麟社界面创建通证
 published: true
-date: 2022-12-03T13:25:50.970Z
+date: 2022-12-03T13:30:18.811Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-03T13:25:50.970Z
 -->
 
-<h1>Create a Token</h1>
-<p>This guide will help users to create a <strong>Token</strong> using the Nexus Interface</p>
-<p>Before we start to create a token, users need to be familiar with some of the concepts and parameters used with tokens.</p>
-<h2>Token Parameters</h2>
-<p>Token parameters are what define a token like token name, supply and decimals. Learn more about them below:</p>
-<h3>TOKEN NAME</h3>
-<p>This is a local name to identify the token and is optional. This name resides inside the user account (Sigchain) and is not valid outside it.</p>
-<p>{% hint style="info" %}<br>Token name has a separate fee of 1NXS. Issuer can opt not to create a token name and can use the register address to access or search the Asset. This is a local name and is not valid outside the Sigchain.</p>
-<p>{% hint style="info" %}<br>If there is a need for a unique global name (ticker) for the token, then the issuer needs to create a Global name and link it to the token.</p>
-<h3>SUPPLY</h3>
-<p>This is the total number of fungible tokens that needs to be generated. The fee increases with a higher supply. Check the fees <a href="https://wiki.nexus.io/readme/fees.md">here</a>.</p>
-<p>{% hint style="info" %}<br>The max supply of the token cannot be increased once the token is generated.</p>
-<h3>DECIMAL</h3>
-<p>This is the no of decimal places for the token, increasing the decimal places also increases the fee. Decimal units are required for micro transactions and is set depending upon the token usage and tokenomics.</p>
-<h2>Token Accounts:</h2>
-<p>To create and use token the users need to understand the different token accounts and the token properties:</p>
-<p>Once the token is created, the token generation address will be listed in the "Tokens" page. This is the token generating address, and not a token account. This generating address is owned by the user account which issued the token and the user needs to create a token address to receive the tokens.</p>
-<p>The tokens which are in the generating address can be burnt to remove them permanently out of circulation. This option is not available in the interface today.</p>
-<h3>Token Generation Address</h3>
-<p>This is the register address which generates that particular token and tokens in this address are out of circulation. Tokens when sent out to a token account come into circulation. Users can send tokens back to the generation address to remove them from circulation.</p>
-<h3>Token account:</h3>
-<p>This is a normal token account which can receive a particular token either from a generation address or another token account. Each token account is liked only to a particular token and cannot receive any other token. Every user has to create a token account to transact a particular token.</p>
-<p>{% hint style="warning" %}<br>Token accounts can only receive the particular token they are linked to. They cannot accept NXS or any other token. The standard "default", "trust" or any NXS account cannot accept any tokens.</p>
-<p>Once created, the token has three important properties:</p>
+<h1 style="text-align:justify;">创建通证 (代币）</h1>
+<p style="text-align:justify;">本指南将帮助用户使用 Nexus 麟社界面创建通证</p>
+<p style="text-align:justify;">在我们开始创建通证之前，用户需要熟悉通证使用的一些概念和参数。</p>
+<h2 style="text-align:justify;">Token Parameters 通证参数</h2>
+<p style="text-align:justify;">通证参数是定义通证的参数，例如通证名称、供应量和小数位数。 在下面了解有关它们的更多信息：</p>
+<h3 style="text-align:justify;">TOKEN NAME 通证名称</h3>
+<p style="text-align:justify;">这是标识通证的本地名称，是可选的。 此名称位于用户帐户 (Sigchain) 签名链内，在其外部无效。</p>
+<p style="text-align:justify;">{% hint style="info" %}<br>Token name has a separate fee of 1NXS. Issuer can opt not to create a token name and can use the register address to access or search the Asset. This is a local name and is not valid outside the Sigchain.</p>
+<p style="text-align:justify;">{% hint style="info" %}<br>If there is a need for a unique global name (ticker) for the token, then the issuer needs to create a Global name and link it to the token.</p>
+<h3 style="text-align:justify;">SUPPLY</h3>
+<p style="text-align:justify;">This is the total number of fungible tokens that needs to be generated. The fee increases with a higher supply. Check the fees <a href="https://wiki.nexus.io/readme/fees.md">here</a>.</p>
+<p style="text-align:justify;">{% hint style="info" %}<br>The max supply of the token cannot be increased once the token is generated.</p>
+<h3 style="text-align:justify;">DECIMAL</h3>
+<p style="text-align:justify;">This is the no of decimal places for the token, increasing the decimal places also increases the fee. Decimal units are required for micro transactions and is set depending upon the token usage and tokenomics.</p>
+<h2 style="text-align:justify;">Token Accounts:</h2>
+<p style="text-align:justify;">To create and use token the users need to understand the different token accounts and the token properties:</p>
+<p style="text-align:justify;">Once the token is created, the token generation address will be listed in the "Tokens" page. This is the token generating address, and not a token account. This generating address is owned by the user account which issued the token and the user needs to create a token address to receive the tokens.</p>
+<p style="text-align:justify;">The tokens which are in the generating address can be burnt to remove them permanently out of circulation. This option is not available in the interface today.</p>
+<h3 style="text-align:justify;">Token Generation Address</h3>
+<p style="text-align:justify;">This is the register address which generates that particular token and tokens in this address are out of circulation. Tokens when sent out to a token account come into circulation. Users can send tokens back to the generation address to remove them from circulation.</p>
+<h3 style="text-align:justify;">Token account:</h3>
+<p style="text-align:justify;">This is a normal token account which can receive a particular token either from a generation address or another token account. Each token account is liked only to a particular token and cannot receive any other token. Every user has to create a token account to transact a particular token.</p>
+<p style="text-align:justify;">{% hint style="warning" %}<br>Token accounts can only receive the particular token they are linked to. They cannot accept NXS or any other token. The standard "default", "trust" or any NXS account cannot accept any tokens.</p>
+<p style="text-align:justify;">Once created, the token has three important properties:</p>
 <ul>
-  <li>maxsupply - the maximum number of tokens that will exist</li>
-  <li>currentsupply - the number of circulating tokens that have been distributed to token accounts</li>
-  <li>balance - the number of tokens that have not yet been distributed (maxsupply - currentsupply)</li>
+  <li style="text-align:justify;">maxsupply - the maximum number of tokens that will exist</li>
+  <li style="text-align:justify;">currentsupply - the number of circulating tokens that have been distributed to token accounts</li>
+  <li style="text-align:justify;">balance - the number of tokens that have not yet been distributed (maxsupply - currentsupply)</li>
 </ul>
-<h3>Token Minting Fees</h3>
-<p>The fee is based on the number of token divisible units you define (the combination of supply and decimals). There is a minimum fee of 1 NXS and the calculation is linear thereafter, so that each additional significant digit costs an additional 100 NXS. E.g.</p>
-<p>100 units = 1 NXS</p>
-<p>1000 units = 100 NXS</p>
-<p>1000000 units = 400 NXS</p>
-<p>10000000000 units = 800 NXS</p>
-<h2>Create a Token</h2>
-<p>To create a token using the Interface follow the steps below:</p>
+<h3 style="text-align:justify;">Token Minting Fees</h3>
+<p style="text-align:justify;">The fee is based on the number of token divisible units you define (the combination of supply and decimals). There is a minimum fee of 1 NXS and the calculation is linear thereafter, so that each additional significant digit costs an additional 100 NXS. E.g.</p>
+<p style="text-align:justify;">100 units = 1 NXS</p>
+<p style="text-align:justify;">1000 units = 100 NXS</p>
+<p style="text-align:justify;">1000000 units = 400 NXS</p>
+<p style="text-align:justify;">10000000000 units = 800 NXS</p>
+<h2 style="text-align:justify;">Create a Token</h2>
+<p style="text-align:justify;">To create a token using the Interface follow the steps below:</p>
 <ul>
-  <li>Open the Nexus Interface, make sure the wallet is fully synched and log into the user account (Sigchain).</li>
-  <li>In the Overview page, at the bottom click on the "<i>User"</i> module. This opens the User page.</li>
-  <li>In the User page, on the left side click on the "<i>Tokens</i>" tab.</li>
-  <li>In the Assets page click on "<i>Create a new token</i>". This opens the <i>New Token</i> page.</li>
-  <li>In this page the user has to provide three parameters which define the token. The parameters and their details are given below:</li>
-  <li>Once the parameters are provided, click on the "Create token" button on the bottom of the page.</li>
-  <li>Once the token is confirmed on the blockchain, it will be listed in the "Tokens" page.</li>
-  <li>To check the details of any token, click on the token address in the "Tokens" page and the token details page will open with the details.</li>
+  <li style="text-align:justify;">Open the Nexus Interface, make sure the wallet is fully synched and log into the user account (Sigchain).</li>
+  <li style="text-align:justify;">In the Overview page, at the bottom click on the "<i>User"</i> module. This opens the User page.</li>
+  <li style="text-align:justify;">In the User page, on the left side click on the "<i>Tokens</i>" tab.</li>
+  <li style="text-align:justify;">In the Assets page click on "<i>Create a new token</i>". This opens the <i>New Token</i> page.</li>
+  <li style="text-align:justify;">In this page the user has to provide three parameters which define the token. The parameters and their details are given below:</li>
+  <li style="text-align:justify;">Once the parameters are provided, click on the "Create token" button on the bottom of the page.</li>
+  <li style="text-align:justify;">Once the token is confirmed on the blockchain, it will be listed in the "Tokens" page.</li>
+  <li style="text-align:justify;">To check the details of any token, click on the token address in the "Tokens" page and the token details page will open with the details.</li>
 </ul>
