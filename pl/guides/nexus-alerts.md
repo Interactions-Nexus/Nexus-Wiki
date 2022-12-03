@@ -2,7 +2,7 @@
 title: Alerty Nexusa
 description: Nexus Alert Telegram Bot – Odszyfruj informacje
 published: true
-date: 2022-12-03T16:05:18.769Z
+date: 2022-12-03T16:09:10.559Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:53:20.736Z
@@ -21,7 +21,7 @@ Każda transakcja odbywająca się w łańcuchu blokowym jest sprawdzana pod ką
 
 ![alert_data1.png](/alert_data1.png)
 
-* Ikona ryby wyświetlana zgodnie z [legendą](nexus-alerts.md#legend).
+* Ikona ryby wyświetlana zgodnie z [legendą](nexus-alerts.md#legenda).
 * `Humpback Whale found on block` : Wysokość bloku.
 * `Amount` : Kwota NXS lub tokenów zawartych w transakcji.
 * `Token`: Token, dla którego generowany jest `credit`. NXS lub Token (nazwa lub adres).
