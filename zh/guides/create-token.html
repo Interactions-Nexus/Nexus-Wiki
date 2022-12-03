@@ -2,7 +2,7 @@
 title: 创建通证
 description: 使用 Nexus 麟社界面创建通证
 published: true
-date: 2022-12-03T14:35:30.280Z
+date: 2022-12-03T14:51:17.403Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-03T13:25:50.970Z
@@ -26,8 +26,10 @@ dateCreated: 2022-12-03T13:25:50.970Z
 <p style="text-align:justify;">要创建和使用通证，用户需要了解不同的通证账户和通证属性：</p>
 <p style="text-align:justify;">通证创建后，通证生成地址将列在 “Tokens" 通证页面中。 这是通证生成地址，而不是通证账户。 该生成地址归发行通证的用户账户所有，用户需要创建一个通证地址来接收通证。</p>
 <p style="text-align:justify;">生成地址中的通证可以被销毁以将它们永久地从流通中移除。 此选项目前在界面中不可用。</p>
+<p style="text-align:justify;">&nbsp;</p>
 <h3 style="text-align:justify;">Token Generation Address 通证生成地址</h3>
 <p style="text-align:justify;">这是生成特定通证的注册地址，该地址中的通证已停止流通。 发送到通证账户的通证开始流通。 用户可以将通证发送回生成地址以将其从流通中移除。</p>
+<p style="text-align:justify;">&nbsp;</p>
 <h3 style="text-align:justify;">Token account 通证账户:</h3>
 <p style="text-align:justify;">这是一个普通的通证账户，可以从生成地址或另一个通证账户接收特定的通证。 每个通证账户只被送到一个特定的通证，不能接收任何其他通证。 每个用户都必须创建一个通证账户来交易特定的通证。</p>
 <p style="text-align:justify;">通证账户只能接收它们所链接的特定通证。 他们不能接受 NXS 麟社币或任何其他通证。 标准的 “default" 默认、“trust" 或任何 NXS 麟社币账户都不能接受任何通证。</p>
@@ -37,19 +39,20 @@ dateCreated: 2022-12-03T13:25:50.970Z
   <li style="text-align:justify;">currentsupply - 分配给通证账户的流通通证数量</li>
   <li style="text-align:justify;">balance - 尚未分发的通证数量 (maxsupply - currentsupply)</li>
 </ul>
-<h3 style="text-align:justify;">Token Minting Fees&nbsp;</h3>
-<p style="text-align:justify;">The fee is based on the number of token divisible units you define (the combination of supply and decimals). There is a minimum fee of 1 NXS and the calculation is linear thereafter, so that each additional significant digit costs an additional 100 NXS. E.g.</p>
+<p style="text-align:justify;">&nbsp;</p>
+<h3 style="text-align:justify;">Token Minting Fees 通证铸造费</h3>
+<p style="text-align:justify;">费用基于您定义的通证可分割单位的数量（供应量和小数的组合）。 最低费用为 1 NXS，此后按线性计算，因此每增加一个有效数字需要额外支付 100 NXS 麟社币。 例如。</p>
 <p style="text-align:justify;">100 units = 1 NXS</p>
 <p style="text-align:justify;">1000 units = 100 NXS</p>
 <p style="text-align:justify;">1000000 units = 400 NXS</p>
 <p style="text-align:justify;">10000000000 units = 800 NXS</p>
-<h2 style="text-align:justify;">Create a Token</h2>
-<p style="text-align:justify;">To create a token using the Interface follow the steps below:</p>
+<h2 style="text-align:justify;">Create a Token 创建通证</h2>
+<p style="text-align:justify;">要使用界面创建通证，请按照以下步骤操作：</p>
 <ul>
-  <li style="text-align:justify;">Open the Nexus Interface, make sure the wallet is fully synched and log into the user account (Sigchain).</li>
-  <li style="text-align:justify;">In the Overview page, at the bottom click on the "<i>User"</i> module. This opens the User page.</li>
-  <li style="text-align:justify;">In the User page, on the left side click on the "<i>Tokens</i>" tab.</li>
-  <li style="text-align:justify;">In the Assets page click on "<i>Create a new token</i>". This opens the <i>New Token</i> page.</li>
+  <li style="text-align:justify;">打开 Nexus 麟社界面，确保钱包已完全同步并登录用户账户（Sigchain）签名链。</li>
+  <li style="text-align:justify;">在 “Overview" 概览页面的底部，单击 “Users" 用户模块。 这将打开用户页面。</li>
+  <li style="text-align:justify;">在 “Users" 用户页面的左侧，单击 “Tokens" 令牌选项卡。</li>
+  <li style="text-align:justify;">在 “Assets“ 资产页面中，单击 “Create a new token” 创建新通证。 这将打开新通证页面。</li>
   <li style="text-align:justify;">In this page the user has to provide three parameters which define the token. The parameters and their details are given below:</li>
   <li style="text-align:justify;">Once the parameters are provided, click on the "Create token" button on the bottom of the page.</li>
   <li style="text-align:justify;">Once the token is confirmed on the blockchain, it will be listed in the "Tokens" page.</li>
