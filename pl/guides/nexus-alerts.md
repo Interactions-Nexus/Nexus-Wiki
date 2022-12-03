@@ -2,7 +2,7 @@
 title: Alerty Nexusa
 description: Nexus Alert Telegram Bot – Odszyfruj informacje
 published: true
-date: 2022-12-01T22:30:25.529Z
+date: 2022-12-03T16:05:18.769Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:53:20.736Z
@@ -19,7 +19,7 @@ Nexus Alerts, bot telegramu wyświetli listę transakcji na łańcuchu bloków N
 
 Każda transakcja odbywająca się w łańcuchu blokowym jest sprawdzana pod kątem kredytu i jest wysyłana jako ostrzeżenie do Nexus Alert Bot. Te dane wyświetlane są z alertami jak poniżej:
 
-![](<../.gitbook/assets/Alert Data1.png>)
+![alert_data1.png](/alert_data1.png)
 
 * Ikona ryby wyświetlana zgodnie z [legendą](nexus-alerts.md#legend).
 * `Humpback Whale found on block` : Wysokość bloku.
@@ -46,7 +46,7 @@ Aby lepiej zrozumieć dane dostarczane przez bota możemy podzielić transakcje 
 &#x20;
 ### Transakcje Tritium do Tritium:&#x20;
 
-![Transakcja Tritium to Tritium - Operacja CREDIT , For DEBIT.](<../.gitbook/assets/Tritium to Tritium1.png>)
+![tritium_to_tritium1.png](/tritium_to_tritium1.png)
 
 Każda transakcja na tritium jest `obciążeniem` konta nadawcy i `uznaniem` konta odbiorcy. Tworzy to dwie transakcje dla pojedynczego przelewu, podobnie jak w przypadku podwójnego księgowania, ale bot jest zaprojektowany tak, aby ignorować `DEBIT` i pokazywać tylko `CREDIT`, ponieważ jest to pojedynczy przelew, a posiadanie dwóch alertów spowoduje więcej zamieszania.
 
@@ -56,7 +56,7 @@ Każda transakcja na tritium jest `obciążeniem` konta nadawcy i `uznaniem` kon
 
 ### Transakcje Legacy do Tritium:
 
-![Transakcja Legacy to Tritium - Operation CREDIT , For LEGACY.](<../.gitbook/assets/Legacy to Tritium1.png>)
+![legacy_to_tritium1.png](/legacy_to_tritium1.png)
 
 Transakcje Legacy to Tritium mają miejsce, gdy użytkownik wypłaca NXS z giełdy na swoje konto Tritium. Ta transakcja wyświetli tylko `credit` na koncie Tritium i można ją łatwo rozpoznać, zaznaczając pole `Operation`, które powinno brzmieć `CREDIT`, a pole "`For`" brzmi `LEGACY` , co oznacza, że jest to `credit` dla przychodzącej transakcji `legacy`.
 
@@ -64,7 +64,7 @@ Transakcje Legacy to Tritium mają miejsce, gdy użytkownik wypłaca NXS z gieł
 
 ### Transakcje Tritium do Legacy:
 
-![Transakcja Tritium to Legacy - Operacja LEGACY i To zaczyna się od 2.](<../.gitbook/assets/Tritium to Legacy1.png>)
+![tritium_to_legacy1.png](/tritium_to_legacy1.png)
 
 Transakcje Tritium do Legacy są przeprowadzane, gdy użytkownik wysyła NXS na konto wymiany lub na osobiste konto tradycyjne. Ta transakcja wyświetli tylko `debit` na koncie Tritium i może być łatwo rozpoznana poprzez zaznaczenie pola `Operation`, które powinno brzmieć `LEGACY`, a także adres `To` będzie zaczynał się od `2`, co oznacza adres Legacy.
 
