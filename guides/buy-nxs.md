@@ -2,7 +2,7 @@
 title: Buy NXS
 description: How to buy NXS
 published: false
-date: 2022-10-09T19:28:49.778Z
+date: 2022-12-03T15:57:35.849Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:24:28.429Z
@@ -24,13 +24,14 @@ If you have any questions or difficulties in the process of buying NXS, please c
 
 **Where do I get it?**
 
-The video below is brought to you by [The Digital Future!](https://www.youtube.com/channel/UC1lMk6jKYv4lg6gs1oS\_OYw)
+The video below is brought to you by [The Digital Future!]
 
-Buy NXS on Bittrex with a credit / debit card:
+[Buy NXS on Bittrex using Credit/debit card](https://www.youtube.com/watch?v=OX2jARFRA4o&t=7s)
 
-**Live price:**
 
-**How to Purchase BTC**
+
+
+## How to Purchase BTC
 
 **1. Set Up Account**
 
@@ -103,7 +104,7 @@ Limit orders do not necessarily execute immediately. Sometimes, if the market pr
 
 When you have set up an account on an exchange (Binance, Bittrex, etc), you will then be able to transfer your BTC.
 
-**How to Purchase NXS**
+## How to Purchase NXS
 
 Swapzone is an instant non-custodial cryptocurrency exсhange aggregator that constantly monitors the best exchange rates for users to exchange thousands of different cryptocurrencies instantly, with low fees and no registration. **NOTE:** After pressing "exchange", you will be redirected to the [Swapzone](https://swapzone.io/) website to complete the swap. Please read Swapzone's Privacy Policy and Terms and Conditions before completing a transaction to verify you meet eligibility to do so.
 
