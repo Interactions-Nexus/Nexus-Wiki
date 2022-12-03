@@ -2,7 +2,7 @@
 title: Alerty Nexusa
 description: Nexus Alert Telegram Bot – Odszyfruj informacje
 published: true
-date: 2022-12-03T17:13:41.711Z
+date: 2022-12-03T17:15:40.601Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:53:20.736Z
@@ -69,7 +69,7 @@ Transakcje Legacy do Tritium mają miejsce, gdy użytkownik wypłaca NXS z gieł
 
 ![tritium_to_legacy1.png](/tritium_to_legacy1.png)
 
-Transakcje Tritium do Legacy są przeprowadzane, gdy użytkownik wysyła NXS na konto wymiany lub na osobiste konto tradycyjne. Ta transakcja wyświetli tylko `debit` na koncie Tritium i może być łatwo rozpoznana poprzez zaznaczenie pola `Operation`, które powinno brzmieć `LEGACY`, a także adres `To` będzie zaczynał się od `2`, co oznacza adres Legacy.
+Transakcje Tritium do Legacy są przeprowadzane, gdy użytkownik wysyła NXS na konto giełdy lub na osobiste konto legacy. Ta transakcja wyświetli tylko `debit` na koncie Tritium i może być łatwo rozpoznana poprzez zaznaczenie pola `Operation`, które powinno brzmieć `LEGACY`, a także adres `To` będzie zaczynał się od `2`, co oznacza adres Legacy.
 
 &nbsp;
 
