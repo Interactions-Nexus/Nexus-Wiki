@@ -2,7 +2,7 @@
 title: Alerty Nexusa
 description: Nexus Alert Telegram Bot – Odszyfruj informacje
 published: true
-date: 2022-12-03T16:09:10.559Z
+date: 2022-12-03T17:10:08.821Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:53:20.736Z
@@ -31,6 +31,8 @@ Każda transakcja odbywająca się w łańcuchu blokowym jest sprawdzana pod ką
 * `To`: Adres odbioru.
 * `Link`: Łącze eksploratora do szczegółów wysokości bloku.
 
+&nbsp;
+
 ## Zrozumienie danych alertu:
 
 Bot alertów jest łatwy do zrozumienia, ale dla niektórych może być mylący. Ten przewodnik pomoże w zrozumieniu dostarczonych danych.\
@@ -43,7 +45,8 @@ Aby lepiej zrozumieć dane dostarczane przez bota możemy podzielić transakcje 
 * **Transakcje Legacy do Tritium**
 * **Transakcje Tritium do Legacy**
 
-&#x20;
+&nbsp;
+
 ### Transakcje Tritium do Tritium:&#x20;
 
 ![tritium_to_tritium1.png](/tritium_to_tritium1.png)
@@ -52,7 +55,7 @@ Każda transakcja na tritium jest `obciążeniem` konta nadawcy i `uznaniem` kon
 
 Łatwo to rozróżnić, ponieważ pole `Operation` to `CREDIT`, a pole `For` to `DEBIT`, co oznacza, że jest to `credit` za odpowiadające mu `debit`. 
 
-&#x20;
+&nbsp;
 
 ### Transakcje Legacy do Tritium:
 
@@ -60,7 +63,7 @@ Każda transakcja na tritium jest `obciążeniem` konta nadawcy i `uznaniem` kon
 
 Transakcje Legacy to Tritium mają miejsce, gdy użytkownik wypłaca NXS z giełdy na swoje konto Tritium. Ta transakcja wyświetli tylko `credit` na koncie Tritium i można ją łatwo rozpoznać, zaznaczając pole `Operation`, które powinno brzmieć `CREDIT`, a pole "`For`" brzmi `LEGACY` , co oznacza, że jest to `credit` dla przychodzącej transakcji `legacy`.
 
-&#x20;
+&nbsp;
 
 ### Transakcje Tritium do Legacy:
 
@@ -68,13 +71,13 @@ Transakcje Legacy to Tritium mają miejsce, gdy użytkownik wypłaca NXS z gieł
 
 Transakcje Tritium do Legacy są przeprowadzane, gdy użytkownik wysyła NXS na konto wymiany lub na osobiste konto tradycyjne. Ta transakcja wyświetli tylko `debit` na koncie Tritium i może być łatwo rozpoznana poprzez zaznaczenie pola `Operation`, które powinno brzmieć `LEGACY`, a także adres `To` będzie zaczynał się od `2`, co oznacza adres Legacy.
 
-&#x20;
+&nbsp;
 
 ### Legenda:
 
 Aby różnice wizualne były oparte na kwotach, alerty zostały pogrupowane na podstawie kwot transakcji i nazwane na podstawie ryb według rozmiaru.
 
-Legenda jest podana poniżej:
+&#x20;Legenda jest podana poniżej:
 
 * \>= 500 000 NXS: Płetwal błękitny (🐳🐳🐳🐳🐳🐳)
 * \>= 250 000 NXS: Kaszalot (🐋🐋🐋🐋🐋🐋)
