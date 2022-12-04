@@ -2,7 +2,7 @@
 title: Interface - Tritium++
 description: 
 published: false
-date: 2022-12-04T16:34:57.892Z
+date: 2022-12-04T16:45:20.808Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:30:29.035Z
@@ -55,10 +55,10 @@ The Interface can be run in two modes, users can switch between the two modes fr
    - Full Mode
 
 ## Lite Mode (Default)
-This mode enables normal users to connect to the Nexus network fast and easily. In the lite mode the interface connects directly to the Nexus network and downloads the lite blockchain (block headers & profile info) which at the time of writing is approximately 300MB in size. The user should be able to transact within 5 min of installing the wallet, depending on internet connection. The lite mode connects directly to the Nexus network peers unlike other lite wallets which connect to third party proxy servers. This mode is useful for users who occasionaly use the wallet to transact or to HODL.
+This mode enables normal users to connect to the Nexus network fast and easily. In the lite mode the interface connects directly to the Nexus network and downloads the lite blockchain (block headers & profile info) which at the time of writing is approximately 300MB in size. The user should be able to transact within 5 min of installing the wallet, depending on internet connection. The lite mode connects directly to the Nexus network peers unlike other lite wallets which connect to third party proxy servers. This mode is useful for users who transact occasionally or HODL.
 
 ## Full Mode
-In this mode the node will act like a full node which requires the full blockchain to be downloaded from peers and verified. The database is approximately 16GB in size. Stakers, Miners, seed nodes and Dapp backend nodes have to run their nodes in full mode.
+In this mode the node will act like a full node which requires the full blockchain to be downloaded from peers and verified. The database is approximately 16GB in size at the time of writing. Stakers, miners, seed nodes and Dapp backend nodes will run as full nodes.
 
 
 > For users still using legacy chain, we recommend you migrate to Tritium.
