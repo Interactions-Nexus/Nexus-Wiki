@@ -2,7 +2,7 @@
 title: Create Tokenized Asset
 description: Create a tokenized asset on Nexus
 published: true
-date: 2022-10-08T16:21:05.980Z
+date: 2022-12-05T00:11:58.002Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:17.959Z
@@ -12,7 +12,7 @@ dateCreated: 2022-10-05T08:26:17.959Z
 
 ### What is Asset Tokenization
 
-`Asset Tokenization` also referred as `Asset Backed Tokens` or `Tokenized Assets` is a new concept that uses digital tokens to fractionalize ownership of assets such as property, jewellery or fine art and uses contracts on blockchain to manage these ownership rights
+`Asset Tokenization` also referred as `Asset Backed Tokens` or `Tokenized Assets` is a new concept that uses digital tokens to fractionalize ownership of assets such as property, jewellery or fine art and uses contracts on blockchain to manage these ownership rights.
 
 This guide will help users to create a ***Tokenized Asset*** using the Nexus Interface.
 
@@ -41,7 +41,7 @@ Click on the Asset which is to be tokenized, this opens the "Asset Details" page
 
 ![](/asset_details.png)
 
-Asset Details
+_Asset Details_
 
 At the bottom right of this page click on "Tokenize". This will open the "Tokenize" page.
 
@@ -53,5 +53,5 @@ Once the appropriate token is selected, click on the "Tokenize" button on the bo
 
 The main utility of tokenized assets is to enable fractional ownership and to share the revenue with the token holders. To send the payout to the token holders the user sends NXS equivalent in value to the revenue generated, to the asset address and it will be automatically be distributed as per the percentage token holdings of each holder.
 
-{% hint style="warning" %}  
-The payout is distributed taking the maxsupply as 100% of the tokens. If any tokens are still in the token generation address, the percentage of payout corresponding to the balance tokens will be returned to the sender.
+>The payout is distributed taking the maxsupply as 100% of the tokens. If any tokens are still in the token generation address, the percentage of payout corresponding to the balance tokens will be returned to the sender.
+{.is-warning}
