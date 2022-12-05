@@ -2,7 +2,7 @@
 title: Create Asset
 description: Create Asset using the Interface
 published: true
-date: 2022-12-05T23:25:00.579Z
+date: 2022-12-05T23:52:21.533Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:14.466Z
@@ -10,11 +10,11 @@ dateCreated: 2022-10-05T08:26:14.466Z
 
 # Create an Asset
 
-This guide will help users to create an **Asset,** also popularly known as  **NFT's**, check the asset details and transfer ownership using the Nexus Interface
+This guide will help users to create an **Asset,** also popularly known as  **NFT's**, check the asset details and transfer ownership using the Nexus Interface.
 
 Before we start to create an asset, users need to be familiar with some of the concepts and parameters used with assets.
 
->Creating an Asset has a fee of 1 NXS and "_Asset Name"_ has a fee of 1 NXS. Total cost of an Asset with Name will be 2 NXS
+>Creating an Asset has a fee of 1 NXS and "_Asset Name"_ has a fee of 1 NXS. Total cost of an Asset with Name will be 2 NXS.
 {.is-info}
 
 ## Asset Parameters
@@ -30,8 +30,8 @@ This is a globally unique name for the asset. Duplicate names will not be allowe
 Naming Convention:
 * Use a unique name if creating an asset. Short names are preferred, but if needed use long names.
 * Names can contain upper lower case letters, numbers and special characters.
-* If creating an asset of a real world assets like real estate, provide clear and precise information for the Asset Name&#x20;
-* If creating a bunch of Assets / NFT's, say from a single art collection, then suffix the collection name with a unique serial Number series Ex: "_Iron Maiden #0001"_
+* If creating an asset of a real world assets like real estate, provide clear and precise information for the Asset Name.&#x20;
+* If creating a bunch of Assets / NFT's, say from a single art collection, then suffix the collection name with a unique serial Number series Ex: "_Iron Maiden #0001."_
 
 ### Asset Data
 
@@ -42,7 +42,7 @@ This section is for the asset data or metadata. The information provided here he
 
 To easily count the characters for the Asset data use the link below:
 
-{% embed url="https://wordcount.com" %}
+[wordcount.com](https://wordcount.com)
 
 >**Note:** If creating an Asset of a digital art, which basically is an image file, provide a md5 hash of the original image for anyone to check the authenticity of that particular file. If all the details are provided without the file hash, the asset will not be of any use, due to the fact that no one will be able to confirm the authenticity of the file which represents the asset.&#x20;
 {.is-warning}
