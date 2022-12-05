@@ -2,7 +2,7 @@
 title: Utwórz Aktywo
 description: Utwórz Aktywo za pomocą interfejsu
 published: true
-date: 2022-12-05T23:34:11.833Z
+date: 2022-12-05T23:58:18.904Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:48:53.360Z
@@ -10,58 +10,58 @@ dateCreated: 2022-10-22T21:48:53.360Z
 
 # Utwórz Aktywo
 
-Ten przewodnik pomoże użytkownikom utworzyć **zasób**, popularnie zwany także **NFT**, sprawdzić szczegóły zasobu i przenieść własność za pomocą interfejsu Nexus
+Ten przewodnik pomoże użytkownikom utworzyć **Aktywo**, popularnie zwany także **NFT**, sprawdzić szczegóły aktywa i przenieść własność za pomocą interfejsu Nexus.
 
-Zanim zaczniemy tworzyć zasób, użytkownicy muszą zapoznać się z niektórymi koncepcjami i parametrami używanymi z zasobami.
+Zanim zaczniemy tworzyć aktywo, użytkownicy muszą zapoznać się z niektórymi koncepcjami i parametrami używanymi z aktywami.
 
->Tworzenie zasobu wiąże się z opłatą w wysokości 1 NXS, a „_Nazwa zasobu”_ wiąże się z opłatą w wysokości 1 NXS. Całkowity koszt zasobu o nazwie wyniesie 2 NXS
+>Tworzenie Aktywa wiąże się z opłatą w wysokości 1 NXS i „_Nazwa Aktywa”_ wiąże się z opłatą w wysokości 1 NXS. Całkowity koszt Aktywa z nazwą wyniesie 2 NXS.
 {.is-info}
 
-## Parametry zasobów
+## Parametry Aktywa
 
-### Nazwa zasobu
+### Nazwa Aktywa
 
-Jest to globalnie unikatowa nazwa zasobu. Duplikaty nazw nie będą dozwolone. Jeśli tworzysz grupę zasobów o podobnej nazwie, użyj numeru seryjnego z nazwą.
+Jest to globalnie unikatowa nazwa aktywa. Duplikaty nazw nie będą dozwolone. Jeśli tworzysz grupę aktyw o podobnej nazwie, użyj numeru seryjnego z nazwą.
 
->Asset Name ma oddzielną opłatę w wysokości 1NXS. Użytkownicy mogą zrezygnować z tworzenia nazwy zasobu i mogą korzystać z adresu rejestracyjnego, aby uzyskać dostęp do zasobu lub go przeszukiwać.
+>Nazwa Aktywa ma oddzielną opłatę w wysokości 1NXS. Użytkownicy mogą zrezygnować z tworzenia nazwy aktywa i mogą korzystać z adresu rejestracyjnego, aby uzyskać dostęp do aktywa lub go przeszukiwać.
 {.is-info}
 
 
 Konwencja nazewnictwa:
-* Użyj unikalnej nazwy, jeśli tworzysz zasób. Preferowane są krótkie nazwy, ale w razie potrzeby używaj długich nazw.
+* Użyj unikalnej nazwy, jeśli tworzysz aktywo. Preferowane są krótkie nazwy, ale w razie potrzeby używaj długich nazw.
 * Nazwy mogą zawierać wielkie i małe litery, cyfry i znaki specjalne.
-* Jeśli tworzysz zasób z rzeczywistych zasobów, takich jak nieruchomości, podaj jasne i precyzyjne informacje dla nazwy zasobu&#x20;
-* Jeśli tworzysz kilka Zasobów / NFT, na przykład z jednej kolekcji dzieł sztuki, dodaj do nazwy kolekcji unikalny numer seryjny serii Np.: „_Iron Maiden #0001”_
+* Jeśli tworzysz aktywo z rzeczywistych aktyw, takich jak nieruchomości, podaj jasne i precyzyjne informacje dla nazwy aktywa.&#x20;
+* Jeśli tworzysz kilka Aktyw / NFT, na przykład z jednej kolekcji dzieł sztuki, dodaj do nazwy kolekcji unikalny numer seryjny serii Np.: „_Iron Maiden #0001.”_
 
-### Dane zasobów
+### Dane Aktywa
 
-Ta sekcja dotyczy danych lub metadanych zasobów. Podane tutaj informacje pomagają nadać ważność zasobowi i jego wartości. Dane o zasobach muszą być dokładne, kompletne i powinny umożliwiać każdemu sprawdzenie autentyczności zasobu, na którym się on znajduje. Dostarczone dane będą zależeć od zasobu cyfrowego lub fizycznego, który jest wspierany jako zasób blockchain. &#x20;
+Ta sekcja dotyczy danych lub metadanych aktywa. Podane tutaj informacje pomagają nadać ważność aktywu i jego wartości. Dane o aktywach muszą być dokładne, kompletne i powinny umożliwiać każdemu sprawdzenie autentyczności aktywa, na którym się on znajduje. Dostarczone dane będą zależeć od aktywa cyfrowego lub fizycznego, który jest wspierany jako aktywo blockchain. &#x20;
 
->Dane zasobów mają limit 1 KB i jest to wiążące. Zasób może zawierać około 990 - 995 znaków ze spacjami. Nie dotyczy to nazwy zasobu.
+>Dane aktywa mają limit 1 KB i jest to wiążące. Aktywo może zawierać około 990 - 995 znaków ze spacjami. Nie dotyczy to nazwy aktywa.
 {.is-info}
 
-Aby łatwo policzyć znaki dla danych Zasobu, użyj poniższego łącza:
+Aby łatwo policzyć znaki dla danych Aktywa, użyj poniższego łącza:
 
-{% embed url="https://wordcount.com" %}
+[wordcount.com](https://wordcount.com)
 
->**Nota:** Jeśli tworzysz zasób dzieła sztuki cyfrowej, który zasadniczo jest plikiem graficznym, podaj skrót md5 oryginalnego obrazu, aby każdy mógł sprawdzić autentyczność tego konkretnego pliku. Jeśli wszystkie szczegóły zostaną podane bez skrótu pliku, zasób nie będzie użyteczny, ponieważ nikt nie będzie w stanie potwierdzić autentyczności pliku, który reprezentuje zasób.
+>**Nota:** Jeśli tworzysz Aktywo dzieła sztuki cyfrowej, który zasadniczo jest plikiem graficznym, podaj skrót md5 oryginalnego obrazu, aby każdy mógł sprawdzić autentyczność tego konkretnego pliku. Jeśli wszystkie szczegóły zostaną podane bez skrótu pliku, aktywo nie będzie użyteczne, ponieważ nikt nie będzie w stanie potwierdzić autentyczności pliku, który reprezentuje aktywo.
 {.is-warning}
 
-Dane o zasobach są wprowadzane w polach, które na powyższym obrazku przedstawiają pojedynczą linię.&#x20;
+Dane o aktywch są wprowadzane w polach, które na powyższym obrazku przedstawiają pojedynczą linię.&#x20;
 
-#### Imię:&#x20;
+#### Nazwa:&#x20;
 
 Pierwsza kolumna to nazwa pola, która jest nazwą danych, które zamierzasz dodać, takich jak Opis, Właściciel, Artysta, Hash itp.
 
 #### Wartość:&#x20;
 
-Druga kolumna to wartość pola, na przykład nazwisko właściciela
+Druga kolumna to wartość pola, na przykład nazwisko właściciela.
 
 #### Zmienny:
 
-Trzeci to przycisk radiowy umożliwiający włączenie pola zmiennego (domyślnie jest wyłączone). Zmienne pola mogą być zmieniane w dowolnym momencie przez właściciela łańcucha znaków zasobu. Jest to bardzo pomocne w przypadku, gdy masz dom wybijany jako zasób, a kiedy sprzedasz dom, przekaż zasób nowemu właścicielowi, a on może zmienić pole „Właściciel” na swoje nazwisko.
+Trzeci to przycisk radiowy umożliwiający włączenie pola zmiennego (domyślnie jest wyłączone). Zmienne pola mogą być zmieniane w dowolnym momencie przez właściciela łańcucha znaków aktywa. Jest to bardzo pomocne w przypadku, gdy masz dom uznany jako aktywo, a kiedy sprzedasz dom, przekaż aktywo nowemu właścicielowi, a on może zmienić pole „Właściciel” na swoje nazwisko.
 
-> Zmieniaj tylko te pola, które naprawdę potrzebują. Np. Podczas tworzenia zasobu, który odnosi się do domu, pole „Właściciel” musi być zmienne, wynika to z lokalizacji, nazwy, numeru rejestracyjnego&#x20;
+> Zmieniaj tylko te pola, które naprawdę potrzebują. Np. Podczas tworzenia aktywa, który odnosi się do domu, pole „Właściciel” musi być zmienne, wynika to z lokalizacji, nazwy, numeru rejestracyjnego.&#x20;
 {.is-info}
 
 #### Rodzaj:
