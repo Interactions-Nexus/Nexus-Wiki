@@ -2,7 +2,7 @@
 title: Create Asset
 description: Create Asset using the Interface
 published: true
-date: 2022-12-05T23:52:21.533Z
+date: 2022-12-05T23:58:20.142Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:14.466Z
@@ -55,13 +55,13 @@ The first column is the field name, which is the name for the data you are going
 
 #### Value:&#x20;
 
-The second column is the value of the field, like the owner's name
+The second column is the value of the field, like the owner's name.
 
 #### Mutable:
 
 Third is the radio button to enable mutable field (default is disabled). Mutable fields can be changed anytime by the sigchain owner of the asset. This is very helpful in case you have a house minted as an Asset and once you sell the house, transfer the asset to the new owner and he can change the "Owner" field to his name.
 
->Only make the fields mutable which really need. Ex When creating a asset which refers to a house, The "Owner" field needs to be mutable, this is due to the  where as Location, Name, Registration No&#x20;
+>Only make the fields mutable which really need. Ex When creating a asset which refers to a house, The "Owner" field needs to be mutable, this is due to the  where as Location, Name, Registration No.&#x20;
 {.is-info}
 
 #### Type:
