@@ -2,7 +2,7 @@
 title: Utwórz Aktywo
 description: Utwórz Aktywo za pomocą interfejsu
 published: true
-date: 2022-12-06T23:08:00.554Z
+date: 2022-12-06T23:32:18.105Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:48:53.360Z
@@ -82,7 +82,7 @@ Typy dat uint8, uint16, uint32, uint64, uint128, uint256, uint512 i uint1024 rep
 
 **Maksymalna długość:**
 
-To pole jest włączone tylko wtedy, gdy pole jest wybrane jako zmienne, a typ jako „ciąg”. Jest to ważne, ponieważ pozwoli to ograniczyć długość pola przy późniejszej zmianie i zmieścić Dane o aktywie w limicie 1 KB.
+To pole jest włączone tylko wtedy, gdy pole jest wybrane jako zmienne, a typ jako "string". Jest to ważne, ponieważ pozwoli to ograniczyć długość pola przy późniejszej zmianie i zmieścić Dane Aktywa w limicie 1 KB.
 
 ## Utwórz Aktywo
 
