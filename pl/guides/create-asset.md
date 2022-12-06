@@ -2,7 +2,7 @@
 title: Utwórz Aktywo
 description: Utwórz Aktywo za pomocą interfejsu
 published: true
-date: 2022-12-06T23:32:18.105Z
+date: 2022-12-06T23:42:16.549Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:48:53.360Z
@@ -104,13 +104,13 @@ Aby utworzyć aktywo za pomocą interfejsu, wykonaj poniższe czynności:
 
 ## Szczegóły aktywa
 
-Użytkownik może sprawdzić szczegóły aktywa, w tym wszystkie dane aktywa zapisane wraz z tym aktywem. Aby sprawdzić szczegóły aktywa, na stronie Aktywa kliknij aktywo, co spowoduje otwarcie strony. Szczegóły aktywa.&#x20;
+Użytkownik może sprawdzić szczegóły aktywa, w tym wszystkie dane aktywa zapisane wraz z tym aktywem. Aby sprawdzić szczegóły aktywa, na stronie Aktywa kliknij aktywo, co spowoduje otwarcie strony Szczegóły Aktywa.&#x20;
 
 ![](<../../.gitbook/assets/Szczegóły zasobu.png>)
 
 ### Historia aktywa
 
-Użytkownik może sprawdzić historię aktywa, historia obejmuje tworzenie, aktualizację, transfer, roszczenie i tokenizację. Aby sprawdzić historię aktywa, na stronie Aktywa kliknij „Aktywo”, co spowoduje otwarcie Szczegółów aktywa. W lewym dolnym rogu tej strony kliknij „Wyświetl historię”. Spowoduje to otwarcie strony historii, która zawiera listę wszystkich zmian, które miały miejsce w przypadku tego aktywa. &#x20;
+Użytkownik może sprawdzić historię aktywa, historia obejmuje tworzenie, aktualizację, transfer, roszczenie i tokenizację. Aby sprawdzić historię aktywa, na stronie Aktywa kliknij „Aktywo”, co spowoduje otwarcie Szczegóły Aktywa. W lewym dolnym rogu tej strony kliknij „Wyświetl historię”. Spowoduje to otwarcie strony historii, która zawiera listę wszystkich zmian, które miały miejsce w przypadku tego aktywa. &#x20;
 
 ![](<../../.gitbook/assets/Historia zasobów.png>)
 
@@ -118,7 +118,7 @@ Użytkownik może sprawdzić historię aktywa, historia obejmuje tworzenie, aktu
 
 Właściciel aktywa może sprzedać aktywo i w tym celu musi przenieść własność aktywa na kupującego.
 
-* Aby przenieść własność aktywa, kliknij to aktywo, co spowoduje otwarcie strony „Szczegóły aktywa”.
+* Aby przenieść własność aktywa, kliknij to aktywo, co spowoduje otwarcie strony „Szczegóły Aktywa”.
 * W prawym dolnym rogu strony kliknij „Przenieś własność”. Spowoduje to otwarcie strony „Przenieś aktywo”.
 
 ![Przenieś stronę aktywa](<../../.gitbook/assets/Transfer Asset.png>)
@@ -126,5 +126,5 @@ Właściciel aktywa może sprzedać aktywo i w tym celu musi przenieść własno
 * Na tej stronie potwierdź nazwę aktywa, adres aktywa i w polu „Przenieś do” wprowadź nazwę użytkownika lub identyfikator użytkownika kupującego.
 * Aby potwierdzić, na dole strony kliknij „Przenieś aktywo”, co spowoduje przeniesienie aktywa do kupującego.
 
->Kupujący automatycznie odbierze aktywo za pośrednictwem interfejsu. Odbiór będzie obciążony opłatą w wysokości 1 NXS, co spowoduje utworzenie lokalnej nazwy tego aktywa w odbiornikach Sigchain.
+>Kupujący automatycznie odbierze aktywo za pośrednictwem interfejsu. Odbiór będzie obciążony opłatą w wysokości 1 NXS, co spowoduje utworzenie lokalnej nazwy tego aktywa u odbiorców Sigchain.
 {.is-info}
