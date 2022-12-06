@@ -2,7 +2,7 @@
 title: 创建资产
 description: 使用界面创建资产
 published: true
-date: 2022-12-06T05:12:59.732Z
+date: 2022-12-06T05:28:42.849Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-06T05:10:54.432Z
@@ -11,32 +11,31 @@ dateCreated: 2022-12-06T05:10:54.432Z
 <h1 style="text-align:justify;">创建资产</h1>
 <p style="text-align:justify;">本指南将帮助用户创建 Asset 资产（通常也称为 NFT），使用 Nexus 麟社界面检查资产详细信息并转移持有权</p>
 <p style="text-align:justify;">在我们开始创建资产之前，用户需要熟悉资产使用的一些概念和参数。</p>
-<p style="text-align:justify;">{% hint style="info" %}<br>Creating an Asset has a fee of 1 NXS and "<i>Asset Name"</i> has a fee of 1 NXS. Total cost of an Asset with Name will be 2 NXS</p>
-<h2 style="text-align:justify;">Asset Parameters</h2>
-<h3 style="text-align:justify;">Asset Name</h3>
-<p style="text-align:justify;">This is a globally unique name for the asset. Duplicate names will not be allowed. If creating a bunch of assets with a similar name then use a serial no with the name.</p>
-<p style="text-align:justify;">{% hint style="info" %}<br>Asset Name has a separate fee of 1NXS. Users can opt not to create an Asset Name and can use the register address to access or search the Asset.</p>
-<p style="text-align:justify;">{% hint style="info" %}<br>Naming Convention:</p>
+<p style="text-align:justify;">创建资产需要 1 NXS 麟社币的费用，“<i>Asset Name“ </i>资产名称需要 1 NXS 的费用。 具有名称的资产的总成本将为 2 NXS 麟社币。</p>
+<h2 style="text-align:justify;">Asset Parameters 资产参数</h2>
+<h3 style="text-align:justify;">Asset Name 资产名称</h3>
+<p style="text-align:justify;">这是资产的全球唯一名称。 不允许重复名称。 如果创建一堆具有相似名称的资产，则使用带有名称的序列号。</p>
+<p style="text-align:justify;">资产名称有 1NXS 麟社币的单独费用。 用户也可以选择不创建资产名称，可以使用注册地址访问或搜索资产。</p>
+<p style="text-align:justify;">命名常规：</p>
 <ul>
-  <li style="text-align:justify;">Use a unique name if creating an asset. Short names are preferred, but if needed use long names.</li>
-  <li style="text-align:justify;">Names can contain upper lower case letters, numbers and special characters.</li>
-  <li style="text-align:justify;">If creating an asset of a real world assets like real estate, provide clear and precise information for the Asset Name</li>
-  <li style="text-align:justify;">If creating a bunch of Assets / NFT's, say from a single art collection, then suffix the collection name with a unique serial Number series Ex: "<i>Iron Maiden #0001"</i></li>
+  <li style="text-align:justify;">如果创建资产，请使用唯一名称。 首选短名称，但如果需要，请使用长名称。</li>
+  <li style="text-align:justify;">名称可以包含大写小写字母、数字和特殊字符。</li>
+  <li style="text-align:justify;">如果创建真实世界资产的资产，如房地产，请为资产名称提供清晰准确的信息</li>
+  <li style="text-align:justify;">如果创建一堆资产/ NFT，比如来自单个艺术收藏，则在收藏名称后加上唯一的序列号系列，例子： "<i>Iron Maiden #0001"</i></li>
 </ul>
-<h3 style="text-align:justify;">Asset Data</h3>
-<p style="text-align:justify;">This section is for the asset data or metadata. The information provided here helps to give validity to the asset and its value. The asset data has to be precise, complete and should enable anyone to check authenticity of the asset its backing. The data provided will depend on the digital or physical asset which is being backed as a blockchain Asset.</p>
-<p style="text-align:justify;">{% hint style="info" %}<br>Asset Data has a limit of 1KB and this is binding. An asset can hold approximately 990 - 995 characters including spaces. This excludes the Asset Name.</p>
-<p style="text-align:justify;">To easily count the characters for the Asset data use the link below:</p>
-<p style="text-align:justify;">&nbsp;</p>
-<p style="text-align:justify;">{% hint style="warning" %}<br><strong>Note:</strong> If creating an Asset of a digital art, which basically is an image file, provide a md5 hash of the original image for anyone to check the authenticity of that particular file. If all the details are provided without the file hash, the asset will not be of any use, due to the fact that no one will be able to confirm the authenticity of the file which represents the asset.</p>
-<p style="text-align:justify;">Asset Data is entered in fields which represent a single line in the image above.</p>
-<h4 style="text-align:justify;">Name:</h4>
-<p style="text-align:justify;">The first column is the field name, which is the name for the data you are going to add like Description, Owner, Artist, Hash etc.</p>
-<h4 style="text-align:justify;">Value:</h4>
-<p style="text-align:justify;">The second column is the value of the field, like the owner's name</p>
-<h4 style="text-align:justify;">Mutable:</h4>
-<p style="text-align:justify;">Third is the radio button to enable mutable field (default is disabled). Mutable fields can be changed anytime by the sigchain owner of the asset. This is very helpful in case you have a house minted as an Asset and once you sell the house, transfer the asset to the new owner and he can change the "Owner" field to his name.</p>
-<p style="text-align:justify;">{% hint style="info" %}<br>Only make the fields mutable which really need. Ex When creating a asset which refers to a house, The "Owner" field needs to be mutable, this is due to the where as Location, Name, Registration No</p>
+<h3 style="text-align:justify;">Asset Data 资产数据</h3>
+<p style="text-align:justify;">此部分用于资产数据或元数据。 此处提供的信息有助于确定资产及其价值的有效性。 资产数据必须准确、完整，并且应使任何人都可以检查其支持的资产的真实性。 提供的数据将取决于作为区块链资产支持的数字或实物资产。</p>
+<p style="text-align:justify;">资产数据有 1KB 的限制，这是有约束力的。 资产可以包含大约 990 - 995 个字符，包括空格。 这不包括资产名称。</p>
+<p style="text-align:justify;">要轻松计算资产数据的字符数，请使用以下链接：</p>
+<p style="text-align:justify;">注意：如果创建数字艺术资产（基本上是图像文件），请提供原始图像的 md5 哈希值，以供任何人检查该特定文件的真实性。 如果在没有文件哈希的情况下提供了所有详细信息，则资产将没有任何用处，因为没有人能够确认代表资产的文件的真实性。</p>
+<p style="text-align:justify;">资产数据输入到代表上图中单行的字段中。</p>
+<h4 style="text-align:justify;">Name 名称:</h4>
+<p style="text-align:justify;">第一列是字段名称，这是您要添加的数据的名称，如描述、所有者、艺术家、哈希等。</p>
+<h4 style="text-align:justify;">Value 值:</h4>
+<p style="text-align:justify;">第二列是字段的值，比如所有者的名字</p>
+<h4 style="text-align:justify;">Mutable 可变性:</h4>
+<p style="text-align:justify;">第三个是启用可变字段的单选按钮（默认为禁用）。 资产的签名链所有者可以随时更改可变字段。 如果您将房屋铸造为资产，并且在您出售房屋后将资产转让给新所有者，他可以将“所有者”字段更改为他的名字，这将非常有用。</p>
+<p style="text-align:justify;">只使真正需要的字段可变。 例如，在创建涉及房屋的资产时，“持有者” 字段需要可变，这是因为地点、姓名、注册号</p>
 <h4 style="text-align:justify;">Type:</h4>
 <p style="text-align:justify;">String: It is a data type used to represent text. It is comprised of a set of characters that can also contain spaces and numbers. For example, the word "hamburger" and the phrase "I ate 3 hamburgers" are both strings. Even "12345" could be considered a string.</p>
 <p style="text-align:justify;">Date types uint8, uint16, uint32, uint64, uint128, uint256, uint512 and uint1024 represents an unsigned integer number stored with 8, 16, 32 or 64 bit.</p>
