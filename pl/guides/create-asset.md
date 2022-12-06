@@ -2,7 +2,7 @@
 title: Utwórz Aktywo
 description: Utwórz Aktywo za pomocą interfejsu
 published: true
-date: 2022-12-05T23:58:18.904Z
+date: 2022-12-06T00:11:03.302Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:48:53.360Z
@@ -70,61 +70,61 @@ String: Jest to typ danych używany do reprezentowania tekstu. Składa się z ze
 
 Typy dat uint8, uint16, uint32, uint64, uint128, uint256, uint512 i uint1024 reprezentują liczbę całkowitą bez znaku przechowywaną z 8, 16, 32 lub 64 bitami.&#x20;
 
-| Wpisz | Liczba bitów | Min. - Maks. wartość |
+|       Type | No of Bits | Min - Max Value                |
 | ---------- | :--------: | ------------------------------ |
-| uint8 | 1 | 0 - 255 |
-| jednostka16 | 2 | 0 - 65535 |
-| uint32 | 4 | 0 - 4 294 967 295 |
-| jednostka64 | 8 | 0 - 18 446 744 073 709 551 615 |
-| jednostka256 | 16 | 0 - 2^256-1 |
-| uint512 | 32 | 0 - 2^512-1 |
-| uint1024 | 64 | 0 - 2^1024-1 |
+| uint8      |      1     | 0 - 255                        |
+| unit16     |      2     | 0 - 65535                      |
+| uint32     |      4     | 0 - 4,294,967,295              |
+| unit64     |      8     | 0 - 18,446,744,073,709,551,615 |
+| unit256    |     16     | 0 - 2^256-1                    |
+| uint512    |     32     | 0 - 2^512-1                    |
+| uint1024   |     64     | 0 - 2^1024-1                   |
 
 **Maksymalna długość:**
 
-To pole jest włączone tylko wtedy, gdy pole jest wybrane jako zmienne, a typ jako „ciąg”. Jest to ważne, ponieważ pozwoli to ograniczyć długość pola przy późniejszej zmianie i zmieścić Dane o zasobach w limicie 1 KB.
+To pole jest włączone tylko wtedy, gdy pole jest wybrane jako zmienne, a typ jako „ciąg”. Jest to ważne, ponieważ pozwoli to ograniczyć długość pola przy późniejszej zmianie i zmieścić Dane o aktywie w limicie 1 KB.
 
-## Utwórz zasób
+## Utwórz Aktywo
 
-Aby utworzyć zasób za pomocą interfejsu, wykonaj poniższe czynności:
+Aby utworzyć aktywo za pomocą interfejsu, wykonaj poniższe czynności:
 
 * Otwórz interfejs Nexus, upewnij się, że portfel jest w pełni zsynchronizowany. Zaloguj się na konto użytkownika (Sigchain).
 * Na stronie Przegląd u dołu kliknij moduł „_User”_. Spowoduje to otwarcie strony użytkownika.
-* Na stronie użytkownika po lewej stronie kliknij zakładkę „_Assets_”. Na stronie Zasoby zostaną wyświetlone zasoby należące do Sigchain.
-* Na stronie Zasoby kliknij „Utwórz nowy zasób”. Spowoduje to otwarcie strony _Utwórz nowy zasób_.
-* Na tej stronie użytkownik musi podać nazwę oraz dane definiujące zasób.&#x20;
+* Na stronie użytkownika po lewej stronie kliknij zakładkę „_Assets_”. Na stronie Aktywa zostaną wyświetlone aktywa należące do Sigchain.
+* Na stronie Aktywa kliknij „Utwórz nowe aktywo”. Spowoduje to otwarcie strony _Utwórz nowe aktywo_.
+* Na tej stronie użytkownik musi podać nazwę oraz dane definiujące aktywo.&#x20;
    * **Dodaj kolejne pole:** Aby dodać kolejne pole, kliknij przycisk „+DODAJ POLE” pod pierwszym polem.
    * **Usuń pole:** Aby usunąć pole, umieść wskaźnik myszy na tym polu, po lewej stronie pola pojawi się ikona „x”, kliknij ją, aby usunąć pole.
-* Po podaniu danych sprawdź, czy wszystko jest w porządku. Na dole możesz zobaczyć szacowany koszt wybicia tego zasobu. Kliknij przycisk „UTWÓRZ ZASOBY” na dole strony.
+* Po podaniu danych sprawdź, czy wszystko jest w porządku. Na dole możesz zobaczyć szacowany koszt wybicia tego aktywa. Kliknij przycisk „UTWÓRZ AKTYWO” na dole strony.
 
 >Opłaty zostaną automatycznie pobrane z konta „domyślnego”, upewnij się, że masz NXS na pokrycie opłat, w przeciwnym razie aktywa nie zostaną wyemitowane.
 {.is-info}
 
-* Po wybiciu zasobu zobaczysz nowy wpis na stronie „Zasoby”.
+* Po wybiciu aktywa zobaczysz nowy wpis na stronie „Aktywa”.
 
-## Szczegóły zasobu
+## Szczegóły aktywa
 
-Użytkownik może sprawdzić szczegóły zasobu, w tym wszystkie dane zasobu zapisane wraz z tym zasobem. Aby sprawdzić szczegóły zasobu, na stronie Zasoby kliknij zasób, co spowoduje otwarcie strony Szczegóły zasobu&#x20;
+Użytkownik może sprawdzić szczegóły aktywa, w tym wszystkie dane aktywa zapisane wraz z tym aktywem. Aby sprawdzić szczegóły aktywa, na stronie Aktywa kliknij aktywo, co spowoduje otwarcie strony. Szczegóły aktywa.&#x20;
 
 ![](<../../.gitbook/assets/Szczegóły zasobu.png>)
 
-### Historia zasobów
+### Historia aktywa
 
-Użytkownik może sprawdzić historię zasobu, historia obejmuje tworzenie, aktualizację, transfer, roszczenie i tokenizację. Aby sprawdzić historię zasobu, na stronie Zasoby kliknij „Zasób”, co spowoduje otwarcie Szczegółów zasobu. W lewym dolnym rogu tej strony kliknij „Wyświetl historię”. Spowoduje to otwarcie strony historii, która zawiera listę wszystkich zmian, które miały miejsce w przypadku tego zasobu. &#x20;
+Użytkownik może sprawdzić historię aktywa, historia obejmuje tworzenie, aktualizację, transfer, roszczenie i tokenizację. Aby sprawdzić historię aktywa, na stronie Aktywa kliknij „Aktywo”, co spowoduje otwarcie Szczegółów aktywa. W lewym dolnym rogu tej strony kliknij „Wyświetl historię”. Spowoduje to otwarcie strony historii, która zawiera listę wszystkich zmian, które miały miejsce w przypadku tego aktywa. &#x20;
 
 ![](<../../.gitbook/assets/Historia zasobów.png>)
 
-### Przenieś zasób
+### Przenieś aktywo
 
-Właściciel zasobu może sprzedać zasób iw tym celu musi przenieść własność zasobu na kupującego.
+Właściciel aktywa może sprzedać aktywo i w tym celu musi przenieść własność aktywa na kupującego.
 
-* Aby przenieść własność zasobu, kliknij ten zasób, co spowoduje otwarcie strony „Szczegóły zasobu”.
-* W prawym dolnym rogu strony kliknij „Przenieś własność”. Spowoduje to otwarcie strony „Przenieś zasób”.
+* Aby przenieść własność aktywa, kliknij to aktywo, co spowoduje otwarcie strony „Szczegóły aktywa”.
+* W prawym dolnym rogu strony kliknij „Przenieś własność”. Spowoduje to otwarcie strony „Przenieś aktywo”.
 
-![Przenieś stronę zasobów](<../../.gitbook/assets/Transfer Asset.png>)
+![Przenieś stronę aktywa](<../../.gitbook/assets/Transfer Asset.png>)
 
-* Na tej stronie potwierdź nazwę zasobu, adres zasobu iw polu „Przenieś do” wprowadź nazwę użytkownika lub identyfikator użytkownika kupującego.
-* Aby potwierdzić, na dole strony kliknij „Przenieś zasób”, co spowoduje przeniesienie zasobu do kupującego.
+* Na tej stronie potwierdź nazwę aktywa, adres aktywa i w polu „Przenieś do” wprowadź nazwę użytkownika lub identyfikator użytkownika kupującego.
+* Aby potwierdzić, na dole strony kliknij „Przenieś aktywo”, co spowoduje przeniesienie aktywa do kupującego.
 
->Kupujący automatycznie odbierze zasób za pośrednictwem interfejsu. Odbiór będzie obciążony opłatą w wysokości 1 NXS, co spowoduje utworzenie lokalnej nazwy tego zasobu w odbiornikach Sigchain.
+>Kupujący automatycznie odbierze aktywo za pośrednictwem interfejsu. Odbiór będzie obciążony opłatą w wysokości 1 NXS, co spowoduje utworzenie lokalnej nazwy tego aktywa w odbiornikach Sigchain.
 {.is-info}
