@@ -2,7 +2,7 @@
 title: Utwórz Aktywo
 description: Utwórz Aktywo za pomocą interfejsu
 published: true
-date: 2022-12-06T23:42:16.549Z
+date: 2022-12-06T23:43:23.081Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:48:53.360Z
@@ -126,5 +126,5 @@ Właściciel aktywa może sprzedać aktywo i w tym celu musi przenieść własno
 * Na tej stronie potwierdź nazwę aktywa, adres aktywa i w polu „Przenieś do” wprowadź nazwę użytkownika lub identyfikator użytkownika kupującego.
 * Aby potwierdzić, na dole strony kliknij „Przenieś aktywo”, co spowoduje przeniesienie aktywa do kupującego.
 
->Kupujący automatycznie odbierze aktywo za pośrednictwem interfejsu. Odbiór będzie obciążony opłatą w wysokości 1 NXS, co spowoduje utworzenie lokalnej nazwy tego aktywa u odbiorców Sigchain.
+>Kupujący automatycznie odbierze aktywo za pośrednictwem interfejsu. Odbiór będzie obciążony opłatą w wysokości 1 NXS, co spowoduje utworzenie lokalnej nazwy tego aktywa u odbiorców.
 {.is-info}
