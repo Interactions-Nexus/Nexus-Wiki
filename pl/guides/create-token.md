@@ -2,7 +2,7 @@
 title: Utwórz token
 description: Utwórz token za pomocą interfejsu Nexusa
 published: true
-date: 2022-12-07T23:32:33.537Z
+date: 2022-12-07T23:33:26.437Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:47:14.420Z
@@ -15,7 +15,7 @@ Ten przewodnik pomoże użytkownikom utworzyć **Token** przy użyciu interfejsu
 Zanim zaczniemy tworzyć token, użytkownicy muszą zapoznać się z niektórymi koncepcjami, właściwościami, parametrami i opłatami za tokeny.
 
 > Tokeny na Nexusie działają zupełnie inaczej niż na innych blockchainach. Istnieje wiele różnic, które użytkownik musi zrozumieć, dlatego zalecamy użytkownikom przeczytanie tego kompletnego przewodnika.
-{.ostrzeżenie}
+{.is-warning}
 
 
 ## Tokeny na Nexusie:
@@ -25,7 +25,7 @@ Aby tworzyć tokeny i przeprowadzać transakcje na Nexusie, użytkownicy muszą 
 Po utworzeniu tokena adres generacji tokena zostanie wyświetlony na stronie „Tokeny”. To jest adres generujący token, a nie konto tokena. Adres generujący jest własnością profilu (konta użytkownika), który wystawił token.
 
 > Każdy użytkownik, który chce przeprowadzić transakcję tokenem, musi utworzyć adres tokena powiązany z tym konkretnym tokenem.
-{.to-informacja}
+{.is-info}
 
 Po utworzeniu token ma następujące właściwości:
 - tokenname — globalna nazwa tokenu, jeśli został utworzony.
@@ -45,7 +45,7 @@ Jest to zwykłe konto tokenowe, które może wysyłać lub odbierać token z adr
 
 
 > Konta tokenów mogą otrzymywać tylko ten konkretny token, z którym są połączone. Nie mogą zaakceptować NXS ani żadnego innego tokena. Standardowe konta „domyślne”, „zaufane” lub dowolne konta NXS nie akceptują żadnych tokenów.
-{.ostrzeżenie}
+{.is-warning}
 
 
 ## Parametry tokena
@@ -63,7 +63,7 @@ Jest to nazwa lokalna służąca do identyfikacji tokenu i jest opcjonalna. Ta n
 Nazwa tokena ma oddzielną opłatę w wysokości `1 NXS`. Emitent może zrezygnować z tworzenia nazwy tokena i może użyć adresu rejestru, aby uzyskać dostęp do aktywów lub je przeszukiwać. To jest nazwa lokalna i nie jest ważna poza Sigchain.
 
 > Jeśli dla tokena potrzebna jest unikalna nazwa globalna (ticker), wystawca musi utworzyć nazwę globalną i powiązać ją z tokenem.
-{.to-informacja}
+{.is-info}
 
 
 ##### Tritium++ (Nadchodząca aktualizacja)
@@ -71,14 +71,14 @@ Nazwa tokena ma oddzielną opłatę w wysokości `1 NXS`. Emitent może zrezygno
 W trycie ++ jest to rozwiązywane na nazwę globalną (ticker) w celu identyfikacji tokena i jest opcjonalne. Ta nazwa jest rozpoznawalna na całym świecie w sieci. Profil, który utworzył token o nazwie globalnej, będzie właścicielem i tę nazwę globalną można przenieść do innych profili.
 
 > Globalna nazwa tokena ma oddzielną opłatę w wysokości `2000 NXS`. Wystawca może zrezygnować z tworzenia nazwy tokena i może użyć adresu rejestru, aby uzyskać dostęp do tokena lub go przeszukać.
-{.to-informacja}
+{.is-info}
 
 ### PODAŻ
 
 Jest to łączna liczba wymiennych tokenów, które należy wygenerować. Opłata wzrasta wraz ze wzrostem podaży. Sprawdź opłaty [tutaj]
 
 > Maksymalna ilość żetonu nie może zostać zwiększona po wygenerowaniu żetonu. Żetony można spalić, aby usunąć je z obiegu.
-{.ostrzeżenie}
+{.is-warning}
 
 ### DZIESIĘTNA
 
