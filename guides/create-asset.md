@@ -2,7 +2,7 @@
 title: Create Asset
 description: Create Asset using the Interface
 published: true
-date: 2022-12-07T20:24:44.779Z
+date: 2022-12-07T22:45:41.956Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:14.466Z
@@ -44,10 +44,11 @@ To easily count the characters for the Asset data use the link below:
 
 <a href="https://wordcount.com" target="_blank">https://wordcount.com</a>
 
->**Note:** If creating an Asset of a digital art, which basically is an image file, provide a md5 hash of the original image for anyone to check the authenticity of that particular file. If all the details are provided without the file hash, the asset will not be of any use, due to the fact that no one will be able to confirm the authenticity of the file which represents the asset.&#x20;
-{.is-warning}
+> **Note:** If creating an Asset of a digital art, which basically is an image file, provide a md5 hash of the original image for anyone to check the authenticity of that particular file. If all the details are provided without the file hash, the asset will not be of any use, due to the fact that no one will be able to confirm the authenticity of the file which represents the asset.
+>{.is-info}
 
-Asset Data is entered in fields which represent a single line in the image above.&#x20;
+
+Asset Data is entered in fields which represent a single line in the image above.
 
 #### Name:
 
