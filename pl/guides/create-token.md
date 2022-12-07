@@ -2,7 +2,7 @@
 title: Utwórz token
 description: Utwórz token za pomocą interfejsu Nexusa
 published: true
-date: 2022-12-07T23:29:41.649Z
+date: 2022-12-07T23:32:33.537Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:47:14.420Z
@@ -56,7 +56,7 @@ Parametry tokena definiują token, takie jak nazwa tokena, dostawa i miejsca po 
 
 Nazwa tokena jest inaczej rozpoznawana w tritum i tritium++
 
-##### Tryt
+##### Tritium
 
 Jest to nazwa lokalna służąca do identyfikacji tokenu i jest opcjonalna. Ta nazwa znajduje się wewnątrz konta użytkownika (Sigchain) i nie jest ważna poza nim.
 
@@ -66,14 +66,14 @@ Nazwa tokena ma oddzielną opłatę w wysokości `1 NXS`. Emitent może zrezygno
 {.to-informacja}
 
 
-##### Tryt ++ (Nadchodząca aktualizacja)
+##### Tritium++ (Nadchodząca aktualizacja)
 
 W trycie ++ jest to rozwiązywane na nazwę globalną (ticker) w celu identyfikacji tokena i jest opcjonalne. Ta nazwa jest rozpoznawalna na całym świecie w sieci. Profil, który utworzył token o nazwie globalnej, będzie właścicielem i tę nazwę globalną można przenieść do innych profili.
 
 > Globalna nazwa tokena ma oddzielną opłatę w wysokości `2000 NXS`. Wystawca może zrezygnować z tworzenia nazwy tokena i może użyć adresu rejestru, aby uzyskać dostęp do tokena lub go przeszukać.
 {.to-informacja}
 
-### DOSTARCZAĆ
+### PODAŻ
 
 Jest to łączna liczba wymiennych tokenów, które należy wygenerować. Opłata wzrasta wraz ze wzrostem podaży. Sprawdź opłaty [tutaj]
 
@@ -97,7 +97,7 @@ Opłata jest oparta na liczbie zdefiniowanych przez Ciebie podzielnych jednostek
 
 10000000000 jednostek = 800 NXS
 
-Aby uzyskać bardziej szczegółowe informacje, sprawdź [Opłaty.](/en/economics/fees)
+Aby uzyskać bardziej szczegółowe informacje, sprawdź [Opłaty.](/pl/economics/fees)
 
 &nbsp;
 
