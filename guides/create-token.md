@@ -2,7 +2,7 @@
 title: Create Token
 description: Create Token Using Nexus Interface
 published: true
-date: 2022-12-04T18:13:56.374Z
+date: 2022-12-07T23:46:54.946Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:11.061Z
@@ -41,7 +41,7 @@ This is the register address which generates that particular token and tokens in
 
 ### Token account:
 
-This is a normal token account which can send or receive token from the generation address or token account. Each token account is liked only to a particular token and cannot receive any other token. Every user has to manually create a token account to transact a particular token.
+This is a normal token account which can send or receive token from the generation address or token account. Each token account is linked only to a particular token and cannot receive any other token. Every user has to manually create a token account to transact a particular token.
 
 
 > Token accounts can only receive the particular token they are linked to. They cannot accept NXS or any other token. The standard "default", "trust" or any NXS accounts cannot accept any tokens.
@@ -54,7 +54,7 @@ Token parameters are what define a token like token name, supply and decimals. L
 
 ### TOKEN NAME
 
-The token name resolves differently in tritum and tritium++
+The token name resolves differently in tritum and tritium++.
 
 ##### Tritium
 
@@ -112,4 +112,4 @@ To create a token using the Interface follow the steps below:
 * In this page the user has to provide three parameters which define the token. The parameters  and their details are given below:
 * Once the parameters are provided, click on the `Create token` button on the bottom of the page.
 * Once the token is confirmed on the blockchain, the token address will be listed in the `Tokens` page.
-* To check the details of any token, click on the token address in the "Tokens" page and the token details page will open with the details.
+* To check the details of any token, click on the token address in the `Tokens` page and the token details page will open with the details.
