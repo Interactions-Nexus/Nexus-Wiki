@@ -1,0 +1,67 @@
+<!--
+title: 麟社警报
+description: 了解麟社警报机器人及其操作指南
+published: true
+date: 2022-12-07T03:28:36.343Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-07T03:28:36.343Z
+-->
+
+<h1>Nexus Alerts</h1>
+<p>Nexus Alerts, a telegram bot will list transactions on the Nexus blockchain above 1000 NXS or tokens. This bot was born from a community request to track network growth, way to value Nexus by tracking online transactions, total NXS on tritium chain vs NXS on exchanges and also a way to be aware of large transaction leading to pumps and dumps.</p>
+<blockquote>
+  <p>The Alerts only tracks transactions on the tritium network only.</p>
+</blockquote>
+<h2>Data Shown in Alerts:</h2>
+<p>Each transaction taking place on the blockchain is checked for a credit and that is sent out as an alert to the Nexus Alert Bot. This data shown with the alerts is as below:</p>
+<figure class="image image_resized" style="width:396.857px;"><img src="https://wiki.nexus.io/alert_data1.png" alt="alert_data1.png"></figure>
+<ul>
+  <li>The fish icon which shows as per the <a href="https://wiki.nexus.io/en/guides/nexus-alerts.md#legend">legend</a>.</li>
+  <li><code>Humpback Whale found on block</code> : Block Height.</li>
+  <li><code>Amount</code> : Amount of NXS or tokens included in the transaction.</li>
+  <li><code>Token</code>: The token for which the <code>credit</code> is generated. NXS or Token (name or address).</li>
+  <li><code>Operation</code> : The operation of the contract. Only <code>CREDIT</code> contract is shown for alerts.</li>
+  <li><code>For</code> : This is the notification type for which the <code><strong>Operation</strong></code> was carried out.</li>
+  <li><code>Proof</code> : The register address proving the credit or the sending address for <code>debit</code> from tritium.</li>
+  <li><code>To</code> : The receiving address.</li>
+  <li><code>Link</code> : The explorer link to the block height details.</li>
+</ul>
+<p>&nbsp;</p>
+<h2>Understanding the Alert Data:</h2>
+<p>The alert bot is simple to understand but might be confusing to some, this guide will help with understanding the data provided.<br><br>Nexus has the<code>Tritium</code> and <code>Legacy</code> chains, all exchanges use the legacy chain and it is difficult to track the balance of legacy accounts and the best we can do is keep track of the transactions on the tritium network. The alerts are only limited to tracking NXS and token transactions above 1000 NXS.</p>
+<p>To better understand the data provided by the bot, we can segregate the transactions into:</p>
+<ul>
+  <li><strong>Tritium to Tritium Transactions</strong></li>
+  <li><strong>Legacy to Tritium Transactions</strong></li>
+  <li><strong>Tritium to Legacy Transactions</strong></li>
+</ul>
+<p>&nbsp;</p>
+<h2>Tritium to Tritium Transactions:</h2>
+<figure class="image image_resized" style="width:396.857px;"><img src="https://wiki.nexus.io/tritium_to_tritium1.png" alt="tritium_to_tritium1.png"></figure>
+<p>Any transaction on tritium is a <code>debit</code> to the senders account and a <code>credit</code> to the receivers account. This creates two transactions for a single transfer similar to double accounting, but the bot is designed to ignore the <code>DEBIT</code> and show only the <code>CREDIT</code>, as it's a single transfer and having two alerts will create more confusion.</p>
+<p>It is easy to distinguish as the <code>Operation</code> field reads as <code>CREDIT</code> and the <code>For</code> field will read <code>DEBIT</code>, which implies it's a <code>credit</code> for a corresponding <code>debit</code>.</p>
+<p>&nbsp;</p>
+<h2>Legacy to Tritium Transactions:</h2>
+<figure class="image image_resized" style="width:396.857px;"><img src="https://wiki.nexus.io/legacy_to_tritium1.png" alt="legacy_to_tritium1.png"></figure>
+<p>Legacy to tritium transactions are when a user withdraws NXS from the exchange into his Tritium account. This transaction will only list the <code>credit</code> to the Tritium account and can be easily recognised by checking the <code>Operation</code> field which should read <code>CREDIT</code> and <code>For</code> field reads <code>LEGACY</code> , which implies it's a <code>credit</code> contract for an incoming <code>legacy</code> transaction.</p>
+<p>&nbsp;</p>
+<h2>Tritium to Legacy Transactions:</h2>
+<figure class="image image_resized" style="width:396.857px;"><img src="https://wiki.nexus.io/tritium_to_legacy1.png" alt="tritium_to_legacy1.png"></figure>
+<p>Tritium to Legacy transactions are carried out when a user send NXS to an exchange account, or to a personal legacy account. This transaction will only list the <code>debit</code> to the Tritium account and can be easily recognised by checking the <code>Operation</code> field which should reads <code>LEGACY</code> and also the <code>To</code> address will start with <code>2</code> which is a legacy address.</p>
+<p>&nbsp;</p>
+<h2>Legend</h2>
+<p>To keep the visual differences based on amounts, the alerts have been grouped based on the transaction amounts and named after fishes as per size.</p>
+<p>The legend is given below:</p>
+<ul>
+  <li>&gt;= 500,000 NXS: Blue Whale (🐳🐳🐳🐳🐳🐳)</li>
+  <li>&gt;= 250,000 NXS: Sperm Whale (🐋🐋🐋🐋🐋🐋)</li>
+  <li>&gt;= 100,000 NXS: Humpback Whale (🐋🐋🐋)</li>
+  <li>&gt;= 80,000 NXS: Whale Shark (🦈🦈🦈🦈🦈🦈)</li>
+  <li>&gt;= 60,000 NXS: Tiger Shark (🦈🦈🦈🦈)</li>
+  <li>&gt;= 30,000 NXS: Great White Shark (🦈🦈)</li>
+  <li>&gt;= 10,000 NXS: Dolphin (🐬🐬)</li>
+  <li>&gt;= 5,000 NXS: Tuna (🐟🐟)</li>
+  <li>&gt;= 1,000 NXS: Sardine (🐠🐠)</li>
+  <li>&lt; 1,000 NXS: Shrimp (🦐🦐 )- (This is not used now as its &lt; 1000NXS)</li>
+</ul>
