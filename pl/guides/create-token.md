@@ -2,13 +2,13 @@
 title: Utwórz token
 description: Utwórz token za pomocą interfejsu Nexusa
 published: true
-date: 2022-12-07T23:33:26.437Z
+date: 2022-12-07T23:46:48.734Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:47:14.420Z
 ---
 
-# Utwórz token
+# Utwórz Token
 
 Ten przewodnik pomoże użytkownikom utworzyć **Token** przy użyciu interfejsu Nexus
 
@@ -22,18 +22,18 @@ Zanim zaczniemy tworzyć token, użytkownicy muszą zapoznać się z niektórymi
 
 Aby tworzyć tokeny i przeprowadzać transakcje na Nexusie, użytkownicy muszą najpierw zrozumieć różne konta i właściwości tokenów:
 
-Po utworzeniu tokena adres generacji tokena zostanie wyświetlony na stronie „Tokeny”. To jest adres generujący token, a nie konto tokena. Adres generujący jest własnością profilu (konta użytkownika), który wystawił token.
+Po utworzeniu tokena, adres generacji tokena zostanie wyświetlony na stronie „Tokeny”. To jest adres generujący token, a nie konto tokena. Adres generujący jest własnością profilu (konta użytkownika), który wystawił token.
 
 > Każdy użytkownik, który chce przeprowadzić transakcję tokenem, musi utworzyć adres tokena powiązany z tym konkretnym tokenem.
 {.is-info}
 
 Po utworzeniu token ma następujące właściwości:
-- tokenname — globalna nazwa tokenu, jeśli został utworzony.
+- tokenname — Globalna nazwa tokenu, jeśli został utworzony.
 - maxsupply - Maksymalna liczba tokenów, które będą istnieć.
 - currentsupply - Liczba krążących tokenów, które zostały rozdzielone na konta tokenów.
 - balance - Ilość tokenów, które nie zostały jeszcze rozdane (maxsupply - currentsupply).
-- dziesiętne - Liczba miejsc dziesiętnych.
-- adres - Jest to adres rejestru tokena lub adres generowania tokena.
+- decimals - Liczba miejsc dziesiętnych.
+- address - Jest to adres rejestru tokena lub adres generowania tokena.
 
 ### Adres generowania tokena
 
@@ -41,7 +41,7 @@ Jest to adres rejestru, który generuje ten konkretny token, a tokeny w tym adre
 
 ### Konto tokenowe:
 
-Jest to zwykłe konto tokenowe, które może wysyłać lub odbierać token z adresu generacyjnego lub konta tokenowego. Każde konto tokenowe jest lubiane tylko do określonego tokena i nie może otrzymać żadnego innego tokena. Każdy użytkownik musi ręcznie utworzyć konto tokena, aby przeprowadzić transakcję określonym tokenem.
+Jest to zwykłe konto tokenowe, które może wysyłać lub odbierać token z adresu generacyjnego lub konta tokenowego. Każde konto tokenowe jest połączone tylko do określonego tokena i nie może otrzymać żadnego innego tokena. Każdy użytkownik musi ręcznie utworzyć konto tokena, aby przeprowadzić transakcję określonym tokenem.
 
 
 > Konta tokenów mogą otrzymywać tylko ten konkretny token, z którym są połączone. Nie mogą zaakceptować NXS ani żadnego innego tokena. Standardowe konta „domyślne”, „zaufane” lub dowolne konta NXS nie akceptują żadnych tokenów.
@@ -50,11 +50,11 @@ Jest to zwykłe konto tokenowe, które może wysyłać lub odbierać token z adr
 
 ## Parametry tokena
 
-Parametry tokena definiują token, takie jak nazwa tokena, dostawa i miejsca po przecinku. Dowiedz się więcej o nich poniżej:
+Parametry tokena definiują token, takie jak nazwa tokena, podaż i miejsca po przecinku. Dowiedz się więcej o nich poniżej:
 
 ### NAZWA TOKENU
 
-Nazwa tokena jest inaczej rozpoznawana w tritum i tritium++
+Nazwa tokena jest inaczej rozpoznawana w tritum i tritium++.
 
 ##### Tritium
 
@@ -68,7 +68,7 @@ Nazwa tokena ma oddzielną opłatę w wysokości `1 NXS`. Emitent może zrezygno
 
 ##### Tritium++ (Nadchodząca aktualizacja)
 
-W trycie ++ jest to rozwiązywane na nazwę globalną (ticker) w celu identyfikacji tokena i jest opcjonalne. Ta nazwa jest rozpoznawalna na całym świecie w sieci. Profil, który utworzył token o nazwie globalnej, będzie właścicielem i tę nazwę globalną można przenieść do innych profili.
+W tritium++ jest to rozwiązane na nazwę globalną (ticker) w celu identyfikacji tokena i jest opcjonalne. Ta nazwa jest rozpoznawalna na całym świecie w sieci. Profil, który utworzył token o nazwie globalnej, będzie właścicielem i tę nazwę globalną można przenieść do innych profili.
 
 > Globalna nazwa tokena ma oddzielną opłatę w wysokości `2000 NXS`. Wystawca może zrezygnować z tworzenia nazwy tokena i może użyć adresu rejestru, aby uzyskać dostęp do tokena lub go przeszukać.
 {.is-info}
@@ -77,7 +77,7 @@ W trycie ++ jest to rozwiązywane na nazwę globalną (ticker) w celu identyfika
 
 Jest to łączna liczba wymiennych tokenów, które należy wygenerować. Opłata wzrasta wraz ze wzrostem podaży. Sprawdź opłaty [tutaj]
 
-> Maksymalna ilość żetonu nie może zostać zwiększona po wygenerowaniu żetonu. Żetony można spalić, aby usunąć je z obiegu.
+> Maksymalna ilość tokena nie może zostać zwiększona po wygenerowaniu tokena. Tokeny można spalić, aby usunąć je z obiegu.
 {.is-warning}
 
 ### DZIESIĘTNA
@@ -106,10 +106,10 @@ Aby uzyskać bardziej szczegółowe informacje, sprawdź [Opłaty.](/pl/economic
 Aby utworzyć token za pomocą interfejsu, wykonaj poniższe czynności:
 
 * Otwórz interfejs Nexus, upewnij się, że portfel jest w pełni zsynchronizowany i zaloguj się do profilu użytkownika (Sigchain).
-* Na stronie Przegląd u dołu kliknij moduł „Użytkownik”. Spowoduje to otwarcie strony użytkownika.
+* Na stronie Przegląd u dołu kliknij moduł `Użytkownik`. Spowoduje to otwarcie strony użytkownika.
 * Na stronie Użytkownika, po lewej stronie kliknij w zakładkę `Tokeny`.
-* Na stronie Zasoby kliknij „Utwórz nowy token”. Spowoduje to otwarcie strony *Nowy token*.
+* Na stronie Aktywa kliknij `Utwórz nowy token`. Spowoduje to otwarcie strony *Nowy token*.
 * Na tej stronie użytkownik musi podać trzy parametry definiujące token. Parametry i ich szczegóły podano poniżej:
-* Po podaniu parametrów kliknij przycisk „Utwórz token” na dole strony.
-* Po potwierdzeniu tokena w łańcuchu blokowym adres tokena zostanie wyświetlony na stronie „Tokeny”.
-* Aby sprawdzić szczegóły dowolnego tokena, kliknij adres tokena na stronie „Tokeny”, a strona szczegółów tokena otworzy się ze szczegółami.
+* Po podaniu parametrów kliknij przycisk `Utwórz token` na dole strony.
+* Po potwierdzeniu tokena w łańcuchu blokowym adres tokena zostanie wyświetlony na stronie `Tokeny`.
+* Aby sprawdzić szczegóły dowolnego tokena, kliknij adres tokena na stronie `Tokeny`, a strona szczegółów tokena otworzy się ze szczegółami.
