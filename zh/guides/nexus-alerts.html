@@ -2,7 +2,7 @@
 title: 麟社警报
 description: 了解麟社警报机器人及其操作指南
 published: true
-date: 2022-12-07T03:40:51.232Z
+date: 2022-12-07T04:04:14.702Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-07T03:28:36.343Z
@@ -28,25 +28,25 @@ dateCreated: 2022-12-07T03:28:36.343Z
   <li><code>Link</code> : 浏览器链接到区块高度详细信息。</li>
 </ul>
 <p>&nbsp;</p>
-<h2>Understanding the Alert Data:</h2>
-<p>The alert bot is simple to understand but might be confusing to some, this guide will help with understanding the data provided.<br><br>Nexus has the<code>Tritium</code> and <code>Legacy</code> chains, all exchanges use the legacy chain and it is difficult to track the balance of legacy accounts and the best we can do is keep track of the transactions on the tritium network. The alerts are only limited to tracking NXS and token transactions above 1000 NXS.</p>
-<p>To better understand the data provided by the bot, we can segregate the transactions into:</p>
+<h2>了解警报数据：</h2>
+<p>警报机器人易于理解，但可能会让某些人感到困惑，本指南将有助于理解所提供的数据。<br><br>Nexus 麟社有 Tritium 麟氚链和 Legacy 传统链，所有交易所都使用传统链，很难跟踪传统链账户的余额，我们能做的最好的事情就是跟踪 tritium 麟氚链网络上的交易。 警报仅限于跟踪 NXS 麟社币和超过 1000 NXS 的通证交易.</p>
+<p>为了更好地理解机器人提供的数据，我们可以将交易分为：</p>
 <ul>
-  <li><strong>Tritium to Tritium Transactions</strong></li>
-  <li><strong>Legacy to Tritium Transactions</strong></li>
-  <li><strong>Tritium to Legacy Transactions</strong></li>
+  <li><strong>Tritium to Tritium Transactions 麟氚到麟氚的交易</strong></li>
+  <li><strong>Legacy to Tritium Transactions 传统到麟氚的交易</strong></li>
+  <li><strong>Tritium to Legacy Transactions 麟氚到传统的交易</strong></li>
 </ul>
 <p>&nbsp;</p>
-<h2>Tritium to Tritium Transactions:</h2>
+<h2><strong>麟氚到麟氚的交易</strong></h2>
 <figure class="image image_resized" style="width:396.857px;"><img src="https://wiki.nexus.io/tritium_to_tritium1.png" alt="tritium_to_tritium1.png"></figure>
-<p>Any transaction on tritium is a <code>debit</code> to the senders account and a <code>credit</code> to the receivers account. This creates two transactions for a single transfer similar to double accounting, but the bot is designed to ignore the <code>DEBIT</code> and show only the <code>CREDIT</code>, as it's a single transfer and having two alerts will create more confusion.</p>
-<p>It is easy to distinguish as the <code>Operation</code> field reads as <code>CREDIT</code> and the <code>For</code> field will read <code>DEBIT</code>, which implies it's a <code>credit</code> for a corresponding <code>debit</code>.</p>
+<p>Tritium 麟氚上的任何交易都是发送方账户的借方和接收方账户的贷方。 这为类似于双重记账的单笔转账创建了两笔交易，但该机器人被设计为忽略借方并仅显示贷方，因为它是单笔转账并且有两个警报会造成更多混乱。</p>
+<p>很容易区分，因为 Operation 字段读取为 CREDIT，而 For 字段将读取 DEBIT，这意味着它是相应借方的贷方。</p>
 <p>&nbsp;</p>
-<h2>Legacy to Tritium Transactions:</h2>
+<h2><strong>传统到麟氚的交易</strong></h2>
 <figure class="image image_resized" style="width:396.857px;"><img src="https://wiki.nexus.io/legacy_to_tritium1.png" alt="legacy_to_tritium1.png"></figure>
-<p>Legacy to tritium transactions are when a user withdraws NXS from the exchange into his Tritium account. This transaction will only list the <code>credit</code> to the Tritium account and can be easily recognised by checking the <code>Operation</code> field which should read <code>CREDIT</code> and <code>For</code> field reads <code>LEGACY</code> , which implies it's a <code>credit</code> contract for an incoming <code>legacy</code> transaction.</p>
+<p>Legacy to tritium 传统到麟氚的交易是指用户将 NXS 从交易所提取到他的 Tritium 麟氚账户中。 此交易将仅列出 Tritium 麟氚账户的贷方，并且可以通过检查应读取 CREDIT 的 Operation 字段轻松识别，而 For 字段读取 LEGACY 传统，这意味着它是传入传统交易的信用合同。</p>
 <p>&nbsp;</p>
-<h2>Tritium to Legacy Transactions:</h2>
+<h2><strong>麟氚到传统的交易</strong>:</h2>
 <figure class="image image_resized" style="width:396.857px;"><img src="https://wiki.nexus.io/tritium_to_legacy1.png" alt="tritium_to_legacy1.png"></figure>
 <p>Tritium to Legacy transactions are carried out when a user send NXS to an exchange account, or to a personal legacy account. This transaction will only list the <code>debit</code> to the Tritium account and can be easily recognised by checking the <code>Operation</code> field which should reads <code>LEGACY</code> and also the <code>To</code> address will start with <code>2</code> which is a legacy address.</p>
 <p>&nbsp;</p>
