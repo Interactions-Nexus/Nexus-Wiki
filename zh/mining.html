@@ -1,0 +1,69 @@
+<!--
+title: 挖矿通道
+description: 麟社的挖矿通道
+published: true
+date: 2022-12-07T09:09:12.379Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-07T09:09:12.379Z
+-->
+
+<h1>Mining</h1>
+<p>Nexus has a three consensus channels, two mining <code>hash</code>, <code>prime</code> and the third is the <code>stake</code>. Anyone can mine on Nexus and does not need permission. The Nexus developer team has a dedicated mining developer team to maintain the miner and pools.</p>
+<h2>Mining Support:</h2>
+<p>For any help or support related to mining, join our Telegram channel linked below:</p>
+<p><a href="https://wiki.nexus.io/https://t.me/NexusMiners">NexusMiners</a></p>
+<h2>Mining Channels:</h2>
+<ul>
+  <li><strong>Prime Mining:</strong> GPU - Supports both Solo &amp; Pool.</li>
+  <li><strong>Hash Mining:</strong> GPU or FPGA’s - Supports both Solo &amp; Pool.</li>
+</ul>
+<blockquote>
+  <p><strong>Good to Know:</strong> We don't recommend CPU prime or hash mining as it is not profitable and only used for testnet mining.</p>
+</blockquote>
+<h3>Solo Mining:</h3>
+<p>Solo means single or individual mining. It requires the miner to be connected to the Nexus wallet. The wallet and miner can be run on the same or a separate computer especially when mining with FPGA’s.</p>
+<blockquote>
+  <p><strong>Good to Know:</strong> Solo mining is not profitable for prime and hash, unless you have a very big mining setup.</p>
+</blockquote>
+<h3>Pool Mining</h3>
+<p>Pool mining is similar to group mining, and the miner has to be connected to a mining pool. The miner is directly connected to the pool, and the mining rewards are paid to miners depending on the percentage of individual hash rate. There are fees to mine on a pool and that is deducted from the mining payouts.</p>
+<h2>Mining Pools For Nexus:</h2>
+<p>The mining team maintains open mining pools for miners:</p>
+<h2>Prime Pool:</h2>
+<p>Link to the prime pool webpage:</p>
+<p><a href="https://primepool.nexus.io/">primepool.nexus.io</a></p>
+<p>The Nexus mining team has made available an open prime pool. To use this pool copy the below lines in the miner config.</p>
+<pre><code class="language-plaintext">"wallet_ip" : "primepool.nexus.io",
+"port" : 50000,</code></pre>
+<p>Copy</p>
+<h2>Hash Pool:</h2>
+<p>The Nexus mining team has made available an open hash pool. To join the pool, use the below lines in the miner config.</p>
+<pre><code class="language-plaintext">"wallet_ip" : "hashpool.nexus.io",
+"port" : 50000,</code></pre>
+<p>Copy</p>
+<p>Link to the hash pool webpage:</p>
+<p><a href="https://hashpool.nexus.io/">hashpool.nexus.io</a></p>
+<h2>Compatible Mining Hardware</h2>
+<p>The NexusMiner can use CPU, GPU for Prime and FPGA for Hash mining. CPU mining is not recommended as it is not efficient.</p>
+<h3>GPU:</h3>
+<p>If using GPU mining, the NexusMIner V1.5 supports both nvidia and AMD GPU's. The CUDA cores from Nvidia are fully supported and work efficiently. AMD support has been enabled recently only for prime only on linux and will take some time to be fully efficient.</p>
+<blockquote>
+  <p><strong>Good to Know:</strong> AMD GPU support is still in its early days and will be improved in the future</p>
+</blockquote>
+<p>To get the best out of the nvidia graphics cards, we highly recommend to use the latest graphics drivers and <a href="https://www.msi.com/Landing/afterburner/vga">MSI Afterburner</a>.</p>
+<blockquote>
+  <p>Do not install the Nvidia content creator drivers, the miner will not work properly.</p>
+</blockquote>
+<h2>FPGA:</h2>
+<p>FPGA miners for Nexus are only available from <a href="https://www.hashaltcoin.com/en/miners">Blackminer</a>. These miners can only be used for Hash mining.</p>
+<h3>Mining Calculator:</h3>
+<p>To get a better understanding of the mining efficiencies of different hardware, use the mining calculator linked below:</p>
+<p><a href="https://primepool.nexus.io/mining_calc/">Mining Calculator Link</a></p>
+<h2>Chapters</h2>
+<ul>
+  <li><a href="https://wiki.nexus.io/en/mining/mining-on-windows">Mining on Windows <i>How to mine on windows</i></a></li>
+  <li><a href="https://wiki.nexus.io/en/mining/mining-on-linux">Mining on Linux <i>How to mine on linux</i></a></li>
+  <li><a href="https://wiki.nexus.io/en/mining/miner-config">Miner Configuration <i>How to configure the miner</i></a></li>
+  <li><a href="https://wiki.nexus.io/en/mining/hash-rate-table">Hash-Rate Table <i>This is the Nexus mining hash rate table</i></a></li>
+</ul>
