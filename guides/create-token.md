@@ -2,7 +2,7 @@
 title: Create Token
 description: Create Token Using Nexus Interface
 published: true
-date: 2022-12-07T23:50:42.834Z
+date: 2022-12-07T23:53:21.237Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-05T08:26:11.061Z
@@ -75,7 +75,7 @@ In tritium++ this resolves to a global name (ticker) to identify the token and i
 
 ### SUPPLY
 
-This is the total number of fungible tokens that needs to be generated. The fee increases with a higher supply. Check the fees [here](create-token.md#Token Minting Fees)
+This is the total number of fungible tokens that needs to be generated. The fee increases with a higher supply. Check the fees [here]
 
 > The max supply of the token cannot be increased once the token is generated. Tokens can be burnt to remove them out of circulation.
 {.is-warning}
