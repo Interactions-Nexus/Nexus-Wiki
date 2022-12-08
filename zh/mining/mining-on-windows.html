@@ -1,0 +1,57 @@
+<!--
+title: 在 Windows 微软视窗上挖矿
+description: 如何在 Windows 微软视窗上挖矿
+published: true
+date: 2022-12-08T03:36:17.306Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-08T03:36:17.306Z
+-->
+
+<h1>在 Windows 微软视窗上挖矿</h1>
+<p>This guide will help to set up mining on Windows. The new NexusMiner makes it very easy to mine on Windows. Nexus has its own open prime mining pool and the developers are working on further decentralizing mining.</p>
+<h2>Download the Miner:</h2>
+<p>Download the windows miner executable file from the link below (Not an installer)</p>
+<p>{% hint style="warning" %}<br>The miner cannot run prime and hash at the same time on a single computer</p>
+<p>&nbsp;</p>
+<h2>Miner Configuration:</h2>
+<p>To configure the miner, check the link below:</p>
+<ul>
+  <li><a href="https://wiki.nexus.io/en/mining/miner-config">Miner Configuration <i>How to configure the miner</i></a></li>
+</ul>
+<h2>Nexus Desktop Wallet:</h2>
+<blockquote>
+  <p>This is only for solo miners. Pool miners can skip this step.</p>
+</blockquote>
+<h3>Nexus Interface:</h3>
+<p>Download and install the Nexus Interface or setup the CLI core.</p>
+<p>Start the wallet, create the user, login and unlock the wallet for mining and notifications.</p>
+<p>&nbsp;</p>
+<h4>Mining Settings on Interface:</h4>
+<ol>
+  <li>Go to settings &gt; Core &gt; Enable mining by clicking on the toggle button next to it.</li>
+  <li>A new field below will pop out below: Mining IP Whitelist. enter the <code>&lt;ipaddress:port&gt;</code> of the miner. If mining on the same computer then enter <code>127.0.0.1:9325</code>, if the miner is running on another computer or FPGA then enter the particular "<code>ipaddress:9325</code>. If there are more than one miner then use ‘; ’to separate the IP addresses. Wildcards <code>*</code> are supported for IP addresses only ex: 192.168.10.*:9325.</li>
+</ol>
+<p>&nbsp;</p>
+<h2>Nexus Core</h2>
+<p>If using the Nexus core then add a line <code>llpallowip=&lt;ipaddress:port&gt;</code> in the nexus.config for each miner. Use 127.0.0.1:9325 for mining on the same computer or the ipaddress:9325 for a separate miner.</p>
+<p>Restart the core for the changes to take effect</p>
+<blockquote>
+  <p><strong>Good to Know:</strong> For solo mining to work, the user has to be logged in and unlocked for mining and notifications.</p>
+</blockquote>
+<h2>Run the Miner</h2>
+<p>Go to the folder where the NexusMiner executable and miner.conf are located, double click on the NexusMiner executable. A security warning window will pop up (shown in image below), click run and the miner will start in a terminal. The miner will run and start mining which you can see from the messages on the miner terminal window. There is no user interaction required.</p>
+<figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner61.png" alt=""></figure>
+<p>To check if everything is working, go to the mining pool page link below, on the header right side, paste the Nexus address entered in the miner.conf file in the search box and click on search. This will open a page like below, where you can see the details of your miner.</p>
+<ul>
+  <li><a href="https://primepool.nexus.io/"><strong>Prime Pool Miner Website</strong></a></li>
+</ul>
+<figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner7.png" alt="Mining Details for Each Miner"></figure>
+<h2>Stop the Miner</h2>
+<p>To stop the miner close the NexusMiner terminal window.</p>
+<h2>Screenshots</h2>
+<figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner31.png" alt="miner.conf for prime pool with 1 GPU"></figure>
+<figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner1.png" alt="NexusMiner v1.4 Prime Pool mining with single GPU"></figure>
+<figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner2.png" alt="NexusMiner v1.4 Prime Pool mining with single GPU"></figure>
+<figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner41.png" alt="miner.conf for prime pool with 1 GPU &amp; 2 CPU cores"></figure>
+<figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner5.png" alt="NexusMiner v1.4 Prime Pool mining with single GPU and two CPU Cores"></figure>
