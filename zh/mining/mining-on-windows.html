@@ -2,32 +2,31 @@
 title: 在 Windows 微软视窗上挖矿
 description: 如何在 Windows 微软视窗上挖矿
 published: true
-date: 2022-12-08T03:36:17.306Z
+date: 2022-12-08T03:46:09.731Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-08T03:36:17.306Z
 -->
 
 <h1>在 Windows 微软视窗上挖矿</h1>
-<p>This guide will help to set up mining on Windows. The new NexusMiner makes it very easy to mine on Windows. Nexus has its own open prime mining pool and the developers are working on further decentralizing mining.</p>
-<h2>Download the Miner:</h2>
-<p>Download the windows miner executable file from the link below (Not an installer)</p>
-<p>{% hint style="warning" %}<br>The miner cannot run prime and hash at the same time on a single computer</p>
-<p>&nbsp;</p>
-<h2>Miner Configuration:</h2>
-<p>To configure the miner, check the link below:</p>
+<p>本指南将有助于在 Windows 上设置挖矿。 新的 NexusMiner 使得在 Windows 上挖矿变得非常容易。 Nexus 麟社拥有自己开放的质数矿池，开发人员正在致力于进一步分散挖矿。</p>
+<h2>下载挖矿软件：</h2>
+<p>从下面的链接下载 windows miner 可执行文件（不是安装程序）</p>
+<p><a href="https://github.com/Nexusoft/NexusMiner/releases">NexusMiner.exe</a></p>
+<p>注意：矿工不能在一台电脑上同时跑 prime 质数，和 hash 哈希。</p>
+<h2>Miner Configuration 矿工配置：:</h2>
+<p>要配置矿工，请查看下面的链接：</p>
 <ul>
   <li><a href="https://wiki.nexus.io/en/mining/miner-config">Miner Configuration <i>How to configure the miner</i></a></li>
 </ul>
-<h2>Nexus Desktop Wallet:</h2>
+<h2>Nexus 麟社桌面钱包：</h2>
 <blockquote>
-  <p>This is only for solo miners. Pool miners can skip this step.</p>
+  <p>这仅适用于独自矿工。 矿池矿工可以跳过这一步。</p>
 </blockquote>
-<h3>Nexus Interface:</h3>
-<p>Download and install the Nexus Interface or setup the CLI core.</p>
-<p>Start the wallet, create the user, login and unlock the wallet for mining and notifications.</p>
-<p>&nbsp;</p>
-<h4>Mining Settings on Interface:</h4>
+<h3>麟社界面：</h3>
+<p>下载并安装 Nexus 麟社界面或设置 CLI 核心。</p>
+<p>启动钱包，创建用户，登录并解锁钱包以进行挖矿和通知。</p>
+<h4>界面挖矿设置：</h4>
 <ol>
   <li>Go to settings &gt; Core &gt; Enable mining by clicking on the toggle button next to it.</li>
   <li>A new field below will pop out below: Mining IP Whitelist. enter the <code>&lt;ipaddress:port&gt;</code> of the miner. If mining on the same computer then enter <code>127.0.0.1:9325</code>, if the miner is running on another computer or FPGA then enter the particular "<code>ipaddress:9325</code>. If there are more than one miner then use ‘; ’to separate the IP addresses. Wildcards <code>*</code> are supported for IP addresses only ex: 192.168.10.*:9325.</li>
