@@ -2,7 +2,7 @@
 title: Stakowanie
 description: nPoS — Stakowanie oparte na zaufaniu (reputacji)
 published: true
-date: 2022-12-08T23:10:40.678Z
+date: 2022-12-08T23:20:34.074Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:46:10.925Z
@@ -10,15 +10,15 @@ dateCreated: 2022-10-22T21:46:10.925Z
 
 # Stakowanie (nPoS)
 
-Ten przewodnik ma na celu wyjaśnienie obstawiania opartego na zaufaniu i wyjaśnienie zabezpieczeń centralizacji specyficznych dla Nexusa. Nie można przecenić znaczenia tego przesunięcia władzy opartego na konsensusie w kierunku stakingu, zwłaszcza biorąc pod uwagę wrażliwy stan zarządzania z pojawiającymi się zdecentralizowanymi ekosystemami.
+Ten przewodnik ma na celu wyjaśnienie stakowania opartego na zaufaniu i wyjaśnienie zabezpieczeń centralizacji specyficznych dla Nexusa. Nie można przecenić znaczenia tego przesunięcia władzy opartego na konsensusie w kierunku stakingu, zwłaszcza biorąc pod uwagę wrażliwy stan zarządzania z pojawiającymi się zdecentralizowanymi ekosystemami.
 
 ## Wprowadzenie do nPoS
 
-Proof of Stake (PoS) oparty na zaufaniu Nexusa to bardziej ekologiczna forma wydobycia, zapewniająca podobne właściwości konsensusu, jakie zapewniają kanały Proof of Work (PoW), przy minimalnych kosztach zarządzania. Prawdopodobieństwo znalezienia bloku zależy w dużej mierze od liczby postawionych monet. Jest niezależny od sprzętu, zamiast tego opiera swój algorytm haszujący na równowadze i wadze. Oznacza to, że nie ma określonej ilości czasu na zdobycie nagrody. Dzieje się tak, gdy stawiasz blok, a szanse na to zwiększają się o postawioną kwotę/wagę stawki i zmniejszają się o aktualną trudność kanału PoS w sieci.
+Proof of Stake (PoS) oparty na zaufaniu Nexusa to bardziej ekologiczna forma wydobycia, zapewniająca podobne właściwości konsensusu, jakie zapewniają kanały Proof of Work (PoW), przy minimalnych kosztach zarządzania. Prawdopodobieństwo znalezienia bloku zależy w dużej mierze od liczby stakowanych monet. Jest niezależny od sprzętu, zamiast tego opiera swój algorytm haszujący na balansie i wadze. Oznacza to, że nie ma określonej ilości czasu na zdobycie nagrody. Dzieje się tak, gdy stawiasz blok, a szanse na to zwiększają się o postawioną kwotę/wagę stawki i zmniejszają się o aktualną trudność kanału PoS w sieci.
 
 Ostatecznie jedyną rzeczą, która ma znaczenie, jest to, że portfel (węzeł) znajduje blok raz na 72 godziny, aby utrzymać rosnącą stawkę. Sama nagroda jest oparta na czasie, więc częstotliwość nie jest ważna. Jeśli zajmuje to 2 dni, nagroda jest dwa razy większa niż w przypadku jednego dnia. Po postawieniu bloku węzeł ten jest zablokowany na 240 bloków (120 min).
 
-W PoW, jeśli wzrasta szybkość mieszania sieci, rośnie również trudność; podobnie dla PoS, więcej monet postawionych w sieci = większa trudność. Możesz zwiększyć szybkość mieszania PoW, dodając sprzęt, jednak sprzęt nie ma znaczenia dla PoS. Efektywna szybkość mieszania PoS jest zwiększana o wagę stawki (waga bloku i zaufania) oraz stawkę.
+W PoW, jeśli wzrasta szybkość hashowania sieci, rośnie również trudność; podobnie dla PoS, więcej monet stakowanych w sieci = większa trudność. Możesz zwiększyć szybkość mieszania PoW, dodając sprzęt, jednak sprzęt nie ma znaczenia dla PoS. Efektywna szybkość mieszania PoS jest zwiększana o wagę stawki (waga bloku i zaufania) oraz stawkę.
 
 Prawdziwe nagrody za stawkę nie są jednak jak zarabianie odsetek. Nagrody za staking są przyznawane za uruchomienie węzła w celu zabezpieczenia bloków w drodze konsensusu, podobnie jak nagrody PoW, chociaż generowane inaczej.
 
