@@ -2,7 +2,7 @@
 title: 在 Linux 上挖矿
 description: 如何在 Linux 上挖矿
 published: true
-date: 2022-12-08T05:31:18.347Z
+date: 2022-12-08T07:18:45.701Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-08T05:21:25.994Z
@@ -40,49 +40,49 @@ dateCreated: 2022-12-08T05:21:25.994Z
 <pre><code class="language-plaintext">./get_boost_version</code></pre>
 <p>复制</p>
 <h3>安装 Cmake:</h3>
-<p>Nexus miner uses the latest version of cmake and Ubuntu does not ship with the latest version of cmake. If the distro has cmake version lower than 3.19, then follow the steps below to install latest version of cmake manually.</p>
-<p>Go to the cmake downloads page (link below) and download the linux cmake script files with .sh extension</p>
+<p>NexusMiner 使用最新版本的 cmake，而 Ubuntu 不附带最新版本的 cmake。 如果发行版的 cmake 版本低于 3.19，请按照以下步骤手动安装最新版本的 cmake。</p>
+<p>转到 cmake 下载页面（下面的链接）并下载扩展名为 .sh 的 linux cmake 脚本文件</p>
 <p>&nbsp;</p>
-<p>Change into the folder where the file is downloaded</p>
+<p>更改为下载文件的文件夹</p>
 <pre><code class="language-plaintext">cd Downloads</code></pre>
-<p>Copy</p>
-<p>Run the installer</p>
+<p>复制</p>
+<p>运行安装程序</p>
 <figure class="image"><img src="https://lh6.googleusercontent.com/9FU6gF8E6ij0g0gNkuYbuG-7IG7IaypFe_oKBTi4DUXocjKkKckEHrQLRDMFXscUVmvDuDmM-kKywvYzqNeb1F6xiBo-48uUPovFe10xyO2V57ctc8vB__r81XApwWsRmpIpBkJ6tG7cqFV5-Q" alt=""></figure>
 <figure class="image"><img src="https://lh4.googleusercontent.com/KeXuGqp8Qe4uSpiQ8MTJFlctZcrVGEHUBQzK90ioKSwwiaV7VLbnnuy0I9-kkMLmZT4xwdhwbwL63J1tqFyYhCMb5E-eVmt2fRQ1qN0PdWNmMKZupIu5xGuAobsmnjYLwoIvrkyqWhD4BWrhuA" alt=""></figure>
 <pre><code class="language-plaintext">./&lt;cmakefilename.sh&gt;</code></pre>
-<p>Copy</p>
-<p>First will be the licence, use “Enter” to scroll down or “spacebar” to scroll to the end, accept licence and then accept the location to extract, which will install the cmake binary. Change into the cmake/bin folder. Change the cmake folder name accordingly</p>
-<p>Cmake is installed and ready for the next step.</p>
-<h2>Download and Compile NexusMiner</h2>
-<p>Clone the NexusMiner repository</p>
+<p>复制</p>
+<p>首先是许可证，使用 “Enter” 回车键向下滚动或 “Spacebar" 空格键滚动到末尾，接受许可证，然后接受要提取的位置，这将安装 cmake 二进制文件。 切换到 cmake/bin 文件夹。 相应地更改 cmake 文件夹名称</p>
+<p>Cmake 已安装并为下一步做好准备。</p>
+<h2>下载并编译 NexusMiner</h2>
+<p>克隆 NexusMiner 存储库</p>
 <pre><code class="language-plaintext">git clone --depth 1 https://github.com/Nexusoft/NexusMiner</code></pre>
-<p>Copy</p>
+<p>复制</p>
 <pre><code class="language-plaintext">git clone --branch v1.4 https://github.com/Nexusoft/NexusMiner</code></pre>
-<p>Copy</p>
-<p>Change into the source code folder</p>
+<p>复制</p>
+<p>切换到源代码文件夹</p>
 <pre><code class="language-plaintext">cd NexusMiner</code></pre>
-<p>Copy</p>
-<p>Change into the cmake/bin folder installed in the step above. At time of writing the cmake version is 3.21.2, change the name accordingly.</p>
+<p>复制</p>
+<p>切换到上面步骤中安装的 cmake/bin 文件夹。 在撰写本文时，cmake 版本为 3.21.2，相应地更改名称。</p>
 <pre><code class="language-plaintext">cd /Downloads/cmake-3.21.2-linux-x86_64/bin/</code></pre>
-<p>Copy</p>
-<p>Run cmake to build the NexusMiner executable. &lt;pathtosource&gt; is the path to the NexusMiner folder and &lt;pathtobuildfolder&gt; is the path to NexusMiner/build. Use the option <code>"-DWITH_PRIME=On"</code> to include for prime mining support during compile.</p>
+<p>复制</p>
+<p>运行 cmake 以构建 NexusMiner 可执行文件。 &lt;pathtosource&gt; 是 NexusMiner 文件夹的路径，&lt;pathtobuildfolder&gt; 是 NexusMiner/build 的路径。 使用选项 “-DWITH_PRIME=On” 在编译期间包含对主要挖掘的支持。</p>
 <pre><code class="language-plaintext">./cmake -S &lt;pathtosource&gt; -B &lt;pathtobuildfolder&gt; -DCMAKE_BUILD_TYPE=Release -DWITH_PRIME=On</code></pre>
-<p>Copy</p>
+<p>复制</p>
 <pre><code class="language-plaintext">./cmake -S ~/NexusMiner -B ~/NexusMiner/build -DCMAKE_BUILD_TYPE=Release -DWITH_PRIME=On</code></pre>
-<p>Copy</p>
-<p>Cmake will build the prebuilt make binaries and keep them in prebuilt binaries folder "/build". Change into build folder.</p>
+<p>复制</p>
+<p>Cmake 将构建预构建的 make 二进制文件并将它们保存在预构建的二进制文件文件夹 “/build” 中。 更改为构建文件夹。</p>
 <pre><code class="language-plaintext">cd ~/NexusMiner/build</code></pre>
-<p>Copy</p>
-<p>To compile use:</p>
+<p>复制</p>
+<p>编译使用：</p>
 <pre><code class="language-plaintext">make</code></pre>
-<p>Copy</p>
-<p>This will compile and create the NexusMiner executable.</p>
-<p>Create a folder for the NexusMiner.</p>
+<p>复制</p>
+<p>这将编译并创建 NexusMiner 可执行文件。</p>
+<p>为 NexusMiner 创建一个文件夹。</p>
 <pre><code class="language-plaintext">mkdir ~/Miner</code></pre>
-<p>Copy</p>
-<p>Copy the NexusMiner to the _<code>"Miner</code> f_older</p>
+<p>复制</p>
+<p>将 NexusMiner 复制到 _"Miner f_older</p>
 <pre><code class="language-plaintext">cp NexusMiner ~/Miner</code></pre>
-<p>Copy</p>
+<p>复制</p>
 <h2>Miner Configuration:</h2>
 <p>To configure the miner, check the link below:</p>
 <p>{% content-ref url="../../mining/mining-on-nexus/miner-configuration.md" %}<br><a href="https://wiki.nexus.io/mining/mining-on-nexus/miner-configuration.md">miner-configuration.md</a></p>
