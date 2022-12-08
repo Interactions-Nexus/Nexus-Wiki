@@ -2,7 +2,7 @@
 title: Stakowanie
 description: nPoS — Stakowanie oparte na zaufaniu (reputacji)
 published: true
-date: 2022-12-08T23:28:31.467Z
+date: 2022-12-08T23:37:59.411Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:46:10.925Z
@@ -34,7 +34,7 @@ Udziały w Nexusie będą również cenne przy głosowaniu w nadchodzącym DAO, 
 
 ## Przewodnik Stakowania - Rozdziały
 
-- [Zastrzeżenia stakowania](/pl/guides/staking/staking-disclaimer)
+- [Stakowanie - zastrzeżenia](/pl/guides/staking/staking-disclaimer)
 - [Wymagania dotyczące stakowania](/pl/guides/staking/staking-requirements)
 - [Ustawienia stakowania](/pl/guides/staking/staking-settings)
 - [Minimalna kwota stakowania](/pl/guides/staking/minimum-staking-amount)
