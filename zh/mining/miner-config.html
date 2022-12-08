@@ -2,29 +2,29 @@
 title: 矿机配置
 description: 如何配置矿机
 published: true
-date: 2022-12-08T07:48:36.327Z
+date: 2022-12-08T07:56:09.506Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-08T07:48:36.327Z
 -->
 
 <h1>矿机配置</h1>
-<p>The miner configuration is the most critical part and uses the JSON format. This configuration is the same for windows or linux.</p>
+<p>矿机配置是最关键的部分，使用 JSON 格式。 此配置对于 windows 或 linux 是相同的。</p>
 <blockquote>
-  <p><strong>NOTE:</strong> Make sure the NexusMiner executable and the miner config are in the same folder</p>
+  <p>注意：确保 NexusMiner 可执行文件和矿工配置位于同一文件夹中</p>
 </blockquote>
-<p>The miner configuration is stored in a <code><strong>miner.conf</strong></code> file, it should be in the same folder as the <code>NexusMiner</code> executable. In windows or linux with UI you can create a text file and save the configuration and save the file as miner.conf.</p>
-<p>For linux CLI, use the below commands:</p>
-<p>To change into the Miner folder where the NexusMIner executable is available, if it's a different folder change accordingly.</p>
+<p>矿工配置存储在 miner.conf 文件中，它应该与 NexusMiner 可执行文件位于同一文件夹中。 在带有 UI 的 Windows 或 Linux 中，您可以创建一个文本文件并保存配置并将文件另存为 miner.conf。</p>
+<p>对于 linux CLI，请使用以下命令：</p>
+<p>切换到 NexusMIner 可执行文件所在的 Miner 文件夹，如果它是一个不同的文件夹，则相应地更改。</p>
 <pre><code class="language-plaintext">cd Miner</code></pre>
-<p>Copy</p>
-<p>Create the miner.conf file.</p>
+<p>复制</p>
+<p>创建 miner.conf 文件。</p>
 <pre><code class="language-plaintext">nano miner.conf</code></pre>
-<p>Copy</p>
-<p>Find below the JSON config files for both prime and hash miners. Copy paste and change the settings as per the setup. Remember that each GPU or FPGA has to be configured as a unique worker. Also make sure the "wallet_ip" "port", "local_ip", "mining_mode" and "pool" details are correct.</p>
-<p>For Nexus prime and hash pools the payout address will be the identifier to the pool and the reward payout will be done to the same address. Most pool's have a minimum reward amount to be collected before payout.</p>
+<p>复制</p>
+<p>在下面找到 prime 和 hash 矿工的 JSON 配置文件。 复制粘贴并根据设置更改设置。 请记住，每个 GPU 或 FPGA 都必须配置为唯一的工作线程。 还要确保 “wallet_ip”、“port”、“local_ip”、“mining_mode” 和 “pool” 的详细信息正确无误。</p>
+<p>对于 Nexus 麟社 prime 质数和 hash 哈希挖矿池，支付地址将是池的标识符，奖励支付将发送到同一地址。 大多数池在支付前都有最低奖励数额。</p>
 <p>&nbsp;</p>
-<h3>Prime Pool</h3>
+<h3>Prime Pool 质数矿池</h3>
 <pre><code class="language-plaintext">{
     "version" : 1,
     "wallet_ip" : "primepool.nexus.io",
@@ -60,9 +60,9 @@ dateCreated: 2022-12-08T07:48:36.327Z
         }
     ]
 }</code></pre>
-<p>Copy</p>
+<p>复制</p>
 <p>&nbsp;</p>
-<h3>Hash Solo</h3>
+<h3>Hash Solo 独自哈希挖矿</h3>
 <pre><code class="language-plaintext">{
     "version" : 1,
     "wallet_ip" : "127.0.0.1",
@@ -128,9 +128,9 @@ dateCreated: 2022-12-08T07:48:36.327Z
         }
     ]
 }sh</code></pre>
-<p>Copy</p>
+<p>复制</p>
 <p>&nbsp;</p>
-<h3>Hash Pool</h3>
+<h3>Hash Pool 哈希矿池</h3>
 <pre><code class="language-plaintext">{
     "version" : 1,
     "wallet_ip" : "hashpool.nexus.io",
@@ -166,10 +166,10 @@ dateCreated: 2022-12-08T07:48:36.327Z
         }
     ]
 }</code></pre>
-<p>Copy</p>
-<p>To save the config file Ctrl+s &amp; Ctrl+x</p>
+<p>复制</p>
+<p>保存配置文件 Ctrl+s &amp; Ctrl+x</p>
 <p>&nbsp;</p>
-<h4>Miner Config Direct Link:</h4>
+<h4>矿工配置直接链接：</h4>
 <p>We provide a few standard mining configs, download and configure to suit the setup. Each GPU or FPGA will be configured as a separate worker. (Each core on the CPU will be configured as a worker - Used for solo mining on testnet).</p>
 <p>Download the config files from the link below:</p>
 <ul>
