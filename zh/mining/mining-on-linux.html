@@ -1,0 +1,97 @@
+<!--
+title: 在 Linux 上挖矿
+description: 如何在 Linux 上挖矿
+published: true
+date: 2022-12-08T05:21:25.994Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-08T05:21:25.994Z
+-->
+
+<h1>Mining on Linux</h1>
+<p>Mining on Linux is not straightforward like windows and the user has to compile the NexusMiner from source. This guide will help you setup mining on Linux. This guide is tailored for Ubuntu and Debian based distributions.</p>
+<p>{% hint style="info" %}<br>Make sure you install the latest GPU drivers from the manufacturer. Driver installation is outside the scope of this guide.</p>
+<h2>Prepare Ubuntu for Miner:</h2>
+<p>Install the dependencies</p>
+<pre><code class="language-plaintext">sudo apt install build-essential libboost-all-dev libdb-dev libdb++-dev libssl-dev libminiupnpc-dev libgmp-dev -y</code></pre>
+<p>Copy</p>
+<p>Ubuntu does not have the latest version of boost. The install will be a manual process listed below:</p>
+<h3>Install Boost</h3>
+<p>This below is a direct link to the boost website:</p>
+<p>&nbsp;</p>
+<p>Download the latest version of boost. At the time of writing the latest version boost is 1.78.0:</p>
+<pre><code class="language-plaintext">wget https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.gz</code></pre>
+<p>Copy</p>
+<p>Extract boost installer to a new directory named Boost.</p>
+<pre><code class="language-plaintext">tar xzvf boost_1_69_0.tar.gz -C ~/Boost</code></pre>
+<p>Copy</p>
+<p>Change into the Boost folder</p>
+<pre><code class="language-plaintext">cd Boost</code></pre>
+<p>Copy</p>
+<p>Install boost</p>
+<pre><code class="language-plaintext">./bootstrap.sh --prefix=/usr/</code></pre>
+<p>Copy</p>
+<p>Compile boost from source.</p>
+<pre><code class="language-plaintext">./b2</code></pre>
+<p>Copy</p>
+<p>Copy the compiled files to the location specified with "<i><strong>–prefix</strong></i> command line option.</p>
+<pre><code class="language-plaintext">sudo ./b2 install</code></pre>
+<p>Copy</p>
+<p>To verify boost version:</p>
+<pre><code class="language-plaintext">./get_boost_version</code></pre>
+<p>Copy</p>
+<h3>Install Cmake:</h3>
+<p>Nexus miner uses the latest version of cmake and Ubuntu does not ship with the latest version of cmake. If the distro has cmake version lower than 3.19, then follow the steps below to install latest version of cmake manually.</p>
+<p>Go to the cmake downloads page (link below) and download the linux cmake script files with .sh extension</p>
+<p>&nbsp;</p>
+<p>Change into the folder where the file is downloaded</p>
+<pre><code class="language-plaintext">cd Downloads</code></pre>
+<p>Copy</p>
+<p>Run the installer</p>
+<figure class="image"><img src="https://lh6.googleusercontent.com/9FU6gF8E6ij0g0gNkuYbuG-7IG7IaypFe_oKBTi4DUXocjKkKckEHrQLRDMFXscUVmvDuDmM-kKywvYzqNeb1F6xiBo-48uUPovFe10xyO2V57ctc8vB__r81XApwWsRmpIpBkJ6tG7cqFV5-Q" alt=""></figure>
+<figure class="image"><img src="https://lh4.googleusercontent.com/KeXuGqp8Qe4uSpiQ8MTJFlctZcrVGEHUBQzK90ioKSwwiaV7VLbnnuy0I9-kkMLmZT4xwdhwbwL63J1tqFyYhCMb5E-eVmt2fRQ1qN0PdWNmMKZupIu5xGuAobsmnjYLwoIvrkyqWhD4BWrhuA" alt=""></figure>
+<pre><code class="language-plaintext">./&lt;cmakefilename.sh&gt;</code></pre>
+<p>Copy</p>
+<p>First will be the licence, use “Enter” to scroll down or “spacebar” to scroll to the end, accept licence and then accept the location to extract, which will install the cmake binary. Change into the cmake/bin folder. Change the cmake folder name accordingly</p>
+<p>Cmake is installed and ready for the next step.</p>
+<h2>Download and Compile NexusMiner</h2>
+<p>Clone the NexusMiner repository</p>
+<pre><code class="language-plaintext">git clone --depth 1 https://github.com/Nexusoft/NexusMiner</code></pre>
+<p>Copy</p>
+<pre><code class="language-plaintext">git clone --branch v1.4 https://github.com/Nexusoft/NexusMiner</code></pre>
+<p>Copy</p>
+<p>Change into the source code folder</p>
+<pre><code class="language-plaintext">cd NexusMiner</code></pre>
+<p>Copy</p>
+<p>Change into the cmake/bin folder installed in the step above. At time of writing the cmake version is 3.21.2, change the name accordingly.</p>
+<pre><code class="language-plaintext">cd /Downloads/cmake-3.21.2-linux-x86_64/bin/</code></pre>
+<p>Copy</p>
+<p>Run cmake to build the NexusMiner executable. &lt;pathtosource&gt; is the path to the NexusMiner folder and &lt;pathtobuildfolder&gt; is the path to NexusMiner/build. Use the option <code>"-DWITH_PRIME=On"</code> to include for prime mining support during compile.</p>
+<pre><code class="language-plaintext">./cmake -S &lt;pathtosource&gt; -B &lt;pathtobuildfolder&gt; -DCMAKE_BUILD_TYPE=Release -DWITH_PRIME=On</code></pre>
+<p>Copy</p>
+<pre><code class="language-plaintext">./cmake -S ~/NexusMiner -B ~/NexusMiner/build -DCMAKE_BUILD_TYPE=Release -DWITH_PRIME=On</code></pre>
+<p>Copy</p>
+<p>Cmake will build the prebuilt make binaries and keep them in prebuilt binaries folder "/build". Change into build folder.</p>
+<pre><code class="language-plaintext">cd ~/NexusMiner/build</code></pre>
+<p>Copy</p>
+<p>To compile use:</p>
+<pre><code class="language-plaintext">make</code></pre>
+<p>Copy</p>
+<p>This will compile and create the NexusMiner executable.</p>
+<p>Create a folder for the NexusMiner.</p>
+<pre><code class="language-plaintext">mkdir ~/Miner</code></pre>
+<p>Copy</p>
+<p>Copy the NexusMiner to the _<code>"Miner</code> f_older</p>
+<pre><code class="language-plaintext">cp NexusMiner ~/Miner</code></pre>
+<p>Copy</p>
+<h2>Miner Configuration:</h2>
+<p>To configure the miner, check the link below:</p>
+<p>{% content-ref url="../../mining/mining-on-nexus/miner-configuration.md" %}<br><a href="https://wiki.nexus.io/mining/mining-on-nexus/miner-configuration.md">miner-configuration.md</a></p>
+<h2>Run the Miner:</h2>
+<p>To run the miner change into the miner directory.</p>
+<p>{% hint style="info" %}<br>For solo mining start the wallet, login and then start the miner.</p>
+<pre><code class="language-plaintext">cd NexusMiner</code></pre>
+<p>Copy</p>
+<pre><code class="language-plaintext">./NexusMiner</code></pre>
+<p>Copy</p>
+<p>Hope you enjoyed the guide!!</p>
