@@ -2,7 +2,7 @@
 title: 在 Windows 微软视窗上挖矿
 description: 如何在 Windows 微软视窗上挖矿
 published: true
-date: 2022-12-08T03:51:55.215Z
+date: 2022-12-08T04:32:21.455Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-08T03:36:17.306Z
@@ -32,23 +32,23 @@ dateCreated: 2022-12-08T03:36:17.306Z
   <li style="text-align:justify;">下面会弹出一个新字段：Mining IP Whitelist。 输入矿工的 &lt;ipaddress:port&gt;。 如果在同一台电脑上挖矿则输入 127.0.0.1:9325，如果矿机在另一台电脑或 FPGA 上运行则输入特定的 “ipaddress:9325。如果有多个矿机则使用 ';' 分隔 IP 地址。通配符 * 仅支持 IP 地址，例如：192.168.10.*:9325。</li>
 </ol>
 <p>&nbsp;</p>
-<h2>Nexus Core</h2>
-<p>If using the Nexus core then add a line <code>llpallowip=&lt;ipaddress:port&gt;</code> in the nexus.config for each miner. Use 127.0.0.1:9325 for mining on the same computer or the ipaddress:9325 for a separate miner.</p>
-<p>Restart the core for the changes to take effect</p>
+<h2>Nexus Core 麟社核心</h2>
+<p>如果使用 Nexus 麟社核心，则在每个矿工的 nexus.config 中添加一行 llpallowip=&lt;ipaddress:port&gt;。 使用 127.0.0.1:9325 在同一台计算机上进行挖矿，或使用 ipaddress:9325 进行个别的矿工。</p>
+<p>重新启动核心以使更改生效</p>
 <blockquote>
-  <p><strong>Good to Know:</strong> For solo mining to work, the user has to be logged in and unlocked for mining and notifications.</p>
+  <p>提示：要进行独自挖矿，用户必须登录并解锁才能进行挖矿和接收通知。</p>
 </blockquote>
-<h2>Run the Miner</h2>
-<p>Go to the folder where the NexusMiner executable and miner.conf are located, double click on the NexusMiner executable. A security warning window will pop up (shown in image below), click run and the miner will start in a terminal. The miner will run and start mining which you can see from the messages on the miner terminal window. There is no user interaction required.</p>
+<h2>运行矿工 NexusMiner</h2>
+<p>转到 NexusMiner 可执行文件和 miner.conf 所在的文件夹，双击 NexusMiner 可执行文件。 将弹出一个安全警告窗口（如下图所示），单击运行，矿机将在终端中启动。 矿工将运行并开始挖矿，您可以从矿工终端窗口的消息中看到这一点。 不需要用户交互。</p>
 <figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner61.png" alt=""></figure>
-<p>To check if everything is working, go to the mining pool page link below, on the header right side, paste the Nexus address entered in the miner.conf file in the search box and click on search. This will open a page like below, where you can see the details of your miner.</p>
+<p>要检查是否一切正常，请转到下面的矿池页面链接，在标题右侧，将在 miner.conf 文件中输入的 Nexus 麟社地址粘贴到搜索框中，然后单击搜索。 这将打开如下页面，您可以在其中查看您的矿机的详细信息。</p>
 <ul>
   <li><a href="https://primepool.nexus.io/"><strong>Prime Pool Miner Website</strong></a></li>
 </ul>
 <figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner7.png" alt="Mining Details for Each Miner"></figure>
-<h2>Stop the Miner</h2>
-<p>To stop the miner close the NexusMiner terminal window.</p>
-<h2>Screenshots</h2>
+<h2>停止矿工 NexusMiner</h2>
+<p>要停止矿工，请关闭 NexusMiner 终端窗口。</p>
+<h2>截图</h2>
 <figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner31.png" alt="miner.conf for prime pool with 1 GPU"></figure>
 <figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner1.png" alt="NexusMiner v1.4 Prime Pool mining with single GPU"></figure>
 <figure class="image"><img src="https://wiki.nexus.io/en/.gitbook/assets/Miner2.png" alt="NexusMiner v1.4 Prime Pool mining with single GPU"></figure>
