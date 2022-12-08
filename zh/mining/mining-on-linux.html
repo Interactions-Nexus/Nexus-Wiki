@@ -2,45 +2,44 @@
 title: 在 Linux 上挖矿
 description: 如何在 Linux 上挖矿
 published: true
-date: 2022-12-08T05:21:50.928Z
+date: 2022-12-08T05:31:18.347Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-08T05:21:25.994Z
 -->
 
 <h1>在 Linux 上挖矿</h1>
-<p>Mining on Linux is not straightforward like windows and the user has to compile the NexusMiner from source. This guide will help you setup mining on Linux. This guide is tailored for Ubuntu and Debian based distributions.</p>
-<p>{% hint style="info" %}<br>Make sure you install the latest GPU drivers from the manufacturer. Driver installation is outside the scope of this guide.</p>
-<h2>Prepare Ubuntu for Miner:</h2>
-<p>Install the dependencies</p>
+<p>在 Linux 上挖矿不像 Windows 那样简单，用户必须从源代码编译 NexusMiner。 本指南将帮助您在 Linux 上设置挖矿。 本指南专为基于 Ubuntu 和 Debian 的发行版量身定制。</p>
+<p>确保安装制造商提供的最新 GPU 驱动程序。 驱动程序安装不在本指南的范围内。</p>
+<h2>为 Miner 准备 Ubuntu：</h2>
+<p>Install the dependencies 安装依赖项</p>
 <pre><code class="language-plaintext">sudo apt install build-essential libboost-all-dev libdb-dev libdb++-dev libssl-dev libminiupnpc-dev libgmp-dev -y</code></pre>
-<p>Copy</p>
-<p>Ubuntu does not have the latest version of boost. The install will be a manual process listed below:</p>
-<h3>Install Boost</h3>
-<p>This below is a direct link to the boost website:</p>
-<p>&nbsp;</p>
-<p>Download the latest version of boost. At the time of writing the latest version boost is 1.78.0:</p>
+<p>复制</p>
+<p>Ubuntu 没有最新版本的 boost。 下面列出的是手动安装过程：</p>
+<h3>安装 Boost</h3>
+<p>以下是 boost 网站的直接链接：</p>
+<p>下载最新版本的 boost。 在撰写本文时，最新版本 boost 是 1.78.0：</p>
 <pre><code class="language-plaintext">wget https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.gz</code></pre>
-<p>Copy</p>
-<p>Extract boost installer to a new directory named Boost.</p>
+<p>复制</p>
+<p>将 boost 安装程序提取到名为 Boost 的新目录。</p>
 <pre><code class="language-plaintext">tar xzvf boost_1_69_0.tar.gz -C ~/Boost</code></pre>
-<p>Copy</p>
-<p>Change into the Boost folder</p>
+<p>复制</p>
+<p>切换到 Boost 文件夹</p>
 <pre><code class="language-plaintext">cd Boost</code></pre>
-<p>Copy</p>
-<p>Install boost</p>
+<p>复制</p>
+<p>安装 boost</p>
 <pre><code class="language-plaintext">./bootstrap.sh --prefix=/usr/</code></pre>
-<p>Copy</p>
-<p>Compile boost from source.</p>
+<p>复制</p>
+<p>从源代码编译 boost。</p>
 <pre><code class="language-plaintext">./b2</code></pre>
-<p>Copy</p>
-<p>Copy the compiled files to the location specified with "<i><strong>–prefix</strong></i> command line option.</p>
+<p>复制</p>
+<p>将编译后的文件复制到 “--prefix 命令行选项指定的位置。</p>
 <pre><code class="language-plaintext">sudo ./b2 install</code></pre>
-<p>Copy</p>
-<p>To verify boost version:</p>
+<p>复制</p>
+<p>要验证 boost 版本：</p>
 <pre><code class="language-plaintext">./get_boost_version</code></pre>
-<p>Copy</p>
-<h3>Install Cmake:</h3>
+<p>复制</p>
+<h3>安装 Cmake:</h3>
 <p>Nexus miner uses the latest version of cmake and Ubuntu does not ship with the latest version of cmake. If the distro has cmake version lower than 3.19, then follow the steps below to install latest version of cmake manually.</p>
 <p>Go to the cmake downloads page (link below) and download the linux cmake script files with .sh extension</p>
 <p>&nbsp;</p>
