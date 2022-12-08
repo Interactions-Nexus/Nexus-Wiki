@@ -1,0 +1,177 @@
+<!--
+title: 矿机配置
+description: 如何配置矿机
+published: true
+date: 2022-12-08T07:48:36.327Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-08T07:48:36.327Z
+-->
+
+<h1>矿机配置</h1>
+<p>The miner configuration is the most critical part and uses the JSON format. This configuration is the same for windows or linux.</p>
+<blockquote>
+  <p><strong>NOTE:</strong> Make sure the NexusMiner executable and the miner config are in the same folder</p>
+</blockquote>
+<p>The miner configuration is stored in a <code><strong>miner.conf</strong></code> file, it should be in the same folder as the <code>NexusMiner</code> executable. In windows or linux with UI you can create a text file and save the configuration and save the file as miner.conf.</p>
+<p>For linux CLI, use the below commands:</p>
+<p>To change into the Miner folder where the NexusMIner executable is available, if it's a different folder change accordingly.</p>
+<pre><code class="language-plaintext">cd Miner</code></pre>
+<p>Copy</p>
+<p>Create the miner.conf file.</p>
+<pre><code class="language-plaintext">nano miner.conf</code></pre>
+<p>Copy</p>
+<p>Find below the JSON config files for both prime and hash miners. Copy paste and change the settings as per the setup. Remember that each GPU or FPGA has to be configured as a unique worker. Also make sure the "wallet_ip" "port", "local_ip", "mining_mode" and "pool" details are correct.</p>
+<p>For Nexus prime and hash pools the payout address will be the identifier to the pool and the reward payout will be done to the same address. Most pool's have a minimum reward amount to be collected before payout.</p>
+<p>&nbsp;</p>
+<h3>Prime Pool</h3>
+<pre><code class="language-plaintext">{
+    "version" : 1,
+    "wallet_ip" : "primepool.nexus.io",
+    "port" : 50000,
+    "local_ip" : "auto",
+    "mining_mode" : "PRIME",
+    "pool" :
+    {
+        "username" : "&lt;INSERT_HERE NXS ADDRESS&gt;",
+        "display_name" : "&lt;INSERT HERE&gt;"
+    },
+    "stats_printers" :
+    [
+        {
+            "stats_printer" :
+            {
+                "mode" : "console"
+            }
+        }
+    ],
+    "workers" :
+    [
+        {
+            "worker" :
+            {
+                "id" : "myWorker0",
+                "mode" :
+                {
+                    "hardware" : "gpu",
+                    "device" : 0
+                }
+            }
+        }
+    ]
+}</code></pre>
+<p>Copy</p>
+<p>&nbsp;</p>
+<h3>Hash Solo</h3>
+<pre><code class="language-plaintext">{
+    "version" : 1,
+    "wallet_ip" : "127.0.0.1",
+    "port" : 9325,
+    "local_ip" : "127.0.0.1",
+    "mining_mode" : "HASH",
+    "connection_retry_interval" : 5,
+    "get_height_interval" : 2,
+    "ping_interval" : 10,
+    "log_level" : 2,
+    "logfile" : "miner.log",
+    "stats_printers" :
+    [
+        {
+            "stats_printer" :
+            {
+                "mode" : "console"
+            }
+        },
+        {
+            "stats_printer" :
+            {
+                "mode" : "file",
+                "filename" : "stats.log"
+            }
+        }
+    ],
+    "print_statistics_interval" : 10,
+    "workers" :
+    [
+        {
+            "worker" :
+            {
+                "id" : "myWorker0",
+                "mode" :
+                {
+                    "hardware" : "gpu",
+                    "device" : 0
+                }
+            }
+        },
+        {
+            "worker" :
+            {
+                "id" : "myWorker1",
+                "mode" :
+                {
+                    "hardware" : "gpu",
+                    "device" : 1
+                }
+            }
+        },
+        {
+            "worker" :
+            {
+                "id" : "myWorker2",
+                "mode" :
+                {
+                    "hardware" : "gpu",
+                    "device" : 2
+                }
+            }
+        }
+    ]
+}sh</code></pre>
+<p>Copy</p>
+<p>&nbsp;</p>
+<h3>Hash Pool</h3>
+<pre><code class="language-plaintext">{
+    "version" : 1,
+    "wallet_ip" : "hashpool.nexus.io",
+    "port" : 50000,
+    "local_ip" : "auto",
+    "mining_mode" : "HASH",
+    "pool" :
+    {
+        "username" : "&lt;INSERT_HERE NXS ADDRESS&gt;",
+        "display_name" : "&lt;INSERT HERE&gt;"
+    },
+    "stats_printers" :
+    [
+        {
+            "stats_printer" :
+            {
+                "mode" : "console"
+            }
+        }
+    ],
+    "workers" :
+    [
+        {
+            "worker" :
+            {
+                "id" : "myWorker0",
+                "mode" :
+                {
+                    "hardware" : "fpga",
+                    "serial_port" : "&lt;INSERT HERE&gt;"
+                }
+            }
+        }
+    ]
+}</code></pre>
+<p>Copy</p>
+<p>To save the config file Ctrl+s &amp; Ctrl+x</p>
+<p>&nbsp;</p>
+<h4>Miner Config Direct Link:</h4>
+<p>We provide a few standard mining configs, download and configure to suit the setup. Each GPU or FPGA will be configured as a separate worker. (Each core on the CPU will be configured as a worker - Used for solo mining on testnet).</p>
+<p>Download the config files from the link below:</p>
+<ul>
+  <li><a href="https://github.com/Nexusoft/NexusMiner/tree/master/example_configs">Example Configs</a></li>
+</ul>
