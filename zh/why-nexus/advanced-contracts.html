@@ -2,7 +2,7 @@
 title: 增强合约
 description: Nexus 麟社上的增强合约
 published: true
-date: 2022-12-11T12:42:52.640Z
+date: 2022-12-11T14:58:31.856Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-11T10:36:02.051Z
@@ -51,17 +51,17 @@ dateCreated: 2022-12-11T10:36:02.051Z
   <li><a href="/en/tritium++/register">Register API <i>The Register API</i></a></li>
 </ul>
 <h2>Conditional Contracts 条件合约</h2>
-<p>条件合约是二进制合约模板，用户将能够选择一个合约标准来发送。 这将导致每个命令集的合同标准和对象标准的动态分配。 标准化，我们可以分配新合约，这些合约将自动填充到标准列表中，而无需升级钱包。</p>
-<p>What that means is we will be able to deploy new contract standards without needing to release new wallet. It will read a public sigchain that records contract and object standards. This will lead into dynamic constants as well, such as fees so that we can adjust consensus critical values without the need for hard forks or updates to the core daemon.</p>
-<p>When a user sends funds using the Nexus Interface, they get an extra drop-down that allows to select from a list of standard template contracts to send under. This is a major step towards real world use of smart contracts.</p>
-<h2>Conditional Contracts DSL (Future)</h2>
-<p>Conditional Contracts DSL, a new standard to be written in a higher-level language and compiled into bytecode. Designed for users who will be developing new API’s or contract standards. It enables conditional contracts to be written directly into the API with the use of English, which is a crucial step in realising the full potential of Tritium’s contract functionality. This approach also allows people to be able to read or interpret contracts. This will reveal a lot of new functionality to developers.</p>
-<p>We thus far have maintained the standard contracts as embedded constants in the codebase. The ability for developers to code new contracts, provides the opportunity for a dynamic standardization using Nexus to manage this state, similar to dynamic object modelling.</p>
-<h2>Augmented Contracts ( Roadmap: 2023-2025)</h2>
-<p>For advanced developers who need full creative control, we have developed Augmented Contacts which can be used with any domain specific language of choice. Today we have Conditional Contracts, Primitive Operators, and Registers.</p>
-<p>Conditional VM will be a subset of Augmented, such as in my function I have an <code>if</code> statement, this is executed as a condition. But augmented will allow writing complex code. For instance I have an account, I do an operator overload function for <code>DEBIT</code>, that can add additional requirements for a debit from that account such as max amount per time interval, etc. I could add another public method that could be invoked by another user to draw an amount on my account if they fulfill a certain condition, so forth. It will be the full implementation of our interpreter where we will have the functionality of most languages like Java and C++.</p>
-<p>Augmented Contracts are the second type of contracts that will be available in the Tritium Protocol. These types of contracts extend the Conditional VM (Virtual Machine that processes Conditional Statements) to provide additional benefits including, but not limited to, methods, functions, operation overloading, and encapsulation. Augmented contracts add a layer of complexity and processing, so will carry a higher fee to execute. This will require more on-chain processing, but overall makes our Contract Engine much more powerful.</p>
-<p>The goal of Augmented Contracts is to provide relative capabilities of complex languages like C++, so we will support polymorphism, operator overloading, functions, methods, public, private, protected, unique, etc. augmented contracts builds on the existing VM- and register-based architecture. More programmable languages and things like maps, vectors, functions, etc. will come with augmented contracts.</p>
+<p>条件合约是二进制合约模板，用户将能够选择一个合约标准来发送。 这将引导每个命令集的合同标准和对象标准的动态分配。 标准化，我们可以分配新合约，这些合约将自动填充到标准列表中，而无需升级钱包。</p>
+<p>这意味着我们将能够部署新的合约标准而无需发布新的钱包。 它将读取记录合同和对象标准的公共签名链。 这也将引导动态常量，例如费用，这样我们就可以调整共识关键值，而无需硬分叉或更新核心守护程序。</p>
+<p>当用户使用 Nexus 麟社界面发送资金时，他们会得出现一个额外的下拉菜单，允许从标准模板合约列表中进行选择以发送。 这是朝着在现实世界中使用智能合约迈出的重要一步。</p>
+<h2>Conditional Contracts 条件合约 DSL (未来)</h2>
+<p>Conditional Contracts DSL, 一种用高级语言编写并编译成字节码的新标准。 专为将要开发新 API 插件或合约标准的用户而设计。 它允许使用英语将条件合约直接写入 API 插件，这是实现 Tritium 麟氚合约功能全部潜力的关键一步。 这种方法还使人们能够阅读或解释合约。 这将为开发人员揭示许多新功能。</p>
+<p>到目前为止，我们一直将标准合约作为代码库中的嵌入式常量进行维护。 开发人员编写新合约的能力为使用 Nexus 麟社管理此状态的动态标准化提供了机会，类似于动态对象建模。</p>
+<h2>Augmented Contracts 增强合约（路线图：2023-2025）</h2>
+<p>对于需要完全创意控制的高级开发人员，我们开发了 Augmented Contacts 增强合约，它可以与所选的任何领域特定语言一起使用。 今天我们有条件合约、基元操作和寄存器。</p>
+<p style="text-align:justify;">条件 VM（处理条件语句的虚拟机）将是 Augmented 增强的子集，例如在我的函数中我有一个 if 语句，它作为条件执行。 但是论据将允许编写复杂的代码。 例如，我有一个账户，我为 DEBIT 执行了一个操作重载函数，它可以为该账户的借记添加额外的要求，例如每个时间间隔的最大数额等。也可以添加另一个可以由另一个用户调用的公共方法，如果他们满足特定条件，就可以在我的账户上提取一笔款项，等等。 这将是我们解释器的完整实现，我们将拥有大多数语言（如 Java 和 C++）的功能。</p>
+<p>增强合约是 Tritium 麟氚协议中可用的第二种合同。 这些类型的合约扩展了条件 VM（处理条件语句的虚拟机）以提供额外的好处，包括但不限于方法、函数、操作重载和封装。 增强合约增加了一层复杂性和处理，因此会产生更高的执行费用。 这将需要更多的链上处理，但总体上使我们的合约引擎更加强大。</p>
+<p>增强合约的目标是提供复杂语言（如 C++）的相关功能，因此我们将支持多态性、运算符重载、函数、方法、公共、私有、受保护、唯一等。增强合约建立在现有的基于 VM 和 register-based 注册的架构。 更多的可编程语言和诸如地图、向量、函数等之类的东西将带有增强合约。</p>
 <blockquote>
-  <p>More information will be provided when available.</p>
+  <p>将随时提供更多的信息。</p>
 </blockquote>
