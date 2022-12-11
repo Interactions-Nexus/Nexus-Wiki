@@ -2,7 +2,7 @@
 title: 增强合约
 description: Nexus 麟社上的增强合约
 published: true
-date: 2022-12-11T10:51:17.018Z
+date: 2022-12-11T10:52:56.507Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-11T10:36:02.051Z
@@ -17,7 +17,7 @@ dateCreated: 2022-12-11T10:36:02.051Z
 <p>NVM 麟社虚拟机被设计为“64 位元”、“register based“ 基于寄存器； 选择此设计是因为它与 CPU 中央处理器的 64 位元匹配并模仿 CPU 中央处理器缓存寄存器。</p>
 <p>与 EVM 相比，这种设计使 NVM 麟社虚拟机非常快，因为它是为当今的处理器设计的。 用数字表示，EVM 需要 170 万纳秒/指令，NVM 麟社虚拟机只需要 33 纳秒/指令。 由于 EVM 在 64 位元 CPU 上的 256 位长度及其过时的堆栈设计，EVM 处于一个巨大的劣势，因为它需要 4 个周期来完成一条指令。</p>
 <p>NVM 麟社虚拟机有意设计为不图灵完备，这一决定也源于 Nexus 麟社是一个 <code><strong>Verification</strong></code> 验证引擎这一事实。 这种设计有一个巨大的优势，那就是免费的简单交易，而 EVM 需要 Gas 来控制由于糟糕的合约代码而导致的计算请求，这可能会使网络陷入停顿。 使用 NVM 麟社虚拟机设计，增强合约将具有可预测的费用，这些费用将在合约执行前就可以计算出来。</p>
-<p>Nexus will have different types of contracts, for the higher level API's, templates will be provided, which a user can choose from a dropdown list. For advanced users augmented contracts will empower them to use contracts with their choice of domain specific language. Augmented contracts will be available at a later date. For more details refer the <a href="https://nexus.io/roadmap">roadmap</a>.</p>
+<p>Nexus 麟社将有不同类型的合约，对于更高级别的 API，将提供模板，用户可以从下拉列表中选择。 对于高级用户，增强合同将使他们能够使用他们选择的领域特定语言的合约。 扩展合约将在以后提供。 有关详细信息，请参阅 &nbsp;<a href="https://nexus.io/roadmap">roadmap</a> 路线图。</p>
 <h2>Operations &amp; Register Layers</h2>
 <p>To put in a simple way, contracts are a request to perform a specific type of instruction on data which results in change in the data. In the Nexus software stack the <code>Operations layer</code> contains the instructions or actions that give registers context, and define more complex contract logic and <code>Register layer</code> is the data layer. A contract is an object containing: a register pre-state (the register that is being operated on that was passed upwards from the Register Layer), a primitive operation (only one primitive operation per contract), and a set of conditions (any amount of conditional operations).</p>
 <h3>Primitive Operations</h3>
