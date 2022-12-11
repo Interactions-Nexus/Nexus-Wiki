@@ -2,7 +2,7 @@
 title: 增强合约
 description: Nexus 麟社上的增强合约
 published: true
-date: 2022-12-11T12:07:04.914Z
+date: 2022-12-11T12:08:39.499Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-11T10:36:02.051Z
@@ -32,8 +32,8 @@ dateCreated: 2022-12-11T10:36:02.051Z
 <p>Nexus 麟社设计了一种多管齐下的方法来解决 Nexus 麟社上的开发问题。 这让每个人都有机会构建和集成真正去中心化的解决方案。 下面给出了 Nexus 麟社上各种合约的详细信息</p>
 <h2>Query DSL 查询领域特定语言</h2>
 <p>Query DSL 查询领域特定语言是一种合约语言，增加了类似于 SQL 查询的功能，包括通配符搜索和逻辑运算符，使人们能够直接通过 API 插件搜索或过滤 Nexus 麟社上的任何数字资产或通证。 例如，可以搜索亚利桑那州的产权。 此功能为去中心化搜索引擎奠定了基础。</p>
-<p>The Query DSL allows you to search any aspect of the chain, you can also filter and even operate on the queried dataset. Supported operators are: <code>min, max, mean, mode, sum, floor, array, sdev, median</code>. More operators will be available at a later date.</p>
-<p>Query basically gives SQL functionality over a blockchain dataset. The operators make it have Excel functionality, among others. It's really powerful for developers. It can even search the entire chain:</p>
+<p>Query DSL 查询领域特定语言允许您搜索链的任何方面，您还可以过滤甚至操作查询的数据集。 支持的运算符有：min、max、mean、mode、sum、floor、array、sdev、median。 稍后将提供更多运营商。</p>
+<p>Query DSL 查询领域特定语言基本上为区块链数据集提供了 SQL 功能。 运营商使其具有 Excel 功能等。 它对开发人员来说真的很强大。 它甚至可以搜索整个链：</p>
 <pre><code class="language-plaintext">register/list/names where='object.name=l*' 
 </code></pre>
 <p>Above will show every name that starts with the letter <code>l</code>. It can then run operators on that, by filtering out fields:</p>
