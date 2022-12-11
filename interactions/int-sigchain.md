@@ -2,16 +2,16 @@
 title: Interactions - Signature Chain
 description: 
 published: false
-date: 2022-10-29T20:17:37.131Z
+date: 2022-12-11T13:20:15.248Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:21:10.199Z
 ---
 
 # Interactions - Signature Chain
-The interactions signature chain is where the funds are alloted funds are stored and all team member invoices are paid.
+The interactions signature chain is where the alloted funds are stored and team invoices paid.
 
-> The embassy has the **recovery phrase** to the branch sigchain and in case of misuse the branch creative layer is responsible for resetting the signature chain.
+> The embassy has the **recovery phrase** to all branch sigchain and in case of misuse the branch creative layer is responsible for resetting the signature chain with the help of the embassy.
 {.is-info}
 
 ## Sigchain Responsibility
@@ -41,6 +41,6 @@ Any payments or debits from the sigchain will follow these:
 
 In case of changing the sigchain credentials the following guidlines need to be followed:
 
-- Password needs to be strong, with a minimum of 40 random charecters.
+- Password needs to be random and strong, with a minimum of 40 random charecters.
 
-- Pin needs to be minimum of 6 charecters.
+- PIN needs to be minimum of 6 charecters.
