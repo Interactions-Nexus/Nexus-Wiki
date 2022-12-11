@@ -2,7 +2,7 @@
 title: 增强合约
 description: Nexus 麟社上的增强合约
 published: true
-date: 2022-12-11T10:52:56.507Z
+date: 2022-12-11T11:34:27.418Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-11T10:36:02.051Z
@@ -11,15 +11,15 @@ dateCreated: 2022-12-11T10:36:02.051Z
 <h1>📃 增强合约</h1>
 <p>Nexus 麟社虚拟机 (NVM) 是一种 <code><strong>state machine</strong></code>状态机，作为一个单一实体存在，由数百个连接的 Nexus 麟社节点维护。</p>
 <p>Nexus 麟社软件堆栈的存在仅仅是为了保持这个特殊状态机的连续、不间断和不可变的运行； 它是所有 Nexus 麟社账户和增强合约所在的环境。 在链中的任何给定点，Nexus 麟社都有一个且只有一个 <code><strong>canonical</strong></code> 规范状态，而 NVM 麟社虚拟机定义了从一个区块到另一个区块计算新有效状态的规则。</p>
-<p>Even though all smart-contract platforms are state machines, the obsession to be scalable for real world usage, culminated in the distinct architecture of NVM. To easily distinguish the better architecture, it was imperative to name contracts on Nexus as Advanced contracts. Below we will unravel the architecture.</p>
 <p>尽管所有智能合约平台都是状态机，但对可扩展性以适应现实世界使用的痴迷最终造就了 NVM 的独特架构。 为了轻松区分更好的架构，必须将 Nexus 麟社上的合约命名为高级合约。 下面我们将解开架构。</p>
 <h2>NVM 麟社虚拟机架构</h2>
 <p>NVM 麟社虚拟机被设计为“64 位元”、“register based“ 基于寄存器； 选择此设计是因为它与 CPU 中央处理器的 64 位元匹配并模仿 CPU 中央处理器缓存寄存器。</p>
 <p>与 EVM 相比，这种设计使 NVM 麟社虚拟机非常快，因为它是为当今的处理器设计的。 用数字表示，EVM 需要 170 万纳秒/指令，NVM 麟社虚拟机只需要 33 纳秒/指令。 由于 EVM 在 64 位元 CPU 上的 256 位长度及其过时的堆栈设计，EVM 处于一个巨大的劣势，因为它需要 4 个周期来完成一条指令。</p>
 <p>NVM 麟社虚拟机有意设计为不图灵完备，这一决定也源于 Nexus 麟社是一个 <code><strong>Verification</strong></code> 验证引擎这一事实。 这种设计有一个巨大的优势，那就是免费的简单交易，而 EVM 需要 Gas 来控制由于糟糕的合约代码而导致的计算请求，这可能会使网络陷入停顿。 使用 NVM 麟社虚拟机设计，增强合约将具有可预测的费用，这些费用将在合约执行前就可以计算出来。</p>
 <p>Nexus 麟社将有不同类型的合约，对于更高级别的 API，将提供模板，用户可以从下拉列表中选择。 对于高级用户，增强合同将使他们能够使用他们选择的领域特定语言的合约。 扩展合约将在以后提供。 有关详细信息，请参阅 &nbsp;<a href="https://nexus.io/roadmap">roadmap</a> 路线图。</p>
-<h2>Operations &amp; Register Layers</h2>
-<p>To put in a simple way, contracts are a request to perform a specific type of instruction on data which results in change in the data. In the Nexus software stack the <code>Operations layer</code> contains the instructions or actions that give registers context, and define more complex contract logic and <code>Register layer</code> is the data layer. A contract is an object containing: a register pre-state (the register that is being operated on that was passed upwards from the Register Layer), a primitive operation (only one primitive operation per contract), and a set of conditions (any amount of conditional operations).</p>
+<h2>Operations &amp; Register Layers 操作和寄存器层</h2>
+<p>简而言之，合约是对数据执行特定类型指令的请求，该指令会导致数据发生变化。 在 Nexus 麟社软件堆栈中，<code>Operations layer</code>&nbsp;操作层包含提供寄存器上下文的指令或操作，并定义更复杂的合约逻辑，<code>Register layer</code>&nbsp;寄存器层是数据层。 合约是一个包含以下内容的对象：寄存器预状态（从寄存器层向上传递的正在操作的寄存器），基元操作（每个合约只有一个基元操作）和一组条件（任何数量 条件操作）。</p>
+<p>&nbsp;</p>
 <h3>Primitive Operations</h3>
 <p>The current iteration of the Operations Layer contains 16 primitive operations, and 54 conditional operations and types. The primitive operations can be best described as the actions taking place on the register such as: WRITE, DEBIT, TRANSFER, APPEND, etc. These actions themselves cause the register to change its state in some way or form, including its movement from one signature chain to another.</p>
 <h3>Conditional Contracts</h3>
