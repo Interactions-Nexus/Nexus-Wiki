@@ -2,7 +2,7 @@
 title: Renumeration
 description: 
 published: true
-date: 2022-11-14T12:08:32.897Z
+date: 2022-12-11T13:25:08.383Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:01:33.834Z
@@ -22,7 +22,7 @@ The facilitator(s) will follow the below guidelines to set the renumeration for 
 
 -	Having a standard pay for working groups with different skill set is not the best way, but a standard pay for the same skill set is advised. Then based on performance the renmeration can be increased.
 
-- THe renumeration will also vary depending if the member(s) is working full time or part time in the branch.
+- The renumeration will also vary depending if the member(s) is working full time or part time in the branch.
 
 -	There can be extra incentives for better performance over the standard pay. But this can also be misused and has to carefully implemented.
 
@@ -34,7 +34,7 @@ The facilitator(s) will follow the below guidelines to set the renumeration for 
 
 -	As the invoices are paid in NXS whose value is volatile, it is recommended to have an exchange rate set for each monthly invoice payout.
 
--	All invoices have to follow a standard invoice template, which makes sure that all the relevant information is provided. This also make it possible to sort search and create visualizations in future.
+-	All invoices have to follow a standard invoice template, which makes sure that all the relevant information is provided. This also makes it possible to sort search and create visualizations in future.
 
 
 ## Renumeration Revision
