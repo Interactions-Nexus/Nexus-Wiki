@@ -2,7 +2,7 @@
 title: 增强合约
 description: Nexus 麟社上的增强合约
 published: true
-date: 2022-12-11T12:08:39.499Z
+date: 2022-12-11T12:18:57.527Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-11T10:36:02.051Z
@@ -36,10 +36,10 @@ dateCreated: 2022-12-11T10:36:02.051Z
 <p>Query DSL 查询领域特定语言基本上为区块链数据集提供了 SQL 功能。 运营商使其具有 Excel 功能等。 它对开发人员来说真的很强大。 它甚至可以搜索整个链：</p>
 <pre><code class="language-plaintext">register/list/names where='object.name=l*' 
 </code></pre>
-<p>Above will show every name that starts with the letter <code>l</code>. It can then run operators on that, by filtering out fields:</p>
+<p>上面将显示每个以字母 l 开头的名称。 然后它可以通过过滤掉字段来运行运算符：</p>
 <pre><code class="language-plaintext">register/list/names/name/array where='object.name=l*'
 </code></pre>
-<p>This will give same dataset, but give you a JSON array of the names that start with <code>'l'</code>, not including the other fields. It also supports multiple filters:</p>
+<p>这将提供相同的数据集，但会提供一个以 “l” 开头的名称的 JSON 数组，不包括其他字段。 它还支持多个过滤器：</p>
 <pre><code class="language-plaintext">register/list/names/name,owner where='object.name=l*'
 </code></pre>
 <p>This will respond with name and owner fields, somewhat like a SQL query where you do select name FROM names. So it gives a developer data modelling capabilities on top of the blockchain functionality.</p>
