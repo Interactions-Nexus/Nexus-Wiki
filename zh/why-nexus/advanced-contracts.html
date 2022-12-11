@@ -2,7 +2,7 @@
 title: 增强合约
 description: Nexus 麟社上的增强合约
 published: true
-date: 2022-12-11T11:34:27.418Z
+date: 2022-12-11T11:44:59.489Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-11T10:36:02.051Z
@@ -19,16 +19,15 @@ dateCreated: 2022-12-11T10:36:02.051Z
 <p>Nexus 麟社将有不同类型的合约，对于更高级别的 API，将提供模板，用户可以从下拉列表中选择。 对于高级用户，增强合同将使他们能够使用他们选择的领域特定语言的合约。 扩展合约将在以后提供。 有关详细信息，请参阅 &nbsp;<a href="https://nexus.io/roadmap">roadmap</a> 路线图。</p>
 <h2>Operations &amp; Register Layers 操作和寄存器层</h2>
 <p>简而言之，合约是对数据执行特定类型指令的请求，该指令会导致数据发生变化。 在 Nexus 麟社软件堆栈中，<code>Operations layer</code>&nbsp;操作层包含提供寄存器上下文的指令或操作，并定义更复杂的合约逻辑，<code>Register layer</code>&nbsp;寄存器层是数据层。 合约是一个包含以下内容的对象：寄存器预状态（从寄存器层向上传递的正在操作的寄存器），基元操作（每个合约只有一个基元操作）和一组条件（任何数量 条件操作）。</p>
-<p>&nbsp;</p>
-<h3>Primitive Operations</h3>
-<p>The current iteration of the Operations Layer contains 16 primitive operations, and 54 conditional operations and types. The primitive operations can be best described as the actions taking place on the register such as: WRITE, DEBIT, TRANSFER, APPEND, etc. These actions themselves cause the register to change its state in some way or form, including its movement from one signature chain to another.</p>
-<h3>Conditional Contracts</h3>
-<p>Conditional Contracts are an agreement between participating parties, outlining a set of requirements that must be met for a transaction to complete. They are the building blocks that allow users to engage with one another, such as contract expiration, or the exchanging of items. More advanced forms of non-custodial escrow or arbitration are also possible. Conditional statements have no limit to their complexity, being capable of handling groups of groups of conditions that together evaluate to either true or false. In the case the conditions return true, this allows the recipient of the transaction to claim their funds or object (depending on if this was a TRANSFER or DEBIT). In the case that the recipient is unable to satisfy the conditions, after a period of time set by the sender, the transaction will be redeemable.</p>
+<h3>Primitive Operations 基元操作</h3>
+<p>操作层的当前迭代包含 16 个基元操作和 54 个条件操作和类型。 基元操作可以最好地描述为在寄存器上发生的操作，例如：WRITE、DEBIT、TRANSFER、APPEND 等。这些操作本身会导致寄存器以某种方式或形式更改其状态，包括从一个签名开始的移动 链到另一个。</p>
+<h3>Conditional Contracts 条件合约</h3>
+<p>条件合约是参与方之间的协议，概述了完成交易必须满足的一组要求。 它们是允许用户相互参与的基石，例如合约到期或物品交换。 更高级的非托管托管或仲裁形式也是可能的。 条件语句的复杂性没有限制，能够处理共同评估为真或假的条件组。 在条件返回 true 的情况下，这允许交易的接收者索取他们的资金或物品（取决于这是 TRANSFER 还是 DEBIT）。 如果接收方无法满足条件，在发送方设定的一段时间后，交易将可赎回。</p>
 <blockquote>
-  <p>More information will be provided in the future when new updates are released.</p>
+  <p>在发布程序新更新时将提供更多信息。</p>
 </blockquote>
-<h2>API Layer</h2>
-<p>The API layer extrapolates from the contracts (registers and operation layers). The developers can easily use the API, rather than having to code a <code>smart-contract</code>. Even though API layer is not a contract layer it uses the same contract layers which can be directly accessed by domain specific languages (DSL), to create custom contracts. This highlights the brilliant architecture of the software stack as same contracts can be made available to no-code, web developers or to integrate into existing applications, at the same time abstracting them from the complexity of code or blockchain.</p>
+<h2>API Layer 插件层</h2>
+<p>API 插件层从合约（寄存器和操作层）外推。 开发人员可以轻松使用 API 插件，而不必编写 <code>smart-contract</code>&nbsp;智能合约。 尽管 API 插件层不是合约层，但它使用相同的合约层，可以通过领域特定语言 (DSL) 直接访问，以创建自定义合约。 这突出了软件堆栈的出色架构，因为相同的合约可以提供给无代码、Web 开发人员或集成到现有应用程序中，同时将它们从代码或区块链的复杂性中抽象出来。</p>
 <h1>Contracts on Nexus</h1>
 <p>Nexus has designed a multi pronged approach to tackle development on Nexus. This gives everyone an opportunity to build and integrate truly decentralized solutions. The details of the various contracts on Nexus are given below</p>
 <h2>Query DSL</h2>
