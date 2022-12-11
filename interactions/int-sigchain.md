@@ -1,8 +1,8 @@
 ---
 title: Interactions - Signature Chain
 description: 
-published: false
-date: 2022-12-11T13:20:15.248Z
+published: true
+date: 2022-12-11T13:43:43.854Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:21:10.199Z
