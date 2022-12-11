@@ -2,66 +2,66 @@
 title: 增强合约
 description: Nexus 麟社上的增强合约
 published: true
-date: 2022-12-11T10:36:29.873Z
+date: 2022-12-11T10:36:45.159Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-11T10:36:02.051Z
 -->
 
-<h1 class="toc-header" id="advanced-contracts"> 📃 Advanced Contracts</h1>
-<p>The Nexus Virtual Machine (NVM) is a <strong><code>state machine</code></strong> and exists as one single entity maintained by hundreds of connected Nexus nodes.</p>
-<p>The Nexus software stack exists solely for the purpose of keeping the continuous, uninterrupted, and immutable operation of this special state machine; it's the environment in which all Nexus Accounts and Advanced contracts live. At any given point in the chain, Nexus has one and only one <strong><code>canonical</code></strong> state, and the NVM is what defines the rules for computing a new valid state from block to block.</p>
+<h1>📃 增强合约</h1>
+<p>The Nexus Virtual Machine (NVM) is a <code><strong>state machine</strong></code> and exists as one single entity maintained by hundreds of connected Nexus nodes.</p>
+<p>The Nexus software stack exists solely for the purpose of keeping the continuous, uninterrupted, and immutable operation of this special state machine; it's the environment in which all Nexus Accounts and Advanced contracts live. At any given point in the chain, Nexus has one and only one <code><strong>canonical</strong></code> state, and the NVM is what defines the rules for computing a new valid state from block to block.</p>
 <p>Even though all smart-contract platforms are state machines, the obsession to be scalable for real world usage, culminated in the distinct architecture of NVM. To easily distinguish the better architecture, it was imperative to name contracts on Nexus as Advanced contracts. Below we will unravel the architecture.</p>
-<h2 class="toc-header" id="nvm-architecture"> NVM Architecture</h2>
+<h2>NVM Architecture</h2>
 <p>The NVM is designed as a "<code>64 bit"</code>, "<code>register based"</code>; this design was chosen as it matches the CPU's 64 bit and mimics the CPU cache registers.</p>
 <p>This design makes the NVM very fast compared to EVM as it's designed for the processors of today. To put it in numbers, EVM takes 1.7 million nanoseconds/instruction and NVM takes 33 nanoseconds/instruction. EVM is at a huge disadvantage as it takes 4 cycles to complete an instruction due to its 256 bit length on a 64 bit CPU and also its dated stack design.</p>
-<p>The NVM is designed intentionally not to be turing complete, this decision also stems from the fact the Nexus is a <strong><code>Verification</code></strong> engine. This design has a huge upside and that is free simple transactions, while EVM needs Gas to control computation requests due to bad contract code, which can grind the network to a halt. With the NVM design advanced contracts will have predictable fees which will be calculated before contract execution.</p>
-<p>Nexus will have different types of contracts, for the higher level API's, templates will be provided, which a user can choose from a dropdown list. For advanced users augmented contracts will empower them to use contracts with their choice of domain specific language. Augmented contracts will be available at a later date. For more details refer the <a class="is-external-link" href="https://nexus.io/roadmap">roadmap</a>.</p>
-<h2 class="toc-header" id="operations-register-layers"> Operations &amp; Register Layers</h2>
+<p>The NVM is designed intentionally not to be turing complete, this decision also stems from the fact the Nexus is a <code><strong>Verification</strong></code> engine. This design has a huge upside and that is free simple transactions, while EVM needs Gas to control computation requests due to bad contract code, which can grind the network to a halt. With the NVM design advanced contracts will have predictable fees which will be calculated before contract execution.</p>
+<p>Nexus will have different types of contracts, for the higher level API's, templates will be provided, which a user can choose from a dropdown list. For advanced users augmented contracts will empower them to use contracts with their choice of domain specific language. Augmented contracts will be available at a later date. For more details refer the <a href="https://nexus.io/roadmap">roadmap</a>.</p>
+<h2>Operations &amp; Register Layers</h2>
 <p>To put in a simple way, contracts are a request to perform a specific type of instruction on data which results in change in the data. In the Nexus software stack the <code>Operations layer</code> contains the instructions or actions that give registers context, and define more complex contract logic and <code>Register layer</code> is the data layer. A contract is an object containing: a register pre-state (the register that is being operated on that was passed upwards from the Register Layer), a primitive operation (only one primitive operation per contract), and a set of conditions (any amount of conditional operations).</p>
-<h3 class="toc-header" id="primitive-operations"> Primitive Operations</h3>
+<h3>Primitive Operations</h3>
 <p>The current iteration of the Operations Layer contains 16 primitive operations, and 54 conditional operations and types. The primitive operations can be best described as the actions taking place on the register such as: WRITE, DEBIT, TRANSFER, APPEND, etc. These actions themselves cause the register to change its state in some way or form, including its movement from one signature chain to another.</p>
-<h3 class="toc-header" id="conditional-contracts"> Conditional Contracts</h3>
+<h3>Conditional Contracts</h3>
 <p>Conditional Contracts are an agreement between participating parties, outlining a set of requirements that must be met for a transaction to complete. They are the building blocks that allow users to engage with one another, such as contract expiration, or the exchanging of items. More advanced forms of non-custodial escrow or arbitration are also possible. Conditional statements have no limit to their complexity, being capable of handling groups of groups of conditions that together evaluate to either true or false. In the case the conditions return true, this allows the recipient of the transaction to claim their funds or object (depending on if this was a TRANSFER or DEBIT). In the case that the recipient is unable to satisfy the conditions, after a period of time set by the sender, the transaction will be redeemable.</p>
-<blockquote class="is-info">
-<p>More information will be provided in the future when new updates are released.</p>
+<blockquote>
+  <p>More information will be provided in the future when new updates are released.</p>
 </blockquote>
-<h2 class="toc-header" id="api-layer"> API Layer</h2>
+<h2>API Layer</h2>
 <p>The API layer extrapolates from the contracts (registers and operation layers). The developers can easily use the API, rather than having to code a <code>smart-contract</code>. Even though API layer is not a contract layer it uses the same contract layers which can be directly accessed by domain specific languages (DSL), to create custom contracts. This highlights the brilliant architecture of the software stack as same contracts can be made available to no-code, web developers or to integrate into existing applications, at the same time abstracting them from the complexity of code or blockchain.</p>
-<h1 class="toc-header" id="contracts-on-nexus"> Contracts on Nexus</h1>
+<h1>Contracts on Nexus</h1>
 <p>Nexus has designed a multi pronged approach to tackle development on Nexus. This gives everyone an opportunity to build and integrate truly decentralized solutions. The details of the various contracts on Nexus are given below</p>
-<h2 class="toc-header" id="query-dsl"> Query DSL</h2>
+<h2>Query DSL</h2>
 <p>Query DSL is one of the contract languages that adds capabilities similar to SQL query, including wildcard search and logical operators, enabling one to search or filter any digital asset or token on Nexus directly through the API. For example, one could search Property Titles in Arizona. This feature sets the foundation for a decentralized search engine.</p>
 <p>The Query DSL allows you to search any aspect of the chain, you can also filter and even operate on the queried dataset. Supported operators are: <code>min, max, mean, mode, sum, floor, array, sdev, median</code>. More operators will be available at a later date.</p>
 <p>Query basically gives SQL functionality over a blockchain dataset. The operators make it have Excel functionality, among others. It's really powerful for developers. It can even search the entire chain:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/names where='object.name=l*' 
+<pre><code class="language-plaintext">register/list/names where='object.name=l*' 
 </code></pre>
 <p>Above will show every name that starts with the letter <code>l</code>. It can then run operators on that, by filtering out fields:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/names/name/array where='object.name=l*'
+<pre><code class="language-plaintext">register/list/names/name/array where='object.name=l*'
 </code></pre>
 <p>This will give same dataset, but give you a JSON array of the names that start with <code>'l'</code>, not including the other fields. It also supports multiple filters:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/names/name,owner where='object.name=l*'
+<pre><code class="language-plaintext">register/list/names/name,owner where='object.name=l*'
 </code></pre>
 <p>This will respond with name and owner fields, somewhat like a SQL query where you do select name FROM names. So it gives a developer data modelling capabilities on top of the blockchain functionality.</p>
 <p>A global search of entire chain takes 1 to 2 seconds. Running the first register command I get:</p>
 <p><code>[Completed in 1862.234494 ms]</code></p>
 <p>For more information, check out the link below:</p>
-<ul class="links-list">
-<li><a class="is-internal-link is-valid-page" href="/en/tritium++/queries">Queries <em>A SQL like syntax query DSL</em></a></li>
-<li><a class="is-internal-link is-valid-page" href="/en/tritium++/register">Register API <em>The Register API</em></a></li>
+<ul>
+  <li><a href="/en/tritium++/queries">Queries <i>A SQL like syntax query DSL</i></a></li>
+  <li><a href="/en/tritium++/register">Register API <i>The Register API</i></a></li>
 </ul>
-<h2 class="toc-header" id="conditional-contracts-1"> Conditional Contracts</h2>
+<h2>Conditional Contracts</h2>
 <p>Conditional contracts are binary contract templates, users will be able to select a contract standard to send with. This will lead into dynamic allocation of contract standards and object standards per command-set. Standardization where we can allocate new contracts that will automatically populate in standards lists, without the need for a wallet upgrade.</p>
 <p>What that means is we will be able to deploy new contract standards without needing to release new wallet. It will read a public sigchain that records contract and object standards. This will lead into dynamic constants as well, such as fees so that we can adjust consensus critical values without the need for hard forks or updates to the core daemon.</p>
 <p>When a user sends funds using the Nexus Interface, they get an extra drop-down that allows to select from a list of standard template contracts to send under. This is a major step towards real world use of smart contracts.</p>
-<h2 class="toc-header" id="conditional-contracts-dsl-future"> Conditional Contracts DSL (Future)</h2>
+<h2>Conditional Contracts DSL (Future)</h2>
 <p>Conditional Contracts DSL, a new standard to be written in a higher-level language and compiled into bytecode. Designed for users who will be developing new API’s or contract standards. It enables conditional contracts to be written directly into the API with the use of English, which is a crucial step in realising the full potential of Tritium’s contract functionality. This approach also allows people to be able to read or interpret contracts. This will reveal a lot of new functionality to developers.</p>
 <p>We thus far have maintained the standard contracts as embedded constants in the codebase. The ability for developers to code new contracts, provides the opportunity for a dynamic standardization using Nexus to manage this state, similar to dynamic object modelling.</p>
-<h2 class="toc-header" id="augmented-contracts-roadmap-2023-2025"> Augmented Contracts ( Roadmap: 2023-2025)</h2>
+<h2>Augmented Contracts ( Roadmap: 2023-2025)</h2>
 <p>For advanced developers who need full creative control, we have developed Augmented Contacts which can be used with any domain specific language of choice. Today we have Conditional Contracts, Primitive Operators, and Registers.</p>
 <p>Conditional VM will be a subset of Augmented, such as in my function I have an <code>if</code> statement, this is executed as a condition. But augmented will allow writing complex code. For instance I have an account, I do an operator overload function for <code>DEBIT</code>, that can add additional requirements for a debit from that account such as max amount per time interval, etc. I could add another public method that could be invoked by another user to draw an amount on my account if they fulfill a certain condition, so forth. It will be the full implementation of our interpreter where we will have the functionality of most languages like Java and C++.</p>
 <p>Augmented Contracts are the second type of contracts that will be available in the Tritium Protocol. These types of contracts extend the Conditional VM (Virtual Machine that processes Conditional Statements) to provide additional benefits including, but not limited to, methods, functions, operation overloading, and encapsulation. Augmented contracts add a layer of complexity and processing, so will carry a higher fee to execute. This will require more on-chain processing, but overall makes our Contract Engine much more powerful.</p>
 <p>The goal of Augmented Contracts is to provide relative capabilities of complex languages like C++, so we will support polymorphism, operator overloading, functions, methods, public, private, protected, unique, etc. augmented contracts builds on the existing VM- and register-based architecture. More programmable languages and things like maps, vectors, functions, etc. will come with augmented contracts.</p>
-<blockquote class="is-info">
-<p>More information will be provided when available.</p>
+<blockquote>
+  <p>More information will be provided when available.</p>
 </blockquote>
