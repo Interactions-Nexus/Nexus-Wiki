@@ -2,7 +2,7 @@
 title: Renumeration
 description: 
 published: true
-date: 2022-12-11T13:25:08.383Z
+date: 2022-12-11T13:26:47.697Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:01:33.834Z
