@@ -1,8 +1,8 @@
 ---
 title: Isolation
 description: 
-published: false
-date: 2022-11-14T09:37:10.121Z
+published: true
+date: 2022-12-11T13:34:09.899Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T18:22:33.837Z
@@ -19,7 +19,7 @@ Isolation is one of the foundational element of the Nexus DAO.  Ambassadors are 
 
 - No confidential information or credentials should be shared with any person or entity from another group inside an branch, or to a person in another branch or to any other third party outside the DAO.
 
-- Any person in the branch or group(s) cannot receive any kind of bribe in crypto, cash or kind to give out confidential information or any kind of details related to the Nexus branch.
+- Any person in the branch or group(s) cannot receive any kind of bribe in crypto, cash or kind to give out confidential information or any kind of details related to the Nexus DAO.
 
 - Cannot be part of specific groups for Ambassadors from different branches and groups.
 
