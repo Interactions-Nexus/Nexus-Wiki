@@ -2,7 +2,7 @@
 title: Performance Review
 description: 
 published: true
-date: 2022-12-11T13:43:02.888Z
+date: 2022-12-11T20:11:17.006Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T09:30:08.775Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-29T09:30:08.775Z
 
 # Performance Review
 
-Every group(s) and member(s) in the arm will be monitored and there will be performance reviews. Chair and facilitator(s) will be responsible to evaluate their group members performance and if the any member(s) performance is unsatisfactory, a incident report will be initiated. A total of three incident reports on any member(s) will automatically initiate disciplinary action resulting in termination. 
+Every group(s) and member(s) in the arm will be monitored and there will be performance reviews. Chair and facilitator(s) will be responsible to evaluate their group members performance and if any member's performance is unsatisfactory, an incident report will be initiated. A total of three incident reports on any member(s) will automatically initiate disciplinary action resulting in termination. 
 
 
 ## Leave of Absence
@@ -30,7 +30,7 @@ Every team member in the Interactions arm will be monitored by the creative laye
 
 ## Unfit to work for Interactions:
 There may be cases where a person may not be fit to work for Interactions, a few are mentioned below:
-- Does not beleive in the DAO constituition, arm internal processes or the vision of Nexus.
+- Does not beleive in the DAO constituition, arm internal processes, or the vision of Nexus.
 - Conflict of interest which creates undue advantage to the member or any third party which the Chair and facilitators(s) are not informed in advance.
 - Non performance for long time.
 - Any such conditions which inhibits the member(s) ability to perform his duties.
