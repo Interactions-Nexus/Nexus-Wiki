@@ -1,8 +1,8 @@
 ---
 title: Departure
 description: 
-published: false
-date: 2022-10-29T12:28:55.909Z
+published: true
+date: 2022-12-11T13:31:45.388Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:28:36.996Z
@@ -22,7 +22,7 @@ When a team member wants to resign / depart, he will submit a resignation letter
 
 -	Take charge of all the credentials managed by the person and change them.
 
--	Conduct audits on all the things managed by the person and ensure that his reliever gives a clear statement. 
+-	Conduct audits on all the things managed by the person and ensure that his reliever gives an `All clear`. 
 
 -	Relieve the person and ask the person to leave the channel after the farewell.
 
