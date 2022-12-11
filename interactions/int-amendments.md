@@ -1,8 +1,8 @@
 ---
 title: Amendment Protocol
 description: How to amend Interactions internal processes 
-published: false
-date: 2022-10-29T20:51:51.574Z
+published: true
+date: 2022-12-11T13:44:30.165Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:37:22.864Z
