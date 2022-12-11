@@ -2,14 +2,14 @@
 title: Interactions - Signature Chain
 description: 
 published: true
-date: 2022-12-11T13:43:43.854Z
+date: 2022-12-11T20:17:10.340Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:21:10.199Z
 ---
 
 # Interactions - Signature Chain
-The interactions signature chain is where the alloted funds are stored and team invoices paid.
+The Interactions signature chain is where the allotted funds are stored and team invoices paid.
 
 > The embassy has the **recovery phrase** to all branch sigchain and in case of misuse the branch creative layer is responsible for resetting the signature chain with the help of the embassy.
 {.is-info}
@@ -24,7 +24,7 @@ Any transfer or receving of Sigchain credentials has to be informed to the creat
 
 - The chair will invoice the embassy for the allocated funds by 26th of each month and is responsible to invoice is filled per the template. 
 
-- The chair is responsible to pay team members based on invoices received, but after checking and making sure the invoice is filled as described in the template and conforms to the agreed renumeration and there is no overcharging. In case the chair needs more clarity he can aproach the concerned group facilitator(s).
+- The chair is responsible to pay team members based on invoices received, but after checking and making sure the invoice is filled as described in the template and conforms to the agreed remuneration and there is no overcharging. In case the chair needs more clarity he can approach the concerned group facilitator(s).
 
 
 ## Payments from the Sigchain
