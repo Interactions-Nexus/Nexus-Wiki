@@ -2,7 +2,7 @@
 title: Budgets
 description: 
 published: true
-date: 2022-12-11T13:36:17.018Z
+date: 2022-12-11T13:36:34.616Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T18:40:00.306Z
@@ -26,4 +26,4 @@ Following are the guidelines to be followed:
 
 - The whole branch has to move fast to cut down expenses in case of a market downturn or unforseen event which might shrink the budgets.
 
-- Budget cuts will also involve laying of the team members in a worst case scenario. This will be decided at the creative layer.
+- Budget cuts will also involve laying off team members in a worst case scenario. This will be decided at the creative layer.
