@@ -2,7 +2,7 @@
 title: Responsibilities
 description: Responsibilities of every person in the arm
 published: false
-date: 2022-10-29T21:08:20.253Z
+date: 2022-12-11T20:13:37.733Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-29T12:14:45.158Z
@@ -18,8 +18,8 @@ The chair has the following responsibilities:
 - Hiring and firing team members in the arm.
 - Make sure that every new hire understands the Nexus Vision, DAO constitution and the arm internal processes before signing the contractor agreement.
 - Signing the contract agreement for new hires in the branch.
-- Represent the arm at the stratergy layer.
-- Get the best budget alloted at the straterty layer for the brnach.
+- Represent the arm at the strategy layer.
+- Get the best budget alloted at the strategy layer for the branch.
 - Make sure all group(s) carry out the facilitator(s) election in time.
 - Manage the branch sigchain.
 - Send invoice to embassy for the monthly funds.
