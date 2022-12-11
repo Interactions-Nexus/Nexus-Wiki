@@ -1,8 +1,8 @@
 ---
-title: Renumeration
+title: Remuneration
 description: 
 published: true
-date: 2022-12-11T19:25:45.235Z
+date: 2022-12-11T22:43:55.969Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:01:33.834Z
