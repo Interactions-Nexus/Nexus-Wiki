@@ -2,7 +2,7 @@
 title: 增强合约
 description: Nexus 麟社上的增强合约
 published: true
-date: 2022-12-11T12:18:57.527Z
+date: 2022-12-11T12:26:44.942Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-11T10:36:02.051Z
@@ -42,10 +42,10 @@ dateCreated: 2022-12-11T10:36:02.051Z
 <p>这将提供相同的数据集，但会提供一个以 “l” 开头的名称的 JSON 数组，不包括其他字段。 它还支持多个过滤器：</p>
 <pre><code class="language-plaintext">register/list/names/name,owner where='object.name=l*'
 </code></pre>
-<p>This will respond with name and owner fields, somewhat like a SQL query where you do select name FROM names. So it gives a developer data modelling capabilities on top of the blockchain functionality.</p>
-<p>A global search of entire chain takes 1 to 2 seconds. Running the first register command I get:</p>
+<p>这将响应名称和所有者字段，有点像您从名称中选择名称的 SQL 查询。 因此，它为开发人员提供了基于区块链功能的数据建模功能。</p>
+<p>对整个链的全局搜索需要 1 到 2 秒。 运行得到的第一个注册命令：</p>
 <p><code>[Completed in 1862.234494 ms]</code></p>
-<p>For more information, check out the link below:</p>
+<p>有关更多信息，请查看以下链接：</p>
 <ul>
   <li><a href="/en/tritium++/queries">Queries <i>A SQL like syntax query DSL</i></a></li>
   <li><a href="/en/tritium++/register">Register API <i>The Register API</i></a></li>
