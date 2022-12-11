@@ -2,7 +2,7 @@
 title: Incident Report
 description: 
 published: true
-date: 2022-12-11T13:42:04.540Z
+date: 2022-12-11T20:06:30.996Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T19:15:41.560Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-28T19:15:41.560Z
 
 # INCIDENT REPORT
 
-The arm will check and balance itself and the responsibility lies with every team member working in the arm. Every person in the arm has to be fully aware of the DAO constituition, arm processes and the contract. It is manadated that when any of the DAO or arm process is broken it has to be submitted as incident report to the chair. The incident reporting should not be used as a weapon to haress other member(s) or group(s) and the arm has to make sure of this.
+The arm will check and balance itself, and the responsibility lies with every team member working in the arm. Every person in the arm has to be fully aware of the DAO constituition, arm processes, and the contract. It is manadated that when any of the DAO or arm process is broken it has to be submitted as incident report to the chair. The incident reporting should not be used as a weapon to harass other member(s) or group(s) and the arm has to make sure of this.
 
 The incident reports will be of two types:
 
@@ -68,12 +68,12 @@ The following violations but not limited to will be filed under critical interna
 
 When a critical incident is filed, it should have verifiable proof, it will be documented and an investigation will be conducted by the facilitators in the shortest possible time.
 
-Once the chair or facilitator(s) receive a critical incident, they will first decide with a poll if this needs furthur through inverstigation or the proof provided is not sufficient or the case is not to be considered. The poll will need a 51% majority.
+Once the chair or facilitator(s) receive a critical incident, they will first decide with a poll if this needs further through inverstigation or the proof provided is not sufficient or the case is not to be considered. The poll will need a 51% majority.
 
 In case an investigation is recommended then:
 
-- The person who is under investigation will have to step down voluntarily or be releaved from his/her duties with immediate effect till the investigation is completed. In case the incident is filed against the chair or facilitator(s) an election has to be conducted to choose a temporary replacement.
+- The person who is under investigation will have to step down voluntarily or be relieved from his/her duties with immediate effect until the investigation is completed. In case the incident is filed against the chair or facilitator(s), an election has to be conducted to choose a temporary replacement.
 
-- If the critical incident is against a group then that group facilitator(s) will not be part of the investigation team and will also be temporarily removed from creative layer till the investigation is completed. The group will function normally till the investigation is completed, but will not be allowed to tamper with the investigation in any manner.
+- If the critical incident is against a group then that group facilitator(s) will not be part of the investigation team and will also be temporarily removed from creative layer till the investigation is completed. The group will function normally until the investigation is completed, but will not be allowed to tamper with the investigation in any manner.
 
 - If the investigation finds that the person who filed the critical incident was having malicious intent and wanted to cause harm to the concerned person or group(s), then he will be terminated with immediate effect.
