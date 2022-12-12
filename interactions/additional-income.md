@@ -2,7 +2,7 @@
 title: Additional Income
 description: 
 published: false
-date: 2022-12-12T19:00:17.029Z
+date: 2022-12-12T22:13:17.944Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-12T09:20:20.854Z
@@ -16,9 +16,9 @@ As of today we have severe budget constriants due to very low NXS price, which h
 This document will lay out the guidelines, how to manage this income and see that things are not misused.
 
 - All the services will be charged in NXS only.
-- All the charges will be credited to seperate accounts on the Interactions sigchain. This will enable full auditability for each project.
+- All the charges will be credited to seperate accounts on the Interactions sigchain. This will enable full audit for each project.
 - Proceeds only go to fund the project which is generating it until it becomes self sufficient and starts earning more than the operating cost, then the creative layer can decide where the money can be utilized.
-- 
+- This money hasto be invested  
 
 
  
