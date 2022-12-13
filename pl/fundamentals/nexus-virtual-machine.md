@@ -1,8 +1,8 @@
 ---
 title: Maszyna wirtualna Nexus
-description: 
+description: Wprowadzenie do NVM
 published: true
-date: 2022-12-13T23:24:35.695Z
+date: 2022-12-13T23:27:02.663Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T14:42:58.085Z
