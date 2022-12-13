@@ -2,7 +2,7 @@
 title: Nexus Virtual Machine
 description: Introduction to NVM
 published: true
-date: 2022-10-29T17:39:27.897Z
+date: 2022-12-13T23:18:36.777Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:36.999Z
@@ -18,7 +18,7 @@ Even though all smart-contract platforms are state machines, the obsession to be
 
 ### NVM Architecture
 
-The NVM is designed as a "`64-bit"`, "`register-based`; this design was chosen as it matches the CPU's 64 bits and mimics the CPU cache registers.
+The NVM is designed as a `64-bit`, `register-based`; this design was chosen as it matches the CPU's 64 bits and mimics the CPU cache registers.
 
 This design makes the NVM very fast compared to EVM as it's designed for the processors of today. To put it in numbers, EVM takes 1.7 million nanoseconds/instruction and NVM takes 33 nanoseconds/instruction. EVM is at a huge disadvantage as it takes 4 cycles to complete an instruction due to its 256 bit length on a 64 bit CPU and also its dated stack design.
 
