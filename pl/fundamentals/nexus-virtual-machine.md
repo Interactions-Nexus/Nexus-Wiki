@@ -2,7 +2,7 @@
 title: Maszyna wirtualna Nexus
 description: 
 published: true
-date: 2022-12-13T23:16:43.126Z
+date: 2022-12-13T23:24:35.695Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T14:42:58.085Z
@@ -18,10 +18,10 @@ Mimo że wszystkie platformy inteligentnych kontraktów są maszynami stanowymi,
 
 ### Architektura NVM
 
-NVM jest zaprojektowany jako „64-bitowy”, „oparty na rejestrach”; ten projekt został wybrany, ponieważ pasuje do 64 bitów procesora i naśladuje rejestry pamięci podręcznej procesora.
+NVM jest zaprojektowany jako `64-bitowy`, `oparty na rejestrach`; ten projekt został wybrany, ponieważ pasuje do 64 bitów procesora i naśladuje rejestry pamięci podręcznej procesora.
 
 Ta konstrukcja sprawia, że NVM jest bardzo szybki w porównaniu do EVM, ponieważ jest przeznaczony dla dzisiejszych procesorów. Ujmując to w liczbach, EVM zajmuje 1,7 miliona nanosekund/instrukcję, a NVM zajmuje 33 nanosekundy/instrukcję. EVM ma ogromną wadę, ponieważ wykonanie instrukcji zajmuje 4 cykle ze względu na 256-bitową długość na 64-bitowym procesorze, a także przestarzały projekt stosu.
 
-NVM jest celowo zaprojektowany tak, aby nie był kompletny. Decyzja ta wynika również z faktu, że Nexus jest silnikiem **`Verification`**. Ten projekt ma ogromną zaletę, a mianowicie darmowe proste transakcje, podczas gdy EVM potrzebuje Gas do kontrolowania żądań obliczeniowych z powodu złego kodu, który może zatrzymać sieć. Dzięki projektowi NVM zaawansowane umowy będą miały przewidywalne opłaty, które zostaną obliczone przed wykonaniem umowy.
+NVM jest celowo zaprojektowany tak, aby nie był kompletny z turingiem. Decyzja ta wynika również z faktu, że Nexus jest silnikiem **`Weryfikacji`**. Ten projekt ma ogromną zaletę, a mianowicie darmowe proste transakcje, podczas gdy EVM potrzebuje Gas do kontrolowania żądań obliczeniowych z powodu złego kodu, który może zatrzymać sieć. Dzięki projektowi NVM zaawansowane umowy będą miały przewidywalne opłaty, które zostaną obliczone przed wykonaniem umowy.
 
-Nexus będzie posiadał różne rodzaje umów, dla API wyższego poziomu dostępne będą szablony, które użytkownik będzie mógł wybrać z rozwijanej listy. Zaawansowanym użytkownikom rozszerzone umowy umożliwią im korzystanie z umów z wyborem języka specyficznego dla domeny. Rozszerzone kontrakty będą dostępne w późniejszym terminie. Aby uzyskać więcej informacji, zapoznaj się z [mapą drogową](https://nexus.io/roadmap)
+Nexus będzie posiadał różne rodzaje umów, dla API wyższego poziomu dostępne będą szablony, które użytkownik będzie mógł wybrać z rozwijanej listy. Zaawansowanym użytkownikom rozszerzone umowy umożliwią im korzystanie z umów z wyborem języka specyficznego dla domeny. Rozszerzone kontrakty będą dostępne w późniejszym terminie. Aby uzyskać więcej informacji, zapoznaj się z [mapą drogową](https://nexus.io/roadmap).
