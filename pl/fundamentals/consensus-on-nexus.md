@@ -2,7 +2,7 @@
 title: Konsensus Nexusa
 description: 
 published: true
-date: 2022-10-23T20:55:49.967Z
+date: 2022-12-13T23:55:28.209Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-21T22:00:40.172Z
@@ -45,7 +45,7 @@ W PoS zamiast górników są „fałszerze”. Ci fałszerze stawiają pewną il
 
 **Delegowany dowód stawki (DPoS):**
 
-Ta metoda działa podobnie do PoS. Ale zamiast korzystać z prawdopodobieństwa, posiadacze kryptowalut mogą oddawać głosy przydzielone do ich udziałów w celu wyznaczenia świadków. Świadkowie ci zabezpieczają i weryfikują blockchain, nie potrzebują własnej kryptowaluty, ale potrzebują głosów. Ten protokół konsensusu jest bardziej scentralizowany niż inne. DPoS jest używany przez BNB**,** BitShares, Steem i EOS.
+Ta metoda działa podobnie do PoS. Ale zamiast korzystać z prawdopodobieństwa, posiadacze kryptowalut mogą oddawać głosy przydzielone do ich udziałów w celu wyznaczenia świadków. Świadkowie ci zabezpieczają i weryfikują blockchain, nie potrzebują własnej kryptowaluty, ale potrzebują głosów. Ten protokół konsensusu jest bardziej scentralizowany niż inne. DPoS jest używany przez BNB, BitShares, Steem i EOS.
 
 **Dowód uprawnień (PoA):**
 
@@ -53,14 +53,14 @@ Prawdopodobnie ponownie bardziej scentralizowany, PoA ma z góry określone wali
 
 ## Konsensus Nexusa:
 
-Jeśli nie jesteś nowy w kryptowalutach, prawdopodobnie zdajesz sobie sprawę z toczącej się debaty między Proof of Work (PoW) a Proof of Stake (PoS), który jest lepszym mechanizmem konsensusu w celu zabezpieczenia łańcucha bloków. W Nexusie dostrzegamy zalety obu i wierzymy, że różnorodność jest mocną stroną. Właśnie dlatego Nexus łączy obie te cechy, wykorzystując wiele kanałów konsensusu w celu zabezpieczenia stanu księgi. Dywersyfikując charakter naszej struktury konsensusu, unikamy zależności od jednego mechanizmu, poprawiając nasze ogólne bezpieczeństwo.
+Jeśli nie jesteś nowy w kryptowalutach, prawdopodobnie zdajesz sobie sprawę z toczącej się debaty między Proof of Work (PoW), a Proof of Stake (PoS), który jest lepszym mechanizmem konsensusu w celu zabezpieczenia łańcucha bloków. W Nexusie dostrzegamy zalety obu i wierzymy, że różnorodność jest mocną stroną. Właśnie dlatego Nexus łączy obie te cechy, wykorzystując wiele kanałów konsensusu w celu zabezpieczenia stanu księgi. Dywersyfikując charakter naszej struktury konsensusu, unikamy zależności od jednego mechanizmu, poprawiając nasze ogólne bezpieczeństwo.
 
-Więc jak to wygląda? Nexus składa się z trzech kanałów, dwóch PoW i jednegoPoz. Pierwszy kanał PoW wykorzystuje algorytm haszujący (podobny do wielu innych łańcuchów bloków) w celu udowodnienia działania, podczas gdy kanał prime wykorzystuje algorytm, w którym górnicy są zobowiązani do wyszukiwania klastrów bardzo dużych liczb pierwszych, oferując unikalną odmianę zasady PoW . Wreszcie kanał PoS przyjmuje energooszczędną, prostą funkcję, w której „moc” wydobywcza użytkowników jest określana na podstawie ich postawionego salda i wyniku zaufania.
+Więc jak to wygląda? Nexus składa się z trzech kanałów, dwóch PoW i jednego PoS. Pierwszy kanał PoW wykorzystuje algorytm haszujący (podobny do wielu innych łańcuchów bloków) w celu udowodnienia działania, podczas gdy kanał prime wykorzystuje algorytm, w którym górnicy są zobowiązani do wyszukiwania klastrów bardzo dużych liczb pierwszych, oferując unikalną odmianę zasady PoW . Wreszcie kanał PoS przyjmuje energooszczędną, prostą funkcję, w której „moc” wydobywcza użytkowników jest określana na podstawie ich stakowanego salda i wyniku zaufania.
 
 Dlaczego Nexus zdecydował się na wielopłaszczyznowy model konsensusu? Takie podejście ma wiele zalet, ale krótko mówiąc, jest ono bezpieczniejsze, bardziej sprawiedliwe i daje nam większe możliwości dostosowania się do przyszłych wymagań. Maksymaliści szybko zwrócą uwagę, że na razie Bitcoin jest niekwestionowanym królem bezpieczeństwa blockchain, a ponieważ wykorzystuje model konsensusu PoW, wielu zakłada, że ​​oznacza to, że PoW jest również królem konsensusu. Istnieją jednak pewne [rażące obawy](https://hackernoon.com/proof-of-work-or-proof-of-waste-9c1710b7f025) polegające wyłącznie na PoW, nawet bez uwzględnienia powszechnego argumentu podkreślającego niezrównoważone zużycie energii , ponieważ będzie to dyskusyjne w związku z przełomami w energetyce odnawialnej.
 
-Proof of Stake został po raz pierwszy wprowadzony przez PeerCoin i szybko zyskał popularność wśród wschodzących platform blockchain. Choć mocno krytykowany przez maksymalistów PoW, konsensus PoS zyskał natychmiastową wiarygodność, gdy Ethereum, druga co do wielkości kryptowaluta zarówno pod względem kapitalizacji rynkowej, jak i sieci, ogłosiła plany konwersji z modelu PoW na model konsensusu PoS. Jednak PoS nie jest pozbawiony wad i na przestrzeni lat ewoluował w wiele odmian, w szczególności delegowany PoS, ale każda odmiana ma swoje [za i przeciw] (https://coincodex.com/article/7142/what- jest dowodem stawki/).
+Proof of Stake został po raz pierwszy wprowadzony przez PeerCoin i szybko zyskał popularność wśród wschodzących platform blockchain. Choć mocno krytykowany przez maksymalistów PoW, konsensus PoS zyskał natychmiastową wiarygodność, gdy Ethereum, druga co do wielkości kryptowaluta zarówno pod względem kapitalizacji rynkowej, jak i sieci, ogłosiła plany konwersji z modelu PoW na model konsensusu PoS. Jednak PoS nie jest pozbawiony wad i na przestrzeni lat ewoluował w wiele odmian, w szczególności delegowany PoS, ale każda odmiana ma swoje [za i przeciw](https://coincodex.com/article/7142/what-is-proof-of-stake/).
 
-Zamiast zostać złapanym w środku debaty PoW vs PoS i utrudnionym przez ograniczenia któregokolwiek z nich, programiści Nexusa zdecydowali się wdrożyć oba, aby skorzystać z połączonych zalet, jednocześnie minimalizując wady każdego pojedynczego mechanizmu. Ponadto Nexus implementuje reputację jako wartość, która jest związana z tym, ile czasu obstawiający konsekwentnie dostarcza zasoby do sieci. Mechanizm o nazwie „[Trust](https://tech.nexus.io/trust)” rejestruje przeszłe prace w celu stworzenia systemu ważonej reputacji, znacznie poprawiając ogólne bezpieczeństwo kanału Nexus PoS (nPoS),
+Zamiast zostać złapanym w środku debaty PoW vs PoS i utrudnionym przez ograniczenia któregokolwiek z nich, programiści Nexusa zdecydowali się wdrożyć oba, aby skorzystać z połączonych zalet, jednocześnie minimalizując wady każdego pojedynczego mechanizmu. Ponadto Nexus implementuje reputację jako wartość, która jest związana z tym, ile czasu stakujący konsekwentnie dostarcza zasoby do sieci. Mechanizm o nazwie [Trust](/pl/innovations/trust-npos)  rejestruje przeszłe prace w celu stworzenia systemu ważonej reputacji, znacznie poprawiając ogólne bezpieczeństwo kanału Nexus PoS (nPoS).
 
-Zespół Nexusa przekształca te trzy oddzielne kanały konsensusu w jeden wielowarstwowy system przetwarzania zdolny do obliczeniowego fragmentowania danych. Protokół Tritium jest pierwszym uaktualnieniem [Łańcucha trzech wymiarów (3DC)](https://tech.nexus.io/3dc), który jest wdrażany za pośrednictwem[ frameworka TAO](https://tech.nexus. io/mapa drogowa).
+Zespół Nexusa przekształca te trzy oddzielne kanały konsensusu w jeden wielowarstwowy system przetwarzania zdolny do obliczeniowego fragmentowania danych. Protokół Tritium jest pierwszym uaktualnieniem [Łańcucha trzech wymiarów (3DC)](/pl/innovations/3-dimensional-chain), który jest wdrażany za pośrednictwem[ frameworka TAO](/pl/fundamentals/tao-framework).
