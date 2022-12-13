@@ -2,7 +2,7 @@
 title: 操作费用
 description: Nexus 麟社公共网络 - 操作费用
 published: true
-date: 2022-12-13T15:45:20.951Z
+date: 2022-12-13T15:50:42.238Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-13T11:46:13.624Z
@@ -45,32 +45,32 @@ dateCreated: 2022-12-13T11:46:13.624Z
         <td>如果被认领的寄存器是一个名称寄存器，即在之前的所有者签名链中存在一个本地名称，那么在认领时为其创建一个相应的本地名称。 创建此名称会收取 1 NXS 麟社币费用<br><br>如果所要求的转让有合约条件，则可能会根据其复杂程度收取费用来执行这些条件。 条件的免费门槛意味着简单的合约条件，例如在转让中添加到期将意味着声称它们将是免费的。</td>
       </tr>
       <tr>
-        <td>Creating a NXS or token account</td>
+        <td>创建 NXS 麟社币或通证账户</td>
         <td>0</td>
-        <td>If the account is given a name, there is a 1 NXS fee applied for the creation of the name register</td>
+        <td>如果为帐户指定了名称，则创建名称登记册需要支付 1 NXS 麟社币费用</td>
       </tr>
       <tr>
-        <td>Creating an asset or other register</td>
+        <td>创建资产或其他登记册</td>
         <td>1+</td>
-        <td>The fee is calculated based on the size of data stored in the register at 0.001 NXS per byte. However there is a minimum fee of 1 NXS and (at the time of writing) a maximum register size of 1Kb, meaning the fee will vary between 1 an 1.024 NXS</td>
+        <td>费用是根据存储在寄存器中的数据大小计算的，每字节 0.001 NXS 麟社币。 但是，最低费用为 1 NXS，并且（在撰写本文时）最大寄存器大小为 1Kb，这意味着费用将在 1 和 1.024 NXS 麟社币之间变化</td>
       </tr>
       <tr>
-        <td>Updating an asset or other register</td>
+        <td>更新资产或其他登记册</td>
         <td>0</td>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td>Creating a local name</td>
+        <td>创建本地名称</td>
         <td>1</td>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td>Creating a global name</td>
+        <td>创建全局名称</td>
         <td>2000</td>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td>Creating a namespace</td>
+        <td>创建名称空间</td>
         <td>1000</td>
         <td>&nbsp;</td>
       </tr>
@@ -78,8 +78,8 @@ dateCreated: 2022-12-13T11:46:13.624Z
         <td>Creating a token</td>
         <td>1+</td>
         <td>
-          <p>The fee calculation for creating a token is based on the number of total supply of token divisible units, which in turn is calculated from the token supply and the number of decimals in the token definition.&nbsp;<br>For example, a token with supply 1,000,000 and 2 decimals has a total of 100,000,000 divisible units. The actual fee calculation is a logarithmic scale based on this number, using the formula:</p>
-          <p>Fee = (log10(divisible units) – 2) * 100</p>
+          <p>创建通证的费用计算基于通证可分割单位的总供应量，而总供应量又是根据通证供应量和通证定义中的小数位数计算得出的。 例如，供应量为 1,000,000 和 2 个小数位的通证总共有 100,000,000 个可分割单位。 实际费用计算是基于此数字的对数刻度，使用公式：</p>
+          <p>费用 = (log10 (divisible units 可分割单位) – 2) * 100</p>
           <p>A minimum fee of 1 NXS always applies. This yields the following fees based on number of divisible units</p>
           <p>100 = 1 NXS<br>1,000 = 100 NXS<br>100,000 = 300 NXS<br>1,000,000 = 400 NXS<br>1,000,000,000 = 700 NXS<br>1,000,000,000,000 = 1000 NXS</p>
         </td>
