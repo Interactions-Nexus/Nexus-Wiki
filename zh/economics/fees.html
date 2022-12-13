@@ -2,7 +2,7 @@
 title: 操作费用
 description: Nexus 麟社公共网络 - 操作费用
 published: true
-date: 2022-12-13T15:51:18.985Z
+date: 2022-12-13T15:53:56.527Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-13T11:46:13.624Z
@@ -80,16 +80,16 @@ dateCreated: 2022-12-13T11:46:13.624Z
         <td>
           <p>创建通证的费用计算基于通证可分割单位的总供应量，而总供应量又是根据通证供应量和通证定义中的小数位数计算得出的。 例如，供应量为 1,000,000 和 2 个小数位的通证总共有 100,000,000 个可分割单位。 实际费用计算是基于此数字的对数刻度，使用公式：</p>
           <p>费用 = (log10 (divisible units 可分割单位) – 2) * 100</p>
-          <p>A minimum fee of 1 NXS always applies. This yields the following fees based on number of divisible units</p>
+          <p>始终适用 1 NXS 麟社币的最低费用。 根据可分割单位的数量，这会产生以下费用</p>
           <p>100 = 1 NXS<br>1,000 = 100 NXS<br>100,000 = 300 NXS<br>1,000,000 = 400 NXS<br>1,000,000,000 = 700 NXS<br>1,000,000,000,000 = 1000 NXS</p>
         </td>
       </tr>
       <tr>
-        <td>Transaction Fee</td>
+        <td>交易费用</td>
         <td>0-1</td>
         <td>
-          <p>A transaction fee is applied whenever a transaction is created within 10 seconds of the last transaction within a signature chain. The fee is calculated based on the number of contracts within the transaction at a rate of 0.01 NXS per contract, of which there can be a maximum of 100 (at the time of writing). Therefore the transaction fee will be between 0 and 1 NXS.</p>
-          <p><br>The transaction fee is applied in addition to any of the other fees described in this table</p>
+          <p>只要在签名链中最后一笔交易的 10 秒内创建交易，就会收取交易费。 费用根据交易中的合约数量计算，每份合约 0.01 NXS 麟社币，最多 100 个（在撰写本文时）。 因此，交易费用将在 0 到 1 NXS 麟社币之间。</p>
+          <p><br>除本表中描述的任何其他费用外，还收取交易费。</p>
         </td>
       </tr>
     </tbody>
