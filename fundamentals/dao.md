@@ -2,7 +2,7 @@
 title: DAO
 description: Decentralised Autonomous Organisation - The future of Governance
 published: true
-date: 2022-11-19T13:04:24.303Z
+date: 2022-12-14T22:16:38.660Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:09.496Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-05T08:25:09.496Z
 
 # DAO
 
-### What is Governance?
+## What is Governance?
 
 Governance can be defined as: “The system by which entities, networks are directed and controlled. It is concerned with structure and processes for decision making, accountability, control and behaviour at the top of an entity. Governance influences how an organisation’s objectives are set and achieved, how risk is monitored and addressed and how performance is optimised”. Governance is a system and process, not a single activity and therefore successful implementation of a good governance strategy requires a systematic approach that incorporates strategic planning, risk management and performance management. Like culture, it is a core component of the unique characteristics of a successful organisation.
 
@@ -28,7 +28,7 @@ DAOs are internet-native organizations collectively owned and managed by their m
 
 Community members create proposals about the future operations of the protocol and then come together to vote on each proposal. Proposals that achieve some predefined level of consensus are then accepted and enforced by the rules instantiated within the smart contract.
 
-## Social Stack and Starfish:
+## Social Stack and Starfish
 
 The Nexus DAO is based on the [Social Stack](../../technology/nexus-innovations/dao/the-social-stack.md);  a new social structure concept for the future. The goal of the social stack is to build a new type of governance structure which not only suits the Nexus network, but also to be utilised in real world for any organisation, society or network.&#x20;
 
