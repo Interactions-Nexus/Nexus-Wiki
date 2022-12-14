@@ -2,7 +2,7 @@
 title: DAO
 description: Zdecentralizowana organizacja autonomiczna – przyszłość zarządzania
 published: true
-date: 2022-12-14T22:16:36.555Z
+date: 2022-12-14T22:17:44.097Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-21T22:12:08.298Z
@@ -42,6 +42,6 @@ Nexus będzie miał Ambasadora i organizację Rozgwiazdy Dewelopera, która będ
 
 Technologia Nexus DAO opiera się na regulacji matematycznej w celu poprawy ogólnego modelu zarządzania siecią. Technologia umożliwi grupom, które mają podobną wiedzę i zainteresowania, wspólne głosowanie na tematy, w których mają doświadczenie. Ujmując podobne wartości w grupy, które determinują mniejszą część całej samej decyzji, możemy poprawić ogólne odzwierciedlenie wartości w systemie jako całości. Tę koncepcję można zaobserwować w ludzkim ciele: płuca cenią pewne zasoby nad żołądek, serce, nerki, wątrobę, chociaż wszystkie one współpracują ze sobą jako elementy zdecentralizowanego systemu, tworząc podstawę zdrowego organizmu.
 
-_”Dylemat nie polega na tym, że ludzie mają sprzeczne systemy wartości, ale raczej na tym, że zazwyczaj wymaga się od nich wspólnego podejmowania decyzji w jednej grupie. Wierzymy, że najlepszym sposobem na wyegzekwowanie kluczy jest publiczne głosowanie nad ich wydaniem.”_
+***”Dylemat nie polega na tym, że ludzie mają sprzeczne systemy wartości, ale raczej na tym, że zazwyczaj wymaga się od nich wspólnego podejmowania decyzji w jednej grupie. Wierzymy, że najlepszym sposobem na wyegzekwowanie kluczy jest publiczne głosowanie nad ich wydaniem.”***
 
 Jest to ważny krok w kierunku długoterminowego zrównoważenia naszego ekosystemu i stworzenia bezpośredniej odpowiedzialności tych, którzy otrzymują wynagrodzenie za wykonanie pracy w imieniu społeczność. Aby w pełni utrzymać aktywną umowę, Ambasadorzy lub Programiści będą zobowiązani do zachowania jak największej przejrzystości, odpowiedzialności i wydajności niezbędnej do dalszego wsparcia. Matematycznie wymuszone zarządzanie funduszami zapobiegnie niewłaściwemu zarządzaniu funduszami, korupcji, przymusowi i samozadowoleniu, które mogą pojawić się w rozwijających się organizacjach.
