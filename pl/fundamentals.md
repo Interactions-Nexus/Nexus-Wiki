@@ -2,7 +2,7 @@
 title: Podstawy
 description: 
 published: true
-date: 2022-10-21T21:35:07.054Z
+date: 2022-12-15T22:41:56.047Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-06T15:41:33.806Z
@@ -23,5 +23,5 @@ Nexus to odmienna architektura w całej przestrzeni kryptograficznej i aby zrozu
 - [Wprowadzenie do Dapps *Czym są zdecentralizowane aplikacje (Dapps)?*](/pl/fundamentals/intro-to-dapps)
 - [Internet rzeczy (IoT) *Nexus i IoT*](/pl/fundamentals/internet-of-things)
 - [Tożsamość zdecentralizowana *Tożsamość zdecentralizowana (tożsamość suwerenna)*](/pl/fundamentals/decentralized-identity)
-- [Nexus i decentralizacja *Jak działa Nexus*](/pl/fundamentals/nexus-and-decentralization)
+- [Nexus i decentralizacja *Jak Nexus promuje decentralizację*](/pl/fundamentals/nexus-and-decentralization)
 {.links-list}
