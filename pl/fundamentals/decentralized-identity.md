@@ -2,7 +2,7 @@
 title: Zdecentralizowana tożsamość
 description: Zdecentralizowana tożsamość na Nexusie
 published: true
-date: 2022-12-15T22:37:44.822Z
+date: 2022-12-15T22:40:52.982Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-21T22:18:24.098Z
@@ -64,7 +64,7 @@ To nasuwa pytanie, gdzie prawo do tożsamości przecina się ze świadomą zgod�
 
 Biorąc pod uwagę wagę tożsamości jasno określoną przez „władze, które były”, można uznać ochronę tych danych za najwyższy priorytet. Niestety, podmioty te przyjmują technologię i zarządzanie zasadniczo oparte na centralizacji, która jest z natury nieskalowalna i obarczona większymi kosztami niż korzyściami. Niezwykłym przykładem jest [atak na amerykańskie Biuro Zarządzania Personelem (OPM)](https://www.csoonline.com/article/3318238/the-opm-hack-explained-bad-security-practices-meet-chinas-Captain-America.html), baza danych zawierająca poufne informacje o pracownikach rządowych. Zupełne zaniedbanie, ignorancja i brak powiadomienia ofiary o zaistniałej sytuacji ostatecznie zakończyły się sporem sądowym.
 
-W miarę ewolucji scentralizowanego [zarządzania tożsamością (IdM) lub zarządzania tożsamością i dostępem (IAM)](https://www.csoonline.com/article/2120384/what-is-iam-identity-and-access-management-explained.html) wychodzi poza ustawienia lokalne do rozwiązań dostawcy usług w chmurze (CSP), luki w zabezpieczeniach rosną wykładniczo. Repozytoria danych uwierzytelniających, uważane za klucze do królestwa, historycznie izolowane w ściśle zlokalizowanych przedziałach, są teraz powierzane zewnętrznym, globalnie dostępnym, zwirtualizowanym środowiskom obsługującym wielu użytkowników. Nie tylko zwiększa się ryzyko [włamań](https://www.secsignal.org/en/news/how-i-hacked-a-whole-ec2-network-during-a-penetration-test/), ale prawdopodobieństwo [przypadkowego](https://www.arnnet.com.au/article/670469/microsoft-misconfiguration-exposed-250m-users-data/) narażenia jest znacznie zwiększone. Co więcej, dostawcy CSP oferują teraz możliwości Identity as a Service (IDaaS), jednocześnie reklamując atrakcyjne modele a la carte, które w dłuższej perspektywie mogą być finansowo wygórowane. Poniższa ilustracja ilustruje złożoność związaną z tymi rozwiązaniami.
+W miarę ewolucji scentralizowanego [Zarządzania Tożsamością (IdM) lub Zarządzania Tożsamością i Dostępem (IAM)](https://www.csoonline.com/article/2120384/what-is-iam-identity-and-access-management-explained.html) wychodzi poza ustawienia lokalne do rozwiązań dostawcy usług w chmurze (CSP), luki w zabezpieczeniach rosną wykładniczo. Repozytoria danych uwierzytelniających, uważane za klucze do królestwa, historycznie izolowane w ściśle zlokalizowanych przedziałach, są teraz powierzane zewnętrznym, globalnie dostępnym, zwirtualizowanym środowiskom obsługującym wielu użytkowników. Nie tylko zwiększa się ryzyko [włamań](https://www.secsignal.org/en/news/how-i-hacked-a-whole-ec2-network-during-a-penetration-test/), ale prawdopodobieństwo [przypadkowego](https://www.arnnet.com.au/article/670469/microsoft-misconfiguration-exposed-250m-users-data/) narażenia jest znacznie zwiększone. Co więcej, dostawcy CSP oferują teraz możliwości Identity as a Service (IDaaS), jednocześnie reklamując atrakcyjne modele a la carte, które w dłuższej perspektywie mogą być finansowo wygórowane. Poniższa ilustracja ilustruje złożoność związaną z tymi rozwiązaniami.
 
 ![azure.png](/azure.png)
 
