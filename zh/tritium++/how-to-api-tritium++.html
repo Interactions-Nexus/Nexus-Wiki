@@ -2,7 +2,7 @@
 title: 如何使用 API - Tritium++ 麟氚++
 description: 麟氚++ 應用程式介面
 published: true
-date: 2022-12-16T11:12:14.553Z
+date: 2022-12-16T11:22:13.200Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-16T10:55:54.459Z
@@ -21,21 +21,21 @@ dateCreated: 2022-12-16T10:55:54.459Z
 <p>POST 正文包含参数，并将转到一个端点，例如：</p>
 <pre><code class="language-plaintext">http://localhost:8080/&lt;api&gt;/&lt;method&gt;
 </code></pre>
-<p>An example web form would look like this:</p>
+<p>一个示例 Web 表单如下所示：</p>
 <pre><code class="language-plaintext">&lt;form action='http://localhost:8080/&lt;api&gt;/&lt;method&gt;' method='post'&gt;
 &lt;input type = 'text' name = '&lt;key&gt;'  value = '&lt;value&gt;' &gt;
 &lt;input type = 'text' name = '&lt;key1&gt;' value = '&lt;value2&gt;'&gt;
 &lt;input type = 'submit'&gt;
 &lt;/form&gt;
 </code></pre>
-<p>This will allow you to integrate the Nexus API into existing web forms. This allows you to harness the power of the Nexus Blockchain in all your existing web services.<br>&nbsp;</p>
-<h4>Use the the nexus command-line :</h4>
-<p>The Nexus Daemon must already be running for this to work. Make sure you are in the same directory as the Nexus Daemon.</p>
+<p>这将允许您将 Nexus API 麟社應用程式介面集成到现有的 Web 表单中。 这使您可以在所有现有 Web 服务中利用 Nexus 麟社区块链的强大功能。<br>&nbsp;</p>
+<h3>使用 nexus 麟社命令行：</h3>
+<p>Nexus Daemon 麟社守护程序必须已经在运行才能工作。 确保您与 Nexus 守护程序位于同一目录中。</p>
 <pre><code class="language-plaintext">./nexus &lt;api&gt;/&lt;method&gt; &lt;key&gt;=&lt;value&gt; &lt;key1&gt;=&lt;value1&gt;
 </code></pre>
-<p>This will return all data in JSON format into your console.<br>&nbsp;</p>
-<h4>Results JSON</h4>
-<p>The response JSON you will receive will contain one of two keys, results or error. When a command is successfully executed, you will receive a JSON string such as:</p>
+<p>这会将 JSON 格式的所有数据返回到您的控制台。<br>&nbsp;</p>
+<h3>Results JSON</h3>
+<p>您将收到的响应 JSON 将包含两个键、results 或 error 之一。 成功执行命令后，您将收到一个 JSON 字符串，例如：</p>
 <pre><code class="language-plaintext">{"result":{"genesis":"69c2479c6780782448f419a0865542002ee85fec39228275b2db44bb6d3aa503","session":4940881975319897416}}
 </code></pre>
 <p>You will need to parse out the values of the result object in your corresponding language of choice. If you happen to receive a failure, it will look like this:</p>
