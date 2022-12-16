@@ -1,8 +1,8 @@
 ---
-title: Pakiet oprogramowania
+title: Stos oprogramowania
 description: 7-warstwowy stos oprogramowania
 published: true
-date: 2022-12-16T22:40:34.191Z
+date: 2022-12-16T22:41:24.593Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:27:24.849Z
