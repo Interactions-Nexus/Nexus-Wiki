@@ -2,7 +2,7 @@
 title: 如何使用 API - Tritium++ 麟氚++
 description: 麟氚++ 應用程式介面
 published: true
-date: 2022-12-16T11:22:13.200Z
+date: 2022-12-16T11:28:29.132Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-16T10:55:54.459Z
@@ -35,13 +35,13 @@ dateCreated: 2022-12-16T10:55:54.459Z
 </code></pre>
 <p>这会将 JSON 格式的所有数据返回到您的控制台。<br>&nbsp;</p>
 <h3>Results JSON</h3>
-<p>您将收到的响应 JSON 将包含两个键、results 或 error 之一。 成功执行命令后，您将收到一个 JSON 字符串，例如：</p>
+<p>您将收到的 JSON 回复将包含两个键、results 或 error 之一。 成功执行命令后，您将收到一个 JSON 字符串，例如：</p>
 <pre><code class="language-plaintext">{"result":{"genesis":"69c2479c6780782448f419a0865542002ee85fec39228275b2db44bb6d3aa503","session":4940881975319897416}}
 </code></pre>
-<p>You will need to parse out the values of the result object in your corresponding language of choice. If you happen to receive a failure, it will look like this:</p>
+<p>您将需要用您选择的相应语言解析结果物件的值。 如果您碰巧收到失败消息，它将如下所示：</p>
 <pre><code class="language-plaintext">{"error":{"code":-24,"message":"Missing Password"}}
 </code></pre>
-<p>Note that you will be parsing for the error key now, and there will be no results. This allows you the choice as a programmer to check for the existence of the "error" key to check for errors, or check for the existence of the "result" key to find if it executed successfully. The choice is yours how you handle it, just know that it is an either / or situation. You will get only one or the other.</p>
+<p>请注意，您现在将解析错误键，并且不会有任何结果。 这允许您作为程序员选择检查 “error” 键是否存在以检查错误，或检查 “result” 键是否存在以查找是否执行成功。 你可以选择如何处理它，这是一个非此即彼的情况。 你只会得到一个或另一个。</p>
 <p>&nbsp;</p>
 <h2>Profiles API</h2>
 <p>The Profiles API is responsible for maintaining user account level functions. DO NOT USE this API on a foreign node you are not the manager of. Your username and password are stored in secure allocators, but the remote endpoint can still gather your credentials when you submit an API call. This API is meant for a service node you control only.</p>
