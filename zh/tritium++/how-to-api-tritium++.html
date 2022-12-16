@@ -2,7 +2,7 @@
 title: 如何使用 API - Tritium++ 麟氚++
 description: 麟氚++ 應用程式介面
 published: true
-date: 2022-12-16T11:05:04.820Z
+date: 2022-12-16T11:12:14.553Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-16T10:55:54.459Z
@@ -12,13 +12,13 @@ dateCreated: 2022-12-16T10:55:54.459Z
 <p>&nbsp;</p>
 <h2>Nexus 麟社 API 應用程式介面</h2>
 <p>访问 Nexus 麟社 API 應用程式介面是一种无缝且简单的体验。 要访问 API 應用程式介面，您可以使用以下三个选项之一：<br>&nbsp;</p>
-<h4>使用基于 URL 的请求的网络浏览器：</h4>
+<h3>使用基于 URL 的请求的网络浏览器：</h3>
 <p>使用 URL 中的参数发出 GET 请求，如下所示。</p>
 <pre><code class="language-plaintext">http://localhost:8080/&lt;api&gt;/&lt;method&gt;?&lt;key&gt;=&lt;value&gt;&amp;&lt;key1&gt;=&lt;value1&gt;
 </code></pre>
-<p>API 應用程式介面使用表单编码，因此您可以随意使用任何字符。 唯一需要注意的是在编码中使用 “+” 字符时，它充当空格和 “%20” 的转义字符。 只要表单在表单编码中对 + 符号进行编码，API 就会检测到此行为。 有时发出 GET 请求，Web 浏览器会假定 + 是一个空格而不对其进行编码，发出 GET 请求时 '%' 也是如此。<br>&nbsp;</p>
-<h4>Use a web browser with a <strong>POST</strong> based request</h4>
-<p>The POST body contains parameters, and would go to an endpoint such as:</p>
+<p>API 應用程式介面使用表单编码，因此您可以随意使用任何字符。 唯一需要注意的是在编码中使用 “+” 字符时，它充当空格和 “%20” 的转义字符。 只要表单在表单编码中对 + 符号进行编码，API 應用程式介面就会检测到此行为。 有时发出 GET 请求，Web 浏览器会假定 + 是一个空格而不对其进行编码，发出 GET 请求时 '%' 也是如此。<br>&nbsp;</p>
+<h3>使用带有基于 POST 的请求的 Web 浏览器</h3>
+<p>POST 正文包含参数，并将转到一个端点，例如：</p>
 <pre><code class="language-plaintext">http://localhost:8080/&lt;api&gt;/&lt;method&gt;
 </code></pre>
 <p>An example web form would look like this:</p>
