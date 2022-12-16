@@ -2,7 +2,7 @@
 title: Przestrzenie nazw TAO
 description: System nazewnictwa TAO
 published: true
-date: 2022-12-16T23:07:45.438Z
+date: 2022-12-16T23:08:26.917Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:31:45.200Z
@@ -28,7 +28,7 @@ Przestrzenie nazw umożliwiają użytkownikom nadawanie przyjaznych dla użytkow
 
 Nazwy utworzone w kontekście przestrzeni nazw nazywane są przestrzeniami nazw, co samo w sobie jest globalnie unikalnym słowem kluczowym. Aby użyć nazwy z przestrzenią nazw, musisz poprzedzić nazwę przestrzenią nazw oddzieloną podwójnym dwukropkiem, np. `bobscoffeeshop::payments`. W tym przykładzie Bob najpierw zarejestrowałby przestrzeń nazw `bobscoffeeshop` i utworzył konto do otrzymywania płatności (które można nazwać czymkolwiek). Następnie tworzy Nazwę z parametrami `namespace=bobscoffeeshop` i `address=(register address of the account)`. Od tego momentu każdy może używać nazwy `bobscoffeeshop::payments` i zostanie ona rozwiązana na adres rejestracyjny konta.
 
-## GLOBALNE NAZWY:
+## NAZWY GLOBALNE:
 
 Nazwy globalne nie wymagają nazwy użytkownika ani prefiksu przestrzeni nazw i dlatego są globalnie unikalne. Będą one prawdopodobnie zarezerwowane dla przypadków użycia, w których konieczna jest zwięzła, niepowtarzalna nazwa, na przykład symbol giełdowy tokena. Aby uniknąć niepotrzebnego zajmowania nazw, globalne nazwy wiążą się z wysoką opłatą (`2000 NXS`).
 
