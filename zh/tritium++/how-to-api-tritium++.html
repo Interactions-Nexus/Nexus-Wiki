@@ -1,98 +1,87 @@
 <!--
 title: 如何使用 API - Tritium++ 麟氚++
-description: Tritium++ 麟氚++
+description: 麟氚++ 應用程式介面
 published: true
-date: 2022-12-16T10:56:13.181Z
+date: 2022-12-16T11:05:04.820Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-16T10:55:54.459Z
 -->
 
-<h1 class="toc-header" id="how-to-api-tritium"> How-to-API: Tritium++</h1>
+<h1>如何使用 API - Tritium++ 麟氚++</h1>
 <p>&nbsp;</p>
-<h3 class="toc-header" id="the-nexus-api-interface"> The Nexus API Interface</h3>
-<p>Accessing the Nexus API is a seamless and simple experience. To access the API, you can use one of three options:<br>
-&nbsp;</p>
-<h4 class="toc-header" id="use-a-web-browser-with-a-url-based-request"> Use a web browser with a URL based request:</h4>
-<p>Make a <strong>GET</strong> request with the parameters in the URL as seen below.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">http://localhost:8080/&lt;api&gt;/&lt;method&gt;?&lt;key&gt;=&lt;value&gt;&amp;&lt;key1&gt;=&lt;value1&gt;
+<h2>Nexus 麟社 API 應用程式介面</h2>
+<p>访问 Nexus 麟社 API 應用程式介面是一种无缝且简单的体验。 要访问 API 應用程式介面，您可以使用以下三个选项之一：<br>&nbsp;</p>
+<h4>使用基于 URL 的请求的网络浏览器：</h4>
+<p>使用 URL 中的参数发出 GET 请求，如下所示。</p>
+<pre><code class="language-plaintext">http://localhost:8080/&lt;api&gt;/&lt;method&gt;?&lt;key&gt;=&lt;value&gt;&amp;&lt;key1&gt;=&lt;value1&gt;
 </code></pre>
-<p>The API uses form encoding, so you are free to use any characters you wish. The only thing to be aware of is when using a '+' character in the encoding, which acts as an escape character for a space as well as '%20'. The API will detect this behavior as long as the form encodes the + sign in form encoding. At times making a <strong>GET</strong> request, the web browser will assume that + is a space and not encode it, the same is true for '%' when making a <strong>GET</strong> request.<br>
-&nbsp;</p>
-<h4 class="toc-header" id="use-a-web-browser-with-a-post-based-request"> Use a web browser with a <strong>POST</strong> based request</h4>
+<p>API 應用程式介面使用表单编码，因此您可以随意使用任何字符。 唯一需要注意的是在编码中使用 “+” 字符时，它充当空格和 “%20” 的转义字符。 只要表单在表单编码中对 + 符号进行编码，API 就会检测到此行为。 有时发出 GET 请求，Web 浏览器会假定 + 是一个空格而不对其进行编码，发出 GET 请求时 '%' 也是如此。<br>&nbsp;</p>
+<h4>Use a web browser with a <strong>POST</strong> based request</h4>
 <p>The POST body contains parameters, and would go to an endpoint such as:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">http://localhost:8080/&lt;api&gt;/&lt;method&gt;
+<pre><code class="language-plaintext">http://localhost:8080/&lt;api&gt;/&lt;method&gt;
 </code></pre>
 <p>An example web form would look like this:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">&lt;form action='http://localhost:8080/&lt;api&gt;/&lt;method&gt;' method='post'&gt;
+<pre><code class="language-plaintext">&lt;form action='http://localhost:8080/&lt;api&gt;/&lt;method&gt;' method='post'&gt;
 &lt;input type = 'text' name = '&lt;key&gt;'  value = '&lt;value&gt;' &gt;
 &lt;input type = 'text' name = '&lt;key1&gt;' value = '&lt;value2&gt;'&gt;
 &lt;input type = 'submit'&gt;
 &lt;/form&gt;
 </code></pre>
-<p>This will allow you to integrate the Nexus API into existing web forms. This allows you to harness the power of the Nexus Blockchain in all your existing web services.<br>
-&nbsp;</p>
-<h4 class="toc-header" id="use-the-the-nexus-command-line"> Use the the nexus command-line :</h4>
+<p>This will allow you to integrate the Nexus API into existing web forms. This allows you to harness the power of the Nexus Blockchain in all your existing web services.<br>&nbsp;</p>
+<h4>Use the the nexus command-line :</h4>
 <p>The Nexus Daemon must already be running for this to work. Make sure you are in the same directory as the Nexus Daemon.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">./nexus &lt;api&gt;/&lt;method&gt; &lt;key&gt;=&lt;value&gt; &lt;key1&gt;=&lt;value1&gt;
+<pre><code class="language-plaintext">./nexus &lt;api&gt;/&lt;method&gt; &lt;key&gt;=&lt;value&gt; &lt;key1&gt;=&lt;value1&gt;
 </code></pre>
-<p>This will return all data in JSON format into your console.<br>
-&nbsp;</p>
-<h4 class="toc-header" id="results-json"> Results JSON</h4>
+<p>This will return all data in JSON format into your console.<br>&nbsp;</p>
+<h4>Results JSON</h4>
 <p>The response JSON you will receive will contain one of two keys, results or error. When a command is successfully executed, you will receive a JSON string such as:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{"result":{"genesis":"69c2479c6780782448f419a0865542002ee85fec39228275b2db44bb6d3aa503","session":4940881975319897416}}
+<pre><code class="language-plaintext">{"result":{"genesis":"69c2479c6780782448f419a0865542002ee85fec39228275b2db44bb6d3aa503","session":4940881975319897416}}
 </code></pre>
 <p>You will need to parse out the values of the result object in your corresponding language of choice. If you happen to receive a failure, it will look like this:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{"error":{"code":-24,"message":"Missing Password"}}
+<pre><code class="language-plaintext">{"error":{"code":-24,"message":"Missing Password"}}
 </code></pre>
 <p>Note that you will be parsing for the error key now, and there will be no results. This allows you the choice as a programmer to check for the existence of the "error" key to check for errors, or check for the existence of the "result" key to find if it executed successfully. The choice is yours how you handle it, just know that it is an either / or situation. You will get only one or the other.</p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="profiles-api"> Profiles API</h2>
+<h2>Profiles API</h2>
 <p>The Profiles API is responsible for maintaining user account level functions. DO NOT USE this API on a foreign node you are not the manager of. Your username and password are stored in secure allocators, but the remote endpoint can still gather your credentials when you submit an API call. This API is meant for a service node you control only.</p>
 <p>The Profiles API can be found in the link below:</p>
-<p>{% content-ref url="broken-reference" %}<br>
-<a class="is-internal-link is-invalid-page" href="/zh/tritium++/how-to-api-tritium++/broken-reference">Broken link</a></p>
-<p>{% hint style="info" %}<br>
-<strong>NOTE</strong> : Login sessions do not persist if you restart your node. They are stored in secure allocator in memory only, do not cache them on disk otherwise you could open potential security issues.</p>
+<p>{% content-ref url="broken-reference" %}<br><a href="/zh/tritium++/how-to-api-tritium++/broken-reference">Broken link</a></p>
+<p>{% hint style="info" %}<br><strong>NOTE</strong> : Login sessions do not persist if you restart your node. They are stored in secure allocator in memory only, do not cache them on disk otherwise you could open potential security issues.</p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="sessions-api"> Sessions API</h2>
+<h2>Sessions API</h2>
 <p>The Sessions API is responsible for maintaining user account level functions. DO NOT USE this API on a foreign node you are not the manager of. Your username and password are stored in secure allocators, but the remote endpoint can still gather your credentials when you submit an API call. This API is meant for a service node you control only.</p>
 <p>The Users API can be found in the following repo path:</p>
-<p>{% content-ref url="broken-reference" %}<br>
-<a class="is-internal-link is-invalid-page" href="/zh/tritium++/how-to-api-tritium++/broken-reference">Broken link</a></p>
+<p>{% content-ref url="broken-reference" %}<br><a href="/zh/tritium++/how-to-api-tritium++/broken-reference">Broken link</a></p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="finance-api"> Finance API</h2>
+<h2>Finance API</h2>
 <p>The Finance API provides methods for creating tokens, accounts, sending and receiving NXS coins or other tokens between users / accounts and managing staking.</p>
 <p>The Finance API can be found in the following repo path:</p>
-<p>{% content-ref url="broken-reference" %}<br>
-<a class="is-internal-link is-invalid-page" href="/zh/tritium++/how-to-api-tritium++/broken-reference">Broken link</a></p>
+<p>{% content-ref url="broken-reference" %}<br><a href="/zh/tritium++/how-to-api-tritium++/broken-reference">Broken link</a></p>
 <p>NOTE: All the commands in this API require LOGIN. Make sure to use the sessions API to create session before using session required commands.</p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="assets-api"> Assets API</h2>
+<h2>Assets API</h2>
 <p>The Assets API is designed for managing of digital assets, by recording meta-data that represents the specific asset. It also provides functionality to tokenize the assets themselves, in relation to having an asset owned by many individuals.</p>
 <p>The Assets API can be found in the link below:</p>
 <p>NOTE: All of the commands in this API require LOGIN. Make sure to use the users API to login before using LOGIN required commands.</p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="tokens-api"> Tokens API</h2>
+<h2>Tokens API</h2>
 <p>The tokens API allows you to create tokens and accounts, in order to send and receive tokens with one another. This is also a prerequisite to creating tokens that are meant to be shares in a digital asset, or company (STO).</p>
 <p>The Tokens API can be found in the following repo path:</p>
 <p>LLL-TAO/docs/API/TOKENS.MD</p>
-<p>{% hint style="info" %}<br>
-NOTE: some of the commands in this API require LOGIN. Make sure to use the users API to login before using LOGIN required commands.</p>
+<p>{% hint style="info" %}<br>NOTE: some of the commands in this API require LOGIN. Make sure to use the users API to login before using LOGIN required commands.</p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="ledger-api"> Ledger API</h2>
+<h2>Ledger API</h2>
 <p>The ledger API provides access to the ledger, primarily to create and retrieve blocks and transactions, but also to query for ledger state information.</p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="supply-api"> Supply API</h2>
+<h2>Supply API</h2>
 <p>The supply API is responsible for handling supply chain logistics. It's main aim is designed for managing the routes and movements along a supply chain, along with reviewing the history of events associated with changes of custody.</p>
-<p>{% hint style="info" %}<br>
-NOTE: some of the commands in this API require LOGIN. Make sure to use the users API to login before using LOGIN required commands.</p>
+<p>{% hint style="info" %}<br>NOTE: some of the commands in this API require LOGIN. Make sure to use the users API to login before using LOGIN required commands.</p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="system-api"> System API</h2>
+<h2>System API</h2>
 <p>The System API provides public access to information about this node. This includes data such as the version of software the node is running, ledger and mempool state, node IP address, and connected peers.</p>
 <p>The System API can be found in the link below:</p>
-<p>{% content-ref url="../tritium++-overview/how-to-api-tritium++/tritium++-api/system (1).md" %}<br>
-<a class="is-asset-link" href="../tritium++-overview/how-to-api-tritium++/tritium++-api/system%20(1).md">system (1).md</a></p>
+<p>{% content-ref url="../tritium++-overview/how-to-api-tritium++/tritium++-api/system (1).md" %}<br><a href="../tritium++-overview/how-to-api-tritium++/tritium++-api/system%20(1).md">system (1).md</a></p>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="invoices-api"> Invoices API</h2>
+<h2>Invoices API</h2>
 <p>The Invoices API provides users and application developers the ability to issue and pay invoices on the Nexus blockchain. This API is a demonstration of how registers can be used to store arbitrary user data, and conditional contracts can be used to implement use-case rules. Invoices can be created and then sent to a recipient signature chain to be paid. The API supports invoices issued in NXS or any other token on the Nexus blockchain.</p>
