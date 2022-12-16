@@ -2,7 +2,7 @@
 title: 如何使用 API - Tritium++ 麟氚++
 description: 麟氚++ 應用程式介面
 published: true
-date: 2022-12-16T11:52:44.699Z
+date: 2022-12-16T13:24:39.466Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-16T10:55:54.459Z
@@ -50,36 +50,34 @@ dateCreated: 2022-12-16T10:55:54.459Z
 <p>&nbsp;</p>
 <h2>Sessions API 会议應用程式介面</h2>
 <p>Sessions API 会议應用程式介面负责维护用户账户级别的功能。 不要在您不是其管理者的外部节点上使用此 API 應用程式介面。 您的用户名称和密码存储在安全分配器中，但远程端点仍然可以在您提交 API 调用时收集您的凭据。 此 API 應用程式介面仅适用于您控制的服务节点。</p>
-<p>可以在以下存储库路径中找到用户 API：</p>
+<p>可以在以下存储库路径中找到用户 Sessions&nbsp; API：</p>
 <p>&nbsp;</p>
-<h2>Finance API</h2>
-<p>The Finance API provides methods for creating tokens, accounts, sending and receiving NXS coins or other tokens between users / accounts and managing staking.</p>
-<p>The Finance API can be found in the following repo path:</p>
-<p>{% content-ref url="broken-reference" %}<br><a href="/zh/tritium++/how-to-api-tritium++/broken-reference">Broken link</a></p>
-<p>NOTE: All the commands in this API require LOGIN. Make sure to use the sessions API to create session before using session required commands.</p>
+<h2>Finance API 财政應用程式介面</h2>
+<p>Finance API 财政應用程式介面提供了创建通证、账户、在用户/账户之间发送和接收 NXS 麟社币或其他通证以及管理抵押的方法。</p>
+<p>可以在以下存储库路径中找到 Finance API：</p>
+<p>注意：此 API 中的所有命令都需要登录。 在使用会话所需的命令之前，请确保使用会话 API 應用程式介面创建会话。</p>
 <p>&nbsp;</p>
-<h2>Assets API</h2>
-<p>The Assets API is designed for managing of digital assets, by recording meta-data that represents the specific asset. It also provides functionality to tokenize the assets themselves, in relation to having an asset owned by many individuals.</p>
-<p>The Assets API can be found in the link below:</p>
-<p>NOTE: All of the commands in this API require LOGIN. Make sure to use the users API to login before using LOGIN required commands.</p>
+<h2>Assets API 资产應用程式介面</h2>
+<p>Assets API 资产應用程式介面通过记录代表特定资产的元数据来管理数字资产。 它还提供了将资产本身通证化的功能，这与拥有许多人拥有的资产有关。</p>
+<p>可以在以下存储库路径中找到 Assets API:</p>
+<p>注意：此 API 應用程式介面中的所有命令都需要登录。 在使用 LOGIN 必需命令之前，请确保使用用户 API 應用程式介面登录。</p>
 <p>&nbsp;</p>
-<h2>Tokens API</h2>
-<p>The tokens API allows you to create tokens and accounts, in order to send and receive tokens with one another. This is also a prerequisite to creating tokens that are meant to be shares in a digital asset, or company (STO).</p>
-<p>The Tokens API can be found in the following repo path:</p>
+<h2>Tokens API 通证應用程式介面</h2>
+<p>Tokens API 通证應用程式介面允许您创建通证和账户，以便相互发送和接收通证。 这也是创建旨在成为数字资产或公司 (STO) 股份的通证的先决条件。</p>
+<p>可以在以下存储库路径中找到 Tokens API：</p>
 <p>LLL-TAO/docs/API/TOKENS.MD</p>
-<p>{% hint style="info" %}<br>NOTE: some of the commands in this API require LOGIN. Make sure to use the users API to login before using LOGIN required commands.</p>
+<p>注意：此 API 應用程式介面中的某些命令需要登录。 在使用 LOGIN 必需命令之前，请确保使用用户 API 應用程式介面登录。</p>
 <p>&nbsp;</p>
-<h2>Ledger API</h2>
-<p>The ledger API provides access to the ledger, primarily to create and retrieve blocks and transactions, but also to query for ledger state information.</p>
+<h2>Ledger API 分类账本應用程式介面</h2>
+<p>Ledger&nbsp; API 分类账本應用程式介面提供对分类账本的访问，主要用于创建和检索块和交易，但也用于查询分类账本状态信息。</p>
 <p>&nbsp;</p>
-<h2>Supply API</h2>
-<p>The supply API is responsible for handling supply chain logistics. It's main aim is designed for managing the routes and movements along a supply chain, along with reviewing the history of events associated with changes of custody.</p>
-<p>{% hint style="info" %}<br>NOTE: some of the commands in this API require LOGIN. Make sure to use the users API to login before using LOGIN required commands.</p>
+<h2>Supply API 供应應用程式介面</h2>
+<p>Supply API 供应應用程式介面负责处理供应链物流。 它的主要目的是设计用于管理供应链上的路线和移动，以及审查与保管权变更相关的事件历史。<br>&nbsp;</p>
+<p>注意：此 API 應用程式介面中的某些命令需要登录。 在使用 LOGIN 必需命令之前，请确保使用用户 API 應用程式介面登录。</p>
 <p>&nbsp;</p>
-<h2>System API</h2>
-<p>The System API provides public access to information about this node. This includes data such as the version of software the node is running, ledger and mempool state, node IP address, and connected peers.</p>
-<p>The System API can be found in the link below:</p>
-<p>{% content-ref url="../tritium++-overview/how-to-api-tritium++/tritium++-api/system (1).md" %}<br><a href="../tritium++-overview/how-to-api-tritium++/tritium++-api/system%20(1).md">system (1).md</a></p>
+<h2>System API 系统應用程式介面</h2>
+<p>System API 系统應用程式介面提供对此节点信息的公共访问。 这包括节点运行的软件版本、分类账本和内存池状态、节点 IP 地址和连接的对等点等数据。</p>
+<p>可以在以下存储库路径中找到 System API：</p>
 <p>&nbsp;</p>
-<h2>Invoices API</h2>
-<p>The Invoices API provides users and application developers the ability to issue and pay invoices on the Nexus blockchain. This API is a demonstration of how registers can be used to store arbitrary user data, and conditional contracts can be used to implement use-case rules. Invoices can be created and then sent to a recipient signature chain to be paid. The API supports invoices issued in NXS or any other token on the Nexus blockchain.</p>
+<h2>Invoices API 发票應用程式介面</h2>
+<p>Invoices API 发票應用程式介面为用户和应用程序开发人员提供了在 Nexus 麟社区块链上开具和支付发票的能力。 该 API 應用程式介面演示了如何使用寄存器存储任意用户数据，以及如何使用条件契约来实施用例规则。 可以创建发票，然后将其发送到收件人签名链进行支付。 API 发票應用程式介面支持以 NXS 麟社币或 Nexus 麟社区块链上的任何其他通证开具的发票。</p>
