@@ -1,8 +1,8 @@
 ---
-title: Zaufanie-nPoS
+title: Zaufanie - nPoS
 description: Dowód stawki oparty na TRUST (Reputacji)
 published: true
-date: 2022-12-16T23:19:15.659Z
+date: 2022-12-16T23:19:54.989Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:33:07.356Z
