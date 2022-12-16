@@ -2,7 +2,7 @@
 title: 如何使用 API - Tritium++ 麟氚++
 description: 麟氚++ 應用程式介面
 published: true
-date: 2022-12-16T11:28:29.132Z
+date: 2022-12-16T11:42:02.172Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-16T10:55:54.459Z
@@ -43,11 +43,10 @@ dateCreated: 2022-12-16T10:55:54.459Z
 </code></pre>
 <p>请注意，您现在将解析错误键，并且不会有任何结果。 这允许您作为程序员选择检查 “error” 键是否存在以检查错误，或检查 “result” 键是否存在以查找是否执行成功。 你可以选择如何处理它，这是一个非此即彼的情况。 你只会得到一个或另一个。</p>
 <p>&nbsp;</p>
-<h2>Profiles API</h2>
-<p>The Profiles API is responsible for maintaining user account level functions. DO NOT USE this API on a foreign node you are not the manager of. Your username and password are stored in secure allocators, but the remote endpoint can still gather your credentials when you submit an API call. This API is meant for a service node you control only.</p>
-<p>The Profiles API can be found in the link below:</p>
-<p>{% content-ref url="broken-reference" %}<br><a href="/zh/tritium++/how-to-api-tritium++/broken-reference">Broken link</a></p>
-<p>{% hint style="info" %}<br><strong>NOTE</strong> : Login sessions do not persist if you restart your node. They are stored in secure allocator in memory only, do not cache them on disk otherwise you could open potential security issues.</p>
+<h2>Profiles API 配置應用程式介面</h2>
+<p>Profiles API 配置應用程式介面负责维护用户帐户级别的功能。 不要在您不是其管理者的外部节点上使用此 API 應用程式介面。 您的用户名和密码存储在安全分配器中，但远程端点仍然可以在您提交 API 應用程式介面调用时收集您的凭据。 此 API 應用程式介面仅适用于您控制的服务节点。</p>
+<p>Profiles API 配置應用程式介面可以在下面的链接中找到：</p>
+<p><br>注意：如果您重新启动节点，登录会话不会持续存在。 它们仅存储在内存中的安全分配器中，不要将它们缓存在磁盘上，否则可能会引发潜在的安全问题。</p>
 <p>&nbsp;</p>
 <h2>Sessions API</h2>
 <p>The Sessions API is responsible for maintaining user account level functions. DO NOT USE this API on a foreign node you are not the manager of. Your username and password are stored in secure allocators, but the remote endpoint can still gather your credentials when you submit an API call. This API is meant for a service node you control only.</p>
