@@ -2,7 +2,7 @@
 title: Tritium++ 麟氚++ API 概览
 description: 概览
 published: true
-date: 2022-12-17T07:50:11.312Z
+date: 2022-12-17T07:59:49.140Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-17T07:47:00.200Z
@@ -10,12 +10,13 @@ dateCreated: 2022-12-17T07:47:00.200Z
 
 <h1>⚙ Tritium++ 麟氚++ API 概览</h1>
 <h2>Nexus 麟社 API 概览</h2>
-<p>Nexus 麟社提供了多个 API 应用程式界面以允许用户和开发人员轻松地与 Nexus 麟社软件堆栈的功能进行交互。每个 API 应用程式界面都是按功能区域与堆栈的特定部分（例如分类帐本、寄存器）交互的逻辑分组方法集合（账户、资产、通证），或按行业特定用例（供应、音乐）。</p>
-<h3><code>Protocol</code></h3>
-<p>The API server uses the <code>HTTP</code> protocol and supports both <code><strong>GET</strong></code> and <code><strong>POST</strong></code> request methods.</p>
-<p>The API's use <code><strong>JSON</strong></code> (JavaScript Object Notation) as their primary data transport mechanism for both input and output. However the API server also supports URL encoded requests (<code><strong>application/x-www-form-urlencoded</strong></code>).</p>
-<h3><code>Port</code></h3>
+<p>Nexus 麟社提供了多个 API 应用程式界面以允许用户和开发人员轻松地与 Nexus 麟社软件堆栈的功能进行交互。每个 API 应用程式界面都是按功能区域与堆栈的特定部分（例如分类帐本、寄存器）交互的逻辑分组方法集合（账户、资产、通证），或按行业特定用例（供应、音乐）。&nbsp;</p>
+<h3><code>Protocol</code> 协议</h3>
+<p>API 服务器使用 <code>HTTP</code> 协议并同时支持 <code><strong>GET</strong></code> 和<code><strong>POST</strong></code> 请求方法。</p>
+<p>API 使用 <code><strong>JSON</strong></code> (JavaScript Object Notation) 作为输入和输出的主要数据传输机制。但是 API 服务器也支持 URL 编码请求 (<code><strong>application/x-www-form-urlencoded</strong></code>)。</p>
+<h3><code>Port</code> 端口</h3>
 <p>By default the API server runs on port 8080. This can be changed by setting <code>apiport=xxxx</code> in your nexus.conf or starting your daemon with the <code>-apiport=xxxx</code> parameter.</p>
+<p>默认情况下，API 服务器在端口 8080 上运行。这可以通过在 nexus.conf 中设置 <code>apiport=xxxx</code> 或使用 <code>-apiport=xxxx</code>&nbsp;参数启动守护程序来更改。</p>
 <h3><code>Security</code></h3>
 <p>The Nexus API uses the <code>HTTP Basic</code> authentication scheme. This requires the caller to set an <code>Authorization</code> HTTP header with the value <code>Basic &lt;credentials&gt;</code> with the <code>&lt;credendtials&gt;</code> portion set to <code>apiuser:apipassword</code> and <code>base64</code> encoded. On the API server side the authentication is configured by adding <code>apiuser=&lt;username&gt;</code> and <code>apipassword=&lt;password&gt;</code> to the nexus.conf.<br><strong>NOTE</strong>: If you wish to disable authentication entirely, you can do so by setting <code>apiauth=0</code> in your nexus.conf</p>
 <p>The authentication mechanism is complemented by the implementation of <code>SSL</code> encryption (<code>HTTPS</code>). By default the API server is started with SSL disabled. To enable it, please add <code>apissl=1</code> to your nexus.conf</p>
