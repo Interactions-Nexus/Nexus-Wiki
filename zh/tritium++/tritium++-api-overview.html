@@ -2,7 +2,7 @@
 title: Tritium++ 麟氚++ API 概览
 description: 概览
 published: true
-date: 2022-12-17T07:59:49.140Z
+date: 2022-12-17T08:06:05.006Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-17T07:47:00.200Z
@@ -15,10 +15,9 @@ dateCreated: 2022-12-17T07:47:00.200Z
 <p>API 服务器使用 <code>HTTP</code> 协议并同时支持 <code><strong>GET</strong></code> 和<code><strong>POST</strong></code> 请求方法。</p>
 <p>API 使用 <code><strong>JSON</strong></code> (JavaScript Object Notation) 作为输入和输出的主要数据传输机制。但是 API 服务器也支持 URL 编码请求 (<code><strong>application/x-www-form-urlencoded</strong></code>)。</p>
 <h3><code>Port</code> 端口</h3>
-<p>By default the API server runs on port 8080. This can be changed by setting <code>apiport=xxxx</code> in your nexus.conf or starting your daemon with the <code>-apiport=xxxx</code> parameter.</p>
-<p>默认情况下，API 服务器在端口 8080 上运行。这可以通过在 nexus.conf 中设置 <code>apiport=xxxx</code> 或使用 <code>-apiport=xxxx</code>&nbsp;参数启动守护程序来更改。</p>
-<h3><code>Security</code></h3>
-<p>The Nexus API uses the <code>HTTP Basic</code> authentication scheme. This requires the caller to set an <code>Authorization</code> HTTP header with the value <code>Basic &lt;credentials&gt;</code> with the <code>&lt;credendtials&gt;</code> portion set to <code>apiuser:apipassword</code> and <code>base64</code> encoded. On the API server side the authentication is configured by adding <code>apiuser=&lt;username&gt;</code> and <code>apipassword=&lt;password&gt;</code> to the nexus.conf.<br><strong>NOTE</strong>: If you wish to disable authentication entirely, you can do so by setting <code>apiauth=0</code> in your nexus.conf</p>
+<p>在默认情况下，API 服务器在端口 8080 上运行。这可以通过在 nexus.conf 中设置 <code>apiport=xxxx</code> 或使用 <code>-apiport=xxxx</code>&nbsp;参数启动守护程序来更改。</p>
+<h3><code>Security</code> 安全</h3>
+<p>Nexus 麟社 API 使用 <code>HTTP Basic</code>&nbsp;身份验证方案。 这要求调用者设置一个授权 <code>Authorization</code>&nbsp;HTTP 标头，其值为 <code>Basic &lt;credentials&gt;</code>&nbsp;，其中 <code>&lt;credendtials&gt;</code>&nbsp;部分设置为 <code>apiuser:apipassword</code> 和<code>base64</code>&nbsp;编码。 在 API 服务器端，通过将 <code>apiuser=&lt;username&gt;</code> 和 <code>apipassword=&lt;password&gt;</code> 添加到 nexus.conf 来配置身份验证。<br><strong>NOTE</strong>: If you wish to disable authentication entirely, you can do so by setting <code>apiauth=0</code> in your nexus.conf</p>
 <p>The authentication mechanism is complemented by the implementation of <code>SSL</code> encryption (<code>HTTPS</code>). By default the API server is started with SSL disabled. To enable it, please add <code>apissl=1</code> to your nexus.conf</p>
 <h3><code>Multi-user Sessions</code></h3>
 <p>The Nexus API can be configured to run in multiuser mode, allowing multiple signature chains to be logged in and use the API simultaneously. This feature can be enabled by setting <code>multiuser=1</code> in your nexus.conf (default off). When multiuser is enabled, the initial login response will include a session ID value. This session ID must be then be included in all subsequent API calls to endpoints that require a user to be logged in.</p>
