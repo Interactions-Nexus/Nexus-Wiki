@@ -1,0 +1,1331 @@
+<!--
+title: Tritium++ 麟氚++ API 概览
+description: 概览
+published: true
+date: 2022-12-17T07:47:21.055Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-17T07:47:00.200Z
+-->
+
+<h1 class="toc-header" id="tritium-overview"> ⚙ Tritium++ Overview</h1>
+<h2 class="toc-header" id="nexus-api-overview"> Nexus API Overview</h2>
+<p>Nexus provides several APIs to allow users and developers to easily interact with the functionality of the Nexus software stack. Each API is a logically grouped collection of methods that either interact with a specific part of the stack (e.g. ledger, registers), by functional area (accounts, assets, tokens), or by industry specific use case (supply, music).</p>
+<h3 class="toc-header" id="protocol"> <code>Protocol</code></h3>
+<p>The API server uses the <code>HTTP</code> protocol and supports both <strong><code>GET</code></strong> and <strong><code>POST</code></strong> request methods.</p>
+<p>The API's use <strong><code>JSON</code></strong> (JavaScript Object Notation) as their primary data transport mechanism for both input and output. However the API server also supports URL encoded requests (<strong><code>application/x-www-form-urlencoded</code></strong>).</p>
+<h3 class="toc-header" id="port"> <code>Port</code></h3>
+<p>By default the API server runs on port 8080. This can be changed by setting <code>apiport=xxxx</code> in your nexus.conf or starting your daemon with the <code>-apiport=xxxx</code> parameter.</p>
+<h3 class="toc-header" id="security"> <code>Security</code></h3>
+<p>The Nexus API uses the <code>HTTP Basic</code> authentication scheme. This requires the caller to set an <code>Authorization</code> HTTP header with the value <code>Basic &lt;credentials&gt;</code> with the <code>&lt;credendtials&gt;</code> portion set to <code>apiuser:apipassword</code> and <code>base64</code> encoded. On the API server side the authentication is configured by adding <code>apiuser=&lt;username&gt;</code> and <code>apipassword=&lt;password&gt;</code> to the nexus.conf.<br>
+<strong>NOTE</strong>: If you wish to disable authentication entirely, you can do so by setting <code>apiauth=0</code> in your nexus.conf</p>
+<p>The authentication mechanism is complemented by the implementation of <code>SSL</code> encryption (<code>HTTPS</code>). By default the API server is started with SSL disabled. To enable it, please add <code>apissl=1</code> to your nexus.conf</p>
+<h3 class="toc-header" id="multi-user-sessions"> <code>Multi-user Sessions</code></h3>
+<p>The Nexus API can be configured to run in multiuser mode, allowing multiple signature chains to be logged in and use the API simultaneously. This feature can be enabled by setting <code>multiuser=1</code> in your nexus.conf (default off). When multiuser is enabled, the initial login response will include a session ID value. This session ID must be then be included in all subsequent API calls to endpoints that require a user to be logged in.</p>
+<h3 class="toc-header" id="endpoint"> <code>Endpoint</code></h3>
+<p>Each API endpoint can be invoked through the following semantics:</p>
+<p><strong><code>&lt;api&gt;/&lt;verb&gt;/&lt;noun&gt;</code></strong></p>
+<p>e.g.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">http://127.0.0.1:8080/ledger/get/block
+</code></pre>
+<p><strong>NOTE</strong>: URI's are always in lowercase.</p>
+<h3 class="toc-header" id="error-handling"> <code>Error Handling</code></h3>
+<p>In the event that an API call results in an error, a JSON object will be returned with the following format:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+    "error" :
+    {
+        "code" : -123,
+        "message" : "An error has occurred"
+    }
+}
+</code></pre>
+<h2 class="toc-header" id="dsl-error-codes"> DSL Error Codes</h2>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Query Syntax Error: duplicate wildcard not allowed</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Query Syntax Error: only '=' and '!=' operator allowed for type [typename]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Query Syntax Error: malformed where clause at [clause]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Query Syntax Error: must use = with no extra characters.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Query Syntax Error: must use '(' and ')' to mix AND/OR statements</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Query Syntax Error: missing logical operator for group</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Query Syntax Error: empty where clause at [clause]</td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="toc-header" id="api-error-codes"> API Error Codes</h2>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>Method not available: [message]</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>Method not found: [message]</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>Method was deprecated at version [version]: [message]</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>API not found (API name)</td>
+</tr>
+<tr>
+<td>-5</td>
+<td>Object not available: [message]</td>
+</tr>
+<tr>
+<td>-6</td>
+<td>content-type [content type] not supported</td>
+</tr>
+<tr>
+<td>-7</td>
+<td>Unsupported type [type] for parameters.</td>
+</tr>
+<tr>
+<td>-8</td>
+<td>Unable to Extract Input Address</td>
+</tr>
+<tr>
+<td>-9</td>
+<td>Session (session) doesn't exist</td>
+</tr>
+<tr>
+<td>-10</td>
+<td>Invalid session ID</td>
+</tr>
+<tr>
+<td>-11</td>
+<td>User not logged in</td>
+</tr>
+<tr>
+<td>-12</td>
+<td>Malformed or missing object encoding for [type]</td>
+</tr>
+<tr>
+<td>-13</td>
+<td>Object not found</td>
+</tr>
+<tr>
+<td>-14</td>
+<td>Malformed request URL</td>
+</tr>
+<tr>
+<td>-15</td>
+<td>Object is not an account or token</td>
+</tr>
+<tr>
+<td>-16</td>
+<td>Account has not been unlocked for transactions</td>
+</tr>
+<tr>
+<td>-17</td>
+<td>Failed to create transaction</td>
+</tr>
+<tr>
+<td>-18</td>
+<td>Invalid format for standard [name]</td>
+</tr>
+<tr>
+<td>-19</td>
+<td>Field [name] doesn't exist in object</td>
+</tr>
+<tr>
+<td>-20</td>
+<td>Field [name] is read-only and can't be updated</td>
+</tr>
+<tr>
+<td>-21</td>
+<td>Field [name] size exceeds maximum length [size]</td>
+</tr>
+<tr>
+<td>-22</td>
+<td>Field [name] is a reserved field name</td>
+</tr>
+<tr>
+<td>-23</td>
+<td>Object standard [name] not available for command</td>
+</tr>
+<tr>
+<td>-24</td>
+<td>No orders found for market</td>
+</tr>
+<tr>
+<td>-25</td>
+<td>Market order invalid contract: message</td>
+</tr>
+<tr>
+<td>-26</td>
+<td>Invalid parameter [from], [type] requires correct token</td>
+</tr>
+<tr>
+<td>-27</td>
+<td>Malformed base64 encoding</td>
+</tr>
+<tr>
+<td>-28</td>
+<td>Missing parameter [name] for command</td>
+</tr>
+<tr>
+<td>-29</td>
+<td>Unsupported format [type] specified</td>
+</tr>
+<tr>
+<td>-30</td>
+<td>Operations failed to execute</td>
+</tr>
+<tr>
+<td>-31</td>
+<td>Ledger failed to sign transaction</td>
+</tr>
+<tr>
+<td>-32</td>
+<td>Failed to accept</td>
+</tr>
+<tr>
+<td>-33</td>
+<td>Incorrect or missing name / address</td>
+</tr>
+<tr>
+<td>-34</td>
+<td>Asset not found</td>
+</tr>
+<tr>
+<td>-35</td>
+<td>Invalid parameter [key=type], expecting [type]</td>
+</tr>
+<tr>
+<td>-36</td>
+<td>Unsupported type [name] for command</td>
+</tr>
+<tr>
+<td>-37</td>
+<td>Missing token name / address</td>
+</tr>
+<tr>
+<td>-38</td>
+<td>Missing asset name / address</td>
+</tr>
+<tr>
+<td>-39</td>
+<td>Missing name_from / address_from</td>
+</tr>
+<tr>
+<td>-40</td>
+<td>Previous transaction not found</td>
+</tr>
+<tr>
+<td>-41</td>
+<td>Invalid transaction-id</td>
+</tr>
+<tr>
+<td>-42</td>
+<td>No valid debits to buy from</td>
+</tr>
+<tr>
+<td>-43</td>
+<td>No valid contracts in tx</td>
+</tr>
+<tr>
+<td>-44</td>
+<td>Transaction failed to build</td>
+</tr>
+<tr>
+<td>-45</td>
+<td>Missing name_to / address_to</td>
+</tr>
+<tr>
+<td>-46</td>
+<td>Missing amount</td>
+</tr>
+<tr>
+<td>-47</td>
+<td>Missing price</td>
+</tr>
+<tr>
+<td>-48</td>
+<td>Token not found</td>
+</tr>
+<tr>
+<td>-49</td>
+<td>Unsupported type for name/address</td>
+</tr>
+<tr>
+<td>-50</td>
+<td>Missing txid</td>
+</tr>
+<tr>
+<td>-51</td>
+<td>No available token accounts for recipient</td>
+</tr>
+<tr>
+<td>-52</td>
+<td>No more available accounts for debit</td>
+</tr>
+<tr>
+<td>-53</td>
+<td>Missing name / address of account to credit</td>
+</tr>
+<tr>
+<td>-54</td>
+<td>Missing name_proof / address_proof to credit</td>
+</tr>
+<tr>
+<td>-55</td>
+<td>Must have at least two recipients to debit from any</td>
+</tr>
+<tr>
+<td>-56</td>
+<td>Invalid user-type enum [value]</td>
+</tr>
+<tr>
+<td>-57</td>
+<td>Invalid Parameter [name]</td>
+</tr>
+<tr>
+<td>-58</td>
+<td>Empty Parameter [name]</td>
+</tr>
+<tr>
+<td>-59</td>
+<td>Account to credit is not a NXS account</td>
+</tr>
+<tr>
+<td>-60</td>
+<td>[name] out of range [max]</td>
+</tr>
+<tr>
+<td>-61</td>
+<td>Proof account is for a different token than the asset token</td>
+</tr>
+<tr>
+<td>-62</td>
+<td>Coinbase transaction mined by different user</td>
+</tr>
+<tr>
+<td>-63</td>
+<td>Could not retrieve default NXS account to credit</td>
+</tr>
+<tr>
+<td>-64</td>
+<td>Missing recipient account name_to / address_to</td>
+</tr>
+<tr>
+<td>-65</td>
+<td>Object is not an account</td>
+</tr>
+<tr>
+<td>-66</td>
+<td>Cannot use aggregate fieldnames with operations</td>
+</tr>
+<tr>
+<td>-67</td>
+<td>-safemode next hash mismatch, broadcast terminated</td>
+</tr>
+<tr>
+<td>-68</td>
+<td>Amount too small</td>
+</tr>
+<tr>
+<td>-69</td>
+<td>Insufficient funds</td>
+</tr>
+<tr>
+<td>-70</td>
+<td>Trust account not found</td>
+</tr>
+<tr>
+<td>-71</td>
+<td>Fieldname [name] doesn't exist</td>
+</tr>
+<tr>
+<td>-72</td>
+<td>Register is not a trust account</td>
+</tr>
+<tr>
+<td>-73</td>
+<td>Trust account is not a NXS account</td>
+</tr>
+<tr>
+<td>-74</td>
+<td>No registers found</td>
+</tr>
+<tr>
+<td>-75</td>
+<td>Value [key=value] exceeds dataset size [size]</td>
+</tr>
+<tr>
+<td>-76</td>
+<td>Cannot set stake for trust account until after Genesis transaction</td>
+</tr>
+<tr>
+<td>-77</td>
+<td>Insufficient trust account balance to add to stake</td>
+</tr>
+<tr>
+<td>-78</td>
+<td>Stake not changed</td>
+</tr>
+<tr>
+<td>-79</td>
+<td>getblockhash requires the daemon to be started with the -indexheight flag</td>
+</tr>
+<tr>
+<td>-80</td>
+<td>Missing height</td>
+</tr>
+<tr>
+<td>-81</td>
+<td>[command] cannot use parameter [name] combined with [name]</td>
+</tr>
+<tr>
+<td>-82</td>
+<td>Block number out of range</td>
+</tr>
+<tr>
+<td>-83</td>
+<td>Block not found</td>
+</tr>
+<tr>
+<td>-84</td>
+<td>Missing hash or height</td>
+</tr>
+<tr>
+<td>-85</td>
+<td>getblock by height requires the daemon to be started with the -indexheight flag</td>
+</tr>
+<tr>
+<td>-86</td>
+<td>Missing hash or txid</td>
+</tr>
+<tr>
+<td>-87</td>
+<td>Invalid or unknown transaction</td>
+</tr>
+<tr>
+<td>-88</td>
+<td>Missing or empty name</td>
+</tr>
+<tr>
+<td>-89</td>
+<td>Invalid register_address</td>
+</tr>
+<tr>
+<td>-90</td>
+<td>Namespace already exists</td>
+</tr>
+<tr>
+<td>-91</td>
+<td>Missing name / register_address</td>
+</tr>
+<tr>
+<td>-92</td>
+<td>Name not found</td>
+</tr>
+<tr>
+<td>-93</td>
+<td>Missing namespace name</td>
+</tr>
+<tr>
+<td>-94</td>
+<td>Invalid namespace</td>
+</tr>
+<tr>
+<td>-95</td>
+<td>Namespace does not exist: [namespace]</td>
+</tr>
+<tr>
+<td>-96</td>
+<td>Cannot create name in [namespace] you don't own</td>
+</tr>
+<tr>
+<td>-97</td>
+<td>An object with this name already exists in this namespace</td>
+</tr>
+<tr>
+<td>-98</td>
+<td>An object with this name already exists for this user</td>
+</tr>
+<tr>
+<td>-99</td>
+<td>Transfer transaction not found</td>
+</tr>
+<tr>
+<td>-100</td>
+<td>Missing username prefix before name</td>
+</tr>
+<tr>
+<td>-101</td>
+<td>Unknown name: (name)</td>
+</tr>
+<tr>
+<td>-102</td>
+<td>Invalid address</td>
+</tr>
+<tr>
+<td>-103</td>
+<td>Missing register_address parameter</td>
+</tr>
+<tr>
+<td>-104</td>
+<td>Object not found</td>
+</tr>
+<tr>
+<td>-105</td>
+<td>Missing address</td>
+</tr>
+<tr>
+<td>-106</td>
+<td>Invalid name / address</td>
+</tr>
+<tr>
+<td>-107</td>
+<td>No history found</td>
+</tr>
+<tr>
+<td>-108</td>
+<td>Failed to read transaction</td>
+</tr>
+<tr>
+<td>-109</td>
+<td>Specified name/address is not of type (type)</td>
+</tr>
+<tr>
+<td>-110</td>
+<td>Contract execution failed</td>
+</tr>
+<tr>
+<td>-111</td>
+<td>Missing genesis / username</td>
+</tr>
+<tr>
+<td>-112</td>
+<td>Missing username / destination</td>
+</tr>
+<tr>
+<td>-113</td>
+<td>Destination user doesn't exist</td>
+</tr>
+<tr>
+<td>-114</td>
+<td>(type) not found</td>
+</tr>
+<tr>
+<td>-115</td>
+<td>Name / address is not of type (type)</td>
+</tr>
+<tr>
+<td>-116</td>
+<td>Cannot transfer names created without a namespace</td>
+</tr>
+<tr>
+<td>-117</td>
+<td>Item not found</td>
+</tr>
+<tr>
+<td>-118</td>
+<td>[type] operator not supported for this command-set</td>
+</tr>
+<tr>
+<td>-119</td>
+<td>[name] field(s) does not exist for result</td>
+</tr>
+<tr>
+<td>-120</td>
+<td>Maximum number of contracts exceeded (99), please try again or use -autotx mode.</td>
+</tr>
+<tr>
+<td>-121</td>
+<td>Aggregated type [noun] not allowed for [verb]</td>
+</tr>
+<tr>
+<td>-122</td>
+<td>Invalid operator [op] for command.</td>
+</tr>
+<tr>
+<td>-123</td>
+<td>[type] unsupported for operator [op]</td>
+</tr>
+<tr>
+<td>-124</td>
+<td>Operator [op] cannot be used on empty result</td>
+</tr>
+<tr>
+<td>-125</td>
+<td>Token not found</td>
+</tr>
+<tr>
+<td>-126</td>
+<td>Address is not for a NXS account"</td>
+</tr>
+<tr>
+<td>-127</td>
+<td>Missing username</td>
+</tr>
+<tr>
+<td>-128</td>
+<td>Missing password</td>
+</tr>
+<tr>
+<td>-129</td>
+<td>Missing PIN</td>
+</tr>
+<tr>
+<td>-130</td>
+<td>Account already exists</td>
+</tr>
+<tr>
+<td>-131</td>
+<td>Lock not supported in multiuser mode</td>
+</tr>
+<tr>
+<td>-132</td>
+<td>Account already locked</td>
+</tr>
+<tr>
+<td>-133</td>
+<td>Zero-length username</td>
+</tr>
+<tr>
+<td>-134</td>
+<td>Zero-length password</td>
+</tr>
+<tr>
+<td>-135</td>
+<td>Zero-length PIN</td>
+</tr>
+<tr>
+<td>-136</td>
+<td>Account doesn't exist</td>
+</tr>
+<tr>
+<td>-137</td>
+<td>Couldn't get transaction</td>
+</tr>
+<tr>
+<td>-138</td>
+<td>No previous transaction found</td>
+</tr>
+<tr>
+<td>-139</td>
+<td>Invalid credentials</td>
+</tr>
+<tr>
+<td>-140</td>
+<td>Already logged in with a different username</td>
+</tr>
+<tr>
+<td>-141</td>
+<td>Already logged out</td>
+</tr>
+<tr>
+<td>-142</td>
+<td>Username parameter not supported for this method. Names can only be obtained for the logged in user</td>
+</tr>
+<tr>
+<td>-143</td>
+<td>No notifications available</td>
+</tr>
+<tr>
+<td>-144</td>
+<td>No transactions found</td>
+</tr>
+<tr>
+<td>-145</td>
+<td>Unlock not supported in multiuser mode</td>
+</tr>
+<tr>
+<td>-146</td>
+<td>Account already unlocked for mining</td>
+</tr>
+<tr>
+<td>-147</td>
+<td>Account already unlocked for transactions</td>
+</tr>
+<tr>
+<td>-148</td>
+<td>Account already unlocked</td>
+</tr>
+<tr>
+<td>-149</td>
+<td>Invalid PIN</td>
+</tr>
+<tr>
+<td>-150</td>
+<td>Transaction rejected</td>
+</tr>
+<tr>
+<td>-151</td>
+<td>Transaction already in database</td>
+</tr>
+<tr>
+<td>-152</td>
+<td>Transaction contains no valid transfers</td>
+</tr>
+<tr>
+<td>-153</td>
+<td>Transfer recipient object not found</td>
+</tr>
+<tr>
+<td>-154</td>
+<td>Invalid field type (field)</td>
+</tr>
+<tr>
+<td>-155</td>
+<td>Raw assets can not be updated</td>
+</tr>
+<tr>
+<td>-156</td>
+<td>Field not found in asset (field)</td>
+</tr>
+<tr>
+<td>-157</td>
+<td>Field not mutable in asset (field)</td>
+</tr>
+<tr>
+<td>-158</td>
+<td>Value longer than maximum length (field)</td>
+</tr>
+<tr>
+<td>-159</td>
+<td>Values must be passed in as strings</td>
+</tr>
+<tr>
+<td>-160</td>
+<td>Username contains invalid characters</td>
+</tr>
+<tr>
+<td>-161</td>
+<td>Name contains invalid characters</td>
+</tr>
+<tr>
+<td>-162</td>
+<td>Namespace can only contain lowercase letters, numbers, periods (.)</td>
+</tr>
+<tr>
+<td>-163</td>
+<td>Could not retrieve default NXS account to debit fees</td>
+</tr>
+<tr>
+<td>-164</td>
+<td>Fee account is not a NXS account</td>
+</tr>
+<tr>
+<td>-165</td>
+<td>Invalid address/name_to</td>
+</tr>
+<tr>
+<td>-166</td>
+<td>Account is a NXS account. Please use the finance API for accessing NXS accounts.</td>
+</tr>
+<tr>
+<td>-167</td>
+<td>Invalid reference</td>
+</tr>
+<tr>
+<td>-168</td>
+<td>Invalid expiration time</td>
+</tr>
+<tr>
+<td>-169</td>
+<td>Names cannot start with a colon</td>
+</tr>
+<tr>
+<td>-170</td>
+<td>Global names cannot be created in a namespace</td>
+</tr>
+<tr>
+<td>-171</td>
+<td>Global names cannot cannot contain a colon</td>
+</tr>
+<tr>
+<td>-172</td>
+<td>Cannot void a transaction that does not belong to you</td>
+</tr>
+<tr>
+<td>-173</td>
+<td>Cannot void debit transaction as it has already been fully credited by all recipients</td>
+</tr>
+<tr>
+<td>-174</td>
+<td>Transaction contains no contracts that can be voided</td>
+</tr>
+<tr>
+<td>-175</td>
+<td>Invalid supply amount. Supply must be whole number value</td>
+</tr>
+<tr>
+<td>-176</td>
+<td>Invalid supply amount. The maximum token supply is 18446744073709551615</td>
+</tr>
+<tr>
+<td>-177</td>
+<td>Invalid decimals amount. Decimals must be whole number value between 0 and 8</td>
+</tr>
+<tr>
+<td>-178</td>
+<td>Invalid supply/decimals. The maximum supply/decimals cannot exceed 18446744073709551615</td>
+</tr>
+<tr>
+<td>-179</td>
+<td>Legacy wallet is locked. walletpassphrase required</td>
+</tr>
+<tr>
+<td>-180</td>
+<td>Incorrect walletpassphrase for Legacy wallet</td>
+</tr>
+<tr>
+<td>-181</td>
+<td>Trust key not found for Legacy wallet</td>
+</tr>
+<tr>
+<td>-182</td>
+<td>Trust key previously migrated</td>
+</tr>
+<tr>
+<td>-183</td>
+<td>Previous stake transaction immature</td>
+</tr>
+<tr>
+<td>-184</td>
+<td>Previous stake transaction is not a Legacy transaction</td>
+</tr>
+<tr>
+<td>-185</td>
+<td>Previous transaction is not a stake transaction</td>
+</tr>
+<tr>
+<td>-186</td>
+<td>Previous stake does not belong to current wallet</td>
+</tr>
+<tr>
+<td>-187</td>
+<td>Could not get addresses for Legacy wallet</td>
+</tr>
+<tr>
+<td>-188</td>
+<td>Trust account already has genesis</td>
+</tr>
+<tr>
+<td>-189</td>
+<td>Trust account already has stake</td>
+</tr>
+<tr>
+<td>-190</td>
+<td>Trust account already has trust</td>
+</tr>
+<tr>
+<td>-191</td>
+<td>Username must be a minimum of 2 characters</td>
+</tr>
+<tr>
+<td>-192</td>
+<td>Password must be a minimum of 8 characters</td>
+</tr>
+<tr>
+<td>-193</td>
+<td>Pin must be a minimum of 4 characters</td>
+</tr>
+<tr>
+<td>-194</td>
+<td>Account already unlocked for notifications</td>
+</tr>
+<tr>
+<td>-195</td>
+<td>Account already unlocked for staking</td>
+</tr>
+<tr>
+<td>-196</td>
+<td>Account already locked for mining</td>
+</tr>
+<tr>
+<td>-197</td>
+<td>Account already locked for staking</td>
+</tr>
+<tr>
+<td>-198</td>
+<td>Account already locked for transactions</td>
+</tr>
+<tr>
+<td>-199</td>
+<td>Account already locked for notifications</td>
+</tr>
+<tr>
+<td>-200</td>
+<td>Namespace can't be created with reserved name</td>
+</tr>
+<tr>
+<td>-201</td>
+<td>Global names can't be created with reserved name</td>
+</tr>
+<tr>
+<td>-202</td>
+<td>Signature chain not mature after your previous mined/stake block. X more confirmation(s) required.</td>
+</tr>
+<tr>
+<td>-203</td>
+<td>Autologin user not found</td>
+</tr>
+<tr>
+<td>-204</td>
+<td>Cannot set stake to a negative amount</td>
+</tr>
+<tr>
+<td>-205</td>
+<td>Unable to retrieve last stake</td>
+</tr>
+<tr>
+<td>-206</td>
+<td>Failed to erase expired stake change request</td>
+</tr>
+<tr>
+<td>-207</td>
+<td>Failed to erase previous stake change request</td>
+</tr>
+<tr>
+<td>-208</td>
+<td>Failed to save stake change request</td>
+</tr>
+<tr>
+<td>-209</td>
+<td>Recipient is not a valid account</td>
+</tr>
+<tr>
+<td>-210</td>
+<td>Recipient account is for a different token</td>
+</tr>
+<tr>
+<td>-211</td>
+<td>Recipient object has not been tokenized</td>
+</tr>
+<tr>
+<td>-212</td>
+<td>Invalid token</td>
+</tr>
+<tr>
+<td>-213</td>
+<td>Cannot create transactions whilst synchronizing</td>
+</tr>
+<tr>
+<td>-214</td>
+<td>Insufficient funds to pay fee</td>
+</tr>
+<tr>
+<td>-215</td>
+<td>Max number of recipients (99) exceeded</td>
+</tr>
+<tr>
+<td>-216</td>
+<td>recipients field must be an array</td>
+</tr>
+<tr>
+<td>-217</td>
+<td>recipients array is empty</td>
+</tr>
+<tr>
+<td>-218</td>
+<td>User password / pin not changed</td>
+</tr>
+<tr>
+<td>-219</td>
+<td>Could not retrieve Crypto object</td>
+</tr>
+<tr>
+<td>-220</td>
+<td>Missing recovery seed</td>
+</tr>
+<tr>
+<td>-221</td>
+<td>Recovery seed must be a minimum of 40 characters</td>
+</tr>
+<tr>
+<td>-222</td>
+<td>User create pending confirmation</td>
+</tr>
+<tr>
+<td>-223</td>
+<td>Recovery seed not set on this signature chain</td>
+</tr>
+<tr>
+<td>-224</td>
+<td>Missing description</td>
+</tr>
+<tr>
+<td>-225</td>
+<td>Missing number</td>
+</tr>
+<tr>
+<td>-226</td>
+<td>Missing reference</td>
+</tr>
+<tr>
+<td>-227</td>
+<td>Missing payment account name / address</td>
+</tr>
+<tr>
+<td>-228</td>
+<td>Missing sender detail</td>
+</tr>
+<tr>
+<td>-229</td>
+<td>Missing recipient</td>
+</tr>
+<tr>
+<td>-230</td>
+<td>Recipient user does not exist</td>
+</tr>
+<tr>
+<td>-231</td>
+<td>Missing recipient detail</td>
+</tr>
+<tr>
+<td>-232</td>
+<td>Missing items</td>
+</tr>
+<tr>
+<td>-233</td>
+<td>Invoice must include at least one item</td>
+</tr>
+<tr>
+<td>-234</td>
+<td>Missing item description</td>
+</tr>
+<tr>
+<td>-235</td>
+<td>Missing item unit amount</td>
+</tr>
+<tr>
+<td>-236</td>
+<td>Invalid item unit amount</td>
+</tr>
+<tr>
+<td>-237</td>
+<td>Item unit amount must be greater than 0</td>
+</tr>
+<tr>
+<td>-238</td>
+<td>Missing item number of units</td>
+</tr>
+<tr>
+<td>-239</td>
+<td>Invalid item number of units</td>
+</tr>
+<tr>
+<td>-240</td>
+<td>Item units must be greater than 0</td>
+</tr>
+<tr>
+<td>-241</td>
+<td>Invoice not found</td>
+</tr>
+<tr>
+<td>-242</td>
+<td>Data at this address is not an invoice</td>
+</tr>
+<tr>
+<td>-242</td>
+<td>Data exceeds max register size</td>
+</tr>
+<tr>
+<td>-243</td>
+<td>Data at this address is not a supply item</td>
+</tr>
+<tr>
+<td>-244</td>
+<td>Cannot send invoice to self</td>
+</tr>
+<tr>
+<td>-245</td>
+<td>Cannot [action] an invoice that has already been paid</td>
+</tr>
+<tr>
+<td>-246</td>
+<td>Cannot [action] an invoice that has already been cancelled</td>
+</tr>
+<tr>
+<td>-247</td>
+<td>Could not find invoice transfer transaction</td>
+</tr>
+<tr>
+<td>-248</td>
+<td>-------------------------</td>
+</tr>
+<tr>
+<td>-249</td>
+<td>-------------------------</td>
+</tr>
+<tr>
+<td>-250</td>
+<td>Invoice is not yours to pay</td>
+</tr>
+<tr>
+<td>-251</td>
+<td>Missing name from or address from</td>
+</tr>
+<tr>
+<td>-252</td>
+<td>Account to debit is not for the required token</td>
+</tr>
+<tr>
+<td>-254</td>
+<td>-------------------------------</td>
+</tr>
+<tr>
+<td>-255</td>
+<td>Cannot process notifications until peers are connected</td>
+</tr>
+<tr>
+<td>-256</td>
+<td>Cannot process notifications whilst synchronizing</td>
+</tr>
+<tr>
+<td>-257</td>
+<td>Contract failed peer validation</td>
+</tr>
+<tr>
+<td>-258</td>
+<td>Unknown genesis</td>
+</tr>
+<tr>
+<td>-259</td>
+<td>You must specify at least one unlock action</td>
+</tr>
+<tr>
+<td>-260</td>
+<td>Invalid key name</td>
+</tr>
+<tr>
+<td>-261</td>
+<td>Key already exists</td>
+</tr>
+<tr>
+<td>-262</td>
+<td>Invalid scheme</td>
+</tr>
+<tr>
+<td>-263</td>
+<td>Private keys cannot only be retrieved for keys in the crypto register</td>
+</tr>
+<tr>
+<td>-264</td>
+<td>Key not yet created</td>
+</tr>
+<tr>
+<td>-265</td>
+<td>Missing public key</td>
+</tr>
+<tr>
+<td>-266</td>
+<td>Malformed public key</td>
+</tr>
+<tr>
+<td>-267</td>
+<td>Shared key encryption only supported for EC (Brainpool) keys</td>
+</tr>
+<tr>
+<td>-268</td>
+<td>Failed to generate shared key</td>
+</tr>
+<tr>
+<td>-269</td>
+<td>Malformed private key</td>
+</tr>
+<tr>
+<td>-270</td>
+<td>Failed to encrypt data</td>
+</tr>
+<tr>
+<td>-271</td>
+<td>Failed to decrypt data</td>
+</tr>
+<tr>
+<td>-272</td>
+<td>Unsupported key type</td>
+</tr>
+<tr>
+<td>-273</td>
+<td>Failed to generate signature</td>
+</tr>
+<tr>
+<td>-274</td>
+<td>Missing signature</td>
+</tr>
+<tr>
+<td>-275</td>
+<td>Missing scheme</td>
+</tr>
+<tr>
+<td>-276</td>
+<td>Error generating hash</td>
+</tr>
+<tr>
+<td>-277</td>
+<td>Invalid hash function</td>
+</tr>
+<tr>
+<td>-278</td>
+<td>Scheme already in use</td>
+</tr>
+<tr>
+<td>-279</td>
+<td>P2P request not found</td>
+</tr>
+<tr>
+<td>-280</td>
+<td>P2P server not enabled on this node</td>
+</tr>
+<tr>
+<td>-281</td>
+<td>Missing App ID</td>
+</tr>
+<tr>
+<td>-282</td>
+<td>Connection not found</td>
+</tr>
+<tr>
+<td>-283</td>
+<td>A connection to this peer already exists</td>
+</tr>
+<tr>
+<td>-284</td>
+<td>Failed to connect to peer</td>
+</tr>
+<tr>
+<td>-285</td>
+<td>No messages available</td>
+</tr>
+<tr>
+<td>-286</td>
+<td>Timeout waiting for peer to accept connection request</td>
+</tr>
+<tr>
+<td>-287</td>
+<td>API method not supported in multiuser mode</td>
+</tr>
+<tr>
+<td>-288</td>
+<td>Cannot unlock for mining in multiuser mode</td>
+</tr>
+<tr>
+<td>-289</td>
+<td>Cannot unlock for staking in multiuser mode</td>
+</tr>
+<tr>
+<td>-290</td>
+<td>Invalid credentials. User logged out due to too many password / pin attempts</td>
+</tr>
+<tr>
+<td>-291</td>
+<td>The cert key cannot be used to create a key pair as it is reserved for a TLS certificate. Please use the create/certificate API method instead.</td>
+</tr>
+<tr>
+<td>-292</td>
+<td>The cert key cannot be used to sign data as it is reserved for a TLS certificate</td>
+</tr>
+<tr>
+<td>-293</td>
+<td>Invalid key name. Keys in the crypto register cannot be used for encryption, only signature generation and verification</td>
+</tr>
+<tr>
+<td>-294</td>
+<td>Certificate has not yet been created for this signature chain. Please use crypto/create/key to create the certificate first</td>
+</tr>
+<tr>
+<td>-295</td>
+<td>Public key mismatch. Unable to generate certificate</td>
+</tr>
+<tr>
+<td>-296</td>
+<td>Missing certificate</td>
+</tr>
+<tr>
+<td>-297</td>
+<td>Cannot log in while synchronizing</td>
+</tr>
+<tr>
+<td>-300</td>
+<td>API can only be used to lookup data for the currently logged in signature chain when running in client mode</td>
+</tr>
+<tr>
+<td>-301</td>
+<td>where field must be an array</td>
+</tr>
+<tr>
+<td>-302</td>
+<td>Missing field in where clause</td>
+</tr>
+<tr>
+<td>-303</td>
+<td>Missing op in where clause</td>
+</tr>
+<tr>
+<td>-304</td>
+<td>Missing value in where clause</td>
+</tr>
+<tr>
+<td>-305</td>
+<td>Unknown operand in where clause</td>
+</tr>
+<tr>
+<td>-306</td>
+<td>No connections available</td>
+</tr>
+<tr>
+<td>-307</td>
+<td>Failed to download signature chain</td>
+</tr>
+<tr>
+<td>-308</td>
+<td>API method only available in client mode</td>
+</tr>
+<tr>
+<td>-309</td>
+<td>Error loading session</td>
+</tr>
+<tr>
+<td>-310</td>
+<td>Cannot sent to ALL accounts</td>
+</tr>
+</tbody>
+</table></div>
