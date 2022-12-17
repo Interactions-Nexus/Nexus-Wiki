@@ -1,0 +1,122 @@
+<!--
+title: Tritium++ 麟氚++ API 模板
+description: 麟氚++ API 模板
+published: true
+date: 2022-12-17T14:29:49.011Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-17T14:29:34.372Z
+-->
+
+<h1 class="toc-header" id="templates"> Templates</h1>
+<p>A lot of the current commands available in the API operate on generic templated code that allows insertion of any object type without the need for repeated functions to handle each object type. The following list of generic endpoints have default parameters that can be useful to know outside of each individual command-set.</p>
+<h3 class="toc-header" id="scope"> <code>Scope</code></h3>
+<p>The following templates do not exceed a local scope, meaning they will return results derived from the internal indexing services which requires login and authorization. The data-set returned from these templates is stored in the Logical Database, and thus only provides data local to a profile-id, meaning <code>history</code> and <code>transactions</code> will only show events that happened on the profile that generated indexes with login.</p>
+<h3 class="toc-header" id="verbs"> <code>Verbs</code></h3>
+<p>The following list of verbs are templates throughout the Nexus APIs. While the action is generic in nature (i.e. list, get, create), implementations of these actions will adhere to certain semantics or mandatory parameters regardless of the noun (resource).</p>
+<ul>
+<li><code>list</code>
+<ul>
+<li>Retrieves a sorted list of objects or data</li>
+<li>Sorting is based on transaction/object age, by default is always newest to oldest. Some list methods support additional sort fields.</li>
+<li>Common parameters:
+<ul>
+<li><code>order</code> : The order of the results. Values can be <code>desc</code> (default) or <code>asc</code></li>
+<li><code>limit</code> : The number of records to return, default 100. <code>limit=none</code> is allowed.</li>
+<li><code>page</code>: Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) transactions. The default value is 0 if not supplied.</li>
+<li><code>offset</code> : An alternative to <code>page</code>, offset can be used to return a set of (limit) results from a particular index.</li>
+<li><code>verbose</code> : to indicate the verbosity of the data returned. Values can be <code>default</code>, <code>summary</code>, or <code>detail</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>get</code>
+<ul>
+<li>Retrieves a single object or piece of data</li>
+<li>Supported parameters:
+<ul>
+<li><code>verbose</code> : to indicate the verbosity of the data returned. Values can be <code>default</code>, <code>summary</code>, or <code>detail</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>create</code>
+<ul>
+<li>Creates a single resource or object.</li>
+<li>Common parameters:
+<ul>
+<li><code>format</code> : indicates the format of the data being provided to create the item / object (where applicable). Values can be <code>basic</code>, <code>raw</code>, and <code>JSON</code></li>
+<li><code>scheme</code> : sets the key type to be used for the given transaction. Values can be <code>falcon</code> or <code>brainbpool</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>update</code>
+<ul>
+<li>Updates a single resource or object.</li>
+<li>Common parameters:
+<ul>
+<li><code>format</code> : indicates the format of the data being provided to create the item / object (where applicable). Values can be <code>basic</code>, <code>raw</code>, <code>standard</code>, and <code>JSON</code></li>
+<li><code>scheme</code> : sets the key type to be used for the given transaction. Values can be <code>falcon</code> or <code>brainbpool</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>transfer</code>
+<ul>
+<li>Transfers a single resource or object to another users's profile</li>
+<li>Common parameters:
+<ul>
+<li><code>address</code>: the address of object to transfer</li>
+<li><code>recipient</code>: the profile-id of the sigchain receiving object.</li>
+<li><code>scheme</code> : sets the key type to be used for the given transaction. Values can be <code>falcon</code> or <code>brainbpool</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>claim</code>
+<ul>
+<li>Claims a single resource or object from a given transfer</li>
+<li>Common parameters:
+<ul>
+<li><code>address</code>: the address of object to claim</li>
+<li><code>txid</code>: the transaction-id of the transfer we are claiming.</li>
+<li><code>scheme</code> : sets the key type to be used for the given transaction. Values can be <code>falcon</code> or <code>brainbpool</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>history</code>
+<ul>
+<li>List the history of state changes for a given object.</li>
+<li>Common parameters:
+<ul>
+<li><code>address</code>: the address of object to view history for.</li>
+<li><code>order</code> : The order of the results. Values can be <code>desc</code> (default) or <code>asc</code></li>
+<li><code>limit</code> : The number of records to return, default 100. <code>limit=none</code> is allowed.</li>
+<li><code>page</code>: Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) transactions. The default value is 0 if not supplied.</li>
+<li><code>offset</code> : An alternative to <code>page</code>, offset can be used to return a set of (limit) results from a particular index.</li>
+<li><code>verbose</code> : to indicate the verbosity of the data returned. Values can be <code>default</code>, <code>summary</code>, or <code>detail</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>transactions</code>
+<ul>
+<li>List all of the transactions that modified a given register.</li>
+<li>Common parameters:
+<ul>
+<li><code>address</code>: the address of object to view transactions for.</li>
+<li><code>order</code> : The order of the results. Values can be <code>desc</code> (default) or <code>asc</code></li>
+<li><code>limit</code> : The number of records to return, default 100. <code>limit=none</code> is allowed.</li>
+<li><code>page</code>: Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) transactions. The default value is 0 if not supplied.</li>
+<li><code>offset</code> : An alternative to <code>page</code>, offset can be used to return a set of (limit) results from a particular index.</li>
+<li><code>verbose</code> : to indicate the verbosity of the data returned. Values can be <code>default</code>, <code>summary</code>, or <code>detail</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary></summary>
+</details>
