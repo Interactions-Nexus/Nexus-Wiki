@@ -2,7 +2,7 @@
 title: 3-Wymiarowy Łańcuch (przyszłość)
 description: Rozwiązanie do skalowania 3DC dla Nexusa
 published: true
-date: 2022-12-18T23:37:34.809Z
+date: 2022-12-18T23:50:30.728Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:38:06.925Z
@@ -66,4 +66,66 @@ Kryptografia niższego poziomu (LLC) to lekka i wydajna biblioteka zawierająca 
 
 ## Bezpieczeństwo
 
-Nexus wykorzystuje wiele systemów konsensusu, które wzajemnie się „sprawdzają i równoważą”. Różnorodność wzmacnia pulę genową gatunku ludzkiego, podobnie jak jest równie ważną właściwością dla bezpieczeństwa systemu zdecentralizowanego. 3DC zaprojektowano jako wiele warstw przetwarzania transakcji lub „konsensusu”, a każda z t
+Nexus wykorzystuje wiele systemów konsensusu, które wzajemnie się 'sprawdzają i równoważą'. Różnorodność wzmacnia pulę genową gatunku ludzkiego, podobnie jak jest równie ważną właściwością dla bezpieczeństwa systemu zdecentralizowanego. 3DC jest zaprojektowane jako wiele warstw przetwarzania transakcji lub 'konsensusu', a każda z warstw agreguje dane z warstwy poniżej. Węzły wykonujące pracę na L2 rozwiązują wszelkie konflikty we fragmentach L1, używając 'stawki' i 'zaufania' jako 'wagi' w celu ustalenia konsensusu. W przypadku wystąpienia konfliktu rozwiązuje się go poprzez ważność danych, która jest zdefiniowana jako (zaufanie + waga). Warstwa L3 skonsoliduje skróty z L2, aby utworzyć ostateczny blok 3D.
+
+Nexus bardzo poważnie traktuje wykorzystanie kryptografii, ponieważ luka w tych funkcjach może zagrozić bezpieczeństwu całej sieci. Używamy tylko dobrze przetestowanej i dokładnie zweryfikowanej kryptografii, aby wspierać zwiększone poziomy odporności kwantowej.
+
+## Zaufanie i waga
+
+Zaufanie definiuje się jako całkowity czas, jaki dany użytkownik (łańcuch podpisów) wnosi do sieci. Ten czas jest mierzony przez spójność i dostępność węzła do sprawdzania poprawności danych transakcji.
+
+Waga jest zdefiniowana jako wkład zasobów w czasie rzeczywistym, które dany węzeł zapewnił dla jednorazowego procesu transakcyjnego. Można to zmierzyć w cyklach obliczeniowych za pomocą Proof-of-Work (PoW) lub innych zasobów, takich jak 'stake', których zapewnienie wiąże się z kosztami.
+
+## pBFT + kanały reputacji (L1)
+
+Gdy transakcje są odbierane przez sieć, węzły natychmiast zaczynają je weryfikować. Szybkość transakcji w kanałach L1 będzie się różnić w zależności od ryzyka, jakie handlowiec chce przyjąć, od prędkości poniżej sekundy do pięciu sekund. W przypadku transakcji o wyższej wartości zaleca się, aby otrzymały dodatkową wagę z walidacji na następnej warstwie konsensusu: L2, zmniejszając szybkość transakcji do 15 sekund plus.
+
+## pBFT + Sieć zaufania PoS (L2)
+
+Jako rozszerzenie istniejącego systemu Proof-of-Stake, L2 utworzy drugą warstwę konsensusu powyżej L1. Warstwa L2 zapewnia bezpieczeństwo i żywotność, komunikację między fragmentami i rozwiązuje konflikty z poziomu warstwy L1. Reprezentuje poziome łańcuchowanie kanałów L1 i jest ważnym krokiem w kierunku prawdziwie zdecentralizowanej i skalowalnej księgi głównej.
+
+## Sprawdzanie i równoważenie
+
+Aby mieć najwyższy stopień bezpieczeństwa, decyzje nie mogą być skoncentrowane w jednej formie, ponieważ stwarza to możliwość 'przymusu'. Jeśli istnieje tylko jedna forma kosztu zapewniająca bezpieczeństwo, system można łatwo zdominować ze względu na ograniczone 'sprawdzanie i równoważenie'. Bitcoin jest doskonałym przykładem ofiary, która cierpi z powodu dominacji zasobów lub 'centralizacji'.
+
+Cztery organizacje kontrolują ponad 51% hashrate Bitcoina, co oznacza, że całe bezpieczeństwo Bitcoina zależy od nich i od decyzji, które podejmują. Ta sytuacja jest przykładem centralizacji wynikającej z dominacji zasobów, która doprowadziła do proponowanych rozwiązań, takich jak UASF (User Activated Soft Fork) i wielu forków Bitcoin, takich jak Bitcoin Cash, Bitcoin SV, Bitcoin Gold itp.
+
+![wykres](../../../.gitbook/assets/3dcgraph)
+
+Choć obiecujący, UASF nie był w stanie osiągnąć poziomu, na którym mógłby być skuteczny, ponieważ wymagany procent zgody górnika był zbyt wysoki.
+
+## Decentralizacja
+
+Wiele protokołów odeszło od PoW ze względu na duże zapotrzebowanie na energię. Niezwykle konkurencyjny charakter prowadzi również do zwiększania ilości zasobów w celu poszukiwania bloku, ponieważ tradycyjny model PoW nagradza tylko zwycięskiego górnika każdego bloku, zachęcając górników do łączenia zasobów.
+
+Delegated Proof of Stake (DPoS), mechanizm konsensusu używany przez EOS, TRON, LISK i inne głównie w celu osiągnięcia ulepszeń skalowania, opiera się na ograniczonej liczbie wybranych producentów bloków i zapewnia niski stopień decentralizacji. Istnieje kilka rozwiązań, które zostały zaproponowane do skalowania łańcucha bloków: na przykład Segregated Witness Bitcoin w połączeniu z Lightning Network i Ethereum Plasma. Choć obiecujące, oba zasadniczo polegają na rozwiązaniach poza łańcuchem, aby zapewnić skalowanie (bardziej scentralizowane podejście). Tworzą kanały płatności lub 'łańcuchy boczne', które polegają na małej grupie weryfikatorów w celu ponownego zatwierdzania zaktualizowanych sald. Młodsze protokoły proponowały systemy wielowarstwowe, chociaż nie znamy żadnych projektów, które kładą taki sam nacisk na decentralizację jak 3DC.
+
+3DC ma na celu osiągnięcie decentralizacji za pomocą wielu metod, które obejmują; Kanały reputacji L1, zdecentralizowane pule w warstwach L2 i L3, struktury zachęt do reputacji i odkrywanie partnerów.
+
+## Kanały reputacji L1
+
+Kanały reputacji L1 są zaprojektowane tak, aby wymagały niewielkiej ilości zasobów w porównaniu z warstwami L2 i L3. Ma to umożliwić korzystanie z mniejszych urządzeń mobilnych, co z kolei zapewni wyższy poziom decentralizacji. Jest to możliwe, ponieważ powyższa warstwa konsensusu L2 zwiększa wagę, aby zapewnić bezpieczeństwo kanałów poniżej. Reputacja jest ostatnim składnikiem, który 3DC wykorzystuje do utrzymania bezpieczeństwa przy jednoczesnym osiągnięciu wysokiego poziomu decentralizacji. Jest agregowany przez wszystkie trzy warstwy 3DC, aby określić ilościowo 'ważność' bloku 3D.
+
+## Zdecentralizowane pule stakowania (L2)
+
+Warstwa L2 jest rdzeniem 3DC, które zarządza agregacją danych i przetwarzaniem kontraktów. Ta warstwa otrzymuje również udziały od górników z warstwy L3 powyżej, w celu akumulacji ich pracy i zbiorowego nagradzania górników. Im więcej udziałów zostanie uwzględnionych z warstwy L3, tym większa będzie skumulowana waga i zaufanie dla danego bloku 3D. Dlatego 3DC zachęca walidatorów L2 do uwzględnienia jak największej liczby udziałów, aby ich blok 3D został zaakceptowany jako najbardziej ważny w łańcuchu 3D.
+
+Warstwa L2 jest sterowana przez ważenie 'Proof-of-Stake', które identyfikuje wszystkie węzły w procesie konsensusu jako uczestników, a zatem zapewnia wyższy stopień decentralizacji w porównaniu z istniejącymi protokołami Proof-of-Stake (PoS). 3DC będzie wymagać niższego minimalnego salda do obstawiania niż obecny protokół PoS.
+
+## Zdecentralizowane pule wydobywcze (L3)
+
+Ta warstwa będzie wykorzystywać udziały wydobywcze oparte na PoW, obliczone na podstawie pracy wykonanej przez węzły warstwy L2. O konsensusie zadecyduje największa wartość udziałów + Zaufanie, w celu osiągnięcia ostatecznego porozumienia co do najistotniejszego bloku 3D.
+
+Zamiast górników posiadających uprawnienia do określenia następnego bloku poprzez znalezienie zwycięskiego skrótu, wydobycie stanie się działaniem obejmującym całą grupę, tworząc warstwę L3 3DC. Górnicy, którzy przesyłają hasze do sieci, wykonują pracę, która blokuje łącza krzyżowe L2. Zapewnia to infrastrukturę dla bardziej zdecentralizowanego procesu konsensusu, a jednocześnie dziedziczy pozytywne właściwości, które oferuje górnictwo.
+
+## Odkrywanie równorzędne
+
+Łańcuchy bloków zazwyczaj polegają na zdolności węzłów do bezpośredniego łączenia się (peer-to-peer) w celu utrzymania zdecentralizowanej i równomiernie rozłożonej topologii. Węzły muszą być wykrywalne przez swoich rówieśników, ponieważ mogą akceptować żądania połączenia. Jest to rzadko osiągane i spowodowało, że Bitcoin ma tylko skromne 10% węzłów, które można wykryć.
+
+Alternatywnie, Nexus używa nakładki [LISP](broken-reference) w celu przechodzenia przez 'NAT' (Network Address Translators) w celu utrzymania wyższego stopnia dostępności węzłów. LISP używa statycznych identyfikatorów punktów końcowych (EID), do których można dotrzeć nawet podczas roamingu między różnymi sieciami (WiFi, wieże komórkowe itp.). Daje to węzłom znacznie większą mobilność, umożliwiając ich lokalizację w dowolnym miejscu w Internecie, za NAT w środowiskach mieszkalnych, u dostawców usług w chmurze i za operatorami komórkowymi, a jednocześnie nadal można je wykryć.
+
+## Struktura zachęt do reputacji
+
+Reputacja jest ważnym wymogiem funkcjonowania zdecentralizowanych systemów, w celu stworzenia zdrowej globalnej sieci. Zaimplementujemy reputację na wszystkich trzech warstwach 3DC, jako drugorzędny składnik wagi, poprawiając ogólny pBFT. Równie ważna jest reputacja, która może poprawić decentralizację poprzez struktury motywacyjne ułatwione przez zmienne nagrody dla węzłów, które zdobyły wyższą reputację. Długoterminowi współtwórcy systemu mogą zyskać wyższą reputację, a co za tym idzie, wyższy zwrot z ich wkładu, co daje podstawy do długofalowego przekonania o Nexusie, że:
+
+_Nie każdy ma pieniądze, ale każdy ma czas._
