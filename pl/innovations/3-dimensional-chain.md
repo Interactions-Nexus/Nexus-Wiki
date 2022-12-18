@@ -2,23 +2,23 @@
 title: 3-Wymiarowy Łańcuch (przyszłość)
 description: Rozwiązanie do skalowania 3DC dla Nexusa
 published: true
-date: 2022-12-18T23:50:30.728Z
+date: 2022-12-18T23:52:34.691Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:38:06.925Z
 ---
 
-# 3-Wymiarowy Łańcuch (przyszłość)
+# 3-wymiarowy Łańcuch (przyszłość)
 
-Łańcuch trójwymiarowy (3DC) ma na celu rozwiązanie „Trylematu Blockchain”. Przekształci księgę główną w wielowarstwowy system przetwarzania w celu bezpiecznego skalowania i wysokiego stopnia decentralizacji. Blockchain Trilemma to opinia, że tylko dwie z trzech cech, bezpieczeństwo, decentralizacja i skalowalność, są możliwe do osiągnięcia jednocześnie.
+Łańcuch trójwymiarowy (3DC) ma na celu rozwiązanie 'Trylematu Blockchain'. Przekształci księgę główną w wielowarstwowy system przetwarzania w celu bezpiecznego skalowania i wysokiego stopnia decentralizacji. Blockchain Trilemma to opinia, że tylko dwie z trzech cech, bezpieczeństwo, decentralizacja i skalowalność, są możliwe do osiągnięcia jednocześnie.
 
 3DC łączy ze sobą prymitywy kryptograficzne w trójwymiarowy niezmienny obiekt (blok 3D) i ma trzy podstawowe wymiary: kanały reputacji (X), niezmienność lub autentyczność (Y) i czas (Z). Ta architektura jest wdrażana za pośrednictwem [platformy TAO](broken-reference).
 
 ## Skalowalność
 
-Architektura starszych łańcuchów bloków jest porównywalna do jazdy samochodem po autostradzie jednopasmowej – wraz ze wzrostem liczby samochodów rośnie ruch. Nexus postrzega „skalowalność” jako wymóg, a nie funkcję. Dlatego projektujemy protokoły, które skalują się w miarę dołączania większej liczby węzłów do sieci, przetwarzając bez przeszkód nawet przy wzroście wymagań dotyczących zasobów.
+Architektura starszych łańcuchów bloków jest porównywalna do jazdy samochodem po autostradzie jednopasmowej – wraz ze wzrostem liczby samochodów rośnie ruch. Nexus postrzega 'skalowalność' jako wymóg, a nie funkcję. Dlatego projektujemy protokoły, które skalują się w miarę dołączania większej liczby węzłów do sieci, przetwarzając bez przeszkód nawet przy wzroście wymagań dotyczących zasobów.
 
-Korzystając z „łańcuchów podpisów”, „agregacji” i „dzielenia obliczeniowego”, 3DC tworzy równoległe ścieżki przetwarzania transakcji w celu wytworzenia warstwy L1, warstwy podstawowej 3DC. Dane są następnie przechowywane między wieloma węzłami przy użyciu tego, co nazywamy „Data Sharding”, co eliminuje potrzebę synchronizacji i przechowywania całego łańcucha bloków. [LISP](broken-reference) (Location Identifier Separation Protocol) i 'LLL' (biblioteka niższego poziomu) razem tworzą wspólny interfejs, który skutkuje zwiększeniem rozproszonego przechowywania danych, ponieważ więcej węzłów dołącza do sieci, zapewniając długoterminowy potencjał skalowania.
+Korzystając z 'łańcuchów podpisów', 'agregacji' i 'dzielenia obliczeniowego', 3DC tworzy równoległe ścieżki przetwarzania transakcji w celu wytworzenia warstwy L1, warstwy podstawowej 3DC. Dane są następnie przechowywane między wieloma węzłami przy użyciu tego, co nazywamy „Data Sharding”, co eliminuje potrzebę synchronizacji i przechowywania całego łańcucha bloków. [LISP](broken-reference) (Location Identifier Separation Protocol) i 'LLL' (biblioteka niższego poziomu) razem tworzą wspólny interfejs, który skutkuje zwiększeniem rozproszonego przechowywania danych, ponieważ więcej węzłów dołącza do sieci, zapewniając długoterminowy potencjał skalowania.
 
 ## Łańcuchy podpisów
 
