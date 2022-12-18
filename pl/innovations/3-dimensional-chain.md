@@ -1,14 +1,14 @@
 ---
-title: 3-wymiarowy Łańcuch (przyszłość)
+title: Łańcuch 3-wymiarowy (przyszłość)
 description: Rozwiązanie do skalowania 3DC dla Nexusa
 published: true
-date: 2022-12-18T23:52:46.341Z
+date: 2022-12-18T23:55:37.452Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:38:06.925Z
 ---
 
-# 3-wymiarowy Łańcuch (przyszłość)
+# Łańcuch 3-wymiarowy (przyszłość)
 
 Łańcuch trójwymiarowy (3DC) ma na celu rozwiązanie 'Trylematu Blockchain'. Przekształci księgę główną w wielowarstwowy system przetwarzania w celu bezpiecznego skalowania i wysokiego stopnia decentralizacji. Blockchain Trilemma to opinia, że tylko dwie z trzech cech, bezpieczeństwo, decentralizacja i skalowalność, są możliwe do osiągnięcia jednocześnie.
 
