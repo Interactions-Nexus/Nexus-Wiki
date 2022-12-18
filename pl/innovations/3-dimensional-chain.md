@@ -1,8 +1,8 @@
 ---
-title: 3-Wymiarowy Łańcuch (przyszłość)
+title: 3-wymiarowy Łańcuch (przyszłość)
 description: Rozwiązanie do skalowania 3DC dla Nexusa
 published: true
-date: 2022-12-18T23:52:34.691Z
+date: 2022-12-18T23:52:46.341Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:38:06.925Z
