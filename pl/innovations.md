@@ -2,7 +2,7 @@
 title: Innowacje
 description: Innowacje, dzięki którym Nexus jest wyjątkowy i jest wartościową propozycją
 published: true
-date: 2022-12-16T22:47:19.192Z
+date: 2022-12-18T23:54:57.092Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-06T15:49:22.955Z
@@ -17,7 +17,7 @@ Znajdź linki, które wyjaśniają różne innowacje w Nexusie:
 - [ZAUFANIE - nPoS *Nexus Proof-of-Stake z reputacją*](/innovations/trust-npos)
 - [ODPORNOŚĆ KWANTOWA *Gotowy na kwantową przyszłość*](/innovations/quantum-resistance)
 - [ZDECENTRALIZOWANA ORGANIZACJA AUTONOMICZNA (DAO) *Zarządzanie społecznością nowej epoki*](/innovations/dao)
-- [ŁAŃCUCH TRÓJWYMIAROWY *Rozwiązanie skalowalności*](/innovations/3-dimensional-chain)
+- [ŁAŃCUCH 3-WYMIAROWY *Rozwiązanie skalowalności*](/innovations/3-dimensional-chain)
 - [PROTOKÓŁ NEXUSA *Protokół dla nowego zdecentralizowanego internetu*](/innovations/nexus-protocol)
 - [JEDEN - STOS *Stos zasilający zdecentralizowany Internet*](/innovations/one-stack)
 {.links-list}
