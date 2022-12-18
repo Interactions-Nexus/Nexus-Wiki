@@ -2,7 +2,7 @@
 title: Tritium++ 麟氚++ API 模板
 description: 麟氚++ API 模板
 published: true
-date: 2022-12-17T14:33:15.730Z
+date: 2022-12-18T10:21:14.958Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-17T14:29:34.372Z
@@ -10,19 +10,19 @@ dateCreated: 2022-12-17T14:29:34.372Z
 
 <h1>麟氚++ API 模板</h1>
 <p>API 应用程式界面中可用的许多当前命令都在通用模板代码上运行，这些代码允许插入任何物件类型，而无需重复函数来处理每个物件类型。 以下通用端点列表具有默认参数，这些参数对于在每个单独的命令集之外了解很有用。</p>
-<h3><code>Scope</code></h3>
-<p>The following templates do not exceed a local scope, meaning they will return results derived from the internal indexing services which requires login and authorization. The data-set returned from these templates is stored in the Logical Database, and thus only provides data local to a profile-id, meaning <code>history</code> and <code>transactions</code> will only show events that happened on the profile that generated indexes with login.</p>
-<h3><code>Verbs</code></h3>
+<h3><code>Scope</code> 范围</h3>
+<p>以下模板不超出本地范围，这意味着它们将返回从需要登录和授权的内部索引服务派生的结果。 从这些模板返回的数据集存储在逻辑数据库中，因此仅提供个人资料 ID 的本地数据，这意味着 <code>history</code>&nbsp;历史和 <code>transactions</code>&nbsp;交易将仅显示在使用登录生成索引的个人资料上发生的事件。</p>
+<h3><code>Verbs</code> 动词</h3>
 <p>The following list of verbs are templates throughout the Nexus APIs. While the action is generic in nature (i.e. list, get, create), implementations of these actions will adhere to certain semantics or mandatory parameters regardless of the noun (resource).</p>
+<p>以下动词列表是整个 Nexus API 麟社应用程式界面的模板。 虽然操作本质上是通用的（即 list 列出、get 获取、create 创建），但这些操作的实现将遵守某些语义或强制参数，而不管名词（resource 资源）如何。</p>
 <ul>
-  <li><code>list</code>
-    <ul>
-      <li>Retrieves a sorted list of objects or data</li>
-      <li>Sorting is based on transaction/object age, by default is always newest to oldest. Some list methods support additional sort fields.</li>
-      <li>Common parameters:<ul>
-          <li><code>order</code> : The order of the results. Values can be <code>desc</code> (default) or <code>asc</code></li>
-          <li><code>limit</code> : The number of records to return, default 100. <code>limit=none</code> is allowed.</li>
-          <li><code>page</code>: Allows the results to be returned by page (zero based). E.g. passing in page=1 will return the second set of (limit) transactions. The default value is 0 if not supplied.</li>
+  <li><code>list</code> 列出<ul>
+      <li>检索物件或数据的排序列表</li>
+      <li>排序基于交易/物件年龄，默认情况下总是从最新到最旧。 一些列表方法支持额外的排序字段。</li>
+      <li>常用参数：<ul>
+          <li><code>order</code> 顺序：结果的顺序。 值可以是 <code>desc</code>（默认）或 <code>asc</code></li>
+          <li><code>limit</code> 限制： 要返回的记录数，默认为 100。允许 <code>limit=none</code>。</li>
+          <li><code>page</code>页：允许按页返回结果（从零开始）。 例如。 传入 page=1 将返回第二组（限制）交易。 如果未提供，则默认值为 0。</li>
           <li><code>offset</code> : An alternative to <code>page</code>, offset can be used to return a set of (limit) results from a particular index.</li>
           <li><code>verbose</code> : to indicate the verbosity of the data returned. Values can be <code>default</code>, <code>summary</code>, or <code>detail</code></li>
         </ul>
