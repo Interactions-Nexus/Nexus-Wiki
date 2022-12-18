@@ -2,7 +2,7 @@
 title: Tritium++ 麟氚++ API 模板
 description: 麟氚++ API 模板
 published: true
-date: 2022-12-18T10:29:17.074Z
+date: 2022-12-18T10:33:03.967Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-17T14:29:34.372Z
@@ -29,19 +29,17 @@ dateCreated: 2022-12-17T14:29:34.372Z
       </li>
     </ul>
   </li>
-  <li><code>get</code>
-    <ul>
-      <li>Retrieves a single object or piece of data</li>
-      <li>Supported parameters:<ul>
-          <li><code>verbose</code> : to indicate the verbosity of the data returned. Values can be <code>default</code>, <code>summary</code>, or <code>detail</code></li>
+  <li><code>get</code> 取得<ul>
+      <li>检索单个物件或数据片段</li>
+      <li>支持的参数：<ul>
+          <li><code>verbose</code> 详细：指示返回数据的详细程度。 值可以是 <code>default</code> 默认值、<code>summary</code> 摘要或 <code>detail</code> 详细信息</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li><code>create</code>
-    <ul>
-      <li>Creates a single resource or object.</li>
-      <li>Common parameters:<ul>
+  <li><code>create</code> 创建<ul>
+      <li>创建单个资源或物件。</li>
+      <li>常用参数：<ul>
           <li><code>format</code> : indicates the format of the data being provided to create the item / object (where applicable). Values can be <code>basic</code>, <code>raw</code>, and <code>JSON</code></li>
           <li><code>scheme</code> : sets the key type to be used for the given transaction. Values can be <code>falcon</code> or <code>brainbpool</code></li>
         </ul>
