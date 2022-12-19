@@ -2,23 +2,23 @@
 title: 过滤
 description: 如何使用 API 过滤结果
 published: true
-date: 2022-12-19T09:24:33.472Z
+date: 2022-12-19T09:36:33.181Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-19T09:24:19.350Z
 -->
 
-<h1 class="toc-header" id="filtering"> Filtering</h1>
-<p>All API endpoints support filtering the results for getting specific parts of the dataset. The following sections describe how to filter the JSON of given output.</p>
-<p>The minimum required components of the URI to filter results are:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">commands/verb/noun/&lt;filter&gt;
+<h1>过滤</h1>
+<p>所有 API 应用程式界面端点都支持过滤结果以获取数据集的特定部分。 以下部分描述了如何过滤给定输出的 JSON。</p>
+<p>过滤结果所需的 URI 的最少组件是：</p>
+<pre><code class="language-plaintext">commands/verb/noun/&lt;filter&gt;
 </code></pre>
-<p>The above filter becomes an expression either on the end of the URI, or between an operator:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">commands/verb/noun/&lt;filter&gt;/operator
+<p>上面的过滤器成为 URI 末尾或 Operator 运算符之间的表达式：</p>
+<pre><code class="language-plaintext">commands/verb/noun/&lt;filter&gt;/operator
 </code></pre>
-<h3 class="toc-header" id="filtering-1"> <code>Filtering</code></h3>
-<p>In order to filter an object, one must know the JSON key they are filtering for.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<h3><code>Filtering</code> 过滤</h3>
+<p>为了过滤一个物件，必须知道他们要过滤的 JSON 键。</p>
+<pre><code class="language-plaintext">{
     "id": 69,
     "OP": "CREDIT",
     "for": "COINBASE",
@@ -30,21 +30,21 @@ dateCreated: 2022-12-19T09:24:19.350Z
     "ticker": "NXS"
 }
 </code></pre>
-<p>The above JSON statement can be filtered by the following:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">commands/verb/noun/OP,to,amount,ticker
+<p>上面的 JSON 语句可以通过以下方式进行过滤：</p>
+<pre><code class="language-plaintext">commands/verb/noun/OP,to,amount,ticker
 </code></pre>
-<p>This would result in the following filtered object:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<p>这将导致以下过滤物件：</p>
+<pre><code class="language-plaintext">{
     "OP": "CREDIT",
     "to": "8BAv1H2YKfpaYC1RJMq9qjmMTiEV8DJiLpiKGqTY54wf2VPjznD",
     "amount": 231.861868,
     "ticker": "NXS"
 }
 </code></pre>
-<p>One can include as many filters as desired, as long as keys exist in the returned JSON and they follow a strict no-spaces *.csv (Comma Separated Values) format. This allows you to choose specific data that's needed without needing to require filtering client side.</p>
-<h3 class="toc-header" id="recursive-filtering"> <code>Recursive Filtering</code></h3>
-<p>JSON hierarchy can be maintained and traversed recursively to any depth of the data structure. Let us take the following JSON object, a verbose transaction:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<p>可以根据需要包含任意数量的过滤器，只要键存在于返回的 JSON 中并且它们遵循严格的无空格 *.csv（逗号分隔值）格式。 这使您可以选择所需的特定数据，而无需过滤客户端。</p>
+<h3><code>Recursive Filtering</code> 递归过滤</h3>
+<p>可以维护 JSON 层次结构并递归遍历到数据结构的任何深度。 让我们采用以下 JSON 对象，一个详细的物件：</p>
+<pre><code class="language-plaintext">{
     "txid": "019427d69187a02a23305a152c167c0c3fb547426afbdbee47ae674c7ea5a3d8f70e9a29c818f213edf1ce2721ae8bb81652e8cc77aac842df3c371027fa4e60",
     "type": "tritium user",
     "version": 2,
@@ -73,11 +73,11 @@ dateCreated: 2022-12-19T09:24:19.350Z
     ]
 },
 </code></pre>
-<p>These nested JSON objects and arrays can be filtered recursively using the <code>.</code> operator. Please ensure endpoint does not include spaces following a strict *csv format.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">commands/verb/noun/type,confirmations,genesis,contracts.OP,contracts.to,contracts.amount,contracts.ticker
+<p>这些嵌套的 JSON 对象和数组可以使用 <code>.</code> 运算符。 请确保端点不包含空格，遵循严格 *csv 格式。</p>
+<pre><code class="language-plaintext">commands/verb/noun/type,confirmations,genesis,contracts.OP,contracts.to,contracts.amount,contracts.ticker
 </code></pre>
-<p>When using recursive filtering, the nested hiearchy is retained.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<p>使用递归过滤时，嵌套层次结构会保留。</p>
+<pre><code class="language-plaintext">{
     "type": "tritium user",
     "confirmations": 832340,
     "genesis": "a1bc1623d785130bd7bd725d523bd2bb755518646c3831ea7cd5f86883845901",
