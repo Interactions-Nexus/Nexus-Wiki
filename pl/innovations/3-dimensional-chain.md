@@ -2,7 +2,7 @@
 title: Łańcuch 3-wymiarowy (przyszłość)
 description: Rozwiązanie do skalowania 3DC dla Nexusa
 published: true
-date: 2022-12-18T23:55:37.452Z
+date: 2022-12-19T12:19:54.682Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:38:06.925Z
@@ -90,7 +90,7 @@ Aby mieć najwyższy stopień bezpieczeństwa, decyzje nie mogą być skoncentro
 
 Cztery organizacje kontrolują ponad 51% hashrate Bitcoina, co oznacza, że całe bezpieczeństwo Bitcoina zależy od nich i od decyzji, które podejmują. Ta sytuacja jest przykładem centralizacji wynikającej z dominacji zasobów, która doprowadziła do proponowanych rozwiązań, takich jak UASF (User Activated Soft Fork) i wielu forków Bitcoin, takich jak Bitcoin Cash, Bitcoin SV, Bitcoin Gold itp.
 
-![wykres](../../../.gitbook/assets/3dcgraph)
+![uasf.png](/uasf.png)<p align="center" style ="color: blue;">*Węzły Bitcoin Sygnalizacja UASF - Segwit/ BIP148*</p>
 
 Choć obiecujący, UASF nie był w stanie osiągnąć poziomu, na którym mógłby być skuteczny, ponieważ wymagany procent zgody górnika był zbyt wysoki.
 
@@ -128,4 +128,4 @@ Alternatywnie, Nexus używa nakładki [LISP](broken-reference) w celu przechodze
 
 Reputacja jest ważnym wymogiem funkcjonowania zdecentralizowanych systemów, w celu stworzenia zdrowej globalnej sieci. Zaimplementujemy reputację na wszystkich trzech warstwach 3DC, jako drugorzędny składnik wagi, poprawiając ogólny pBFT. Równie ważna jest reputacja, która może poprawić decentralizację poprzez struktury motywacyjne ułatwione przez zmienne nagrody dla węzłów, które zdobyły wyższą reputację. Długoterminowi współtwórcy systemu mogą zyskać wyższą reputację, a co za tym idzie, wyższy zwrot z ich wkładu, co daje podstawy do długofalowego przekonania o Nexusie, że:
 
-_Nie każdy ma pieniądze, ale każdy ma czas._
+`Nie każdy ma pieniądze, ale każdy ma czas.`
