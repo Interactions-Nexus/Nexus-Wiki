@@ -2,7 +2,7 @@
 title: DAO
 description: Zdecentralizowana organizacja autonomiczna
 published: true
-date: 2022-12-18T23:20:55.977Z
+date: 2022-12-19T12:17:48.258Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:35:27.465Z
@@ -40,7 +40,7 @@ Głosowanie będzie odbywać się w grupach głosujących, gdzie wartości ludzi
 * Ambasadorzy
 * Deweloperzy
 
-![](../../../.gitbook/assets/NXSDAO.png)
+![nxsdao.png](/nxsdao.png)<p align="center" style="color: blue;">*Różnica między scentralizowanym, a zdecentralizowanym zarządzaniem Nexusem.*</p>
 
 Z Amine i później, kiedy sieć rozpocznie łańcuch 3DC, grupy głosowania zmienią się na:
 
