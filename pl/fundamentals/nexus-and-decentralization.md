@@ -2,7 +2,7 @@
 title: Nexus i decentralizacja
 description: Jak Nexus planuje wszystko zdecentralizować
 published: true
-date: 2022-12-15T22:54:53.279Z
+date: 2022-12-19T12:15:27.478Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-21T22:20:00.306Z
@@ -12,7 +12,7 @@ dateCreated: 2022-10-21T22:20:00.306Z
 
 _Decentralizacja_ jest często używana jako ogólny termin w kryptografii do opisywania łańcuchów bloków bez zaufania, bez uprawnień i niezmiennych. Słowa _Decentralizacja_ i _Web3_ są używane niejednoznacznie w każdym blockchainie. Niemniej jednak różnice są istotne z technicznego punktu widzenia: konsensus i topologia sieci określa ich właściwości. Ten artykuł pomoże Ci rozszyfrować różnicę.
 
-![](../../.gitbook/assets/CDD.png)
+![cdd.png](/cdd.png)<p align="center" style="color: blue;">*Topologiczna różnica między systemami scentralizowanymi, zdecentralizowanymi i rozproszonymi.*</p>
 
 Powyższy diagram ilustruje trzy różne topologie. Scentralizowany i zdecentralizowany to koncepcje władzy, podczas gdy dystrybucja jest koncepcją przestrzenną, co oznacza, że odnosi się do fizycznej topologii sieci. Sieć może być rozproszona, jak również scentralizowana lub zdecentralizowana. Idealna topologia sieci ma zdecentralizowany proces konsensusu z rozproszoną topologią węzłów.
 
