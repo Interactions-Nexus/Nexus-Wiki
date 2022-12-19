@@ -2,7 +2,7 @@
 title: 3 Dimentaional Chain (Future)
 description: 3DC scaling solution for Nexus
 published: true
-date: 2022-12-19T06:45:34.657Z
+date: 2022-12-19T06:47:21.613Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:33:30.894Z
@@ -122,10 +122,10 @@ Instead of miners having the authority to determine the next block by finding th
 
 Blockchains typically rely on the ability of nodes to connect directly (peer-to-peer) to maintain a decentralized and evenly distributed topology. Nodes must be discoverable by their peers, by being able to accept connection requests. This is seldom achieved, and has resulted in Bitcoin only having a meager 10% of nodes that are discoverable.
 
-Alternatively, Nexus uses the [LISP](broken-reference) Overlay in order to traverse ‘NATs’ (Network Address Translators) to maintain a higher degree of node availability. LISP uses static Endpoint Identifiers (EIDs) that can even be reached when roaming between different networks (WiFi, cell towers, etc.). This gives nodes significantly increased mobility, allowing them to be located anywhere on the internet, behind NATs in residential environments, in cloud providers, and behind mobile carriers while still being discoverable.
+Alternatively, Nexus uses the [LISP](/en/technology/nexus-innovations/lisp) Overlay in order to traverse ‘NATs’ (Network Address Translators) to maintain a higher degree of node availability. LISP uses static Endpoint Identifiers (EIDs) that can even be reached when roaming between different networks (WiFi, cell towers, etc.). This gives nodes significantly increased mobility, allowing them to be located anywhere on the internet, behind NATs in residential environments, in cloud providers, and behind mobile carriers while still being discoverable.
 
 ## Reputation Incentive Structure
 
 Reputation is an important requirement for the functioning of decentralized systems, in order to create a healthy global network. We will implement reputation on all three layers of the 3DC, as a secondary component to weight, improving the overall pBFT. Of equal importance, reputation can improve the decentralization through incentive structures facilitated through variable rewards to nodes that have earned a higher reputation. Longer term contributors to a system can be awarded a higher reputation, and therefore a higher return for their contribution, giving rise to a long standing view of Nexus that:
 
-_Not everyone has money, but everyone has time_
+`Not everyone has money, but everyone has time.`
