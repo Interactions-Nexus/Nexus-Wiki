@@ -2,7 +2,7 @@
 title: Nexus And Decentralization
 description: How Nexus plans to decentralize everything
 published: true
-date: 2022-12-19T06:29:19.484Z
+date: 2022-12-19T06:51:29.319Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:12.921Z
@@ -12,7 +12,7 @@ dateCreated: 2022-10-05T08:25:12.921Z
 
 `Decentralization` is often used as a general term in crypto for describing trust-less, permission-less and immutable blockchains. The words `Decentralisation` and `Web3` are used ambiguously in every blockchain. Nevertheless, the distinctions are technically significant: the consensus and topology of networks determines their properties. This article will help you decipher the difference.
 
-![cdd.png](/cdd.png)
+![cdd.png](/cdd.png)<p align="center" style="color: blue;">*Topological Difference Between Centralized, Decentralized and Distributed Systems*</p>
 
 The above diagram illustrates three different topologies. Centralized and Decentralized are concepts of authority, whereas distribution is a spatial concept, meaning it relates to the physical network topology. A network can be distributed, as well as being centralized or decentralized. An ideal network topology has a decentralized consensus process, with a distributed node topology.
 
@@ -28,20 +28,20 @@ Most believe that everything in crypto world is decentralized, but the reality i
 
 These attributes apply only for protocol or base chains:
 
-* No ICO or Premine.
-* Decentralized consensus.&#x20;
-* Distributed physical network topology.
-* Anyone should be able to run a node without permission.
-* DAO based on-chain community governance.
-* On-chain treasury to fund the project.
-* Justifiable tokenomics, inflation and gamification (Compensation to Network actors)
-* Transactions should be Peer-to-Peer (P2P).&#x20;
-* No Venture Capital (VC) direct funding.
-* No single point of centralization in the P2P chain.
-* In-built monopolistic safeguards.
-* No off-chain or Layer-2 Transactions.
-* Interoperability with chains which don't adhere to decentralization and similar security standards.
-* Normal users should be able to access blockchain solutions directly, without a third party and abstracted from technical complexity.
+- No ICO or Premine.
+- Decentralized consensus.&#x20;
+- Distributed physical network topology.
+- Anyone should be able to run a node without permission.
+- DAO based on-chain community governance.
+- On-chain treasury to fund the project.
+- Justifiable tokenomics, inflation and gamification (Compensation to Network actors)
+- Transactions should be Peer-to-Peer (P2P).&#x20;
+- No Venture Capital (VC) direct funding.
+- No single point of centralization in the P2P chain.
+- In-built monopolistic safeguards.
+- No off-chain or Layer-2 Transactions.
+- Interoperability with chains which don't adhere to decentralization and similar security standards.
+- Normal users should be able to access blockchain solutions directly, without a third party and abstracted from technical complexity.
 
 ## Nexus and Decentralization:
 
@@ -57,6 +57,6 @@ Nexus governance is driven by the community and has recently bootstrapped a star
 
 Nexus has a on-chain treasury and that is used to fund the various development activities on Nexus. The funding and expenses are transparent to the community. Nexus does not accept direct external funding and is working with a very small but effective team.
 
-Nexus will not be interoperable with other chains and this was a conscious design decision from the team. The wallet, also known as _**Interface**_ can run as a full node or as a lite node. Users can use the Interface or mobile wallet to easily create transactions with usernames or built QR code scanner. Users can also issue tokens, assets, tokenize assets, namespaces, global names and also use the template contracts to run standard contracts from the wallet itself. This abstracts the user from the complexity of blockchain, while providing all options to the average user.
+Nexus will not be interoperable with other chains and this was a conscious design decision from the team. The wallet, also known as `Interface` can run as a full node or as a lite node. Users can use the Interface or mobile wallet to easily create transactions with usernames or built QR code scanner. Users can also issue tokens, assets, tokenize assets, namespaces, global names and also use the template contracts to run standard contracts from the wallet itself. This abstracts the user from the complexity of blockchain, while providing all options to the average user.
 
 Nexus is not a running a business and we are building something really unique and special, a network which people can build upon, anyone can build utility around the Nexus ecosystem and gain from the decentralized and open source nature. Network participants are compensated, which helps keep the network functioning smoothly and securely. We are also building a lot of utility in the chain which will organically increase the value of the network.
