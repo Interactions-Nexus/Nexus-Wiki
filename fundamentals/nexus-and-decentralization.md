@@ -2,7 +2,7 @@
 title: Nexus And Decentralization
 description: How Nexus plans to decentralize everything
 published: true
-date: 2022-12-19T06:51:29.319Z
+date: 2022-12-19T06:54:12.299Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:25:12.921Z
@@ -51,7 +51,7 @@ Nexus was mined into existence similar to Bitcoin and there was no ICO or premin
 
 Nexus is run by a worldwide community and this ensures nodes are distributed all over the globe, this brings in the physical distribution of the network and makes it resilient to internet downtime in some part of the globe or some countries banning crypto.
 
-Nexus is of the opinion that off-chain or layer-2 transactions sacrifice decentralization and to increase scalability has designed [3DC](../../technology/nexus-innovations/3-dimensional-chain-future/) as a scaling solution for the future. Even the Nexus mobile wallet is an extension of the network using the lite node.
+Nexus is of the opinion that off-chain or layer-2 transactions sacrifice decentralization and to increase scalability has designed [3DC](/en/innovations/3-dimensional-chain) as a scaling solution for the future. Even the Nexus mobile wallet is an extension of the network using the lite node.
 
 Nexus governance is driven by the community and has recently bootstrapped a starfish based DAO powered by the social stack. Today the DAO is not an on-chain DAO, as the design needs validation, after rigorous testing will be mathematically encoded into the blockchain with the 7.0 update later this year.
 
