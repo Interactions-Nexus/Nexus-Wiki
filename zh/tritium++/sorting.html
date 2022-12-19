@@ -2,7 +2,7 @@
 title: 排序
 description: 如何对结果 json 进行排序
 published: true
-date: 2022-12-19T11:46:57.034Z
+date: 2022-12-19T11:55:45.968Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-19T11:44:59.547Z
@@ -12,14 +12,14 @@ dateCreated: 2022-12-19T11:44:59.547Z
 <p>所有生成值列表的命令都支持排序。 排序可以深入到 JSON 层次结构的特定部分，以提供高级排序和分页功能。 所有排序都在构建数据集时发生，允许对 JSON 物件的几乎任何部分进行排序。</p>
 <h3><code>Parameters</code> 参数</h3>
 <p>以下参数可用于对返回的数据集进行排序。</p>
-<p><code>limit</code>: The number of records to return. <i>Default: 100</i>.</p>
-<p><code>page</code>: Zero-indexed page number that depends on <code>limit</code> for page boundaries.</p>
-<p><code>offset</code>: Alternative to <code>page</code>, offset can be used to page the results by index.</p>
-<p><code>order</code>: Descending <strong>desc</strong> or ascending <strong>asc</strong> as only permitted values.</p>
-<p><code>sort</code>: The column or field-name to apply the sorting logic to.</p>
-<h3><code>Alternative input</code></h3>
-<p>The <code>limit</code> and <code>offset</code> parameters can be given with the following format:</p>
-<p>This above will map to the parameters of <code>limit=100</code> and <code>offset=10</code>.</p>
+<p><code>limit</code> 限制：要返回的记录数。 默认值：100。</p>
+<p><code>page</code> 页面：取决于页边界限制的零索引页码。</p>
+<p><code>offset</code> 偏移：替代 <code>page</code>，offset 可用于按索引对结果页面。</p>
+<p><code>order</code> 顺序：降序 <strong>desc</strong> 或升序 <strong>asc</strong> 作为唯一允许的值。</p>
+<p><code>sort</code> 排序：要应用排序逻辑的列或字段名称。</p>
+<h3><code>Alternative input</code> 替代输入</h3>
+<p><code>limit</code>和 <code>offset</code>参数可以使用以下格式给出：</p>
+<p>以上将映射到 <code>limit=100</code>&nbsp;和 <code>offset=10</code> 的参数。</p>
 <h3><code>Recursive Sorting</code></h3>
 <p>This parameter supports moving up levels of JSON keys by using <code>.</code>. This is a recursive function so therfore allows traversing any amount of levels in a JSON hierarchy. Let us take the following JSON object:</p>
 <pre><code class="language-plaintext">{
