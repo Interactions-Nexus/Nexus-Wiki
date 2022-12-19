@@ -2,21 +2,21 @@
 title: 运算符
 description: 与 API 一起使用的运算符
 published: true
-date: 2022-12-19T10:23:39.837Z
+date: 2022-12-19T10:27:37.674Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-19T10:23:27.913Z
 -->
 
-<h1 class="toc-header" id="operators"> Operators</h1>
-<p>The Nexus API, and according commands support varying types of operators. Operators allow computation to be performed on a filtered data-set, much like in an excel spreadsheet.</p>
+<h1>运算符</h1>
+<p>Nexus API 麟社应用程式界面和相应的命令支持不同类型的运算符。 运算符允许在过滤后的数据集上执行计算，就像在 Excel 电子表格中一样。</p>
 <p>The minimum required components of the URI for an operator is:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">commands/verb/noun/filter/operator
+<pre><code class="language-plaintext">commands/verb/noun/filter/operator
 </code></pre>
-<h3 class="toc-header" id="filter"> <code>Filter</code></h3>
+<h3><code>Filter</code></h3>
 <p>In order to execute an operator, one must apply a basic filter to the data-set because we need to isolate a component of the returned data to operate on and return.</p>
 <p>Take the following contract list:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<pre><code class="language-plaintext">{
     "id": 33,
     "OP": "CREDIT",
     "for": "COINBASE",
@@ -40,32 +40,32 @@ dateCreated: 2022-12-19T10:23:27.913Z
 },
 </code></pre>
 <p>To operate on our <code>amount</code> field, we would first need to apply a filter:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">commands/verb/noun/amount
+<pre><code class="language-plaintext">commands/verb/noun/amount
 </code></pre>
 <p>This command will now prepare for an operator, that can be invoked by finishing the URI:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">commands/verb/noun/amount/sum
+<pre><code class="language-plaintext">commands/verb/noun/amount/sum
 </code></pre>
 <p>This above command will return a JSON object with our filtered result:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<pre><code class="language-plaintext">{
     "amount": 414.53867,
 }
 </code></pre>
-<h3 class="toc-header" id="operators-1"> <code>Operators</code></h3>
+<h3><code>Operators</code></h3>
 <p>The following operators are supported for this API command-set:</p>
-<p><a class="is-internal-link is-invalid-page" href="/zh/tritium++/operators/broken-reference"><code>array</code></a> - Generate a list of values given from a set of filtered results as a JSON array.</p>
-<p><a class="is-internal-link is-invalid-page" href="/zh/tritium++/operators/broken-reference"><code>count</code></a> - Find the total number of entries returned in a given JSON list.</p>
-<p><a class="is-internal-link is-invalid-page" href="/zh/tritium++/operators/broken-reference"><code>floor</code></a> - Convert all values in a result to integers by stripping off decimals.</p>
-<p><a class="is-internal-link is-invalid-page" href="/zh/tritium++/operators/broken-reference"><code>max</code></a> - Find the maximum value in the given set, and return this as result.</p>
-<p><a class="is-internal-link is-invalid-page" href="/zh/tritium++/operators/broken-reference"><code>mean</code></a> - Calculate the mean or average value across a set of filtered results.</p>
-<p><a class="is-internal-link is-invalid-page" href="/zh/tritium++/operators/broken-reference"><code>min</code></a> - Find the minimum value in the given set, and return this as result.</p>
-<p><a class="is-internal-link is-invalid-page" href="/zh/tritium++/operators/broken-reference"><code>mode</code></a> - Find the value with the most occurrences across the data-set.</p>
-<p><a class="is-internal-link is-invalid-page" href="/zh/tritium++/operators/broken-reference"><code>sum</code></a> - Compute a sum of a set of values derived from filtered results.</p>
+<p><a href="/zh/tritium++/operators/broken-reference"><code>array</code></a> - Generate a list of values given from a set of filtered results as a JSON array.</p>
+<p><a href="/zh/tritium++/operators/broken-reference"><code>count</code></a> - Find the total number of entries returned in a given JSON list.</p>
+<p><a href="/zh/tritium++/operators/broken-reference"><code>floor</code></a> - Convert all values in a result to integers by stripping off decimals.</p>
+<p><a href="/zh/tritium++/operators/broken-reference"><code>max</code></a> - Find the maximum value in the given set, and return this as result.</p>
+<p><a href="/zh/tritium++/operators/broken-reference"><code>mean</code></a> - Calculate the mean or average value across a set of filtered results.</p>
+<p><a href="/zh/tritium++/operators/broken-reference"><code>min</code></a> - Find the minimum value in the given set, and return this as result.</p>
+<p><a href="/zh/tritium++/operators/broken-reference"><code>mode</code></a> - Find the value with the most occurrences across the data-set.</p>
+<p><a href="/zh/tritium++/operators/broken-reference"><code>sum</code></a> - Compute a sum of a set of values derived from filtered results.</p>
 <p><strong>Example:</strong></p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">finance/list/accounts/balance/sum
+<pre><code class="language-plaintext">finance/list/accounts/balance/sum
 </code></pre>
 <p><strong>Result:</strong></p>
 <p>This command will return a sum of the balances for all accounts:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<pre><code class="language-plaintext">{
     "balance": 333.376
 }
 </code></pre>
