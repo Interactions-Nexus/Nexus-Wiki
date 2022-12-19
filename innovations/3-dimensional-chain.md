@@ -2,7 +2,7 @@
 title: 3 Dimentaional Chain (Future)
 description: 3DC scaling solution for Nexus
 published: true
-date: 2022-10-06T13:19:52.770Z
+date: 2022-12-19T06:45:34.657Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:33:30.894Z
@@ -12,13 +12,13 @@ dateCreated: 2022-10-05T08:33:30.894Z
 
 The Three-Dimensional Chain (3DC) is designed to solve the 'Blockchain Trilemma'. It will transform the ledger into a multi-layered processing system, in order to scale securely and with a high degree of decentralization. The Blockchain Trilemma is an opinion that only two of the three qualities, Security, Decentralization and Scalability, are achievable concurrently.
 
-The 3DC chains together cryptographic primitives into a three dimensional immutable object (a 3D block), and has three core dimensions: reputation channels (X), immutability or authenticity (Y), and time (Z). This architecture is being deployed through the [TAO framework](broken-reference).
+The 3DC chains together cryptographic primitives into a three dimensional immutable object (a 3D block), and has three core dimensions: reputation channels (X), immutability or authenticity (Y), and time (Z). This architecture is being deployed through the [TAO framework](/en/fundamentals/tao-framework)
 
 ## Scalability
 
 The architecture of legacy blockchains is comparable to driving a car on a single lane highway – as the volume of cars increases, traffic occurs. Nexus views ‘scalability’ as a requirement, not a feature. Therefore, we design protocols that scale as more nodes join the network, processing unhindered even with the increase of resource requirements.
 
-Using ‘Signature Chains’, ‘Aggregation’ and ‘Computational Sharding’, the 3DC creates parallel lanes of transaction processing to produce the L1 layer, the base layer of the 3DC. Data is then stored between many nodes using what we term ‘Data Sharding’, that eliminates the need for synchronizing and storing the entire blockchain. [LISP](broken-reference) (Location Identifier Separation Protocol) and the ‘LLL’ (Lower Level Library) together form the common interface for this, that results in an increase of distributed data storage as more nodes join the network providing longer term scaling potential.
+Using ‘Signature Chains’, ‘Aggregation’ and ‘Computational Sharding’, the 3DC creates parallel lanes of transaction processing to produce the L1 layer, the base layer of the 3DC. Data is then stored between many nodes using what we term ‘Data Sharding’, that eliminates the need for synchronizing and storing the entire blockchain. [LISP](/en/technology/nexus-innovations/lisp) (Location Identifier Separation Protocol) and the ‘LLL’ (Lower Level Library) together form the common interface for this, that results in an increase of distributed data storage as more nodes join the network providing longer term scaling potential.
 
 ## Signature Chains
 
@@ -42,7 +42,7 @@ Computational Sharding is necessary for the division of work between specific ty
 
 Data Sharding is the division of data to be stored between many nodes. This can be thought of as having many warehouses to store packages (data) after they have been processed and transported. Due to every object being ‘verifiable’ by its index hash, the 3DC can provide Data Sharding with limited trust in remote nodes.
 
-The difficulty is, how the state of so many objects and shards is managed? The use of [LISP](broken-reference) solves this problem. The method by which the 3DC performs Data Sharding, a ‘network’ is created that exists everywhere, where instead of ‘IP’ addresses, you have ‘hashes’. This could be compared to typing in a txid in your web browser, and receiving that transaction. Using LISP in this manner, we would enable the browser (or LLP in network terms) to open a connection to a hash, which points to the group of nodes that holds a particular piece of data.
+The difficulty is, how the state of so many objects and shards is managed? The use of [LISP](/en/technology/nexus-innovations/lisp) solves this problem. The method by which the 3DC performs Data Sharding, a ‘network’ is created that exists everywhere, where instead of ‘IP’ addresses, you have ‘hashes’. This could be compared to typing in a txid in your web browser, and receiving that transaction. Using LISP in this manner, we would enable the browser (or LLP in network terms) to open a connection to a hash, which points to the group of nodes that holds a particular piece of data.
 
 The end result of this is, a user can login to their node that has never communicated with the network before, generate a ‘genesis-id’ using their credentials and open a connection to the hash, utilizing the existing internet to route to the node that contains this particular piece of data. The beauty of this is that the network itself doesn’t need to add superfluous data synchronization across nodes to know where data is held. Nodes use the overlay to route remote node requests, resulting in IP addresses as hashes of data that exists in the wonderful world of Nexus.
 
@@ -56,7 +56,7 @@ Additional to the cryptographic structure challenges described in Data Sharding,
 
 The Lower Level Library (LLL) is the foundation of the TAO framework, enabling support for other web technologies with high reliability, performance, and extensibility. The LLL is a high-performance ‘Template Library’ designed to power emerging-web technologies. Most web technology today is clunky, centralized, and over-engineered as a result of decades of development. The LLL is simple, powerful, and lightweight; made with modularity in mind.
 
-It contains three main components: Cryptography (LLC), Database (LLD), and Protocol (LLP). The Cryptography component contains [Quantum Resistant](broken-reference) cryptography, the Database component out performs Google’s LevelDB by orders of magnitude, and the Protocol component handles well over 450k requests per second.
+It contains three main components: Cryptography (LLC), Database (LLD), and Protocol (LLP). The Cryptography component contains [Quantum Resistant](/en/innovations/quantum-resistance) cryptography, the Database component out performs Google’s LevelDB by orders of magnitude, and the Protocol component handles well over 450k requests per second.
 
 The Lower Level Database (LLD) is Nexus’ fast and modular storage engine, which to the best of our knowledge, is capable of outperforming most existing embedded database engines. Our average results are around 0.33 seconds for 100k writes and reads to disk (one then the other). This rivals other storage engines such as Google’s LevelDB.
 
@@ -90,7 +90,7 @@ In order to have the highest degree of security, decisions cannot be concentrate
 
 Four organizations control more than 51% of Bitcoin’s hashrate, meaning, that the entire security of Bitcoin is reliant on them and the decisions that they make. This situation is an example of centralization resulting from resource domination, which has lead to proposed solutions such as UASF (User Activated Soft Fork) and multiple Bitcoin forks such as Bitcoin Cash, Bitcoin SV, Bitcoin Gold, etc.
 
-![graph](../../../.gitbook/assets/3dcgraph)
+![uasf.png](/uasf.png)<p align="center" style ="color: blue;">*Bitcoin Nodes Signalling UASF - Segwit/ BIP148*</p>
 
 Though promising, UASF was unable to reach a level where it could be effective, as the required percentage of miner’s consent was too high.
 
