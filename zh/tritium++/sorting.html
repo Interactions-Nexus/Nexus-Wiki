@@ -2,7 +2,7 @@
 title: 排序
 description: 如何对结果 json 进行排序
 published: true
-date: 2022-12-19T11:58:42.141Z
+date: 2022-12-19T12:01:45.381Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-19T11:44:59.547Z
@@ -21,7 +21,6 @@ dateCreated: 2022-12-19T11:44:59.547Z
 <p><code>limit</code>和 <code>offset</code>参数可以使用以下格式给出：</p>
 <p>以上将映射到 <code>limit=100</code>&nbsp;和 <code>offset=10</code> 的参数。</p>
 <h3><code>Recursive Sorting</code> 递归排序</h3>
-<p>This parameter supports moving up levels of JSON keys by using <code>.</code>. This is a recursive function so therfore allows traversing any amount of levels in a JSON hierarchy. Let us take the following JSON object:</p>
 <p>此参数支持使用 <code>.</code> 向上移动 JSON 键的级别。这是一个递归函数，因此允许遍历 JSON 层次结构中的任意数量的级别。 让我们采用以下 JSON 物件：</p>
 <pre><code class="language-plaintext">{
     "modified": 1621782289,
@@ -31,10 +30,10 @@ dateCreated: 2022-12-19T11:44:59.547Z
     }
 }
 </code></pre>
-<p>The following parameter would allow sorting through the hierarchy:</p>
+<p>以下参数将允许通过层次结构进行排序：</p>
 <pre><code class="language-plaintext">sort=json.date
 </code></pre>
-<p>Using this parameter we would apply a sort to a nested JSON object that would sort it by the date field. The Nexus API supports any number of nested statements. Take the following object:</p>
+<p>使用此参数，我们将对嵌套的 JSON 物件应用排序，该物件将按日期字段对其进行排序。 Nexus API 支持任意数量的嵌套语句。 以下面的物件：</p>
 <pre><code class="language-plaintext">{
     "txid": "01c1e74718bbcbc83f46a0e03a86538350779f61df2e385a4456d3926808d3a29e3ac9d8d3ba2ea4b625b52b525d22fb675066184c4552c40824214b4f575e1c",
     "type": "tritium user",
@@ -64,7 +63,7 @@ dateCreated: 2022-12-19T11:44:59.547Z
     ]
 },
 </code></pre>
-<p>This list of transactions (only one shown for convenience) could be sorted by the object's token when created by using the following parameter:</p>
+<p>此交易列表（为方便起见仅显示一个）可以在使用以下参数创建时按物件的通证排序：</p>
 <pre><code class="language-plaintext">sort=contracts.object.token
 </code></pre>
-<p>This command above would move up each level of JSON with each period, resulting in a sort by the contract object's token value.</p>
+<p>上面的命令将在每个周期内向上移动 JSON 的每个级别，从而引导按合约物件的通证值排序。</p>
