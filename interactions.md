@@ -1,8 +1,8 @@
 ---
-title: Income From Services
+title: Interactions Processes
 description: Interactions internal processes
 published: true
-date: 2022-12-19T07:33:15.102Z
+date: 2022-12-19T07:33:43.933Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:06:54.217Z
