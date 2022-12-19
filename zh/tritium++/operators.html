@@ -2,7 +2,7 @@
 title: 运算符
 description: 与 API 一起使用的运算符
 published: true
-date: 2022-12-19T10:28:15.987Z
+date: 2022-12-19T10:31:17.790Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-19T10:23:27.913Z
@@ -13,9 +13,9 @@ dateCreated: 2022-12-19T10:23:27.913Z
 <p>运算符 URI 的最低要求组件是：</p>
 <pre><code class="language-plaintext">commands/verb/noun/filter/operator
 </code></pre>
-<h3><code>Filter</code></h3>
-<p>In order to execute an operator, one must apply a basic filter to the data-set because we need to isolate a component of the returned data to operate on and return.</p>
-<p>Take the following contract list:</p>
+<h3><code>Filter</code> 过滤器</h3>
+<p>为了执行一个运算符，必须对数据集应用一个基本过滤器，因为我们需要隔离返回数据的一个组成部分以进行操作并返回。</p>
+<p>以下面的合约清单：</p>
 <pre><code class="language-plaintext">{
     "id": 33,
     "OP": "CREDIT",
@@ -39,7 +39,7 @@ dateCreated: 2022-12-19T10:23:27.913Z
     "ticker": "NXS"
 },
 </code></pre>
-<p>To operate on our <code>amount</code> field, we would first need to apply a filter:</p>
+<p>要对我们的 <code>amount</code>&nbsp;数额字段进行操作，我们首先需要应用一个过滤器：</p>
 <pre><code class="language-plaintext">commands/verb/noun/amount
 </code></pre>
 <p>This command will now prepare for an operator, that can be invoked by finishing the URI:</p>
