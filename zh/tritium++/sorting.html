@@ -2,27 +2,27 @@
 title: 排序
 description: 如何对结果 json 进行排序
 published: true
-date: 2022-12-19T11:45:13.427Z
+date: 2022-12-19T11:46:57.034Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-19T11:44:59.547Z
 -->
 
-<h1 class="toc-header" id="sorting"> Sorting</h1>
-<p>All commands that generate a list of values supports sorting. Sorting can drill down to specific parts of the JSON hierarchy to provide advanced sorting and paging abilities. All sorting happens as the data-set is built, allowing sorting on just about any part of the JSON object.</p>
-<h3 class="toc-header" id="parameters"> <code>Parameters</code></h3>
-<p>The following parameters can be used to apply <strong>sorting</strong> to the returned data-set.</p>
-<p><code>limit</code>: The number of records to return. <em>Default: 100</em>.</p>
+<h1>排序</h1>
+<p>所有生成值列表的命令都支持排序。 排序可以深入到 JSON 层次结构的特定部分，以提供高级排序和分页功能。 所有排序都在构建数据集时发生，允许对 JSON 物件的几乎任何部分进行排序。</p>
+<h3><code>Parameters</code> 参数</h3>
+<p>以下参数可用于对返回的数据集进行排序。</p>
+<p><code>limit</code>: The number of records to return. <i>Default: 100</i>.</p>
 <p><code>page</code>: Zero-indexed page number that depends on <code>limit</code> for page boundaries.</p>
 <p><code>offset</code>: Alternative to <code>page</code>, offset can be used to page the results by index.</p>
 <p><code>order</code>: Descending <strong>desc</strong> or ascending <strong>asc</strong> as only permitted values.</p>
 <p><code>sort</code>: The column or field-name to apply the sorting logic to.</p>
-<h3 class="toc-header" id="alternative-input"> <code>Alternative input</code></h3>
+<h3><code>Alternative input</code></h3>
 <p>The <code>limit</code> and <code>offset</code> parameters can be given with the following format:</p>
 <p>This above will map to the parameters of <code>limit=100</code> and <code>offset=10</code>.</p>
-<h3 class="toc-header" id="recursive-sorting"> <code>Recursive Sorting</code></h3>
+<h3><code>Recursive Sorting</code></h3>
 <p>This parameter supports moving up levels of JSON keys by using <code>.</code>. This is a recursive function so therfore allows traversing any amount of levels in a JSON hierarchy. Let us take the following JSON object:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<pre><code class="language-plaintext">{
     "modified": 1621782289,
     "json": {
         "account": "8Cdr874GBd8t6MaQ4BVK8fXVVpzVHrGwZpQquUVzUXZroruYdeR",
@@ -31,10 +31,10 @@ dateCreated: 2022-12-19T11:44:59.547Z
 }
 </code></pre>
 <p>The following parameter would allow sorting through the hierarchy:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sort=json.date
+<pre><code class="language-plaintext">sort=json.date
 </code></pre>
 <p>Using this parameter we would apply a sort to a nested JSON object that would sort it by the date field. The Nexus API supports any number of nested statements. Take the following object:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<pre><code class="language-plaintext">{
     "txid": "01c1e74718bbcbc83f46a0e03a86538350779f61df2e385a4456d3926808d3a29e3ac9d8d3ba2ea4b625b52b525d22fb675066184c4552c40824214b4f575e1c",
     "type": "tritium user",
     "version": 3,
@@ -64,6 +64,6 @@ dateCreated: 2022-12-19T11:44:59.547Z
 },
 </code></pre>
 <p>This list of transactions (only one shown for convenience) could be sorted by the object's token when created by using the following parameter:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sort=contracts.object.token
+<pre><code class="language-plaintext">sort=contracts.object.token
 </code></pre>
 <p>This command above would move up each level of JSON with each period, resulting in a sort by the contract object's token value.</p>
