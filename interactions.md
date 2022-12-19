@@ -1,8 +1,8 @@
 ---
-title: Interactions Processes
+title: Income From Services
 description: Interactions internal processes
 published: true
-date: 2022-10-29T18:39:22.720Z
+date: 2022-12-19T07:33:15.102Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:06:54.217Z
@@ -30,5 +30,6 @@ Find links to the various Interactions processes:
 - [Responsibilities *Interactions - Responsibilities*](/en/interactions/int-responsibilities)
 - [Signature Chain *Interactions - Signature Chain*](/en/interactions/int-sigchain)
 - [Amendment Proposal *Iinteractions - Internal Process Amendment Process*](/en/interactions/int-amendments)
+- [Income From Services*Manage Additional Income From Planned Paid Services*](/en/interactions/additional-income)
 {.links-list}
 
