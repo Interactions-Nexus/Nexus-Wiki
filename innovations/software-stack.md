@@ -2,7 +2,7 @@
 title: Software-Stack
 description: 7 Layer Software Stack
 published: true
-date: 2022-10-29T19:15:46.991Z
+date: 2022-12-19T06:59:27.154Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:27:02.992Z
@@ -12,7 +12,7 @@ dateCreated: 2022-10-05T08:27:02.992Z
 
 The Nexus architecture is designed as a seven-layered software stack that includes a 64-bit register-based process virtual machine. Each layer is designated to carry out a specialized process independently of one another, providing additional functionality to the existing Internet stack, the OSI model. This makes Nexus a modular blockchain.
 
-![7 Layer Software Stack](/7_layer_stack.png)
+![7 Layer Software Stack](/7_layer_stack.png)<p align="center" style="color: blue;">*7-Layer Software Stack*</p>
 
 Let's delve into the workings of each of these layers individually:
 
