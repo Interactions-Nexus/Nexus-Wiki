@@ -2,13 +2,13 @@
 title: Income From Services
 description: 
 published: false
-date: 2022-12-19T07:36:26.126Z
+date: 2022-12-19T07:36:51.232Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-12T09:20:20.854Z
 ---
 
-# Additional Income
+# Income From Services
 The Interaction team plans to create systems which are self sustaining, which means we will be charging for services provided by the arm. This money will go towards the operational the cost of infrastructure, remuneration and also to provide new services.
 
 As of today we have severe budget constriants due to very low NXS price, which has led us to this self sustaining model and also we can increase services to use-cases and provide infrastructural support which will benifit Nexus directly. In the future when NXS price increases we still can be a fully self sustaining arm and will not have to fully depend on budgets and can get more things done.
