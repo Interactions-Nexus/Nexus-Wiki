@@ -2,7 +2,7 @@
 title: Konfiguracja górnika
 description: 
 published: true
-date: 2022-12-20T22:59:58.357Z
+date: 2022-12-20T23:00:34.692Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-27T22:28:31.131Z
@@ -13,7 +13,7 @@ dateCreated: 2022-10-27T22:28:31.131Z
 Konfiguracja górnika jest najbardziej krytyczną częścią i używa formatu JSON. Ta konfiguracja jest taka sama dla systemu Windows lub Linux.
 
 
-> **UWAGA:** Upewnij się, że plik wykonywalny NexusMiner i konfiguracja minera znajdują się w tym samym folderze
+> **NOTA:** Upewnij się, że plik wykonywalny NexusMiner i konfiguracja minera znajdują się w tym samym folderze
 {.is-info}
 
 
