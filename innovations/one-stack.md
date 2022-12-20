@@ -2,21 +2,21 @@
 title: ONE Stack (Future)
 description: One Nexus Execution
 published: true
-date: 2022-10-06T13:39:35.647Z
+date: 2022-12-20T12:22:38.736Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:56.136Z
 ---
 
-# ONE Stack (Future)
+# ONE - Stack (Future)
 
 The ONE acronym stands for One Nexus Execution, a stack designed to replace the OSI (Open system Interconnect) reference model. It is a fundamental reference model for the Nexus Protocol. The ONE stack is made up of 7 layers, out of which two are from the current OSI.
 
 Watch the ONE stack presentation by Colin Cantrell, link below:
 
-{% embed url="https://www.youtube.com/watch?t=197s&v=BS3Cfo784z8" %}
-ONE Stack Presentation By Colin Cantrell.
-{% endembed %}
+[ONE Stack Presentation By Colin Cantrell](https://www.youtube.com/watch?t=197s&v=BS3Cfo784z8)
+
+
 
 ## Layers of the ONE Stack
 
