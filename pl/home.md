@@ -2,7 +2,7 @@
 title: Dokumentacja Nexusa
 description: 
 published: true
-date: 2022-12-20T11:56:46.492Z
+date: 2022-12-20T11:58:04.814Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-06T14:53:59.530Z
@@ -34,4 +34,4 @@ Wiki Nexusa jest zarządzana przez zespół Interactions i każdy może rozpocz�
 
 &nbsp;
 - [O TEJ WIKI](/en/about)
-{.lista-linków}
+{.links-list}
