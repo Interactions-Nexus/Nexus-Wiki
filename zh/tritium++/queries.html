@@ -2,55 +2,55 @@
 title: 查询
 description: 查询 DSL（域特定语言）
 published: true
-date: 2022-12-20T09:16:58.461Z
+date: 2022-12-20T09:17:22.006Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-20T08:35:22.547Z
 -->
 
-<h1>查询</h1>
-<p>Query 查询 DSL（Domian Specific Language 域特定语言）允许递归地排序和过滤到任何逻辑深度。 此 DSL 可与运算符结合使用，以实时排序、过滤和计算数据。<br>Query 查询 DSL 可以应用于所有带有 <code><strong>where</strong></code> 参数的 5.1 版本的 <code>list</code>&nbsp;列表和 <code>get</code>&nbsp;获取 API 应用程式界面命令</p>
-<h3><code>Selector Keys</code> 选择键</h3>
-<p>此 API 应用程式界面命令集支持以下运算符：</p>
-<p>[<code>object</code>] - 此选择器键将评估原始二进制物件上的比较。<br>[<code>results</code>] - 此选择器键将评估结果 json 的比较。</p>
-<h3>Supported Objects 支持物件</h3>
-<p>支持以下物件类：</p>
+<h1 style="text-align:justify;">查询</h1>
+<p style="text-align:justify;">Query 查询 DSL（Domian Specific Language 域特定语言）允许递归地排序和过滤到任何逻辑深度。 此 DSL 可与运算符结合使用，以实时排序、过滤和计算数据。<br>Query 查询 DSL 可以应用于所有带有 <code><strong>where</strong></code> 参数的 5.1 版本的 <code>list</code>&nbsp;列表和 <code>get</code>&nbsp;获取 API 应用程式界面命令</p>
+<h3 style="text-align:justify;"><code>Selector Keys</code> 选择键</h3>
+<p style="text-align:justify;">此 API 应用程式界面命令集支持以下运算符：</p>
+<p style="text-align:justify;">[<code>object</code>] - 此选择器键将评估原始二进制物件上的比较。<br>[<code>results</code>] - 此选择器键将评估结果 json 的比较。</p>
+<h3 style="text-align:justify;">Supported Objects 支持物件</h3>
+<p style="text-align:justify;">支持以下物件类：</p>
 <ul>
-  <li>object 物件 - 对原始物件寄存器进行操作</li>
-  <li>results 结果 - 根据 JSON 结果进行操作和过滤。 这可能会慢 10 倍左右，因此请谨慎使用。</li>
+  <li style="text-align:justify;">object 物件 - 对原始物件寄存器进行操作</li>
+  <li style="text-align:justify;">results 结果 - 根据 JSON 结果进行操作和过滤。 这可能会慢 10 倍左右，因此请谨慎使用。</li>
 </ul>
-<h3>Using wildcards 使用通配符</h3>
-<p>如果您按字符串参数搜索，您可以将 “*” 作为任何字符通配符匹配项包含在内，这样您就可以根据部分匹配项搜索值。</p>
+<h3 style="text-align:justify;">Using wildcards 使用通配符</h3>
+<p style="text-align:justify;">如果您按字符串参数搜索，您可以将 “*” 作为任何字符通配符匹配项包含在内，这样您就可以根据部分匹配项搜索值。</p>
 <pre><code class="language-plaintext">register/list/accounts WHERE 'object.name=d*'
 </code></pre>
-<p>以上将返回所有以字母 “d” 开头的账户。</p>
-<h4>以下通配符</h4>
-<p>下面演示如何使用通配符进行检查。</p>
+<p style="text-align:justify;">以上将返回所有以字母 “d” 开头的账户。</p>
+<h4 style="text-align:justify;">以下通配符</h4>
+<p style="text-align:justify;">下面演示如何使用通配符进行检查。</p>
 <pre><code class="language-plaintext">register/list/accounts WHERE 'object.name=*d'
 </code></pre>
-<p>以上将返回名称以字母 “d” 结尾的所有账户。</p>
-<h3>例子</h3>
-<p>要过滤，您可以使用 where='statements' 或在命令后面加上 WHERE 字符串：</p>
-<h4>使用 WHERE 子句过滤物件</h4>
-<p>以下子句将过滤所有名称物件寄存器，即以字母 “P” 开头的全局名称或以字母 “S” 开头的任何物件。</p>
+<p style="text-align:justify;">以上将返回名称以字母 “d” 结尾的所有账户。</p>
+<h3 style="text-align:justify;">例子</h3>
+<p style="text-align:justify;">要过滤，您可以使用 where='statements' 或在命令后面加上 WHERE 字符串：</p>
+<h4 style="text-align:justify;">使用 WHERE 子句过滤物件</h4>
+<p style="text-align:justify;">以下子句将过滤所有名称物件寄存器，即以字母 “P” 开头的全局名称或以字母 “S” 开头的任何物件。</p>
 <pre><code class="language-plaintext">register/list/names WHERE '(object.namespace=*GLOBAL* AND object.name=P*) OR object.name=S*'
 </code></pre>
-<p>使用物件类，即 “object.namespace” 将调用二进制物件上的过滤器。</p>
-<h4>使用 where= 过滤物件</h4>
-<p>以下子句将过滤所有名称物件寄存器，即以字母 “P” 开头的全局名称或以字母 “S” 开头的任何物件。</p>
+<p style="text-align:justify;">使用物件类，即 “object.namespace” 将调用二进制物件上的过滤器。</p>
+<h4 style="text-align:justify;">使用 where= 过滤物件</h4>
+<p style="text-align:justify;">以下子句将过滤所有名称物件寄存器，即以字母 “P” 开头的全局名称或以字母 “S” 开头的任何物件。</p>
 <pre><code class="language-plaintext">register/list/names where='(object.namespace=*GLOBAL* AND object.name=P*) OR object.name=S*'
 </code></pre>
-<h4>使用多个运算符进行过滤</h4>
-<p>下面将返回所有余额大于 10 NXS 的 NXS 账户。</p>
+<h4 style="text-align:justify;">使用多个运算符进行过滤</h4>
+<p style="text-align:justify;">下面将返回所有余额大于 10 NXS 的 NXS 账户。</p>
 <pre><code class="language-plaintext">register/list/accounts WHERE 'object.token=0 AND object.balance&gt;10'
 </code></pre>
-<h4>创建逻辑分组</h4>
-<p>下面演示如何使用多个递归级别进行查询。</p>
+<h4 style="text-align:justify;">创建逻辑分组</h4>
+<p style="text-align:justify;">下面演示如何使用多个递归级别进行查询。</p>
 <pre><code class="language-plaintext">register/list/accounts WHERE '(object.token=0 AND object.balance&gt;10) OR (object.token=8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK AND object.balance&gt;1)'
 </code></pre>
-<p>这将给所有余额大于 10 的 NXS 帐户，或所有账户的通证<br>'8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK' 其余额大于 1。</p>
-<h4>更复杂的查询</h4>
-<p>目前没有限制递归的层数，例如：</p>
+<p style="text-align:justify;">这将给所有余额大于 10 的 NXS 帐户，或所有账户的通证<br>'8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK' 其余额大于 1。</p>
+<h4 style="text-align:justify;">更复杂的查询</h4>
+<p style="text-align:justify;">目前没有限制递归的层数，例如：</p>
 <pre><code class="language-plaintext">register/list/names WHERE '((object.name=d* AND object.namespace=~GLOBAL~) OR (object.name=e* AND object.namespace=send.to)) OR object.namespace=*s'
 </code></pre>
-<p>上面的命令将返回所有以字母 'd' 开头的全局名称物件，或者所有以字母 'e' 开头的物件，在 'send.to' 名称空间中，或者最后是名称空间中以字母 “s” 结尾的所有物件。</p>
+<p style="text-align:justify;">上面的命令将返回所有以字母 'd' 开头的全局名称物件，或者所有以字母 'e' 开头的物件，在 'send.to' 名称空间中，或者最后是名称空间中以字母 “s” 结尾的所有物件。</p>
