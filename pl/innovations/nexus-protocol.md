@@ -2,7 +2,7 @@
 title: Protokół Nexusa (przyszłość)
 description: Protokół do zasilania zdecentralizowanego Internetu
 published: true
-date: 2022-12-20T12:05:44.341Z
+date: 2022-12-20T12:06:42.946Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:39:58.927Z
@@ -36,7 +36,7 @@ Infrastruktura naziemna zapewni usługi dostarczania treści do sieci lokalnych,
 
 **Alokacja częstotliwości** ma kluczowe znaczenie dla zapewnienia, że protokół Nexus spełnia cel darmowego i otwartego protokołu, który pozostaje nieograniczony i nie jest własnością żadnej ze stron. Aby to osiągnąć, będzie wykorzystywać pasmo 5,8 GHz Industrial, Scientific and Medical (ISM), które nie wymaga licencji ani ograniczeń zysku anteny. Biała księga zawiera również matematyczny dowód modelowania żywotności łącza w ramach ograniczeń wybranego pasma ISM.
 
-![](https://miro.medium.com/max/652/1\*hLhVDk7j8gINvti8Xw6v\_A.png)****
+![](https://miro.medium.com/max/652/1\*hLhVDk7j8gINvti8Xw6v\_A.png)
 
 **Tabela 1: Nieograniczone globalnie dostępne częstotliwości ISM \[2]**
 
