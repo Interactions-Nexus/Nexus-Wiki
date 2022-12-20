@@ -2,7 +2,7 @@
 title: Zaawansowane kontrakty
 description: 
 published: true
-date: 2022-10-29T09:36:44.005Z
+date: 2022-12-20T22:51:18.796Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T20:24:35.056Z
@@ -17,7 +17,7 @@ Mimo że wszystkie platformy inteligentnych kontraktów są maszynami stanowymi,
 
 ## Architektura NVM
 
-NVM jest zaprojektowany jako „`64-bitowy”`, „`oparty na rejestrze”`. Ten projekt został wybrany, ponieważ pasuje do 64-bitowego procesora i naśladuje rejestry pamięci podręcznej procesora.
+NVM jest zaprojektowany jako `64-bitowy`, `oparty na rejestrze`. Ten projekt został wybrany, ponieważ pasuje do 64-bitowego procesora i naśladuje rejestry pamięci podręcznej procesora.
 
 Taka konstrukcja sprawia, że ​​NVM jest bardzo szybki w porównaniu do EVM, ponieważ został zaprojektowany dla współczesnych procesorów. Mówiąc w liczbach, EVM zajmuje 1,7 miliona nanosekund na instrukcję, a NVM zajmuje 33 nanosekundy na instrukcję. EVM ma ogromną wadę, ponieważ ukończenie instrukcji zajmuje 4 cykle ze względu na długość 256 bitów na 64-bitowym procesorze, a także na przestarzały projekt stosu.
 
@@ -78,7 +78,7 @@ Spowoduje to odpowiedź z polami nazwy i właściciela, podobnie jak w zapytaniu
 
 Globalne wyszukiwanie całego łańcucha zajmuje od 1 do 2 sekund. Uruchamianie pierwszego polecenia rejestru, które otrzymuję:
 
-`[Ukończono w 1862,234494 ms]`
+`[Completed in 1862.234494 ms]`
 
 Aby uzyskać więcej informacji, sprawdź poniższy link:
 
@@ -94,7 +94,7 @@ Oznacza to, że będziemy mogli wdrażać nowe standardy kontraktowe bez koniecz
 
 Gdy użytkownik wysyła środki za pomocą interfejsu Nexus, otrzymuje dodatkowe menu, które pozwala wybrać z listy standardowych szablonów umów do wysłania. To duży krok w kierunku wykorzystania inteligentnych kontraktów w świecie rzeczywistym.
 
-## Umowy warunkowe DSL (przyszłe)
+## Umowy warunkowe DSL (przyszłość)
 
 Kontrakty warunkowe DSL, nowy standard do napisania w języku wyższego poziomu i skompilowania do kodu bajtowego. Przeznaczony dla użytkowników, którzy będą opracowywać nowe standardy API lub kontraktowe. Umożliwia zapisywanie kontraktów warunkowych bezpośrednio do API przy użyciu języka angielskiego, co jest kluczowym krokiem w realizacji pełnego potencjału funkcjonalności kontraktów Tritium. Takie podejście pozwala również ludziom czytać lub interpretować umowy. Ujawni to programistom wiele nowych funkcji.
 
