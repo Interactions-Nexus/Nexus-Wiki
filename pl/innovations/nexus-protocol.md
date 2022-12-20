@@ -2,7 +2,7 @@
 title: Protokół Nexusa (przyszłość)
 description: Protokół do zasilania zdecentralizowanego Internetu
 published: true
-date: 2022-12-20T12:06:42.946Z
+date: 2022-12-20T12:07:06.422Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:39:58.927Z
@@ -44,7 +44,7 @@ Infrastruktura naziemna zapewni usługi dostarczania treści do sieci lokalnych,
 
 [LX-OS](https://medium.com/@NexusOfficial/nexos-the-nexus-operating-system-a-bastion-for-the-internet-of-things-iot-beyond-c37aa477c119), System Operacyjny Nexus (OS) zaprojektowany specjalnie dla protokołu Nexus jest obecnie opracowywany w celu wzmocnienia abstrakcji sprzętowych, wymagań bezpieczeństwa i zmniejszenia ogólnego ryzyka dla urządzeń wbudowanych, mikrosatelitów i sprzętu klasy konsumenckiej. Te cechy bezpieczeństwa są wymuszane przez wykorzystanie łańcucha bloków Nexusa do uwierzytelniania użytkowników i weryfikacji informacji. LX-OS będzie początkowo sprzedawany dla mikrosatelitów i urządzeń IoT, ponieważ każdy z nich jest powszechnie znany ze swoich luk w zabezpieczeniach. Branże te mogą odnieść znaczne korzyści z rozszerzonej ochrony i możliwości dynamicznego zarządzania.
 
-### **Teoria gry**
+### **Teoria gier**
 
 Elementy infrastruktury są elegancko splecione z modelem ekonomicznym zaprojektowanym w celu wspierania licznych strumieni dochodów, aby ostatecznie zapewnić ludzkości bezpłatny dostęp do usług internetowych na całym świecie, jednocześnie tworząc uniwersalne możliwości gospodarcze. Jest to wzmocnione modelami matematycznymi, które opierają się monopolizacji poprzez demonetyzowanie drapieżnych zachowań, zwiększając w ten sposób zachęty dla spółdzielni.
 
