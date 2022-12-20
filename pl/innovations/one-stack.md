@@ -2,21 +2,19 @@
 title: JEDEN Stos (przyszłość)
 description: Jedno Wykonanie Nexusa
 published: true
-date: 2022-12-20T12:10:53.444Z
+date: 2022-12-20T12:21:06.626Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:41:40.275Z
 ---
 
-# JEDEN Stos (przyszłość)
+# ONE - Stos (przyszłość)
 
-Akronim ONE oznacza One Nexus Execution, stos zaprojektowany w celu zastąpienia modelu referencyjnego OSI (Open system Interconnect). Jest to podstawowy model odniesienia dla protokołu Nexus. Stos ONE składa się z 7 warstw, z których dwie pochodzą z obecnego OSI.
+Akronim ONE oznacza One Nexus Execution, stos zaprojektowany w celu zastąpienia modelu referencyjnego OSI (Open System Interconnect). Jest to podstawowy model odniesienia dla protokołu Nexus. Stos ONE składa się z 7 warstw, z których dwie pochodzą z obecnego OSI.
 
 Obejrzyj prezentację stosu ONE autorstwa Colina Cantrella, link poniżej:
 
-{% embed url="https://www.youtube.com/watch?t=197s&v=BS3Cfo784z8" %}
-Prezentacja ONE Stack autorstwa Colina Cantrella.
-{% osadzone %}
+[Prezentacja ONE Stack autorstwa Colina Cantrella](https://www.youtube.com/watch?t=197s&v=BS3Cfo784z8)
 
 ## Warstwy JEDNEGO stosu
 
