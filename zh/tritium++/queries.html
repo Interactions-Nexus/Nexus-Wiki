@@ -2,58 +2,56 @@
 title: 查询
 description: 查询 DSL（领域特定语言）
 published: true
-date: 2022-12-20T08:35:35.680Z
+date: 2022-12-20T08:35:54.320Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-20T08:35:22.547Z
 -->
 
-<h1 class="toc-header" id="queries"> Queries</h1>
+<h1>查询</h1>
 <p>The Query DSL(Domian Specific Language) allows to sort and filter recursively to any logical depth. This DSL can be used in conjunction with operators to sort, filter, and compute data in real-time.</p>
-<p>{% hint style="info" %}<br>
-The Query DSL can be applied to all <code>list</code> and <code>get</code> API commands with a <strong><code>where</code></strong> parameter with the 5.1 release</p>
-<h3 class="toc-header" id="selector-keys"> <code>Selector Keys</code></h3>
+<p>{% hint style="info" %}<br>The Query DSL can be applied to all <code>list</code> and <code>get</code> API commands with a <code><strong>where</strong></code> parameter with the 5.1 release</p>
+<h3><code>Selector Keys</code></h3>
 <p>The following operators are supported for this API command-set:</p>
-<p>[<code>object</code>] - This selector key will evaluate the comparison on the raw binary object.<br>
-[<code>results</code>] - This selector key will evaluate the comparison on the results json.</p>
-<h3 class="toc-header" id="supported-objects"> Supported Objects</h3>
+<p>[<code>object</code>] - This selector key will evaluate the comparison on the raw binary object.<br>[<code>results</code>] - This selector key will evaluate the comparison on the results json.</p>
+<h3>Supported Objects</h3>
 <p>The following object classes are supported:</p>
 <ul>
-<li>object - operates on a raw object register</li>
-<li>results - operates and filters based on the JSON results. This can be about 10x slower, so use sparingly.</li>
+  <li>object - operates on a raw object register</li>
+  <li>results - operates and filters based on the JSON results. This can be about 10x slower, so use sparingly.</li>
 </ul>
-<h3 class="toc-header" id="using-wildcards"> Using wildcards</h3>
+<h3>Using wildcards</h3>
 <p>If you are searching by a string parameter, you can include '*' as an any character wildcard match, so that you can search values based on a partial match.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/accounts WHERE 'object.name=d*'
+<pre><code class="language-plaintext">register/list/accounts WHERE 'object.name=d*'
 </code></pre>
 <p>The above will return all accounts that start with a letter 'd'.</p>
-<h4 class="toc-header" id="following-wildcard"> Following wildcard</h4>
+<h4>Following wildcard</h4>
 <p>The following demonstrates how to check with wildcards.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/accounts WHERE 'object.name=*d'
+<pre><code class="language-plaintext">register/list/accounts WHERE 'object.name=*d'
 </code></pre>
 <p>This above will return all accounts that have a name ending with letter 'd'.</p>
-<h3 class="toc-header" id="examples"> Examples</h3>
+<h3>Examples</h3>
 <p>To filter, you can use where='statements' or follow the command with WHERE string:</p>
-<h4 class="toc-header" id="filtering-objects-with-where-clause"> Filtering objects with WHERE clause</h4>
+<h4>Filtering objects with WHERE clause</h4>
 <p>The below clause will filter all name object registers, that are Global names that start with letter 'P', or any objects that start with letter 'S'.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/names WHERE '(object.namespace=*GLOBAL* AND object.name=P*) OR object.name=S*'
+<pre><code class="language-plaintext">register/list/names WHERE '(object.namespace=*GLOBAL* AND object.name=P*) OR object.name=S*'
 </code></pre>
 <p>Using the object class i.e. 'object.namespace' will invoke the filter on the binary object.</p>
-<h4 class="toc-header" id="filtering-objects-with-where"> Filtering objects with where=</h4>
+<h4>Filtering objects with where=</h4>
 <p>The below clause will filter all name object registers, that are Global names that start with letter 'P', or any objects that start with letter 'S'.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/names where='(object.namespace=*GLOBAL* AND object.name=P*) OR object.name=S*'
+<pre><code class="language-plaintext">register/list/names where='(object.namespace=*GLOBAL* AND object.name=P*) OR object.name=S*'
 </code></pre>
-<h4 class="toc-header" id="filtering-with-multiple-operators"> Filtering with multiple operators</h4>
+<h4>Filtering with multiple operators</h4>
 <p>The below will return all NXS accounts that have a balance greater than 10 NXS.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/accounts WHERE 'object.token=0 AND object.balance&gt;10'
+<pre><code class="language-plaintext">register/list/accounts WHERE 'object.token=0 AND object.balance&gt;10'
 </code></pre>
-<h4 class="toc-header" id="creating-logical-grouping"> Creating logical grouping</h4>
+<h4>Creating logical grouping</h4>
 <p>The following demonstrates how to query using multiple recursive levels.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/accounts WHERE '(object.token=0 AND object.balance&gt;10) OR (object.token=8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK AND object.balance&gt;1)'
+<pre><code class="language-plaintext">register/list/accounts WHERE '(object.token=0 AND object.balance&gt;10) OR (object.token=8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK AND object.balance&gt;1)'
 </code></pre>
 <p>This will give all NXS accounts with balance greater than 10, or all accounts for token '8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK' with balance greater than 1.</p>
-<h4 class="toc-header" id="more-complex-queries"> More complex queries</h4>
+<h4>More complex queries</h4>
 <p>There is no current limit to the number of levels of recursion, such as:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">register/list/names WHERE '((object.name=d* AND object.namespace=~GLOBAL~) OR (object.name=e* AND object.namespace=send.to)) OR object.namespace=*s'
+<pre><code class="language-plaintext">register/list/names WHERE '((object.name=d* AND object.namespace=~GLOBAL~) OR (object.name=e* AND object.namespace=send.to)) OR object.namespace=*s'
 </code></pre>
-<p>The above command will return all objects starting with letter 'd' that are global names, or all objects starting with letter 'e' in the '<a class="is-external-link" href="http://send.to">send.to</a>' namespace, or finally all objects that are in a namespace that ends with the letter 's'.</p>
+<p>The above command will return all objects starting with letter 'd' that are global names, or all objects starting with letter 'e' in the '<a href="http://send.to">send.to</a>' namespace, or finally all objects that are in a namespace that ends with the letter 's'.</p>
