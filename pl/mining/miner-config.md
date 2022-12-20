@@ -2,7 +2,7 @@
 title: Konfiguracja górnika
 description: 
 published: true
-date: 2022-10-28T21:49:18.564Z
+date: 2022-12-20T22:59:58.357Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-27T22:28:31.131Z
@@ -202,4 +202,4 @@ Pobierz pliki konfiguracyjne z poniższego linku:
 
 
 - [Przykładowe konfiguracje](https://github.com/Nexusoft/NexusMiner/tree/master/example_configs)
-{.lista-linków}
+{.links-list}
