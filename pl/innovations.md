@@ -2,14 +2,14 @@
 title: Innowacje
 description: Innowacje, dzięki którym Nexus jest wyjątkowy i jest wartościową propozycją
 published: true
-date: 2022-12-18T23:54:57.092Z
+date: 2022-12-20T11:59:55.436Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-06T15:49:22.955Z
 ---
 
 # Innowacje Nexusa
-Znajdź linki, które wyjaśniają różne innowacje w Nexusie:
+Poniższe linki wyjaśniają różne innowacje w Nexusie:
 
 - [7 WARSTWOWY STOS OPROGRAMOWANIA *Architektura mikroserwisów*](/innovations/software-stack)
 - [ŁAŃCUCHY PODPISÓW *Konta użytkowników / Bezpieczna tożsamość cyfrowa*](/innovations/signature-chains)
