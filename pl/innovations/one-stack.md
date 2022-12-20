@@ -1,8 +1,8 @@
 ---
-title: JEDEN Stos (przyszłość)
+title: ONE - Stos (przyszłość)
 description: Jedno Wykonanie Nexusa
 published: true
-date: 2022-12-20T12:35:18.114Z
+date: 2022-12-20T12:38:26.360Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:41:40.275Z
