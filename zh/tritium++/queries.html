@@ -2,7 +2,7 @@
 title: 查询
 description: 查询 DSL（域特定语言）
 published: true
-date: 2022-12-20T09:16:18.226Z
+date: 2022-12-20T09:16:58.461Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-20T08:35:22.547Z
@@ -48,8 +48,7 @@ dateCreated: 2022-12-20T08:35:22.547Z
 <p>下面演示如何使用多个递归级别进行查询。</p>
 <pre><code class="language-plaintext">register/list/accounts WHERE '(object.token=0 AND object.balance&gt;10) OR (object.token=8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK AND object.balance&gt;1)'
 </code></pre>
-<p>这将给所有余额大于 10 的 NXS 帐户，或所有账户的通证</p>
-<p>'8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK' 其余额大于 1。</p>
+<p>这将给所有余额大于 10 的 NXS 帐户，或所有账户的通证<br>'8Ed7Gzybwy3Zf6X7hzD4imJwmA2v1EYjH2MNGoVRdEVCMTCdhdK' 其余额大于 1。</p>
 <h4>更复杂的查询</h4>
 <p>目前没有限制递归的层数，例如：</p>
 <pre><code class="language-plaintext">register/list/names WHERE '((object.name=d* AND object.namespace=~GLOBAL~) OR (object.name=e* AND object.namespace=send.to)) OR object.namespace=*s'
