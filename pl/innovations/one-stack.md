@@ -2,7 +2,7 @@
 title: JEDEN Stos (przyszłość)
 description: Jedno Wykonanie Nexusa
 published: true
-date: 2022-12-20T12:24:13.792Z
+date: 2022-12-20T12:27:11.662Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:41:40.275Z
@@ -24,7 +24,7 @@ Poniższy obraz pokazuje, w jaki sposób stos ONE współdziała ze stosem oprog
 
 ### SYGNAŁ
 
-Warstwa sygnału odnosi się do komunikacji między satelitami a stacjami naziemnymi. Warstwa sygnału odpowiada za fizyczną modulację fali nośnej. jest podłączony bezprzewodowo do anten fazowanych. Wykorzystuje nielicencjonowane pasmo 5,8 GHz do komunikacji w celu otwartego wdrażania infrastruktury naziemnej i orbitalnej. Będzie podążać za MCS (schemat modulacji i kodowania) do MCS-11, używając 1024-QAM.
+Warstwa sygnału odnosi się do komunikacji między satelitami, a stacjami naziemnymi. Warstwa sygnału odpowiada za fizyczną modulację fali nośnej. Jest podłączona bezprzewodowo do anten fazowanych. Wykorzystuje nielicencjonowane pasmo 5,8 GHz do komunikacji w celu otwartego wdrażania infrastruktury naziemnej i orbitalnej. Będzie podążać za MCS (schemat modulacji i kodowania) do MCS-11, używając 1024-QAM.
 
 ### LOKALIZACJA
 
