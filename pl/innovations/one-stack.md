@@ -2,7 +2,7 @@
 title: JEDEN Stos (przyszłość)
 description: Jedno Wykonanie Nexusa
 published: true
-date: 2022-12-20T12:27:11.662Z
+date: 2022-12-20T12:35:18.114Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:41:40.275Z
@@ -28,7 +28,7 @@ Warstwa sygnału odnosi się do komunikacji między satelitami, a stacjami nazie
 
 ### LOKALIZACJA
 
-Druga warstwa to warstwa Locator, która odpowiada za kierowanie pakietu do właściwej lokalizacji geograficznej. Będzie miał wiele typów lokalizatorów, z których najważniejsze to Geo-Spatial Locator (GSL), Wide Radius Locator (WRL) i Internet Protocol Locator (IPL). Routing jest topologicznie niezależny i nie wymaga zarządzania jakimkolwiek stanem w celu uzyskania kompletnej trasy. Współpracuje ze starszym Internetem, IP, jako kolejny zestaw lokalizatorów
+Druga warstwa to warstwa Locator, która odpowiada za kierowanie pakietu do właściwej lokalizacji geograficznej. Będzie miał wiele typów lokalizatorów, z których najważniejsze to Geo-Spatial Locator (GSL), Wide Radius Locator (WRL) i Internet Protocol Locator (IPL). Routing jest topologicznie niezależny i nie wymaga zarządzania jakimkolwiek stanem w celu uzyskania kompletnej trasy. Współpracuje ze starszym Internetem IP, jako kolejny zestaw lokalizatorów.
 
 ### IDENTYFIKATOR
 
@@ -48,6 +48,6 @@ Warstwa transportowa jest przenoszona z OSI. Warstwa transportowa pobiera dane p
 
 Warstwa konsensusu jest odpowiedzialna za tworzenie warstwy zaufania zarówno na IP, jak i NP. Jest to wspólny punkt odniesienia prawdy do zarządzania korzeniami zaufania, takimi jak certyfikaty bezpieczeństwa. Składa się z trzech warstw stosu oprogramowania Nexus: Ledger, Register i Operations. Tutaj otrzymujemy wykonanie One Nexus.
 
-### PODANIE
+### APLIKACJA
 
 Warstwa aplikacji to warstwa interakcji człowiek-komputer, w której aplikacje mogą uzyskiwać dostęp do usług sieciowych, takich jak przeglądarki internetowe i klienci poczty e-mail. Zapewnia protokoły, które umożliwiają oprogramowaniu wysyłanie i odbieranie informacji oraz przedstawianie użytkownikom znaczących danych. Kilka przykładów protokołów warstwy aplikacji to Hypertext Transfer Protocol (HTTP), File Transfer Protocol (FTP), Post Office Protocol (POP), Simple Mail Transfer Protocol (SMTP) i Domain Name System (DNS).
