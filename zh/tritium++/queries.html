@@ -2,7 +2,7 @@
 title: 查询
 description: 查询 DSL（域特定语言）
 published: true
-date: 2022-12-20T08:45:02.729Z
+date: 2022-12-20T09:10:45.869Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-20T08:35:22.547Z
@@ -12,32 +12,32 @@ dateCreated: 2022-12-20T08:35:22.547Z
 <p>Query 查询 DSL（Domian Specific Language 域特定语言）允许递归地排序和过滤到任何逻辑深度。 此 DSL 可与运算符结合使用，以实时排序、过滤和计算数据。<br>Query 查询 DSL 可以应用于所有带有 <code><strong>where</strong></code> 参数的 5.1 版本的 <code>list</code>&nbsp;列表和 <code>get</code>&nbsp;获取 API 应用程式界面命令</p>
 <h3><code>Selector Keys</code> 选择键</h3>
 <p>此 API 应用程式界面命令集支持以下运算符：</p>
-<p>[<code>object</code>] - This selector key will evaluate the comparison on the raw binary object.<br>[<code>results</code>] - This selector key will evaluate the comparison on the results json.</p>
-<h3>Supported Objects</h3>
-<p>The following object classes are supported:</p>
+<p>[<code>object</code>] - 此选择器键将评估原始二进制物件上的比较。<br>[<code>results</code>] - 此选择器键将评估结果 json 的比较。</p>
+<h3>Supported Objects 支持物件</h3>
+<p>支持以下物件类：</p>
 <ul>
-  <li>object - operates on a raw object register</li>
-  <li>results - operates and filters based on the JSON results. This can be about 10x slower, so use sparingly.</li>
+  <li>object 物件 - 对原始物件寄存器进行操作</li>
+  <li>results 结果 - 根据 JSON 结果进行操作和过滤。 这可能会慢 10 倍左右，因此请谨慎使用。</li>
 </ul>
-<h3>Using wildcards</h3>
-<p>If you are searching by a string parameter, you can include '*' as an any character wildcard match, so that you can search values based on a partial match.</p>
+<h3>Using wildcards 使用通配符</h3>
+<p>如果您按字符串参数搜索，您可以将 “*” 作为任何字符通配符匹配项包含在内，这样您就可以根据部分匹配项搜索值。</p>
 <pre><code class="language-plaintext">register/list/accounts WHERE 'object.name=d*'
 </code></pre>
-<p>The above will return all accounts that start with a letter 'd'.</p>
-<h4>Following wildcard</h4>
-<p>The following demonstrates how to check with wildcards.</p>
+<p>以上将返回所有以字母 “d” 开头的账户。</p>
+<h4>以下通配符</h4>
+<p>下面演示如何使用通配符进行检查。</p>
 <pre><code class="language-plaintext">register/list/accounts WHERE 'object.name=*d'
 </code></pre>
-<p>This above will return all accounts that have a name ending with letter 'd'.</p>
-<h3>Examples</h3>
-<p>To filter, you can use where='statements' or follow the command with WHERE string:</p>
-<h4>Filtering objects with WHERE clause</h4>
-<p>The below clause will filter all name object registers, that are Global names that start with letter 'P', or any objects that start with letter 'S'.</p>
+<p>以上将返回名称以字母 “d” 结尾的所有账户。</p>
+<h3>例子</h3>
+<p>要过滤，您可以使用 where='statements' 或在命令后面加上 WHERE 字符串：</p>
+<h4>使用 WHERE 子句过滤物件</h4>
+<p>以下子句将过滤所有名称物件寄存器，即以字母 “P” 开头的全局名称或以字母 “S” 开头的任何物件。</p>
 <pre><code class="language-plaintext">register/list/names WHERE '(object.namespace=*GLOBAL* AND object.name=P*) OR object.name=S*'
 </code></pre>
-<p>Using the object class i.e. 'object.namespace' will invoke the filter on the binary object.</p>
-<h4>Filtering objects with where=</h4>
-<p>The below clause will filter all name object registers, that are Global names that start with letter 'P', or any objects that start with letter 'S'.</p>
+<p>使用物件类，即 “object.namespace” 将调用二进制物件上的过滤器。</p>
+<h4>使用 where= 过滤物件</h4>
+<p>以下子句将过滤所有名称物件寄存器，即以字母 “P” 开头的全局名称或以字母 “S” 开头的任何物件。</p>
 <pre><code class="language-plaintext">register/list/names where='(object.namespace=*GLOBAL* AND object.name=P*) OR object.name=S*'
 </code></pre>
 <h4>Filtering with multiple operators</h4>
