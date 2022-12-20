@@ -2,7 +2,7 @@
 title: Ekonomia
 description: Ekonomia Nexusa
 published: true
-date: 2022-11-17T23:41:53.400Z
+date: 2022-12-20T22:56:08.516Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T22:37:26.342Z
@@ -41,4 +41,4 @@ Model ten ma na celu generowanie rocznej stopy wzrostu podaży NXS podobnej do r
 
 W przeciwieństwie do Bitcoina, gdzie wszyscy górnicy muszą ostatecznie polegać na wzroście cen, aby utrzymać opłacalność wydobycia, Nexus (NXS) nagradza zarówno górników za wydobywanie bloków, jak i stakujących za trzymanie NXS; wszystkie nagrody pochodzą ze świeżo wybitych monet.
 
-Nexus dostosowuje nagrodę z każdym blokiem. Stosując równanie dla rozkładu wykładniczego, exp(-kt), gdzie k jest starannie wybraną stałą, co minutę dokonuje się depozytu w rezerwach globalnych (zdecentralizowany system zarządzania dostawami). Rezerwa określa dostępną nagrodę dla górników, która jest zablokowana w czasie, a nie w tempie produkcji bloków. Pozwala to na jeszcze dokładniejsze obliczenie przewidywanej podaży w każdej sekundzie po blokadzie czasowej sieci.
+Nexus dostosowuje nagrodę z każdym blokiem. Stosując równanie dla rozkładu wykładniczego, `exp(-kt)`, gdzie `k` jest starannie wybraną stałą, co minutę dokonuje się depozytu w rezerwach globalnych (zdecentralizowany system zarządzania dostawami). Rezerwa określa dostępną nagrodę dla górników, która jest zablokowana w czasie, a nie w tempie produkcji bloków. Pozwala to na jeszcze dokładniejsze obliczenie przewidywanej podaży w każdej sekundzie po blokadzie czasowej sieci.
