@@ -2,7 +2,7 @@
 title: ONE Stack (Future)
 description: One Nexus Execution
 published: true
-date: 2022-12-20T12:22:38.736Z
+date: 2022-12-20T12:26:25.395Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:26:56.136Z
@@ -26,7 +26,7 @@ The image below shows how the ONE stack interacts with the Nexus software stack 
 
 ### SIGNAL
 
-The Signal layer refers to the communication between the satellites and ground stations. The signal layer is responsible the physical modulation of the carrier wave. it is connected wirelessly to phased ray antennas. It uses the unlicensed 5.8 GHz band for communication for open deployment of terrestrial and orbital infrastructure. It will follow MCS (Modulation and Coding scheme) up to MCS-11, using 1024-QAM.
+The Signal layer refers to the communication between the satellites and ground stations. The signal layer is responsible the physical modulation of the carrier wave. It is connected wirelessly to phased ray antennas. It uses the unlicensed 5.8 GHz band for communication for open deployment of terrestrial and orbital infrastructure. It will follow MCS (Modulation and Coding scheme) up to MCS-11, using 1024-QAM.
 
 ### LOCATION
 
