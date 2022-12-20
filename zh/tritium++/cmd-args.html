@@ -1,0 +1,678 @@
+<!--
+title: 命令行参数
+description: 核心配置或命令行参数
+published: true
+date: 2022-12-20T09:59:54.321Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-20T09:59:41.246Z
+-->
+
+<h1 class="toc-header" id="commandline-arguments"> Commandline Arguments</h1>
+<p>This will list out all the command line parameters or core configuration parameters.</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-addnode</td>
+<td>Add to address manager and let it make connections</td>
+<td></td>
+</tr>
+<tr>
+<td>-api</td>
+<td>Handle for API if '/' symbol detected</td>
+<td></td>
+</tr>
+<tr>
+<td>-apiuser</td>
+<td>The API authentication username</td>
+<td>username</td>
+</tr>
+<tr>
+<td>-apipassword</td>
+<td>The API authentication password</td>
+<td>password</td>
+</tr>
+<tr>
+<td>-apiauth</td>
+<td>Enable/disable API authentication</td>
+<td>0/1</td>
+</tr>
+<tr>
+<td>-apiconnect</td>
+<td>Make the connection to the API server</td>
+<td></td>
+</tr>
+<tr>
+<td>-apiport</td>
+<td>Manually assign the API port</td>
+<td>port number</td>
+</tr>
+<tr>
+<td>-apisssl</td>
+<td>Enable SSL for API</td>
+<td>0/1</td>
+</tr>
+<tr>
+<td>-apisslport</td>
+<td>Assign a port for API SSL</td>
+<td>port number</td>
+</tr>
+<tr>
+<td>-apisslrequired</td>
+<td>Boolean for if API is using SSL</td>
+<td>true/false</td>
+</tr>
+<tr>
+<td>-apithreads</td>
+<td></td>
+<td>default = 8</td>
+</tr>
+<tr>
+<td>-apicscore</td>
+<td></td>
+<td>default = 5</td>
+</tr>
+<tr>
+<td>-apirscore</td>
+<td></td>
+<td>default = 5</td>
+</tr>
+<tr>
+<td>-apitimespan</td>
+<td></td>
+<td>default = 60</td>
+</tr>
+<tr>
+<td>-apitimeout</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-argon2</td>
+<td>Hash generation algorithm</td>
+<td></td>
+</tr>
+<tr>
+<td>-argon2_memory</td>
+<td>Memory allocation for argon2</td>
+<td></td>
+</tr>
+<tr>
+<td>-autotx</td>
+<td>Builds tx based on a list of contracts, to be deployed as a single tx or batched</td>
+<td>default = false</td>
+</tr>
+<tr>
+<td>-avatar</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-authattempts</td>
+<td>Session authentication failure counter</td>
+<td>default = 3</td>
+</tr>
+<tr>
+<td>-beta</td>
+<td>Flag to disable checkpoint checks for non legacy mode</td>
+<td></td>
+</tr>
+<tr>
+<td>-blocknotify</td>
+<td>Notification for new block created</td>
+<td></td>
+</tr>
+<tr>
+<td>-blockrefresh</td>
+<td>Grab block expiration timestamp</td>
+<td>default = 60</td>
+</tr>
+<tr>
+<td>-client</td>
+<td>Flag to enable lite mode</td>
+<td>default = false</td>
+</tr>
+<tr>
+<td>-checkpoints</td>
+<td>To go back the specified checkpoints on startup</td>
+<td>default = 100</td>
+</tr>
+<tr>
+<td>-connect</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-conf</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-contractcache</td>
+<td>Create the contract database instance</td>
+<td></td>
+</tr>
+<tr>
+<td>-cscore</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-datadir</td>
+<td>Core data directory location</td>
+<td></td>
+</tr>
+<tr>
+<td>-dbcache</td>
+<td>Legacy database cache size</td>
+<td>default = 25</td>
+</tr>
+<tr>
+<td>-ddos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-dnsupdate</td>
+<td>Check if DNS needs update</td>
+<td>default = 86400</td>
+</tr>
+<tr>
+<td>-dns</td>
+<td>Flag to enable DNS nodes provided</td>
+<td>default = true</td>
+</tr>
+<tr>
+<td>-flushwallet</td>
+<td>Legacy - Flag to flush wallet database</td>
+<td></td>
+</tr>
+<tr>
+<td>-forcereindex</td>
+<td>Flag to force reindex if needed</td>
+<td></td>
+</tr>
+<tr>
+<td>-forkblocks</td>
+<td>Rewind the chain to the specified number of blocks</td>
+<td>default = 0</td>
+</tr>
+<tr>
+<td>-gdb</td>
+<td>GDB mode waits for keyboard input to initiate clean shutdown</td>
+<td></td>
+</tr>
+<tr>
+<td>-generate</td>
+<td>Block generation password for private networks</td>
+<td></td>
+</tr>
+<tr>
+<td>-httpheader</td>
+<td>Dump the header on every read</td>
+<td></td>
+</tr>
+<tr>
+<td>-httpresponse</td>
+<td>Flag to log http response</td>
+<td>default = false</td>
+</tr>
+<tr>
+<td>-hybrid</td>
+<td>Hybrid network Identity</td>
+<td>password</td>
+</tr>
+<tr>
+<td>-inactivetimeout</td>
+<td>Session inactivity timout</td>
+<td>default = 3600</td>
+</tr>
+<tr>
+<td>-indexheight</td>
+<td>Enable block height indexing</td>
+<td>0/1</td>
+</tr>
+<tr>
+<td>-indexaddress</td>
+<td>Enable address indexing</td>
+<td>0/1</td>
+</tr>
+<tr>
+<td>-latency</td>
+<td>Latency to create blocks in private or hybrid mode</td>
+<td></td>
+</tr>
+<tr>
+<td>-ledgercache</td>
+<td>Create the ledger database instance</td>
+<td></td>
+</tr>
+<tr>
+<td>-legacycache</td>
+<td>Create the legacy database instance</td>
+<td></td>
+</tr>
+<tr>
+<td>-latency</td>
+<td>The duration to create blocks in private networks</td>
+<td></td>
+</tr>
+<tr>
+<td>-llpsleep</td>
+<td>cache sleep timer</td>
+<td>default = 0</td>
+</tr>
+<tr>
+<td>-lldmeters</td>
+<td>Flag to track LLD meter thread</td>
+<td></td>
+</tr>
+<tr>
+<td>-legacy</td>
+<td>To check if address is legacy</td>
+<td></td>
+</tr>
+<tr>
+<td>-limitfreerelay</td>
+<td>Rate limit free transactions to limit flooding</td>
+<td></td>
+</tr>
+<tr>
+<td>-listen</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-logfiles</td>
+<td>Debug logging configuration parameter</td>
+<td>default = 20</td>
+</tr>
+<tr>
+<td>-logsizeMB</td>
+<td>Debug logging configuration parameter</td>
+<td>default = 5</td>
+</tr>
+<tr>
+<td>-keypool</td>
+<td>Desired legacy keypool size</td>
+<td></td>
+</tr>
+<tr>
+<td>-manager</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-mining</td>
+<td>Enable mining on the node</td>
+<td></td>
+</tr>
+<tr>
+<td>-miningthreads</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-miningcscore</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-miningrscore</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-miningtimespan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-miningtimeout</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-miningddos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-miningport</td>
+<td>Change mining port</td>
+<td></td>
+</tr>
+<tr>
+<td>-meters</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-maturityrequired</td>
+<td>Signature chain maturity check to create new transaction</td>
+<td></td>
+</tr>
+<tr>
+<td>-maxconnections</td>
+<td>Set maximum peer connections to the node</td>
+<td>default = 100</td>
+</tr>
+<tr>
+<td>-maxincoming</td>
+<td>Set maximum incoming peer connections</td>
+<td>default = 84</td>
+</tr>
+<tr>
+<td>-maxoutgoing</td>
+<td>Set maximum outgoing peer connections</td>
+<td>default = 16</td>
+</tr>
+<tr>
+<td>-maxcontracts</td>
+<td>Set maximum number of contracts per transaction</td>
+<td>default = 99</td>
+</tr>
+<tr>
+<td>-maxsendbuffer</td>
+<td>Write buffer overflow check</td>
+<td></td>
+</tr>
+<tr>
+<td>-maxsendsize</td>
+<td>Set the maximum bytes to flush to 2^16 or max socket buffer</td>
+<td></td>
+</tr>
+<tr>
+<td>-marketfee</td>
+<td>To enable and set fee for the P2P marketplace</td>
+<td></td>
+</tr>
+<tr>
+<td>-nodns</td>
+<td>Flag to disable DNS provided</td>
+<td></td>
+</tr>
+<tr>
+<td>-notificationsthread</td>
+<td>Total no of manager threads</td>
+<td>default = 1</td>
+</tr>
+<tr>
+<td>-pid</td>
+<td>(Nexus.pid) PID file full pathname</td>
+<td></td>
+</tr>
+<tr>
+<td>-printstate</td>
+<td>Flag to output the block state</td>
+<td></td>
+</tr>
+<tr>
+<td>-prunefailed</td>
+<td>Kill address if no valid address is found</td>
+<td>default = 0</td>
+</tr>
+<tr>
+<td>-printselectcoin</td>
+<td>Legacy -</td>
+<td></td>
+</tr>
+<tr>
+<td>-p2pport</td>
+<td>Change p2p port</td>
+<td></td>
+</tr>
+<tr>
+<td>-p2psslport</td>
+<td>Change p2p SSL port</td>
+<td></td>
+</tr>
+<tr>
+<td>-port</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-private</td>
+<td>Enable the node to run as a private chain</td>
+<td></td>
+</tr>
+<tr>
+<td>-primemod</td>
+<td>Flag to reduce the lash proof down to 1017-bit to maximize prime ratio</td>
+<td>default = false</td>
+</tr>
+<tr>
+<td>-registercache</td>
+<td>Create the register database instance</td>
+<td></td>
+</tr>
+<tr>
+<td>-rpcuser</td>
+<td>The RPC authentication - username</td>
+<td></td>
+</tr>
+<tr>
+<td>-rpcpassword</td>
+<td>The RPC authentication - password</td>
+<td></td>
+</tr>
+<tr>
+<td>-rpcremote</td>
+<td>Enable RPC remote access</td>
+<td>0/1</td>
+</tr>
+<tr>
+<td>-rpcthreads</td>
+<td></td>
+<td>default = 4</td>
+</tr>
+<tr>
+<td>-rpccscore</td>
+<td></td>
+<td>default = 5</td>
+</tr>
+<tr>
+<td>-rpcrscore</td>
+<td></td>
+<td>default = 5</td>
+</tr>
+<tr>
+<td>-rpctimespan</td>
+<td></td>
+<td>default = 60</td>
+</tr>
+<tr>
+<td>-rpcport</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-rpcconnect</td>
+<td>Make the connection to the RPC server</td>
+<td></td>
+</tr>
+<tr>
+<td>-rpcssl</td>
+<td></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td>-rpcsslport</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-rpcsslrequired</td>
+<td></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td>-rpcmeters</td>
+<td></td>
+<td>true/false</td>
+</tr>
+<tr>
+<td>-rscore</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-regtest</td>
+<td>Flag to handle regression testing blocks</td>
+<td></td>
+</tr>
+<tr>
+<td>-runtime</td>
+<td>Flag to check if the database is running</td>
+<td>default = false</td>
+</tr>
+<tr>
+<td>-rescan</td>
+<td>Legacy - Flag to handle rescanning database</td>
+<td></td>
+</tr>
+<tr>
+<td>-reindexheight</td>
+<td>Flag to force reindexing height</td>
+<td></td>
+</tr>
+<tr>
+<td>-requirepassword</td>
+<td>Flag to force password authntication for unlocking session</td>
+<td></td>
+</tr>
+<tr>
+<td>-safemode</td>
+<td>Recalculate nexthash to protect against nexthash corruption</td>
+<td></td>
+</tr>
+<tr>
+<td>-sessionlocks</td>
+<td>Create session locks</td>
+<td>default = 1024</td>
+</tr>
+<tr>
+<td>-serverport</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-serversslport</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-ssl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-sslport</td>
+<td>Change SSL port</td>
+<td></td>
+</tr>
+<tr>
+<td>-sslrequired</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-sslcertificate</td>
+<td>ssl - certificate location</td>
+<td>location</td>
+</tr>
+<tr>
+<td>-sslcertificatekey</td>
+<td>ssl - keyfile location</td>
+<td>location</td>
+</tr>
+<tr>
+<td>-sslcabundle</td>
+<td>ssl - cabundle location</td>
+<td>location</td>
+</tr>
+<tr>
+<td>-stake</td>
+<td>Enable staking on node</td>
+<td></td>
+</tr>
+<tr>
+<td>-sync</td>
+<td>Flag denoting the synchronization status</td>
+<td></td>
+</tr>
+<tr>
+<td>-syncbatchsize</td>
+<td>Do a sequential read to obtain the list</td>
+<td>default = 3000</td>
+</tr>
+<tr>
+<td>-system/stop</td>
+<td>Core shutdown authentication password</td>
+<td>password</td>
+</tr>
+<tr>
+<td>-terminateauth</td>
+<td>Check for authenticated sigchain</td>
+<td></td>
+</tr>
+<tr>
+<td>-testnet</td>
+<td>Enable the node to be a testnet</td>
+<td>Number (0 - 92349234)</td>
+</tr>
+<tr>
+<td>-threads</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-timeout</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-timespan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-trustboost</td>
+<td>Preset trust for testing on testnet</td>
+<td></td>
+</tr>
+<tr>
+<td>-upnp</td>
+<td>upnp flag which will enable required port forwarding</td>
+<td>default = true</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td>Enable verbose logging</td>
+<td>0, 1, 2, 3 default = 0</td>
+</tr>
+<tr>
+<td>-wallet</td>
+<td>Load the legacy wallet</td>
+<td></td>
+</tr>
+<tr>
+<td>-walletcheck</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-walletclean</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
