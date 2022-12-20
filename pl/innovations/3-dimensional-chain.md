@@ -2,7 +2,7 @@
 title: Łańcuch 3-wymiarowy (przyszłość)
 description: Rozwiązanie do skalowania 3DC dla Nexusa
 published: true
-date: 2022-12-19T12:19:54.682Z
+date: 2022-12-20T12:08:45.525Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:38:06.925Z
@@ -80,7 +80,7 @@ Waga jest zdefiniowana jako wkład zasobów w czasie rzeczywistym, które dany w
 
 Gdy transakcje są odbierane przez sieć, węzły natychmiast zaczynają je weryfikować. Szybkość transakcji w kanałach L1 będzie się różnić w zależności od ryzyka, jakie handlowiec chce przyjąć, od prędkości poniżej sekundy do pięciu sekund. W przypadku transakcji o wyższej wartości zaleca się, aby otrzymały dodatkową wagę z walidacji na następnej warstwie konsensusu: L2, zmniejszając szybkość transakcji do 15 sekund plus.
 
-## pBFT + Sieć zaufania PoS (L2)
+## pBFT + sieć zaufania PoS (L2)
 
 Jako rozszerzenie istniejącego systemu Proof-of-Stake, L2 utworzy drugą warstwę konsensusu powyżej L1. Warstwa L2 zapewnia bezpieczeństwo i żywotność, komunikację między fragmentami i rozwiązuje konflikty z poziomu warstwy L1. Reprezentuje poziome łańcuchowanie kanałów L1 i jest ważnym krokiem w kierunku prawdziwie zdecentralizowanej i skalowalnej księgi głównej.
 
