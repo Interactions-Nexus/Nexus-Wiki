@@ -2,7 +2,7 @@
 title: JEDEN Stos (przyszłość)
 description: Jedno Wykonanie Nexusa
 published: true
-date: 2022-12-20T12:22:40.437Z
+date: 2022-12-20T12:24:13.792Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-22T21:41:40.275Z
@@ -16,7 +16,7 @@ Obejrzyj prezentację stosu ONE autorstwa Colina Cantrella, link poniżej:
 
 [Prezentacja ONE Stack autorstwa Colina Cantrella](https://www.youtube.com/watch?t=197s&v=BS3Cfo784z8)
 
-## Warstwy JEDNEGO stosu
+## Warstwy stosu ONE
 
 Poniższy obraz pokazuje, w jaki sposób stos ONE współdziała ze stosem oprogramowania Nexus, a także stosem OSI.
 
