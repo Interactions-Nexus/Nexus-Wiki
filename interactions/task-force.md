@@ -2,7 +2,7 @@
 title: Task Force 
 description: Combined task force to manage and deal with use-cases
 published: true
-date: 2022-12-21T17:47:55.540Z
+date: 2022-12-21T17:54:14.561Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T14:31:17.266Z
@@ -33,9 +33,11 @@ To counter the problem, we have decided to create dedicated task force for each 
 
 - If this process is not followed the members can file an incident reportto the stratergy layer.
 
-- No member of the task force can charge any fees in cash, kind or equity from the use-case for providing their services. 
+- No member of the task force can charge any fees in cash, kind or equity from the use-case for providing consultation unless its authorized at the stratergy layer. 
 
-## Who cannot be part of a particular task force:
-- Anyone from the DAO who is associated or working with that particular use-case like an advisor.
+## Who cannot be part of the task force:
+
+- Anyone from the DAO who is associated or working with that particular use-case in any capacity. 
 - Anyone from the DAO who is helping the particular use-case to build their dapp or consulting for a fee at any point of the process.
+- Any person from the DAO with any conflict of interest with the particular use-case, which can cause issues should be avoided.
 
