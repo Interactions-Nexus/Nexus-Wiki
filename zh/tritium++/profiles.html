@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-21T12:00:34.630Z
+date: 2022-12-21T12:02:31.567Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -22,11 +22,10 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <hr>
 <h2>Supported Nouns 受支持的名词</h2>
 <p>此 API 应用程式界面命令集支持以下名词：</p>
-<p>[<code>master</code>] - 控制所有子配置文件的默认配置文件。<br>[<code>auth</code>] - 用于登录身份验证的加密物件注册。<br>[<code>credentials</code>] - 用于保护配置文件的凭证。<br>[<code>recovery</code>] - 表示配置文件复原的物件。</p>
+<p>[<code>master</code>] 主 - 控制所有子配置文件的默认配置文件。<br>[<code>auth</code>] 验证 - 用于登录身份验证的加密物件注册。<br>[<code>credentials</code>] 凭证 - 用于保护配置文件的凭证。<br>[<code>recovery</code>] 复原 - 表示配置文件复原的物件。</p>
 <hr>
-<p>&nbsp;</p>
-<h2>create</h2>
-<p>This will create a new profile or initializes the auth key for older signature chains to make them compatible with profiles, specified by the noun.</p>
+<h2>create 创建</h2>
+<p>这将创建一个新的配置文件或初始化旧签名链的授权密钥，以使其与名词指定的配置文件兼容。</p>
 <pre><code class="language-plaintext">profiles/create/noun
 </code></pre>
 <p>This command only supports the <code>master</code> and <code>auth</code> nouns.</p>
