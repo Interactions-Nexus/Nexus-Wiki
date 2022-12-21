@@ -2,137 +2,129 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-21T08:30:41.347Z
+date: 2022-12-21T08:33:50.961Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
 -->
 
-<h1 class="toc-header" id="profiles"> PROFILES</h1>
-<p>The Profiles API provides methods for creating and managing profiles. A profile is synonymous with a signature chain. The full supported endpoint of the profiles URI is as follows:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">profiles/verb/noun/filter/operator
+<h1>配置</h1>
+<p>Profiles API 配置应用程式界面提供創建和管理配置的方法。配置是簽名鏈的同義詞。配置文件 URI 的完整支持端點如下：</p>
+<pre><code class="language-plaintext">profiles/verb/noun/filter/operator
 </code></pre>
-<p>The minimum required components of the URI are:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">profiles/verb/noun
+<p>URI 的最低要求組件是：</p>
+<pre><code class="language-plaintext">profiles/verb/noun
 </code></pre>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="supported-verbs"> Supported Verbs</h2>
-<p>The following verbs are currently supported by this API command-set:</p>
-<p><a href="#create"><code>create</code></a> - Generate a new object of supported type.<br>
-<a href="#update"><code>update</code></a> - Updates the specified object registers.<br>
-<a href="#recover"><code>recover</code></a> - Recovers a profile account.<br>
-<a href="#status"><code>status</code></a> - Status information of a profile.<br>
-<a href="#notifications"><code>notifications</code></a> - List all notifications that modified specified object.<br>
-<a href="#transactions"><code>transactions</code></a> - List all transactions that modified specified object.</p>
+<h2>Supported Verbs 支持的動詞</h2>
+<p>此 API 命令集當前支持以下動詞：</p>
+<p><a href="#create"><code>create</code></a> - Generate a new object of supported type.<br><a href="#update"><code>update</code></a> - Updates the specified object registers.<br><a href="#recover"><code>recover</code></a> - Recovers a profile account.<br><a href="#status"><code>status</code></a> - Status information of a profile.<br><a href="#notifications"><code>notifications</code></a> - List all notifications that modified specified object.<br><a href="#transactions"><code>transactions</code></a> - List all transactions that modified specified object.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="supported-nouns"> Supported Nouns</h2>
+<h2>Supported Nouns</h2>
 <p>The following nouns are supported for this API command-set:</p>
-<p>[<code>master</code>] - The default profile that controls all sub-profiles.<br>
-[<code>auth</code>] - A crypto object register for login auth.<br>
-[<code>credentials</code>] - Credentials used to secure profiles.<br>
-[<code>recovery</code>] - An object which represents recovery for the profile.</p>
+<p>[<code>master</code>] - The default profile that controls all sub-profiles.<br>[<code>auth</code>] - A crypto object register for login auth.<br>[<code>credentials</code>] - Credentials used to secure profiles.<br>[<code>recovery</code>] - An object which represents recovery for the profile.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="create"> create <a id="create" href="#create"></a></h2>
+<h2>create</h2>
 <p>This will create a new profile or initializes the auth key for older signature chains to make them compatible with profiles, specified by the noun.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">profiles/create/noun
+<pre><code class="language-plaintext">profiles/create/noun
 </code></pre>
 <p>This command only supports the <code>master</code> and <code>auth</code> nouns.</p>
-<h4 class="toc-header" id="createmaster"> create/master</h4>
+<h4>create/master</h4>
 <p>This will create a new profile specified by given noun. The profile is secured by a combination of <code>username</code>, <code>password</code>, and <code>PIN</code>.</p>
-<h4 class="toc-header" id="createauth"> create/auth</h4>
+<h4>create/auth</h4>
 <p>This method will initialize a <code>auth</code> crypto object register for signature chains created with the early release of Tritium. This makes these signature chain compatible with profiles on Tritium++. Existing users may have to convert their old signature chains to be compatible to login with Tritium++ profiles if they are not able to create a session.</p>
-<h3 class="toc-header" id="parameters"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>username</code> : Required to <strong>create</strong> a username. The username to be associated with this profile. The profileID (used to uniquely identify profiles) is a hash of this username, therefore the username must be unique on the blockchain.</p>
 <p><code>password</code> : Required to <strong>set</strong> a password. The password to be associated with this profile.</p>
 <p><code>pin</code> : Required to <strong>set</strong> a pin. The <code>PIN</code> to be associated with this profile</p>
 <p><strong>NOTE:</strong></p>
 <ul>
-<li><code>username</code> must be a minimum of 2 characters.</li>
-<li><code>password</code> must be a minimum of 8 characters.</li>
-<li><code>PIN</code> must be a minimum of 4 characters.</li>
-<li>username is case-sensitive and cannot be changed. Choose the username carefully and make it a point to back it up along with the password and pin.</li>
-<li>Don't use the colon ':' at the end of the username.</li>
+  <li><code>username</code> must be a minimum of 2 characters.</li>
+  <li><code>password</code> must be a minimum of 8 characters.</li>
+  <li><code>PIN</code> must be a minimum of 4 characters.</li>
+  <li>username is case-sensitive and cannot be changed. Choose the username carefully and make it a point to back it up along with the password and pin.</li>
+  <li>Don't use the colon ':' at the end of the username.</li>
 </ul>
-<h3 class="toc-header" id="results"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "success": true,
     "txid": "01d872456b966a14796d80f1687fe59a107fe6c3b6edd3558dce146d08f3093837136634022734d9d9b5e877311fd68f847f226ae276a12b8bc3f246513ccd08"
 }
 </code></pre>
-<h4 class="toc-header" id="return-values"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>success</code> : Boolean flag indicating that the profile was created successfully.</p>
 <p><code>txid</code> : The ID (hash) of the transaction that includes the created object.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="update"> update <a id="update" href="#update"></a></h2>
+<h2>update</h2>
 <p>This method provides the user with the ability to change the password, pin, or recovery seed for a profile, specified by the noun.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">profiles/update/noun
+<pre><code class="language-plaintext">profiles/update/noun
 </code></pre>
 <p>This command only supports the <code>credentials</code> and <code>recovery</code> nouns.</p>
-<h4 class="toc-header" id="updatecredentials"> update/credentials</h4>
+<h4>update/credentials</h4>
 <p>This method provides the user with the ability to change the password, pin for this signature chain. Updating the credentials will also result in each of the keys in the sig chain's Crypto object being regenerated based on the new password / pin.</p>
-<h4 class="toc-header" id="updaterecovery"> update/recovery</h4>
+<h4>update/recovery</h4>
 <p>This method provides the user with the ability to set or change the restore seed for this signature chain.</p>
-<h3 class="toc-header" id="parameters-1"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user profile.</p>
 <p><code>password</code> : Required to <strong>authenticate</strong>. The existing password for this signature chain.</p>
 <p><code>pin</code> : Required if <strong>locked</strong>. The <code>PIN</code> to authorize the transaction.</p>
-<h4 class="toc-header" id="updatecredentials-1"> update/credentials</h4>
+<h4>update/credentials</h4>
 <p><code>new_password</code> : Required by noun <strong>credentials</strong>. The new password to set for for this signature chain. This is optional if new_pin is provided</p>
 <p><code>new_pin</code> : Required by noun <strong>credentials</strong>. The new pin to set for this signature chain. This is optional if <code>new_password</code> is provided.</p>
-<h4 class="toc-header" id="updaterecovery-1"> update/recovery</h4>
+<h4>update/recovery</h4>
 <p><code>recovery</code> : Required by noun <strong>recovery</strong> The existing recovery seed for this signature chain. This is only required if an existing recovery seed is being updated via new_recovery.</p>
 <p><code>new_recovery</code> : Required by noun <strong>recovery</strong>.The new recovery seed to set or change for this sig chain. The recovery seed must be a minimum of 40 characters.</p>
 <p><strong>NOTE:</strong> The recovery phrase is case-sensitive. Make sure to type in the recovery phrase correctly and not copy paste which can add spaces if not done correctly. Make sure to backup and recheck the recovery seed and create multiple offline backups.</p>
-<h3 class="toc-header" id="results-1"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object-1"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "success": true,
     "txid": "01947f824e9b117d618ed49a7dd84f0e7c4bb0896e40d0a95e04e27917e6ecb6b9a5ccfba7d0d5c308b684b95e98ada4f39bbac84db75e7300a09befd1ac0999"
 }
 [Completed in 18533.182336 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-1"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>success</code> : Boolean flag indicating that the profile was updated successfully. <code>txid</code> : The ID (hash) of the transaction for the updated profile .</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="recover"> recover <a id="recover" href="#recover"></a></h2>
+<h2>recover</h2>
 <p>This recovers the profile specified by the noun, in case of lost password and pin. The user has to be logged out to recover his profile.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">profiles/recover/noun
+<pre><code class="language-plaintext">profiles/recover/noun
 </code></pre>
 <p>This command only supports the <code>master</code> noun.</p>
-<h3 class="toc-header" id="parameters-2"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>username</code> : Required to <strong>identify</strong>. The username identifying the profile for recovery.</p>
 <p><code>password</code> : Required to <strong>set</strong> a new password. The new password to be associated with this profile.</p>
 <p><code>pin</code> : Required to <strong>set</strong> a new pin. The new <code>PIN</code> to be associated with this profile.</p>
 <p><code>recovery</code> : Required to <strong>authenticate</strong>. The existing recovery seed for this profile.</p>
-<h3 class="toc-header" id="results-2"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object-2"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "success": true,
     "txid": "017fbb86583c0e15c0fb994a1f4c70d97f2c084533748ccfd25cd36e5aef9c2e7f89f15f2ec9f2d73769fef9d7a8a28cd018c9907ebf1bf74e4f89837c900091"
 }
 [Completed in 15242.801822 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-2"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>success</code> : Boolean flag indicating that the profile was recovered successfully.</p>
 <p><code>txid</code> : The ID (hash) of the transaction for the recovered object.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="status"> status <a id="status" href="#status"></a></h2>
+<h2>status</h2>
 <p>Returns status information for the requested profile.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">profiles/status/noun
+<pre><code class="language-plaintext">profiles/status/noun
 </code></pre>
 <p>This command only supports the <code>master</code> noun.</p>
-<h3 class="toc-header" id="parameters-3"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user profile.</p>
-<h3 class="toc-header" id="results-3"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object-3"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
     "confirmed": true,
     "recovery": true,
@@ -141,7 +133,7 @@ dateCreated: 2022-12-21T08:30:28.140Z
 }
 [Completed in 0.108500 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-3"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>genesis</code> : This is the profile username hash, also known as owner hash.</p>
 <p><code>confirmed</code> : Boolean flag indicating whether the genesis transaction for this profile has at least one confirmation.</p>
 <p><code>recovery</code> : Flag indicating whether the recovery seed has been set for this profile.</p>
@@ -149,17 +141,17 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>transactions</code> : The total transaction count for this profile</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="notifications"> notifications <a id="notifications" href="#notifications"></a></h2>
+<h2>notifications</h2>
 <p>This will list off all of the transactions sent to a particular signature chain. It is useful for identifying transactions that you need to accept such as credits.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">profiles/notifications/noun
+<pre><code class="language-plaintext">profiles/notifications/noun
 </code></pre>
 <p>This command only supports the <code>master</code> noun.</p>
-<h3 class="toc-header" id="parameters-4"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user profile.</p>
 <p>This method supports the Sorting / Filtering parameters.</p>
-<h3 class="toc-header" id="results-4"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object-4"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">[
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">[
     {
         "id": 0,
         "OP": "DEBIT",
@@ -175,7 +167,7 @@ dateCreated: 2022-12-21T08:30:28.140Z
 ]
 [Completed in 0.256792 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-4"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>id</code> : The sequential ID of this transaction.</p>
 <p><code>OP</code> : The contract operation. Can be COINBASE, DEBIT, FEE, TRANSFER.</p>
 <p><code>txid</code> : The transaction that was credited / claimed.</p>
@@ -192,23 +184,23 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>dividend_payment</code> : Flag indicating that this debit is a split dividend payment to a tokenized asset</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="transactions"> transactions <a id="transactions" href="#transactions"></a></h2>
+<h2>transactions</h2>
 <p>This will list off all of the transactions for the requested profile.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">profiles/transactions/noun
+<pre><code class="language-plaintext">profiles/transactions/noun
 </code></pre>
 <p>This command only supports the <code>master</code> noun.</p>
-<h3 class="toc-header" id="parameters-5"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session that is creating the transaction.</p>
 <p><code>verbose</code> : Optional, <strong>determines</strong> how much transaction data to include in the response. Supported values are :</p>
 <ul>
-<li><code>default</code> : hash</li>
-<li><code>summary</code> : type, version, sequence, timestamp, operation, and confirmations.</li>
-<li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
+  <li><code>default</code> : hash</li>
+  <li><code>summary</code> : type, version, sequence, timestamp, operation, and confirmations.</li>
+  <li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
 </ul>
 <p>This method supports the Sorting / Filtering parameters.</p>
-<h3 class="toc-header" id="results-5"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object-5"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">[
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">[
     {
         "txid": "01eb59a0c4e6c47dd2a8d3a4aa7d83514aab6f5c976207889f786e5947c0eb971065fe6e0f8fc6b7d75157f9dac0cf0c178c15e441ff360c3046c84e1fe799ca",
         "type": "tritium first",
@@ -241,7 +233,7 @@ dateCreated: 2022-12-21T08:30:28.140Z
 ]
 [Completed in 0.616625 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-5"> <strong>Return values:</strong></h4>
+<h4><strong>Return values:</strong></h4>
 <p><code>txid</code> : The transaction hash.</p>
 <p><code>type</code> : The description of the transaction (legacy | tritium base | trust | genesis | user).</p>
 <p><code>version</code> : The serialization version of the transaction.</p>
@@ -254,8 +246,7 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>prevhash</code> : The hash of the previous transaction in the sequence.</p>
 <p><code>pubkey</code> : The public key.</p>
 <p><code>signature</code> : The signature hash.</p>
-<p><code>contracts</code> : The array of contracts bound to this transaction and their details with opcodes.<br>
-<code>id</code> : The sequential ID of this contract within the transaction.</p>
+<p><code>contracts</code> : The array of contracts bound to this transaction and their details with opcodes.<br><code>id</code> : The sequential ID of this contract within the transaction.</p>
 <p><code>OP</code> : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.</p>
 <p><code>for</code> : For CREDIT transactions, the contract that this credit was created for . Can be COINBASE, DEBIT, or LEGACY.</p>
 <p><code>txid</code> : The transaction that was credited / claimed.</p>
@@ -269,5 +260,4 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>token</code> : the register address of the token that the transaction relates to. Set to 0 for NXS transactions</p>
 <p><code>token_name</code> : The name of the token that the transaction relates to.</p>
 <p><code>reference</code> : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.</p>
-<p><code>object</code> : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert, lisp, network, sign and verify).<br>
-}</p>
+<p><code>object</code> : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert, lisp, network, sign and verify).<br>}</p>
