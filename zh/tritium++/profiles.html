@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T02:39:28.356Z
+date: 2022-12-22T09:23:09.927Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -62,11 +62,12 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <pre><code class="language-plaintext">profiles/update/noun
 </code></pre>
 <p>This command only supports the <code>credentials</code> and <code>recovery</code> nouns.</p>
-<h4>update/credentials</h4>
-<p>This method provides the user with the ability to change the password, pin for this signature chain. Updating the credentials will also result in each of the keys in the sig chain's Crypto object being regenerated based on the new password / pin.</p>
-<h4>update/recovery</h4>
-<p>This method provides the user with the ability to set or change the restore seed for this signature chain.</p>
-<h3>Parameters:</h3>
+<p>此命令仅支持凭据和复原名词。</p>
+<h4>update/credentials 更新/凭证</h4>
+<p>此方法为用户提供了更改此签名链的密码、pin 的能力。 更新凭据还将导致根据新 password 登录密码 / pin 操作密码重新生成 sigchain 签名链的 加密物件中的每个密钥。</p>
+<h4>update/recovery 更新/复原</h4>
+<p>此方法为用户提供了设置或更改此签名链的复原种子的能力。</p>
+<h3>Parameters 参数:</h3>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user profile.</p>
 <p><code>password</code> : Required to <strong>authenticate</strong>. The existing password for this signature chain.</p>
 <p><code>pin</code> : Required if <strong>locked</strong>. The <code>PIN</code> to authorize the transaction.</p>
