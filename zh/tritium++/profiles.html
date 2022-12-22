@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-21T12:07:22.679Z
+date: 2022-12-22T02:26:20.804Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -22,18 +22,18 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <hr>
 <h2>Supported Nouns 受支持的名词</h2>
 <p>此 API 应用程式界面命令集支持以下名词：</p>
-<p>[<code>master</code>] 主 - 控制所有子配置文件的默认配置文件。<br>[<code>auth</code>] 验证 - 用于登录身份验证的加密物件注册。<br>[<code>credentials</code>] 凭证 - 用于保护配置文件的凭证。<br>[<code>recovery</code>] 复原 - 表示配置文件复原的物件。</p>
+<p>[<code>master</code>] 主管 - 控制所有子配置文件的默认配置文件。<br>[<code>auth</code>] 验证 - 用于登录身份验证的加密物件注册。<br>[<code>credentials</code>] 凭证 - 用于保护配置文件的凭证。<br>[<code>recovery</code>] 复原 - 表示配置文件复原的物件。</p>
 <hr>
 <h2>create 创建</h2>
 <p>这将创建一个新的配置文件或初始化旧签名链的授权密钥，以使其与名词指定的配置文件兼容。</p>
 <pre><code class="language-plaintext">profiles/create/noun
 </code></pre>
 <p>此命令仅支持 <code>master</code> 和 <code>auth</code> 名词。</p>
-<h4>create/master 创建/主</h4>
-<p>This will create a new profile specified by given noun. The profile is secured by a combination of <code>username</code>, <code>password</code>, and <code>PIN</code>.</p>
-<h4>create/auth</h4>
-<p>This method will initialize a <code>auth</code> crypto object register for signature chains created with the early release of Tritium. This makes these signature chain compatible with profiles on Tritium++. Existing users may have to convert their old signature chains to be compatible to login with Tritium++ profiles if they are not able to create a session.</p>
-<h3>Parameters:</h3>
+<h4>create/master 创建/主管</h4>
+<p>这将创建一个由给定名词指定的新配置。 该配置由以下组合保护<code>username</code>，用户名称， <code>password</code>，登录密码和<code>PIN</code> 操作密码。</p>
+<h4>create/auth 创建/验证</h4>
+<p>此方法将为使用早期版本的 Tritium 麟床创建的签名链初始化 <code>auth</code> 加密物件寄存器。 这使得这些签名链与 Tritium++ 麟氚++上的配置文件兼容。 如果现有用户无法创建会话，他们可能必须转换他们的旧签名链才能兼容以使用 Tritium++ 麟氚++配置登录。</p>
+<h3>Parameters 参数:&nbsp;</h3>
 <p><code>username</code> : Required to <strong>create</strong> a username. The username to be associated with this profile. The profileID (used to uniquely identify profiles) is a hash of this username, therefore the username must be unique on the blockchain.</p>
 <p><code>password</code> : Required to <strong>set</strong> a password. The password to be associated with this profile.</p>
 <p><code>pin</code> : Required to <strong>set</strong> a pin. The <code>PIN</code> to be associated with this profile</p>
