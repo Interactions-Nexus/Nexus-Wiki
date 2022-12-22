@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T14:30:35.005Z
+date: 2022-12-22T14:38:31.969Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -163,22 +163,21 @@ dateCreated: 2022-12-21T08:30:28.140Z
 [Completed in 0.256792 ms]
 </code></pre>
 <h4>返回值：</h4>
-<p><code>id</code> : The sequential ID of this transaction.</p>
-<p><code>OP</code> : The contract operation. Can be COINBASE, DEBIT, FEE, TRANSFER.</p>
-<p><code>txid</code> : The transaction that was credited / claimed.</p>
-<p><code>suppressed</code>: If the caller included the optional suppressed flag, then the response will include this field to indicate whether this notification is currently being suppressed or not.</p>
-<p><code>from</code> : For DEBIT transactions, the register address of the account that the debit is being made from.</p>
-<p><code>from_name</code> : For DEBIT transactions, the name of the account that the debit is being made from. Only included if the name can be resolved.</p>
-<p><code>to</code> : For DEBIT transactions, the register address of the account that the debit is being made to.</p>
-<p><code>to_name</code> : For DEBIT transactions, the name of the account that the debit is being made to. Only included if the name can be resolved.</p>
-<p><code>amount</code> : the token amount of the transaction.</p>
-<p><code>token</code> : the register address of the token that the transaction relates to. Set to 0 for NXS transactions</p>
-<p><code>ticker</code> : The name of the token that the transaction relates to.</p>
-<p><code>reference</code> : For DEBIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.</p>
-<p><code>proof</code> : The register address of the token account proving the the split dividend debit.</p>
-<p><code>dividend_payment</code> : Flag indicating that this debit is a split dividend payment to a tokenized asset</p>
+<p><code>id</code> : 此交易的顺序 ID。</p>
+<p><code>OP</code> : 合约操作。 可以是 COINBASE, DEBIT, FEE, TRANSFER.</p>
+<p><code>txid</code> : 当时的交易 credited / claimed.</p>
+<p><code>suppressed</code>: 如果调用者包含可选的抑制标志，则响应将包含此字段以指示当前是否正在抑制此通知。</p>
+<p><code>from</code> : 对于 DEBIT&nbsp;借记交易，是从中进行借记的帐户的注册地址。</p>
+<p><code>from_name</code> : 对于 DEBIT&nbsp;借记交易，是从中进行借记的帐户的名称。 仅当名称可以解析时才包含.</p>
+<p><code>to</code> : 对于 DEBIT&nbsp;借记交易，借记帐户的注册地址。</p>
+<p><code>to_name</code> : 对于 DEBIT&nbsp;借记交易, 借记账户的名称。 仅当名称可以解析时才包括在内。</p>
+<p><code>amount</code> : 交易的通证数额。</p>
+<p><code>token</code> : 与交易相关的通证的注册地址。 为 NXS 麟社币交易设置为 0</p>
+<p><code>ticker</code> : 交易相关的通证名称。</p>
+<p><code>reference</code> : 对于 DEBIT&nbsp;借记交易，这是用户提供的参考，收件人使用该参考将交易与订单或发票号相关联。</p>
+<p><code>proof</code> : 证明分红借记的通证账户的注册地址。</p>
+<p><code>dividend_payment</code> : 标志表明该借记是对通证化资产的拆分股息支付</p>
 <hr>
-<p>&nbsp;</p>
 <h2>transactions</h2>
 <p>This will list off all of the transactions for the requested profile.</p>
 <pre><code class="language-plaintext">profiles/transactions/noun
