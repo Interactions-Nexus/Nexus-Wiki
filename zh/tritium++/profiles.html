@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T09:33:10.175Z
+date: 2022-12-22T10:32:52.743Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -75,9 +75,9 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>new_password</code> 新登录密码：noun <strong>credentials </strong>名词凭据所需。 为此签名链设置的新密码。 如果提供了 new_pin，这是可选的。</p>
 <p><code>new_pin</code> 新操作密码: noun <strong>credentials </strong>名词凭据所需。 为此签名链设置的新 pin 操作密码。 如果提供了 <code>new_password</code> 新登录密码，这是可选的。</p>
 <h4>update/recovery 更新/复原</h4>
-<p><code>recovery</code> : Required by noun <strong>recovery</strong> The existing recovery seed for this signature chain. This is only required if an existing recovery seed is being updated via new_recovery.</p>
-<p><code>new_recovery</code> : Required by noun <strong>recovery</strong>.The new recovery seed to set or change for this sig chain. The recovery seed must be a minimum of 40 characters.</p>
-<p><strong>NOTE:</strong> The recovery phrase is case-sensitive. Make sure to type in the recovery phrase correctly and not copy paste which can add spaces if not done correctly. Make sure to backup and recheck the recovery seed and create multiple offline backups.</p>
+<p><code>recovery</code> 复原：noun <strong>recovery</strong> 复原要求此签名链的现有恢复种子。 只有在通过 new_recovery 新复原更新现有复原种子时才需要这样做。</p>
+<p><code>new_recovery</code> &nbsp;新复原： noun <strong>recovery</strong> 复原所必需的。为此 sigchain 签名链设置或更改的新恢复种子。 复原种子必须至少包含 40 个字符。</p>
+<p>注意：复原词组区分大小写。 确保正确输入恢复短语，而不是复制粘贴，如果输入不正确，可能会添加空格。 确保备份并重新检查恢复种子并创建多个离线备份。</p>
 <h3>Results:</h3>
 <h4>Return value JSON object:</h4>
 <pre><code class="language-plaintext">{
