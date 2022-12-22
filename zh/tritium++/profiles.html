@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T14:42:07.517Z
+date: 2022-12-22T14:45:36.497Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -185,15 +185,15 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p>此命令仅支持 <code>master</code> 主管名词。</p>
 <h3>Parameters 参数:</h3>
 <p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识正在创建交易的用户会议。</p>
-<p><code>verbose</code> : Optional, <strong>determines</strong> how much transaction data to include in the response. Supported values are :</p>
+<p><code>verbose</code> 详细: 可选，确定响应中包含多少交易数据。 支持的值是：</p>
 <ul>
   <li><code>default</code> : hash</li>
   <li><code>summary</code> : type, version, sequence, timestamp, operation, and confirmations.</li>
   <li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
 </ul>
-<p>This method supports the Sorting / Filtering parameters.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p>此方法支持 Sorting / Filtering 排序/过滤参数。</p>
+<h3>Results 结果:</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">[
     {
         "txid": "01eb59a0c4e6c47dd2a8d3a4aa7d83514aab6f5c976207889f786e5947c0eb971065fe6e0f8fc6b7d75157f9dac0cf0c178c15e441ff360c3046c84e1fe799ca",
@@ -227,7 +227,7 @@ dateCreated: 2022-12-21T08:30:28.140Z
 ]
 [Completed in 0.616625 ms]
 </code></pre>
-<h4><strong>Return values:</strong></h4>
+<h4>返回值</h4>
 <p><code>txid</code> : The transaction hash.</p>
 <p><code>type</code> : The description of the transaction (legacy | tritium base | trust | genesis | user).</p>
 <p><code>version</code> : The serialization version of the transaction.</p>
