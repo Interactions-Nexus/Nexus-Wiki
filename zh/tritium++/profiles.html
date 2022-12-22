@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T14:48:17.942Z
+date: 2022-12-22T14:54:26.397Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -235,17 +235,17 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>timestamp</code> : 创建交易时的 Unix 时间戳。</p>
 <p><code>blockhash</code> : 此交易包含在其中的块的哈希值。如果尚未包含在块中，则为空白。</p>
 <p><code>confirmations</code> : 这笔交易获得网络确认的数量。</p>
-<p><code>genesis</code> : This is the profile username hash, also known as owner hash.</p>
-<p><code>nexthash</code> : The hash of the next transaction in the sequence.</p>
-<p><code>prevhash</code> : The hash of the previous transaction in the sequence.</p>
-<p><code>pubkey</code> : The public key.</p>
-<p><code>signature</code> : The signature hash.</p>
-<p><code>contracts</code> : The array of contracts bound to this transaction and their details with opcodes.<br><code>id</code> : The sequential ID of this contract within the transaction.</p>
-<p><code>OP</code> : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.</p>
-<p><code>for</code> : For CREDIT transactions, the contract that this credit was created for . Can be COINBASE, DEBIT, or LEGACY.</p>
-<p><code>txid</code> : The transaction that was credited / claimed.</p>
-<p><code>contract</code> : The ID of the contract within the transaction that was credited / claimed.</p>
-<p><code>proof</code> : The register address proving the credit.</p>
+<p><code>genesis</code> : 这是个人资料用户名称哈希，也称为持有者哈希。</p>
+<p><code>nexthash</code> : 序列中下一笔交易的哈希值。</p>
+<p><code>prevhash</code> : 序列中前一个交易的哈希值。</p>
+<p><code>pubkey</code> : 公钥。</p>
+<p><code>signature</code> : 签名哈希。</p>
+<p><code>contracts</code> : T绑定到此交易的合约数组及其带有操作码的详细信息。<br><br><code>id</code> : 该合约在交易中的顺序 ID。</p>
+<p><code>OP</code> : 合约操作。 可以是 APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.</p>
+<p><code>for</code> : 对于 CREDIT 交易，此信用为其创建的合同。 可以是 COINBASE, DEBIT, or LEGACY.</p>
+<p><code>txid</code> : 当时的交易 credited / claimed.</p>
+<p><code>contract</code> : 交易中合约的 ID credited / claimed.</p>
+<p><code>proof</code> : 证明信用的注册地址。</p>
 <p><code>from</code> : For DEBIT, CREDIT, FEE transactions, the register address of the account that the debit is being made from.</p>
 <p><code>from_name</code> : For DEBIT, CREDIT, FEE transactions, the name of the account that the debit is being made from. Only included if the name can be resolved.</p>
 <p><code>to</code> : For DEBIT and CREDIT transactions, the register address of the recipient account.</p>
