@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T10:37:20.263Z
+date: 2022-12-22T14:12:37.092Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -95,21 +95,21 @@ dateCreated: 2022-12-21T08:30:28.140Z
 </code></pre>
 <p>此命令仅支持 <code>master</code> 主管名词。</p>
 <h3>Parameters 参数:</h3>
-<p><code>username</code> : Required to <strong>identify</strong>. The username identifying the profile for recovery.</p>
-<p><code>password</code> : Required to <strong>set</strong> a new password. The new password to be associated with this profile.</p>
-<p><code>pin</code> : Required to <strong>set</strong> a new pin. The new <code>PIN</code> to be associated with this profile.</p>
-<p><code>recovery</code> : Required to <strong>authenticate</strong>. The existing recovery seed for this profile.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p><code>username</code> 用户名称： 要求 <strong>identify </strong>鉴定。 标识用于复原的配置文件的用户名称。</p>
+<p><code>password</code> 登录密码：要求设置新登录密码。 与此配置文件关联的新密码。</p>
+<p><code>pin</code> 操作密码：要求设置新的 PIN 操作密码。 要与此配置文件关联的新 PIN 操作密码。</p>
+<p><code>recovery</code> 复原：要求进行身份 <strong>authenticate </strong>验证。 此配置文件的现有复原种子。</p>
+<h3>Results 结果:</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "success": true,
     "txid": "017fbb86583c0e15c0fb994a1f4c70d97f2c084533748ccfd25cd36e5aef9c2e7f89f15f2ec9f2d73769fef9d7a8a28cd018c9907ebf1bf74e4f89837c900091"
 }
 [Completed in 15242.801822 ms]
 </code></pre>
-<h4>Return values:</h4>
-<p><code>success</code> : Boolean flag indicating that the profile was recovered successfully.</p>
-<p><code>txid</code> : The ID (hash) of the transaction for the recovered object.</p>
+<h4>返回值：</h4>
+<p><code>success</code> 成功：指示配置文件已成功恢复的布尔标志。</p>
+<p><code>txid</code> 交易 id：已复原物件的交易ID（哈希）。</p>
 <hr>
 <p>&nbsp;</p>
 <h2>status</h2>
