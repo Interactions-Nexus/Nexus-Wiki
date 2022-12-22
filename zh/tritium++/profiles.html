@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T02:26:20.804Z
+date: 2022-12-22T02:34:25.141Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -30,29 +30,29 @@ dateCreated: 2022-12-21T08:30:28.140Z
 </code></pre>
 <p>此命令仅支持 <code>master</code> 和 <code>auth</code> 名词。</p>
 <h4>create/master 创建/主管</h4>
-<p>这将创建一个由给定名词指定的新配置。 该配置由以下组合保护<code>username</code>，用户名称， <code>password</code>，登录密码和<code>PIN</code> 操作密码。</p>
+<p>这将创建一个由给定名词指定的新配置文件。 该配置文件由以下组合保护<code>username</code>，用户名称， <code>password</code>，登录密码和<code>PIN</code> 操作密码。</p>
 <h4>create/auth 创建/验证</h4>
 <p>此方法将为使用早期版本的 Tritium 麟床创建的签名链初始化 <code>auth</code> 加密物件寄存器。 这使得这些签名链与 Tritium++ 麟氚++上的配置文件兼容。 如果现有用户无法创建会话，他们可能必须转换他们的旧签名链才能兼容以使用 Tritium++ 麟氚++配置登录。</p>
 <h3>Parameters 参数:&nbsp;</h3>
-<p><code>username</code> : Required to <strong>create</strong> a username. The username to be associated with this profile. The profileID (used to uniquely identify profiles) is a hash of this username, therefore the username must be unique on the blockchain.</p>
-<p><code>password</code> : Required to <strong>set</strong> a password. The password to be associated with this profile.</p>
-<p><code>pin</code> : Required to <strong>set</strong> a pin. The <code>PIN</code> to be associated with this profile</p>
+<p><code>username</code> 用户名称：需要创建用户名称。 与此配置文件相关联的用户名称。 profileID（用于唯一标识配置文件）是此用户名称的哈希值，因此用户名在区块链上必须是唯一的。</p>
+<p><code>password</code> 登录密码：需要设置密码。 与此配置文件关联的密码。</p>
+<p><code>pin</code> 操作密码： 需要设置引脚。 与此配置文件关联的 PIN 操作密码。</p>
 <p><strong>NOTE:</strong></p>
 <ul>
   <li><code>username</code> must be a minimum of 2 characters.</li>
   <li><code>password</code> must be a minimum of 8 characters.</li>
   <li><code>PIN</code> must be a minimum of 4 characters.</li>
-  <li>username is case-sensitive and cannot be changed. Choose the username carefully and make it a point to back it up along with the password and pin.</li>
-  <li>Don't use the colon ':' at the end of the username.</li>
+  <li>用户名区分大小写且不能更改。 仔细选择用户名称，并将其与 password 登录密码和 PIN 操作密码一起备份。</li>
+  <li>请不要在用户名称末尾使用冒号 “:” 。</li>
 </ul>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<h3>Results 结果:</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "success": true,
     "txid": "01d872456b966a14796d80f1687fe59a107fe6c3b6edd3558dce146d08f3093837136634022734d9d9b5e877311fd68f847f226ae276a12b8bc3f246513ccd08"
 }
 </code></pre>
-<h4>Return values:</h4>
+<h4>返回值：</h4>
 <p><code>success</code> : Boolean flag indicating that the profile was created successfully.</p>
 <p><code>txid</code> : The ID (hash) of the transaction that includes the created object.</p>
 <hr>
