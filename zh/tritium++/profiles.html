@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T14:12:37.092Z
+date: 2022-12-22T14:15:50.940Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -111,16 +111,15 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>success</code> 成功：指示配置文件已成功恢复的布尔标志。</p>
 <p><code>txid</code> 交易 id：已复原物件的交易ID（哈希）。</p>
 <hr>
-<p>&nbsp;</p>
-<h2>status</h2>
-<p>Returns status information for the requested profile.</p>
+<h2>status 状态</h2>
+<p>返回所请求配置文件的状态信息。</p>
 <pre><code class="language-plaintext">profiles/status/noun
 </code></pre>
-<p>This command only supports the <code>master</code> noun.</p>
-<h3>Parameters:</h3>
-<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user profile.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p>此命令仅支持 <code>master</code>&nbsp;主管名词。</p>
+<h3>Parameters 参数:</h3>
+<p><code>session</code> 议会：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户配置文件。</p>
+<h3>Results 结果:</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
     "confirmed": true,
@@ -130,7 +129,7 @@ dateCreated: 2022-12-21T08:30:28.140Z
 }
 [Completed in 0.108500 ms]
 </code></pre>
-<h4>Return values:</h4>
+<h4>返回值：</h4>
 <p><code>genesis</code> : This is the profile username hash, also known as owner hash.</p>
 <p><code>confirmed</code> : Boolean flag indicating whether the genesis transaction for this profile has at least one confirmation.</p>
 <p><code>recovery</code> : Flag indicating whether the recovery seed has been set for this profile.</p>
