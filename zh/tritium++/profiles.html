@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T10:32:52.743Z
+date: 2022-12-22T10:37:20.263Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -78,24 +78,23 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>recovery</code> 复原：noun <strong>recovery</strong> 复原要求此签名链的现有恢复种子。 只有在通过 new_recovery 新复原更新现有复原种子时才需要这样做。</p>
 <p><code>new_recovery</code> &nbsp;新复原： noun <strong>recovery</strong> 复原所必需的。为此 sigchain 签名链设置或更改的新恢复种子。 复原种子必须至少包含 40 个字符。</p>
 <p>注意：复原词组区分大小写。 确保正确输入恢复短语，而不是复制粘贴，如果输入不正确，可能会添加空格。 确保备份并重新检查恢复种子并创建多个离线备份。</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<h3>Results 结果:</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "success": true,
     "txid": "01947f824e9b117d618ed49a7dd84f0e7c4bb0896e40d0a95e04e27917e6ecb6b9a5ccfba7d0d5c308b684b95e98ada4f39bbac84db75e7300a09befd1ac0999"
 }
 [Completed in 18533.182336 ms]
 </code></pre>
-<h4>Return values:</h4>
-<p><code>success</code> : Boolean flag indicating that the profile was updated successfully. <code>txid</code> : The ID (hash) of the transaction for the updated profile .</p>
+<h4>返回值：</h4>
+<p><code>success</code> 成功：指示配置文件已成功更新的布尔标志。 <code>txid</code>：更新配置文件的交易 ID（哈希）。</p>
 <hr>
-<p>&nbsp;</p>
-<h2>recover</h2>
-<p>This recovers the profile specified by the noun, in case of lost password and pin. The user has to be logged out to recover his profile.</p>
+<h2>recover 复原</h2>
+<p>这将恢复由名词指定的配置文件，以防丢失 password 登录密码和 pin 操作密码。 用户必须注销才能恢复他的个人资料。</p>
 <pre><code class="language-plaintext">profiles/recover/noun
 </code></pre>
-<p>This command only supports the <code>master</code> noun.</p>
-<h3>Parameters:</h3>
+<p>此命令仅支持 <code>master</code> 主管名词。</p>
+<h3>Parameters 参数:</h3>
 <p><code>username</code> : Required to <strong>identify</strong>. The username identifying the profile for recovery.</p>
 <p><code>password</code> : Required to <strong>set</strong> a new password. The new password to be associated with this profile.</p>
 <p><code>pin</code> : Required to <strong>set</strong> a new pin. The new <code>PIN</code> to be associated with this profile.</p>
