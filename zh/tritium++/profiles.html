@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T14:56:42.964Z
+date: 2022-12-22T15:00:45.010Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -249,9 +249,9 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>from</code> : 给 DEBIT, CREDIT, FEE 交易，借记账户的注册地址。</p>
 <p><code>from_name</code> : 给 DEBIT, CREDIT, FEE 交易, 借记账户的名称。 仅当名称可以解析时才包括在内。</p>
 <p><code>to</code> : 给 DEBIT 和 CREDIT 交易, 接收人账户的注册地址。</p>
-<p><code>to_name</code> : For DEBIT and CREDIT transactions, the name of the recipient account. Only included if the name can be resolved.</p>
-<p><code>amount</code> : the token amount of the transaction.</p>
-<p><code>token</code> : the register address of the token that the transaction relates to. Set to 0 for NXS transactions</p>
-<p><code>token_name</code> : The name of the token that the transaction relates to.</p>
-<p><code>reference</code> : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.</p>
-<p><code>object</code> : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert, lisp, network, sign and verify).<br>}</p>
+<p><code>to_name</code> : 给 DEBIT 和 CREDIT 交易, 接收人账户的名称。 仅当名称可以解析时才包括在内。</p>
+<p><code>amount</code> : 交易的通证数额。</p>
+<p><code>token</code> : 与交易相关的通证的注册地址。 为 NXS 麟社交易设置为 0</p>
+<p><code>token_name</code> : 交易相关的通证名称。</p>
+<p><code>reference</code> : 给 DEBIT 和 CREDIT 交易这是收件人用来将交易与订单或发票编号相关联的用户提供的参考。</p>
+<p><code>object</code> : 返回指定配置文件的加密物件寄存器中所有哈希公钥的列表。 物件结果将包含九个默认键(app1, app2, app3, auth, cert, lisp, network, sign and verify).<br>}</p>
