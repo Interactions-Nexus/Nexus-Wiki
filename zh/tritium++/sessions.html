@@ -2,7 +2,7 @@
 title: 会议
 description: 会议 API
 published: true
-date: 2022-12-24T10:42:49.545Z
+date: 2022-12-24T10:50:35.448Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-24T10:40:41.433Z
@@ -17,22 +17,21 @@ dateCreated: 2022-12-24T10:40:41.433Z
 </code></pre>
 <hr>
 <p>&nbsp;</p>
-<h2>Supported Verbs</h2>
-<p>The following verbs are currently supported by this API command-set:</p>
-<p><a href="#create"><code>create</code></a> - Generate a new session type specified by the noun.<br><a href="#unlock"><code>unlock</code></a> - Unlock the session to carry out specified operations.<br><a href="#lock"><code>lock</code></a> - Lock the session to stop a specified operations.<br><a href="#save"><code>save</code></a> - Save a specified session to the local database.<br><a href="#load"><code>load</code></a> - Load a specified session from the local database.<br><a href="#terminate"><code>terminate</code></a> - Terminates a session specified by the noun.<br><a href="#status"><code>status</code></a> - Returns status information for the session specified by the noun.</p>
+<h2>支持的动词</h2>
+<p>此 API 命令集当前支持以下动词：</p>
+<p><a href="#create"><code>create</code></a>创建 - 创建由名词指定的新会议类型。<br><a href="#unlock"><code>unlock</code></a> 解锁 - 解锁会议以执行指定的操作。<br><a href="#lock"><code>lock</code></a> 锁定 - 锁定会议以停止指定的操作。<br><a href="#save"><code>save</code></a> 保存 - 将指定的会议保存到本地数据库。<br><a href="#load"><code>load</code></a> 加载 - 从本地数据库加载指定会议。<br><a href="#terminate"><code>terminate</code></a> 终止 - 终止由名词指定的会议。<br><a href="#status"><code>status</code></a> 状态 - 返回由名词指定的会话的状态信息。</p>
+<hr>
+<h2>Supported Nouns 受支持的名词</h2>
+<p>此 API 命令集支持以下名词：</p>
+<p><code>local</code> 本地 - 会议的位置。</p>
 <hr>
 <p>&nbsp;</p>
-<h2>Supported Nouns</h2>
-<p>The following nouns are supported for this API command-set:</p>
-<p><code>local</code> - The location of the session.</p>
-<hr>
-<p>&nbsp;</p>
-<h2>create</h2>
-<p>Create a new session specified by given noun.</p>
+<h2>create 创建</h2>
+<p>创建由给定名词指定的新会议。</p>
 <pre><code class="language-plaintext">sessions/create/noun
 </code></pre>
-<p>This command only supports the <code>local</code> noun.</p>
-<h3>Parameters:</h3>
+<p>此命令仅支持 <code>local</code> 本地名词。</p>
+<h3>Parameters 参数:</h3>
 <p><code>username</code> : Required to <strong>identify</strong> the profile to create the session for.</p>
 <p><code>password</code> : Required to <strong>authenticate</strong> the password for creating the session.</p>
 <p><code>pin</code> : Required to <strong>authenticate</strong> the <code>PIN</code> for creating the session.</p>
