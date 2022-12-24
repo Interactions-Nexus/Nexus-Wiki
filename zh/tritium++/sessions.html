@@ -2,7 +2,7 @@
 title: 会议
 description: 会议 API
 published: true
-date: 2022-12-24T10:53:37.355Z
+date: 2022-12-24T10:55:58.792Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-24T10:40:41.433Z
@@ -35,19 +35,18 @@ dateCreated: 2022-12-24T10:40:41.433Z
 <p><code>username</code> 用户名称：要求标识要为其创建会议的配置文件。</p>
 <p><code>password</code> 登录密码：要求验证创建会议的密码。</p>
 <p><code>pin</code> 操作密码：要求验证用于创建会话的 <code>PIN</code>&nbsp;操作密码。</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<h3>Results 结果:</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
     "session": "0aad63e028dd9e0f31f0b566831fea9dfc7db68fc2ba482a8ce975656971a67e"
 }
 [Completed in 1659.509829 ms]
 </code></pre>
-<h4>Return values:</h4>
-<p><code>genesis</code> : This is the profile username hash, also known as owner hash.</p>
-<p><code>session</code> : When using multi-user API mode, an additional session value is returned and must be supplied in subsequent API calls, to allow the managing of multiple login sessions.</p>
+<h4>返回值：</h4>
+<p><code>genesis</code> 起源：这是个人资料用户名称哈希，也称为持有者哈希。</p>
+<p><code>session</code> 会议：使用多用户 API 模式时，会返回一个额外的会议值，并且必须在后续 API 调用中提供，以允许管理多个登录会议。</p>
 <hr>
-<p>&nbsp;</p>
 <h2>unlock</h2>
 <p>This will unlock the session specified by given noun and cache the PIN in encrypted memory to be used for all subsequent API calls for the specified operations.</p>
 <pre><code class="language-plaintext">sessions/unlock/noun
