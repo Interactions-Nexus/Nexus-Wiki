@@ -1,0 +1,228 @@
+<!--
+title: 会议
+description: 会议 API
+published: true
+date: 2022-12-24T10:40:55.127Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-24T10:40:41.433Z
+-->
+
+<h1 class="toc-header" id="sessions"> SESSIONS</h1>
+<p>The sessions API provides methods for creating and managing sessions. A session is synonymous with a user login into the signature chain. The full supported endpoint of the sessions URI is as follows:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/verb/noun
+</code></pre>
+<p>The minimum required components of the URI are:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/verb/noun
+</code></pre>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="supported-verbs"> Supported Verbs</h2>
+<p>The following verbs are currently supported by this API command-set:</p>
+<p><a href="#create"><code>create</code></a> - Generate a new session type specified by the noun.<br>
+<a href="#unlock"><code>unlock</code></a> - Unlock the session to carry out specified operations.<br>
+<a href="#lock"><code>lock</code></a> - Lock the session to stop a specified operations.<br>
+<a href="#save"><code>save</code></a> - Save a specified session to the local database.<br>
+<a href="#load"><code>load</code></a> - Load a specified session from the local database.<br>
+<a href="#terminate"><code>terminate</code></a> - Terminates a session specified by the noun.<br>
+<a href="#status"><code>status</code></a> - Returns status information for the session specified by the noun.</p>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="supported-nouns"> Supported Nouns</h2>
+<p>The following nouns are supported for this API command-set:</p>
+<p><code>local</code> - The location of the session.</p>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="create"> create <a id="create" href="#create"></a></h2>
+<p>Create a new session specified by given noun.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/create/noun
+</code></pre>
+<p>This command only supports the <code>local</code> noun.</p>
+<h3 class="toc-header" id="parameters"> Parameters:</h3>
+<p><code>username</code> : Required to <strong>identify</strong> the profile to create the session for.</p>
+<p><code>password</code> : Required to <strong>authenticate</strong> the password for creating the session.</p>
+<p><code>pin</code> : Required to <strong>authenticate</strong> the <code>PIN</code> for creating the session.</p>
+<h3 class="toc-header" id="results"> Results:</h3>
+<h4 class="toc-header" id="return-value-json-object"> Return value JSON object:</h4>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+    "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+    "session": "0aad63e028dd9e0f31f0b566831fea9dfc7db68fc2ba482a8ce975656971a67e"
+}
+[Completed in 1659.509829 ms]
+</code></pre>
+<h4 class="toc-header" id="return-values"> Return values:</h4>
+<p><code>genesis</code> : This is the profile username hash, also known as owner hash.</p>
+<p><code>session</code> : When using multi-user API mode, an additional session value is returned and must be supplied in subsequent API calls, to allow the managing of multiple login sessions.</p>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="unlock"> unlock <a id="unlock" href="#unlock"></a></h2>
+<p>This will unlock the session specified by given noun and cache the PIN in encrypted memory to be used for all subsequent API calls for the specified operations.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/unlock/noun
+</code></pre>
+<p>These commands only supports the <code>local</code> noun.</p>
+<h3 class="toc-header" id="parameters-1"> Parameters:</h3>
+<p><code>pin</code> : Required to <strong>authenticate</strong>. The <code>PIN</code> for this profile.</p>
+<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
+<p><code>mining</code> : Required for <strong>unlocking</strong> mining transactions. This boolean value unlocks the session for mining.</p>
+<p><code>notifications</code> : Required for <strong>unlocking</strong> notifications. This boolean value unlocks the session to automatically process incoming notifications.</p>
+<p><code>staking</code> : Required for <strong>unlocking</strong> staking transactions. This boolean value unlocks the session for staking.</p>
+<p><code>transactions</code> : Required for <strong>unlocking</strong> transactions. This boolean value unlocks the session to allow creating or claiming transactions.</p>
+<h3 class="toc-header" id="returns"> Returns:</h3>
+<h4 class="toc-header" id="return-value-json-object-1"> Return value JSON object:</h4>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+    "unlocked": {
+        "mining": false,
+        "notifications": true,
+        "staking": true,
+        "transactions": false
+    }
+}
+[Completed in 1664.238652 ms]
+</code></pre>
+<h4 class="toc-header" id="return-values-1"> Return values:</h4>
+<p><code>unlocked</code> : This will contain child elements describing which functions the session is currently unlocked for</p>
+<p><code>mining</code> : Boolean flag indicating whether the users sig chain is unlocked for mining.</p>
+<p><code>notifications</code> : Boolean flag indicating whether the users sig chain is unlocked for processing notifications.</p>
+<p><code>staking</code> : Boolean flag indicating whether the users sig chain is unlocked for staking.</p>
+<p><code>transactions</code> : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).</p>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="lock"> lock <a id="lock" href="#lock"></a></h2>
+<p>This will lock the specified session by purging the PIN stored in encrypted memory, making it unavailable for use unless it is either unlocked or the PIN is passed in to all API requests.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/lock/noun
+</code></pre>
+<p>These commands only supports the <code>local</code> noun.</p>
+<h3 class="toc-header" id="parameters-2"> Parameters:</h3>
+<p><code>pin</code> : Required to <strong>authenticate</strong>. The <code>PIN</code> for this profile.</p>
+<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
+<p><code>mining</code> : Required for <strong>locking</strong> mining transactions. This boolean value locks the session for mining.</p>
+<p><code>notifications</code> : Required for <strong>locking</strong> notifications. This boolean value locks the session from processing incoming notifications.</p>
+<p><code>staking</code> : Required for <strong>locking</strong> staking transactions. This boolean value locks the session for staking.</p>
+<p><code>transactions</code> : Required for <strong>locking</strong> transactions. This boolean value locks the session for creating or claiming transactions.</p>
+<h3 class="toc-header" id="returns-1"> Returns:</h3>
+<h4 class="toc-header" id="return-value-json-object-2"> Return value JSON object:</h4>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+    "unlocked": {
+        "mining": false,
+        "notifications": true,
+        "staking": true,
+        "transactions": false
+    }
+}
+[Completed in 1664.238652 ms]
+</code></pre>
+<h4 class="toc-header" id="return-values-2"> Return values:</h4>
+<p><code>unlocked</code> : This will contain child elements describing which functions the session is currently unlocked for</p>
+<p><code>mining</code> : Boolean flag indicating whether the users sig chain is unlocked for mining.</p>
+<p><code>notifications</code> : Boolean flag indicating whether the users sig chain is unlocked for processing notifications.</p>
+<p><code>staking</code> : Boolean flag indicating whether the users sig chain is unlocked for staking.</p>
+<p><code>transactions</code> : Boolean flag indicating whether the users sig chain is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).</p>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="save"> save <a id="save" href="#save"></a></h2>
+<p>This will save the users session to the local database, allowing the session to be resumed at a later time without the need to login or unlock. The users PIN is required as this is used (in conjunction with the genesis) to encrypt the session data before persisting it to the local database.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/save/noun
+</code></pre>
+<p>These commands only supports the <code>local</code> noun.</p>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>Save session, saves the specified active session to the local disk.</li>
+<li>Saved sessions are saved permanent until deleted manually.</li>
+<li>Saved sessions will be resumed in the same condition (locked or unlocked) as it was saved.</li>
+</ul>
+<h3 class="toc-header" id="parameters-3"> Parameters:</h3>
+<p><code>pin</code> : Required to <strong>authenticate</strong>. The <code>PIN</code> for this profile.</p>
+<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
+<h3 class="toc-header" id="results-1"> Results:</h3>
+<h4 class="toc-header" id="return-value-json-object-3"> Return value JSON object:</h4>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+    "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+    "success": true
+}
+[Completed in 2.962459 ms]
+</code></pre>
+<h4 class="toc-header" id="return-values-3"> Return values:</h4>
+<p><code>genesis</code> : This is the profile username hash, also known as owner hash.</p>
+<p><code>success</code> : Boolean flag indicating that the session was saved successfully .</p>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="load"> load <a id="load" href="#load"></a></h2>
+<p>This will resume a saved session from the local database, allowing a saved session to be resumed without the need to login or unlock. The profile username or genesis and PIN is required to decrypt and resume the saved session.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/load/noun
+</code></pre>
+<p>These commands only supports the <code>local</code> noun.</p>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>If there is an existing active session, it will not load a saved session.</li>
+<li>Only a previously saved session can be loaded.</li>
+<li>When a saved session is resumed, it creates a new session ID.</li>
+<li>Saved sessions can be resumed even after a core or node restart.</li>
+</ul>
+<h3 class="toc-header" id="parameters-4"> Parameters:</h3>
+<p><code>pin</code> : Required if <strong>authenticate</strong>. The <code>PIN</code> for this profile.</p>
+<p><code>username</code>: Required to <strong>identify</strong> the profile to load the session for. This is optional if the <code>genesis</code> is provided.</p>
+<p><code>genesis</code> : Required to <strong>identify</strong> the profile to load the session for. This is optional if the <code>username</code> is provided.</p>
+<h3 class="toc-header" id="results-2"> Results:</h3>
+<h4 class="toc-header" id="return-value-json-object-4"> Return value JSON object:</h4>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+    "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+    "session": "2ef9de11b19af82984ddf93275e7ba22c11fe9659d0667f79311c46732bbb7a4"
+}
+[Completed in 0.072625 ms]
+</code></pre>
+<h4 class="toc-header" id="return-values-4"> Return values:</h4>
+<p><code>genesis</code> : This is the profile username hash, also known as owner hash.</p>
+<p><code>session</code> : When using multi-user API mode, an additional session value is returned to identify the session.</p>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="terminate"> terminate <a id="terminate" href="#terminate"></a></h2>
+<p>This will terminate an active session specified by given noun.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/terminate/noun
+</code></pre>
+<p>This command only supports the <code>local</code> noun.</p>
+<p><strong>Note:</strong> This does not delete a saved session</p>
+<h3 class="toc-header" id="parameters-5"> Parameters:</h3>
+<p><code>pin</code> : Required to <strong>authenticate</strong>. The <code>PIN</code> for this profile.</p>
+<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
+<h3 class="toc-header" id="results-3"> Results:</h3>
+<h4 class="toc-header" id="return-value-json-object-5"> Return value JSON object:</h4>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+    "success": true
+}
+[Completed in 1656.089478 ms]
+</code></pre>
+<h4 class="toc-header" id="return-values-5"> Return values:</h4>
+<p><code>success</code> : Boolean flag indicating that the active session was terminated successfully.</p>
+<hr>
+<p>&nbsp;</p>
+<h2 class="toc-header" id="status"> status <a id="status" href="#status"></a></h2>
+<p>Retrieve the session status specified by given noun.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sessions/status/noun
+</code></pre>
+<p>This command only supports the <code>local</code> noun.</p>
+<h3 class="toc-header" id="parameters-6"> Parameters:</h3>
+<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
+<h3 class="toc-header" id="results-4"> Results:</h3>
+<h4 class="toc-header" id="return-value-json-object-6"> Return value JSON object:</h4>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+    "genesis": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+    "accessed": 1653680627,
+    "location": "local",
+    "unlocked": {
+        "mining": false,
+        "notifications": true,
+        "staking": false,
+        "transactions": false
+    }
+}
+[Completed in 0.080333 ms]
+</code></pre>
+<h4 class="toc-header" id="return-values-6"> Return values:</h4>
+<p><code>genesis</code> : This is the profile username hash, also known as owner hash.</p>
+<p><code>accessed</code> : The unix timestamp at which the profile was last accessed.</p>
+<p><code>location</code> : The location of session.</p>
+<p><code>unlocked</code> : This will contain child elements describing which functions the session is currently unlocked for.</p>
+<p><code>mining</code> : Boolean flag indicating whether the users sig chain is unlocked for mining.</p>
+<p><code>notifications</code> : Boolean flag indicating whether the users profile is unlocked for processing notifications.</p>
+<p><code>staking</code> : Boolean flag indicating whether the profile is unlocked for staking.</p>
+<p><code>transactions</code> : Boolean flag indicating whether the profile is unlocked for creating any transactions (except those automatically created through mining/processing notifications if those are unlocked).</p>
