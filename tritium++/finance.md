@@ -2,7 +2,7 @@
 title: FINANCE 
 description: Finance API
 published: true
-date: 2022-11-02T23:16:13.019Z
+date: 2022-12-25T05:47:43.853Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:36.604Z
@@ -86,7 +86,7 @@ This command does not support the `any` or `all` nouns.
 
 `name` : Optional for **noun** `name` as a _UTF-8_ encoded string that will generate a name object register that points to new object. If noun is `token` this will be created as a global name.
 
-`data` : Optional for **any** noun, allows caller to add arbitrary data to object.
+`data` : Optional for **any** noun, allows caller to add arbitrary data to account register.
 
 **create/token**
 
@@ -271,15 +271,15 @@ Retrieves information for a single object for a type specified by the noun
 
 This command supports the `account`, `trust` and `token` nouns.
 
-get/account
+**get/account**
 
 Retrieves information for a specified NXS or token account.
 
-get/trust
+**get/trust**
 
 Retrieves information for a specified trust account.
 
-get/token
+**get/token**
 
 Retrieves information for a specified token address.
 
