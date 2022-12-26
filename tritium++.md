@@ -2,7 +2,7 @@
 title: Tritium++
 description: 
 published: true
-date: 2022-10-29T09:42:33.369Z
+date: 2022-12-26T18:53:42.663Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-08T15:25:26.651Z
@@ -29,6 +29,7 @@ Find all the links to the Tritium++ API documents.
 - [LEDGER *The Ledger API*](/en/tritium++/ledger)
 - [ASSETS *The Assets API*](/en/tritium++/assets)
 - [NAMES *The Names API*](/en/tritium++/names)
+- [INVOICES *The Invoice API*](/en/tritium++/invoices)
 - [SUPPLY *The Supply API*](/en/tritium++/supply)
 - [MARKET *The Market API*](/en/tritium++/market)
 - [REGISTER *The Register API*](/en/tritium++/register)
