@@ -2,7 +2,7 @@
 title: Commandline Arguments
 description: 
 published: true
-date: 2022-10-26T21:09:34.384Z
+date: 2022-12-26T12:40:41.370Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T16:22:49.820Z
@@ -86,7 +86,7 @@ This will list out all the command line parameters or core configuration paramet
  | -maxincoming | Set maximum incoming peer connections  | default = 84 |
  | -maxoutgoing | Set maximum outgoing peer connections  | default = 16 |
  | -maxcontracts | Set maximum number of contracts per transaction | default = 99 |
- | -maxsendbuffer | Write buffer overflow check |
+ | -maxsendbuffer | The maximum size of the send buffer for synchronizing blockchain | default = 3,000,000bytes (3MB)|
  | -maxsendsize | Set the maximum bytes to flush to 2^16 or max socket buffer |
  | -marketfee | To enable and set fee for the P2P marketplace | |
  | -nodns | Flag to disable DNS provided | |
