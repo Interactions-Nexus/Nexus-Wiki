@@ -2,7 +2,7 @@
 title: MARKET
 description: Market API
 published: true
-date: 2022-12-26T06:43:14.638Z
+date: 2022-12-26T06:59:21.117Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:37:45.578Z
@@ -327,7 +327,7 @@ This command supports the `bid` and `ask` nouns.
 
 ## user <a href="#user" id="user"></a>
 
-Retrieves a users market orders based on the noun.
+Retrieves a users market orders based on the noun and token.
 
 ```
 market/list/noun
