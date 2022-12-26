@@ -2,7 +2,7 @@
 title: Sorting
 description: 
 published: true
-date: 2022-10-08T13:06:49.157Z
+date: 2022-12-26T11:59:36.357Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-05T08:28:09.212Z
@@ -12,13 +12,15 @@ dateCreated: 2022-10-05T08:28:09.212Z
 
 All commands that generate a list of values supports sorting. Sorting can drill down to specific parts of the JSON hierarchy to provide advanced sorting and paging abilities. All sorting happens as the data-set is built, allowing sorting on just about any part of the JSON object.
 
-### `Parameters`
+## `Parameters`
 
 The following parameters can be used to apply **sorting** to the returned data-set.
 
-`limit`: The number of records to return. _Default: 100_.
+`limit`: The number of records to return. *Default: 100*.
 
-`page`: Zero-indexed page number that depends on `limit` for page boundaries.
+`page`: This returns the records in pages, but no of records returned per page depends on the `limit` specified. *Page Default: 0*. 
+
+**How to use `page`:**  If there are 500 records then 'page=0' will return the first 100 (or what is specified by the `Limit`) records, 'page=1' will return the next 101-200 records with a seperate API call and so on.
 
 `offset`: Alternative to `page`, offset can be used to page the results by index.
 
@@ -26,13 +28,13 @@ The following parameters can be used to apply **sorting** to the returned data-s
 
 `sort`: The column or field-name to apply the sorting logic to.
 
-### `Alternative input`
+## Alternative input
 
 The `limit` and `offset` parameters can be given with the following format:
 
 This above will map to the parameters of `limit=100` and `offset=10`.
 
-### `Recursive Sorting`
+## Recursive Sorting
 
 This parameter supports moving up levels of JSON keys by using `.`. This is a recursive function so therfore allows traversing any amount of levels in a JSON hierarchy. Let us take the following JSON object:
 
