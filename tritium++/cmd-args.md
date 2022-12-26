@@ -2,7 +2,7 @@
 title: Commandline Arguments
 description: 
 published: true
-date: 2022-12-26T12:40:41.370Z
+date: 2022-12-26T13:14:14.063Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-19T16:22:49.820Z
@@ -99,7 +99,7 @@ This will list out all the command line parameters or core configuration paramet
  | -p2psslport | Change p2p SSL port |
  | -port |
  | -private | Enable the node to run as a private chain | |
- | -primemod | Flag to reduce the lash proof down to 1017-bit to maximize prime ratio  | default = false | 
+ | -primemod | Flag to reduce the hash proof down to 1017-bit to maximize prime ratio  | default = false | 
  | -registercache | Create the register database instance |
  | -rpcuser | The RPC authentication - username |
  | -rpcpassword | The RPC authentication - password |
@@ -133,7 +133,7 @@ This will list out all the command line parameters or core configuration paramet
  | -stake | Enable staking on node |
  | -sync | Flag denoting the synchronization status | |
  | -syncbatchsize | Do a sequential read to obtain the list | default = 3000 |
- | -system/stop | Core shutdown authentication password | password |
+ | -system/stop | Core shutdown authentication password for system/stop API | password |
  | -terminateauth | Check for authenticated sigchain | |
  | -testnet | Enable the node to be a testnet | Number (0 - 92349234) |
  | -threads | |
