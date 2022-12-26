@@ -2,7 +2,7 @@
 title: NAMES
 description:  Names API
 published: true
-date: 2022-11-14T23:30:32.957Z
+date: 2022-12-26T07:16:46.810Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:34:53.594Z
@@ -100,7 +100,7 @@ This will create a new namespace.
 
 ##### create/name
 
-`name` : Required a name to be **created** for the object that this name will point to. The name can contain any characters, but must not START with a colon :
+`name` : Required a name to be **created** for the object that this name will point to. The name can contain any characters, but must not START with a colon "**:**".
 
 `namespace` : Optional field allows callers to **specify** the namespace that the name should be created in. If the namespace is provided then the caller must also be the owner of the namespace. i.e. you cannot create a name in someone else's namespace. If the namespace is left blank (the default) then the Name will be created in the users local namespace (unless specifically flagged as global).
 
