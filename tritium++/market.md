@@ -2,7 +2,7 @@
 title: MARKET
 description: Market API
 published: true
-date: 2022-12-26T06:29:02.005Z
+date: 2022-12-26T06:43:14.638Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:37:45.578Z
@@ -143,8 +143,6 @@ market/list/noun
 This command supports all the nouns.
 
 ### Parameters:
-
-`pin` : Required if **locked**. The `PIN` to authorize the transaction.
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the session. For single-user API mode the `session` should not be supplied.&#x20;
 
