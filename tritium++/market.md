@@ -2,7 +2,7 @@
 title: MARKET
 description: Market API
 published: true
-date: 2022-11-10T00:16:03.174Z
+date: 2022-12-26T06:29:02.005Z
 tags: api
 editor: markdown
 dateCreated: 2022-10-05T08:37:45.578Z
@@ -134,7 +134,7 @@ To creates a ask market order for market=token1/token2, bid for market=token2/to
 
 ## list <a href="#list" id="list"></a>
 
-Create a new object register specified by given noun.
+This will list all market orders specified by the noun for the profile.
 
 ```
 market/list/noun
