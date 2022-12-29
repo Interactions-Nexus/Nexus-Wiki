@@ -2,7 +2,7 @@
 title: Mining on Windows
 description: 
 published: true
-date: 2022-10-19T11:43:20.779Z
+date: 2022-12-29T13:54:11.325Z
 tags: guides
 editor: markdown
 dateCreated: 2022-10-19T11:25:48.402Z
@@ -16,11 +16,11 @@ This guide will help to set up mining on Windows. The new NexusMiner makes it ve
 
 Download the windows miner executable file from the link below (Not an installer)
 
-{% hint style="warning" %}
-The miner cannot run prime and hash at the same time on a single computer
-{% endhint %}
+[NexusMiner](https://github.com/Nexusoft/NexusMiner)
 
-{% embed url="https://github.com/Nexusoft/NexusMiner" %}
+> The miner cannot run prime and hash at the same time on a single computer.
+{.is-warning}
+
 
 ## Miner Configuration:&#x20;
 
