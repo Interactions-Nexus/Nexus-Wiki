@@ -2,7 +2,7 @@
 title: Kopanie w Windows
 description: 
 published: true
-date: 2022-10-27T22:20:58.544Z
+date: 2022-12-29T23:00:37.866Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-27T21:56:39.030Z
@@ -65,13 +65,13 @@ Uruchom ponownie rdzeń, aby zmiany zaczęły obowiązywać
 
 Przejdź do folderu, w którym znajduje się plik wykonywalny NexusMiner i miner.conf, kliknij dwukrotnie plik wykonywalny NexusMiner. Pojawi się okno z ostrzeżeniem o bezpieczeństwie (pokazane na obrazku poniżej), kliknij uruchom, a górnik uruchomi się w terminalu. Górnik uruchomi się i rozpocznie wydobycie, co można zobaczyć w komunikatach w oknie terminala górnika. Nie jest wymagana interakcja użytkownika.&#x20;
 
-![](../.gitbook/assets/Miner61.png)
+![securitywarning.png](/securitywarning.png)<p align="center"  style="color:dodgerblue;">*Windows — ostrzeżenie o zabezpieczeniach*</p>
 
 Aby sprawdzić, czy wszystko działa, przejdź do poniższego linku do strony puli wydobycia, w prawym nagłówku wklej adres Nexusa wpisany w pliku miner.conf w polu wyszukiwania i kliknij szukaj. Otworzy się strona taka jak poniżej, na której możesz zobaczyć szczegóły swojego górnika.&#x20;
 
 - [**Strona internetowa Prime Pool Miner**](https://primepool.nexus.io/)
 
-![Szczegóły wydobycia dla każdego górnika](../.gitbook/assets/Miner7.png)
+![miningdetails.png](/miningdetails.png)<p align="center"  style="color:dodgerblue;">*Prime Pool Account Overview*</p>
 
 ## Zatrzymaj górnika
 
@@ -79,12 +79,12 @@ Aby zatrzymać górnika, zamknij okno terminala NexusMiner.
 
 ## Zrzuty ekranu
 
-![miner.conf for prime pool with 1 GPU](../.gitbook/assets/Miner31.png)
+![minerconfig.png](/minerconfig.png)<p align="center"  style="color:dodgerblue;">*miner.conf for prime pool with 1 GPU*</p>
 
-![NexusMiner v1.4 Prime Pool mining with single GPU](../.gitbook/assets/Miner1.png)
+![minerwindows.png](/minerwindows.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool mining with single GPU*</p>
 
-![NexusMiner v1.4 Prime Pool mining with single GPU](../.gitbook/assets/Miner2.png)
+![minerwindowsshare.png](/minerwindowsshare.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool - Submitted Block*</p>
 
-![miner.conf for prime pool with 1 GPU & 2 CPU cores](../.gitbook/assets/Miner41.png)
+![minerconf1.png](/minerconf1.png)<p align="center"  style="color:dodgerblue;">*miner.conf for prime pool with 1 GPU & 2 CPU cores*</p>
 
-![NexusMiner v1.4 Prime Pool mining with single GPU and two CPU Cores](../.gitbook/assets/Miner5.png)
+![minerwindows2.png](/minerwindows2.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool mining with single GPU and two CPU Cores*</p>
