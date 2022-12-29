@@ -2,7 +2,7 @@
 title: Kopanie w Windows
 description: 
 published: true
-date: 2022-12-29T23:00:37.866Z
+date: 2022-12-29T23:07:09.011Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-27T21:56:39.030Z
@@ -17,7 +17,7 @@ Ten przewodnik pomoże skonfigurować kopanie w systemie Windows. Nowy NexusMine
 Pobierz plik wykonywalny Windows Miner z poniższego linku (nie jest to instalator)
 
 
-> Górnik nie może jednocześnie uruchamiać trybu prime i hash na jednym komputerze
+> Górnik nie może jednocześnie uruchamiać trybu prime i hash na jednym komputerze.
 {.is-warning}
 
 [NexusMiner](https://github.com/Nexusoft/NexusMiner)
@@ -65,7 +65,7 @@ Uruchom ponownie rdzeń, aby zmiany zaczęły obowiązywać
 
 Przejdź do folderu, w którym znajduje się plik wykonywalny NexusMiner i miner.conf, kliknij dwukrotnie plik wykonywalny NexusMiner. Pojawi się okno z ostrzeżeniem o bezpieczeństwie (pokazane na obrazku poniżej), kliknij uruchom, a górnik uruchomi się w terminalu. Górnik uruchomi się i rozpocznie wydobycie, co można zobaczyć w komunikatach w oknie terminala górnika. Nie jest wymagana interakcja użytkownika.&#x20;
 
-![securitywarning.png](/securitywarning.png)<p align="center"  style="color:dodgerblue;">*Windows — ostrzeżenie o zabezpieczeniach*</p>
+![securitywarning.png](/securitywarning.png)<p align="center"  style="color:dodgerblue;">*Windows — ostrzeżeniem o bezpieczeństwie*</p>
 
 Aby sprawdzić, czy wszystko działa, przejdź do poniższego linku do strony puli wydobycia, w prawym nagłówku wklej adres Nexusa wpisany w pliku miner.conf w polu wyszukiwania i kliknij szukaj. Otworzy się strona taka jak poniżej, na której możesz zobaczyć szczegóły swojego górnika.&#x20;
 
@@ -79,12 +79,12 @@ Aby zatrzymać górnika, zamknij okno terminala NexusMiner.
 
 ## Zrzuty ekranu
 
-![minerconfig.png](/minerconfig.png)<p align="center"  style="color:dodgerblue;">*miner.conf for prime pool with 1 GPU*</p>
+![minerconfig.png](/minerconfig.png)<p align="center"  style="color:dodgerblue;">*miner.conf dla  prime pool z 1 GPU*</p>
 
-![minerwindows.png](/minerwindows.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool mining with single GPU*</p>
+![minerwindows.png](/minerwindows.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool kopanie z jednym GPU*</p>
 
-![minerwindowsshare.png](/minerwindowsshare.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool - Submitted Block*</p>
+![minerwindowsshare.png](/minerwindowsshare.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool - przesłany blok*</p>
 
-![minerconf1.png](/minerconf1.png)<p align="center"  style="color:dodgerblue;">*miner.conf for prime pool with 1 GPU & 2 CPU cores*</p>
+![minerconf1.png](/minerconf1.png)<p align="center"  style="color:dodgerblue;">*miner.conf dla prime pool z 1 GPU & 2 rdzeniami CPU*</p>
 
-![minerwindows2.png](/minerwindows2.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool mining with single GPU and two CPU Cores*</p>
+![minerwindows2.png](/minerwindows2.png)<p align="center"  style="color:dodgerblue;">*NexusMiner v1.4 Prime Pool kopanie z jednym GPU i dwoma rdzeniami CPU*</p>
