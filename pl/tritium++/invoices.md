@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:20:11.969Z
+date: 2023-01-05T23:23:14.969Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -224,6 +224,173 @@ To polecenie obsługuje wszystkie rzeczowniki.
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "address": "822G7ZSsHh1ncTj4AJt6FnZ6MTWG3Q9NNTZ9KvG3CWA1SP3aq97",
+        "created": 1581389015,
+        "modified": 1581389107,
+        "owner": "a2056d518d6e6d65c6c2e05af7fe2d3182a93def20e960fcfa0d35777a082440",
+        "account": "8Bx6ZmCev3DsGjoWuhfQSNmycdZT4cyKKJNc36NWTMik6Zkqh7N",
+        "recipient": "a2056d518d6e6d65c6c2e05af7fe2d3182a93def20e960fcfa0d35777a082440",
+        "number": "0004",
+        "PO": "Purch1234",
+        "contact": "accounts@mycompany.com",
+        "sender_detail": "My Company, 32 Some Street, Some Place",
+        "recipient_detail": "Some recipient details such as address or email",
+        "items": [
+            {
+                "description": "First item description",
+                "base_price": 1.0,
+                "tax": 0.1,
+                "unit_amount": "1.1",
+                "units": 3
+            },
+            {
+                "description": "Second item description",
+                "base_price": 5.0,
+                "tax": 0.5,
+                "unit_amount": "5.5",
+                "units": 1
+            }
+        ],
+        "amount": 8.8,
+        "token": "0",
+        "status": "PAID"
+    }
+]
+```
+
+#### Zwracane wartości:
+
+`owner` : Skrót nazwy użytkownika profilu właściciela.
+
+`created` : Sygnatura czasowa systemu UNIX podczas tworzenia faktury.
+
+`modified` : Sygnatura czasowa systemu UNIX, kiedy faktura była ostatnio modyfikowana.
+
+`name` : Nazwa identyfikująca fakturę. Ze względu na prywatność jest to uwzględniane w odpowiedzi tylko wtedy, gdy osoba dzwoniąca jest właścicielem faktury.
+
+`address` : Adres rejestracji faktury.
+
+`recipient` : Hash genezy łańcucha podpisów, dla którego ma zostać wystawiona faktura.
+
+`account` : Rejestrowy adres konta, na które ma zostać opłacona faktura.
+
+`items` : Tablica pozycji składających się na tę fakturę.
+
+`amount` : Kwota jednostkowa do zafakturowania dla tej pozycji.
+
+`unit` : Liczba jednostek do zafakturowania według kwoty jednostkowej.
+
+`description` : Opis elementu zamówienia.
+
+`amount` : Całkowita kwota faktury. Jest to suma łącznych kwot wszystkich pozycji (kwota_jednostki x jednostki).
+
+`token` : Adres rejestru tokena, którym ta faktura powinna być opłacona. Ustaw na 0 dla transakcji NXS.
+
+`status` : Bieżący status tej faktury. Wartości mogą być NIEPŁATNE (faktura została wystawiona, ale niezapłacona), OPŁACONA (faktura została zapłacona przez odbiorcę) lub ANULOWANA (faktura została anulowana przez wystawcę przed dokonaniem płatności).
+
+--------------------------------------------------
+
+## <a name="pay"></a> zapłać
+
+Dokonaj płatności (obciążenia) w celu uregulowania faktury.
+
+```
+faktury/zapłata/rzecz
+```
+
+To polecenie obsługuje tylko rzeczownik faktury.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **zablokowany**. PIN do autoryzacji transakcji.
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format nazwa użytkownika:nazwa (dla nazw lokalnych). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano „nazwa”.
+
+`from` : Wymagane do **zidentyfikowania** konta do obciążenia (zapłacenia faktury z). Powinien mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw) lub adres rejestru konta do obciążenia (z którego należy zapłacić fakturę).
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+{
+     "txid": "318b86d2c208618aaa13946a3b75f14472ebc0cce9e659f2830b17e854984b55606738f689d886800f21ffee68a3e5fd5a29818e88f8c5b13b9f8ae63779d"
+}
+```
+
+#### Zwracane wartości:
+
+`txid` : Identyfikator (hash) transakcji, która obejmuje DEBIT do zapłaty za fakturę ORAZ ROSZCZENIE do żądania własności faktury.
+
+--------------------------------------------------
+
+## <a name="cancel"></a> anuluj
+
+Anuluje niezapłaconą fakturę, aby własność powróciła do łańcucha podpisów wystawców.
+
+```
+faktury/anuluj/rzecz
+```
+
+To polecenie obsługuje tylko rzeczowniki „faktura” i „zaległe”.
+
+### Parametry:
+
+`pin` : Wymagany, jeśli **zablokowany**. PIN do autoryzacji transakcji.
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format nazwa użytkownika:nazwa (dla nazw lokalnych). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano „nazwa”.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+```
+{
+     "txid": "318b86d2c208618aaa13946a3b75f14472ebc0cce9e659f2830b17e854984b55606738f689d886800f21ffee68a3e5fd5a29818e88f8c5b13b9f8ae63779d"
+}
+```
+
+#### Zwracane wartości:
+
+`txid` : Identyfikator (hash) transakcji, która obejmuje DEBIT do zapłaty za fakturę ORAZ ROSZCZENIE do żądania własności faktury.
+
+--------------------------------------------------
+
+## <a name="history"></a> historia
+
+Spowoduje to uzyskanie historii transakcji dla faktury pokazującej, kiedy została utworzona i przeniesiona (dwie umowy, które mają miejsce w tym samym momencie, gdy tworzona jest faktura) i zażądana (zapłacona lub anulowana).
+
+```
+faktury/historia/rzecz
+```
+
+To polecenie obsługuje wszystkie rzeczowniki.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`name` : wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format nazwa użytkownika:nazwa (dla nazw lokalnych). Jest to opcjonalne, jeśli podano „adres”.
+
+`address` : wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano „nazwa”.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+
 
 
 
