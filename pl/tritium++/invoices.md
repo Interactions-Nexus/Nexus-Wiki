@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:42:11.319Z
+date: 2023-01-05T23:55:18.144Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -558,72 +558,63 @@ Ta metoda obsługuje parametry Sortowanie / Filtrowanie.
 
 #### Zwracane wartości:
 
-`txid`: Skrót transakcji.
+`txid`: Hash transakcji.
 
-`type` : Opis transakcji (starsza | podstawa trytu | zaufanie | geneza | użytkownik).
+`type` : Opis transakcji (legacy | tritium base | trust | genesis | user).
 
 `version` : Wersja serializacji transakcji.
 
-`sequence` : numer kolejny tej transakcji w łańcuchu podpisów.
+`sequence` : Kolejny numer tej transakcji w łańcuchu podpisów.
 
 `timestamp` : Uniksowy znacznik czasu utworzenia transakcji.
 
-`blockhash` : Skrót bloku, w którym zawarta jest ta transakcja. Puste pole, jeśli nie zostało jeszcze uwzględnione w bloku.
+`blockhash` : Hash bloku, w którym zawarta jest ta transakcja. Puste pole, jeśli nie zostało jeszcze uwzględnione w bloku.
 
 `confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję w sieci.
 
 `genesis`: Hash łańcucha sygnatur genesis.
 
-`nexthash` : Skrót następnej transakcji w sekwencji.
+`nexthash` : Hash następnej transakcji w sekwencji.
 
-`prevhash`: skrót poprzedniej transakcji w sekwencji.
+`prevhash`: Hash poprzedniej transakcji w sekwencji.
 
-`pubkey`: klucz publiczny.
+`pubkey`: Klucz publiczny.
 
-`signature` : Skrót podpisu.
+`signature` : Hash podpisu.
 
-`kontrakty` : Tablica kontraktów powiązanych z tą transakcją i ich szczegóły
-
+`contracts` : Tablica kontraktów powiązanych z tą transakcją i ich szczegóły
 kody operacji.
-{
-`id` : kolejny identyfikator tej umowy w ramach transakcji.
 
-`OP` : Operacja kontraktu. Może to być DOŁĄCZANIE, ROSZCZENIE, BAZA MONET, TWORZENIE, KREDYT, OBCIĄŻENIE, OPŁATA, GENEZA, DZIEDZICTWO, PRZENIESIENIE, ZAUFANIE, STAWKA, USUWANIE STAWKI, NAPISANIE.
+`id` : Kolejny identyfikator tej umowy w ramach transakcji.
 
-`for` : w przypadku transakcji KREDYTOWYCH kontrakt, dla którego utworzono ten kredyt . Może to być COINBASE, DEBIT lub LEGACY.
+`OP` : Operacja kontraktu. Może to być APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
+
+`for` : W przypadku transakcji CREDIT kontrakt, dla którego utworzono ten kredyt . Może to być COINBASE, DEBIT lub LEGACY.
 
 `txid`: Transakcja, która została uznana/zgłoszona.
 
-„umowa” : Identyfikator umowy w ramach transakcji, która została uznana/zgłoszona.
+`contract` : Identyfikator umowy w ramach transakcji, która została uznana/zgłoszona.
 
-`dowód`: Adres rejestru potwierdzający kredyt.
+`proof`: Adres rejestru potwierdzający kredyt.
 
 `from` : Dla transakcji DEBET, CREDIT, FEE, adres rejestrowy konta, z którego dokonywane jest obciążenie.
 
 `from_name` : W przypadku transakcji DEBIT, CREDIT, FEE nazwa konta, z którego dokonywane jest obciążenie. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`to` : W przypadku transakcji DEBITOWYCH i KREDYTOWYCH adres rejestru konta odbiorcy.
+`to` : W przypadku transakcji DEBIT i CREDIT adres rejestru konta odbiorcy.
 
-`to_name` : W przypadku transakcji DEBITOWYCH i KREDYTOWYCH nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+`to_name` : W przypadku transakcji DEBIT i CREDIT nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
 
-`amount` : tokenowa kwota transakcji.
+`amount` : Kwota tokena transakcji.
 
-`token`: adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS
+`token`: Adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS.
 
 `ticker`: Nazwa tokena, którego dotyczy transakcja.
 
-`reference` : W przypadku transakcji DEBET i KREDYT jest to podany przez użytkownika numer referencyjny używany przez odbiorcę w celu powiązania transakcji z numerem zamówienia lub faktury.
+`reference` : W przypadku transakcji DEBIT i CREDIT jest to podany przez użytkownika numer referencyjny używany przez odbiorcę w celu powiązania transakcji z numerem zamówienia lub faktury.
 
-`object` : Zwraca listę wszystkich zaszyfrowanych kluczy publicznych w rejestrze obiektów kryptograficznych dla określonego profilu. Wynik obiektu będzie zawierał dziewięć domyślnych kluczy (app1, app2, app3, auth, cert lisp, network, sign i weryfikacja).
+`object` : Zwraca listę wszystkich zaszyfrowanych kluczy publicznych w rejestrze obiektów kryptograficznych dla określonego profilu. Wynik obiektu będzie zawierał dziewięć domyślnych kluczy (app1, app2, app3, auth, cert, lisp, network, sign, verify).
 }
 
 --------------------------------------------------
-
-
-
-
-
-
-
-
 
