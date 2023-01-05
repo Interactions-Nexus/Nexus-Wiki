@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:00:33.647Z
+date: 2023-01-05T23:02:52.321Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -115,12 +115,115 @@ To polecenie obsługuje tylko rzeczownik faktury.
 
 `session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : Wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format nazwa użytkownika:nazwa (dla nazw lokalnych). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format username:name (dla nazw lokalnych). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : Wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano `name`.
 
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "address": "822G7ZSsHh1ncTj4AJt6FnZ6MTWG3Q9NNTZ9KvG3CWA1SP3aq97",
+        "created": 1581389015,
+        "modified": 1581389107,
+        "owner": "a2056d518d6e6d65c6c2e05af7fe2d3182a93def20e960fcfa0d35777a082440",
+        "account": "8Bx6ZmCev3DsGjoWuhfQSNmycdZT4cyKKJNc36NWTMik6Zkqh7N",
+        "recipient": "a2056d518d6e6d65c6c2e05af7fe2d3182a93def20e960fcfa0d35777a082440",
+        "number": "0004",
+        "PO": "Purch1234",
+        "contact": "accounts@mycompany.com",
+        "sender_detail": "My Company, 32 Some Street, Some Place",
+        "recipient_detail": "Some recipient details such as address or email",
+        "items": [
+            {
+                "description": "First item description",
+                "base_price": 1.0,
+                "tax": 0.1,
+                "unit_amount": "1.1",
+                "units": 3
+            },
+            {
+                "description": "Second item description",
+                "base_price": 5.0,
+                "tax": 0.5,
+                "unit_amount": "5.5",
+                "units": 1
+            }
+        ],
+        "amount": 8.8,
+        "token": "0",
+        "status": "PAID"
+    }
+]
+```
+
+#### Zwracane wartości:
+
+`owner` : Skrót nazwy użytkownika profilu właściciela.
+
+`created` : Sygnatura czasowa systemu UNIX podczas tworzenia faktury.
+
+`zmodyfikowany` : Sygnatura czasowa systemu UNIX, kiedy faktura była ostatnio modyfikowana.
+
+`name` : nazwa identyfikująca fakturę. Ze względu na prywatność jest to uwzględniane w odpowiedzi tylko wtedy, gdy osoba dzwoniąca jest właścicielem faktury
+
+`address` : Adres rejestracji faktury.
+
+`recipient` : hash genezy łańcucha podpisów, dla którego ma zostać wystawiona faktura.
+
+`account` : Rejestrowy adres konta, na które ma zostać opłacona faktura.
+
+`items` : tablica pozycji składających się na tę fakturę.
+{
+`amount` : Kwota jednostkowa do zafakturowania dla tej pozycji.
+
+`jednostki` : Liczba jednostek do zafakturowania według kwoty jednostkowej.
+
+`description` : opis elementu zamówienia.
+}
+`amount` : Całkowita kwota faktury. Jest to suma łącznych kwot wszystkich pozycji (kwota_jednostki x jednostki).
+
+`token` : Adres rejestru tokena, którym ta faktura powinna być opłacona. Ustaw na 0 dla transakcji NXS
+
+`status` : Bieżący status tej faktury. Wartości mogą być NIEPŁATNE (faktura została wystawiona, ale niezapłacona), OPŁACONA (faktura została zapłacona przez odbiorcę) lub ANULOWANA (faktura została anulowana przez wystawcę przed dokonaniem płatności).
+
+--------------------------------------------------
+
+## <a name="list"></a> lista
+
+Spowoduje to wyświetlenie wszystkich faktur wystawionych lub otrzymanych przez łańcuch podpisów.
+
+```
+faktury/lista/rzecz
+```
+
+To polecenie obsługuje wszystkie rzeczowniki.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`genesis` : Skrót genezy identyfikujący łańcuch sygnatur (opcjonalnie, jeśli podano nazwę użytkownika).
+
+`nazwa_użytkownika`: nazwa użytkownika identyfikująca łańcuch sygnatur (opcjonalna, jeśli podano genezę).
+
+`status` : Opcjonalne filtrowanie według statusu faktury. Wartości mogą być NIEPŁATNE (faktura została wystawiona, ale nie zapłacona), OPŁACONA (faktura została zapłacona przez odbiorcę) lub ANULOWANA (faktura została anulowana przez wystawcę przed dokonaniem płatności)
+
+`limit` : Liczba rekordów do zwrócenia dla bieżącej strony. Wartość domyślna to 100.
+
+`page` : Umożliwia zwracanie wyników według stron (liczonych od zera). Np. przekazanie page=1 zwróci drugi zestaw rekordów (limit). Wartość domyślna to 0, jeśli nie została podana.
+
+`przesunięcie`: Alternatywa dla strony, przesunięcie może być użyte do zwrócenia zestawu (limitów) wyników z określonego indeksu.
+
+`where` : tablica klauzul do filtrowania wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć tutaj Filtrowanie wyników.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+
 
