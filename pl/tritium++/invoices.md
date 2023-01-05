@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:37:59.209Z
+date: 2023-01-05T23:39:58.541Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -460,23 +460,23 @@ To polecenie obsługuje wszystkie rzeczowniki.
 
 Zwracana wartość to tablica obiektów JSON dla każdego wpisu w historii faktury:
 
-`typ`: Akcja, która miała miejsce. - STWÓRZ | PRZELEW | ROSZCZENIE
+`type`: Akcja, która miała miejsce. - CREATE | TRANSFER | CLAIM
 
-`owner` : Skrót nazwy użytkownika profilu właściciela.
+`owner` : Hash nazwy użytkownika profilu właściciela.
 
-`zmodyfikowany` : Uniksowy znacznik czasu aktualizacji faktury.
+`modified` : Uniksowy znacznik czasu aktualizacji faktury.
 
 `checksum` : Suma kontrolna rejestru stanu używana do czyszczenia.
 
 `address` : Adres rejestracji faktury.
 
-`nazwa` : nazwa faktury.
+`name` : Nazwa faktury.
 
 `data` : Dane faktury JSON.
 
 --------------------------------------------------
 
-## <a name="transactions"></a> transakcji
+## <a name="transactions"></a> transactions
 
 Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
 
