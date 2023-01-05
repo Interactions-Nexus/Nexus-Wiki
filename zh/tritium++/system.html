@@ -1,0 +1,277 @@
+<!--
+title: 系统
+description: 系统 API
+published: true
+date: 2023-01-05T04:25:46.305Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-01-04T10:26:47.420Z
+-->
+
+<h1>SYSTEM 系统</h1>
+<p>系统 API 提供对此节点信息的公共访问。 这包括节点运行的软件版本、分类帐本和内存池状态、节点 IP 地址以及连接的对等点数量等数据。</p>
+<h2>Direct Endpoints 直接端点</h2>
+<p>以下命令是直接端点，因此不支持上面可用的上述动词和名词结构。</p>
+<p><a href="#stop"><code>stop</code></a><br><a href="#get/info"><code>get/info</code></a><br><a href="#get/metrics"><code>get/metrics</code></a><br><a href="#list/peers"><code>list/peers</code></a><br><a href="#list/lisp-eids"><code>list/lisp-eids</code></a><br><a href="#vlaidate/address"><code>validate/address</code></a></p>
+<p>直接端点支持过滤器和运算符。</p>
+<hr>
+<h2>stop 停止</h2>
+<p>启动节点关闭序列。</p>
+<pre><code class="language-plaintext">system/stop
+</code></pre>
+<h3>Parameters 参数</h3>
+<p><code>password</code> 登录密码：在启动核心关闭之前可选择进行 <strong>authenticate</strong>&nbsp;身份验证。 此密码是配置文件中提供的密码，有助于防止意外远程关机。</p>
+<p><strong>注意：</strong>关机验证密码必须与标志一起提供 <code>-system/stop=&lt;password&gt;</code></p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
+<pre><code class="language-plaintext">"Nexus server stopping"
+[Completed in 0.039270 ms]
+</code></pre>
+<hr>
+<h2>get/info 获取/信息</h2>
+<p>返回有关此节点的信息摘要</p>
+<pre><code class="language-plaintext">system/get/info
+</code></pre>
+<h3>Parameters 参数：</h3>
+<p><code>Filtering</code> 过滤</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
+<pre><code class="language-plaintext">{
+    "version": "5.1.0-rc2 Tritium++ CLI [LLD][x64]",
+    "protocolversion": 3010000,
+    "walletversion": 10001,
+    "timestamp": 1658759654,
+    "hostname": "localhost",
+    "directory": "/home/nexus/.Nexus/",
+    "address": "11.79.25.105",
+    "private": false,
+    "hybrid": false,
+    "multiuser": false,
+    "litemode": false,
+    "blocks": 4553990,
+    "synchronizing": false,
+    "synccomplete": 100,
+    "syncprogress": 100,
+    "txtotal": 0,
+    "connections": 41
+}
+[Completed in 0.070190 ms]
+</code></pre>
+<h4>返回值</h4>
+<p><code>version</code> 版本：守护程序软件版本。</p>
+<p><code>protocolversion</code> 协议版本：低层协议 (LLP) 版本。</p>
+<p><code>walletversion</code> 钱包版本：传统链钱包版本。</p>
+<p><code>timestamp</code> 时间戳：此节点报告的当前统一时间。</p>
+<p><code>hostname</code> 主机名：本地计算机主机名。</p>
+<p><code>ipaddress</code> ip地址：本地计算机的公共 IP 地址，如您所连接的对等点所见。 在您至少有一个对等连接之前，这将是空白的。</p>
+<p><code>testnet</code> 测试网：如果此节点在测试网上运行，则显示测试网编号。</p>
+<p><code>private</code> 私有：该节点是否以私有模式运行。</p>
+<p><code>multiuser</code> 多用户：此节点是否在多用户模式下运行。</p>
+<p><code>sessions</code> 会议：仅在多用户模式下返回。 这显示当前登录到节点的用户会议数。</p>
+<p><code>clientmode</code> 客户端模式：指示此节点是否在客户端模式下运行的标志。</p>
+<p><code>nolegacy</code> 非传统链: 指示此节点是否已编译为支持旧版 UTxO 钱包的标志。 如果没有，则所有旧版钱包功能（通过旧版 RPC 可用）都不可用。 如果此标志是使用传统链支持编译的，则当前会从响应中省略它，因此只有在它为真时才会包含它。</p>
+<p><code>blocks</code> 区块：该节点的当前区块高度。</p>
+<p><code>synchronizing</code> 同步：指示此节点当前是否正在同步的标志。 不包括如果 private=true.</p>
+<p><code>synccomplete</code> 完整同步: 下载的块总数的百分比。</p>
+<p><code>syncprogress</code> 同步进度：当前同步完成相对于节点启动时间的百分比。</p>
+<p><code>txtotal</code> 交易数量：节点内存池中的交易数量。</p>
+<p><code>connections</code> 连接：对等连接数。</p>
+<p><code>eids</code> 端点标识符：此节点的 LISP 端点标识符 (EID) 数组。 除非此节点使用 LISP，否则不包括在内。</p>
+<hr>
+<h2>get/metrics 获取/指标</h2>
+<p>返回分类帐本、寄存器、签名链、信誉和储备的指标和统计数据。</p>
+<pre><code class="language-plaintext">system/get/metrics
+</code></pre>
+<h3>Parameters 参数：</h3>
+<p><a href="/en/tritium++/filtering"><code>Filtering</code></a> 过滤。</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
+<pre><code class="language-plaintext">{
+    "registers": {
+        "total": 183908,
+        "names": {
+            "global": 38,
+            "local": 60668,
+            "namespaced": 29
+        },
+        "namespaces": 14,
+        "objects": {
+            "accounts": 91400,
+            "assets": 123,
+            "crypto": 30362,
+            "tokenized": 51,
+            "tokens": 134
+        },
+        "state": {
+            "raw": 0,
+            "readonly": 706
+        }
+    },
+    "sigchains": 30351,
+    "trust": {
+        "total": 501,
+        "stake": 30155872.897004,
+        "trust": 8360292851
+    },
+    "reserves": {
+        "ambassador": 332.180905,
+        "developer": 222.343689,
+        "fee": 108889.217,
+        "hash": 91.32012,
+        "prime": 32.78941
+    }
+}
+[Completed in 1020.804545 ms]
+</code></pre>
+<h4>返回值</h4>
+<p><code>registers</code> 注册：注册数据库的统计信息。</p>
+<p><code>names</code> 名称：名称注册总数，包括用户本地、全局和名称空间。</p>
+<p><code>global</code>全局：在全局名称空间中创建的名称数。</p>
+<p><code>local</code> 本地：在本地名称空间中创建的名称数。</p>
+<p><code>namespaced</code> 名称数：在名称空间中创建的名称数。</p>
+<p><code>namespaces</code> 名称空间数：已创建的名称空间数。</p>
+<p><code>objects</code> 物件：非标准物件注册的统计。 这些包括帐户、通证、加密货币、资产、项目和任何其他派生物件注册。</p>
+<p><code>accounts</code>账户：账户注册数。 这包括 NXS 麟社币和其他通证账户。</p>
+<p><code>assets</code> 资产：资产登记册的数量。</p>
+<p><code>crypto</code> 加密货币：加密货币注册的数量。</p>
+<p><code>tokenized</code> 通证化：已被通证化的物件注册的数量（其中物件持有者是通证而不是配置文件）。</p>
+<p><code>tokens</code> 通证：注册通证的数量。</p>
+<p><code>state</code> 状态：原始和只读寄存器的统计信息。</p>
+<p><code>raw</code> 原始：原始寄存器的数量。</p>
+<p><code>readonly</code> 只读：只读寄存器的数量。</p>
+<p><code>sig_chains</code> 签名链：分类账本中签名链的总数。</p>
+<p><code>trust</code> 信誉：活跃信誉账户的统计数据。</p>
+<p><code>total</code> 总数：活跃的信誉账户总数（拥有非零股权余额）。</p>
+<p><code>stake</code> 质押：当前全网质押的 NXS 麟社币总量。</p>
+<p><code>trust</code> 信誉：所有被质押的信誉账户的总信誉评分。</p>
+<p><code>reserves</code> 储备：目前各种储备中 NXS 麟社币的数量统计。</p>
+<p><code>ambassador</code> 大使：大使储备中等待支付给大使签名链的 NXS 麟社币数量。</p>
+<p><code>developer</code> 开发者：开发者储备中等待支付给开发者签名链的 NXS 麟社币数量。</p>
+<p><code>fee</code> 费用：费用储备中的 NXS 麟社币数量。</p>
+<p><code>hash</code> 哈希：哈希通道储备中的 NXS 麟社币数量。</p>
+<p><code>prime</code> 质数：质数通道储备中的 NXS 麟社币数量。</p>
+<hr>
+<h2>list/peers</h2>
+<p>Returns a summary of information about the peers currently connected to this node. The return array is sorted by the peer score value.</p>
+<pre><code class="language-plaintext">system/list/peers
+</code></pre>
+<h3>Parameters:</h3>
+<p><a href="/en/tritium++/sorting"><code>Sorting</code></a>.</p>
+<p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
+<p><a href="/en/tritium++/operators"><code>Operators</code></a></p>
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">[
+    {
+        "address": "45.180.14.231:9888",
+        "type": "5.0.5 Tritium CLI [LLD][x64]",
+        "version": 30000,
+        "session": 8412734217501590516,
+        "outgoing": true,
+        "height": 0,
+        "best": "00000000000000000000",
+        "latency": 4294967295,
+        "lastseen": 1658762086,
+        "connects": 3,
+        "drops": 0,
+        "fails": 0,
+        "score": 8850.0
+    },
+    {
+        "address": "29.19.192.168:9888",
+        "type": "5.1.0-rc2 Tritium++ CLI [LLD][x64]",
+        "version": 3010000,
+        "session": 10774729209155580028,
+        "outgoing": true,
+        "height": 0,
+        "best": "00000000000000000000",
+        "latency": 4294967295,
+        "lastseen": 1658762098,
+        "connects": 3,
+        "drops": 1,
+        "fails": 0,
+        "score": 10195.0
+    }
+]
+[Completed in 0.409770 ms]
+</code></pre>
+<h4>Return values:</h4>
+<p><code>address</code> : The IP address and port of the peer. This could be a LISP EID using the LISP overlay or an IP address using the native underlay.</p>
+<p><code>type</code> : The daemon software version string of the connected peer.</p>
+<p><code>version</code> : The protocol version being used to communicate.</p>
+<p><code>session</code> : Session ID for the current connection</p>
+<p><code>outgoing</code> : Flag indicating whether this was an outgoing connection or incoming</p>
+<p><code>height</code> : The current height of the peer.</p>
+<p><code>best</code> : Block hash of the peer's best chain</p>
+<p><code>latency</code> : The calculated network latency between this node and the peer.</p>
+<p><code>lastseen</code> : UNIX timestamp of the last time this node had any communications with the peer.</p>
+<p><code>connects</code> : The number of connections successfully established with this peer since this node started.</p>
+<p><code>drops</code> : The number of connections dropped with this peer since this node started.</p>
+<p><code>fails</code> : The number of failed connection attempts to this peer since this node started.</p>
+<p><code>score</code> : The score value assigned to this peer based on latency and other connection statistics.</p>
+<hr>
+<p>&nbsp;</p>
+<h2>list/lisp-eids</h2>
+<p>This will return the LISP Endpoint Identifiers (EID's) currently configured for this node. If the <a href="http://lispers.net">lispers.net</a> API is not running / available then this will return an empty array.</p>
+<pre><code class="language-plaintext">system/list/lisp-eids
+</code></pre>
+<h3>Parameters:</h3>
+<p>-none-</p>
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">[
+    {
+        "instance-id": "200",
+        "eid": "240.139.76.244",
+        "rlocs": [
+            {
+                "interface": "wlp59s0",
+                "rloc-name": "mymachine",
+                "rloc": "102.162.64.46"
+            }
+        ]
+    },
+    {
+        "instance-id": "200",
+        "eid": "fe::139:76:244",
+        "rlocs": [
+            {
+                "interface": "wlp59s0",
+                "rloc-name": "mymachine",
+                "rloc": "102.162.64.46"
+            }
+        ]
+    }
+]
+[Completed in 1004.256167 ms]
+</code></pre>
+<h4>Return values:</h4>
+<p><code>instance-id</code> : The LISP instance group that this EID belongs to.</p>
+<p><code>eid</code> : The endpoint identifier. This can be either IPv4 or IPv6 format.</p>
+<p><code>rlocs</code> : The array of RLOC's (routing locators) associtated with the EID.</p>
+<p><code>interface</code> : Name of the device for the RLOC.</p>
+<p><code>rloc-name</code> : Hostname associated with the device.</p>
+<p><code>rloc</code> : The IP address associated with the device.</p>
+<hr>
+<p>&nbsp;</p>
+<h2>validate/address</h2>
+<p>Validates a register / legacy address.</p>
+<pre><code class="language-plaintext">system/validate/address
+</code></pre>
+<h3>Parameters:</h3>
+<p><code>address</code> : Required to <strong>validate</strong> the base58 encoded register or legacy address to check.</p>
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
+    "address": "8BuhE1y5oard3cEWqCSYK35bC6LdPRvcPR8N7GXYNatTw6De8eK",
+    "is_valid": true,
+    "type": "OBJECT",
+    "object_type": "ACCOUNT"
+}
+</code></pre>
+<h4>Return values:</h4>
+<p><code>address</code> : The address that was validated.</p>
+<p><code>is_valid</code> : Boolean flag indicating if the address is valid or not. For legacy addresses this indicates that the address if simply formatted correctly. For register addresses this flag checks that a register exists in the blockchain at the specified address.</p>
+<p><code>type</code> : For register addresses, the type of register at the address. Values can be APPEND, LEGACY, OBJECT, RAW, READONLY, RESERVED, SYSTEM or UNKNOWN.</p>
+<p><code>object_type</code> : If the type is OBJECT this field contains the standard object type of the object register. Values can be ACCOUNT, CRYPTO, NAME, NAMESPACE, REGISTER, TOKEN, TRUST or UNKNOWN.</p>
+<p><code>is_mine</code> : If the type is LEGACY this boolean flag indicates if the private key for the address is held in the local wallet.</p>
