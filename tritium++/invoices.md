@@ -2,7 +2,7 @@
 title: INVOICES
 description: Invoices API
 published: true
-date: 2022-12-26T18:52:03.212Z
+date: 2023-01-05T23:44:49.934Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-26T18:52:03.212Z
@@ -70,14 +70,14 @@ This command only supports the invoice noun.
 
 `recipient` : Required to **identify** the recipient of the invoice. It can to be the username identifying the user account (sig-chain) or genesis hash of the signature chain to issue the invoice to.
 
-`items` : Array of line items that make up this invoice. At least one item in the items array must be included. The total invoice amount is calculated as the sum of all item amounts, and each item amount is calculated as the unit_amount multiplied by the units
-{
+`items` : Array of line items that make up this invoice. At least one item in the items array must be included. The total invoice amount is calculated as the sum of all item amounts, and each item amount is calculated as the unit_amount multiplied by the units.
+
 `description` : A description for the line item.
 
-`amount` : The unit amount to be invoiced for this line item. This amount should be supplied in the currency of the payment account
+`amount` : The unit amount to be invoiced for this line item. This amount should be supplied in the currency of the payment account.
 
 `units` : The number of units to be invoiced at the unit amount.
-}
+
 
 ### Results:
 
@@ -169,7 +169,7 @@ This command only supports the invoice noun.
 
 `modified` : The UNIX timestamp when the invoice was last modified.
 
-`name` : The name identifying the invoice. For privacy purposes, this is only included in the response if the caller is the owner of the invoice
+`name` : The name identifying the invoice. For privacy purposes, this is only included in the response if the caller is the owner of the invoice.
 
 `address` : The register address of the invoice.
 
@@ -178,16 +178,16 @@ This command only supports the invoice noun.
 `account` : The register address of the account the invoice should be paid to.
 
 `items` : Array of line items that make up this invoice.  
-{  
+
 `amount` : The unit amount to be invoiced for this line item.
 
 `units` : The number of units to be invoiced at the unit amount.
 
 `description` : A description of the line item.  
-}  
+
 `amount` : The total invoice amount. This is the sum of all line item total amounts (unit_amount x units).
 
-`token` : The register address of the token that this invoice should be paid in. Set to 0 for NXS transactions
+`token` : The register address of the token that this invoice should be paid in. Set to 0 for NXS transactions.
 
 `status` : The current status of this invoice. Values can be OUTSTANDING (the invoice has been issued but not paid), PAID (the invoice has been paid by the recipient), or CANCELLED (the invoice was cancelled by the issuer before payment).
 
@@ -211,7 +211,7 @@ This command supports all the nouns.
 
 `username` : The username identifying the signature chain (optional if genesis is supplied).
 
-`status` : Optional filter by invoice status. Values can be OUTSTANDING (the invoice has been issued but not paid), PAID (the invoice has been paid by the recipient), or CANCELLED (the invoice was cancelled by the issuer before payment)
+`status` : Optional filter by invoice status. Values can be OUTSTANDING (the invoice has been issued but not paid), PAID (the invoice has been paid by the recipient), or CANCELLED (the invoice was cancelled by the issuer before payment).
 
 `limit` : The number of records to return for the current page. The default is 100.
 
@@ -219,7 +219,7 @@ This command supports all the nouns.
 
 `offset` : An alternative to page, offset can be used to return a set of (limit) results from a particular index.
 
-`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here Filtering Results.
+`where` : An array of clauses to filter the JSON results. More information on filtering the results from /list/xxx API methods can be found here [Filtering Results](https://wiki.nexus.io/en/tritium++/filtering).
 
 ### Results:
 
@@ -270,7 +270,7 @@ This command supports all the nouns.
 
 `modified` : The UNIX timestamp when the invoice was last modified.
 
-`name` : The name identifying the invoice. For privacy purposes, this is only included in the response if the caller is the owner of the invoice
+`name` : The name identifying the invoice. For privacy purposes, this is only included in the response if the caller is the owner of the invoice.
 
 `address` : The register address of the invoice.
 
@@ -279,17 +279,16 @@ This command supports all the nouns.
 `account` : The register address of the account the invoice should be paid to.
 
 `items` : Array of line items that make up this invoice.  
-{    
+   
 `amount` : The unit amount to be invoiced for this line item.  
 
 `unit` : The number of units to be invoiced at the unit amount.  
 
-`description` : A description of the line item.  
-}  
+`description` : A description of the line item. 
 
 `amount` : The total invoice amount. This is the sum of all line item total amounts (unit_amount x units).
 
-`token` : The register address of the token that this invoice should be paid in. Set to 0 for NXS transactions
+`token` : The register address of the token that this invoice should be paid in. Set to 0 for NXS transactions.
 
 `status` : The current status of this invoice. Values can be OUTSTANDING (the invoice has been issued but not paid), PAID (the invoice has been paid by the recipient), or CANCELLED (the invoice was cancelled by the issuer before payment).
 
@@ -311,7 +310,7 @@ This command only supports the invoice noun.
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied.
 
-`name` : Required to **identify** the name of the invoice. The name should be in the format username:name (for local names). This is optional if the `address` is provided
+`name` : Required to **identify** the name of the invoice. The name should be in the format username:name (for local names). This is optional if the `address` is provided.
 
 `address` : Required to **identify** the register address of the invoice. This is optional if the `name` is provided.
 
@@ -349,7 +348,7 @@ This command only supports the `invoice` and `outstanding` noun.
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied. 
 
-`name` : Required to **identify** the name of the invoice. The name should be in the format username:name (for local names). This is optional if the `address` is provided
+`name` : Required to **identify** the name of the invoice. The name should be in the format username:name (for local names). This is optional if the `address` is provided.
 
 `address` : Required to **identify** the register address of the invoice. This is optional if the `name` is provided.
 
@@ -383,7 +382,7 @@ This command supports all the nouns.
 
 `session` : Required by **argument** `-multiuser=1` to be supplied to identify the user session. For single-user API mode the session should not be supplied.
 
-`name` : Required to **identify** the name of the invoice. The name should be in the format username:name (for local names). This is optional if the `address` is provided
+`name` : Required to **identify** the name of the invoice. The name should be in the format username:name (for local names). This is optional if the `address` is provided.
 
 `address` : Required to **identify** the register address of the invoice. This is optional if the `name` is provided.
 
@@ -583,9 +582,8 @@ This method supports the Sorting / Filtering parameters.
 `signature` : The signature hash.
 
 `contracts` : The array of contracts bound to this transaction and their details with 
-
 opcodes.
-{
+
 `id` : The sequential ID of this contract within the transaction.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
@@ -608,13 +606,13 @@ opcodes.
 
 `amount` : the token amount of the transaction.
 
-`token` : the register address of the token that the transaction relates to. Set to 0 for NXS transactions
+`token` : the register address of the token that the transaction relates to. Set to 0 for NXS transactions.
 
 `ticker` : The name of the token that the transaction relates to.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
 
 `object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert lisp, network, sign  and verify).
-}
+
 
 -----------------------------------
