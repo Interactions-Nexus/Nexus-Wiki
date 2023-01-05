@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:10:03.182Z
+date: 2023-01-05T23:20:11.969Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -198,32 +198,34 @@ To polecenie obsługuje tylko rzeczownik faktury.
 Spowoduje to wyświetlenie wszystkich faktur wystawionych lub otrzymanych przez łańcuch podpisów.
 
 ```
-faktury/lista/rzecz
+nvoices/list/noun
 ```
 
 To polecenie obsługuje wszystkie rzeczowniki.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`genesis` : Skrót genezy identyfikujący łańcuch sygnatur (opcjonalnie, jeśli podano nazwę użytkownika).
+`genesis` : Hash genezy identyfikujący łańcuch sygnatur (opcjonalnie, jeśli podano nazwę użytkownika).
 
-`nazwa_użytkownika`: nazwa użytkownika identyfikująca łańcuch sygnatur (opcjonalna, jeśli podano genezę).
+`username`: Nazwa użytkownika identyfikująca łańcuch sygnatur (opcjonalna, jeśli podano genezę).
 
-`status` : Opcjonalne filtrowanie według statusu faktury. Wartości mogą być NIEPŁATNE (faktura została wystawiona, ale nie zapłacona), OPŁACONA (faktura została zapłacona przez odbiorcę) lub ANULOWANA (faktura została anulowana przez wystawcę przed dokonaniem płatności)
+`status` : Opcjonalne filtrowanie według statusu faktury. Wartości mogą być OUTSTANDING (faktura została wystawiona, ale nie zapłacona), PAID (faktura została zapłacona przez odbiorcę) lub CANCELLED (faktura została anulowana przez wystawcę przed dokonaniem płatności).
 
 `limit` : Liczba rekordów do zwrócenia dla bieżącej strony. Wartość domyślna to 100.
 
 `page` : Umożliwia zwracanie wyników według stron (liczonych od zera). Np. przekazanie page=1 zwróci drugi zestaw rekordów (limit). Wartość domyślna to 0, jeśli nie została podana.
 
-`przesunięcie`: Alternatywa dla strony, przesunięcie może być użyte do zwrócenia zestawu (limitów) wyników z określonego indeksu.
+`offset`: Alternatywa dla strony, przesunięcie może być użyte do zwrócenia zestawu (limitów) wyników z określonego indeksu.
 
-`where` : tablica klauzul do filtrowania wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć tutaj Filtrowanie wyników.
+`where` : Tablica klauzul do filtrowania wyników JSON. Więcej informacji na temat filtrowania wyników z metod API /list/xxx można znaleźć tutaj [Filtrowanie](https://wiki.nexus.io/pl/tritium++/filtering).
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+
 
 
 
