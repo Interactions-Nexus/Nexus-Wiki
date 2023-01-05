@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:31:56.056Z
+date: 2023-01-05T23:35:18.280Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -337,7 +337,7 @@ To polecenie obsługuje tylko rzeczownik faktury.
 Anuluje niezapłaconą fakturę, aby własność powróciła do łańcucha podpisów wystawców.
 
 ```
-faktury/anuluj/rzecz
+invoices/cancel/noun
 ```
 
 To polecenie obsługuje tylko rzeczowniki „faktura” i „zaległe”.
@@ -346,11 +346,11 @@ To polecenie obsługuje tylko rzeczowniki „faktura” i „zaległe”.
 
 `pin` : Wymagany, jeśli **zablokowany**. PIN do autoryzacji transakcji.
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format nazwa użytkownika:nazwa (dla nazw lokalnych). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format username:name (dla nazw lokalnych). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano `name`.
 
 ### Wyniki:
 
@@ -358,17 +358,17 @@ To polecenie obsługuje tylko rzeczowniki „faktura” i „zaległe”.
 
 ```
 {
-     "txid": "318b86d2c208618aaa13946a3b75f14472ebc0cce9e659f2830b17e854984b55606738f689d886800f21ffee68a3e5fd5a29818e88f8c5b13b9f8ae63779d"
+    "txid": "318b86d2c208618aaa13946a3b75f14472ebc0cce9e659f2830b17e854984b55606738f689d886800f21ffee68a3e5fd5a29818e88f8c5b13b9f8ae67739903d"
 }
 ```
 
 #### Zwracane wartości:
 
-`txid` : Identyfikator (hash) transakcji, która obejmuje DEBIT do zapłaty za fakturę ORAZ ROSZCZENIE do żądania własności faktury.
+`txid` : Identyfikator (hash) transakcji, która obejmuje DEBIT do zapłaty za fakturę i CLAIM do żądania własności faktury.
 
 --------------------------------------------------
 
-## <a name="history"></a> historia
+## <a name="history"></a> history
 
 Spowoduje to uzyskanie historii transakcji dla faktury pokazującej, kiedy została utworzona i przeniesiona (dwie umowy, które mają miejsce w tym samym momencie, gdy tworzona jest faktura) i zażądana (zapłacona lub anulowana).
 
