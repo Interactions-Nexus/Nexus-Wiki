@@ -2,7 +2,7 @@
 title: INVOICES
 description: Invoices API
 published: true
-date: 2023-01-05T23:52:50.175Z
+date: 2023-01-05T23:55:37.786Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-26T18:52:03.212Z
@@ -612,7 +612,7 @@ opcodes.
 
 `reference` : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.
 
-`object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert lisp, network, sign  and verify).
+`object` : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert, lisp, network, sign  and verify).
 
 
 -----------------------------------
