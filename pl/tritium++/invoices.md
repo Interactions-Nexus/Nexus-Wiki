@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:02:52.321Z
+date: 2023-01-05T23:10:03.182Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -163,37 +163,37 @@ To polecenie obsługuje tylko rzeczownik faktury.
 
 #### Zwracane wartości:
 
-`owner` : Skrót nazwy użytkownika profilu właściciela.
+`owner` : Hash nazwy użytkownika profilu właściciela.
 
 `created` : Sygnatura czasowa systemu UNIX podczas tworzenia faktury.
 
-`zmodyfikowany` : Sygnatura czasowa systemu UNIX, kiedy faktura była ostatnio modyfikowana.
+`modified` : Sygnatura czasowa systemu UNIX, kiedy faktura była ostatnio modyfikowana.
 
-`name` : nazwa identyfikująca fakturę. Ze względu na prywatność jest to uwzględniane w odpowiedzi tylko wtedy, gdy osoba dzwoniąca jest właścicielem faktury
+`name` : Nazwa identyfikująca fakturę. Ze względu na prywatność jest to uwzględniane w odpowiedzi tylko wtedy, gdy osoba wywołująca jest właścicielem faktury.
 
 `address` : Adres rejestracji faktury.
 
-`recipient` : hash genezy łańcucha podpisów, dla którego ma zostać wystawiona faktura.
+`recipient` : Hash genezy łańcucha podpisów, dla którego ma zostać wystawiona faktura.
 
 `account` : Rejestrowy adres konta, na które ma zostać opłacona faktura.
 
-`items` : tablica pozycji składających się na tę fakturę.
-{
+`items` : Tablica pozycji składających się na tę fakturę.
+
 `amount` : Kwota jednostkowa do zafakturowania dla tej pozycji.
 
-`jednostki` : Liczba jednostek do zafakturowania według kwoty jednostkowej.
+`units` : Liczba jednostek do zafakturowania według kwoty jednostkowej.
 
-`description` : opis elementu zamówienia.
-}
-`amount` : Całkowita kwota faktury. Jest to suma łącznych kwot wszystkich pozycji (kwota_jednostki x jednostki).
+`description` : Opis elementu zamówienia.
 
-`token` : Adres rejestru tokena, którym ta faktura powinna być opłacona. Ustaw na 0 dla transakcji NXS
+`amount` : Całkowita kwota faktury. Jest to suma łącznych kwot wszystkich pozycji (unit_amount x units).
 
-`status` : Bieżący status tej faktury. Wartości mogą być NIEPŁATNE (faktura została wystawiona, ale niezapłacona), OPŁACONA (faktura została zapłacona przez odbiorcę) lub ANULOWANA (faktura została anulowana przez wystawcę przed dokonaniem płatności).
+`token` : Adres rejestru tokena, którym ta faktura powinna być opłacona. Ustaw na 0 dla transakcji NXS.
+
+`status` : Bieżący status tej faktury. Wartości mogą być OUTSTANDING (faktura została wystawiona, ale niezapłacona), PAID (faktura została zapłacona przez odbiorcę) lub CANCELLED (faktura została anulowana przez wystawcę przed dokonaniem płatności).
 
 --------------------------------------------------
 
-## <a name="list"></a> lista
+## <a name="list"></a> list
 
 Spowoduje to wyświetlenie wszystkich faktur wystawionych lub otrzymanych przez łańcuch podpisów.
 
