@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:23:14.969Z
+date: 2023-01-05T23:25:26.832Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -264,7 +264,7 @@ To polecenie obsługuje wszystkie rzeczowniki.
 
 #### Zwracane wartości:
 
-`owner` : Skrót nazwy użytkownika profilu właściciela.
+`owner` : Hash nazwy użytkownika profilu właściciela.
 
 `created` : Sygnatura czasowa systemu UNIX podczas tworzenia faktury.
 
@@ -286,20 +286,20 @@ To polecenie obsługuje wszystkie rzeczowniki.
 
 `description` : Opis elementu zamówienia.
 
-`amount` : Całkowita kwota faktury. Jest to suma łącznych kwot wszystkich pozycji (kwota_jednostki x jednostki).
+`amount` : Całkowita kwota faktury. Jest to suma łącznych kwot wszystkich pozycji (unit_amount x units).
 
 `token` : Adres rejestru tokena, którym ta faktura powinna być opłacona. Ustaw na 0 dla transakcji NXS.
 
-`status` : Bieżący status tej faktury. Wartości mogą być NIEPŁATNE (faktura została wystawiona, ale niezapłacona), OPŁACONA (faktura została zapłacona przez odbiorcę) lub ANULOWANA (faktura została anulowana przez wystawcę przed dokonaniem płatności).
+`status` : Bieżący status tej faktury. Wartości mogą być OUTSTANDING (faktura została wystawiona, ale niezapłacona), PAID (faktura została zapłacona przez odbiorcę) lub CANCELLED (faktura została anulowana przez wystawcę przed dokonaniem płatności).
 
 --------------------------------------------------
 
-## <a name="pay"></a> zapłać
+## <a name="pay"></a> pay
 
 Dokonaj płatności (obciążenia) w celu uregulowania faktury.
 
 ```
-faktury/zapłata/rzecz
+invoices/pay/noun
 ```
 
 To polecenie obsługuje tylko rzeczownik faktury.
