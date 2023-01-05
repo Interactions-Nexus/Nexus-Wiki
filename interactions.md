@@ -2,7 +2,7 @@
 title: Interactions Processes
 description: Interactions internal processes
 published: true
-date: 2022-12-19T07:33:43.933Z
+date: 2023-01-05T08:11:53.839Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-28T11:06:54.217Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-28T11:06:54.217Z
 
 # Interactions Processes
 > 
-> **Note:** The DAO constitituion will supersede the arm internal process in case of any any overlap.
+> **Note:** The DAO constitituion will supersede the arm internal process in case of any overlap.
 {.is-warning}
 
 
