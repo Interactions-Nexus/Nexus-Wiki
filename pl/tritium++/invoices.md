@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:39:58.541Z
+date: 2023-01-05T23:42:11.319Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -481,28 +481,143 @@ Zwracana wartość to tablica obiektów JSON dla każdego wpisu w historii faktu
 Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
 
 ```
-faktury/transakcje/rzecz
+invoices/transactions/noun
 ```
 
 To polecenie obsługuje rzeczowniki konta, zaufania i tokena.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`verbose` : opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
+`verbose` : Opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
 
-- domyślnie: hasz
+- default : hash
 
-- podsumowanie: typ, wersja, sekwencja, znacznik czasu, operacja i potwierdzenia.
+- summary : type, version, sequence, timestamp, operation, and confirmations.
 
-- szczegóły: genesis, nexthash, prevhash, klucz pubowy i podpis.
+- detail : genesis, nexthash, prevhash, pubkey and signature.
 
 Ta metoda obsługuje parametry Sortowanie / Filtrowanie.
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+
+```
+[
+    {
+        "txid": "010522657fcf6ee72a5f0b5769419a87c61fa897c7c6d56443feb0ab8bb859bee0d3ba1a9420f16b2a4b20ddd9dcb0873e42be66d7a8654494e257c7d2ee7dbc",
+        "type": "tritium user",
+        "version": 4,
+        "sequence": 16,
+        "timestamp": 1658006314,
+        "blockhash": "53c4017e1ed53cd00e95f63288652d46831601c892dd9a802c4a28ccad51e4c7c35e3940be5c518512ec9186ee88708c4d1c5e0c44716280b26d21e40d809ceb8b7f81351df6ad9d4eef13cb7afa48c15477c1a0880466e14771ab4a3faca332e827a3786f87a153b0c5ad14b17816eec83368293062307e5b600885349400f3",
+        "confirmations": 1,
+        "contracts": [
+            {
+                "id": 0,
+                "OP": "CREATE",
+                "address": "82UKk7weRui3d8HuZrMuoD5h49anQgpKUJm8CPkbsGNHwuu3FVv",
+                "type": "READONLY",
+                "json": {
+                    "account": "8CAJbt8MJUXsUzd5J4VVnhtcHuLqeV27Tixs3arGewAic7ZZQmE",
+                    "recipient": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+                    "items": [
+                        {
+                            "amount": 3500.00,
+                            "units": 1
+                        },
+                        {
+                            "amount": 185.00,
+                            "units": 4
+                        }
+                    ],
+                    "address": "8CAJbt8MJUXsUzd5J4VVnhtcHuLqeV27Tixs3arGewAic7ZZQmE",
+                    "reference": "Car Maintenance Invoice ",
+                    "description": "July 2022",
+                    "number": "2",
+                    "sender_detail": "Alice",
+                    "amount": 4240,
+                    "token": "8DS2qGLhuEC2reKrzxyWaXXwtVq2KmGWGQCWKBQwrCQc4XS2b8V"
+                }
+            },
+            {
+                "id": 1,
+                "OP": "TRANSFER",
+                "address": "82UKk7weRui3d8HuZrMuoD5h49anQgpKUJm8CPkbsGNHwuu3FVv",
+                "recipient": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+                "forced": false
+            }
+        ]
+    }
+]
+[Completed in 0.961164 ms]
+```
+
+#### Zwracane wartości:
+
+`txid`: Skrót transakcji.
+
+`type` : Opis transakcji (starsza | podstawa trytu | zaufanie | geneza | użytkownik).
+
+`version` : Wersja serializacji transakcji.
+
+`sequence` : numer kolejny tej transakcji w łańcuchu podpisów.
+
+`timestamp` : Uniksowy znacznik czasu utworzenia transakcji.
+
+`blockhash` : Skrót bloku, w którym zawarta jest ta transakcja. Puste pole, jeśli nie zostało jeszcze uwzględnione w bloku.
+
+`confirmations` : Liczba potwierdzeń uzyskanych przez tę transakcję w sieci.
+
+`genesis`: Hash łańcucha sygnatur genesis.
+
+`nexthash` : Skrót następnej transakcji w sekwencji.
+
+`prevhash`: skrót poprzedniej transakcji w sekwencji.
+
+`pubkey`: klucz publiczny.
+
+`signature` : Skrót podpisu.
+
+`kontrakty` : Tablica kontraktów powiązanych z tą transakcją i ich szczegóły
+
+kody operacji.
+{
+`id` : kolejny identyfikator tej umowy w ramach transakcji.
+
+`OP` : Operacja kontraktu. Może to być DOŁĄCZANIE, ROSZCZENIE, BAZA MONET, TWORZENIE, KREDYT, OBCIĄŻENIE, OPŁATA, GENEZA, DZIEDZICTWO, PRZENIESIENIE, ZAUFANIE, STAWKA, USUWANIE STAWKI, NAPISANIE.
+
+`for` : w przypadku transakcji KREDYTOWYCH kontrakt, dla którego utworzono ten kredyt . Może to być COINBASE, DEBIT lub LEGACY.
+
+`txid`: Transakcja, która została uznana/zgłoszona.
+
+„umowa” : Identyfikator umowy w ramach transakcji, która została uznana/zgłoszona.
+
+`dowód`: Adres rejestru potwierdzający kredyt.
+
+`from` : Dla transakcji DEBET, CREDIT, FEE, adres rejestrowy konta, z którego dokonywane jest obciążenie.
+
+`from_name` : W przypadku transakcji DEBIT, CREDIT, FEE nazwa konta, z którego dokonywane jest obciążenie. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+
+`to` : W przypadku transakcji DEBITOWYCH i KREDYTOWYCH adres rejestru konta odbiorcy.
+
+`to_name` : W przypadku transakcji DEBITOWYCH i KREDYTOWYCH nazwa konta odbiorcy. Uwzględniane tylko wtedy, gdy nazwa może zostać rozwiązana.
+
+`amount` : tokenowa kwota transakcji.
+
+`token`: adres rejestru tokena, którego dotyczy transakcja. Ustaw na 0 dla transakcji NXS
+
+`ticker`: Nazwa tokena, którego dotyczy transakcja.
+
+`reference` : W przypadku transakcji DEBET i KREDYT jest to podany przez użytkownika numer referencyjny używany przez odbiorcę w celu powiązania transakcji z numerem zamówienia lub faktury.
+
+`object` : Zwraca listę wszystkich zaszyfrowanych kluczy publicznych w rejestrze obiektów kryptograficznych dla określonego profilu. Wynik obiektu będzie zawierał dziewięć domyślnych kluczy (app1, app2, app3, auth, cert lisp, network, sign i weryfikacja).
+}
+
+--------------------------------------------------
 
 
 
