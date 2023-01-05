@@ -2,7 +2,7 @@
 title: INVOICES
 description: Invoices API
 published: true
-date: 2023-01-05T23:44:49.934Z
+date: 2023-01-05T23:52:50.175Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-26T18:52:03.212Z
@@ -588,7 +588,7 @@ opcodes.
 
 `OP` : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.
 
-`for` : For CREDIT transactions, the contract that this credit was created for . Can be COINBASE, DEBIT, orLEGACY.
+`for` : For CREDIT transactions, the contract that this credit was created for . Can be COINBASE, DEBIT, or LEGACY.
 
 `txid` : The transaction that was credited / claimed.
 
@@ -604,9 +604,9 @@ opcodes.
 
 `to_name` : For DEBIT and CREDIT transactions, the name of the recipient account. Only included if the name can be resolved.
 
-`amount` : the token amount of the transaction.
+`amount` : The token amount of the transaction.
 
-`token` : the register address of the token that the transaction relates to. Set to 0 for NXS transactions.
+`token` : The register address of the token that the transaction relates to. Set to 0 for NXS transactions.
 
 `ticker` : The name of the token that the transaction relates to.
 
