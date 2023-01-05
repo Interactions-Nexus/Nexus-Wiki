@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:35:18.280Z
+date: 2023-01-05T23:37:59.209Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -373,22 +373,138 @@ To polecenie obsługuje tylko rzeczowniki „faktura” i „zaległe”.
 Spowoduje to uzyskanie historii transakcji dla faktury pokazującej, kiedy została utworzona i przeniesiona (dwie umowy, które mają miejsce w tym samym momencie, gdy tworzona jest faktura) i zażądana (zapłacona lub anulowana).
 
 ```
-faktury/historia/rzecz
+invoices/history/noun
 ```
 
 To polecenie obsługuje wszystkie rzeczowniki.
 
 ### Parametry:
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format nazwa użytkownika:nazwa (dla nazw lokalnych). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format username:name (dla nazw lokalnych). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano `name`.
 
 ### Wyniki:
 
 #### Wartość zwracana Obiekt JSON:
+
+```
+[
+    {
+        "owner": "b7a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0",
+        "version": 1,
+        "created": 1658006314,
+        "modified": 1658006314,
+        "type": "READONLY",
+        "json": {
+            "account": "8CAJbt8MJUXsUzd5J4VVnhtcHuLqeV27Tixs3arGewAic7ZZQmE",
+            "recipient": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+            "items": [
+                {
+                    "amount": 2.0,
+                    "units": 1
+                },
+                {
+                    "amount": 0.24,
+                    "units": 3
+                }
+            ],
+            "address": "8CAJbt8MJUXsUzd5J4VVnhtcHuLqeV27Tixs3arGewAic7ZZQmE",
+            "reference": "Rado ",
+            "description": "rado Aviator 2",
+            "number": "2",
+            "sender_detail": "Alice",
+            "amount": 2.72,
+            "token": "8DS2qGLhuEC2reKrzxyWaXXwtVq2KmGWGQCWKBQwrCQc4XS2b8V"
+        },
+        "address": "82UKk7weRui3d8HuZrMuoD5h49anQgpKUJm8CPkbsGNHwuu3FVv",
+        "action": "CREATE"
+    },
+    {
+        "owner": "00a57ddfb001d5d83ab5b25c0eaa0521e6b367784a30025114d07c444aa455c0",
+        "version": 1,
+        "created": 1658006314,
+        "modified": 1658006314,
+        "type": "READONLY",
+        "json": {
+            "account": "8CAJbt8MJUXsUzd5J4VVnhtcHuLqeV27Tixs3arGewAic7ZZQmE",
+            "recipient": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
+            "items": [
+                {
+                    "amount": 2.0,
+                    "units": 1
+                },
+                {
+                    "amount": 0.24,
+                    "units": 3
+                }
+            ],
+            "address": "8CAJbt8MJUXsUzd5J4VVnhtcHuLqeV27Tixs3arGewAic7ZZQmE",
+            "reference": "Rado ",
+            "description": "rado Aviator 2",
+            "number": "2",
+            "sender_detail": "Alice",
+            "amount": 2.72,
+            "token": "8DS2qGLhuEC2reKrzxyWaXXwtVq2KmGWGQCWKBQwrCQc4XS2b8V"
+        },
+        "address": "82UKk7weRui3d8HuZrMuoD5h49anQgpKUJm8CPkbsGNHwuu3FVv",
+        "action": "TRANSFER"
+    }
+]
+[Completed in 1.392150 ms]
+```
+
+#### Zwracane wartości:
+
+Zwracana wartość to tablica obiektów JSON dla każdego wpisu w historii faktury:
+
+`typ`: Akcja, która miała miejsce. - STWÓRZ | PRZELEW | ROSZCZENIE
+
+`owner` : Skrót nazwy użytkownika profilu właściciela.
+
+`zmodyfikowany` : Uniksowy znacznik czasu aktualizacji faktury.
+
+`checksum` : Suma kontrolna rejestru stanu używana do czyszczenia.
+
+`address` : Adres rejestracji faktury.
+
+`nazwa` : nazwa faktury.
+
+`data` : Dane faktury JSON.
+
+--------------------------------------------------
+
+## <a name="transactions"></a> transakcji
+
+Spowoduje to wyświetlenie wszystkich transakcji dla określonego rzeczownika.
+
+```
+faktury/transakcje/rzecz
+```
+
+To polecenie obsługuje rzeczowniki konta, zaufania i tokena.
+
+### Parametry:
+
+`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+
+`verbose` : opcjonalne, określa, ile danych transakcji ma zostać uwzględnionych w odpowiedzi. Obsługiwane wartości to:
+
+- domyślnie: hasz
+
+- podsumowanie: typ, wersja, sekwencja, znacznik czasu, operacja i potwierdzenia.
+
+- szczegóły: genesis, nexthash, prevhash, klucz pubowy i podpis.
+
+Ta metoda obsługuje parametry Sortowanie / Filtrowanie.
+
+### Wyniki:
+
+#### Wartość zwracana Obiekt JSON:
+
+
 
 
 
