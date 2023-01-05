@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:55:18.144Z
+date: 2023-01-05T23:55:28.874Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -614,7 +614,6 @@ kody operacji.
 `reference` : W przypadku transakcji DEBIT i CREDIT jest to podany przez użytkownika numer referencyjny używany przez odbiorcę w celu powiązania transakcji z numerem zamówienia lub faktury.
 
 `object` : Zwraca listę wszystkich zaszyfrowanych kluczy publicznych w rejestrze obiektów kryptograficznych dla określonego profilu. Wynik obiektu będzie zawierał dziewięć domyślnych kluczy (app1, app2, app3, auth, cert, lisp, network, sign, verify).
-}
 
 --------------------------------------------------
 
