@@ -2,7 +2,7 @@
 title: FAKTURY
 description: API faktur
 published: true
-date: 2023-01-05T23:25:26.832Z
+date: 2023-01-05T23:31:56.056Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-05T23:00:33.647Z
@@ -308,13 +308,13 @@ To polecenie obsługuje tylko rzeczownik faktury.
 
 `pin` : Wymagany, jeśli **zablokowany**. PIN do autoryzacji transakcji.
 
-`session` : wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
+`session` : Wymagane przez **argument** `-multiuser=1` do podania w celu identyfikacji sesji użytkownika. W przypadku trybu API pojedynczego użytkownika sesja nie powinna być dostarczana.
 
-`name` : wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format nazwa użytkownika:nazwa (dla nazw lokalnych). Jest to opcjonalne, jeśli podano „adres”.
+`name` : Wymagane do **określenia** nazwy faktury. Nazwa powinna mieć format username:name (dla nazw lokalnych). Jest to opcjonalne, jeśli podano `address`.
 
-`address` : wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano „nazwa”.
+`address` : Wymagany do **określenia** adresu rejestracji faktury. Jest to opcjonalne, jeśli podano `name`.
 
-`from` : Wymagane do **zidentyfikowania** konta do obciążenia (zapłacenia faktury z). Powinien mieć format nazwa użytkownika:nazwa (w przypadku nazw lokalnych) lub przestrzeń nazw::nazwa (w przypadku nazw w przestrzeni nazw) lub adres rejestru konta do obciążenia (z którego należy zapłacić fakturę).
+`from` : Wymagane do **zidentyfikowania** konta do obciążenia (zapłać fakturę z). Powinien mieć format username:name (w przypadku nazw lokalnych) lub namespace::name (w przypadku nazw w przestrzeni nazw) lub adres rejestru konta do obciążenia (zapłać fakturę z).
 
 ### Wyniki:
 
@@ -322,17 +322,17 @@ To polecenie obsługuje tylko rzeczownik faktury.
 
 ```
 {
-     "txid": "318b86d2c208618aaa13946a3b75f14472ebc0cce9e659f2830b17e854984b55606738f689d886800f21ffee68a3e5fd5a29818e88f8c5b13b9f8ae63779d"
+    "txid": "318b86d2c208618aaa13946a3b75f14472ebc0cce9e659f2830b17e854984b55606738f689d886800f21ffee68a3e5fd5a29818e88f8c5b13b9f8ae67739903d"
 }
 ```
 
 #### Zwracane wartości:
 
-`txid` : Identyfikator (hash) transakcji, która obejmuje DEBIT do zapłaty za fakturę ORAZ ROSZCZENIE do żądania własności faktury.
+`txid` : Identyfikator (hash) transakcji, która obejmuje DEBIT do zapłaty za fakturę i CLAIM do żądania własności faktury.
 
 --------------------------------------------------
 
-## <a name="cancel"></a> anuluj
+## <a name="cancel"></a> cancel
 
 Anuluje niezapłaconą fakturę, aby własność powróciła do łańcucha podpisów wystawców.
 
