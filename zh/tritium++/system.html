@@ -2,7 +2,7 @@
 title: 系统
 description: 系统 API
 published: true
-date: 2023-01-05T04:51:33.289Z
+date: 2023-01-05T05:08:22.486Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-04T10:26:47.420Z
@@ -210,14 +210,14 @@ dateCreated: 2023-01-04T10:26:47.420Z
 <p><code>fails</code> 失败数：自此节点启动以来尝试连接到此端点的失败次数。</p>
 <p><code>score</code> 得分数：根据延迟和其他连接统计信息分配给此端点的得分数。</p>
 <hr>
-<h2>list/lisp-eids</h2>
-<p>This will return the LISP Endpoint Identifiers (EID's) currently configured for this node. If the <a href="http://lispers.net">lispers.net</a> API is not running / available then this will return an empty array.</p>
+<h2>list/lisp-eids 列表/lisp-eids</h2>
+<p>这将返回当前为此节点配置的 LISP 端点标识符 (EID)。 如果 &nbsp;<a href="http://lispers.net">lispers.net</a> API 没有运行/不可用，那么这将返回一个空数组。</p>
 <pre><code class="language-plaintext">system/list/lisp-eids
 </code></pre>
-<h3>Parameters:</h3>
-<p>-none-</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<h3>Parameters 参数：</h3>
+<p>-none- 无</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">[
     {
         "instance-id": "200",
@@ -244,23 +244,22 @@ dateCreated: 2023-01-04T10:26:47.420Z
 ]
 [Completed in 1004.256167 ms]
 </code></pre>
-<h4>Return values:</h4>
-<p><code>instance-id</code> : The LISP instance group that this EID belongs to.</p>
-<p><code>eid</code> : The endpoint identifier. This can be either IPv4 or IPv6 format.</p>
-<p><code>rlocs</code> : The array of RLOC's (routing locators) associtated with the EID.</p>
-<p><code>interface</code> : Name of the device for the RLOC.</p>
-<p><code>rloc-name</code> : Hostname associated with the device.</p>
-<p><code>rloc</code> : The IP address associated with the device.</p>
+<h4>返回值</h4>
+<p><code>instance-id</code> ：此 EID 所属的 LISP 实例组。</p>
+<p><code>eid</code> ：端点标识符。 这可以是 IPv4 或 IPv6 格式。</p>
+<p><code>rlocs</code> ：与 EID 关联的 ROSS（路由定位器）数组。</p>
+<p><code>interface</code> ：RLOC 的设备名称。</p>
+<p><code>rloc-name</code> ：与设备关联的主机名。</p>
+<p><code>rloc</code> ：与设备关联的 IP 地址。</p>
 <hr>
-<p>&nbsp;</p>
-<h2>validate/address</h2>
-<p>Validates a register / legacy address.</p>
+<h2>validate/address 验证/地址</h2>
+<p>验证注册/传统链地址.</p>
 <pre><code class="language-plaintext">system/validate/address
 </code></pre>
-<h3>Parameters:</h3>
-<p><code>address</code> : Required to <strong>validate</strong> the base58 encoded register or legacy address to check.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<h3>Parameters 参数：</h3>
+<p><code>address</code> 地址：要求验证 base58 编码的注册或要检查的传统链地址。</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "address": "8BuhE1y5oard3cEWqCSYK35bC6LdPRvcPR8N7GXYNatTw6De8eK",
     "is_valid": true,
@@ -268,9 +267,9 @@ dateCreated: 2023-01-04T10:26:47.420Z
     "object_type": "ACCOUNT"
 }
 </code></pre>
-<h4>Return values:</h4>
-<p><code>address</code> : The address that was validated.</p>
-<p><code>is_valid</code> : Boolean flag indicating if the address is valid or not. For legacy addresses this indicates that the address if simply formatted correctly. For register addresses this flag checks that a register exists in the blockchain at the specified address.</p>
-<p><code>type</code> : For register addresses, the type of register at the address. Values can be APPEND, LEGACY, OBJECT, RAW, READONLY, RESERVED, SYSTEM or UNKNOWN.</p>
-<p><code>object_type</code> : If the type is OBJECT this field contains the standard object type of the object register. Values can be ACCOUNT, CRYPTO, NAME, NAMESPACE, REGISTER, TOKEN, TRUST or UNKNOWN.</p>
-<p><code>is_mine</code> : If the type is LEGACY this boolean flag indicates if the private key for the address is held in the local wallet.</p>
+<h4>返回值</h4>
+<p><code>address</code> 地址：已验证的地址。</p>
+<p><code>is_valid</code> 有效：指示地址是否有效的布尔标志。 对于传统链地址，这表明该地址只是格式正确。 对于寄存器地址，此标志检查指定地址的区块链中是否存在寄存器。</p>
+<p><code>type</code> 类型：对于寄存器地址，地址处的寄存器类型。 值可以是 APPEND、LEGACY、OBJECT、RAW、READONLY、RESERVED、SYSTEM 或 UNKNOWN。</p>
+<p><code>object_type</code> 物件类型：如果类型是 OBJECT，则此字段包含物件寄存器的标准物件类型。 值可以是 ACCOUNT、CRYPTO、NAME、NAMESPACE、REGISTER、TOKEN、TRUST 或 UNKNOWN。</p>
+<p><code>is_mine</code> 本地型: 如果类型为 LEGACY，则此布尔标志指示地址的私钥是否保存在本地钱包中。</p>
