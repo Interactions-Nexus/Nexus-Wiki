@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-06T04:28:05.175Z
+date: 2023-01-06T04:31:10.104Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -55,10 +55,9 @@ dateCreated: 2023-01-05T09:20:08.996Z
 }
 </code></pre>
 <h4>返回值：</h4>
-<p><code>txid</code> : The hash of the transaction that was generated for this tx. If using <code>-autotx</code> this field will be omitted.</p>
-<p><code>address</code> : The register address for this account. The address (or name that hashes to this address) is needed when creating crediting or debiting the account.</p>
+<p><code>txid</code> 交易 id：为此 tx 生成的交易的哈希值。 如果使用 <code>-autotx</code>，该字段将被省略。</p>
+<p><code>address</code> 地址：此账户的注册地址。 在创建贷记或借记帐户时需要地址（或哈希到该地址的名称）。</p>
 <hr>
-<p>&nbsp;</p>
 <h2>debit</h2>
 <p>Deduct an amount of NXS or token specified by the noun and send it to another account or legacy UTXO address. Only NXS can be sent to the legacy address.</p>
 <pre><code class="language-plaintext">finance/debit/noun
