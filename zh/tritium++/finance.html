@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-06T04:31:10.104Z
+date: 2023-01-06T04:35:10.766Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -58,14 +58,14 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p><code>txid</code> 交易 id：为此 tx 生成的交易的哈希值。 如果使用 <code>-autotx</code>，该字段将被省略。</p>
 <p><code>address</code> 地址：此账户的注册地址。 在创建贷记或借记帐户时需要地址（或哈希到该地址的名称）。</p>
 <hr>
-<h2>debit</h2>
-<p>Deduct an amount of NXS or token specified by the noun and send it to another account or legacy UTXO address. Only NXS can be sent to the legacy address.</p>
+<h2>debit 借记</h2>
+<p>扣除一定数量的名词指定的 NXS 麟社币或通证，将其发送到另一个账户或传统链 UTXO 地址。 只有 NXS 麟社币可以发送到旧地址。</p>
 <pre><code class="language-plaintext">finance/debit/noun
 </code></pre>
-<p>This command supports the any wildcard noun.</p>
-<p><strong>debit/account</strong></p>
-<p>This deducts an amount of NXS or tokens from a token account or token address to be sent to a receiving account.</p>
-<p><strong>debit/token</strong></p>
+<p>此命令支持任何通配符名词。</p>
+<p><strong>debit/account 借记/账户</strong></p>
+<p>这将从通证账户或通证地址中扣除一定数量的 NXS 麟社币或通证，以发送到接收账户。</p>
+<p><strong>debit/token 贷记/通证</strong></p>
 <p>This deducts an amount of tokens from a token address to send to a token account</p>
 <h3>Parameters:</h3>
 <p><code>pin</code> : Required if <strong>locked</strong>. The <code>PIN</code> for this profile.</p>
