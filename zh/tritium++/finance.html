@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-07T04:38:02.100Z
+date: 2023-01-07T04:43:21.056Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -87,17 +87,16 @@ dateCreated: 2023-01-05T09:20:08.996Z
 </code></pre>
 <h4>返回值：</h4>
 <p><code>success</code> 成功：表示借记成功的布尔标志。</p>
-<p><code>txid</code> : The ID (hash) of the transaction that includes the debit.</p>
+<p><code>txid</code> 交易 id：包含借方的交易的 ID（哈希）。</p>
 <hr>
-<p>&nbsp;</p>
-<h2>credit</h2>
-<p>Create a new object register specified by given noun.</p>
-<p>This command supports the any wildcard noun.</p>
-<p><strong>credit/account</strong></p>
-<p>Increment an amount received from a NXS account, token account or token address.</p>
-<p><strong>credit/token</strong></p>
-<p>Increment an amount of tokens received from a token account.</p>
-<h3>Parameters:</h3>
+<h2>credit 贷记</h2>
+<p>创建一个由给定名词指定的新物件寄存器。</p>
+<p>此命令支持任何通配符名词。</p>
+<p><strong>credit/account 贷记/账户</strong></p>
+<p>增加从 NXS 麟社币账户、通证账户或通证地址收到的数额。</p>
+<p><strong>credit/token 贷记/通证</strong></p>
+<p>增加从通证账户接收的通证数量。</p>
+<h3>Parameters 参数：</h3>
 <p><code>pin</code> : Required if <strong>locked</strong>. The <code>PIN</code> for this profile.</p>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
 <p><code>txid</code> : The hash in <strong>hexadecimal</strong> encoding of the transaction that we are crediting.</p>
