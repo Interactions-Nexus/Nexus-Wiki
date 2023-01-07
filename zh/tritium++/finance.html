@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-07T04:24:46.792Z
+date: 2023-01-07T04:27:23.640Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -71,9 +71,9 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <h3>Parameters 参数：</h3>
 <p><code>pin</code> 操作密码：锁定时需要。 此配置文件的 <code>PIN</code>。</p>
 <p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code>&nbsp;要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
-<p><code>from</code> 从：需要 <strong>identif</strong> 识别要借记的账户，这可以是名称或注册地址。 该名称的格式应为 name（对于全局通证名称）、username:name（对于本地名称）或 namespace::name（对于名称空间中的名称）。</p>
+<p><code>from</code> 从：需要 <strong>identify</strong> 识别要借记的账户，这可以是名称或注册地址。 该名称的格式应为 name（对于全局通证名称）、username:name（对于本地名称）或 namespace::name（对于名称空间中的名称）。</p>
 <p><code>amount</code> 数额：要借记的 NXS 麟社币或通证的数量。</p>
-<p><code>to</code> : Required to <strong>identify</strong> the receiving account. This can be the account name or the register address. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). The address_to can also contain a legacy UTXO address if sending from a signature chain account to a legacy address.</p>
+<p><code>to</code> 到：需要 <strong>identify</strong>&nbsp;识别收款账户。 这可以是账户名称或注册地址。 该名称的格式应为 username:name（对于本地名称）或 namespace::name（对于名称空间中的名称）。 如果从签名链账户发送到传统链地址，address_to 还可以包含传统链 UTXO 地址。</p>
 <p><code>reference</code> : Optional field allows callers to provide a <strong>reference</strong>, which the recipient can then use to relate the transaction to an order number, invoice number etc. The reference is be a 64-bit unsigned integer in the range of 0 to 18446744073709551615</p>
 <p><code>expires</code> : Optional field allows callers to specify an <strong>expiration</strong> for the debit transaction. The expires value is the number of seconds from the transaction creation time after which the transaction can no longer be credited by the recipient. Conversely, when you apply an expiration to a transaction, you are unable to void the transaction until after the expiration time. If expires is set to 0, the transaction will never expire, making the sender unable to ever void the transaction. If omitted, a default expiration of 7 days (604800 seconds) is applied.</p>
 <h3>Results:</h3>
