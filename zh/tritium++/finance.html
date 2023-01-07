@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-07T04:43:21.056Z
+date: 2023-01-07T05:04:03.106Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -97,26 +97,25 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p><strong>credit/token 贷记/通证</strong></p>
 <p>增加从通证账户接收的通证数量。</p>
 <h3>Parameters 参数：</h3>
-<p><code>pin</code> : Required if <strong>locked</strong>. The <code>PIN</code> for this profile.</p>
-<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
-<p><code>txid</code> : The hash in <strong>hexadecimal</strong> encoding of the transaction that we are crediting.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p><code>pin</code> 操作密码：<strong>locked </strong>锁定时需要。 此配置文件的 <code>PIN</code>。</p>
+<p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
+<p><code>txid</code> 交易 id：贷记交易的 <strong>hexadecimal </strong>十六进制编码哈希。</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "success": true,
     "txid": "01f51d6b23b871fc8da848afa57cf066cb9e3b8fb845a666335e8c678ef5249e98d4f3e477659098918e4bb590472a63d0ed0a17fa87904fcff6316158e9edfd"
 }
 [Completed in 4979.735275 ms]
 </code></pre>
-<h4>Return values:</h4>
-<p><code>txid</code> : The ID (hash) of the transaction that includes the account creation.</p>
-<p><code>address</code> : The register address for this account. The address (or name that hashes to this address) is needed when creating crediting or debiting the account.</p>
+<h4>返回值：</h4>
+<p><code>txid</code> 交易 id：包含账户创建的交易 ID（哈希）。</p>
+<p><code>address</code> 地址：此账户的注册地址。 在创建贷记或借记帐户时需要地址（或哈希到该地址的名称）。</p>
 <hr>
-<p>&nbsp;</p>
-<h2><code>burn</code></h2>
-<p>This method can be used to take tokens permanently out of the current supply, a process commonly known as burning. The method will debit a token account and send the tokens back to the token address. However the transaction contains a condition that will always evaluate to false, guaranteeing that the debit can not be credited by the token issuer nor the sender. The result is that the amount burned will always appear in the "pending" balance of the token.</p>
-<p>This command only supports the <code>account</code> noun.</p>
-<h3>Parameters:</h3>
+<h2><code>burn</code>烧毁</h2>
+<p>此方法可用于从当前供应中永久取出通证，这一过程通常称为烧毁。 该方法将从通证账户中扣除并将通证发送回通证地址。 然而，交易包含一个条件，该条件将始终评估为 false，保证通证发行者或发送者不能贷记借方。 结果是烧毁的金额将始终出现在通证的 “待处理” 余额中。</p>
+<p>该命令只支持 <code>account</code>账户名词。</p>
+<h3>Parameters 参数：</h3>
 <p><code>pin</code> : Required if <strong>locked</strong>. The <code>PIN</code> to authorize the transaction.</p>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
 <p><code>name</code> : Required to <strong>identify</strong> the name of account to debit the tokens from to be burnt. The name should be in the format username:name (for local names) or namespace::name (for names in a namespace). This is optional if the <code>address</code> is provided</p>
