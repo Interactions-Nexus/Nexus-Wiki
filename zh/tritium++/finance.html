@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-09T07:45:29.843Z
+date: 2023-01-09T09:09:45.718Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -247,23 +247,25 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p><code>address</code> 地址：账户、信誉或通证的注册地址。</p>
 <hr>
 <h2>history 历史</h2>
-<p>This will get the history of the specified noun.</p>
-<p>This command supports the <code>account</code>, <code>trust</code> and <code>token</code> nouns.</p>
-<p><strong>history/account</strong></p>
-<p>This lists all the NXS except 'trust and token accounts for the logged in user.</p>
-<p><strong>history/trust</strong></p>
-<p>This lists the trust account for the logged in user.</p>
-<p><strong>history/token</strong></p>
-<p>This lists all the token addresses for the logged in user.</p>
-<h3>Parameters:</h3>
-<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
-<p><code>name</code> : Required to <strong>identify</strong> the name of the account / trust / token. This is optional if the <code>address</code> is provided.</p>
-<p><code>address</code> : Required to <strong>identify</strong> the register address of the account / trust / token. This is optional if the <code>name</code> is provided.</p>
+<p>这将获取指定名词的历史记录。</p>
+<p>此命令支持 <code>account</code> 账户、<code>trust</code>&nbsp;信誉和 <code>token</code>&nbsp;通证名词。</p>
+<p><strong>history/account 历史/账户</strong></p>
+<p>这列出了所有 NXS 麟社币，除了登录用户的信誉和通证帐户。</p>
+<p><strong>history/trust 历史/信誉</strong></p>
+<p>这列出了登录用户的信誉帐户。</p>
+<p><strong>history/token 历史/通证</strong></p>
+<p>这列出了登录用户的所有通证地址。</p>
+<p>&nbsp;</p>
+<h3>Parameters 参数：</h3>
+<p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
+<p><code>name</code> 名称：需要 <strong>identify</strong> 识别帐户/信誉/通张的名称。 如果提供了 <code>address</code> 地址，则这是可选的。</p>
+<p><code>address</code> 地址：需要 <strong>identify</strong>&nbsp; 识别账户/信誉/通证的注册地址。 如果提供了名称，则是可选的。</p>
 <p><a href="/en/tritium++/sorting"><code>Sorting</code></a>.</p>
 <p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
 <p><a href="/en/tritium++/operators"><code>Operators</code></a></p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p>&nbsp;</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">[
     {
         "owner": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
@@ -294,12 +296,12 @@ dateCreated: 2023-01-05T09:20:08.996Z
 ]
 [Completed in 12.427076 ms]
 </code></pre>
-<h4>Return value :</h4>
-<p><code>owner</code> : The username hash of the profile that owns this object.</p>
-<p><code>version</code> : The serialization version of the transaction.</p>
-<p><code>created</code> : The UNIX timestamp when the account was created.</p>
-<p><code>modified</code> : The UNIX timestamp when the account was last modified.</p>
-<p><code>type</code> : The type of register. Can be OBJECT, RAW or READONLY.</p>
+<h4>返回值：</h4>
+<p><code>owner</code> 持有者：拥有此物件的配置文件的用户名称哈希。</p>
+<p><code>version</code> 版本：物件的序列化版本。</p>
+<p><code>created</code> 创建：创建帐户时的 UNIX 时间戳。</p>
+<p><code>modified</code> 修改：上次修改帐户时的 UNIX 时间戳。</p>
+<p><code>type</code> 类型：寄存器的类型。 可以是 OBJECT、RAW 或 READONLY。</p>
 <p><code>balance</code> : The available balance of this account. This is the last confirmed balance less any new debits that you have made since the last block</p>
 <p><code>stake</code> : Only returned for the trust account, this is the amount of NXS currently staked in the trust account.</p>
 <p><code>decimals</code> : The maximum number of decimal places that can be applied to token amounts. For example decimals=2 will allow a token amount to be given to 2 decimal places.</p>
