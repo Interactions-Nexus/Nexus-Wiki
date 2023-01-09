@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-09T09:14:25.113Z
+date: 2023-01-09T09:19:50.814Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -308,27 +308,27 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p><code>currentsupply</code> 当前供应：当前分配给通证账户的通证数量。</p>
 <p><code>maxsupply</code> 最大供应：最大通证供应量。</p>
 <p><code>token</code> 通证：通证的注册地址。 对于 NXS 麟社币账户设置为 0。</p>
-<p><code>ticker</code> : The name of the token. For NXS accounts will show NXS.</p>
-<p><code>trust</code> : The current raw trust score of the trust account.</p>
-<p><code>age</code> : The age of the trust account in days, hours and minutes.</p>
-<p><code>rate</code> : The current annual reward rate earned for staking as an annual percent.</p>
-<p><code>address</code> : The register address of the account, trust or token.</p>
-<p><code>name</code> : The name identifying the account, trust or token.</p>
-<p><code>action</code> : The action that occurred - CREATE | MODIFY | TRANSFER | CLAIM.</p>
+<p><code>ticker</code> 收报：通证的名称。 对于 NXS 麟社币账户将显示 NXS。</p>
+<p><code>trust</code> 信誉：信誉账户的当前原始信誉评分。</p>
+<p><code>age</code> 年龄：信誉账户的天数、小时数和分钟数。</p>
+<p><code>rate</code> : 当前每年质押所获得的年回报率，以每年的百分比表示。</p>
+<p><code>address</code> 地址：账户、信誉或通证的注册地址。</p>
+<p><code>name</code> 名称：标识账户、信誉或通张的名称。</p>
+<p><code>action</code> 动作：发生的动作 - CREATE | 修改 | 转移 | 宣称。</p>
 <hr>
-<p>&nbsp;</p>
-<h2>transactions</h2>
-<p>This will list off all of the transactions for the specified noun.</p>
+<h2>transactions 交易</h2>
+<p>这将列出指定名词的所有交易。</p>
 <pre><code class="language-plaintext">finance/transactions/noun
 </code></pre>
-<p>This command supports the account, trust and token nouns.</p>
-<p><strong>transactions/account</strong></p>
-<p>List out all the transactions for the NXS account or token account.</p>
-<p><strong>transactions/trust</strong></p>
-<p>List out all the transactions for the trust account</p>
-<p><strong>transactions/token</strong></p>
-<p>List out all the transactions for the token address.</p>
-<h3>Parameters:</h3>
+<p>此命令支持账户、信誉和通证名词。</p>
+<p><strong>transactions/account 交易/账户</strong></p>
+<p>列出 NXS 账户或通张账户的所有交易。</p>
+<p><strong>transactions/trust 交易/信誉</strong></p>
+<p>列出信誉账户的所有交易</p>
+<p><strong>transactions/token 交易/通证</strong></p>
+<p>列出通证地址的所有交易。</p>
+<p>&nbsp;</p>
+<h3>Parameters 参数：</h3>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
 <p><code>verbose</code> : Optional, determines how much <strong>transaction data</strong> to include in the response. Supported values are :</p>
 <ul>
