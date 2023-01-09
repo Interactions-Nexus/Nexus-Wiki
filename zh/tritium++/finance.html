@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-09T12:20:38.304Z
+date: 2023-01-09T14:21:54.359Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -393,21 +393,21 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p><code>version</code> 版本：交易的序列化版本。</p>
 <p><code>sequence</code> 序号：此交易在签名链中的序号。</p>
 <p><code>timestamp</code> 时间戳：创建交易时的 Unix 时间戳。</p>
-<p><code>blockhash</code> : The hash of the block that this transaction is included in. Blank if not yet included in a block.</p>
-<p><code>confirmations</code> : The number of confirmations that this transaction obtained by the network.</p>
-<p><code>genesis</code> : The signature chain genesis hash.</p>
-<p><code>nexthash</code> : The hash of the next transaction in the sequence.</p>
-<p><code>prevhash</code> : the hash of the previous transaction in the sequence.</p>
-<p><code>pubkey</code> : The public key.</p>
-<p><code>signature</code> : The signature hash.</p>
-<p><code>contracts</code> : The array of contracts bound to this transaction and their details with opcodes.<br>{<br><code>id</code> : The sequential ID of this contract within the transaction.</p>
-<p><code>OP</code> : The contract operation. Can be APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.</p>
-<p><code>for</code> : For CREDIT transactions, the contract that this credit was created for . Can be COINBASE, DEBIT or LEGACY.</p>
-<p><code>txid</code> : The transaction that was credited / claimed.</p>
-<p><code>contract</code> : The ID of the contract within the transaction that was credited / claimed.</p>
-<p><code>proof</code> : The register address proving the credit.</p>
-<p><code>from</code> : For DEBIT, CREDIT, FEE transactions, the register address of the account that the debit is being made from.</p>
-<p><code>from_name</code> : For DEBIT, CREDIT, FEE transactions, the name of the account that the debit is being made from. Only included if the name can be resolved.</p>
+<p><code>blockhash</code> 区块哈希：此交易包含在其中的块的哈希值。如果尚未包含在区块中，则为空白。</p>
+<p><code>confirmations</code> 确认：这笔交易获得网络确认的数量。</p>
+<p><code>genesis</code> 起源：签名链起源哈希。</p>
+<p><code>nexthash</code> 下一哈希：序列中下一个交易的哈希值。</p>
+<p><code>prevhash</code>前一哈希：序列中前一个交易的哈希值。</p>
+<p><code>pubkey</code> 公钥。: 公钥。</p>
+<p><code>signature</code> &nbsp;签名: 签名链哈希。</p>
+<p><code>contracts</code> 合约：绑定到此交易的合约数组及其带有操作码的详细信息。<br><br><code>id ：</code>该合约在交易中的顺序 ID。</p>
+<p><code>OP</code> ：合约操作。 可以是 APPEND, CLAIM, COINBASE, CREATE, CREDIT, DEBIT, FEE, GENESIS, LEGACY, TRANSFER, TRUST, STAKE, UNSTAKE, WRITE.</p>
+<p><code>for</code> : 对于 CREDIT 交易，此信用为其创建的合同。 可以是 COINBASE, DEBIT 或是 LEGACY.</p>
+<p><code>txid</code> 交易 id：当时的交易 credited / claimed。</p>
+<p><code>contract</code> 合约：交易中合约的 ID credited / claimed。</p>
+<p><code>proof</code> 证明：证明 credit 贷记的注册地址。</p>
+<p><code>from</code> : 给于 DEBIT, CREDIT, FEE 交易，借记账户的注册地址。</p>
+<p><code>from_name</code> : 给于 DEBIT, CREDIT, FEE 交易，借记账户的名称。 仅当名称可以解析时才包括在内。</p>
 <p><code>to</code> : For DEBIT and CREDIT transactions, the register address of the recipient account.</p>
 <p><code>to_name</code> : For DEBIT and CREDIT transactions, the name of the recipient account. Only included if the name can be resolved.</p>
 <p><code>amount</code> : the token amount of the transaction.</p>
