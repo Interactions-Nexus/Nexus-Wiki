@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-08T10:13:25.416Z
+date: 2023-01-09T07:42:24.481Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -194,19 +194,22 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p>这将列出该名词指定的所有物件注册详细信息。</p>
 <p>此命令支持 <code>account</code> 账户、<code>trust</code>&nbsp;信誉和 <code>token</code>&nbsp;通证名词。</p>
 <p><strong>list/account 列出/账户</strong></p>
-<p>This lists all the NXS and token accounts, except the trust account for the logged in user.</p>
-<p><strong>list/trust</strong></p>
-<p>This lists the trust account for the logged in user.</p>
-<p><strong>list/token</strong></p>
-<p>This lists all the token addresses for the logged in user.</p>
-<h3>Parameters:</h3>
-<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
-<p><code>where</code> : An array of clauses to <strong>filter</strong> the JSON results. More information on filtering the results from /list/xxx API methods can be found at <code>Queries</code>.</p>
+<p>这会列出所有 NXS 麟社币和通证账户，但已登录用户的信誉账户除外。</p>
+<p><strong>list/trust 列出/信誉</strong></p>
+<p>这列出了登录用户的信誉账户。</p>
+<p><strong>list/token 列出/通证</strong></p>
+<p>这列出了登录用户的所有通证地址。</p>
+<p>&nbsp;</p>
+<h3>Parameters 参数：</h3>
+<p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
+<p><code>where</code> 何处：用于 <strong>filter</strong> 过滤 JSON 结果的子句数组。 有关从 /list/xxx API 方法过滤结果的更多信息，请参见 <code>Queries</code> 查询。</p>
 <p><a href="/en/tritium++/sorting"><code>Sorting</code></a></p>
 <p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
 <p><a href="/en/tritium++/operators"><code>Operators</code></a>.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p>&nbsp;</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
+<pre><code class="language-plaintext">{</code></pre>
 <pre><code class="language-plaintext">[
     {
         "owner": "b7fa11647c02a3a65a72970d8e703d8804eb127c7e7c41d565c3514a4d3fdf13",
@@ -225,18 +228,18 @@ dateCreated: 2023-01-05T09:20:08.996Z
 ]
 [Completed in 0.473708 ms]
 </code></pre>
-<h4>Return values:</h4>
-<p><code>owner</code> : The genesis hash of the profile that owns this account.</p>
-<p><code>version</code> : The serialization version of the transaction.</p>
-<p><code>created</code> : The UNIX timestamp when the account was created.</p>
-<p><code>modified</code> : The UNIX timestamp when the account was last modified.</p>
-<p><code>type</code> : The type of register. Can be OBJECT, RAW or READONLY.</p>
-<p><code>balance</code> : The available balance of this account. This is the last confirmed balance less any new debits that you have made since the last block</p>
-<p><code>stake</code> : Only returned for the trust account, this is the amount of NXS currently staked in the trust account.</p>
-<p><code>decimals</code> : The maximum number of decimal places that can be applied to token amounts. For example decimals=2 will allow a token amount to be given to 2 decimal places.</p>
-<p><code>currentsupply</code> : The current amount of tokens that have been distributed to token accounts.</p>
-<p><code>maxsupply</code> : The maximum token supply amount.</p>
-<p><code>token</code> : The register address of the token. Set to 0 for NXS accounts.</p>
+<h4>返回值：</h4>
+<p><code>owner</code> 持有者：拥有此账户的配置文件的起源哈希。</p>
+<p><code>version</code> 版本：交易的序列化版本。</p>
+<p><code>created</code> 创建：创建帐户时的 UNIX 时间戳。</p>
+<p><code>modified</code> 修改: 上次修改账户时的 UNIX 时间戳。</p>
+<p><code>type</code> 类型：寄存器的类型。 可以是 OBJECT、RAW 或 READONLY。</p>
+<p><code>balance</code> 余额：该账户的可用余额。 这是最后确认的余额减去自上一个区块以来所做的任何新借记。</p>
+<p><code>stake</code> 质押：仅针对信誉账户返回，这是当前在信誉账户中质押的 NXS 麟社币数量。</p>
+<p><code>decimals</code> 小数位：可应用于通证数额的最大小数位数。 例如 decimals=2 将允许通证数量保留 2 位小数。</p>
+<p><code>currentsupply</code> 当前供应：当前分配给通证账户的通证数量。</p>
+<p><code>maxsupply</code> 最大供应：最大通证供应量。</p>
+<p><code>token</code> 通证：通证的注册地址。 对于 NXS 麟社币账户设置为 0。</p>
 <p><code>ticker</code> : The name of the token. For NXS accounts will show NXS.</p>
 <p><code>trust</code> : The current raw trust score of the trust account.</p>
 <p><code>age</code> : The age of the trust account in days, hours and minutes.</p>
