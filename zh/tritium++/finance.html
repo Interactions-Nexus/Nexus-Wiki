@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-10T14:03:21.629Z
+date: 2023-01-10T14:11:51.360Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -549,10 +549,11 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <h3>Parameters 参数：</h3>
 <p><code>pin</code> 操作密码：<strong>locked </strong>锁定时需要。 此配置文件的 <code>PIN</code>&nbsp;操作密码。</p>
 <p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
-<p><code>walletpassphrase</code> : Optional field to provide the <strong>wallet passphrase</strong>. This value is required if the wallet is not currently unlocked.</p>
-<p><code>createname</code> : Optional boolean field indicating whether to <strong>create a Name record</strong> for the newly created signature chain accounts. If omitted, the default behaviour is to create a Name record, which incurs a fee of 1 NXS per account.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p><code>walletpassphrase</code> 钱包密码词组：提供 <strong>wallet passphrase </strong>钱包密码的可选字段。 如果钱包当前未解锁，则需要此值。</p>
+<p><code>createname</code> 创建名称：可选的布尔字段，指示是否为 <strong>create a Name record</strong>&nbsp; 新建的签名链账户创建名称记录。 如果省略，默认行为是创建一个名称记录，每个账户会产生 1 NXS 麟社币的费用。</p>
+<p>&nbsp;</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">[
     {
         "account": "default",
@@ -568,9 +569,9 @@ dateCreated: 2023-01-05T09:20:08.996Z
     }
 ]
 </code></pre>
-<h4>Return values:</h4>
-<p><code>account</code> : The legacy account name (and tritium account name, unless createname=false was explicitly set in the request).</p>
-<p><code>address</code> : The register address of the signature chain account that the legacy funds have been migrated to.</p>
-<p><code>amount</code> : The NXS amount transferred from the legacy account to the signature chain account.</p>
-<p><code>txid</code> : If the the legacy send was successful, the ID (hash) of the legacy transaction.</p>
-<p><code>error</code> : If the legacy send failed, this field includes the legacy send error message.</p>
+<h4>返回值：</h4>
+<p><code>account</code> 账户：传统链账户名称（和 tritium 麟氚账户名称，除非在请求中明确设置了 createname=false）。</p>
+<p><code>address</code> 地址：传统链资金迁移到的签名链账户的注册地址。</p>
+<p><code>amount</code> 数额：从旧账户转入签名链账户的 NXS 麟社币数额。</p>
+<p><code>txid</code> 交易 id：如果传统链发送成功，则为传统链交易的 ID（哈希）。</p>
+<p><code>error</code> 错误：如果传统链发送失败，则此字段包含传统链发送错误消息。</p>
