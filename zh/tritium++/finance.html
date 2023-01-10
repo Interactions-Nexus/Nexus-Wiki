@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-10T03:19:31.817Z
+date: 2023-01-10T03:23:54.536Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -459,16 +459,16 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p><code>stake</code> 质押：当前在信誉账户中质押的 NXS 麟社币数量。 仅在退回 NXS 麟社币余额时包括在内。</p>
 <p><code>immature</code> 未成熟：所有尚未到期的 coinbase 交易的总和。 仅在退回 NXS 麟社币余额时包括在内。</p>
 <hr>
-<h2>get/stakeinfo</h2>
-<p>This will retrieve account values and staking metrics for the trust account belonging to the currently logged in signature chain. If called when the stake minter is not running, this method only returns trust account values. Staking metrics will return 0.</p>
-<p>Endpoint:</p>
+<h2>get/stakeinfo 获取/质押信息</h2>
+<p>这将检索属于当前登录的签名链的信誉帐户的账户值和抵押指标。 如果在质押者未运行时调用，此方法仅返回信誉账户值。 质押指标将返回 0。</p>
+<p>Endpoint 端点：</p>
 <pre><code class="language-plaintext">finance/get/stakeinfo
 </code></pre>
-<h3>Parameters:</h3>
-<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
+<h3>Parameters 参数：</h3>
+<p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
 <p><code>Filtering</code>.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "address": "8EunQ82qVdnuQkX2gXKZr5P55kQRz4KbpaLdCVBjBNu8jeys4C4",
     "balance": 337.362522,
@@ -484,7 +484,7 @@ dateCreated: 2023-01-05T09:20:08.996Z
 }
 [Completed in 0.237830 ms]
 </code></pre>
-<h4>Return values:</h4>
+<h4>返回值：</h4>
 <p><code>address</code> : The register address of the trust account.</p>
 <p><code>balance</code> : The current NXS balance of the trust account. This is general account balance that is not staked.</p>
 <p><code>stake</code> : The amount of NXS currently staked in the trust account.</p>
