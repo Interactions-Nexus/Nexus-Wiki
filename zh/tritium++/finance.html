@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-10T12:47:36.027Z
+date: 2023-01-10T13:10:26.344Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -506,41 +506,41 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <pre><code class="language-plaintext">finance/set/stake
 </code></pre>
 <h3>Parameters 参数：</h3>
-<p><code>pin</code> : Required if <strong>locked</strong>. The <code>PIN</code> for this profile.</p>
-<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
-<p><code>amount</code> : Required the <strong>new amount</strong> of NXS to stake. (This is the total amount of NXS to be staked. If staking 15,000 NXS and want to increase the stake to 20,000 NXS then the amount is 20,000. When withdrawing 2,000 NXS from a 20,000 NXS stake then the amount is 18,000)</p>
-<p><code>expires</code> : Optional field to assign the number of seconds until the stake change request <strong>expires</strong>. A value of zero indicates it does not expire. Default is zero if not passed.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p><code>pin</code> 操作密码：<strong>locked </strong>锁定时需要。 此配置文件的 <code>PIN</code>&nbsp;操作密码。</p>
+<p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
+<p><code>amount</code> 数额：需要 <strong>new amount </strong>新数量的 NXS 麟社币进行质押。 （这是要质押的 NXS 麟社币总量。如果质押 15,000 NXS 麟社币并想将质押增加到 20,000 NXS，则金额为 20,000。当从 20,000 NXS 麟社币质押中提取 2,000 NXS 麟社币时，金额为 18,000）</p>
+<p><code>expires</code> 期限：可选字段，用于指定质押更改请求到期前的秒数。 值为零表示它不会过期。 如果未通过，则默认为零。</p>
+<p>&nbsp;</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "txid": "318b86d2c208618aaa13946a3b75f14472ebc0cce9e659f2830b17e854984b55606738f689d886800f21ffee68a3e5fd5a29818e88f8c5b13b9f8ae67739903d"
 }
 </code></pre>
-<h4>Return values:</h4>
-<p><code>txid</code> : The ID (hash) of the transaction that includes the stake change.</p>
+<h4>返回值：</h4>
+<p><code>txid</code> 交易 id ：包含质押变更的交易 ID（哈希）。</p>
 <hr>
-<p>&nbsp;</p>
-<h2>void/transaction</h2>
-<p>Voids (reverses) a debit or transfer transaction, only if it has not been credited or claimed by the recipient. The method creates a corresponding credit or claim transaction but back to the originating account / profile. This means that any applicable fees will apply, as will conditions on the debit / transfer transaction (such as expiration conditions).</p>
-<p>For debits that were made to a tokenized asset as part of a split payment transaction, the reversing credit will be made for the debit amount minus any partial amounts that have already been credited by the token holders.</p>
-<p>Endpoint:</p>
+<h2>void/transaction 作废/交易</h2>
+<p>仅当收款人未贷记或认领借记或转账交易时，才作废（撤销）该交易。 该方法创建相应的信用或索赔交易，但返回到原始帐户/配置文件。 这意味着将适用任何适用的费用，以及借记/转账交易的条件（例如到期条件）。</p>
+<p>对于作为拆分支付交易的一部分对通证化资产进行的借记，将对借记数额减去通证持有人已贷记的任何部分数额进行反向贷记。</p>
+<p>Endpoint 端点：</p>
 <pre><code class="language-plaintext">finance/void/transaction
 </code></pre>
-<h3>Parameters:</h3>
-<p><code>pin</code> : Required if <strong>locked</strong>. The <code>PIN</code> for this profile.</p>
-<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
-<p><code>txid</code> : The <strong>transaction ID</strong> (hash) of the debit or transfer transaction that you wish to void.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<h3>Parameters 参数：</h3>
+<p><code>pin</code> 操作密码：<strong>locked </strong>锁定时需要。 此配置文件的 <code>PIN</code>&nbsp;操作密码。</p>
+<p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
+<p><code>txid</code> 交易 id ：希望作废的借记或转账交易的交易 ID（哈希）。</p>
+<p>&nbsp;</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "hash": "47959e245f45aab773c0ce5320a5454f49ac15f63e15acb36855ac654d54d6314fe36b61dd64ec7a9a546bcc439a628e9badcdccb6e5f8072d04a0a3b67f8679"
 }
 </code></pre>
-<h4>Return values:</h4>
-<p><code>hash</code> : The transaction hash of the credit transaction, if successfully committed to the mempool / broadcast.</p>
+<h4>返回值：</h4>
+<p><code>hash</code> 哈希：信用交易的交易哈希，如果成功提交到 mempool / broadcast. 内存池/广播。</p>
 <hr>
-<p>&nbsp;</p>
-<h2>migrate/accounts</h2>
+<h2>migrate/accounts 迁移/账户</h2>
 <p>This method will migrate your legacy accounts to signature chain accounts, sending the balance across in the process. A new account will be created in your signature chain for each legacy account, with a corresponding matching name (unless flagged not to create names). The balance of each legacy account is sent to the newly created signature chain account in individual transactions. As such, each transaction incurs the default legacy fee of 0.01 NXS, which is deducted from the amount being migrated.</p>
 <p>The method uses the arbitrary data field in the account object register to track which legacy account it was created from. As a result, it is possible to invoke this method multiple times, and each time it will sweep any NXS from legacy accounts to existing signature chain accounts (as well as creating any necessary new accounts).</p>
 <p>Endpoint:</p>
