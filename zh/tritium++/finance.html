@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-10T02:48:07.131Z
+date: 2023-01-10T03:19:31.817Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -412,7 +412,7 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p><code>to_name</code> : 对于 DEBIT, CREDIT, FEE 交易，接收人账户的名称。 仅当名称可以解析时才包括在内。</p>
 <p><code>amount</code> 数额：交易的通证数额。</p>
 <p><code>token</code> 通证：与交易相关通证的注册地址。 为 NXS 麟社币交易设置为 0。</p>
-<p><code>ticker</code> : 交易相关的通证名称。</p>
+<p><code>ticker</code> 收报：交易相关的通证名称。</p>
 <p><code>reference</code> 参考：对于 DEBIT 和 CREDIT 交易，这是用户提供的参考，接收人使用该参考将交易与订单或发票号相关联。</p>
 <p><code>object</code> 物件：返回指定配置文件的加密物件寄存器中所有哈希公钥的列表。 物件结果将包含九个默认键(app1, app2, app3, auth, cert lisp, network, sign and verify).<br>&nbsp;</p>
 <h2>get/balances 获取/余额</h2>
@@ -449,17 +449,16 @@ dateCreated: 2023-01-05T09:20:08.996Z
 [Completed in 6521.434131 ms]
 </code></pre>
 <h4>返回值：</h4>
-<p><code>available</code> : The current balance across all accounts that is available to be spent.</p>
-<p><code>unclaimed</code>: The sum of all debit transactions made to other accounts that are not confirmed.</p>
-<p><code>unconfirmed</code> : The sum of all debit transactions made to your accounts that are not confirmed, or credits you have made to your accounts that are not yet confirmed (not yet included in a block).</p>
-<p><code>decimals</code> : The no of decimals for the token.</p>
-<p><code>token</code> : The register address of the token that these balances are for.</p>
-<p><code>ticker</code> : The name of the token that these balances are for, if known.</p>
-<p><code>pending</code> : The sum of all debit and coinbase transactions made to your accounts that are confirmed but have not yet been credited. This does NOT include immature and unconfirmed amounts.</p>
-<p><code>stake</code> : The amount of NXS currently staked in the trust account. Only included when returning NXS balances.</p>
-<p><code>immature</code>: The sum of all coinbase transactions that have not yet reached maturity. Only included when returning NXS balances.</p>
+<p><code>available</code> 当前余额：可用于支出的所有账户的当前余额。</p>
+<p><code>unclaimed</code>无认领：对未确认的其他账户进行的所有借记交易的总和。</p>
+<p><code>unconfirmed</code> 未确认：对您的账户进行的所有未确认借记交易的总和，或您对您的账户进行的尚未确认（尚未包含在区块中）的贷记。</p>
+<p><code>decimals</code> 小数位：通证的小数位数。</p>
+<p><code>token</code> 通证：这些余额所对应的通证的注册地址。</p>
+<p><code>ticker</code> 收报：这些余额所对应的通证名称（如果已知）。</p>
+<p><code>pending</code> 待确认：对您的账户进行的所有借记和 coinbase 交易的总和，这些交易已确认但尚未记入贷方。 这不包括未成熟和未确认的数额。</p>
+<p><code>stake</code> 质押：当前在信誉账户中质押的 NXS 麟社币数量。 仅在退回 NXS 麟社币余额时包括在内。</p>
+<p><code>immature</code> 未成熟：所有尚未到期的 coinbase 交易的总和。 仅在退回 NXS 麟社币余额时包括在内。</p>
 <hr>
-<p>&nbsp;</p>
 <h2>get/stakeinfo</h2>
 <p>This will retrieve account values and staking metrics for the trust account belonging to the currently logged in signature chain. If called when the stake minter is not running, this method only returns trust account values. Staking metrics will return 0.</p>
 <p>Endpoint:</p>
