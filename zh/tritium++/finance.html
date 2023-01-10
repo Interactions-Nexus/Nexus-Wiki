@@ -2,7 +2,7 @@
 title: 财务
 description: 财务 API
 published: true
-date: 2023-01-10T00:58:06.728Z
+date: 2023-01-10T02:48:07.131Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-05T09:20:08.996Z
@@ -406,25 +406,26 @@ dateCreated: 2023-01-05T09:20:08.996Z
 <p><code>txid</code> 交易 id：当时的交易 credited / claimed。</p>
 <p><code>contract</code> 合约：交易中合约的 ID credited / claimed。</p>
 <p><code>proof</code> 证明：证明 credit 贷记的注册地址。</p>
-<p><code>from</code> : 给于 DEBIT, CREDIT, FEE 交易，借记账户的注册地址。</p>
-<p><code>from_name</code> ：给于 DEBIT, CREDIT, FEE 交易，借记账户的名称。 仅当名称可以解析时才包括在内。</p>
-<p><code>to</code> ：给于 DEBIT, CREDIT, FEE 交易，接收人账户的注册地址。</p>
-<p><code>to_name</code> : For DEBIT and CREDIT transactions, the name of the recipient account. Only included if the name can be resolved.</p>
-<p><code>amount</code> : the token amount of the transaction.</p>
-<p><code>token</code> : the register address of the token that the transaction relates to. Set to 0 for NXS transactions.</p>
-<p><code>ticker</code> : The name of the token that the transaction relates to.</p>
-<p><code>reference</code> : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.</p>
-<p><code>object</code> : Returns a list of all hashed public keys in the crypto object register for the specified profile. The object result will contain the nine default keys(app1, app2, app3, auth, cert lisp, network, sign and verify).<br>}</p>
-<h2>get/balances</h2>
-<p>This will retrieve a summary of balance information across all accounts belonging to the currently logged in profile.</p>
-<p>Endpoint:</p>
+<p><code>from</code> : 对于 DEBIT, CREDIT, FEE 交易，借记账户的注册地址。</p>
+<p><code>from_name</code> ：对于 DEBIT, CREDIT, FEE 交易，借记账户的名称。 仅当名称可以解析时才包括在内。</p>
+<p><code>to</code> ：对于 DEBIT, CREDIT, FEE 交易，接收人账户的注册地址。</p>
+<p><code>to_name</code> : 对于 DEBIT, CREDIT, FEE 交易，接收人账户的名称。 仅当名称可以解析时才包括在内。</p>
+<p><code>amount</code> 数额：交易的通证数额。</p>
+<p><code>token</code> 通证：与交易相关通证的注册地址。 为 NXS 麟社币交易设置为 0。</p>
+<p><code>ticker</code> : 交易相关的通证名称。</p>
+<p><code>reference</code> 参考：对于 DEBIT 和 CREDIT 交易，这是用户提供的参考，接收人使用该参考将交易与订单或发票号相关联。</p>
+<p><code>object</code> 物件：返回指定配置文件的加密物件寄存器中所有哈希公钥的列表。 物件结果将包含九个默认键(app1, app2, app3, auth, cert lisp, network, sign and verify).<br>&nbsp;</p>
+<h2>get/balances 获取/余额</h2>
+<p>这将检索属于当前登录配置文件的所有账户的余额信息摘要。</p>
+<p>Endpoint 端点：</p>
 <pre><code class="language-plaintext">finance/get/balances
 </code></pre>
-<h3>Parameters:</h3>
-<p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
+<h3>Parameters 参数：</h3>
+<p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识用户会议。 对于单用户 API 模式，不应提供会议。</p>
 <p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<p>&nbsp;</p>
+<h3>Results 结果</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">[
     {
         "available": 1573155.354522,
@@ -447,7 +448,7 @@ dateCreated: 2023-01-05T09:20:08.996Z
 ]
 [Completed in 6521.434131 ms]
 </code></pre>
-<h4>Return values:</h4>
+<h4>返回值：</h4>
 <p><code>available</code> : The current balance across all accounts that is available to be spent.</p>
 <p><code>unclaimed</code>: The sum of all debit transactions made to other accounts that are not confirmed.</p>
 <p><code>unconfirmed</code> : The sum of all debit transactions made to your accounts that are not confirmed, or credits you have made to your accounts that are not yet confirmed (not yet included in a block).</p>
