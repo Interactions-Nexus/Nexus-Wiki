@@ -2,7 +2,7 @@
 title: 配置
 description: 配置 API
 published: true
-date: 2022-12-22T15:00:45.010Z
+date: 2023-01-10T12:50:14.673Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-21T08:30:28.140Z
@@ -39,9 +39,9 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p><code>pin</code> 操作密码： 需要设置引脚。 与此配置文件关联的 PIN 操作密码。</p>
 <p><strong>NOTE:</strong></p>
 <ul>
-  <li><code>username</code> must be a minimum of 2 characters.</li>
-  <li><code>password</code> must be a minimum of 8 characters.</li>
-  <li><code>PIN</code> must be a minimum of 4 characters.</li>
+  <li><code>username</code> 用户名称：必须至少包含 2 个字符。</li>
+  <li><code>password</code> 登录密码：必须至少包含 8 个字符。</li>
+  <li><code>PIN</code> 操作密码：必须至少包含 4 个字符。</li>
   <li>用户名区分大小写且不能更改。 仔细选择用户名称，并将其与 password 登录密码和 PIN 操作密码一起备份。</li>
   <li>请不要在用户名称末尾使用冒号 “:” 。</li>
 </ul>
@@ -61,8 +61,7 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p>此方法为用户提供更改由名词指定的配置文件的 password 登录密码、pin 操作密码或 recovery seed 复原种子的能力。</p>
 <pre><code class="language-plaintext">profiles/update/noun
 </code></pre>
-<p>This command only supports the <code>credentials</code> and <code>recovery</code> nouns.</p>
-<p>此命令仅支持凭据和复原名词。</p>
+<p>此命令仅支持 <code>credentials</code> 凭据和 <code>recovery</code> 复原名词。</p>
 <h4>update/credentials 更新/凭证</h4>
 <p>此方法为用户提供了更改此签名链的密码、pin 的能力。 更新凭据还将导致根据新 password 登录密码 / pin 操作密码重新生成 sigchain 签名链的 加密物件中的每个密钥。</p>
 <h4>update/recovery 更新/复原</h4>
@@ -185,11 +184,11 @@ dateCreated: 2022-12-21T08:30:28.140Z
 <p>此命令仅支持 <code>master</code> 主管名词。</p>
 <h3>Parameters 参数:</h3>
 <p><code>session</code> 会议：参数 <strong>argument</strong> <code>-multiuser=1</code> 要求提供以标识正在创建交易的用户会议。</p>
-<p><code>verbose</code> 详细: 可选，确定响应中包含多少交易数据。 支持的值是：</p>
+<p><code>verbose</code> 冗长: 可选，确定响应中包含多少交易数据。 支持的值是：</p>
 <ul>
-  <li><code>default</code> : hash</li>
-  <li><code>summary</code> : type, version, sequence, timestamp, operation, and confirmations.</li>
-  <li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
+  <li><code>default</code> 默认：hash</li>
+  <li><code>summary</code> 概括:：type, version, sequence, timestamp, operation, and confirmations.</li>
+  <li><code>detail</code> 细节：genesis, nexthash, prevhash, pubkey and signature.</li>
 </ul>
 <p>此方法支持 Sorting / Filtering 排序/过滤参数。</p>
 <h3>Results 结果:</h3>
@@ -228,7 +227,7 @@ dateCreated: 2022-12-21T08:30:28.140Z
 [Completed in 0.616625 ms]
 </code></pre>
 <h4>返回值</h4>
-<p><code>txid</code> : 交易哈希。</p>
+<p><code>txid</code> : 交易 id。</p>
 <p><code>type</code> : 交易说明 (legacy | tritium base | trust | genesis | user).</p>
 <p><code>version</code> : 交易的序列化版本。</p>
 <p><code>sequence</code> : 此交易在签名链中的序号。</p>
