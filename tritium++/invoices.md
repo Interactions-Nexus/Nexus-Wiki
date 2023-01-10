@@ -2,7 +2,7 @@
 title: INVOICES
 description: Invoices API
 published: true
-date: 2023-01-05T23:55:37.786Z
+date: 2023-01-10T15:25:09.838Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-26T18:52:03.212Z
@@ -65,8 +65,6 @@ This command only supports the invoice noun.
 `name` : Optional to **identify** the invoice. If provided a Name object will also be created in the users local namespace, allowing the invoice to be accessed/retrieved by name. If no name is provided the account will need to be accessed/retrieved by its 256-bit register address.
 
 `account` : Required to **identify** the account, the invoice should be paid to. The account should be in the format username:name (for local names) or namespace::name. 
-
-`account` : Required to **identify** the 256-bit register address of the account, the invoice should be paid to. This is optional if the `name` is provided. 
 
 `recipient` : Required to **identify** the recipient of the invoice. It can to be the username identifying the user account (sig-chain) or genesis hash of the signature chain to issue the invoice to.
 
