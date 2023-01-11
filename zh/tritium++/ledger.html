@@ -2,66 +2,57 @@
 title: 分类账本
 description: 分类账本 API
 published: true
-date: 2023-01-11T14:20:46.509Z
+date: 2023-01-11T14:24:16.987Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-11T14:20:28.412Z
 -->
 
-<h1 class="toc-header" id="ledger"> LEDGER</h1>
-<p>The Ledger API provides users with access to data held by the ledger such as blocks, transactions and network-wide staking and mining information.</p>
-<h2 class="toc-header" id="direct-endpoints"> Direct Endpoints</h2>
-<p>The following commands are direct endpoints and thus do not support the above verb and noun structure available above.</p>
-<p><a href="#get/blockhash"><code>get/blockhash</code></a><br>
-<a href="#get/block"><code>get/block</code></a><br>
-<a href="#list/blocks"><code>list/blocks</code></a><br>
-<a href="#get/transaction"><code>get/transaction</code></a><br>
-<a href="#list/transactions"><code>list/transactions</code></a><br>
-<a href="#submit/transaction"><code>submit/transaction</code></a><br>
-<a href="#get/info"><code>get/info</code></a><br>
-<a href="#get/metrics"><code>get/metrics</code></a></p>
-<p>Direct endpoints support <code>filters</code> and <code>operators</code>.</p>
+<h1>LEDGER 分类账本</h1>
+<p>Ledger API 分类账本为用户提供对分类账本持有的数据的访问，例如区块、交易和全网质押和挖掘信息。</p>
+<h2>Direct Endpoints 直接端点</h2>
+<p>以下命令是直接端点，因此不支持上面可用的上述动词和名词结构。</p>
+<p><a href="#get/blockhash"><code>get/blockhash</code></a><br><a href="#get/block"><code>get/block</code></a><br><a href="#list/blocks"><code>list/blocks</code></a><br><a href="#get/transaction"><code>get/transaction</code></a><br><a href="#list/transactions"><code>list/transactions</code></a><br><a href="#submit/transaction"><code>submit/transaction</code></a><br><a href="#get/info"><code>get/info</code></a><br><a href="#get/metrics"><code>get/metrics</code></a></p>
+<p>直接端点支持 <code>filters</code> 过滤和 <code>operators</code> 运算符。</p>
 <hr>
-<p>&nbsp;</p>
-<h2 class="toc-header" id="getblockhash"> get/blockhash <a id="get/blockhash" href="#get/blockhash"></a></h2>
+<h2>get/blockhash</h2>
 <p>Retrieves the hash of the block for the given height.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">ledger/get/blockhash
+<pre><code class="language-plaintext">ledger/get/blockhash
 </code></pre>
-<h3 class="toc-header" id="parameters"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>height</code> : The <strong>block height</strong> to retrieve the hash for.</p>
-<h3 class="toc-header" id="results"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "hash": "289b76fbe40ca5e0d0df68016677a8c9be6389f3225cc9faf65cb92bbc98a3580b57cb7ba3d7f7ab36ce890d47a4be90254d407270ad4c2e69c99c998ef8547ca45f054b081959d4d59feb871360bce888f82b4cdc1476502bd1b8e95dffe811e55592d3d4768b56e0510e02b5e32171858de097cd811e7c8d09920c24960ae8"
 }
 [Completed in 0.083791 ms]  
 </code></pre>
-<h4 class="toc-header" id="return-values"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>hash</code> : The hash of the block.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="getblock"> get/block <a id="get/block" href="#get/block"></a></h2>
+<h2>get/block</h2>
 <p>Retrieves block data for the given block hash or height.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">ledger/get/block
+<pre><code class="language-plaintext">ledger/get/block
 </code></pre>
-<blockquote class="is-info">
-<p><strong>NOTE:</strong><br>
-Retrieving block data by height is only possible if the core has been configured with --indexheight flag.</p>
+<blockquote>
+  <p><strong>NOTE:</strong><br>Retrieving block data by height is only possible if the core has been configured with --indexheight flag.</p>
 </blockquote>
-<h3 class="toc-header" id="parameters-1"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>hash</code> : Required to <strong>identify</strong> the block to retrieve the block data for. This is optional if the height is provided.</p>
 <p><code>height</code> : Required to <strong>identify</strong> the block to retrieve the block data for. This is optional if the hash is provided.</p>
 <p><code>verbose</code> : Optional, determines how much <strong>transaction data</strong> to include in the response. Supported values are :</p>
 <ul>
-<li><code>default</code> : hash.</li>
-<li><code>summary</code> : type, version, sequence, timestamp, and contracts.</li>
-<li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
+  <li><code>default</code> : hash.</li>
+  <li><code>summary</code> : type, version, sequence, timestamp, and contracts.</li>
+  <li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
 </ul>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/sorting"><code>Sorting</code></a></p>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/filtering"><code>Filtering</code></a></p>
-<h3 class="toc-header" id="results-1"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object-1"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<p><a href="/en/tritium++/sorting"><code>Sorting</code></a></p>
+<p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "hash": "69336bc69ac2b9d06d7b9f9ede253cbeadba227751125cbb220654499c59a7b5138ea06ff62670fae614e5fed26aec8d3a0f346e03f10ea6c83dcb20ba8d93d17d92fffd6604666034e7002f421e39e64cef43325dfdf2c0334e51e018a31710c8fac17214d96d309b8dddb8f9bf9b3a27d28c71016b93a0e89f588c3604420a",
     "proofhash": "0000000000036b5c62766b5781f78734cf336f6fc6bce0363b93092551390fa7bd4d942d20316758def777b770db0500c3910f43b147c006ad11246ae62ed28284a4af309aebdc31ed6df23ebc7218b5a638b4da42cb496661fb12cace6890b920233e7db70a3daa8b439e0973a0dd01be67db652eaf8e7281027228f47a89cf",
     "size": 797,
@@ -107,7 +98,7 @@ Retrieving block data by height is only possible if the core has been configured
 }
 [Completed in 0.422600 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-1"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>hash</code> : The hash of the block.</p>
 <p><code>proofhash</code> : The proof hash of the block.</p>
 <p><code>size</code> : The block size in bytes.</p>
@@ -152,34 +143,31 @@ Retrieving block data by height is only possible if the core has been configured
 <p><code>reference</code> : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="listblocks"> list/blocks <a id="list/blocks" href="#list/blocks"></a></h2>
+<h2>list/blocks</h2>
 <p>Retrieves an array of block data for a sequential range of blocks from a given hash or height.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">ledger/list/blocks
+<pre><code class="language-plaintext">ledger/list/blocks
 </code></pre>
-<blockquote class="is-info">
-<p><strong>NOTE:</strong><br>
-Retrieving block data by height is only possible if the core has been configured with --indexheight flag.</p>
+<blockquote>
+  <p><strong>NOTE:</strong><br>Retrieving block data by height is only possible if the core has been configured with --indexheight flag.</p>
 </blockquote>
-<h3 class="toc-header" id="parameters-2"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>hash</code> : Required to <strong>identify</strong> the block to retrieve the block data for. This is optional if the <code>height</code> is provided</p>
 <p><code>height</code> : Required to <strong>identify</strong> the block to retrieve the block data for. This is optional if the <code>hash</code> is provided</p>
 <p><code>verbose</code> : This is optional, determines how much <strong>transaction data</strong> to include in the response. Supported values are:</p>
 <ul>
-<li><code>summary</code> : type, version, sequence, timestamp, and operation.</li>
-<li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
+  <li><code>summary</code> : type, version, sequence, timestamp, and operation.</li>
+  <li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
 </ul>
-<p><code>where</code> : An array of clauses to <strong>filter</strong> the JSON results. More information on filtering the results from /list/xxx API methods can be found at <a class="is-internal-link is-valid-page" href="/en/tritium++/queries"><code>Queries</code></a>.</p>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/sorting"><code>Sorting</code></a></p>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/filtering"><code>Filtering</code></a></p>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/operators"><code>Operators</code></a>.</p>
-<blockquote class="is-info">
-<p><strong>NOTE :</strong><br>
-Either the hash or the height needs to be supplied, but not both.<br>
-Retrieving block data by height is only allowed if the daemon has been configured with indexheight=1.</p>
+<p><code>where</code> : An array of clauses to <strong>filter</strong> the JSON results. More information on filtering the results from /list/xxx API methods can be found at <a href="/en/tritium++/queries"><code>Queries</code></a>.</p>
+<p><a href="/en/tritium++/sorting"><code>Sorting</code></a></p>
+<p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
+<p><a href="/en/tritium++/operators"><code>Operators</code></a>.</p>
+<blockquote>
+  <p><strong>NOTE :</strong><br>Either the hash or the height needs to be supplied, but not both.<br>Retrieving block data by height is only allowed if the daemon has been configured with indexheight=1.</p>
 </blockquote>
-<h3 class="toc-header" id="returns"> Returns:</h3>
-<h4 class="toc-header" id="return-value-json-object-2"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">[
+<h3>Returns:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">[
     {
         "hash": "5c985f5402f0bcb339ebef0e2edcad30427bf79803994772cd3a1458012748cd1d9d2ee8d6f1466f0c8ca867e1d8a2d9cfe6bc8cfdd885421fb56c55bfc11328f19c61bdc87193831851526a835e457fb46fcd0088879d564e88bb39524aa40489329ecc2cbc6a0453b8dd69a90b82232df6ee6d39ddec80e16149c99b1ddeab",
         "proofhash": "3f10d762af5952f7fdda2f84a27f9afe121e54be25eb0a41ee5074219919b9a2832d535d2c7c995a91e21ee6000017b2e7cc2099537cda035c09ebcaa94112384e88cdeec9d1ba6eb662b1acdf4f41d9b964f3da5a578d757bd2653acd8ed7364e8bd807777fbaabb4cda19cad6506b84431940e6a1e43a32d92eff9d9ace635",
@@ -222,7 +210,7 @@ Retrieving block data by height is only allowed if the daemon has been configure
 ]
 [Completed in 8.883924 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-2"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>hash</code> : The hash of the block.</p>
 <p><code>proofhash</code> : The proof hash of the block.</p>
 <p><code>size</code> : The block size in bytes.</p>
@@ -267,23 +255,23 @@ Retrieving block data by height is only allowed if the daemon has been configure
 <p><code>reference</code> : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="gettransaction"> get/transaction <a id="get/transaction" href="#get/transaction"></a></h2>
+<h2>get/transaction</h2>
 <p>Retrieves transaction data for a given transaction hash.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">ledger/get/transaction
+<pre><code class="language-plaintext">ledger/get/transaction
 </code></pre>
-<h3 class="toc-header" id="parameters-3"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>format</code> : Determines the <strong>format</strong> of the return value. Parameter value can be JSON (the default) or raw. If raw is specified then the method returns a serialized, hex-encoded transaction that can subsequently be broadcast to the network via /ledger/submit/transaction.</p>
 <p><code>txid</code> : Required to <strong>identify</strong> the txid to retrieve the transaction data for.</p>
 <p><code>verbose</code> : Optional, determines how much <strong>transaction data</strong> to include in the response. This is ignored if raw format is requested. Supported values are:</p>
 <ul>
-<li>summary : hash, type, version, sequence, timestamp, and contracts.</li>
-<li>detail : genesis, nexthash, prevhash, pubkey and signature.</li>
+  <li>summary : hash, type, version, sequence, timestamp, and contracts.</li>
+  <li>detail : genesis, nexthash, prevhash, pubkey and signature.</li>
 </ul>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/sorting"><code>Sorting</code></a></p>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/filtering"><code>Filtering</code></a></p>
-<h3 class="toc-header" id="returns-1"> Returns:</h3>
-<h4 class="toc-header" id="return-value-json-object-3"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<p><a href="/en/tritium++/sorting"><code>Sorting</code></a></p>
+<p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
+<h3>Returns:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "txid": "017ff70158049886f8bad93cfe15285bae34d0e643991088e00769228161868a60230551724ac0ad5c7a98fabfdbebca88dffedf1a9e5ff095524b7565bccee1",
     "type": "tritium base",
     "version": 4,
@@ -310,7 +298,7 @@ Retrieving block data by height is only allowed if the daemon has been configure
 }
 [Completed in 0.290130 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-3"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>txid</code> : The transaction hash.</p>
 <p><code>type</code> : The description of the transaction (legacy | tritium base | trust | genesis | user).</p>
 <p><code>version</code> : The serialization version of the transaction.</p>
@@ -340,24 +328,24 @@ Retrieving block data by height is only allowed if the daemon has been configure
 <p><code>reference</code> : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="listtransactions"> list/transactions <a id="list/transactions" href="#list/transactions"></a></h2>
+<h2>list/transactions</h2>
 <p>Retrieves transaction data for a given transaction hash.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">ledger/list/transactions
+<pre><code class="language-plaintext">ledger/list/transactions
 </code></pre>
-<h3 class="toc-header" id="parameters-4"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>session</code> : Required by <strong>argument</strong> <code>-multiuser=1</code> to be supplied to identify the user session. For single-user API mode the session should not be supplied.</p>
 <p><code>verbose</code> : Optional, determines how much <strong>transaction data</strong> to include in the response. Supported values are:</p>
 <ul>
-<li>summary : hash, type, version, sequence, timestamp, and contracts.</li>
-<li>detail : genesis, nexthash, prevhash, pubkey and signature.</li>
+  <li>summary : hash, type, version, sequence, timestamp, and contracts.</li>
+  <li>detail : genesis, nexthash, prevhash, pubkey and signature.</li>
 </ul>
-<p><code>where</code> : An array of clauses to <strong>filter</strong> the JSON results. More information on filtering the results from /list/xxx API methods can be found at <a class="is-internal-link is-valid-page" href="/en/tritium++/queries"><code>Queries</code></a>.</p>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/sorting"><code>Sorting</code></a></p>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/filtering"><code>Filtering</code></a></p>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/operators"><code>Operators</code></a></p>
-<h3 class="toc-header" id="returns-2"> Returns:</h3>
-<h4 class="toc-header" id="return-value-json-object-4"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<p><code>where</code> : An array of clauses to <strong>filter</strong> the JSON results. More information on filtering the results from /list/xxx API methods can be found at <a href="/en/tritium++/queries"><code>Queries</code></a>.</p>
+<p><a href="/en/tritium++/sorting"><code>Sorting</code></a></p>
+<p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
+<p><a href="/en/tritium++/operators"><code>Operators</code></a></p>
+<h3>Returns:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "txid": "017ff70158049886f8bad93cfe15285bae34d0e643991088e00769228161868a60230551724ac0ad5c7a98fabfdbebca88dffedf1a9e5ff095524b7565bccee1",
     "type": "tritium base",
     "version": 4,
@@ -384,7 +372,7 @@ Retrieving block data by height is only allowed if the daemon has been configure
 }
 [Completed in 0.290130 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-4"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>txid</code> : The transaction hash.</p>
 <p><code>type</code> : The description of the transaction (legacy | tritium base | trust | genesis | user).</p>
 <p><code>version</code> : The serialization version of the transaction.</p>
@@ -414,29 +402,29 @@ Retrieving block data by height is only allowed if the daemon has been configure
 <p><code>reference</code> : For DEBIT and CREDIT transactions this is the user supplied reference used by the recipient to relate the transaction to an order or invoice number.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="submittransaction"> submit/transaction <a id="submit/transaction" href="#submit/transaction"></a></h2>
+<h2>submit/transaction</h2>
 <p>Submits a transaction to be included in the mempool and broadcast to the network.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">ledger/submit/transaction
+<pre><code class="language-plaintext">ledger/submit/transaction
 </code></pre>
-<h3 class="toc-header" id="parameters-5"> Parameters:</h3>
+<h3>Parameters:</h3>
 <p><code>data</code> : The serialized, hex-encoded transaction data to be submitted.</p>
-<h3 class="toc-header" id="results-2"> Results:</h3>
-<h4 class="toc-header" id="return-value-json-object-5"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{ "hash": "47959e245f45aab773c0ce5320a5454f49ac15f63e15acb36855ac654d54d6314fe36b61dd64ec7a9a546bcc439a628e9badcdccb6e5f8072d04a0a3b67f8679" }
+<h3>Results:</h3>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{ "hash": "47959e245f45aab773c0ce5320a5454f49ac15f63e15acb36855ac654d54d6314fe36b61dd64ec7a9a546bcc439a628e9badcdccb6e5f8072d04a0a3b67f8679" }
 </code></pre>
-<h4 class="toc-header" id="return-values-5"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>hash</code> : The tranaction hash, if successfully committed to the mempool / broadcast.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="getinfo"> get/info <a id="get/info" href="#get/info"></a></h2>
+<h2>get/info</h2>
 <p>Retrieves mining and NXS supply related data for the ledger.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">ledger/get/info
+<pre><code class="language-plaintext">ledger/get/info
 </code></pre>
-<h4 class="toc-header" id="parameters-6"> Parameters:</h4>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/filtering"><code>Filtering</code></a></p>
-<h4 class="toc-header" id="returns-3"> Returns:</h4>
-<h4 class="toc-header" id="return-value-json-object-6"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<h4>Parameters:</h4>
+<p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
+<h4>Returns:</h4>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "stake": {
         "height": 1478452,
         "weight": "0000000000000000000136d9ce5eff4a",
@@ -480,7 +468,7 @@ Retrieving block data by height is only allowed if the daemon has been configure
 }
 [Completed in 3827.013421 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-6"> Return values:</h4>
+<h4>Return values:</h4>
 <p><code>Stake</code> : Retreives information for the stake channel.</p>
 <p><code>height</code> : The current number of blocks for the stake channel.</p>
 <p><code>weight</code> : The total work completed for the stake channel.</p>
@@ -519,15 +507,15 @@ Retrieving block data by height is only allowed if the daemon has been configure
 <p><code>checkpoint</code> : It is the most recent checkpoint that blocks can’t be reorganized before, so everything before that hash is finalized.</p>
 <hr>
 <p>&nbsp;</p>
-<h2 class="toc-header" id="getmetrics"> get/metrics <a id="get/metrics" href="#get/metrics"></a></h2>
+<h2>get/metrics</h2>
 <p>Retrieves mining related data for the ledger.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">ledger/get/metrics
+<pre><code class="language-plaintext">ledger/get/metrics
 </code></pre>
-<h4 class="toc-header" id="parameters-7"> Parameters:</h4>
-<p><a class="is-internal-link is-valid-page" href="/en/tritium++/filtering"><code>Filtering</code></a></p>
-<h4 class="toc-header" id="returns-4"> Returns:</h4>
-<h4 class="toc-header" id="return-value-json-object-7"> Return value JSON object:</h4>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">{
+<h4>Parameters:</h4>
+<p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
+<h4>Returns:</h4>
+<h4>Return value JSON object:</h4>
+<pre><code class="language-plaintext">{
     "volumes": {
         "transactions": {
             "daily": 1858,
@@ -579,7 +567,7 @@ Retrieving block data by height is only allowed if the daemon has been configure
 }
 [Completed in 12378.496480 ms]
 </code></pre>
-<h4 class="toc-header" id="return-values-7"> Return Values:</h4>
+<h4>Return Values:</h4>
 <p><code>volumes</code> : This retrieves the transactions, contracts and accounts volume.</p>
 <p><code>transactions</code> : Statistics for transactions for a specified period.</p>
 <p><code>daily</code> : Total number of transactions in the last 24 hours.</p>
