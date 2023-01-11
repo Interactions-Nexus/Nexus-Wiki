@@ -2,7 +2,7 @@
 title: 分类账本
 description: 分类账本 API
 published: true
-date: 2023-01-11T14:24:16.987Z
+date: 2023-01-11T14:28:12.601Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-11T14:20:28.412Z
@@ -15,20 +15,20 @@ dateCreated: 2023-01-11T14:20:28.412Z
 <p><a href="#get/blockhash"><code>get/blockhash</code></a><br><a href="#get/block"><code>get/block</code></a><br><a href="#list/blocks"><code>list/blocks</code></a><br><a href="#get/transaction"><code>get/transaction</code></a><br><a href="#list/transactions"><code>list/transactions</code></a><br><a href="#submit/transaction"><code>submit/transaction</code></a><br><a href="#get/info"><code>get/info</code></a><br><a href="#get/metrics"><code>get/metrics</code></a></p>
 <p>直接端点支持 <code>filters</code> 过滤和 <code>operators</code> 运算符。</p>
 <hr>
-<h2>get/blockhash</h2>
-<p>Retrieves the hash of the block for the given height.</p>
+<h2>get/blockhash 获取/区块哈希</h2>
+<p>检索给定高度区块的哈希值。</p>
 <pre><code class="language-plaintext">ledger/get/blockhash
 </code></pre>
-<h3>Parameters:</h3>
-<p><code>height</code> : The <strong>block height</strong> to retrieve the hash for.</p>
-<h3>Results:</h3>
-<h4>Return value JSON object:</h4>
+<h3>Parameters 参数：</h3>
+<p><code>height</code> 高度：检索哈希的 <strong>block height</strong> 区块高度。</p>
+<h3>Results 结果：</h3>
+<h4>返回值 JSON 物件：</h4>
 <pre><code class="language-plaintext">{
     "hash": "289b76fbe40ca5e0d0df68016677a8c9be6389f3225cc9faf65cb92bbc98a3580b57cb7ba3d7f7ab36ce890d47a4be90254d407270ad4c2e69c99c998ef8547ca45f054b081959d4d59feb871360bce888f82b4cdc1476502bd1b8e95dffe811e55592d3d4768b56e0510e02b5e32171858de097cd811e7c8d09920c24960ae8"
 }
 [Completed in 0.083791 ms]  
 </code></pre>
-<h4>Return values:</h4>
+<h4>返回值：</h4>
 <p><code>hash</code> : The hash of the block.</p>
 <hr>
 <p>&nbsp;</p>
