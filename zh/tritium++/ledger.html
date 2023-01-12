@@ -2,7 +2,7 @@
 title: 分类账本
 description: 分类账本 API
 published: true
-date: 2023-01-11T14:28:12.601Z
+date: 2023-01-12T06:38:39.924Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-11T14:20:28.412Z
@@ -29,24 +29,23 @@ dateCreated: 2023-01-11T14:20:28.412Z
 [Completed in 0.083791 ms]  
 </code></pre>
 <h4>返回值：</h4>
-<p><code>hash</code> : The hash of the block.</p>
+<p><code>hash</code> 哈希：区块的哈希</p>
 <hr>
-<p>&nbsp;</p>
-<h2>get/block</h2>
-<p>Retrieves block data for the given block hash or height.</p>
+<h2>get/block 获取/区块</h2>
+<p>检索给定块哈希或高度的区块数据。</p>
 <pre><code class="language-plaintext">ledger/get/block
 </code></pre>
 <blockquote>
-  <p><strong>NOTE:</strong><br>Retrieving block data by height is only possible if the core has been configured with --indexheight flag.</p>
+  <p>注意：只有在核心配置了 --indexheight 标志的情况下，才能按高度检索区块数据。</p>
 </blockquote>
-<h3>Parameters:</h3>
-<p><code>hash</code> : Required to <strong>identify</strong> the block to retrieve the block data for. This is optional if the height is provided.</p>
-<p><code>height</code> : Required to <strong>identify</strong> the block to retrieve the block data for. This is optional if the hash is provided.</p>
-<p><code>verbose</code> : Optional, determines how much <strong>transaction data</strong> to include in the response. Supported values are :</p>
+<h3>Parameters 参数：</h3>
+<p><code>hash</code> 哈希：需要 <strong>identify</strong> 标识要为其检索块数据的区块。 如果提供了高度，则是可选的。</p>
+<p><code>height</code> 高度：需要 <strong>identify</strong>&nbsp; 标识要为其检索块数据的区块。 如果提供了哈希，则是可选的。</p>
+<p><code>verbose</code> 冗长：可选，确定响应中包含多少交易数据。 支持的值是：</p>
 <ul>
-  <li><code>default</code> : hash.</li>
-  <li><code>summary</code> : type, version, sequence, timestamp, and contracts.</li>
-  <li><code>detail</code> : genesis, nexthash, prevhash, pubkey and signature.</li>
+  <li><code>default</code> 默认：哈希</li>
+  <li><code>summary</code> 概括：类型、版本、序列、时间戳和合同。</li>
+  <li><code>detail</code> 详情：genesis 起源, nexthash 下一哈希, prevhash 前一哈希, pubkey 公匙 和 signature 签名链。</li>
 </ul>
 <p><a href="/en/tritium++/sorting"><code>Sorting</code></a></p>
 <p><a href="/en/tritium++/filtering"><code>Filtering</code></a></p>
